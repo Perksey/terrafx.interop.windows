@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinBase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="FILE_ID_DESCRIPTOR" access="public">
+            <field name="dwSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Type" access="public">
+                <type native="">FILE_ID_TYPE</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="FILE_ID_DESCRIPTOR::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/WinBase.h:9139:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="FileId" access="public">
+                <type native="">ref LARGE_INTEGER</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.FileId, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ObjectId" access="public">
+                <type native="">ref Guid</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ObjectId, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ExtendedFileId" access="public">
+                <type native="">ref FILE_ID_128</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ExtendedFileId, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="FileId" access="public" offset="0">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="ObjectId" access="public" offset="0">
+                    <type native="GUID">Guid</type>
+                </field>
+                <field name="ExtendedFileId" access="public" offset="0">
+                    <type native="">FILE_ID_128</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/appmodel.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="GetCurrentPackageId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>byte*</type>
+                </param>
+            </function>
+            <function name="GetCurrentPackageFullName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetCurrentPackageFamilyName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFamilyNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetCurrentPackagePath" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="pathLength">
+                    <type>uint*</type>
+                </param>
+                <param name="path">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetPackageId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>byte*</type>
+                </param>
+            </function>
+            <function name="GetPackageFullName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="packageFullNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetPackageFullNameFromToken" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="token">
+                    <type>IntPtr</type>
+                </param>
+                <param name="packageFullNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetPackageFamilyName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="packageFamilyNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetPackageFamilyNameFromToken" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="token">
+                    <type>IntPtr</type>
+                </param>
+                <param name="packageFamilyNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetPackagePath" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageId">
+                    <type>PACKAGE_ID*</type>
+                </param>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+                <param name="pathLength">
+                    <type>uint*</type>
+                </param>
+                <param name="path">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetPackagePathByFullName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pathLength">
+                    <type>uint*</type>
+                </param>
+                <param name="path">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetStagedPackagePathByFullName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pathLength">
+                    <type>uint*</type>
+                </param>
+                <param name="path">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetPackagePathByFullName2" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="packagePathType">
+                    <type>PackagePathType</type>
+                </param>
+                <param name="pathLength">
+                    <type>uint*</type>
+                </param>
+                <param name="path">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetStagedPackagePathByFullName2" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="packagePathType">
+                    <type>PackagePathType</type>
+                </param>
+                <param name="pathLength">
+                    <type>uint*</type>
+                </param>
+                <param name="path">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetCurrentPackageInfo2" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="packagePathType">
+                    <type>PackagePathType</type>
+                </param>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>byte*</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetCurrentPackagePath2" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packagePathType">
+                    <type>PackagePathType</type>
+                </param>
+                <param name="pathLength">
+                    <type>uint*</type>
+                </param>
+                <param name="path">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetCurrentApplicationUserModelId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="applicationUserModelIdLength">
+                    <type>uint*</type>
+                </param>
+                <param name="applicationUserModelId">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetApplicationUserModelId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="applicationUserModelIdLength">
+                    <type>uint*</type>
+                </param>
+                <param name="applicationUserModelId">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetApplicationUserModelIdFromToken" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="token">
+                    <type>IntPtr</type>
+                </param>
+                <param name="applicationUserModelIdLength">
+                    <type>uint*</type>
+                </param>
+                <param name="applicationUserModelId">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="VerifyPackageFullName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="VerifyPackageFamilyName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="VerifyPackageId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageId">
+                    <type>PACKAGE_ID*</type>
+                </param>
+            </function>
+            <function name="VerifyApplicationUserModelId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="applicationUserModelId">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="VerifyPackageRelativeApplicationId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageRelativeApplicationId">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PackageIdFromFullName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>byte*</type>
+                </param>
+            </function>
+            <function name="PackageFullNameFromId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageId">
+                    <type>PACKAGE_ID*</type>
+                </param>
+                <param name="packageFullNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PackageFamilyNameFromId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageId">
+                    <type>PACKAGE_ID*</type>
+                </param>
+                <param name="packageFamilyNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PackageFamilyNameFromFullName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="packageFamilyNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PackageNameAndPublisherIdFromFamilyName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+                <param name="packageNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageName">
+                    <type>ushort*</type>
+                </param>
+                <param name="packagePublisherIdLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packagePublisherId">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="FormatApplicationUserModelId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+                <param name="packageRelativeApplicationId">
+                    <type>ushort*</type>
+                </param>
+                <param name="applicationUserModelIdLength">
+                    <type>uint*</type>
+                </param>
+                <param name="applicationUserModelId">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="ParseApplicationUserModelId" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="applicationUserModelId">
+                    <type>ushort*</type>
+                </param>
+                <param name="packageFamilyNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+                <param name="packageRelativeApplicationIdLength">
+                    <type>uint*</type>
+                </param>
+                <param name="packageRelativeApplicationId">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetPackagesByPackageFamily" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFullNames">
+                    <type>ushort**</type>
+                </param>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="FindPackagesByPackageFamily" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFamilyName">
+                    <type>ushort*</type>
+                </param>
+                <param name="packageFilters">
+                    <type>uint</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+                <param name="packageFullNames">
+                    <type>ushort**</type>
+                </param>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="packageProperties">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetStagedPackageOrigin" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="origin">
+                    <type>PackageOrigin*</type>
+                </param>
+            </function>
+            <function name="GetCurrentPackageInfo" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>byte*</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="OpenPackageInfoByFullName" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+                <param name="packageInfoReference">
+                    <type>PACKAGE_INFO_REFERENCE**</type>
+                </param>
+            </function>
+            <function name="OpenPackageInfoByFullNameForUser" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="userSid">
+                    <type>void*</type>
+                </param>
+                <param name="packageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+                <param name="packageInfoReference">
+                    <type>PACKAGE_INFO_REFERENCE**</type>
+                </param>
+            </function>
+            <function name="ClosePackageInfo" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageInfoReference">
+                    <type>PACKAGE_INFO_REFERENCE*</type>
+                </param>
+            </function>
+            <function name="GetPackageInfo" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageInfoReference">
+                    <type>PACKAGE_INFO_REFERENCE*</type>
+                </param>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>byte*</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetPackageApplicationIds" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageInfoReference">
+                    <type>PACKAGE_INFO_REFERENCE*</type>
+                </param>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>byte*</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="AppPolicyGetLifecycleManagement" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="processToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="policy">
+                    <type>AppPolicyLifecycleManagement*</type>
+                </param>
+            </function>
+            <function name="AppPolicyGetWindowingModel" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="processToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="policy">
+                    <type>AppPolicyWindowingModel*</type>
+                </param>
+            </function>
+            <function name="AppPolicyGetMediaFoundationCodecLoading" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="processToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="policy">
+                    <type>AppPolicyMediaFoundationCodecLoading*</type>
+                </param>
+            </function>
+            <function name="AppPolicyGetClrCompat" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="processToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="policy">
+                    <type>AppPolicyClrCompat*</type>
+                </param>
+            </function>
+            <function name="AppPolicyGetThreadInitializationType" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="processToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="policy">
+                    <type>AppPolicyThreadInitializationType*</type>
+                </param>
+            </function>
+            <function name="AppPolicyGetShowDeveloperDiagnostic" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="processToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="policy">
+                    <type>AppPolicyShowDeveloperDiagnostic*</type>
+                </param>
+            </function>
+            <function name="AppPolicyGetProcessTerminationMethod" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="processToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="policy">
+                    <type>AppPolicyProcessTerminationMethod*</type>
+                </param>
+            </function>
+            <function name="AppPolicyGetCreateFileAccess" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="processToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="policy">
+                    <type>AppPolicyCreateFileAccess*</type>
+                </param>
+            </function>
+            <function name="GetPackageInfo2" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="packageInfoReference">
+                    <type>PACKAGE_INFO_REFERENCE*</type>
+                </param>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="packagePathType">
+                    <type>PackagePathType</type>
+                </param>
+                <param name="bufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="buffer">
+                    <type>byte*</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <constant name="PACKAGE_PROPERTY_FRAMEWORK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_PROPERTY_RESOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_PROPERTY_BUNDLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_PROPERTY_OPTIONAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_FILTER_HEAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_FILTER_DIRECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_FILTER_RESOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_FILTER_BUNDLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_INFORMATION_BASIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_INFORMATION_FULL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_PROPERTY_DEVELOPMENT_MODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_FILTER_OPTIONAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_PROPERTY_IS_IN_RELATED_SET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_FILTER_IS_IN_RELATED_SET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_PROPERTY_STATIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_FILTER_STATIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_PROPERTY_DYNAMIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_FILTER_DYNAMIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="PACKAGE_FILTER_ALL_LOADED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

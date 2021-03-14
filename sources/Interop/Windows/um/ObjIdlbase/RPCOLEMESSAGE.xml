@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdlbase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="RPCOLEMESSAGE" access="public" unsafe="true">
+            <field name="reserved1" access="public">
+                <type native="void *">void*</type>
+            </field>
+            <field name="dataRepresentation" access="public">
+                <type native="RPCOLEDATAREP">uint</type>
+            </field>
+            <field name="Buffer" access="public">
+                <type native="void *">void*</type>
+            </field>
+            <field name="cbBuffer" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="iMethod" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="reserved2" access="public">
+                <type native="void *[5]" count="5" fixed="_reserved2_e__FixedBuffer">void*</type>
+            </field>
+            <field name="rpcFlags" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <struct name="_reserved2_e__FixedBuffer" access="public" unsafe="true">
+                <field name="e0" access="public">
+                    <type native="">void*</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">void*</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">void*</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">void*</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">void*</type>
+                </field>
+                <indexer access="public">
+                    <type>ref void*</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>fixed (void** pThis = &amp;e0)
+        {
+            return ref pThis[index];
+        }
+        </code>
+                    </get>
+                </indexer>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

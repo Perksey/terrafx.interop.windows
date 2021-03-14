@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PROCESSOR_POWER_POLICY" access="public" unsafe="true">
+            <field name="Revision" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DynamicThrottle" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="Spare" access="public">
+                <type native="BYTE [3]" count="3" fixed="_Spare_e__FixedBuffer">byte</type>
+            </field>
+            <field name="_bitfield" access="public">
+                <type native="">uint</type>
+            </field>
+            <field name="DisableCStates" access="public">
+                <type native="DWORD : 1">uint</type>
+                <get inlining="aggressive">
+                    <code>return <bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>);
+        </code>
+                </set>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="DWORD : 31">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>1</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>7FFFFFFFu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>7FFFFFFFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>1</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>7FFFFFFFu</bitwidthHexString>) &lt;&lt; 1);
+        </code>
+                </set>
+            </field>
+            <field name="PolicyCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Policy" access="public">
+                <type native="PROCESSOR_POWER_POLICY_INFO [3]" count="3" fixed="_Policy_e__FixedBuffer">PROCESSOR_POWER_POLICY_INFO</type>
+            </field>
+            <struct name="_Policy_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">PROCESSOR_POWER_POLICY_INFO</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">PROCESSOR_POWER_POLICY_INFO</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">PROCESSOR_POWER_POLICY_INFO</type>
+                </field>
+                <indexer access="public">
+                    <type>ref PROCESSOR_POWER_POLICY_INFO</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;PROCESSOR_POWER_POLICY_INFO&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 3);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

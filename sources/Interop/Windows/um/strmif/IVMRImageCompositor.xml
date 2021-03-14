@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IVMRImageCompositor" access="public" native="struct IVMRImageCompositor : IUnknown" uuid="7a4fb5af-479f-4074-bb40-ce6722e43c82" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRImageCompositor*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IVMRImageCompositor*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRImageCompositor*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IVMRImageCompositor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRImageCompositor*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IVMRImageCompositor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InitCompositionTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pD3DDevice">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pddsRenderTarget">
+                    <type>IDirectDrawSurface7*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRImageCompositor*, IUnknown*, IDirectDrawSurface7*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IVMRImageCompositor*)Unsafe.AsPointer(ref this)</param>, <param name="pD3DDevice">pD3DDevice</param>, <param name="pddsRenderTarget">pddsRenderTarget</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TermCompositionTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pD3DDevice">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pddsRenderTarget">
+                    <type>IDirectDrawSurface7*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRImageCompositor*, IUnknown*, IDirectDrawSurface7*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IVMRImageCompositor*)Unsafe.AsPointer(ref this)</param>, <param name="pD3DDevice">pD3DDevice</param>, <param name="pddsRenderTarget">pddsRenderTarget</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetStreamMediaType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStrmID">
+                    <type>uint</type>
+                </param>
+                <param name="pmt">
+                    <type>AM_MEDIA_TYPE*</type>
+                </param>
+                <param name="fTexture">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRImageCompositor*, uint, AM_MEDIA_TYPE*, int, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IVMRImageCompositor*)Unsafe.AsPointer(ref this)</param>, <param name="dwStrmID">dwStrmID</param>, <param name="pmt">pmt</param>, <param name="fTexture">fTexture</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CompositeImage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pD3DDevice">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pddsRenderTarget">
+                    <type>IDirectDrawSurface7*</type>
+                </param>
+                <param name="pmtRenderTarget">
+                    <type>AM_MEDIA_TYPE*</type>
+                </param>
+                <param name="rtStart">
+                    <type>long</type>
+                </param>
+                <param name="rtEnd">
+                    <type>long</type>
+                </param>
+                <param name="dwClrBkGnd">
+                    <type>uint</type>
+                </param>
+                <param name="pVideoStreamInfo">
+                    <type>VMRVIDEOSTREAMINFO*</type>
+                </param>
+                <param name="cStreams">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRImageCompositor*, IUnknown*, IDirectDrawSurface7*, AM_MEDIA_TYPE*, long, long, uint, VMRVIDEOSTREAMINFO*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IVMRImageCompositor*)Unsafe.AsPointer(ref this)</param>, <param name="pD3DDevice">pD3DDevice</param>, <param name="pddsRenderTarget">pddsRenderTarget</param>, <param name="pmtRenderTarget">pmtRenderTarget</param>, <param name="rtStart">rtStart</param>, <param name="rtEnd">rtEnd</param>, <param name="dwClrBkGnd">dwClrBkGnd</param>, <param name="pVideoStreamInfo">pVideoStreamInfo</param>, <param name="cStreams">cStreams</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

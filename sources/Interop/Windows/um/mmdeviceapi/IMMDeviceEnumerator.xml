@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mmdeviceapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMMDeviceEnumerator" access="public" native="struct IMMDeviceEnumerator : IUnknown" uuid="a95664d2-9614-4f35-a746-de8db63617e6" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMDeviceEnumerator*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMMDeviceEnumerator*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMDeviceEnumerator*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMMDeviceEnumerator*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMDeviceEnumerator*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMMDeviceEnumerator*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumAudioEndpoints" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dataFlow">
+                    <type>EDataFlow</type>
+                </param>
+                <param name="dwStateMask">
+                    <type>uint</type>
+                </param>
+                <param name="ppDevices">
+                    <type>IMMDeviceCollection**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMDeviceEnumerator*, EDataFlow, uint, IMMDeviceCollection**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMMDeviceEnumerator*)Unsafe.AsPointer(ref this)</param>, <param name="dataFlow">dataFlow</param>, <param name="dwStateMask">dwStateMask</param>, <param name="ppDevices">ppDevices</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDefaultAudioEndpoint" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dataFlow">
+                    <type>EDataFlow</type>
+                </param>
+                <param name="role">
+                    <type>ERole</type>
+                </param>
+                <param name="ppEndpoint">
+                    <type>IMMDevice**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMDeviceEnumerator*, EDataFlow, ERole, IMMDevice**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMMDeviceEnumerator*)Unsafe.AsPointer(ref this)</param>, <param name="dataFlow">dataFlow</param>, <param name="role">role</param>, <param name="ppEndpoint">ppEndpoint</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwstrId">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppDevice">
+                    <type>IMMDevice**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMDeviceEnumerator*, ushort*, IMMDevice**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMMDeviceEnumerator*)Unsafe.AsPointer(ref this)</param>, <param name="pwstrId">pwstrId</param>, <param name="ppDevice">ppDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterEndpointNotificationCallback" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClient">
+                    <type>IMMNotificationClient*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMDeviceEnumerator*, IMMNotificationClient*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMMDeviceEnumerator*)Unsafe.AsPointer(ref this)</param>, <param name="pClient">pClient</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterEndpointNotificationCallback" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClient">
+                    <type>IMMNotificationClient*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMDeviceEnumerator*, IMMNotificationClient*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMMDeviceEnumerator*)Unsafe.AsPointer(ref this)</param>, <param name="pClient">pClient</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

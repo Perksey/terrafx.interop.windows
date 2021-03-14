@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/processthreadsapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="QueueUserAPC" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="pfnAPC">
+                    <type>delegate* unmanaged&lt;nuint, void&gt;</type>
+                </param>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwData">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="GetProcessTimes" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpCreationTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpExitTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpKernelTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpUserTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="GetCurrentProcess" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+            </function>
+            <function name="GetCurrentProcessId" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="ExitProcess" access="public" lib="kernel32" static="true" unsafe="true">
+                <type>void</type>
+                <param name="uExitCode">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="TerminateProcess" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uExitCode">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetExitCodeProcess" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpExitCode">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SwitchToThread" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+            </function>
+            <function name="CreateThread" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpThreadAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="dwStackSize">
+                    <type>nuint</type>
+                </param>
+                <param name="lpStartAddress">
+                    <type>delegate* unmanaged&lt;void*, uint&gt;</type>
+                </param>
+                <param name="lpParameter">
+                    <type>void*</type>
+                </param>
+                <param name="dwCreationFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpThreadId">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CreateRemoteThread" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpThreadAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="dwStackSize">
+                    <type>nuint</type>
+                </param>
+                <param name="lpStartAddress">
+                    <type>delegate* unmanaged&lt;void*, uint&gt;</type>
+                </param>
+                <param name="lpParameter">
+                    <type>void*</type>
+                </param>
+                <param name="dwCreationFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpThreadId">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetCurrentThread" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+            </function>
+            <function name="GetCurrentThreadId" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="OpenThread" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="bInheritHandle">
+                    <type>int</type>
+                </param>
+                <param name="dwThreadId">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetThreadPriority" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="nPriority">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="SetThreadPriorityBoost" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bDisablePriorityBoost">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThreadPriorityBoost" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pDisablePriorityBoost">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetThreadPriority" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type>int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="ExitThread" access="public" lib="kernel32" static="true" unsafe="true">
+                <type>void</type>
+                <param name="dwExitCode">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="TerminateThread" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwExitCode">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetExitCodeThread" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpExitCode">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SuspendThread" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="ResumeThread" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="TlsAlloc" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="TlsGetValue" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="LPVOID">void*</type>
+                <param name="dwTlsIndex">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="TlsSetValue" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="dwTlsIndex">
+                    <type>uint</type>
+                </param>
+                <param name="lpTlsValue">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="TlsFree" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="dwTlsIndex">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateProcessA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpApplicationName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpCommandLine">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpProcessAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpThreadAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="bInheritHandles">
+                    <type>int</type>
+                </param>
+                <param name="dwCreationFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpEnvironment">
+                    <type>void*</type>
+                </param>
+                <param name="lpCurrentDirectory">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpStartupInfo">
+                    <type>STARTUPINFOA*</type>
+                </param>
+                <param name="lpProcessInformation">
+                    <type>PROCESS_INFORMATION*</type>
+                </param>
+            </function>
+            <function name="CreateProcessW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpApplicationName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpCommandLine">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpProcessAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpThreadAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="bInheritHandles">
+                    <type>int</type>
+                </param>
+                <param name="dwCreationFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpEnvironment">
+                    <type>void*</type>
+                </param>
+                <param name="lpCurrentDirectory">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpStartupInfo">
+                    <type>STARTUPINFOW*</type>
+                </param>
+                <param name="lpProcessInformation">
+                    <type>PROCESS_INFORMATION*</type>
+                </param>
+            </function>
+            <function name="SetProcessShutdownParameters" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="dwLevel">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetProcessVersion" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="ProcessId">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetStartupInfoW" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpStartupInfo">
+                    <type>STARTUPINFOW*</type>
+                </param>
+            </function>
+            <function name="CreateProcessAsUserW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpApplicationName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpCommandLine">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpProcessAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpThreadAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="bInheritHandles">
+                    <type>int</type>
+                </param>
+                <param name="dwCreationFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpEnvironment">
+                    <type>void*</type>
+                </param>
+                <param name="lpCurrentDirectory">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpStartupInfo">
+                    <type>STARTUPINFOW*</type>
+                </param>
+                <param name="lpProcessInformation">
+                    <type>PROCESS_INFORMATION*</type>
+                </param>
+            </function>
+            <function name="SetThreadToken" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Thread">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="Token">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="OpenProcessToken" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ProcessHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="TokenHandle">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="OpenThreadToken" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ThreadHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="OpenAsSelf">
+                    <type>int</type>
+                </param>
+                <param name="TokenHandle">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="SetPriorityClass" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwPriorityClass">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetPriorityClass" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="SetThreadStackGuarantee" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="StackSizeInBytes">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="ProcessIdToSessionId" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="dwProcessId">
+                    <type>uint</type>
+                </param>
+                <param name="pSessionId">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetProcessId" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="Process">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetThreadId" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="Thread">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="FlushProcessWriteBuffers" access="public" lib="kernel32" static="true" unsafe="true">
+                <type>void</type>
+            </function>
+            <function name="GetProcessIdOfThread" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="Thread">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="InitializeProcThreadAttributeList" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpAttributeList">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwAttributeCount">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpSize">
+                    <type>nuint*</type>
+                </param>
+            </function>
+            <function name="DeleteProcThreadAttributeList" access="public" lib="kernel32" static="true" unsafe="true">
+                <type>void</type>
+                <param name="lpAttributeList">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="UpdateProcThreadAttribute" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpAttributeList">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="Attribute">
+                    <type>nuint</type>
+                </param>
+                <param name="lpValue">
+                    <type>void*</type>
+                </param>
+                <param name="cbSize">
+                    <type>nuint</type>
+                </param>
+                <param name="lpPreviousValue">
+                    <type>void*</type>
+                </param>
+                <param name="lpReturnSize">
+                    <type>nuint*</type>
+                </param>
+            </function>
+            <function name="SetProcessDynamicEHContinuationTargets" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Process">
+                    <type>IntPtr</type>
+                </param>
+                <param name="NumberOfTargets">
+                    <type>ushort</type>
+                </param>
+                <param name="Targets">
+                    <type>PROCESS_DYNAMIC_EH_CONTINUATION_TARGET*</type>
+                </param>
+            </function>
+            <function name="SetProcessDynamicEnforcedCetCompatibleRanges" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Process">
+                    <type>IntPtr</type>
+                </param>
+                <param name="NumberOfRanges">
+                    <type>ushort</type>
+                </param>
+                <param name="Ranges">
+                    <type>PROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE*</type>
+                </param>
+            </function>
+            <function name="SetProcessAffinityUpdateMode" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="QueryProcessAffinityUpdateMode" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpdwFlags">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CreateRemoteThreadEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpThreadAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="dwStackSize">
+                    <type>nuint</type>
+                </param>
+                <param name="lpStartAddress">
+                    <type>delegate* unmanaged&lt;void*, uint&gt;</type>
+                </param>
+                <param name="lpParameter">
+                    <type>void*</type>
+                </param>
+                <param name="dwCreationFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpAttributeList">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpThreadId">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetCurrentThreadStackLimits" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="LowLimit">
+                    <type>uint*</type>
+                </param>
+                <param name="HighLimit">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetThreadContext" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpContext">
+                    <type>CONTEXT*</type>
+                </param>
+            </function>
+            <function name="GetProcessMitigationPolicy" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="MitigationPolicy">
+                    <type>PROCESS_MITIGATION_POLICY</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="dwLength">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="SetThreadContext" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpContext">
+                    <type>CONTEXT*</type>
+                </param>
+            </function>
+            <function name="SetProcessMitigationPolicy" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="MitigationPolicy">
+                    <type>PROCESS_MITIGATION_POLICY</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="dwLength">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="FlushInstructionCache" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBaseAddress">
+                    <type>void*</type>
+                </param>
+                <param name="dwSize">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="GetThreadTimes" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpCreationTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpExitTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpKernelTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpUserTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="OpenProcess" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="bInheritHandle">
+                    <type>int</type>
+                </param>
+                <param name="dwProcessId">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="IsProcessorFeaturePresent" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="ProcessorFeature">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetProcessHandleCount" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pdwHandleCount">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetCurrentProcessorNumber" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="SetThreadIdealProcessorEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpIdealProcessor">
+                    <type>PROCESSOR_NUMBER*</type>
+                </param>
+                <param name="lpPreviousIdealProcessor">
+                    <type>PROCESSOR_NUMBER*</type>
+                </param>
+            </function>
+            <function name="GetThreadIdealProcessorEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpIdealProcessor">
+                    <type>PROCESSOR_NUMBER*</type>
+                </param>
+            </function>
+            <function name="GetCurrentProcessorNumberEx" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="ProcNumber">
+                    <type>PROCESSOR_NUMBER*</type>
+                </param>
+            </function>
+            <function name="GetProcessPriorityBoost" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pDisablePriorityBoost">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="SetProcessPriorityBoost" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bDisablePriorityBoost">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThreadIOPendingFlag" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpIOIsPending">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetSystemTimes" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpIdleTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpKernelTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpUserTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="GetThreadInformation" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ThreadInformationClass">
+                    <type>THREAD_INFORMATION_CLASS</type>
+                </param>
+                <param name="ThreadInformation">
+                    <type>void*</type>
+                </param>
+                <param name="ThreadInformationSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetThreadInformation" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ThreadInformationClass">
+                    <type>THREAD_INFORMATION_CLASS</type>
+                </param>
+                <param name="ThreadInformation">
+                    <type>void*</type>
+                </param>
+                <param name="ThreadInformationSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="IsProcessCritical" access="public" lib="ntdll" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Critical">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="SetProtectedPolicy" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="PolicyGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="PolicyValue">
+                    <type>nuint</type>
+                </param>
+                <param name="OldPolicyValue">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="QueryProtectedPolicy" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="PolicyGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="PolicyValue">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetThreadIdealProcessor" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwIdealProcessor">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetProcessInformation" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ProcessInformationClass">
+                    <type>PROCESS_INFORMATION_CLASS</type>
+                </param>
+                <param name="ProcessInformation">
+                    <type>void*</type>
+                </param>
+                <param name="ProcessInformationSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetProcessInformation" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ProcessInformationClass">
+                    <type>PROCESS_INFORMATION_CLASS</type>
+                </param>
+                <param name="ProcessInformation">
+                    <type>void*</type>
+                </param>
+                <param name="ProcessInformationSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetSystemCpuSetInformation" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Information">
+                    <type>SYSTEM_CPU_SET_INFORMATION*</type>
+                </param>
+                <param name="BufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="ReturnedLength">
+                    <type>uint*</type>
+                </param>
+                <param name="Process">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetProcessDefaultCpuSets" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Process">
+                    <type>IntPtr</type>
+                </param>
+                <param name="CpuSetIds">
+                    <type>uint*</type>
+                </param>
+                <param name="CpuSetIdCount">
+                    <type>uint</type>
+                </param>
+                <param name="RequiredIdCount">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetProcessDefaultCpuSets" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Process">
+                    <type>IntPtr</type>
+                </param>
+                <param name="CpuSetIds">
+                    <type>uint*</type>
+                </param>
+                <param name="CpuSetIdCount">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetThreadSelectedCpuSets" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Thread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="CpuSetIds">
+                    <type>uint*</type>
+                </param>
+                <param name="CpuSetIdCount">
+                    <type>uint</type>
+                </param>
+                <param name="RequiredIdCount">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetThreadSelectedCpuSets" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Thread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="CpuSetIds">
+                    <type>uint*</type>
+                </param>
+                <param name="CpuSetIdCount">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateProcessAsUserA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpApplicationName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpCommandLine">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpProcessAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpThreadAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="bInheritHandles">
+                    <type>int</type>
+                </param>
+                <param name="dwCreationFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpEnvironment">
+                    <type>void*</type>
+                </param>
+                <param name="lpCurrentDirectory">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpStartupInfo">
+                    <type>STARTUPINFOA*</type>
+                </param>
+                <param name="lpProcessInformation">
+                    <type>PROCESS_INFORMATION*</type>
+                </param>
+            </function>
+            <function name="GetProcessShutdownParameters" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpdwLevel">
+                    <type>uint*</type>
+                </param>
+                <param name="lpdwFlags">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetThreadDescription" access="public" lib="kernel32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpThreadDescription">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetThreadDescription" access="public" lib="kernel32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ppszThreadDescription">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <constant name="TLS_OUT_OF_INDEXES" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xFFFFFFFF)
+            </code>
+                </value>
+            </constant>
+            <constant name="CreateProcess" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, SECURITY_ATTRIBUTES*, SECURITY_ATTRIBUTES*, int, uint, void*, ushort*, STARTUPINFOW*, PROCESS_INFORMATION*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateProcessW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetStartupInfo" access="public">
+                <type primitive="False">delegate*&lt;STARTUPINFOW*, void&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetStartupInfoW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CreateProcessAsUser" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, ushort*, SECURITY_ATTRIBUTES*, SECURITY_ATTRIBUTES*, int, uint, void*, ushort*, STARTUPINFOW*, PROCESS_INFORMATION*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateProcessAsUserW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="PROC_THREAD_ATTRIBUTE_REPLACE_VALUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_AFFINITY_ENABLE_AUTO_UPDATE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000001U
+            </code>
+                </value>
+            </constant>
+            <constant name="THREAD_POWER_THROTTLING_CURRENT_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="THREAD_POWER_THROTTLING_EXECUTION_SPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="THREAD_POWER_THROTTLING_VALID_FLAGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="PME_CURRENT_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="PME_FAILFAST_ON_COMMIT_FAIL_DISABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0
+            </code>
+                </value>
+            </constant>
+            <constant name="PME_FAILFAST_ON_COMMIT_FAIL_ENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_POWER_THROTTLING_CURRENT_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_POWER_THROTTLING_EXECUTION_SPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_POWER_THROTTLING_VALID_FLAGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_LEAP_SECOND_INFO_FLAG_ENABLE_SIXTY_SECOND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_LEAP_SECOND_INFO_VALID_FLAGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

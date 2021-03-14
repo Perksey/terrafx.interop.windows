@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/propsys.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="PropVariantToWinRTPropertyValue" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="WinRTPropertyValueToPropVariant" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="punkPropertyValue">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="PSFormatForDisplay" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="propvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="pdfFlags">
+                    <type>PROPDESC_FORMAT_FLAGS</type>
+                </param>
+                <param name="pwszText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="PSFormatForDisplayAlloc" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="propvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="pdff">
+                    <type>PROPDESC_FORMAT_FLAGS</type>
+                </param>
+                <param name="ppszDisplay">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="PSFormatPropertyValue" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pps">
+                    <type>IPropertyStore*</type>
+                </param>
+                <param name="ppd">
+                    <type>IPropertyDescription*</type>
+                </param>
+                <param name="pdff">
+                    <type>PROPDESC_FORMAT_FLAGS</type>
+                </param>
+                <param name="ppszDisplay">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="PSGetImageReferenceForValue" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="propvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="ppszImageRes">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="PSStringFromPropertyKey" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="psz">
+                    <type>ushort*</type>
+                </param>
+                <param name="cch">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="PSPropertyKeyFromString" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszString">
+                    <type>ushort*</type>
+                </param>
+                <param name="pkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+            </function>
+            <function name="PSCreateMemoryPropertyStore" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSCreateDelayedMultiplexPropertyStore" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="flags">
+                    <type>GETPROPERTYSTOREFLAGS</type>
+                </param>
+                <param name="pdpsf">
+                    <type>IDelayedPropertyStoreFactory*</type>
+                </param>
+                <param name="rgStoreIds">
+                    <type>uint*</type>
+                </param>
+                <param name="cStores">
+                    <type>uint</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSCreateMultiplexPropertyStore" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="prgpunkStores">
+                    <type>IUnknown**</type>
+                </param>
+                <param name="cStores">
+                    <type>uint</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSCreatePropertyChangeArray" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rgpropkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="rgflags">
+                    <type>PKA_FLAGS*</type>
+                </param>
+                <param name="rgpropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="cChanges">
+                    <type>uint</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSCreateSimplePropertyChange" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="flags">
+                    <type>PKA_FLAGS</type>
+                </param>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="propvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSGetPropertyDescription" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSGetPropertyDescriptionByName" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszCanonicalName">
+                    <type>ushort*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSLookupPropertyHandlerCLSID" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszFilePath">
+                    <type>ushort*</type>
+                </param>
+                <param name="pclsid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="PSGetItemPropertyHandler" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="punkItem">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="fReadWrite">
+                    <type>int</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSGetItemPropertyHandlerWithCreateObject" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="punkItem">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="fReadWrite">
+                    <type>int</type>
+                </param>
+                <param name="punkCreateObject">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSGetPropertyValue" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pps">
+                    <type>IPropertyStore*</type>
+                </param>
+                <param name="ppd">
+                    <type>IPropertyDescription*</type>
+                </param>
+                <param name="ppropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="PSSetPropertyValue" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pps">
+                    <type>IPropertyStore*</type>
+                </param>
+                <param name="ppd">
+                    <type>IPropertyDescription*</type>
+                </param>
+                <param name="propvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="PSRegisterPropertySchema" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszPath">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PSUnregisterPropertySchema" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszPath">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PSRefreshPropertySchema" access="public" lib="propsys" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="PSEnumeratePropertyDescriptions" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="filterOn">
+                    <type>PROPDESC_ENUMFILTER</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSGetPropertyKeyFromName" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppropkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+            </function>
+            <function name="PSGetNameFromPropertyKey" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="ppszCanonicalName">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="PSCoerceToCanonicalValue" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="ppropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="PSGetPropertyDescriptionListFromString" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszPropList">
+                    <type>ushort*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSCreatePropertyStoreFromPropertySetStorage" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppss">
+                    <type>IPropertySetStorage*</type>
+                </param>
+                <param name="grfMode">
+                    <type>uint</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSCreatePropertyStoreFromObject" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="punk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="grfMode">
+                    <type>uint</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSCreateAdapterFromPropertyStore" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pps">
+                    <type>IPropertyStore*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSGetPropertySystem" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSGetPropertyFromPropertyStorage" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="psps">
+                    <type>IntPtr</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="rpkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="ppropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="PSGetNamedPropertyFromPropertyStorage" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="psps">
+                    <type>IntPtr</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="pszName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadType" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="var">
+                    <type>VARIANT*</type>
+                </param>
+                <param name="type">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadStr" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>ushort*</type>
+                </param>
+                <param name="characterCount">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadStrAlloc" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadBSTR" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteStr" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteBSTR" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadInt" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteInt" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadSHORT" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>short*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteSHORT" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>short</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadLONG" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteLONG" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadDWORD" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteDWORD" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadBOOL" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteBOOL" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadPOINTL" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>POINTL*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WritePOINTL" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>POINTL*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadPOINTS" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>POINTS*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WritePOINTS" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>POINTS*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadRECTL" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>RECTL*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteRECTL" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>RECTL*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadStream" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>IStream**</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteStream" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>IStream*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_Delete" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadULONGLONG" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>ulong*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteULONGLONG" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>ulong</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadUnknown" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteUnknown" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="punk">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadGUID" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WriteGUID" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_ReadPropertyKey" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>PROPERTYKEY*</type>
+                </param>
+            </function>
+            <function name="PSPropertyBag_WritePropertyKey" access="public" lib="propsys" static="true">
+                <type native="HRESULT">int</type>
+                <param name="propBag">
+                    <type>IPropertyBag*</type>
+                </param>
+                <param name="propName">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>PROPERTYKEY*</type>
+                </param>
+            </function>
+            <constant name="PDFF_PREFERFRIENDLY" access="public">
+                <type primitive="True">PROPDESC_FORMAT_FLAGS</type>
+                <value>
+                    <code>
+                        <value></value>(PROPDESC_FORMAT_FLAGS)0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="PKEY_PIDSTR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>10
+            </code>
+                </value>
+            </constant>
+            <constant name="GUIDSTRING_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 + 8 + 1 + 4 + 1 + 4 + 1 + 4 + 1 + 12 + 1 + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="PKEYSTR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((1 + 8 + 1 + 4 + 1 + 4 + 1 + 4 + 1 + 12 + 1 + 1) + 1 + 10)
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_IInitializeWithFile" value="0xB7D14566, 0x0509, 0x4CCE, 0xA7, 0x1F, 0x0A, 0x55, 0x42, 0x33, 0xBD, 0x9B" />
+            <iid name="IID_IInitializeWithStream" value="0xB824B49D, 0x22AC, 0x4161, 0xAC, 0x8A, 0x99, 0x16, 0xE8, 0xFA, 0x3F, 0x7F" />
+            <iid name="IID_IPropertyStore" value="0x886D8EEB, 0x8CF2, 0x4446, 0x8D, 0x02, 0xCD, 0xBA, 0x1D, 0xBD, 0xCF, 0x99" />
+            <iid name="IID_INamedPropertyStore" value="0x71604B0F, 0x97B0, 0x4764, 0x85, 0x77, 0x2F, 0x13, 0xE9, 0x8A, 0x14, 0x22" />
+            <iid name="IID_IObjectWithPropertyKey" value="0xFC0CA0A7, 0xC316, 0x4FD2, 0x90, 0x31, 0x3E, 0x62, 0x8E, 0x6D, 0x4F, 0x23" />
+            <iid name="IID_IPropertyChange" value="0xF917BC8A, 0x1BBA, 0x4478, 0xA2, 0x45, 0x1B, 0xDE, 0x03, 0xEB, 0x94, 0x31" />
+            <iid name="IID_IPropertyChangeArray" value="0x380F5CAD, 0x1B5E, 0x42F2, 0x80, 0x5D, 0x63, 0x7F, 0xD3, 0x92, 0xD3, 0x1E" />
+            <iid name="IID_IPropertyStoreCapabilities" value="0xC8E2D566, 0x186E, 0x4D49, 0xBF, 0x41, 0x69, 0x09, 0xEA, 0xD5, 0x6A, 0xCC" />
+            <iid name="IID_IPropertyStoreCache" value="0x3017056D, 0x9A91, 0x4E90, 0x93, 0x7D, 0x74, 0x6C, 0x72, 0xAB, 0xBF, 0x4F" />
+            <iid name="IID_IPropertyEnumType" value="0x11E1FBF9, 0x2D56, 0x4A6B, 0x8D, 0xB3, 0x7C, 0xD1, 0x93, 0xA4, 0x71, 0xF2" />
+            <iid name="IID_IPropertyEnumType2" value="0x9B6E051C, 0x5DDD, 0x4321, 0x90, 0x70, 0xFE, 0x2A, 0xCB, 0x55, 0xE7, 0x94" />
+            <iid name="IID_IPropertyEnumTypeList" value="0xA99400F4, 0x3D84, 0x4557, 0x94, 0xBA, 0x12, 0x42, 0xFB, 0x2C, 0xC9, 0xA6" />
+            <iid name="IID_IPropertyDescription" value="0x6F79D558, 0x3E96, 0x4549, 0xA1, 0xD1, 0x7D, 0x75, 0xD2, 0x28, 0x88, 0x14" />
+            <iid name="IID_IPropertyDescription2" value="0x57D2EDED, 0x5062, 0x400E, 0xB1, 0x07, 0x5D, 0xAE, 0x79, 0xFE, 0x57, 0xA6" />
+            <iid name="IID_IPropertyDescriptionAliasInfo" value="0xF67104FC, 0x2AF9, 0x46FD, 0xB3, 0x2D, 0x24, 0x3C, 0x14, 0x04, 0xF3, 0xD1" />
+            <iid name="IID_IPropertyDescriptionSearchInfo" value="0x078F91BD, 0x29A2, 0x440F, 0x92, 0x4E, 0x46, 0xA2, 0x91, 0x52, 0x45, 0x20" />
+            <iid name="IID_IPropertyDescriptionRelatedPropertyInfo" value="0x507393F4, 0x2A3D, 0x4A60, 0xB5, 0x9E, 0xD9, 0xC7, 0x57, 0x16, 0xC2, 0xDD" />
+            <iid name="IID_IPropertySystem" value="0xCA724E8A, 0xC3E6, 0x442B, 0x88, 0xA4, 0x6F, 0xB0, 0xDB, 0x80, 0x35, 0xA3" />
+            <iid name="IID_IPropertyDescriptionList" value="0x1F9FC1D0, 0xC39B, 0x4B26, 0x81, 0x7F, 0x01, 0x19, 0x67, 0xD3, 0x44, 0x0E" />
+            <iid name="IID_IPropertyStoreFactory" value="0xBC110B6D, 0x57E8, 0x4148, 0xA9, 0xC6, 0x91, 0x01, 0x5A, 0xB2, 0xF3, 0xA5" />
+            <iid name="IID_IDelayedPropertyStoreFactory" value="0x40D4577F, 0xE237, 0x4BDB, 0xBD, 0x69, 0x58, 0xF0, 0x89, 0x43, 0x1B, 0x6A" />
+            <iid name="IID_IPersistSerializedPropStorage" value="0xE318AD57, 0x0AA0, 0x450F, 0xAC, 0xA5, 0x6F, 0xAB, 0x71, 0x03, 0xD9, 0x17" />
+            <iid name="IID_IPersistSerializedPropStorage2" value="0x77EFFA68, 0x4F98, 0x4366, 0xBA, 0x72, 0x57, 0x3B, 0x3D, 0x88, 0x05, 0x71" />
+            <iid name="IID_IPropertySystemChangeNotify" value="0xFA955FD9, 0x38BE, 0x4879, 0xA6, 0xCE, 0x82, 0x4C, 0xF5, 0x2D, 0x60, 0x9F" />
+            <iid name="IID_ICreateObject" value="0x75121952, 0xE0D0, 0x43E5, 0x93, 0x80, 0x1D, 0x80, 0x48, 0x3A, 0xCF, 0x72" />
+            <iid name="CLSID_InMemoryPropertyStore" value="0x9A02E012, 0x6303, 0x4E1E, 0xB9, 0xA1, 0x63, 0x0F, 0x80, 0x25, 0x92, 0xC5" />
+            <iid name="CLSID_InMemoryPropertyStoreMarshalByValue" value="0xD4CA0E2D, 0x6DA7, 0x4B75, 0xA9, 0x7C, 0x5F, 0x30, 0x6F, 0x0E, 0xAE, 0xDC" />
+            <iid name="CLSID_PropertySystem" value="0xB8967F85, 0x58AE, 0x4F46, 0x9F, 0xB2, 0x5D, 0x79, 0x04, 0x79, 0x8F, 0x4B" />
+        </class>
+    </namespace>
+</bindings>

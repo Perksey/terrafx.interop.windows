@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/oleidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IOleObject" access="public" native="struct IOleObject : IUnknown" uuid="00000112-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetClientSite" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClientSite">
+                    <type>IOleClientSite*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, IOleClientSite*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="pClientSite">pClientSite</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetClientSite" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppClientSite">
+                    <type>IOleClientSite**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, IOleClientSite**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="ppClientSite">ppClientSite</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetHostNames" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="szContainerApp">
+                    <type>ushort*</type>
+                </param>
+                <param name="szContainerObj">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, ushort*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="szContainerApp">szContainerApp</param>, <param name="szContainerObj">szContainerObj</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Close" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwSaveOption">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwSaveOption">dwSaveOption</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMoniker" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwWhichMoniker">
+                    <type>uint</type>
+                </param>
+                <param name="pmk">
+                    <type>IMoniker*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint, IMoniker*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwWhichMoniker">dwWhichMoniker</param>, <param name="pmk">pmk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMoniker" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwAssign">
+                    <type>uint</type>
+                </param>
+                <param name="dwWhichMoniker">
+                    <type>uint</type>
+                </param>
+                <param name="ppmk">
+                    <type>IMoniker**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint, uint, IMoniker**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwAssign">dwAssign</param>, <param name="dwWhichMoniker">dwWhichMoniker</param>, <param name="ppmk">ppmk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InitFromData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDataObject">
+                    <type>IDataObject*</type>
+                </param>
+                <param name="fCreation">
+                    <type>int</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, IDataObject*, int, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="pDataObject">pDataObject</param>, <param name="fCreation">fCreation</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetClipboardData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <param name="ppDataObject">
+                    <type>IDataObject**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint, IDataObject**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwReserved">dwReserved</param>, <param name="ppDataObject">ppDataObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DoVerb" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="iVerb">
+                    <type>int</type>
+                </param>
+                <param name="lpmsg">
+                    <type>MSG*</type>
+                </param>
+                <param name="pActiveSite">
+                    <type>IOleClientSite*</type>
+                </param>
+                <param name="lindex">
+                    <type>int</type>
+                </param>
+                <param name="hwndParent">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lprcPosRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, int, MSG*, IOleClientSite*, int, IntPtr, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="iVerb">iVerb</param>, <param name="lpmsg">lpmsg</param>, <param name="pActiveSite">pActiveSite</param>, <param name="lindex">lindex</param>, <param name="hwndParent">hwndParent</param>, <param name="lprcPosRect">lprcPosRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumVerbs" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnumOleVerb">
+                    <type>IEnumOLEVERB**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, IEnumOLEVERB**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnumOleVerb">ppEnumOleVerb</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Update" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsUpToDate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUserClassID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="pClsid">pClsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUserType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFormOfType">
+                    <type>uint</type>
+                </param>
+                <param name="pszUserType">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwFormOfType">dwFormOfType</param>, <param name="pszUserType">pszUserType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetExtent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwDrawAspect">
+                    <type>uint</type>
+                </param>
+                <param name="psizel">
+                    <type>SIZE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint, SIZE*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwDrawAspect">dwDrawAspect</param>, <param name="psizel">psizel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetExtent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwDrawAspect">
+                    <type>uint</type>
+                </param>
+                <param name="psizel">
+                    <type>SIZE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint, SIZE*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwDrawAspect">dwDrawAspect</param>, <param name="psizel">psizel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Advise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pAdvSink">
+                    <type>IAdviseSink*</type>
+                </param>
+                <param name="pdwConnection">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, IAdviseSink*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="pAdvSink">pAdvSink</param>, <param name="pdwConnection">pdwConnection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Unadvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwConnection">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwConnection">dwConnection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumAdvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppenumAdvise">
+                    <type>IEnumSTATDATA**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, IEnumSTATDATA**, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="ppenumAdvise">ppenumAdvise</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMiscStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwAspect">
+                    <type>uint</type>
+                </param>
+                <param name="pdwStatus">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwAspect">dwAspect</param>, <param name="pdwStatus">pdwStatus</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetColorScheme" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLogpal">
+                    <type>LOGPALETTE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleObject*, LOGPALETTE*, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IOleObject*)Unsafe.AsPointer(ref this)</param>, <param name="pLogpal">pLogpal</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

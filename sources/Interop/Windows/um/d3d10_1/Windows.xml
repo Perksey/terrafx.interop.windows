@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d10_1.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="D3D10CreateDevice1" access="public" lib="d3d10_1" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAdapter">
+                    <type>IDXGIAdapter*</type>
+                </param>
+                <param name="DriverType">
+                    <type>D3D10_DRIVER_TYPE</type>
+                </param>
+                <param name="Software">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="HardwareLevel">
+                    <type>D3D10_FEATURE_LEVEL1</type>
+                </param>
+                <param name="SDKVersion">
+                    <type>uint</type>
+                </param>
+                <param name="ppDevice">
+                    <type>ID3D10Device1**</type>
+                </param>
+            </function>
+            <function name="D3D10CreateDeviceAndSwapChain1" access="public" lib="d3d10_1" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAdapter">
+                    <type>IDXGIAdapter*</type>
+                </param>
+                <param name="DriverType">
+                    <type>D3D10_DRIVER_TYPE</type>
+                </param>
+                <param name="Software">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="HardwareLevel">
+                    <type>D3D10_FEATURE_LEVEL1</type>
+                </param>
+                <param name="SDKVersion">
+                    <type>uint</type>
+                </param>
+                <param name="pSwapChainDesc">
+                    <type>DXGI_SWAP_CHAIN_DESC*</type>
+                </param>
+                <param name="ppSwapChain">
+                    <type>IDXGISwapChain**</type>
+                </param>
+                <param name="ppDevice">
+                    <type>ID3D10Device1**</type>
+                </param>
+            </function>
+            <constant name="IID_ID3D10BlendState1" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xEDAD8D99, 0x8A35, 0x4d6d, 0x85, 0x66, 0x2E, 0xA2, 0x76, 0xCD, 0xE1, 0x61)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_ID3D10ShaderResourceView1" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9B7E4C87, 0x342C, 0x4106, 0xA1, 0x9F, 0x4F, 0x27, 0x04, 0xF6, 0x89, 0xF0)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_ID3D10Device1" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9B7E4C8F, 0x342C, 0x4106, 0xA1, 0x9F, 0x4F, 0x27, 0x04, 0xF6, 0x89, 0xF0)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_DEFAULT_SAMPLE_MASK" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0xffffffff)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_FLOAT16_FUSED_TOLERANCE_IN_ULP" access="public">
+                <type primitive="True">double</type>
+                <value>
+                    <code>(0.6)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>(0.6f)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_GS_INPUT_REGISTER_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_IA_VERTEX_INPUT_RESOURCE_SLOT_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_IA_VERTEX_INPUT_STRUCTURE_ELEMENTS_COMPONENTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(128)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_IA_VERTEX_INPUT_STRUCTURE_ELEMENT_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_PS_OUTPUT_MASK_REGISTER_COMPONENTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_PS_OUTPUT_MASK_REGISTER_COMPONENT_BIT_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_PS_OUTPUT_MASK_REGISTER_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_SHADER_MAJOR_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(4)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_SHADER_MINOR_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_SO_BUFFER_MAX_STRIDE_IN_BYTES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(2048)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_SO_BUFFER_MAX_WRITE_WINDOW_IN_BYTES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(256)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_SO_BUFFER_SLOT_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(4)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_SO_MULTIPLE_BUFFER_ELEMENTS_PER_BUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_SO_SINGLE_BUFFER_COMPONENT_LIMIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_STANDARD_VERTEX_ELEMENT_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_SUBPIXEL_FRACTIONAL_BIT_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(8)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_VS_INPUT_REGISTER_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_VS_OUTPUT_REGISTER_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D10_1_SDK_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0 + 0x20))
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/xaudio2fx.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreateAudioVolumeMeter" access="public" lib="Windows.Media.Audio.dll" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppApo">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <function name="CreateAudioReverb" access="public" lib="Windows.Media.Audio.dll" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppApo">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <constant name="XAUDIO2FX_REVERB_MIN_FRAMERATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>20000
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_FRAMERATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>48000
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_WET_DRY_MIX" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_REFLECTIONS_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_REVERB_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_REAR_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_7POINT1_SIDE_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_7POINT1_REAR_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_POSITION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_DIFFUSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_LOW_EQ_GAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_LOW_EQ_CUTOFF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_HIGH_EQ_GAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_HIGH_EQ_CUTOFF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_ROOM_FILTER_FREQ" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>20.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_ROOM_FILTER_MAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>-100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_ROOM_FILTER_HF" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>-100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_REFLECTIONS_GAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>-100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_REVERB_GAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>-100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_DECAY_TIME" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.1f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_DENSITY" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MIN_ROOM_SIZE" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_WET_DRY_MIX" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_REFLECTIONS_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>300
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_REVERB_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>85
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_REAR_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_7POINT1_SIDE_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_7POINT1_REAR_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>20
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_POSITION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>30
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_DIFFUSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>15
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_LOW_EQ_GAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>12
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_LOW_EQ_CUTOFF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>9
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_HIGH_EQ_GAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_HIGH_EQ_CUTOFF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>14
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_ROOM_FILTER_FREQ" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>20000.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_ROOM_FILTER_MAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_ROOM_FILTER_HF" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_REFLECTIONS_GAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>20.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_REVERB_GAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>20.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_DENSITY" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_MAX_ROOM_SIZE" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_WET_DRY_MIX" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_REFLECTIONS_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_REVERB_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_REAR_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_7POINT1_SIDE_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_7POINT1_REAR_DELAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>20
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_POSITION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>6
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_POSITION_MATRIX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>27
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_EARLY_DIFFUSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_LATE_DIFFUSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_LOW_EQ_GAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_LOW_EQ_CUTOFF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_HIGH_EQ_GAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_HIGH_EQ_CUTOFF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_ROOM_FILTER_FREQ" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>5000.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_ROOM_FILTER_MAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_ROOM_FILTER_HF" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_REFLECTIONS_GAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_REVERB_GAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_DECAY_TIME" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>1.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_DENSITY" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_ROOM_SIZE" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="XAUDIO2FX_REVERB_DEFAULT_DISABLE_LATE_FIELD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <iid name="CLSID_AudioVolumeMeter" value="0x4FC3B166, 0x972A, 0x40CF, 0xBC, 0x37, 0x7D, 0xB0, 0x3D, 0xB2, 0xFB, 0xA3" />
+            <iid name="CLSID_AudioReverb" value="0xC2633B16, 0x471B, 0x4498, 0xB8, 0xC5, 0x4F, 0x09, 0x59, 0xE2, 0xEC, 0x09" />
+        </class>
+    </namespace>
+</bindings>

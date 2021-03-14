@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from winrt/roparameterizediid.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IRoMetaDataLocator" access="public" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="Locate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nameElement">
+                    <type>ushort*</type>
+                </param>
+                <param name="metaDataDestination">
+                    <type>IRoSimpleMetaDataBuilder*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IRoMetaDataLocator*, ushort*, IRoSimpleMetaDataBuilder*, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IRoMetaDataLocator*)Unsafe.AsPointer(ref this)</param>, <param name="nameElement">nameElement</param>, <param name="metaDataDestination">metaDataDestination</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

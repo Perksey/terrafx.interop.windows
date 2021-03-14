@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/appmodel.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PACKAGE_VERSION" access="public">
+            <field name="Anonymous" access="public">
+                <type native="PACKAGE_VERSION::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/appmodel.h:55:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Version" access="public">
+                <type native="">ref ulong</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Version, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Revision" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.Revision, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Build" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.Build, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Minor" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.Minor, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Major" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.Major, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit" pack="4">
+                <field name="Version" access="public" offset="0">
+                    <type native="UINT64">ulong</type>
+                </field>
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="PACKAGE_VERSION::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/appmodel.h:57:9)">_Anonymous_e__Struct</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="Revision" access="public">
+                        <type native="USHORT">ushort</type>
+                    </field>
+                    <field name="Build" access="public">
+                        <type native="USHORT">ushort</type>
+                    </field>
+                    <field name="Minor" access="public">
+                        <type native="USHORT">ushort</type>
+                    </field>
+                    <field name="Major" access="public">
+                        <type native="USHORT">ushort</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

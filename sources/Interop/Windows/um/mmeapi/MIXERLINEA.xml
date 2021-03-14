@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mmeapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MIXERLINEA" access="public" unsafe="true" layout="Sequential" pack="1">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwDestination" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwSource" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwLineID" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="fdwLine" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwUser" access="public">
+                <type native="DWORD_PTR">nuint</type>
+            </field>
+            <field name="dwComponentType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cChannels" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cConnections" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cControls" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="szShortName" access="public">
+                <type native="CHAR [16]" count="16" fixed="_szShortName_e__FixedBuffer">sbyte</type>
+            </field>
+            <field name="szName" access="public">
+                <type native="CHAR [64]" count="64" fixed="_szName_e__FixedBuffer">sbyte</type>
+            </field>
+            <field name="Target" access="public">
+                <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/mmeapi.h:1909:5)">_Target_e__Struct</type>
+            </field>
+            <struct name="_Target_e__Struct" access="public" unsafe="true" layout="Sequential" pack="1">
+                <field name="dwType" access="public">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="dwDeviceID" access="public">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="wMid" access="public">
+                    <type native="WORD">ushort</type>
+                </field>
+                <field name="wPid" access="public">
+                    <type native="WORD">ushort</type>
+                </field>
+                <field name="vDriverVersion" access="public">
+                    <type native="MMVERSION">uint</type>
+                </field>
+                <field name="szPname" access="public">
+                    <type native="CHAR [32]" count="32" fixed="_szPname_e__FixedBuffer">sbyte</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

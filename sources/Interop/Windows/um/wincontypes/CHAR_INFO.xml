@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincontypes.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CHAR_INFO" access="public">
+            <field name="Char" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincontypes.h:144:5)">_Char_e__Union</type>
+            </field>
+            <field name="Attributes" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <struct name="_Char_e__Union" access="public" layout="Explicit">
+                <field name="UnicodeChar" access="public" offset="0">
+                    <type native="WCHAR">ushort</type>
+                </field>
+                <field name="AsciiChar" access="public" offset="0">
+                    <type native="CHAR">sbyte</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_PKCS8_EXPORT_PARAMS" access="public" unsafe="true">
+            <field name="hCryptProv" access="public">
+                <type native="HCRYPTPROV">nuint</type>
+            </field>
+            <field name="dwKeySpec" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pszPrivateKeyObjId" access="public">
+                <type native="LPSTR">sbyte*</type>
+            </field>
+            <field name="pEncryptPrivateKeyFunc" access="public">
+                <type native="PCRYPT_ENCRYPT_PRIVATE_KEY_FUNC">delegate* unmanaged&lt;CRYPT_ALGORITHM_IDENTIFIER*, CRYPTOAPI_BLOB*, byte*, uint*, void*, int&gt;</type>
+            </field>
+            <field name="pVoidEncryptFunc" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

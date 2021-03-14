@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STREAM_INFORMATION_ENTRY" access="public">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="StreamInformation" access="public">
+                <type native="union _StreamInformation">_StreamInformation</type>
+            </field>
+            <struct name="_StreamInformation" access="public" layout="Explicit">
+                <field name="DesiredStorageClass" access="public" offset="0">
+                    <type native="struct _DesiredStorageClass">_DesiredStorageClass</type>
+                </field>
+                <field name="DataStream" access="public" offset="0">
+                    <type native="struct _DataStream">_DataStream</type>
+                </field>
+                <field name="Reparse" access="public" offset="0">
+                    <type native="struct _Reparse">_Reparse</type>
+                </field>
+                <field name="Ea" access="public" offset="0">
+                    <type native="struct _Ea">_Ea</type>
+                </field>
+                <struct name="_DesiredStorageClass" access="public">
+                    <field name="Class" access="public">
+                        <type native="">FILE_STORAGE_TIER_CLASS</type>
+                    </field>
+                    <field name="Flags" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                </struct>
+                <struct name="_DataStream" access="public">
+                    <field name="Length" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="Flags" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="Reserved" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="Vdl" access="public">
+                        <type native="DWORDLONG">ulong</type>
+                    </field>
+                </struct>
+                <struct name="_Reparse" access="public">
+                    <field name="Length" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="Flags" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="ReparseDataSize" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="ReparseDataOffset" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                </struct>
+                <struct name="_Ea" access="public">
+                    <field name="Length" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="Flags" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="EaSize" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="EaInformationOffset" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

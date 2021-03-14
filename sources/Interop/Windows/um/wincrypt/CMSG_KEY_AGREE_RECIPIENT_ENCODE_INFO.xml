@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CMSG_KEY_AGREE_RECIPIENT_ENCODE_INFO" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="KeyEncryptionAlgorithm" access="public">
+                <type native="">CRYPT_ALGORITHM_IDENTIFIER</type>
+            </field>
+            <field name="pvKeyEncryptionAuxInfo" access="public">
+                <type native="void *">void*</type>
+            </field>
+            <field name="KeyWrapAlgorithm" access="public">
+                <type native="">CRYPT_ALGORITHM_IDENTIFIER</type>
+            </field>
+            <field name="pvKeyWrapAuxInfo" access="public">
+                <type native="void *">void*</type>
+            </field>
+            <field name="hCryptProv" access="public">
+                <type native="HCRYPTPROV_LEGACY">nuint</type>
+            </field>
+            <field name="dwKeySpec" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwKeyChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_CMSG_KEY_AGREE_RECIPIENT_ENCODE_INFO::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:6946:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="pEphemeralAlgorithm" access="public">
+                <type native="">ref CRYPT_ALGORITHM_IDENTIFIER*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pEphemeralAlgorithm;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pSenderId" access="public">
+                <type native="">ref CERT_ID*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pSenderId;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="UserKeyingMaterial" access="public">
+                <type native="CRYPT_DATA_BLOB">CRYPTOAPI_BLOB</type>
+            </field>
+            <field name="cRecipientEncryptedKeys" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="rgpRecipientEncryptedKeys" access="public">
+                <type native="PCMSG_RECIPIENT_ENCRYPTED_KEY_ENCODE_INFO *">CMSG_RECIPIENT_ENCRYPTED_KEY_ENCODE_INFO**</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pEphemeralAlgorithm" access="public" offset="0">
+                    <type native="PCRYPT_ALGORITHM_IDENTIFIER">CRYPT_ALGORITHM_IDENTIFIER*</type>
+                </field>
+                <field name="pSenderId" access="public" offset="0">
+                    <type native="PCERT_ID">CERT_ID*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

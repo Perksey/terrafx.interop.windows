@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpEventSink" access="public" native="struct ISpEventSink : IUnknown" uuid="be7a9cc9-5f9e-11d2-960f-00c04f8ee628" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEventSink*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpEventSink*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEventSink*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpEventSink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEventSink*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpEventSink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddEvents" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pEventArray">
+                    <type>SPEVENT*</type>
+                </param>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEventSink*, SPEVENT*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpEventSink*)Unsafe.AsPointer(ref this)</param>, <param name="pEventArray">pEventArray</param>, <param name="ulCount">ulCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEventInterest" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pullEventInterest">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEventSink*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpEventSink*)Unsafe.AsPointer(ref this)</param>, <param name="pullEventInterest">pullEventInterest</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/AppxPackaging.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAppxManifestReader" access="public" native="struct IAppxManifestReader : IUnknown" uuid="4e1bd148-55a0-4480-a3d1-15544710637c" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPackageId" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="packageId">
+                    <type>IAppxManifestPackageId**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, IAppxManifestPackageId**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="packageId">packageId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="packageProperties">
+                    <type>IAppxManifestProperties**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, IAppxManifestProperties**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="packageProperties">packageProperties</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPackageDependencies" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dependencies">
+                    <type>IAppxManifestPackageDependenciesEnumerator**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, IAppxManifestPackageDependenciesEnumerator**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="dependencies">dependencies</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCapabilities" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="capabilities">
+                    <type>APPX_CAPABILITIES*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, APPX_CAPABILITIES*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="capabilities">capabilities</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetResources" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="resources">
+                    <type>IAppxManifestResourcesEnumerator**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, IAppxManifestResourcesEnumerator**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="resources">resources</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDeviceCapabilities" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="deviceCapabilities">
+                    <type>IAppxManifestDeviceCapabilitiesEnumerator**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, IAppxManifestDeviceCapabilitiesEnumerator**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="deviceCapabilities">deviceCapabilities</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrerequisite" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, ushort*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetApplications" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="applications">
+                    <type>IAppxManifestApplicationsEnumerator**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, IAppxManifestApplicationsEnumerator**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="applications">applications</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="manifestStream">
+                    <type>IStream**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxManifestReader*, IStream**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IAppxManifestReader*)Unsafe.AsPointer(ref this)</param>, <param name="manifestStream">manifestStream</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

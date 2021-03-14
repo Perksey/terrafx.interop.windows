@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID2D1TransformedGeometry" access="public" native="struct ID2D1TransformedGeometry : ID2D1Geometry" uuid="2cd906bb-12e2-11dc-9fed-001143a055f9" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="GetWidenedBounds" access="public">
+                <type native="HRESULT">int</type>
+                <param name="strokeWidth">
+                    <type>float</type>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="bounds">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <code>return GetWidenedBounds(strokeWidth, strokeStyle, worldTransform, (0.25f), bounds);
+        </code>
+            </function>
+            <function name="StrokeContainsPoint" access="public">
+                <type native="HRESULT">int</type>
+                <param name="point">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="strokeWidth">
+                    <type>float</type>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="contains">
+                    <type>int*</type>
+                </param>
+                <code>return StrokeContainsPoint(point, strokeWidth, strokeStyle, worldTransform, (0.25f), contains);
+        </code>
+            </function>
+            <function name="FillContainsPoint" access="public">
+                <type native="HRESULT">int</type>
+                <param name="point">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="contains">
+                    <type>int*</type>
+                </param>
+                <code>return FillContainsPoint(point, worldTransform, (0.25f), contains);
+        </code>
+            </function>
+            <function name="CompareWithGeometry" access="public">
+                <type native="HRESULT">int</type>
+                <param name="inputGeometry">
+                    <type>ID2D1Geometry*</type>
+                </param>
+                <param name="inputGeometryTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="relation">
+                    <type>D2D1_GEOMETRY_RELATION*</type>
+                </param>
+                <code>return CompareWithGeometry(inputGeometry, inputGeometryTransform, (0.25f), relation);
+        </code>
+            </function>
+            <function name="Simplify" access="public">
+                <type native="HRESULT">int</type>
+                <param name="simplificationOption">
+                    <type>D2D1_GEOMETRY_SIMPLIFICATION_OPTION</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="geometrySink">
+                    <type>ID2D1SimplifiedGeometrySink*</type>
+                </param>
+                <code>return Simplify(simplificationOption, worldTransform, (0.25f), geometrySink);
+        </code>
+            </function>
+            <function name="Tessellate" access="public">
+                <type native="HRESULT">int</type>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="tessellationSink">
+                    <type>ID2D1TessellationSink*</type>
+                </param>
+                <code>return Tessellate(worldTransform, (0.25f), tessellationSink);
+        </code>
+            </function>
+            <function name="CombineWithGeometry" access="public">
+                <type native="HRESULT">int</type>
+                <param name="inputGeometry">
+                    <type>ID2D1Geometry*</type>
+                </param>
+                <param name="combineMode">
+                    <type>D2D1_COMBINE_MODE</type>
+                </param>
+                <param name="inputGeometryTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="geometrySink">
+                    <type>ID2D1SimplifiedGeometrySink*</type>
+                </param>
+                <code>return CombineWithGeometry(inputGeometry, combineMode, inputGeometryTransform, (0.25f), geometrySink);
+        </code>
+            </function>
+            <function name="Outline" access="public">
+                <type native="HRESULT">int</type>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="geometrySink">
+                    <type>ID2D1SimplifiedGeometrySink*</type>
+                </param>
+                <code>return Outline(worldTransform, (0.25f), geometrySink);
+        </code>
+            </function>
+            <function name="ComputeArea" access="public">
+                <type native="HRESULT">int</type>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="area">
+                    <type>float*</type>
+                </param>
+                <code>return ComputeArea(worldTransform, (0.25f), area);
+        </code>
+            </function>
+            <function name="ComputeLength" access="public">
+                <type native="HRESULT">int</type>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="length">
+                    <type>float*</type>
+                </param>
+                <code>return ComputeLength(worldTransform, (0.25f), length);
+        </code>
+            </function>
+            <function name="ComputePointAtLength" access="public">
+                <type native="HRESULT">int</type>
+                <param name="length">
+                    <type>float</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="point">
+                    <type>D2D_POINT_2F*</type>
+                </param>
+                <param name="unitTangentVector">
+                    <type>D2D_POINT_2F*</type>
+                </param>
+                <code>return ComputePointAtLength(length, worldTransform, (0.25f), point, unitTangentVector);
+        </code>
+            </function>
+            <function name="Widen" access="public">
+                <type native="HRESULT">int</type>
+                <param name="strokeWidth">
+                    <type>float</type>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="geometrySink">
+                    <type>ID2D1SimplifiedGeometrySink*</type>
+                </param>
+                <code>return Widen(strokeWidth, strokeStyle, worldTransform, (0.25f), geometrySink);
+        </code>
+            </function>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFactory" access="public" unsafe="true">
+                <type>void</type>
+                <param name="factory">
+                    <type>ID2D1Factory**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1TransformedGeometry*, ID2D1Factory**, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="factory">factory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBounds" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="bounds">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, D2D_MATRIX_3X2_F*, D2D_RECT_F*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="worldTransform">worldTransform</param>, <param name="bounds">bounds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWidenedBounds" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="strokeWidth">
+                    <type>float</type>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="bounds">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, D2D_MATRIX_3X2_F*, float, D2D_RECT_F*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="strokeWidth">strokeWidth</param>, <param name="strokeStyle">strokeStyle</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="bounds">bounds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="StrokeContainsPoint" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="point">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="strokeWidth">
+                    <type>float</type>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="contains">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, D2D_POINT_2F, float, ID2D1StrokeStyle*, D2D_MATRIX_3X2_F*, float, int*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="point">point</param>, <param name="strokeWidth">strokeWidth</param>, <param name="strokeStyle">strokeStyle</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="contains">contains</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FillContainsPoint" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="point">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="contains">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, D2D_POINT_2F, D2D_MATRIX_3X2_F*, float, int*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="point">point</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="contains">contains</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CompareWithGeometry" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputGeometry">
+                    <type>ID2D1Geometry*</type>
+                </param>
+                <param name="inputGeometryTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="relation">
+                    <type>D2D1_GEOMETRY_RELATION*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, ID2D1Geometry*, D2D_MATRIX_3X2_F*, float, D2D1_GEOMETRY_RELATION*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="inputGeometry">inputGeometry</param>, <param name="inputGeometryTransform">inputGeometryTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="relation">relation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Simplify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="simplificationOption">
+                    <type>D2D1_GEOMETRY_SIMPLIFICATION_OPTION</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="geometrySink">
+                    <type>ID2D1SimplifiedGeometrySink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, D2D1_GEOMETRY_SIMPLIFICATION_OPTION, D2D_MATRIX_3X2_F*, float, ID2D1SimplifiedGeometrySink*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="simplificationOption">simplificationOption</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="geometrySink">geometrySink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Tessellate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="tessellationSink">
+                    <type>ID2D1TessellationSink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, D2D_MATRIX_3X2_F*, float, ID2D1TessellationSink*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="tessellationSink">tessellationSink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CombineWithGeometry" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputGeometry">
+                    <type>ID2D1Geometry*</type>
+                </param>
+                <param name="combineMode">
+                    <type>D2D1_COMBINE_MODE</type>
+                </param>
+                <param name="inputGeometryTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="geometrySink">
+                    <type>ID2D1SimplifiedGeometrySink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, ID2D1Geometry*, D2D1_COMBINE_MODE, D2D_MATRIX_3X2_F*, float, ID2D1SimplifiedGeometrySink*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="inputGeometry">inputGeometry</param>, <param name="combineMode">combineMode</param>, <param name="inputGeometryTransform">inputGeometryTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="geometrySink">geometrySink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Outline" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="geometrySink">
+                    <type>ID2D1SimplifiedGeometrySink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, D2D_MATRIX_3X2_F*, float, ID2D1SimplifiedGeometrySink*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="geometrySink">geometrySink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ComputeArea" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="area">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, D2D_MATRIX_3X2_F*, float, float*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="area">area</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ComputeLength" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="length">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, D2D_MATRIX_3X2_F*, float, float*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="length">length</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ComputePointAtLength" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="length">
+                    <type>float</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="point">
+                    <type>D2D_POINT_2F*</type>
+                </param>
+                <param name="unitTangentVector">
+                    <type>D2D_POINT_2F*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, float, D2D_MATRIX_3X2_F*, float, D2D_POINT_2F*, D2D_POINT_2F*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="length">length</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="point">point</param>, <param name="unitTangentVector">unitTangentVector</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Widen" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="strokeWidth">
+                    <type>float</type>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="geometrySink">
+                    <type>ID2D1SimplifiedGeometrySink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, D2D_MATRIX_3X2_F*, float, ID2D1SimplifiedGeometrySink*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="strokeWidth">strokeWidth</param>, <param name="strokeStyle">strokeStyle</param>, <param name="worldTransform">worldTransform</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="geometrySink">geometrySink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSourceGeometry" access="public" unsafe="true">
+                <type>void</type>
+                <param name="sourceGeometry">
+                    <type>ID2D1Geometry**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1TransformedGeometry*, ID2D1Geometry**, void&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="sourceGeometry">sourceGeometry</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTransform" access="public" unsafe="true">
+                <type>void</type>
+                <param name="transform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1TransformedGeometry*, D2D_MATRIX_3X2_F*, void&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this)</param>, <param name="transform">transform</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ddraw.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DDSURFACEDESC2" access="public" unsafe="true">
+            <field name="dwSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwHeight" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwWidth" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous1" access="public">
+                <type native="_DDSURFACEDESC2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/ddraw.h:2268:5)">_Anonymous1_e__Union</type>
+            </field>
+            <field name="lPitch" access="public">
+                <type native="">ref int</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.lPitch, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwLinearSize" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.dwLinearSize, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Anonymous2" access="public">
+                <type native="_DDSURFACEDESC2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/ddraw.h:2273:5)">_Anonymous2_e__Union</type>
+            </field>
+            <field name="dwBackBufferCount" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.dwBackBufferCount, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwDepth" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.dwDepth, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Anonymous3" access="public">
+                <type native="_DDSURFACEDESC2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/ddraw.h:2278:5)">_Anonymous3_e__Union</type>
+            </field>
+            <field name="dwMipMapCount" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous3.dwMipMapCount, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwRefreshRate" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous3.dwRefreshRate, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwSrcVBHandle" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous3.dwSrcVBHandle, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwAlphaBitDepth" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwReserved" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="lpSurface" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+            <field name="Anonymous4" access="public">
+                <type native="_DDSURFACEDESC2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/ddraw.h:2288:5)">_Anonymous4_e__Union</type>
+            </field>
+            <field name="ddckCKDestOverlay" access="public">
+                <type native="">ref DDCOLORKEY</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous4.ddckCKDestOverlay, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwEmptyFaceColor" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous4.dwEmptyFaceColor, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ddckCKDestBlt" access="public">
+                <type native="">DDCOLORKEY</type>
+            </field>
+            <field name="ddckCKSrcOverlay" access="public">
+                <type native="">DDCOLORKEY</type>
+            </field>
+            <field name="ddckCKSrcBlt" access="public">
+                <type native="">DDCOLORKEY</type>
+            </field>
+            <field name="Anonymous5" access="public">
+                <type native="_DDSURFACEDESC2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/ddraw.h:2296:5)">_Anonymous5_e__Union</type>
+            </field>
+            <field name="ddpfPixelFormat" access="public">
+                <type native="">ref DDPIXELFORMAT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous5.ddpfPixelFormat, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwFVF" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous5.dwFVF, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ddsCaps" access="public">
+                <type native="">DDSCAPS2</type>
+            </field>
+            <field name="dwTextureStage" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <struct name="_Anonymous1_e__Union" access="public" layout="Explicit">
+                <field name="lPitch" access="public" offset="0">
+                    <type native="LONG">int</type>
+                </field>
+                <field name="dwLinearSize" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous2_e__Union" access="public" layout="Explicit">
+                <field name="dwBackBufferCount" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="dwDepth" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous3_e__Union" access="public" layout="Explicit">
+                <field name="dwMipMapCount" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="dwRefreshRate" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="dwSrcVBHandle" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous4_e__Union" access="public" layout="Explicit">
+                <field name="ddckCKDestOverlay" access="public" offset="0">
+                    <type native="">DDCOLORKEY</type>
+                </field>
+                <field name="dwEmptyFaceColor" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous5_e__Union" access="public" layout="Explicit">
+                <field name="ddpfPixelFormat" access="public" offset="0">
+                    <type native="">DDPIXELFORMAT</type>
+                </field>
+                <field name="dwFVF" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/dxgi1_3.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDXGISwapChainMedia" access="public" native="struct IDXGISwapChainMedia : IUnknown" uuid="dd95b90b-f05f-4f6a-bd65-25bfb264bd84" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChainMedia*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDXGISwapChainMedia*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChainMedia*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDXGISwapChainMedia*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChainMedia*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDXGISwapChainMedia*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFrameStatisticsMedia" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStats">
+                    <type>DXGI_FRAME_STATISTICS_MEDIA*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChainMedia*, DXGI_FRAME_STATISTICS_MEDIA*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDXGISwapChainMedia*)Unsafe.AsPointer(ref this)</param>, <param name="pStats">pStats</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPresentDuration" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Duration">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChainMedia*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDXGISwapChainMedia*)Unsafe.AsPointer(ref this)</param>, <param name="Duration">Duration</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckPresentDurationSupport" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="DesiredPresentDuration">
+                    <type>uint</type>
+                </param>
+                <param name="pClosestSmallerPresentDuration">
+                    <type>uint*</type>
+                </param>
+                <param name="pClosestLargerPresentDuration">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChainMedia*, uint, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDXGISwapChainMedia*)Unsafe.AsPointer(ref this)</param>, <param name="DesiredPresentDuration">DesiredPresentDuration</param>, <param name="pClosestSmallerPresentDuration">pClosestSmallerPresentDuration</param>, <param name="pClosestLargerPresentDuration">pClosestLargerPresentDuration</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D11_UNORDERED_ACCESS_VIEW_DESC" access="public">
+            <field name="Format" access="public">
+                <type native="">DXGI_FORMAT</type>
+            </field>
+            <field name="ViewDimension" access="public">
+                <type native="">D3D11_UAV_DIMENSION</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="D3D11_UNORDERED_ACCESS_VIEW_DESC::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d11.h:4635:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Buffer" access="public">
+                <type native="">ref D3D11_BUFFER_UAV</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Texture1D" access="public">
+                <type native="">ref D3D11_TEX1D_UAV</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Texture1DArray" access="public">
+                <type native="">ref D3D11_TEX1D_ARRAY_UAV</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Texture2D" access="public">
+                <type native="">ref D3D11_TEX2D_UAV</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Texture2DArray" access="public">
+                <type native="">ref D3D11_TEX2D_ARRAY_UAV</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Texture3D" access="public">
+                <type native="">ref D3D11_TEX3D_UAV</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="Buffer" access="public" offset="0">
+                    <type native="">D3D11_BUFFER_UAV</type>
+                </field>
+                <field name="Texture1D" access="public" offset="0">
+                    <type native="">D3D11_TEX1D_UAV</type>
+                </field>
+                <field name="Texture1DArray" access="public" offset="0">
+                    <type native="">D3D11_TEX1D_ARRAY_UAV</type>
+                </field>
+                <field name="Texture2D" access="public" offset="0">
+                    <type native="">D3D11_TEX2D_UAV</type>
+                </field>
+                <field name="Texture2DArray" access="public" offset="0">
+                    <type native="">D3D11_TEX2D_ARRAY_UAV</type>
+                </field>
+                <field name="Texture3D" access="public" offset="0">
+                    <type native="">D3D11_TEX3D_UAV</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

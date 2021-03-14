@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincodec.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IWICImagingFactory2" access="public" native="struct IWICImagingFactory2 : IWICImagingFactory" uuid="7b816b45-1996-4476-b132-de9e247c8af0" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDecoderFromFilename" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wzFilename">
+                    <type>ushort*</type>
+                </param>
+                <param name="pguidVendor">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="metadataOptions">
+                    <type>WICDecodeOptions</type>
+                </param>
+                <param name="ppIDecoder">
+                    <type>IWICBitmapDecoder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, ushort*, Guid*, uint, WICDecodeOptions, IWICBitmapDecoder**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="wzFilename">wzFilename</param>, <param name="pguidVendor">pguidVendor</param>, <param name="dwDesiredAccess">dwDesiredAccess</param>, <param name="metadataOptions">metadataOptions</param>, <param name="ppIDecoder">ppIDecoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDecoderFromStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="pguidVendor">
+                    <type>Guid*</type>
+                </param>
+                <param name="metadataOptions">
+                    <type>WICDecodeOptions</type>
+                </param>
+                <param name="ppIDecoder">
+                    <type>IWICBitmapDecoder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IStream*, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="pIStream">pIStream</param>, <param name="pguidVendor">pguidVendor</param>, <param name="metadataOptions">metadataOptions</param>, <param name="ppIDecoder">ppIDecoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDecoderFromFileHandle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hFile">
+                    <type>nuint</type>
+                </param>
+                <param name="pguidVendor">
+                    <type>Guid*</type>
+                </param>
+                <param name="metadataOptions">
+                    <type>WICDecodeOptions</type>
+                </param>
+                <param name="ppIDecoder">
+                    <type>IWICBitmapDecoder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, nuint, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="hFile">hFile</param>, <param name="pguidVendor">pguidVendor</param>, <param name="metadataOptions">metadataOptions</param>, <param name="ppIDecoder">ppIDecoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateComponentInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="clsidComponent">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppIInfo">
+                    <type>IWICComponentInfo**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, Guid*, IWICComponentInfo**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="clsidComponent">clsidComponent</param>, <param name="ppIInfo">ppIInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDecoder" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidContainerFormat">
+                    <type>Guid*</type>
+                </param>
+                <param name="pguidVendor">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppIDecoder">
+                    <type>IWICBitmapDecoder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, Guid*, Guid*, IWICBitmapDecoder**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="guidContainerFormat">guidContainerFormat</param>, <param name="pguidVendor">pguidVendor</param>, <param name="ppIDecoder">ppIDecoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateEncoder" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidContainerFormat">
+                    <type>Guid*</type>
+                </param>
+                <param name="pguidVendor">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppIEncoder">
+                    <type>IWICBitmapEncoder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, Guid*, Guid*, IWICBitmapEncoder**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="guidContainerFormat">guidContainerFormat</param>, <param name="pguidVendor">pguidVendor</param>, <param name="ppIEncoder">ppIEncoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePalette" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppIPalette">
+                    <type>IWICPalette**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICPalette**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="ppIPalette">ppIPalette</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateFormatConverter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppIFormatConverter">
+                    <type>IWICFormatConverter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICFormatConverter**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="ppIFormatConverter">ppIFormatConverter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapScaler" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppIBitmapScaler">
+                    <type>IWICBitmapScaler**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICBitmapScaler**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="ppIBitmapScaler">ppIBitmapScaler</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapClipper" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppIBitmapClipper">
+                    <type>IWICBitmapClipper**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICBitmapClipper**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="ppIBitmapClipper">ppIBitmapClipper</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapFlipRotator" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppIBitmapFlipRotator">
+                    <type>IWICBitmapFlipRotator**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICBitmapFlipRotator**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="ppIBitmapFlipRotator">ppIBitmapFlipRotator</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppIWICStream">
+                    <type>IWICStream**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICStream**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="ppIWICStream">ppIWICStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppIWICColorContext">
+                    <type>IWICColorContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICColorContext**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="ppIWICColorContext">ppIWICColorContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorTransformer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppIWICColorTransform">
+                    <type>IWICColorTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICColorTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="ppIWICColorTransform">ppIWICColorTransform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="uiWidth">
+                    <type>uint</type>
+                </param>
+                <param name="uiHeight">
+                    <type>uint</type>
+                </param>
+                <param name="pixelFormat">
+                    <type>Guid*</type>
+                </param>
+                <param name="option">
+                    <type>WICBitmapCreateCacheOption</type>
+                </param>
+                <param name="ppIBitmap">
+                    <type>IWICBitmap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, uint, uint, Guid*, WICBitmapCreateCacheOption, IWICBitmap**, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="uiWidth">uiWidth</param>, <param name="uiHeight">uiHeight</param>, <param name="pixelFormat">pixelFormat</param>, <param name="option">option</param>, <param name="ppIBitmap">ppIBitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapFromSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIBitmapSource">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="option">
+                    <type>WICBitmapCreateCacheOption</type>
+                </param>
+                <param name="ppIBitmap">
+                    <type>IWICBitmap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICBitmapSource*, WICBitmapCreateCacheOption, IWICBitmap**, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="pIBitmapSource">pIBitmapSource</param>, <param name="option">option</param>, <param name="ppIBitmap">ppIBitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapFromSourceRect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIBitmapSource">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="x">
+                    <type>uint</type>
+                </param>
+                <param name="y">
+                    <type>uint</type>
+                </param>
+                <param name="width">
+                    <type>uint</type>
+                </param>
+                <param name="height">
+                    <type>uint</type>
+                </param>
+                <param name="ppIBitmap">
+                    <type>IWICBitmap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICBitmapSource*, uint, uint, uint, uint, IWICBitmap**, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="pIBitmapSource">pIBitmapSource</param>, <param name="x">x</param>, <param name="y">y</param>, <param name="width">width</param>, <param name="height">height</param>, <param name="ppIBitmap">ppIBitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapFromMemory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="uiWidth">
+                    <type>uint</type>
+                </param>
+                <param name="uiHeight">
+                    <type>uint</type>
+                </param>
+                <param name="pixelFormat">
+                    <type>Guid*</type>
+                </param>
+                <param name="cbStride">
+                    <type>uint</type>
+                </param>
+                <param name="cbBufferSize">
+                    <type>uint</type>
+                </param>
+                <param name="pbBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="ppIBitmap">
+                    <type>IWICBitmap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, uint, uint, Guid*, uint, uint, byte*, IWICBitmap**, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="uiWidth">uiWidth</param>, <param name="uiHeight">uiHeight</param>, <param name="pixelFormat">pixelFormat</param>, <param name="cbStride">cbStride</param>, <param name="cbBufferSize">cbBufferSize</param>, <param name="pbBuffer">pbBuffer</param>, <param name="ppIBitmap">ppIBitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapFromHBITMAP" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hBitmap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hPalette">
+                    <type>IntPtr</type>
+                </param>
+                <param name="options">
+                    <type>WICBitmapAlphaChannelOption</type>
+                </param>
+                <param name="ppIBitmap">
+                    <type>IWICBitmap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IntPtr, IntPtr, WICBitmapAlphaChannelOption, IWICBitmap**, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="hBitmap">hBitmap</param>, <param name="hPalette">hPalette</param>, <param name="options">options</param>, <param name="ppIBitmap">ppIBitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapFromHICON" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hIcon">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ppIBitmap">
+                    <type>IWICBitmap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IntPtr, IWICBitmap**, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="hIcon">hIcon</param>, <param name="ppIBitmap">ppIBitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateComponentEnumerator" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="componentTypes">
+                    <type>uint</type>
+                </param>
+                <param name="options">
+                    <type>uint</type>
+                </param>
+                <param name="ppIEnumUnknown">
+                    <type>IEnumUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, uint, uint, IEnumUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="componentTypes">componentTypes</param>, <param name="options">options</param>, <param name="ppIEnumUnknown">ppIEnumUnknown</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateFastMetadataEncoderFromDecoder" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIDecoder">
+                    <type>IWICBitmapDecoder*</type>
+                </param>
+                <param name="ppIFastEncoder">
+                    <type>IWICFastMetadataEncoder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICBitmapDecoder*, IWICFastMetadataEncoder**, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="pIDecoder">pIDecoder</param>, <param name="ppIFastEncoder">ppIFastEncoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateFastMetadataEncoderFromFrameDecode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIFrameDecoder">
+                    <type>IWICBitmapFrameDecode*</type>
+                </param>
+                <param name="ppIFastEncoder">
+                    <type>IWICFastMetadataEncoder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICBitmapFrameDecode*, IWICFastMetadataEncoder**, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="pIFrameDecoder">pIFrameDecoder</param>, <param name="ppIFastEncoder">ppIFastEncoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateQueryWriter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidMetadataFormat">
+                    <type>Guid*</type>
+                </param>
+                <param name="pguidVendor">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppIQueryWriter">
+                    <type>IWICMetadataQueryWriter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, Guid*, Guid*, IWICMetadataQueryWriter**, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="guidMetadataFormat">guidMetadataFormat</param>, <param name="pguidVendor">pguidVendor</param>, <param name="ppIQueryWriter">ppIQueryWriter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateQueryWriterFromReader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIQueryReader">
+                    <type>IWICMetadataQueryReader*</type>
+                </param>
+                <param name="pguidVendor">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppIQueryWriter">
+                    <type>IWICMetadataQueryWriter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter**, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="pIQueryReader">pIQueryReader</param>, <param name="pguidVendor">pguidVendor</param>, <param name="ppIQueryWriter">ppIQueryWriter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateImageEncoder" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pD2DDevice">
+                    <type>ID2D1Device*</type>
+                </param>
+                <param name="ppWICImageEncoder">
+                    <type>IWICImageEncoder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICImagingFactory2*, ID2D1Device*, IWICImageEncoder**, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(IWICImagingFactory2*)Unsafe.AsPointer(ref this)</param>, <param name="pD2DDevice">pD2DDevice</param>, <param name="ppWICImageEncoder">ppWICImageEncoder</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/dxgi1_2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDXGIOutputDuplication" access="public" native="struct IDXGIOutputDuplication : IDXGIObject" uuid="191cfac3-a341-470d-b26e-a864f428319c" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnknown">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="pUnknown">pUnknown</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetParent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppParent">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppParent">ppParent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDesc" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDesc">
+                    <type>DXGI_OUTDUPL_DESC*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDXGIOutputDuplication*, DXGI_OUTDUPL_DESC*, void&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AcquireNextFrame" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="TimeoutInMilliseconds">
+                    <type>uint</type>
+                </param>
+                <param name="pFrameInfo">
+                    <type>DXGI_OUTDUPL_FRAME_INFO*</type>
+                </param>
+                <param name="ppDesktopResource">
+                    <type>IDXGIResource**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, uint, DXGI_OUTDUPL_FRAME_INFO*, IDXGIResource**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="TimeoutInMilliseconds">TimeoutInMilliseconds</param>, <param name="pFrameInfo">pFrameInfo</param>, <param name="ppDesktopResource">ppDesktopResource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFrameDirtyRects" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="DirtyRectsBufferSize">
+                    <type>uint</type>
+                </param>
+                <param name="pDirtyRectsBuffer">
+                    <type>RECT*</type>
+                </param>
+                <param name="pDirtyRectsBufferSizeRequired">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, uint, RECT*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="DirtyRectsBufferSize">DirtyRectsBufferSize</param>, <param name="pDirtyRectsBuffer">pDirtyRectsBuffer</param>, <param name="pDirtyRectsBufferSizeRequired">pDirtyRectsBufferSizeRequired</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFrameMoveRects" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="MoveRectsBufferSize">
+                    <type>uint</type>
+                </param>
+                <param name="pMoveRectBuffer">
+                    <type>DXGI_OUTDUPL_MOVE_RECT*</type>
+                </param>
+                <param name="pMoveRectsBufferSizeRequired">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, uint, DXGI_OUTDUPL_MOVE_RECT*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="MoveRectsBufferSize">MoveRectsBufferSize</param>, <param name="pMoveRectBuffer">pMoveRectBuffer</param>, <param name="pMoveRectsBufferSizeRequired">pMoveRectsBufferSizeRequired</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFramePointerShape" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="PointerShapeBufferSize">
+                    <type>uint</type>
+                </param>
+                <param name="pPointerShapeBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="pPointerShapeBufferSizeRequired">
+                    <type>uint*</type>
+                </param>
+                <param name="pPointerShapeInfo">
+                    <type>DXGI_OUTDUPL_POINTER_SHAPE_INFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, uint, void*, uint*, DXGI_OUTDUPL_POINTER_SHAPE_INFO*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="PointerShapeBufferSize">PointerShapeBufferSize</param>, <param name="pPointerShapeBuffer">pPointerShapeBuffer</param>, <param name="pPointerShapeBufferSizeRequired">pPointerShapeBufferSizeRequired</param>, <param name="pPointerShapeInfo">pPointerShapeInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="MapDesktopSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLockedRect">
+                    <type>DXGI_MAPPED_RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, DXGI_MAPPED_RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>, <param name="pLockedRect">pLockedRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnMapDesktopSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseFrame" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIOutputDuplication*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDXGIOutputDuplication*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFTimer" access="public" native="struct IMFTimer : IUnknown" uuid="e56e4cbd-8f70-49d8-a0f8-edb3d6ab9bf2" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimer*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFTimer*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimer*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFTimer*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimer*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFTimer*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTimer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="llClockTime">
+                    <type>long</type>
+                </param>
+                <param name="pCallback">
+                    <type>IMFAsyncCallback*</type>
+                </param>
+                <param name="punkState">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppunkKey">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimer*, uint, long, IMFAsyncCallback*, IUnknown*, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFTimer*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="llClockTime">llClockTime</param>, <param name="pCallback">pCallback</param>, <param name="punkState">punkState</param>, <param name="ppunkKey">ppunkKey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CancelTimer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="punkKey">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimer*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFTimer*)Unsafe.AsPointer(ref this)</param>, <param name="punkKey">punkKey</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

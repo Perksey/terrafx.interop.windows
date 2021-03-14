@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="SpeechAudioFormatType" access="public">
+            <type>int</type>
+            <enumerator name="SAFTDefault" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>-1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTNoAssignedFormat" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTText" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTNoAssignedFormat + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTNonStandardFormat" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTText + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTExtendedAudioFormat" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTNonStandardFormat + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT8kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTExtendedAudioFormat + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT8kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT8kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT8kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT8kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT8kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT8kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT11kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT8kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT11kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT11kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT11kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT11kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT11kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT11kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT12kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT11kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT12kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT12kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT12kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT12kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT12kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT12kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT16kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT12kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT16kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT16kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT16kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT16kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT16kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT16kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT22kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT16kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT22kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT22kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT22kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT22kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT22kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT22kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT24kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT22kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT24kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT24kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT24kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT24kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT24kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT24kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT32kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT24kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT32kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT32kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT32kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT32kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT32kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT32kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT44kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT32kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT44kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT44kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT44kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT44kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT44kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT44kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT48kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT44kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT48kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT48kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT48kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT48kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFT48kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT48kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTTrueSpeech_8kHz1BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFT48kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_ALaw_8kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTTrueSpeech_8kHz1BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_ALaw_8kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_ALaw_8kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_ALaw_11kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_ALaw_8kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_ALaw_11kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_ALaw_11kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_ALaw_22kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_ALaw_11kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_ALaw_22kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_ALaw_22kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_ALaw_44kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_ALaw_22kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_ALaw_44kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_ALaw_44kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_uLaw_8kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_ALaw_44kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_uLaw_8kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_uLaw_8kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_uLaw_11kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_uLaw_8kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_uLaw_11kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_uLaw_11kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_uLaw_22kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_uLaw_11kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_uLaw_22kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_uLaw_22kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_uLaw_44kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_uLaw_22kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTCCITT_uLaw_44kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_uLaw_44kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTADPCM_8kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTCCITT_uLaw_44kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTADPCM_8kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTADPCM_8kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTADPCM_11kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTADPCM_8kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTADPCM_11kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTADPCM_11kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTADPCM_22kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTADPCM_11kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTADPCM_22kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTADPCM_22kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTADPCM_44kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTADPCM_22kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTADPCM_44kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTADPCM_44kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTGSM610_8kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTADPCM_44kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTGSM610_11kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTGSM610_8kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTGSM610_22kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTGSM610_11kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SAFTGSM610_44kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SAFTGSM610_22kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SECURITY_DESCRIPTOR" access="public" unsafe="true">
+            <field name="Revision" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="Sbz1" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="Control" access="public">
+                <type native="SECURITY_DESCRIPTOR_CONTROL">ushort</type>
+            </field>
+            <field name="Owner" access="public">
+                <type native="PSID">void*</type>
+            </field>
+            <field name="Group" access="public">
+                <type native="PSID">void*</type>
+            </field>
+            <field name="Sacl" access="public">
+                <type native="PACL">ACL*</type>
+            </field>
+            <field name="Dacl" access="public">
+                <type native="PACL">ACL*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

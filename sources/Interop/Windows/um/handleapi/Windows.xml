@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/handleapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CloseHandle" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hObject">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="DuplicateHandle" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSourceProcessHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hSourceHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hTargetProcessHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpTargetHandle">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="bInheritHandle">
+                    <type>int</type>
+                </param>
+                <param name="dwOptions">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CompareObjectHandles" access="public" lib="KernelBase" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hFirstObjectHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hSecondObjectHandle">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetHandleInformation" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpdwFlags">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetHandleInformation" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwMask">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <constant name="INVALID_HANDLE_VALUE" access="public">
+                <type primitive="False">IntPtr</type>
+                <value>
+                    <code>
+                        <value>
+                            <value></value>
+                        </value>((IntPtr)(nint)-1)
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

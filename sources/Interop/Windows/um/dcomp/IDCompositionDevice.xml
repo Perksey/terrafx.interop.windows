@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dcomp.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDCompositionDevice" access="public" native="struct IDCompositionDevice : IUnknown" uuid="c37ea93a-e7aa-450d-b16f-9746cb0407f3" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Commit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WaitForCommitCompletion" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFrameStatistics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="statistics">
+                    <type>DCOMPOSITION_FRAME_STATISTICS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, DCOMPOSITION_FRAME_STATISTICS*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="statistics">statistics</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTargetForHwnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="topmost">
+                    <type>int</type>
+                </param>
+                <param name="target">
+                    <type>IDCompositionTarget**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IntPtr, int, IDCompositionTarget**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="hwnd">hwnd</param>, <param name="topmost">topmost</param>, <param name="target">target</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVisual" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="visual">
+                    <type>IDCompositionVisual**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionVisual**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="visual">visual</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="width">
+                    <type>uint</type>
+                </param>
+                <param name="height">
+                    <type>uint</type>
+                </param>
+                <param name="pixelFormat">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="alphaMode">
+                    <type>DXGI_ALPHA_MODE</type>
+                </param>
+                <param name="surface">
+                    <type>IDCompositionSurface**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionSurface**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="width">width</param>, <param name="height">height</param>, <param name="pixelFormat">pixelFormat</param>, <param name="alphaMode">alphaMode</param>, <param name="surface">surface</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVirtualSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="initialWidth">
+                    <type>uint</type>
+                </param>
+                <param name="initialHeight">
+                    <type>uint</type>
+                </param>
+                <param name="pixelFormat">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="alphaMode">
+                    <type>DXGI_ALPHA_MODE</type>
+                </param>
+                <param name="virtualSurface">
+                    <type>IDCompositionVirtualSurface**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionVirtualSurface**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="initialWidth">initialWidth</param>, <param name="initialHeight">initialHeight</param>, <param name="pixelFormat">pixelFormat</param>, <param name="alphaMode">alphaMode</param>, <param name="virtualSurface">virtualSurface</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSurfaceFromHandle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="handle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="surface">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IntPtr, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="handle">handle</param>, <param name="surface">surface</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSurfaceFromHwnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="surface">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IntPtr, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="hwnd">hwnd</param>, <param name="surface">surface</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTranslateTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="translateTransform">
+                    <type>IDCompositionTranslateTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionTranslateTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="translateTransform">translateTransform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateScaleTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="scaleTransform">
+                    <type>IDCompositionScaleTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionScaleTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="scaleTransform">scaleTransform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRotateTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rotateTransform">
+                    <type>IDCompositionRotateTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionRotateTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="rotateTransform">rotateTransform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSkewTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="skewTransform">
+                    <type>IDCompositionSkewTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionSkewTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="skewTransform">skewTransform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateMatrixTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="matrixTransform">
+                    <type>IDCompositionMatrixTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionMatrixTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="matrixTransform">matrixTransform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTransformGroup" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="transforms">
+                    <type>IDCompositionTransform**</type>
+                </param>
+                <param name="elements">
+                    <type>uint</type>
+                </param>
+                <param name="transformGroup">
+                    <type>IDCompositionTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionTransform**, uint, IDCompositionTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="transforms">transforms</param>, <param name="elements">elements</param>, <param name="transformGroup">transformGroup</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTranslateTransform3D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="translateTransform3D">
+                    <type>IDCompositionTranslateTransform3D**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionTranslateTransform3D**, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="translateTransform3D">translateTransform3D</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateScaleTransform3D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="scaleTransform3D">
+                    <type>IDCompositionScaleTransform3D**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionScaleTransform3D**, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="scaleTransform3D">scaleTransform3D</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRotateTransform3D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rotateTransform3D">
+                    <type>IDCompositionRotateTransform3D**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionRotateTransform3D**, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="rotateTransform3D">rotateTransform3D</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateMatrixTransform3D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="matrixTransform3D">
+                    <type>IDCompositionMatrixTransform3D**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionMatrixTransform3D**, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="matrixTransform3D">matrixTransform3D</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTransform3DGroup" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="transforms3D">
+                    <type>IDCompositionTransform3D**</type>
+                </param>
+                <param name="elements">
+                    <type>uint</type>
+                </param>
+                <param name="transform3DGroup">
+                    <type>IDCompositionTransform3D**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionTransform3D**, uint, IDCompositionTransform3D**, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="transforms3D">transforms3D</param>, <param name="elements">elements</param>, <param name="transform3DGroup">transform3DGroup</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateEffectGroup" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effectGroup">
+                    <type>IDCompositionEffectGroup**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionEffectGroup**, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="effectGroup">effectGroup</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRectangleClip" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="clip">
+                    <type>IDCompositionRectangleClip**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionRectangleClip**, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="clip">clip</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateAnimation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="animation">
+                    <type>IDCompositionAnimation**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, IDCompositionAnimation**, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="animation">animation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckDeviceState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfValid">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionDevice*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(IDCompositionDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pfValid">pfValid</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

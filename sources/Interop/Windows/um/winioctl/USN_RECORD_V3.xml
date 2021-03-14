@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="USN_RECORD_V3" access="public" unsafe="true">
+            <field name="RecordLength" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="MajorVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="MinorVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="FileReferenceNumber" access="public">
+                <type native="">FILE_ID_128</type>
+            </field>
+            <field name="ParentFileReferenceNumber" access="public">
+                <type native="">FILE_ID_128</type>
+            </field>
+            <field name="Usn" access="public">
+                <type native="USN">long</type>
+            </field>
+            <field name="TimeStamp" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="Reason" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SourceInfo" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SecurityId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="FileAttributes" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="FileNameLength" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="FileNameOffset" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="FileName" access="public">
+                <type native="WCHAR [1]" count="1" fixed="_FileName_e__FixedBuffer">ushort</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

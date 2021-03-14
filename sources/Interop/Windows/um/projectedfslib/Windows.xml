@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/projectedfslib.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="PrjStartVirtualizing" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="virtualizationRootPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="callbacks">
+                    <type>PRJ_CALLBACKS*</type>
+                </param>
+                <param name="instanceContext">
+                    <type>void*</type>
+                </param>
+                <param name="options">
+                    <type>PRJ_STARTVIRTUALIZING_OPTIONS*</type>
+                </param>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="PrjStopVirtualizing" access="public" lib="projectedfslib" static="true" unsafe="true">
+                <type>void</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="PrjClearNegativePathCache" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="totalEntryNumber">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="PrjGetVirtualizationInstanceInfo" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="virtualizationInstanceInfo">
+                    <type>PRJ_VIRTUALIZATION_INSTANCE_INFO*</type>
+                </param>
+            </function>
+            <function name="PrjMarkDirectoryAsPlaceholder" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rootPathName">
+                    <type>ushort*</type>
+                </param>
+                <param name="targetPathName">
+                    <type>ushort*</type>
+                </param>
+                <param name="versionInfo">
+                    <type>PRJ_PLACEHOLDER_VERSION_INFO*</type>
+                </param>
+                <param name="virtualizationInstanceID">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="PrjWritePlaceholderInfo" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="destinationFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="placeholderInfo">
+                    <type>PRJ_PLACEHOLDER_INFO*</type>
+                </param>
+                <param name="placeholderInfoSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="PrjWritePlaceholderInfo2" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="destinationFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="placeholderInfo">
+                    <type>PRJ_PLACEHOLDER_INFO*</type>
+                </param>
+                <param name="placeholderInfoSize">
+                    <type>uint</type>
+                </param>
+                <param name="ExtendedInfo">
+                    <type>PRJ_EXTENDED_INFO*</type>
+                </param>
+            </function>
+            <function name="PrjUpdateFileIfNeeded" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="destinationFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="placeholderInfo">
+                    <type>PRJ_PLACEHOLDER_INFO*</type>
+                </param>
+                <param name="placeholderInfoSize">
+                    <type>uint</type>
+                </param>
+                <param name="updateFlags">
+                    <type>PRJ_UPDATE_TYPES</type>
+                </param>
+                <param name="failureReason">
+                    <type>PRJ_UPDATE_FAILURE_CAUSES*</type>
+                </param>
+            </function>
+            <function name="PrjDeleteFile" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="destinationFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="updateFlags">
+                    <type>PRJ_UPDATE_TYPES</type>
+                </param>
+                <param name="failureReason">
+                    <type>PRJ_UPDATE_FAILURE_CAUSES*</type>
+                </param>
+            </function>
+            <function name="PrjWriteFileData" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dataStreamId">
+                    <type>Guid*</type>
+                </param>
+                <param name="buffer">
+                    <type>void*</type>
+                </param>
+                <param name="byteOffset">
+                    <type>ulong</type>
+                </param>
+                <param name="length">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="PrjGetOnDiskFileState" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="destinationFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="fileState">
+                    <type>PRJ_FILE_STATE*</type>
+                </param>
+            </function>
+            <function name="PrjAllocateAlignedBuffer" access="public" lib="projectedfslib" static="true">
+                <type native="void *">void*</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="size">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="PrjFreeAlignedBuffer" access="public" lib="projectedfslib" static="true">
+                <type>void</type>
+                <param name="buffer">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="PrjCompleteCommand" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="namespaceVirtualizationContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="commandId">
+                    <type>int</type>
+                </param>
+                <param name="completionResult">
+                    <type>int</type>
+                </param>
+                <param name="extendedParameters">
+                    <type>PRJ_COMPLETE_COMMAND_EXTENDED_PARAMETERS*</type>
+                </param>
+            </function>
+            <function name="PrjFillDirEntryBuffer" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="fileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="fileBasicInfo">
+                    <type>PRJ_FILE_BASIC_INFO*</type>
+                </param>
+                <param name="dirEntryBufferHandle">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="PrjFillDirEntryBuffer2" access="public" lib="projectedfslib" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dirEntryBufferHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="fileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="fileBasicInfo">
+                    <type>PRJ_FILE_BASIC_INFO*</type>
+                </param>
+                <param name="extendedInfo">
+                    <type>PRJ_EXTENDED_INFO*</type>
+                </param>
+            </function>
+            <function name="PrjFileNameMatch" access="public" lib="projectedfslib" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="fileNameToCheck">
+                    <type>ushort*</type>
+                </param>
+                <param name="pattern">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PrjFileNameCompare" access="public" lib="projectedfslib" static="true">
+                <type>int</type>
+                <param name="fileName1">
+                    <type>ushort*</type>
+                </param>
+                <param name="fileName2">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="PrjDoesNameContainWildCards" access="public" lib="projectedfslib" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="fileName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

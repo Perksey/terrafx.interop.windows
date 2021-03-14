@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAMExtDevice" access="public" native="struct IAMExtDevice : IUnknown" uuid="b5730a90-1a2c-11cf-8c23-00aa006b6814" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCapability" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Capability">
+                    <type>int</type>
+                </param>
+                <param name="pValue">
+                    <type>int*</type>
+                </param>
+                <param name="pdblValue">
+                    <type>double*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, int, int*, double*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>, <param name="Capability">Capability</param>, <param name="pValue">pValue</param>, <param name="pdblValue">pdblValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_ExternalDeviceID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppszData">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>, <param name="ppszData">ppszData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_ExternalDeviceVersion" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppszData">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>, <param name="ppszData">ppszData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="put_DevicePower" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="PowerMode">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, int, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>, <param name="PowerMode">PowerMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_DevicePower" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPowerMode">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pPowerMode">pPowerMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Calibrate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hEvent">
+                    <type>nuint</type>
+                </param>
+                <param name="Mode">
+                    <type>int</type>
+                </param>
+                <param name="pStatus">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, nuint, int, int*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>, <param name="hEvent">hEvent</param>, <param name="Mode">Mode</param>, <param name="pStatus">pStatus</param>);
+        </code>
+                </body>
+            </function>
+            <function name="put_DevicePort" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="DevicePort">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, int, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>, <param name="DevicePort">DevicePort</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_DevicePort" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDevicePort">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMExtDevice*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IAMExtDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pDevicePort">pDevicePort</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

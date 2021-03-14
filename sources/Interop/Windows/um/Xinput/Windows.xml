@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/Xinput.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="XInputGetState" access="public" lib="xinput1_4" static="true">
+                <type native="DWORD">uint</type>
+                <param name="dwUserIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pState">
+                    <type>XINPUT_STATE*</type>
+                </param>
+            </function>
+            <function name="XInputSetState" access="public" lib="xinput1_4" static="true">
+                <type native="DWORD">uint</type>
+                <param name="dwUserIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pVibration">
+                    <type>XINPUT_VIBRATION*</type>
+                </param>
+            </function>
+            <function name="XInputGetCapabilities" access="public" lib="xinput1_4" static="true">
+                <type native="DWORD">uint</type>
+                <param name="dwUserIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pCapabilities">
+                    <type>XINPUT_CAPABILITIES*</type>
+                </param>
+            </function>
+            <function name="XInputEnable" access="public" lib="xinput1_4" static="true" unsafe="true">
+                <type>void</type>
+                <param name="enable">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="XInputGetAudioDeviceIds" access="public" lib="xinput1_4" static="true">
+                <type native="DWORD">uint</type>
+                <param name="dwUserIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pRenderDeviceId">
+                    <type>ushort*</type>
+                </param>
+                <param name="pRenderCount">
+                    <type>uint*</type>
+                </param>
+                <param name="pCaptureDeviceId">
+                    <type>ushort*</type>
+                </param>
+                <param name="pCaptureCount">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="XInputGetBatteryInformation" access="public" lib="xinput1_4" static="true">
+                <type native="DWORD">uint</type>
+                <param name="dwUserIndex">
+                    <type>uint</type>
+                </param>
+                <param name="devType">
+                    <type>byte</type>
+                </param>
+                <param name="pBatteryInformation">
+                    <type>XINPUT_BATTERY_INFORMATION*</type>
+                </param>
+            </function>
+            <function name="XInputGetKeystroke" access="public" lib="xinput1_4" static="true">
+                <type native="DWORD">uint</type>
+                <param name="dwUserIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <param name="pKeystroke">
+                    <type>XINPUT_KEYSTROKE*</type>
+                </param>
+            </function>
+            <constant name="XINPUT_DLL_A" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x78, 0x69, 0x6E, 0x70, 0x75, 0x74, 0x31, 0x5F, 0x34, 0x2E, 0x64, 0x6C, 0x6C, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DLL_W" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"xinput1_4.dll"
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DLL" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"xinput1_4.dll"
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVTYPE_GAMEPAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_GAMEPAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_UNKNOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_WHEEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_ARCADE_STICK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x03
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_FLIGHT_STICK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_DANCE_PAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x05
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_GUITAR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x06
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_GUITAR_ALTERNATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x07
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_DRUM_KIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x08
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_GUITAR_BASS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0B
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_DEVSUBTYPE_ARCADE_PAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x13
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_CAPS_VOICE_SUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_CAPS_FFB_SUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_CAPS_WIRELESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_CAPS_PMD_SUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_CAPS_NO_NAVIGATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_DPAD_UP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_DPAD_DOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_DPAD_LEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_DPAD_RIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_START" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_BACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0020
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_LEFT_THUMB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0040
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_RIGHT_THUMB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0080
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_LEFT_SHOULDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0100
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_RIGHT_SHOULDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0200
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_A" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1000
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_B" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2000
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_X" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4000
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_Y" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x8000
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>7849
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8689
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_GAMEPAD_TRIGGER_THRESHOLD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>30
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_FLAG_GAMEPAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_DEVTYPE_GAMEPAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_DEVTYPE_HEADSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_TYPE_DISCONNECTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_TYPE_WIRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_TYPE_ALKALINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_TYPE_NIMH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x03
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_TYPE_UNKNOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0xFF
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_LEVEL_EMPTY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_LEVEL_LOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_LEVEL_MEDIUM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02
+            </code>
+                </value>
+            </constant>
+            <constant name="BATTERY_LEVEL_FULL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x03
+            </code>
+                </value>
+            </constant>
+            <constant name="XUSER_MAX_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="XUSER_INDEX_ANY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x000000FF
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_A" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5800
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_B" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5801
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_X" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5802
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_Y" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5803
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RSHOULDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5804
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LSHOULDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5805
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTRIGGER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5806
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTRIGGER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5807
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_DPAD_UP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5810
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_DPAD_DOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5811
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_DPAD_LEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5812
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_DPAD_RIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5813
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_START" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5814
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_BACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5815
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTHUMB_PRESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5816
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTHUMB_PRESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5817
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTHUMB_UP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5820
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTHUMB_DOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5821
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTHUMB_RIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5822
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTHUMB_LEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5823
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTHUMB_UPLEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5824
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTHUMB_UPRIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5825
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTHUMB_DOWNRIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5826
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_LTHUMB_DOWNLEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5827
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTHUMB_UP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5830
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTHUMB_DOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5831
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTHUMB_RIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5832
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTHUMB_LEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5833
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTHUMB_UPLEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5834
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTHUMB_UPRIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5835
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTHUMB_DOWNRIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5836
+            </code>
+                </value>
+            </constant>
+            <constant name="VK_PAD_RTHUMB_DOWNLEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x5837
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_KEYSTROKE_KEYDOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_KEYSTROKE_KEYUP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="XINPUT_KEYSTROKE_REPEAT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

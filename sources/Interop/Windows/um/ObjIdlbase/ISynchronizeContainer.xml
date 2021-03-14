@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdlbase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISynchronizeContainer" access="public" native="struct ISynchronizeContainer : IUnknown" uuid="00000033-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISynchronizeContainer*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISynchronizeContainer*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISynchronizeContainer*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISynchronizeContainer*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISynchronizeContainer*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISynchronizeContainer*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddSynchronize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSync">
+                    <type>ISynchronize*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISynchronizeContainer*, ISynchronize*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISynchronizeContainer*)Unsafe.AsPointer(ref this)</param>, <param name="pSync">pSync</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WaitMultiple" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwTimeOut">
+                    <type>uint</type>
+                </param>
+                <param name="ppSync">
+                    <type>ISynchronize**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISynchronizeContainer*, uint, uint, ISynchronize**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISynchronizeContainer*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="dwTimeOut">dwTimeOut</param>, <param name="ppSync">ppSync</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

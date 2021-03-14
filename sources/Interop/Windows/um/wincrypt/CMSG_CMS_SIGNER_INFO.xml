@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CMSG_CMS_SIGNER_INFO" access="public">
+            <field name="dwVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SignerId" access="public">
+                <type native="">CERT_ID</type>
+            </field>
+            <field name="HashAlgorithm" access="public">
+                <type native="">CRYPT_ALGORITHM_IDENTIFIER</type>
+            </field>
+            <field name="HashEncryptionAlgorithm" access="public">
+                <type native="">CRYPT_ALGORITHM_IDENTIFIER</type>
+            </field>
+            <field name="EncryptedHash" access="public">
+                <type native="CRYPT_DATA_BLOB">CRYPTOAPI_BLOB</type>
+            </field>
+            <field name="AuthAttrs" access="public">
+                <type native="">CRYPT_ATTRIBUTES</type>
+            </field>
+            <field name="UnauthAttrs" access="public">
+                <type native="">CRYPT_ATTRIBUTES</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

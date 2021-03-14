@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DEVICE_DSM_TIERING_QUERY_OUTPUT" access="public">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Alignment" access="public">
+                <type native="DWORDLONG">ulong</type>
+            </field>
+            <field name="TotalNumberOfRegions" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="NumberOfRegionsReturned" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Regions" access="public">
+                <type native="STORAGE_TIER_REGION [1]" count="1" fixed="_Regions_e__FixedBuffer">STORAGE_TIER_REGION</type>
+            </field>
+            <struct name="_Regions_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">STORAGE_TIER_REGION</type>
+                </field>
+                <indexer access="public">
+                    <type>ref STORAGE_TIER_REGION</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;STORAGE_TIER_REGION&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

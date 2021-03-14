@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DISK_HISTOGRAM" access="public" unsafe="true">
+            <field name="DiskSize" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="Start" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="End" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="Average" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="AverageRead" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="AverageWrite" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="Granularity" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ReadCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="WriteCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Histogram" access="public">
+                <type native="PHISTOGRAM_BUCKET">HISTOGRAM_BUCKET*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

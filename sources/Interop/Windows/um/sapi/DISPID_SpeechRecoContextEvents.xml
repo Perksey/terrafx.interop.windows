@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="DISPID_SpeechRecoContextEvents" access="public">
+            <type>int</type>
+            <enumerator name="DISPID_SRCEStartStream" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEEndStream" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEStartStream + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEBookmark" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEEndStream + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCESoundStart" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEBookmark + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCESoundEnd" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCESoundStart + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEPhraseStart" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCESoundEnd + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCERecognition" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEPhraseStart + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEHypothesis" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCERecognition + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEPropertyNumberChange" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEHypothesis + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEPropertyStringChange" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEPropertyNumberChange + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEFalseRecognition" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEPropertyStringChange + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEInterference" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEFalseRecognition + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCERequestUI" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEInterference + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCERecognizerStateChange" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCERequestUI + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEAdaptation" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCERecognizerStateChange + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCERecognitionForOtherContext" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEAdaptation + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEAudioLevel" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCERecognitionForOtherContext + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRCEEnginePrivate" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRCEAudioLevel + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

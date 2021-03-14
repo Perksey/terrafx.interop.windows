@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfmediaengine.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFMediaEngineExtension" access="public" native="struct IMFMediaEngineExtension : IUnknown" uuid="2f69d622-20b5-41e9-afdf-89ced1dda04e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineExtension*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFMediaEngineExtension*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineExtension*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFMediaEngineExtension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineExtension*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFMediaEngineExtension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CanPlayType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="AudioOnly">
+                    <type>int</type>
+                </param>
+                <param name="MimeType">
+                    <type>ushort*</type>
+                </param>
+                <param name="pAnswer">
+                    <type>MF_MEDIA_ENGINE_CANPLAY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineExtension*, int, ushort*, MF_MEDIA_ENGINE_CANPLAY*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFMediaEngineExtension*)Unsafe.AsPointer(ref this)</param>, <param name="AudioOnly">AudioOnly</param>, <param name="MimeType">MimeType</param>, <param name="pAnswer">pAnswer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginCreateObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bstrURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="pByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="type">
+                    <type>MF_OBJECT_TYPE</type>
+                </param>
+                <param name="ppIUnknownCancelCookie">
+                    <type>IUnknown**</type>
+                </param>
+                <param name="pCallback">
+                    <type>IMFAsyncCallback*</type>
+                </param>
+                <param name="punkState">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineExtension*, ushort*, IMFByteStream*, MF_OBJECT_TYPE, IUnknown**, IMFAsyncCallback*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFMediaEngineExtension*)Unsafe.AsPointer(ref this)</param>, <param name="bstrURL">bstrURL</param>, <param name="pByteStream">pByteStream</param>, <param name="type">type</param>, <param name="ppIUnknownCancelCookie">ppIUnknownCancelCookie</param>, <param name="pCallback">pCallback</param>, <param name="punkState">punkState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CancelObjectCreation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIUnknownCancelCookie">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineExtension*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFMediaEngineExtension*)Unsafe.AsPointer(ref this)</param>, <param name="pIUnknownCancelCookie">pIUnknownCancelCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndCreateObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResult">
+                    <type>IMFAsyncResult*</type>
+                </param>
+                <param name="ppObject">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineExtension*, IMFAsyncResult*, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFMediaEngineExtension*)Unsafe.AsPointer(ref this)</param>, <param name="pResult">pResult</param>, <param name="ppObject">ppObject</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

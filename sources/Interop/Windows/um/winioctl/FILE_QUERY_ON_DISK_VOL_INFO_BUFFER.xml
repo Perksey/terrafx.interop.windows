@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="FILE_QUERY_ON_DISK_VOL_INFO_BUFFER" access="public" unsafe="true">
+            <field name="DirectoryCount" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="FileCount" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="FsFormatMajVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="FsFormatMinVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="FsFormatName" access="public">
+                <type native="WCHAR [12]" count="12" fixed="_FsFormatName_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="FormatTime" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="LastUpdateTime" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="CopyrightInfo" access="public">
+                <type native="WCHAR [34]" count="34" fixed="_CopyrightInfo_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="AbstractInfo" access="public">
+                <type native="WCHAR [34]" count="34" fixed="_AbstractInfo_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="FormattingImplementationInfo" access="public">
+                <type native="WCHAR [34]" count="34" fixed="_FormattingImplementationInfo_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="LastModifyingImplementationInfo" access="public">
+                <type native="WCHAR [34]" count="34" fixed="_LastModifyingImplementationInfo_e__FixedBuffer">ushort</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ctfutb.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfLangBarItemMgr" access="public" native="struct ITfLangBarItemMgr : IUnknown" uuid="ba468c55-9956-4fb1-a59d-52a7dd7cc6aa" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumItems" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumTfLangBarItems**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, IEnumTfLangBarItems**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetItem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppItem">
+                    <type>ITfLangBarItem**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, Guid*, ITfLangBarItem**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="ppItem">ppItem</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddItem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="punk">
+                    <type>ITfLangBarItem*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, ITfLangBarItem*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="punk">punk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveItem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="punk">
+                    <type>ITfLangBarItem*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, ITfLangBarItem*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="punk">punk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AdviseItemSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="punk">
+                    <type>ITfLangBarItemSink*</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <param name="rguidItem">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, ITfLangBarItemSink*, uint*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="punk">punk</param>, <param name="pdwCookie">pdwCookie</param>, <param name="rguidItem">rguidItem</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnadviseItemSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwCookie">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="dwCookie">dwCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetItemFloatingRect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwThreadId">
+                    <type>uint</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, uint, Guid*, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="dwThreadId">dwThreadId</param>, <param name="rguid">rguid</param>, <param name="prc">prc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetItemsStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="prgguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pdwStatus">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, uint, Guid*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="ulCount">ulCount</param>, <param name="prgguid">prgguid</param>, <param name="pdwStatus">pdwStatus</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetItemNum" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pulCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="pulCount">pulCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetItems" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="ppItem">
+                    <type>ITfLangBarItem**</type>
+                </param>
+                <param name="pInfo">
+                    <type>TF_LANGBARITEMINFO*</type>
+                </param>
+                <param name="pdwStatus">
+                    <type>uint*</type>
+                </param>
+                <param name="pcFetched">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, uint, ITfLangBarItem**, TF_LANGBARITEMINFO*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="ulCount">ulCount</param>, <param name="ppItem">ppItem</param>, <param name="pInfo">pInfo</param>, <param name="pdwStatus">pdwStatus</param>, <param name="pcFetched">pcFetched</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AdviseItemsSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="ppunk">
+                    <type>ITfLangBarItemSink**</type>
+                </param>
+                <param name="pguidItem">
+                    <type>Guid*</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, uint, ITfLangBarItemSink**, Guid*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="ulCount">ulCount</param>, <param name="ppunk">ppunk</param>, <param name="pguidItem">pguidItem</param>, <param name="pdwCookie">pdwCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnadviseItemsSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfLangBarItemMgr*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ITfLangBarItemMgr*)Unsafe.AsPointer(ref this)</param>, <param name="ulCount">ulCount</param>, <param name="pdwCookie">pdwCookie</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

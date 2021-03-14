@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/directmanipulation.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDirectManipulationUpdateManager" access="public" native="struct IDirectManipulationUpdateManager : IUnknown" uuid="b0ae62fd-be34-46e7-9caa-d361facbb9cc" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectManipulationUpdateManager*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDirectManipulationUpdateManager*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectManipulationUpdateManager*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDirectManipulationUpdateManager*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectManipulationUpdateManager*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDirectManipulationUpdateManager*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterWaitHandleCallback" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="handle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="eventHandler">
+                    <type>IDirectManipulationUpdateHandler*</type>
+                </param>
+                <param name="cookie">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectManipulationUpdateManager*, IntPtr, IDirectManipulationUpdateHandler*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDirectManipulationUpdateManager*)Unsafe.AsPointer(ref this)</param>, <param name="handle">handle</param>, <param name="eventHandler">eventHandler</param>, <param name="cookie">cookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterWaitHandleCallback" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cookie">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectManipulationUpdateManager*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDirectManipulationUpdateManager*)Unsafe.AsPointer(ref this)</param>, <param name="cookie">cookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Update" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="frameInfo">
+                    <type>IDirectManipulationFrameInfoProvider*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectManipulationUpdateManager*, IDirectManipulationFrameInfoProvider*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDirectManipulationUpdateManager*)Unsafe.AsPointer(ref this)</param>, <param name="frameInfo">frameInfo</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

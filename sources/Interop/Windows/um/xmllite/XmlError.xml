@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/xmllite.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="XmlError" access="public">
+            <type>int</type>
+            <enumerator name="MX_E_MX" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>int</cast>
+                            <value>
+                                <code>0xc00cee00
+        </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </enumerator>
+            <enumerator name="MX_E_INPUTEND" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MX_E_MX + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MX_E_ENCODING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MX_E_INPUTEND + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MX_E_ENCODINGSWITCH" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MX_E_ENCODING + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MX_E_ENCODINGSIGNATURE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MX_E_ENCODINGSWITCH + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_WC" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>int</cast>
+                            <value>
+                                <code>0xc00cee20
+        </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_WHITESPACE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_WC + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_SEMICOLON" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_WHITESPACE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_GREATERTHAN" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_SEMICOLON + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_QUOTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_GREATERTHAN + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_EQUAL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_QUOTE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_LESSTHAN" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_EQUAL + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_HEXDIGIT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_LESSTHAN + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_DIGIT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_HEXDIGIT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_LEFTBRACKET" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_DIGIT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_LEFTPAREN" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_LEFTBRACKET + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_XMLCHARACTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_LEFTPAREN + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_NAMECHARACTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_XMLCHARACTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_SYNTAX" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_NAMECHARACTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_CDSECT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_SYNTAX + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_COMMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_CDSECT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_CONDSECT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_COMMENT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_DECLATTLIST" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_CONDSECT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_DECLDOCTYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_DECLATTLIST + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_DECLELEMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_DECLDOCTYPE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_DECLENTITY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_DECLELEMENT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_DECLNOTATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_DECLENTITY + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_NDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_DECLNOTATION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_PUBLIC" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_NDATA + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_SYSTEM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_PUBLIC + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_NAME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_SYSTEM + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_ROOTELEMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_NAME + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_ELEMENTMATCH" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_ROOTELEMENT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_UNIQUEATTRIBUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_ELEMENTMATCH + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_TEXTXMLDECL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_UNIQUEATTRIBUTE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_LEADINGXML" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_TEXTXMLDECL + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_TEXTDECL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_LEADINGXML + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_XMLDECL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_TEXTDECL + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_ENCNAME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_XMLDECL + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_PUBLICID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_ENCNAME + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_PESINTERNALSUBSET" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_PUBLICID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_PESBETWEENDECLS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_PESINTERNALSUBSET + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_NORECURSION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_PESBETWEENDECLS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_ENTITYCONTENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_NORECURSION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_UNDECLAREDENTITY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_ENTITYCONTENT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_PARSEDENTITY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_UNDECLAREDENTITY + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_NOEXTERNALENTITYREF" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_PARSEDENTITY + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_PI" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_NOEXTERNALENTITYREF + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_SYSTEMID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_PI + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_QUESTIONMARK" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_SYSTEMID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_CDSECTEND" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_QUESTIONMARK + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_MOREDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_CDSECTEND + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_DTDPROHIBITED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_MOREDATA + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WC_E_INVALIDXMLSPACE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WC_E_DTDPROHIBITED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_NC" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>int</cast>
+                            <value>
+                                <code>0xc00cee60
+        </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_QNAMECHARACTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_NC + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_QNAMECOLON" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_QNAMECHARACTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_NAMECOLON" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_QNAMECOLON + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_DECLAREDPREFIX" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_NAMECOLON + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_UNDECLAREDPREFIX" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_DECLAREDPREFIX + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_EMPTYURI" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_UNDECLAREDPREFIX + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_XMLPREFIXRESERVED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_EMPTYURI + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_XMLNSPREFIXRESERVED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_XMLPREFIXRESERVED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_XMLURIRESERVED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_XMLNSPREFIXRESERVED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="NC_E_XMLNSURIRESERVED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(NC_E_XMLURIRESERVED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SC_E_SC" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>int</cast>
+                            <value>
+                                <code>0xc00cee80
+        </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </enumerator>
+            <enumerator name="SC_E_MAXELEMENTDEPTH" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SC_E_SC + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SC_E_MAXENTITYEXPANSION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SC_E_MAXELEMENTDEPTH + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_WR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>int</cast>
+                            <value>
+                                <code>0xc00cef00
+        </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_NONWHITESPACE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_WR + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_NSPREFIXDECLARED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_NONWHITESPACE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_NSPREFIXWITHEMPTYNSURI" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_NSPREFIXDECLARED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_DUPLICATEATTRIBUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_NSPREFIXWITHEMPTYNSURI + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_XMLNSPREFIXDECLARATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_DUPLICATEATTRIBUTE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_XMLPREFIXDECLARATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_XMLNSPREFIXDECLARATION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_XMLURIDECLARATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_XMLPREFIXDECLARATION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_XMLNSURIDECLARATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_XMLURIDECLARATION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_NAMESPACEUNDECLARED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_XMLNSURIDECLARATION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_INVALIDXMLSPACE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_NAMESPACEUNDECLARED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_INVALIDACTION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_INVALIDXMLSPACE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WR_E_INVALIDSURROGATEPAIR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(WR_E_INVALIDACTION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="XML_E_INVALID_DECIMAL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>int</cast>
+                            <value>
+                                <code>0xc00ce01d
+        </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </enumerator>
+            <enumerator name="XML_E_INVALID_HEXIDECIMAL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>int</cast>
+                            <value>
+                                <code>0xc00ce01e
+        </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </enumerator>
+            <enumerator name="XML_E_INVALID_UNICODE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>int</cast>
+                            <value>
+                                <code>0xc00ce01f
+        </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </enumerator>
+            <enumerator name="XML_E_INVALIDENCODING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>int</cast>
+                            <value>
+                                <code>0xc00ce06e
+        </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

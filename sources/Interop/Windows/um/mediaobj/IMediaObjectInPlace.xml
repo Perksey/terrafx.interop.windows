@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mediaobj.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMediaObjectInPlace" access="public" native="struct IMediaObjectInPlace : IUnknown" uuid="651b9ad0-0fc7-4aa9-9538-d89931010741" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObjectInPlace*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMediaObjectInPlace*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObjectInPlace*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMediaObjectInPlace*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObjectInPlace*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMediaObjectInPlace*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Process" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>byte*</type>
+                </param>
+                <param name="refTimeStart">
+                    <type>long</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObjectInPlace*, uint, byte*, long, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMediaObjectInPlace*)Unsafe.AsPointer(ref this)</param>, <param name="ulSize">ulSize</param>, <param name="pData">pData</param>, <param name="refTimeStart">refTimeStart</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Clone" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppMediaObject">
+                    <type>IMediaObjectInPlace**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObjectInPlace*, IMediaObjectInPlace**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMediaObjectInPlace*)Unsafe.AsPointer(ref this)</param>, <param name="ppMediaObject">ppMediaObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLatency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLatencyTime">
+                    <type>long*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObjectInPlace*, long*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMediaObjectInPlace*)Unsafe.AsPointer(ref this)</param>, <param name="pLatencyTime">pLatencyTime</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

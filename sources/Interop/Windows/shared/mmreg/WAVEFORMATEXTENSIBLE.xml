@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/mmreg.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WAVEFORMATEXTENSIBLE" access="public" layout="Sequential" pack="1">
+            <field name="Format" access="public">
+                <type native="">WAVEFORMATEX</type>
+            </field>
+            <field name="Samples" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared/mmreg.h:2524:5)">_Samples_e__Union</type>
+            </field>
+            <field name="dwChannelMask" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SubFormat" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <struct name="_Samples_e__Union" access="public" layout="Explicit" pack="1">
+                <field name="wValidBitsPerSample" access="public" offset="0">
+                    <type native="WORD">ushort</type>
+                </field>
+                <field name="wSamplesPerBlock" access="public" offset="0">
+                    <type native="WORD">ushort</type>
+                </field>
+                <field name="wReserved" access="public" offset="0">
+                    <type native="WORD">ushort</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/SoftPub.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DRIVER_VER_INFO" access="public" unsafe="true">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwReserved1" access="public">
+                <type native="ULONG_PTR">nuint</type>
+            </field>
+            <field name="dwReserved2" access="public">
+                <type native="ULONG_PTR">nuint</type>
+            </field>
+            <field name="dwPlatform" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="wszVersion" access="public">
+                <type native="WCHAR [260]" count="260" fixed="_wszVersion_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="wszSignedBy" access="public">
+                <type native="WCHAR [260]" count="260" fixed="_wszSignedBy_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="pcSignerCertContext" access="public">
+                <type native="PCCERT_CONTEXT">CERT_CONTEXT*</type>
+            </field>
+            <field name="sOSVersionLow" access="public">
+                <type native="">DRIVER_VER_MAJORMINOR</type>
+            </field>
+            <field name="sOSVersionHigh" access="public">
+                <type native="">DRIVER_VER_MAJORMINOR</type>
+            </field>
+            <field name="dwBuildNumberLow" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwBuildNumberHigh" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

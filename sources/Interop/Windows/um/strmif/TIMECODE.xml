@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="TIMECODE" access="public" layout="Explicit">
+            <field name="Anonymous" access="public" offset="0">
+                <type native="_timecode::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/strmif.h:13483:4)">_Anonymous_e__Struct</type>
+            </field>
+            <field name="wFrameRate" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.wFrameRate, 1));
+        </code>
+                </get>
+            </field>
+            <field name="wFrameFract" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.wFrameFract, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwFrames" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.dwFrames, 1));
+        </code>
+                </get>
+            </field>
+            <field name="qw" access="public" offset="0">
+                <type native="DWORDLONG">ulong</type>
+            </field>
+            <struct name="_Anonymous_e__Struct" access="public">
+                <field name="wFrameRate" access="public">
+                    <type native="WORD">ushort</type>
+                </field>
+                <field name="wFrameFract" access="public">
+                    <type native="WORD">ushort</type>
+                </field>
+                <field name="dwFrames" access="public">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

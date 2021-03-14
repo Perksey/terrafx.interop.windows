@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/SpatialAudioMetadata.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpatialAudioMetadataReader" access="public" native="struct ISpatialAudioMetadataReader : IUnknown" uuid="b78e86a2-31d9-4c32-94d2-7df40fc7ebec" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataReader*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataReader*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataReader*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataReader*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Open" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="metadataItems">
+                    <type>ISpatialAudioMetadataItems*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataReader*, ISpatialAudioMetadataItems*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataReader*)Unsafe.AsPointer(ref this)</param>, <param name="metadataItems">metadataItems</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReadNextItem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="commandCount">
+                    <type>byte*</type>
+                </param>
+                <param name="frameOffset">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataReader*, byte*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataReader*)Unsafe.AsPointer(ref this)</param>, <param name="commandCount">commandCount</param>, <param name="frameOffset">frameOffset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReadNextItemCommand" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="commandID">
+                    <type>byte*</type>
+                </param>
+                <param name="valueBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="maxValueBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="valueBufferLength">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataReader*, byte*, void*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataReader*)Unsafe.AsPointer(ref this)</param>, <param name="commandID">commandID</param>, <param name="valueBuffer">valueBuffer</param>, <param name="maxValueBufferLength">maxValueBufferLength</param>, <param name="valueBufferLength">valueBufferLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Close" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataReader*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

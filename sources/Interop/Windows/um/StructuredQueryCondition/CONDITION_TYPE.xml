@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/StructuredQueryCondition.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="CONDITION_TYPE" access="public">
+            <type>int</type>
+            <enumerator name="CT_AND_CONDITION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CT_OR_CONDITION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CT_AND_CONDITION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CT_NOT_CONDITION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CT_OR_CONDITION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CT_LEAF_CONDITION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CT_NOT_CONDITION + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

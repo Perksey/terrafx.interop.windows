@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WS_CHANNEL_DECODER" access="public" unsafe="true">
+            <field name="createContext" access="public">
+                <type native="void *">void*</type>
+            </field>
+            <field name="createDecoderCallback" access="public">
+                <type native="WS_CREATE_DECODER_CALLBACK">delegate* unmanaged&lt;void*, delegate* unmanaged&lt;void*, void*, uint, uint*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;, void*, void**, IntPtr, int&gt;</type>
+            </field>
+            <field name="decoderGetContentTypeCallback" access="public">
+                <type native="WS_DECODER_GET_CONTENT_TYPE_CALLBACK">delegate* unmanaged&lt;void*, WS_STRING*, WS_STRING*, WS_STRING*, IntPtr, int&gt;</type>
+            </field>
+            <field name="decoderStartCallback" access="public">
+                <type native="WS_DECODER_START_CALLBACK">delegate* unmanaged&lt;void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="decoderDecodeCallback" access="public">
+                <type native="WS_DECODER_DECODE_CALLBACK">delegate* unmanaged&lt;void*, void*, uint, uint*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="decoderEndCallback" access="public">
+                <type native="WS_DECODER_END_CALLBACK">delegate* unmanaged&lt;void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="freeDecoderCallback" access="public">
+                <type native="WS_FREE_DECODER_CALLBACK">delegate* unmanaged&lt;void*, void&gt;</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

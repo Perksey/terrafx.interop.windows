@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpPhraseAlt" access="public" native="struct ISpPhraseAlt : ISpPhrase" uuid="8fcebc98-4e49-4067-9c6c-d86a0e092e3d" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpPhraseAlt*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpPhraseAlt*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpPhraseAlt*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpPhraseAlt*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpPhraseAlt*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpPhraseAlt*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPhrase" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppCoMemPhrase">
+                    <type>SPPHRASE**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpPhraseAlt*, SPPHRASE**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpPhraseAlt*)Unsafe.AsPointer(ref this)</param>, <param name="ppCoMemPhrase">ppCoMemPhrase</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSerializedPhrase" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppCoMemPhrase">
+                    <type>SPSERIALIZEDPHRASE**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpPhraseAlt*, SPSERIALIZEDPHRASE**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpPhraseAlt*)Unsafe.AsPointer(ref this)</param>, <param name="ppCoMemPhrase">ppCoMemPhrase</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetText" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStart">
+                    <type>uint</type>
+                </param>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="fUseTextReplacements">
+                    <type>int</type>
+                </param>
+                <param name="ppszCoMemText">
+                    <type>ushort**</type>
+                </param>
+                <param name="pbDisplayAttributes">
+                    <type>byte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpPhraseAlt*, uint, uint, int, ushort**, byte*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpPhraseAlt*)Unsafe.AsPointer(ref this)</param>, <param name="ulStart">ulStart</param>, <param name="ulCount">ulCount</param>, <param name="fUseTextReplacements">fUseTextReplacements</param>, <param name="ppszCoMemText">ppszCoMemText</param>, <param name="pbDisplayAttributes">pbDisplayAttributes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Discard" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwValueTypes">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpPhraseAlt*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpPhraseAlt*)Unsafe.AsPointer(ref this)</param>, <param name="dwValueTypes">dwValueTypes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAltInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppParent">
+                    <type>ISpPhrase**</type>
+                </param>
+                <param name="pulStartElementInParent">
+                    <type>uint*</type>
+                </param>
+                <param name="pcElementsInParent">
+                    <type>uint*</type>
+                </param>
+                <param name="pcElementsInAlt">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpPhraseAlt*, ISpPhrase**, uint*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpPhraseAlt*)Unsafe.AsPointer(ref this)</param>, <param name="ppParent">ppParent</param>, <param name="pulStartElementInParent">pulStartElementInParent</param>, <param name="pcElementsInParent">pcElementsInParent</param>, <param name="pcElementsInAlt">pcElementsInAlt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Commit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpPhraseAlt*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpPhraseAlt*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

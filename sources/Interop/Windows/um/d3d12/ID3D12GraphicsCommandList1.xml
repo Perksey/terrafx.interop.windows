@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D12GraphicsCommandList1" access="public" native="struct ID3D12GraphicsCommandList1 : ID3D12GraphicsCommandList" uuid="553103fb-1fe7-4557-bb38-946d7d0e7ca7" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pData">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvDevice">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvDevice">ppvDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetType" access="public" unsafe="true">
+                <type>D3D12_COMMAND_LIST_TYPE</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, D3D12_COMMAND_LIST_TYPE&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Close" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Reset" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pAllocator">
+                    <type>ID3D12CommandAllocator*</type>
+                </param>
+                <param name="pInitialState">
+                    <type>ID3D12PipelineState*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12CommandAllocator*, ID3D12PipelineState*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pAllocator">pAllocator</param>, <param name="pInitialState">pInitialState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pPipelineState">
+                    <type>ID3D12PipelineState*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12PipelineState*, void&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pPipelineState">pPipelineState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawInstanced" access="public" unsafe="true">
+                <type>void</type>
+                <param name="VertexCountPerInstance">
+                    <type>uint</type>
+                </param>
+                <param name="InstanceCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartVertexLocation">
+                    <type>uint</type>
+                </param>
+                <param name="StartInstanceLocation">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="VertexCountPerInstance">VertexCountPerInstance</param>, <param name="InstanceCount">InstanceCount</param>, <param name="StartVertexLocation">StartVertexLocation</param>, <param name="StartInstanceLocation">StartInstanceLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawIndexedInstanced" access="public" unsafe="true">
+                <type>void</type>
+                <param name="IndexCountPerInstance">
+                    <type>uint</type>
+                </param>
+                <param name="InstanceCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartIndexLocation">
+                    <type>uint</type>
+                </param>
+                <param name="BaseVertexLocation">
+                    <type>int</type>
+                </param>
+                <param name="StartInstanceLocation">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, uint, int, uint, void&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="IndexCountPerInstance">IndexCountPerInstance</param>, <param name="InstanceCount">InstanceCount</param>, <param name="StartIndexLocation">StartIndexLocation</param>, <param name="BaseVertexLocation">BaseVertexLocation</param>, <param name="StartInstanceLocation">StartInstanceLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Dispatch" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ThreadGroupCountX">
+                    <type>uint</type>
+                </param>
+                <param name="ThreadGroupCountY">
+                    <type>uint</type>
+                </param>
+                <param name="ThreadGroupCountZ">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="ThreadGroupCountX">ThreadGroupCountX</param>, <param name="ThreadGroupCountY">ThreadGroupCountY</param>, <param name="ThreadGroupCountZ">ThreadGroupCountZ</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyBufferRegion" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="DstOffset">
+                    <type>ulong</type>
+                </param>
+                <param name="pSrcBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="SrcOffset">
+                    <type>ulong</type>
+                </param>
+                <param name="NumBytes">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstBuffer">pDstBuffer</param>, <param name="DstOffset">DstOffset</param>, <param name="pSrcBuffer">pSrcBuffer</param>, <param name="SrcOffset">SrcOffset</param>, <param name="NumBytes">NumBytes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyTextureRegion" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDst">
+                    <type>D3D12_TEXTURE_COPY_LOCATION*</type>
+                </param>
+                <param name="DstX">
+                    <type>uint</type>
+                </param>
+                <param name="DstY">
+                    <type>uint</type>
+                </param>
+                <param name="DstZ">
+                    <type>uint</type>
+                </param>
+                <param name="pSrc">
+                    <type>D3D12_TEXTURE_COPY_LOCATION*</type>
+                </param>
+                <param name="pSrcBox">
+                    <type>D3D12_BOX*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, D3D12_TEXTURE_COPY_LOCATION*, uint, uint, uint, D3D12_TEXTURE_COPY_LOCATION*, D3D12_BOX*, void&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pDst">pDst</param>, <param name="DstX">DstX</param>, <param name="DstY">DstY</param>, <param name="DstZ">DstZ</param>, <param name="pSrc">pSrc</param>, <param name="pSrcBox">pSrcBox</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyResource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12Resource*, ID3D12Resource*, void&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="pSrcResource">pSrcResource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyTiles" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pTiledResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="pTileRegionStartCoordinate">
+                    <type>D3D12_TILED_RESOURCE_COORDINATE*</type>
+                </param>
+                <param name="pTileRegionSize">
+                    <type>D3D12_TILE_REGION_SIZE*</type>
+                </param>
+                <param name="pBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="BufferStartOffsetInBytes">
+                    <type>ulong</type>
+                </param>
+                <param name="Flags">
+                    <type>D3D12_TILE_COPY_FLAGS</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12Resource*, D3D12_TILED_RESOURCE_COORDINATE*, D3D12_TILE_REGION_SIZE*, ID3D12Resource*, ulong, D3D12_TILE_COPY_FLAGS, void&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pTiledResource">pTiledResource</param>, <param name="pTileRegionStartCoordinate">pTileRegionStartCoordinate</param>, <param name="pTileRegionSize">pTileRegionSize</param>, <param name="pBuffer">pBuffer</param>, <param name="BufferStartOffsetInBytes">BufferStartOffsetInBytes</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResolveSubresource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="SrcSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="Format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12Resource*, uint, ID3D12Resource*, uint, DXGI_FORMAT, void&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="pSrcResource">pSrcResource</param>, <param name="SrcSubresource">SrcSubresource</param>, <param name="Format">Format</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetPrimitiveTopology" access="public" unsafe="true">
+                <type>void</type>
+                <param name="PrimitiveTopology">
+                    <type>D3D_PRIMITIVE_TOPOLOGY</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, D3D_PRIMITIVE_TOPOLOGY, void&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="PrimitiveTopology">PrimitiveTopology</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSSetViewports" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumViewports">
+                    <type>uint</type>
+                </param>
+                <param name="pViewports">
+                    <type>D3D12_VIEWPORT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, D3D12_VIEWPORT*, void&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="NumViewports">NumViewports</param>, <param name="pViewports">pViewports</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSSetScissorRects" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumRects">
+                    <type>uint</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="NumRects">NumRects</param>, <param name="pRects">pRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetBlendFactor" access="public" unsafe="true">
+                <type>void</type>
+                <param name="BlendFactor">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="BlendFactor">BlendFactor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetStencilRef" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StencilRef">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="StencilRef">StencilRef</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPipelineState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pPipelineState">
+                    <type>ID3D12PipelineState*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12PipelineState*, void&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pPipelineState">pPipelineState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResourceBarrier" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumBarriers">
+                    <type>uint</type>
+                </param>
+                <param name="pBarriers">
+                    <type>D3D12_RESOURCE_BARRIER*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, D3D12_RESOURCE_BARRIER*, void&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="NumBarriers">NumBarriers</param>, <param name="pBarriers">pBarriers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ExecuteBundle" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pCommandList">
+                    <type>ID3D12GraphicsCommandList*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12GraphicsCommandList*, void&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pCommandList">pCommandList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDescriptorHeaps" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumDescriptorHeaps">
+                    <type>uint</type>
+                </param>
+                <param name="ppDescriptorHeaps">
+                    <type>ID3D12DescriptorHeap**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, ID3D12DescriptorHeap**, void&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="NumDescriptorHeaps">NumDescriptorHeaps</param>, <param name="ppDescriptorHeaps">ppDescriptorHeaps</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetComputeRootSignature" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pRootSignature">
+                    <type>ID3D12RootSignature*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12RootSignature*, void&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pRootSignature">pRootSignature</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGraphicsRootSignature" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pRootSignature">
+                    <type>ID3D12RootSignature*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12RootSignature*, void&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pRootSignature">pRootSignature</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetComputeRootDescriptorTable" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="BaseDescriptor">
+                    <type>D3D12_GPU_DESCRIPTOR_HANDLE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, D3D12_GPU_DESCRIPTOR_HANDLE, void&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="BaseDescriptor">BaseDescriptor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGraphicsRootDescriptorTable" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="BaseDescriptor">
+                    <type>D3D12_GPU_DESCRIPTOR_HANDLE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, D3D12_GPU_DESCRIPTOR_HANDLE, void&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="BaseDescriptor">BaseDescriptor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetComputeRoot32BitConstant" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="SrcData">
+                    <type>uint</type>
+                </param>
+                <param name="DestOffsetIn32BitValues">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="SrcData">SrcData</param>, <param name="DestOffsetIn32BitValues">DestOffsetIn32BitValues</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGraphicsRoot32BitConstant" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="SrcData">
+                    <type>uint</type>
+                </param>
+                <param name="DestOffsetIn32BitValues">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="SrcData">SrcData</param>, <param name="DestOffsetIn32BitValues">DestOffsetIn32BitValues</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetComputeRoot32BitConstants" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Num32BitValuesToSet">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="DestOffsetIn32BitValues">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, void*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="Num32BitValuesToSet">Num32BitValuesToSet</param>, <param name="pSrcData">pSrcData</param>, <param name="DestOffsetIn32BitValues">DestOffsetIn32BitValues</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGraphicsRoot32BitConstants" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Num32BitValuesToSet">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="DestOffsetIn32BitValues">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, void*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="Num32BitValuesToSet">Num32BitValuesToSet</param>, <param name="pSrcData">pSrcData</param>, <param name="DestOffsetIn32BitValues">DestOffsetIn32BitValues</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetComputeRootConstantBufferView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="BufferLocation">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="BufferLocation">BufferLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGraphicsRootConstantBufferView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="BufferLocation">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">38</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="BufferLocation">BufferLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetComputeRootShaderResourceView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="BufferLocation">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">39</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="BufferLocation">BufferLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGraphicsRootShaderResourceView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="BufferLocation">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">40</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="BufferLocation">BufferLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetComputeRootUnorderedAccessView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="BufferLocation">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">41</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="BufferLocation">BufferLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGraphicsRootUnorderedAccessView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RootParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="BufferLocation">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">42</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RootParameterIndex">RootParameterIndex</param>, <param name="BufferLocation">BufferLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetIndexBuffer" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pView">
+                    <type>D3D12_INDEX_BUFFER_VIEW*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, D3D12_INDEX_BUFFER_VIEW*, void&gt;)(lpVtbl[<vtbl explicit="False">43</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pView">pView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetVertexBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="pViews">
+                    <type>D3D12_VERTEX_BUFFER_VIEW*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, D3D12_VERTEX_BUFFER_VIEW*, void&gt;)(lpVtbl[<vtbl explicit="False">44</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="pViews">pViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SOSetTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="pViews">
+                    <type>D3D12_STREAM_OUTPUT_BUFFER_VIEW*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, D3D12_STREAM_OUTPUT_BUFFER_VIEW*, void&gt;)(lpVtbl[<vtbl explicit="False">45</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="pViews">pViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetRenderTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumRenderTargetDescriptors">
+                    <type>uint</type>
+                </param>
+                <param name="pRenderTargetDescriptors">
+                    <type>D3D12_CPU_DESCRIPTOR_HANDLE*</type>
+                </param>
+                <param name="RTsSingleHandleToDescriptorRange">
+                    <type>int</type>
+                </param>
+                <param name="pDepthStencilDescriptor">
+                    <type>D3D12_CPU_DESCRIPTOR_HANDLE*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, D3D12_CPU_DESCRIPTOR_HANDLE*, int, D3D12_CPU_DESCRIPTOR_HANDLE*, void&gt;)(lpVtbl[<vtbl explicit="False">46</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="NumRenderTargetDescriptors">NumRenderTargetDescriptors</param>, <param name="pRenderTargetDescriptors">pRenderTargetDescriptors</param>, <param name="RTsSingleHandleToDescriptorRange">RTsSingleHandleToDescriptorRange</param>, <param name="pDepthStencilDescriptor">pDepthStencilDescriptor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearDepthStencilView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="DepthStencilView">
+                    <type>D3D12_CPU_DESCRIPTOR_HANDLE</type>
+                </param>
+                <param name="ClearFlags">
+                    <type>D3D12_CLEAR_FLAGS</type>
+                </param>
+                <param name="Depth">
+                    <type>float</type>
+                </param>
+                <param name="Stencil">
+                    <type>byte</type>
+                </param>
+                <param name="NumRects">
+                    <type>uint</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, D3D12_CPU_DESCRIPTOR_HANDLE, D3D12_CLEAR_FLAGS, float, byte, uint, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">47</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="DepthStencilView">DepthStencilView</param>, <param name="ClearFlags">ClearFlags</param>, <param name="Depth">Depth</param>, <param name="Stencil">Stencil</param>, <param name="NumRects">NumRects</param>, <param name="pRects">pRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearRenderTargetView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="RenderTargetView">
+                    <type>D3D12_CPU_DESCRIPTOR_HANDLE</type>
+                </param>
+                <param name="ColorRGBA">
+                    <type>float*</type>
+                </param>
+                <param name="NumRects">
+                    <type>uint</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, D3D12_CPU_DESCRIPTOR_HANDLE, float*, uint, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">48</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="RenderTargetView">RenderTargetView</param>, <param name="ColorRGBA">ColorRGBA</param>, <param name="NumRects">NumRects</param>, <param name="pRects">pRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearUnorderedAccessViewUint" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ViewGPUHandleInCurrentHeap">
+                    <type>D3D12_GPU_DESCRIPTOR_HANDLE</type>
+                </param>
+                <param name="ViewCPUHandle">
+                    <type>D3D12_CPU_DESCRIPTOR_HANDLE</type>
+                </param>
+                <param name="pResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="Values">
+                    <type>uint*</type>
+                </param>
+                <param name="NumRects">
+                    <type>uint</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, D3D12_GPU_DESCRIPTOR_HANDLE, D3D12_CPU_DESCRIPTOR_HANDLE, ID3D12Resource*, uint*, uint, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">49</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="ViewGPUHandleInCurrentHeap">ViewGPUHandleInCurrentHeap</param>, <param name="ViewCPUHandle">ViewCPUHandle</param>, <param name="pResource">pResource</param>, <param name="Values">Values</param>, <param name="NumRects">NumRects</param>, <param name="pRects">pRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearUnorderedAccessViewFloat" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ViewGPUHandleInCurrentHeap">
+                    <type>D3D12_GPU_DESCRIPTOR_HANDLE</type>
+                </param>
+                <param name="ViewCPUHandle">
+                    <type>D3D12_CPU_DESCRIPTOR_HANDLE</type>
+                </param>
+                <param name="pResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="Values">
+                    <type>float*</type>
+                </param>
+                <param name="NumRects">
+                    <type>uint</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, D3D12_GPU_DESCRIPTOR_HANDLE, D3D12_CPU_DESCRIPTOR_HANDLE, ID3D12Resource*, float*, uint, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">50</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="ViewGPUHandleInCurrentHeap">ViewGPUHandleInCurrentHeap</param>, <param name="ViewCPUHandle">ViewCPUHandle</param>, <param name="pResource">pResource</param>, <param name="Values">Values</param>, <param name="NumRects">NumRects</param>, <param name="pRects">pRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DiscardResource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="pRegion">
+                    <type>D3D12_DISCARD_REGION*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12Resource*, D3D12_DISCARD_REGION*, void&gt;)(lpVtbl[<vtbl explicit="False">51</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="pRegion">pRegion</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginQuery" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pQueryHeap">
+                    <type>ID3D12QueryHeap*</type>
+                </param>
+                <param name="Type">
+                    <type>D3D12_QUERY_TYPE</type>
+                </param>
+                <param name="Index">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12QueryHeap*, D3D12_QUERY_TYPE, uint, void&gt;)(lpVtbl[<vtbl explicit="False">52</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pQueryHeap">pQueryHeap</param>, <param name="Type">Type</param>, <param name="Index">Index</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndQuery" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pQueryHeap">
+                    <type>ID3D12QueryHeap*</type>
+                </param>
+                <param name="Type">
+                    <type>D3D12_QUERY_TYPE</type>
+                </param>
+                <param name="Index">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12QueryHeap*, D3D12_QUERY_TYPE, uint, void&gt;)(lpVtbl[<vtbl explicit="False">53</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pQueryHeap">pQueryHeap</param>, <param name="Type">Type</param>, <param name="Index">Index</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResolveQueryData" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pQueryHeap">
+                    <type>ID3D12QueryHeap*</type>
+                </param>
+                <param name="Type">
+                    <type>D3D12_QUERY_TYPE</type>
+                </param>
+                <param name="StartIndex">
+                    <type>uint</type>
+                </param>
+                <param name="NumQueries">
+                    <type>uint</type>
+                </param>
+                <param name="pDestinationBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="AlignedDestinationBufferOffset">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12QueryHeap*, D3D12_QUERY_TYPE, uint, uint, ID3D12Resource*, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">54</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pQueryHeap">pQueryHeap</param>, <param name="Type">Type</param>, <param name="StartIndex">StartIndex</param>, <param name="NumQueries">NumQueries</param>, <param name="pDestinationBuffer">pDestinationBuffer</param>, <param name="AlignedDestinationBufferOffset">AlignedDestinationBufferOffset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPredication" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="AlignedBufferOffset">
+                    <type>ulong</type>
+                </param>
+                <param name="Operation">
+                    <type>D3D12_PREDICATION_OP</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, D3D12_PREDICATION_OP, void&gt;)(lpVtbl[<vtbl explicit="False">55</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pBuffer">pBuffer</param>, <param name="AlignedBufferOffset">AlignedBufferOffset</param>, <param name="Operation">Operation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMarker" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Metadata">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <param name="Size">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, void*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">56</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="Metadata">Metadata</param>, <param name="pData">pData</param>, <param name="Size">Size</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginEvent" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Metadata">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <param name="Size">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, void*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">57</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="Metadata">Metadata</param>, <param name="pData">pData</param>, <param name="Size">Size</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndEvent" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, void&gt;)(lpVtbl[<vtbl explicit="False">58</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ExecuteIndirect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pCommandSignature">
+                    <type>ID3D12CommandSignature*</type>
+                </param>
+                <param name="MaxCommandCount">
+                    <type>uint</type>
+                </param>
+                <param name="pArgumentBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="ArgumentBufferOffset">
+                    <type>ulong</type>
+                </param>
+                <param name="pCountBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="CountBufferOffset">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12CommandSignature*, uint, ID3D12Resource*, ulong, ID3D12Resource*, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">59</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pCommandSignature">pCommandSignature</param>, <param name="MaxCommandCount">MaxCommandCount</param>, <param name="pArgumentBuffer">pArgumentBuffer</param>, <param name="ArgumentBufferOffset">ArgumentBufferOffset</param>, <param name="pCountBuffer">pCountBuffer</param>, <param name="CountBufferOffset">CountBufferOffset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AtomicCopyBufferUINT" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="DstOffset">
+                    <type>ulong</type>
+                </param>
+                <param name="pSrcBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="SrcOffset">
+                    <type>ulong</type>
+                </param>
+                <param name="Dependencies">
+                    <type>uint</type>
+                </param>
+                <param name="ppDependentResources">
+                    <type>ID3D12Resource**</type>
+                </param>
+                <param name="pDependentSubresourceRanges">
+                    <type>D3D12_SUBRESOURCE_RANGE_UINT64*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, D3D12_SUBRESOURCE_RANGE_UINT64*, void&gt;)(lpVtbl[<vtbl explicit="False">60</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstBuffer">pDstBuffer</param>, <param name="DstOffset">DstOffset</param>, <param name="pSrcBuffer">pSrcBuffer</param>, <param name="SrcOffset">SrcOffset</param>, <param name="Dependencies">Dependencies</param>, <param name="ppDependentResources">ppDependentResources</param>, <param name="pDependentSubresourceRanges">pDependentSubresourceRanges</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AtomicCopyBufferUINT64" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="DstOffset">
+                    <type>ulong</type>
+                </param>
+                <param name="pSrcBuffer">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="SrcOffset">
+                    <type>ulong</type>
+                </param>
+                <param name="Dependencies">
+                    <type>uint</type>
+                </param>
+                <param name="ppDependentResources">
+                    <type>ID3D12Resource**</type>
+                </param>
+                <param name="pDependentSubresourceRanges">
+                    <type>D3D12_SUBRESOURCE_RANGE_UINT64*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, D3D12_SUBRESOURCE_RANGE_UINT64*, void&gt;)(lpVtbl[<vtbl explicit="False">61</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstBuffer">pDstBuffer</param>, <param name="DstOffset">DstOffset</param>, <param name="pSrcBuffer">pSrcBuffer</param>, <param name="SrcOffset">SrcOffset</param>, <param name="Dependencies">Dependencies</param>, <param name="ppDependentResources">ppDependentResources</param>, <param name="pDependentSubresourceRanges">pDependentSubresourceRanges</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetDepthBounds" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Min">
+                    <type>float</type>
+                </param>
+                <param name="Max">
+                    <type>float</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, float, float, void&gt;)(lpVtbl[<vtbl explicit="False">62</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="Min">Min</param>, <param name="Max">Max</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSamplePositions" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumSamplesPerPixel">
+                    <type>uint</type>
+                </param>
+                <param name="NumPixels">
+                    <type>uint</type>
+                </param>
+                <param name="pSamplePositions">
+                    <type>D3D12_SAMPLE_POSITION*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, uint, D3D12_SAMPLE_POSITION*, void&gt;)(lpVtbl[<vtbl explicit="False">63</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="NumSamplesPerPixel">NumSamplesPerPixel</param>, <param name="NumPixels">NumPixels</param>, <param name="pSamplePositions">pSamplePositions</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResolveSubresourceRegion" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="DstX">
+                    <type>uint</type>
+                </param>
+                <param name="DstY">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="SrcSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="Format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="ResolveMode">
+                    <type>D3D12_RESOLVE_MODE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, RECT*, DXGI_FORMAT, D3D12_RESOLVE_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">64</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="DstX">DstX</param>, <param name="DstY">DstY</param>, <param name="pSrcResource">pSrcResource</param>, <param name="SrcSubresource">SrcSubresource</param>, <param name="pSrcRect">pSrcRect</param>, <param name="Format">Format</param>, <param name="ResolveMode">ResolveMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetViewInstanceMask" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Mask">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12GraphicsCommandList1*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">65</vtbl>]))(<param special="thisPtr">(ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this)</param>, <param name="Mask">Mask</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

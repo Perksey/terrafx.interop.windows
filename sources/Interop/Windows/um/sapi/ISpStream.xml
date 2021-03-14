@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpStream" access="public" native="struct ISpStream : ISpStreamFormat" uuid="12e3cca9-7518-44c5-a5e7-ba5a79cb929e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Read" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pv">
+                    <type>void*</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="pcbRead">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, void*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="pv">pv</param>, <param name="cb">cb</param>, <param name="pcbRead">pcbRead</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Write" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pv">
+                    <type>void*</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="pcbWritten">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, void*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="pv">pv</param>, <param name="cb">cb</param>, <param name="pcbWritten">pcbWritten</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Seek" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dlibMove">
+                    <type>LARGE_INTEGER</type>
+                </param>
+                <param name="dwOrigin">
+                    <type>uint</type>
+                </param>
+                <param name="plibNewPosition">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, LARGE_INTEGER, uint, ULARGE_INTEGER*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="dlibMove">dlibMove</param>, <param name="dwOrigin">dwOrigin</param>, <param name="plibNewPosition">plibNewPosition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="libNewSize">
+                    <type>ULARGE_INTEGER</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, ULARGE_INTEGER, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="libNewSize">libNewSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyTo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pstm">
+                    <type>IStream*</type>
+                </param>
+                <param name="cb">
+                    <type>ULARGE_INTEGER</type>
+                </param>
+                <param name="pcbRead">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <param name="pcbWritten">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, IStream*, ULARGE_INTEGER, ULARGE_INTEGER*, ULARGE_INTEGER*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="pstm">pstm</param>, <param name="cb">cb</param>, <param name="pcbRead">pcbRead</param>, <param name="pcbWritten">pcbWritten</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Commit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="grfCommitFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="grfCommitFlags">grfCommitFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Revert" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LockRegion" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="libOffset">
+                    <type>ULARGE_INTEGER</type>
+                </param>
+                <param name="cb">
+                    <type>ULARGE_INTEGER</type>
+                </param>
+                <param name="dwLockType">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, ULARGE_INTEGER, ULARGE_INTEGER, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="libOffset">libOffset</param>, <param name="cb">cb</param>, <param name="dwLockType">dwLockType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnlockRegion" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="libOffset">
+                    <type>ULARGE_INTEGER</type>
+                </param>
+                <param name="cb">
+                    <type>ULARGE_INTEGER</type>
+                </param>
+                <param name="dwLockType">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, ULARGE_INTEGER, ULARGE_INTEGER, uint, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="libOffset">libOffset</param>, <param name="cb">cb</param>, <param name="dwLockType">dwLockType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Stat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pstatstg">
+                    <type>STATSTG*</type>
+                </param>
+                <param name="grfStatFlag">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, STATSTG*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="pstatstg">pstatstg</param>, <param name="grfStatFlag">grfStatFlag</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Clone" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppstm">
+                    <type>IStream**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, IStream**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="ppstm">ppstm</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFormat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pguidFormatId">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppCoMemWaveFormatEx">
+                    <type>WAVEFORMATEX**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, Guid*, WAVEFORMATEX**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="pguidFormatId">pguidFormatId</param>, <param name="ppCoMemWaveFormatEx">ppCoMemWaveFormatEx</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetBaseStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="rguidFormat">
+                    <type>Guid*</type>
+                </param>
+                <param name="pWaveFormatEx">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, IStream*, Guid*, WAVEFORMATEX*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="pStream">pStream</param>, <param name="rguidFormat">rguidFormat</param>, <param name="pWaveFormatEx">pWaveFormatEx</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBaseStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppStream">
+                    <type>IStream**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, IStream**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="ppStream">ppStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BindToFile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="eMode">
+                    <type>SPFILEMODE</type>
+                </param>
+                <param name="pFormatId">
+                    <type>Guid*</type>
+                </param>
+                <param name="pWaveFormatEx">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <param name="ullEventInterest">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, ushort*, SPFILEMODE, Guid*, WAVEFORMATEX*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>, <param name="pszFileName">pszFileName</param>, <param name="eMode">eMode</param>, <param name="pFormatId">pFormatId</param>, <param name="pWaveFormatEx">pWaveFormatEx</param>, <param name="ullEventInterest">ullEventInterest</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Close" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpStream*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ISpStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

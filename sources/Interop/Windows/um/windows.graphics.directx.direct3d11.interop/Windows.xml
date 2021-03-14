@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/windows.graphics.directx.direct3d11.interop.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreateDirect3D11DeviceFromDXGIDevice" access="public" lib="d3d11" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dxgiDevice">
+                    <type>IDXGIDevice*</type>
+                </param>
+                <param name="graphicsDevice">
+                    <type>IInspectable**</type>
+                </param>
+            </function>
+            <function name="CreateDirect3D11SurfaceFromDXGISurface" access="public" lib="d3d11" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dgxiSurface">
+                    <type>IDXGISurface*</type>
+                </param>
+                <param name="graphicsSurface">
+                    <type>IInspectable**</type>
+                </param>
+            </function>
+            <iid name="IID_IDirect3DDxgiInterfaceAccess" value="0xA9B3D012, 0x3DF2, 0x4EE3, 0xB8, 0xD1, 0x86, 0x95, 0xF4, 0x57, 0xD3, 0xC1" />
+        </class>
+    </namespace>
+</bindings>

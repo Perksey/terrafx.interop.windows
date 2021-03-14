@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SD_GLOBAL_CHANGE_OUTPUT" access="public">
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ChangeType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_SD_GLOBAL_CHANGE_OUTPUT::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:13706:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="SdChange" access="public">
+                <type native="">ref SD_CHANGE_MACHINE_SID_OUTPUT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.SdChange, 1));
+        </code>
+                </get>
+            </field>
+            <field name="SdQueryStats" access="public">
+                <type native="">ref SD_QUERY_STATS_OUTPUT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.SdQueryStats, 1));
+        </code>
+                </get>
+            </field>
+            <field name="SdEnumSds" access="public">
+                <type native="">ref SD_ENUM_SDS_OUTPUT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.SdEnumSds, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="SdChange" access="public" offset="0">
+                    <type native="">SD_CHANGE_MACHINE_SID_OUTPUT</type>
+                </field>
+                <field name="SdQueryStats" access="public" offset="0">
+                    <type native="">SD_QUERY_STATS_OUTPUT</type>
+                </field>
+                <field name="SdEnumSds" access="public" offset="0">
+                    <type native="">SD_ENUM_SDS_OUTPUT</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

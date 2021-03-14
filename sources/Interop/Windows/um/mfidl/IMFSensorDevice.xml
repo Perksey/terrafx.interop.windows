@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFSensorDevice" access="public" native="struct IMFSensorDevice : IUnknown" uuid="fb9f48f2-2a18-4e28-9730-786f30f04dc4" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDeviceId" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDeviceId">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pDeviceId">pDeviceId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDeviceType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pType">
+                    <type>MFSensorDeviceType*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, MFSensorDeviceType*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pType">pType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFlags" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFlags">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pFlags">pFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSymbolicLink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="SymbolicLink">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchSymbolicLink">
+                    <type>int</type>
+                </param>
+                <param name="pcchWritten">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, ushort*, int, int*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="SymbolicLink">SymbolicLink</param>, <param name="cchSymbolicLink">cchSymbolicLink</param>, <param name="pcchWritten">pcchWritten</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDeviceAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppAttributes">
+                    <type>IMFAttributes**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, IMFAttributes**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="ppAttributes">ppAttributes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamAttributesCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="eType">
+                    <type>MFSensorStreamType</type>
+                </param>
+                <param name="pdwCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, MFSensorStreamType, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="eType">eType</param>, <param name="pdwCount">pdwCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="eType">
+                    <type>MFSensorStreamType</type>
+                </param>
+                <param name="dwIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppAttributes">
+                    <type>IMFAttributes**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, MFSensorStreamType, uint, IMFAttributes**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="eType">eType</param>, <param name="dwIndex">dwIndex</param>, <param name="ppAttributes">ppAttributes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSensorDeviceMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="eMode">
+                    <type>MFSensorDeviceMode</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, MFSensorDeviceMode, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="eMode">eMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSensorDeviceMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="peMode">
+                    <type>MFSensorDeviceMode*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorDevice*, MFSensorDeviceMode*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFSensorDevice*)Unsafe.AsPointer(ref this)</param>, <param name="peMode">peMode</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

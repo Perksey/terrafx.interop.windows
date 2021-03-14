@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3dcommon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="D3D_SHADER_VARIABLE_TYPE" access="public">
+            <type>int</type>
+            <enumerator name="D3D_SVT_VOID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_BOOL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_INT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>2
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_FLOAT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>3
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_STRING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>4
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>5
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURE1D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>6
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURE2D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>7
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURE3D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>8
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURECUBE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>9
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_SAMPLER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>10
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_SAMPLER1D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>11
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_SAMPLER2D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>12
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_SAMPLER3D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>13
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_SAMPLERCUBE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>14
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_PIXELSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>15
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_VERTEXSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>16
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_PIXELFRAGMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>17
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_VERTEXFRAGMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>18
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_UINT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>19
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_UINT8" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>20
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_GEOMETRYSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>21
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RASTERIZER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>22
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_DEPTHSTENCIL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>23
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_BLEND" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>24
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>25
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_CBUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>26
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TBUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>27
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURE1DARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>28
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURE2DARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>29
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RENDERTARGETVIEW" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>30
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_DEPTHSTENCILVIEW" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>31
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURE2DMS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>32
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURE2DMSARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>33
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_TEXTURECUBEARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>34
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_HULLSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>35
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_DOMAINSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>36
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_INTERFACE_POINTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>37
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_COMPUTESHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>38
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_DOUBLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>39
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RWTEXTURE1D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>40
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RWTEXTURE1DARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>41
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RWTEXTURE2D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>42
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RWTEXTURE2DARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>43
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RWTEXTURE3D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>44
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RWBUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>45
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_BYTEADDRESS_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>46
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RWBYTEADDRESS_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>47
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_STRUCTURED_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>48
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_RWSTRUCTURED_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>49
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_APPEND_STRUCTURED_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>50
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_CONSUME_STRUCTURED_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>51
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_MIN8FLOAT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>52
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_MIN10FLOAT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>53
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_MIN16FLOAT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>54
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_MIN12INT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>55
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_MIN16INT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>56
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_MIN16UINT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>57
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_VOID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_VOID
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_BOOL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_BOOL
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_INT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_INT
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_FLOAT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_FLOAT
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_STRING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_STRING
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURE
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURE1D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURE1D
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURE2D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURE2D
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURE3D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURE3D
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURECUBE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURECUBE
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_SAMPLER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_SAMPLER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_SAMPLER1D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_SAMPLER1D
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_SAMPLER2D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_SAMPLER2D
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_SAMPLER3D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_SAMPLER3D
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_SAMPLERCUBE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_SAMPLERCUBE
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_PIXELSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_PIXELSHADER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_VERTEXSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_VERTEXSHADER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_PIXELFRAGMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_PIXELFRAGMENT
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_VERTEXFRAGMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_VERTEXFRAGMENT
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_UINT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_UINT
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_UINT8" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_UINT8
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_GEOMETRYSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_GEOMETRYSHADER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_RASTERIZER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RASTERIZER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_DEPTHSTENCIL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_DEPTHSTENCIL
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_BLEND" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_BLEND
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_BUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_CBUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_CBUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TBUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TBUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURE1DARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURE1DARRAY
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURE2DARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURE2DARRAY
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_RENDERTARGETVIEW" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RENDERTARGETVIEW
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_DEPTHSTENCILVIEW" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_DEPTHSTENCILVIEW
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURE2DMS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURE2DMS
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURE2DMSARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURE2DMSARRAY
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D10_SVT_TEXTURECUBEARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_TEXTURECUBEARRAY
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_HULLSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_HULLSHADER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_DOMAINSHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_DOMAINSHADER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_INTERFACE_POINTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_INTERFACE_POINTER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_COMPUTESHADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_COMPUTESHADER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_DOUBLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_DOUBLE
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_RWTEXTURE1D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RWTEXTURE1D
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_RWTEXTURE1DARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RWTEXTURE1DARRAY
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_RWTEXTURE2D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RWTEXTURE2D
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_RWTEXTURE2DARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RWTEXTURE2DARRAY
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_RWTEXTURE3D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RWTEXTURE3D
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_RWBUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RWBUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_BYTEADDRESS_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_BYTEADDRESS_BUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_RWBYTEADDRESS_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RWBYTEADDRESS_BUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_STRUCTURED_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_STRUCTURED_BUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_RWSTRUCTURED_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_RWSTRUCTURED_BUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_APPEND_STRUCTURED_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_APPEND_STRUCTURED_BUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_SVT_CONSUME_STRUCTURED_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>D3D_SVT_CONSUME_STRUCTURED_BUFFER
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D_SVT_FORCE_DWORD" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x7fffffff
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

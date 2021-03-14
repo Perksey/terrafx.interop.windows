@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="D2D1CreateFactory" access="public" lib="d2d1" static="true">
+                <type native="HRESULT">int</type>
+                <param name="factoryType">
+                    <type>D2D1_FACTORY_TYPE</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pFactoryOptions">
+                    <type>D2D1_FACTORY_OPTIONS*</type>
+                </param>
+                <param name="ppIFactory">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="D2D1MakeRotateMatrix" access="public" lib="d2d1" static="true">
+                <type>void</type>
+                <param name="angle">
+                    <type>float</type>
+                </param>
+                <param name="center">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="matrix">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+            </function>
+            <function name="D2D1MakeSkewMatrix" access="public" lib="d2d1" static="true">
+                <type>void</type>
+                <param name="angleX">
+                    <type>float</type>
+                </param>
+                <param name="angleY">
+                    <type>float</type>
+                </param>
+                <param name="center">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="matrix">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+            </function>
+            <function name="D2D1IsMatrixInvertible" access="public" lib="d2d1" static="true">
+                <type native="BOOL">int</type>
+                <param name="matrix">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+            </function>
+            <function name="D2D1InvertMatrix" access="public" lib="d2d1" static="true">
+                <type native="BOOL">int</type>
+                <param name="matrix">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+            </function>
+            <function name="D2D1CreateFactory" access="public" static="true">
+                <type native="HRESULT">int</type>
+                <param name="factoryType">
+                    <type>D2D1_FACTORY_TYPE</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="factory">
+                    <type>void**</type>
+                </param>
+                <code>return D2D1CreateFactory(factoryType, riid, null, factory);
+            </code>
+            </function>
+            <constant name="D2D1_DEFAULT_FLATTENING_TOLERANCE" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>(0.25f)
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_ID2D1Resource" value="0x2CD90691, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1Image" value="0x65019F75, 0x8DA2, 0x497C, 0xB3, 0x2C, 0xDF, 0xA3, 0x4E, 0x48, 0xED, 0xE6" />
+            <iid name="IID_ID2D1Bitmap" value="0xA2296057, 0xEA42, 0x4099, 0x98, 0x3B, 0x53, 0x9F, 0xB6, 0x50, 0x54, 0x26" />
+            <iid name="IID_ID2D1GradientStopCollection" value="0x2CD906A7, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1Brush" value="0x2CD906A8, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1BitmapBrush" value="0x2CD906AA, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1SolidColorBrush" value="0x2CD906A9, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1LinearGradientBrush" value="0x2CD906AB, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1RadialGradientBrush" value="0x2CD906AC, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1StrokeStyle" value="0x2CD9069D, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1Geometry" value="0x2CD906A1, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1RectangleGeometry" value="0x2CD906A2, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1RoundedRectangleGeometry" value="0x2CD906A3, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1EllipseGeometry" value="0x2CD906A4, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1GeometryGroup" value="0x2CD906A6, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1TransformedGeometry" value="0x2CD906BB, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1SimplifiedGeometrySink" value="0x2CD9069E, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1GeometrySink" value="0x2CD9069F, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1TessellationSink" value="0x2CD906C1, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1PathGeometry" value="0x2CD906A5, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1Mesh" value="0x2CD906C2, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1Layer" value="0x2CD9069B, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1DrawingStateBlock" value="0x28506E39, 0xEBF6, 0x46A1, 0xBB, 0x47, 0xFD, 0x85, 0x56, 0x5A, 0xB9, 0x57" />
+            <iid name="IID_ID2D1RenderTarget" value="0x2CD90694, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1BitmapRenderTarget" value="0x2CD90695, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1HwndRenderTarget" value="0x2CD90698, 0x12E2, 0x11DC, 0x9F, 0xED, 0x00, 0x11, 0x43, 0xA0, 0x55, 0xF9" />
+            <iid name="IID_ID2D1GdiInteropRenderTarget" value="0xE0DB51C3, 0x6F77, 0x4BAE, 0xB3, 0xD5, 0xE4, 0x75, 0x09, 0xB3, 0x58, 0x38" />
+            <iid name="IID_ID2D1DCRenderTarget" value="0x1C51BC64, 0xDE61, 0x46FD, 0x98, 0x99, 0x63, 0xA5, 0xD8, 0xF0, 0x39, 0x50" />
+            <iid name="IID_ID2D1Factory" value="0x06152247, 0x6F50, 0x465A, 0x92, 0x45, 0x11, 0x8B, 0xFD, 0x3B, 0x60, 0x07" />
+        </class>
+    </namespace>
+</bindings>

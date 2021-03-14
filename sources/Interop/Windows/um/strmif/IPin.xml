@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IPin" access="public" native="struct IPin : IUnknown" uuid="56a86891-0ad4-11ce-b03a-0020af0ba770" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Connect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pReceivePin">
+                    <type>IPin*</type>
+                </param>
+                <param name="pmt">
+                    <type>AM_MEDIA_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, IPin*, AM_MEDIA_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="pReceivePin">pReceivePin</param>, <param name="pmt">pmt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReceiveConnection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pConnector">
+                    <type>IPin*</type>
+                </param>
+                <param name="pmt">
+                    <type>AM_MEDIA_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, IPin*, AM_MEDIA_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="pConnector">pConnector</param>, <param name="pmt">pmt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Disconnect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ConnectedTo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPin">
+                    <type>IPin**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, IPin**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="pPin">pPin</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ConnectionMediaType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pmt">
+                    <type>AM_MEDIA_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, AM_MEDIA_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="pmt">pmt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryPinInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pInfo">
+                    <type>PIN_INFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, PIN_INFO*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="pInfo">pInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryDirection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPinDir">
+                    <type>PIN_DIRECTION*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, PIN_DIRECTION*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="pPinDir">pPinDir</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryId" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Id">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="Id">Id</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryAccept" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pmt">
+                    <type>AM_MEDIA_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, AM_MEDIA_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="pmt">pmt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumMediaTypes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumMediaTypes**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, IEnumMediaTypes**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryInternalConnections" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="apPin">
+                    <type>IPin**</type>
+                </param>
+                <param name="nPin">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, IPin**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="apPin">apPin</param>, <param name="nPin">nPin</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndOfStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginFlush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndFlush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NewSegment" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tStart">
+                    <type>long</type>
+                </param>
+                <param name="tStop">
+                    <type>long</type>
+                </param>
+                <param name="dRate">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPin*, long, long, double, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IPin*)Unsafe.AsPointer(ref this)</param>, <param name="tStart">tStart</param>, <param name="tStop">tStop</param>, <param name="dRate">dRate</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

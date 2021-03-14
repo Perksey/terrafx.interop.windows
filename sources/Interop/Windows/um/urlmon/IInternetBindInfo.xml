@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IInternetBindInfo" access="public" native="struct IInternetBindInfo : IUnknown" uuid="79eac9e1-baf9-11ce-8c82-00aa004ba90b" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetBindInfo*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IInternetBindInfo*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetBindInfo*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IInternetBindInfo*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetBindInfo*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IInternetBindInfo*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBindInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="grfBINDF">
+                    <type>uint*</type>
+                </param>
+                <param name="pbindinfo">
+                    <type>BINDINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetBindInfo*, uint*, BINDINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IInternetBindInfo*)Unsafe.AsPointer(ref this)</param>, <param name="grfBINDF">grfBINDF</param>, <param name="pbindinfo">pbindinfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBindString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStringType">
+                    <type>uint</type>
+                </param>
+                <param name="ppwzStr">
+                    <type>ushort**</type>
+                </param>
+                <param name="cEl">
+                    <type>uint</type>
+                </param>
+                <param name="pcElFetched">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetBindInfo*, uint, ushort**, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IInternetBindInfo*)Unsafe.AsPointer(ref this)</param>, <param name="ulStringType">ulStringType</param>, <param name="ppwzStr">ppwzStr</param>, <param name="cEl">cEl</param>, <param name="pcElFetched">pcElFetched</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/Audioclient.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAudioClock" access="public" native="struct IAudioClock : IUnknown" uuid="cd63314f-3fba-4a1b-812c-ef96358728e7" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClock*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAudioClock*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClock*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAudioClock*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClock*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAudioClock*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFrequency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pu64Frequency">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClock*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAudioClock*)Unsafe.AsPointer(ref this)</param>, <param name="pu64Frequency">pu64Frequency</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pu64Position">
+                    <type>ulong*</type>
+                </param>
+                <param name="pu64QPCPosition">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClock*, ulong*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAudioClock*)Unsafe.AsPointer(ref this)</param>, <param name="pu64Position">pu64Position</param>, <param name="pu64QPCPosition">pu64QPCPosition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCharacteristics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwCharacteristics">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClock*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAudioClock*)Unsafe.AsPointer(ref this)</param>, <param name="pdwCharacteristics">pdwCharacteristics</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

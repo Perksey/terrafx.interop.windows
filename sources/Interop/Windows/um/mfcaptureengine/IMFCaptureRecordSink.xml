@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfcaptureengine.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFCaptureRecordSink" access="public" native="struct IMFCaptureRecordSink : IMFCaptureSink" uuid="3323b55a-f92a-4fe2-8edc-e9bfc0634d77" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputMediaType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwSinkStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppMediaType">
+                    <type>IMFMediaType**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, uint, IMFMediaType**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="dwSinkStreamIndex">dwSinkStreamIndex</param>, <param name="ppMediaType">ppMediaType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetService" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwSinkStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="rguidService">
+                    <type>Guid*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppUnknown">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, uint, Guid*, Guid*, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="dwSinkStreamIndex">dwSinkStreamIndex</param>, <param name="rguidService">rguidService</param>, <param name="riid">riid</param>, <param name="ppUnknown">ppUnknown</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwSourceStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="pAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="pdwSinkStreamIndex">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, uint, IMFMediaType*, IMFAttributes*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="dwSourceStreamIndex">dwSourceStreamIndex</param>, <param name="pMediaType">pMediaType</param>, <param name="pAttributes">pAttributes</param>, <param name="pdwSinkStreamIndex">pdwSinkStreamIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Prepare" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveAllStreams" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputByteStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="guidContainerType">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, IMFByteStream*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="pByteStream">pByteStream</param>, <param name="guidContainerType">guidContainerType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputFileName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fileName">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="fileName">fileName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSampleCallback" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamSinkIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pCallback">
+                    <type>IMFCaptureEngineOnSampleCallback*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, uint, IMFCaptureEngineOnSampleCallback*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamSinkIndex">dwStreamSinkIndex</param>, <param name="pCallback">pCallback</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetCustomSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pMediaSink">
+                    <type>IMFMediaSink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, IMFMediaSink*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="pMediaSink">pMediaSink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRotation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pdwRotationValue">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="pdwRotationValue">pdwRotationValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRotation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwRotationValue">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureRecordSink*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMFCaptureRecordSink*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="dwRotationValue">dwRotationValue</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

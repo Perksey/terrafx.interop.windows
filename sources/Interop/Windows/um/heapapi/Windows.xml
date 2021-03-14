@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/heapapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="HeapCreate" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="flOptions">
+                    <type>uint</type>
+                </param>
+                <param name="dwInitialSize">
+                    <type>nuint</type>
+                </param>
+                <param name="dwMaximumSize">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="HeapDestroy" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HeapAlloc" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="LPVOID">void*</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwBytes">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="HeapReAlloc" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="LPVOID">void*</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpMem">
+                    <type>void*</type>
+                </param>
+                <param name="dwBytes">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="HeapFree" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpMem">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="HeapSize" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="SIZE_T">nuint</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpMem">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="GetProcessHeap" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+            </function>
+            <function name="HeapCompact" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="SIZE_T">nuint</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HeapSetInformation" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="HeapHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="HeapInformationClass">
+                    <type>HEAP_INFORMATION_CLASS</type>
+                </param>
+                <param name="HeapInformation">
+                    <type>void*</type>
+                </param>
+                <param name="HeapInformationLength">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="HeapValidate" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpMem">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="HeapSummary" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpSummary">
+                    <type>HEAP_SUMMARY*</type>
+                </param>
+            </function>
+            <function name="GetProcessHeaps" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="NumberOfHeaps">
+                    <type>uint</type>
+                </param>
+                <param name="ProcessHeaps">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="HeapLock" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HeapUnlock" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HeapWalk" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hHeap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpEntry">
+                    <type>PROCESS_HEAP_ENTRY*</type>
+                </param>
+            </function>
+            <function name="HeapQueryInformation" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="HeapHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="HeapInformationClass">
+                    <type>HEAP_INFORMATION_CLASS</type>
+                </param>
+                <param name="HeapInformation">
+                    <type>void*</type>
+                </param>
+                <param name="HeapInformationLength">
+                    <type>nuint</type>
+                </param>
+                <param name="ReturnLength">
+                    <type>nuint*</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

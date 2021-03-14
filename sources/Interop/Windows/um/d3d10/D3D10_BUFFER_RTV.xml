@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d10.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D10_BUFFER_RTV" access="public">
+            <field name="Anonymous1" access="public">
+                <type native="D3D10_BUFFER_RTV::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d10.h:2952:5)">_Anonymous1_e__Union</type>
+            </field>
+            <field name="FirstElement" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.FirstElement, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ElementOffset" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.ElementOffset, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Anonymous2" access="public">
+                <type native="D3D10_BUFFER_RTV::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d10.h:2957:5)">_Anonymous2_e__Union</type>
+            </field>
+            <field name="NumElements" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.NumElements, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ElementWidth" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.ElementWidth, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous1_e__Union" access="public" layout="Explicit">
+                <field name="FirstElement" access="public" offset="0">
+                    <type native="UINT">uint</type>
+                </field>
+                <field name="ElementOffset" access="public" offset="0">
+                    <type native="UINT">uint</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous2_e__Union" access="public" layout="Explicit">
+                <field name="NumElements" access="public" offset="0">
+                    <type native="UINT">uint</type>
+                </field>
+                <field name="ElementWidth" access="public" offset="0">
+                    <type native="UINT">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

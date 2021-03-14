@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IFilterGraph" access="public" native="struct IFilterGraph : IUnknown" uuid="56a8689f-0ad4-11ce-b03a-0020af0ba770" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>IBaseFilter*</type>
+                </param>
+                <param name="pName">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, IBaseFilter*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>, <param name="pName">pName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>IBaseFilter*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, IBaseFilter*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumFilters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumFilters**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, IEnumFilters**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindFilterByName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppFilter">
+                    <type>IBaseFilter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, ushort*, IBaseFilter**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>, <param name="pName">pName</param>, <param name="ppFilter">ppFilter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ConnectDirect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppinOut">
+                    <type>IPin*</type>
+                </param>
+                <param name="ppinIn">
+                    <type>IPin*</type>
+                </param>
+                <param name="pmt">
+                    <type>AM_MEDIA_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, IPin*, IPin*, AM_MEDIA_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>, <param name="ppinOut">ppinOut</param>, <param name="ppinIn">ppinIn</param>, <param name="pmt">pmt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Reconnect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppin">
+                    <type>IPin*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, IPin*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>, <param name="ppin">ppin</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Disconnect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppin">
+                    <type>IPin*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, IPin*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>, <param name="ppin">ppin</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDefaultSyncSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterGraph*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IFilterGraph*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

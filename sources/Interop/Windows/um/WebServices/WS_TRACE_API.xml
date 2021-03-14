@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="WS_TRACE_API" access="public">
+            <type>int</type>
+            <enumerator name="WS_TRACE_API_NONE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>-1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_START_READER_CANONICALIZATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_END_READER_CANONICALIZATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_START_WRITER_CANONICALIZATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>2
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_END_WRITER_CANONICALIZATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>3
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_XML_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>4
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_REMOVE_NODE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>5
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_READER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>6
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_INPUT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>7
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_INPUT_TO_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>8
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_XML_READER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>9
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_READER_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>10
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_READER_NODE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>11
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FILL_READER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>12
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_START_ELEMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>13
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_TO_START_ELEMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>14
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_START_ATTRIBUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>15
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_END_ATTRIBUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>16
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_NODE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>17
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SKIP_NODE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>18
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_END_ELEMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>19
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FIND_ATTRIBUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>20
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_ELEMENT_VALUE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>21
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_CHARS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>22
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_CHARS_UTF8" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>23
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_BYTES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>24
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_ARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>25
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_READER_POSITION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>26
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_READER_POSITION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>27
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_MOVE_READER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>28
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_WRITER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>29
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_XML_WRITER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>30
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_OUTPUT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>31
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_OUTPUT_TO_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>32
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_WRITER_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>33
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FLUSH_WRITER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>34
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_START_ELEMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>35
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_END_START_ELEMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>36
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_XMLNS_ATTRIBUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>37
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_START_ATTRIBUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>38
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_END_ATTRIBUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>39
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_VALUE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>40
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_XML_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>41
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_XML_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>42
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_XML_BUFFER_TO_BYTES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>43
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_XML_BUFFER_FROM_BYTES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>44
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_ARRAY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>45
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_QUALIFIED_NAME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>46
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_CHARS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>47
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_CHARS_UTF8" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>48
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_BYTES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>49
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_PUSH_BYTES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>50
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_PULL_BYTES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>51
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_END_ELEMENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>52
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_TEXT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>53
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_START_CDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>54
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_END_CDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>55
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_NODE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>56
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_PREFIX_FROM_NAMESPACE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>57
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_WRITER_POSITION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>58
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_WRITER_POSITION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>59
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_MOVE_WRITER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>60
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_TRIM_XML_WHITESPACE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>61
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_VERIFY_XML_NCNAME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>62
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_XML_STRING_EQUALS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>63
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_NAMESPACE_FROM_PREFIX" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>64
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_QUALIFIED_NAME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>65
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_XML_ATTRIBUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>66
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_COPY_NODE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>67
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ASYNC_EXECUTE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>68
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_CHANNEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>69
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_OPEN_CHANNEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>70
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SEND_MESSAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>71
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_RECEIVE_MESSAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>72
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_REQUEST_REPLY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>73
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SEND_REPLY_MESSAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>74
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SEND_FAULT_MESSAGE_FOR_ERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>75
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_CHANNEL_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>76
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_CHANNEL_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>77
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_MESSAGE_START" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>78
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_MESSAGE_END" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>79
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_MESSAGE_START" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>80
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_MESSAGE_END" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>81
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CLOSE_CHANNEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>82
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ABORT_CHANNEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>83
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_CHANNEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>84
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_RESET_CHANNEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>85
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ABANDON_MESSAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>86
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SHUTDOWN_SESSION_CHANNEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>87
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_CONTEXT_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>88
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_DICTIONARY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>89
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_ENDPOINT_ADDRESS_EXTENSION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>90
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_ERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>91
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ADD_ERROR_STRING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>92
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_ERROR_STRING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>93
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_COPY_ERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>94
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_ERROR_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>95
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_ERROR_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>96
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_RESET_ERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>97
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_ERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>98
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_FAULT_ERROR_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>99
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_FAULT_ERROR_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>100
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_FAULT_FROM_ERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>101
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_FAULT_ERROR_DETAIL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>102
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_FAULT_ERROR_DETAIL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>103
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_HEAP" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>104
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ALLOC" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>105
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_HEAP_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>106
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_RESET_HEAP" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>107
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_HEAP" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>108
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_LISTENER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>109
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_OPEN_LISTENER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>110
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ACCEPT_CHANNEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>111
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CLOSE_LISTENER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>112
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ABORT_LISTENER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>113
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_RESET_LISTENER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>114
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_LISTENER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>115
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_LISTENER_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>116
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_LISTENER_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>117
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_CHANNEL_FOR_LISTENER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>118
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_MESSAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>119
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_MESSAGE_FOR_CHANNEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>120
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_INITIALIZE_MESSAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>121
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_RESET_MESSAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>122
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_MESSAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>123
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_HEADER_ATTRIBUTES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>124
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>125
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_CUSTOM_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>126
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_REMOVE_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>127
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>128
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_REMOVE_CUSTOM_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>129
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ADD_CUSTOM_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>130
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ADD_MAPPED_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>131
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_REMOVE_MAPPED_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>132
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_MAPPED_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>133
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_BODY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>134
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_BODY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>135
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_ENVELOPE_START" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>136
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_ENVELOPE_END" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>137
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_ENVELOPE_START" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>138
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_ENVELOPE_END" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>139
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_MESSAGE_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>140
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_MESSAGE_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>141
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ADDRESS_MESSAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>142
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CHECK_MUST_UNDERSTAND_HEADERS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>143
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_MARK_HEADER_AS_UNDERSTOOD" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>144
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FILL_BODY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>145
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FLUSH_BODY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>146
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_REQUEST_SECURITY_TOKEN" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>147
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_SECURITY_TOKEN_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>148
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_XML_SECURITY_TOKEN" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>149
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_SECURITY_TOKEN" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>150
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_REVOKE_SECURITY_CONTEXT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>151
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_SECURITY_CONTEXT_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>152
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_ELEMENT_TYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>153
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_ATTRIBUTE_TYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>154
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_TYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>155
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_ELEMENT_TYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>156
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_ATTRIBUTE_TYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>157
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WRITE_TYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>158
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SERVICE_REGISTER_FOR_CANCEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>159
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_SERVICE_HOST_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>160
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_SERVICE_HOST" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>161
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_OPEN_SERVICE_HOST" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>162
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CLOSE_SERVICE_HOST" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>163
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ABORT_SERVICE_HOST" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>164
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_SERVICE_HOST" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>165
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_RESET_SERVICE_HOST" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>166
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_SERVICE_PROXY_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>167
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_SERVICE_PROXY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>168
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_OPEN_SERVICE_PROXY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>169
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CLOSE_SERVICE_PROXY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>170
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ABORT_SERVICE_PROXY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>171
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_SERVICE_PROXY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>172
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_RESET_SERVICE_PROXY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>173
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ABORT_CALL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>174
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CALL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>175
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_DECODE_URL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>176
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_ENCODE_URL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>177
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_COMBINE_URL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>178
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_DATETIME_TO_FILETIME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>179
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FILETIME_TO_DATETIME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>180
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_DUMP_MEMORY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>181
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_SET_AUTOFAIL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>182
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_CREATE_METADATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>183
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_READ_METADATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>184
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_FREE_METADATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>185
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_RESET_METADATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>186
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_METADATA_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>187
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_MISSING_METADATA_DOCUMENT_ADDRESS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>188
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_METADATA_ENDPOINTS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>189
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_MATCH_POLICY_ALTERNATIVE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>190
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_POLICY_PROPERTY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>191
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_GET_POLICY_ALTERNATIVE_COUNT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>192
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WS_CREATE_SERVICE_PROXY_FROM_TEMPLATE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>193
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="WS_TRACE_API_WS_CREATE_SERVICE_HOST_FROM_TEMPLATE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>194
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

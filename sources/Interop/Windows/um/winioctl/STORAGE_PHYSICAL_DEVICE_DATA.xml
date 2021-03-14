@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_PHYSICAL_DEVICE_DATA" access="public" unsafe="true">
+            <field name="DeviceId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Role" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="HealthStatus" access="public">
+                <type native="">STORAGE_COMPONENT_HEALTH_STATUS</type>
+            </field>
+            <field name="CommandProtocol" access="public">
+                <type native="">STORAGE_PROTOCOL_TYPE</type>
+            </field>
+            <field name="SpecVersion" access="public">
+                <type native="">STORAGE_SPEC_VERSION</type>
+            </field>
+            <field name="FormFactor" access="public">
+                <type native="">STORAGE_DEVICE_FORM_FACTOR</type>
+            </field>
+            <field name="Vendor" access="public">
+                <type native="BYTE [8]" count="8" fixed="_Vendor_e__FixedBuffer">byte</type>
+            </field>
+            <field name="Model" access="public">
+                <type native="BYTE [40]" count="40" fixed="_Model_e__FixedBuffer">byte</type>
+            </field>
+            <field name="FirmwareRevision" access="public">
+                <type native="BYTE [16]" count="16" fixed="_FirmwareRevision_e__FixedBuffer">byte</type>
+            </field>
+            <field name="Capacity" access="public">
+                <type native="DWORDLONG">ulong</type>
+            </field>
+            <field name="PhysicalLocation" access="public">
+                <type native="BYTE [32]" count="32" fixed="_PhysicalLocation_e__FixedBuffer">byte</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="DWORD [2]" count="2" fixed="_Reserved_e__FixedBuffer">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

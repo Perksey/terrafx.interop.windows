@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/AppxPackaging.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAppxPackageReader" access="public" native="struct IAppxPackageReader : IUnknown" uuid="b5c49650-99bc-481c-9a34-3d53a4106708" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageReader*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAppxPackageReader*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageReader*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAppxPackageReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageReader*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAppxPackageReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBlockMap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="blockMapReader">
+                    <type>IAppxBlockMapReader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageReader*, IAppxBlockMapReader**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAppxPackageReader*)Unsafe.AsPointer(ref this)</param>, <param name="blockMapReader">blockMapReader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFootprintFile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="type">
+                    <type>APPX_FOOTPRINT_FILE_TYPE</type>
+                </param>
+                <param name="file">
+                    <type>IAppxFile**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageReader*, APPX_FOOTPRINT_FILE_TYPE, IAppxFile**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAppxPackageReader*)Unsafe.AsPointer(ref this)</param>, <param name="type">type</param>, <param name="file">file</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPayloadFile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="file">
+                    <type>IAppxFile**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageReader*, ushort*, IAppxFile**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAppxPackageReader*)Unsafe.AsPointer(ref this)</param>, <param name="fileName">fileName</param>, <param name="file">file</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPayloadFiles" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="filesEnumerator">
+                    <type>IAppxFilesEnumerator**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageReader*, IAppxFilesEnumerator**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAppxPackageReader*)Unsafe.AsPointer(ref this)</param>, <param name="filesEnumerator">filesEnumerator</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetManifest" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="manifestReader">
+                    <type>IAppxManifestReader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageReader*, IAppxManifestReader**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAppxPackageReader*)Unsafe.AsPointer(ref this)</param>, <param name="manifestReader">manifestReader</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

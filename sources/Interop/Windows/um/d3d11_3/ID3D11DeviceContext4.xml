@@ -1,0 +1,2374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11_3.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D11DeviceContext4" access="public" native="struct ID3D11DeviceContext4 : ID3D11DeviceContext3" uuid="917600da-f58c-4c33-98d8-3e15b390fa24" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevice" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppDevice">
+                    <type>ID3D11Device**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Device**, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppDevice">ppDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pData">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSSetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pPixelShader">
+                    <type>ID3D11PixelShader*</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="NumClassInstances">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11PixelShader*, ID3D11ClassInstance**, uint, void&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pPixelShader">pPixelShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="NumClassInstances">NumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSSetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVertexShader">
+                    <type>ID3D11VertexShader*</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="NumClassInstances">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11VertexShader*, ID3D11ClassInstance**, uint, void&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pVertexShader">pVertexShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="NumClassInstances">NumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawIndexed" access="public" unsafe="true">
+                <type>void</type>
+                <param name="IndexCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartIndexLocation">
+                    <type>uint</type>
+                </param>
+                <param name="BaseVertexLocation">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, int, void&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="IndexCount">IndexCount</param>, <param name="StartIndexLocation">StartIndexLocation</param>, <param name="BaseVertexLocation">BaseVertexLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Draw" access="public" unsafe="true">
+                <type>void</type>
+                <param name="VertexCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartVertexLocation">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="VertexCount">VertexCount</param>, <param name="StartVertexLocation">StartVertexLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Map" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="Subresource">
+                    <type>uint</type>
+                </param>
+                <param name="MapType">
+                    <type>D3D11_MAP</type>
+                </param>
+                <param name="MapFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pMappedResource">
+                    <type>D3D11_MAPPED_SUBRESOURCE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, uint, D3D11_MAP, uint, D3D11_MAPPED_SUBRESOURCE*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="Subresource">Subresource</param>, <param name="MapType">MapType</param>, <param name="MapFlags">MapFlags</param>, <param name="pMappedResource">pMappedResource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Unmap" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="Subresource">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="Subresource">Subresource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetInputLayout" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pInputLayout">
+                    <type>ID3D11InputLayout*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11InputLayout*, void&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pInputLayout">pInputLayout</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetVertexBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppVertexBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pStrides">
+                    <type>uint*</type>
+                </param>
+                <param name="pOffsets">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppVertexBuffers">ppVertexBuffers</param>, <param name="pStrides">pStrides</param>, <param name="pOffsets">pOffsets</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetIndexBuffer" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pIndexBuffer">
+                    <type>ID3D11Buffer*</type>
+                </param>
+                <param name="Format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="Offset">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Buffer*, DXGI_FORMAT, uint, void&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pIndexBuffer">pIndexBuffer</param>, <param name="Format">Format</param>, <param name="Offset">Offset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawIndexedInstanced" access="public" unsafe="true">
+                <type>void</type>
+                <param name="IndexCountPerInstance">
+                    <type>uint</type>
+                </param>
+                <param name="InstanceCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartIndexLocation">
+                    <type>uint</type>
+                </param>
+                <param name="BaseVertexLocation">
+                    <type>int</type>
+                </param>
+                <param name="StartInstanceLocation">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, uint, int, uint, void&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="IndexCountPerInstance">IndexCountPerInstance</param>, <param name="InstanceCount">InstanceCount</param>, <param name="StartIndexLocation">StartIndexLocation</param>, <param name="BaseVertexLocation">BaseVertexLocation</param>, <param name="StartInstanceLocation">StartInstanceLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawInstanced" access="public" unsafe="true">
+                <type>void</type>
+                <param name="VertexCountPerInstance">
+                    <type>uint</type>
+                </param>
+                <param name="InstanceCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartVertexLocation">
+                    <type>uint</type>
+                </param>
+                <param name="StartInstanceLocation">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="VertexCountPerInstance">VertexCountPerInstance</param>, <param name="InstanceCount">InstanceCount</param>, <param name="StartVertexLocation">StartVertexLocation</param>, <param name="StartInstanceLocation">StartInstanceLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSSetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSSetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pShader">
+                    <type>ID3D11GeometryShader*</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="NumClassInstances">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11GeometryShader*, ID3D11ClassInstance**, uint, void&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pShader">pShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="NumClassInstances">NumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetPrimitiveTopology" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Topology">
+                    <type>D3D_PRIMITIVE_TOPOLOGY</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, D3D_PRIMITIVE_TOPOLOGY, void&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="Topology">Topology</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSSetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSSetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Begin" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pAsync">
+                    <type>ID3D11Asynchronous*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Asynchronous*, void&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pAsync">pAsync</param>);
+        </code>
+                </body>
+            </function>
+            <function name="End" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pAsync">
+                    <type>ID3D11Asynchronous*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Asynchronous*, void&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pAsync">pAsync</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pAsync">
+                    <type>ID3D11Asynchronous*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="GetDataFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Asynchronous*, void*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pAsync">pAsync</param>, <param name="pData">pData</param>, <param name="DataSize">DataSize</param>, <param name="GetDataFlags">GetDataFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPredication" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pPredicate">
+                    <type>ID3D11Predicate*</type>
+                </param>
+                <param name="PredicateValue">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Predicate*, int, void&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pPredicate">pPredicate</param>, <param name="PredicateValue">PredicateValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSSetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSSetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetRenderTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppRenderTargetViews">
+                    <type>ID3D11RenderTargetView**</type>
+                </param>
+                <param name="pDepthStencilView">
+                    <type>ID3D11DepthStencilView*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, void&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="NumViews">NumViews</param>, <param name="ppRenderTargetViews">ppRenderTargetViews</param>, <param name="pDepthStencilView">pDepthStencilView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetRenderTargetsAndUnorderedAccessViews" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumRTVs">
+                    <type>uint</type>
+                </param>
+                <param name="ppRenderTargetViews">
+                    <type>ID3D11RenderTargetView**</type>
+                </param>
+                <param name="pDepthStencilView">
+                    <type>ID3D11DepthStencilView*</type>
+                </param>
+                <param name="UAVStartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumUAVs">
+                    <type>uint</type>
+                </param>
+                <param name="ppUnorderedAccessViews">
+                    <type>ID3D11UnorderedAccessView**</type>
+                </param>
+                <param name="pUAVInitialCounts">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, uint, uint, ID3D11UnorderedAccessView**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="NumRTVs">NumRTVs</param>, <param name="ppRenderTargetViews">ppRenderTargetViews</param>, <param name="pDepthStencilView">pDepthStencilView</param>, <param name="UAVStartSlot">UAVStartSlot</param>, <param name="NumUAVs">NumUAVs</param>, <param name="ppUnorderedAccessViews">ppUnorderedAccessViews</param>, <param name="pUAVInitialCounts">pUAVInitialCounts</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetBlendState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBlendState">
+                    <type>ID3D11BlendState*</type>
+                </param>
+                <param name="BlendFactor">
+                    <type>float*</type>
+                </param>
+                <param name="SampleMask">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11BlendState*, float*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pBlendState">pBlendState</param>, <param name="BlendFactor">BlendFactor</param>, <param name="SampleMask">SampleMask</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetDepthStencilState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDepthStencilState">
+                    <type>ID3D11DepthStencilState*</type>
+                </param>
+                <param name="StencilRef">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11DepthStencilState*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDepthStencilState">pDepthStencilState</param>, <param name="StencilRef">StencilRef</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SOSetTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSOTargets">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pOffsets">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, ID3D11Buffer**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppSOTargets">ppSOTargets</param>, <param name="pOffsets">pOffsets</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawAuto" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, void&gt;)(lpVtbl[<vtbl explicit="False">38</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawIndexedInstancedIndirect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBufferForArgs">
+                    <type>ID3D11Buffer*</type>
+                </param>
+                <param name="AlignedByteOffsetForArgs">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Buffer*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">39</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pBufferForArgs">pBufferForArgs</param>, <param name="AlignedByteOffsetForArgs">AlignedByteOffsetForArgs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawInstancedIndirect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBufferForArgs">
+                    <type>ID3D11Buffer*</type>
+                </param>
+                <param name="AlignedByteOffsetForArgs">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Buffer*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">40</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pBufferForArgs">pBufferForArgs</param>, <param name="AlignedByteOffsetForArgs">AlignedByteOffsetForArgs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Dispatch" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ThreadGroupCountX">
+                    <type>uint</type>
+                </param>
+                <param name="ThreadGroupCountY">
+                    <type>uint</type>
+                </param>
+                <param name="ThreadGroupCountZ">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">41</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ThreadGroupCountX">ThreadGroupCountX</param>, <param name="ThreadGroupCountY">ThreadGroupCountY</param>, <param name="ThreadGroupCountZ">ThreadGroupCountZ</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DispatchIndirect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBufferForArgs">
+                    <type>ID3D11Buffer*</type>
+                </param>
+                <param name="AlignedByteOffsetForArgs">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Buffer*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">42</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pBufferForArgs">pBufferForArgs</param>, <param name="AlignedByteOffsetForArgs">AlignedByteOffsetForArgs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSSetState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pRasterizerState">
+                    <type>ID3D11RasterizerState*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11RasterizerState*, void&gt;)(lpVtbl[<vtbl explicit="False">43</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pRasterizerState">pRasterizerState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSSetViewports" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumViewports">
+                    <type>uint</type>
+                </param>
+                <param name="pViewports">
+                    <type>D3D11_VIEWPORT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, D3D11_VIEWPORT*, void&gt;)(lpVtbl[<vtbl explicit="False">44</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="NumViewports">NumViewports</param>, <param name="pViewports">pViewports</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSSetScissorRects" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumRects">
+                    <type>uint</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">45</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="NumRects">NumRects</param>, <param name="pRects">pRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopySubresourceRegion" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="DstX">
+                    <type>uint</type>
+                </param>
+                <param name="DstY">
+                    <type>uint</type>
+                </param>
+                <param name="DstZ">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="SrcSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcBox">
+                    <type>D3D11_BOX*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, D3D11_BOX*, void&gt;)(lpVtbl[<vtbl explicit="False">46</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="DstX">DstX</param>, <param name="DstY">DstY</param>, <param name="DstZ">DstZ</param>, <param name="pSrcResource">pSrcResource</param>, <param name="SrcSubresource">SrcSubresource</param>, <param name="pSrcBox">pSrcBox</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyResource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, ID3D11Resource*, void&gt;)(lpVtbl[<vtbl explicit="False">47</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="pSrcResource">pSrcResource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdateSubresource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pDstBox">
+                    <type>D3D11_BOX*</type>
+                </param>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcRowPitch">
+                    <type>uint</type>
+                </param>
+                <param name="SrcDepthPitch">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, uint, D3D11_BOX*, void*, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">48</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="pDstBox">pDstBox</param>, <param name="pSrcData">pSrcData</param>, <param name="SrcRowPitch">SrcRowPitch</param>, <param name="SrcDepthPitch">SrcDepthPitch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyStructureCount" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstBuffer">
+                    <type>ID3D11Buffer*</type>
+                </param>
+                <param name="DstAlignedByteOffset">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcView">
+                    <type>ID3D11UnorderedAccessView*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Buffer*, uint, ID3D11UnorderedAccessView*, void&gt;)(lpVtbl[<vtbl explicit="False">49</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDstBuffer">pDstBuffer</param>, <param name="DstAlignedByteOffset">DstAlignedByteOffset</param>, <param name="pSrcView">pSrcView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearRenderTargetView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pRenderTargetView">
+                    <type>ID3D11RenderTargetView*</type>
+                </param>
+                <param name="ColorRGBA">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11RenderTargetView*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">50</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pRenderTargetView">pRenderTargetView</param>, <param name="ColorRGBA">ColorRGBA</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearUnorderedAccessViewUint" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pUnorderedAccessView">
+                    <type>ID3D11UnorderedAccessView*</type>
+                </param>
+                <param name="Values">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11UnorderedAccessView*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">51</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pUnorderedAccessView">pUnorderedAccessView</param>, <param name="Values">Values</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearUnorderedAccessViewFloat" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pUnorderedAccessView">
+                    <type>ID3D11UnorderedAccessView*</type>
+                </param>
+                <param name="Values">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11UnorderedAccessView*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">52</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pUnorderedAccessView">pUnorderedAccessView</param>, <param name="Values">Values</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearDepthStencilView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDepthStencilView">
+                    <type>ID3D11DepthStencilView*</type>
+                </param>
+                <param name="ClearFlags">
+                    <type>uint</type>
+                </param>
+                <param name="Depth">
+                    <type>float</type>
+                </param>
+                <param name="Stencil">
+                    <type>byte</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11DepthStencilView*, uint, float, byte, void&gt;)(lpVtbl[<vtbl explicit="False">53</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDepthStencilView">pDepthStencilView</param>, <param name="ClearFlags">ClearFlags</param>, <param name="Depth">Depth</param>, <param name="Stencil">Stencil</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GenerateMips" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pShaderResourceView">
+                    <type>ID3D11ShaderResourceView*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11ShaderResourceView*, void&gt;)(lpVtbl[<vtbl explicit="False">54</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pShaderResourceView">pShaderResourceView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetResourceMinLOD" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="MinLOD">
+                    <type>float</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, float, void&gt;)(lpVtbl[<vtbl explicit="False">55</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="MinLOD">MinLOD</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetResourceMinLOD" access="public" unsafe="true">
+                <type native="FLOAT">float</type>
+                <param name="pResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, float&gt;)(lpVtbl[<vtbl explicit="False">56</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResolveSubresource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="SrcSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="Format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, uint, ID3D11Resource*, uint, DXGI_FORMAT, void&gt;)(lpVtbl[<vtbl explicit="False">57</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="pSrcResource">pSrcResource</param>, <param name="SrcSubresource">SrcSubresource</param>, <param name="Format">Format</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ExecuteCommandList" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pCommandList">
+                    <type>ID3D11CommandList*</type>
+                </param>
+                <param name="RestoreContextState">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11CommandList*, int, void&gt;)(lpVtbl[<vtbl explicit="False">58</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pCommandList">pCommandList</param>, <param name="RestoreContextState">RestoreContextState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSSetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">59</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSSetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pHullShader">
+                    <type>ID3D11HullShader*</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="NumClassInstances">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11HullShader*, ID3D11ClassInstance**, uint, void&gt;)(lpVtbl[<vtbl explicit="False">60</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pHullShader">pHullShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="NumClassInstances">NumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSSetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">61</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSSetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">62</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSSetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">63</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSSetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDomainShader">
+                    <type>ID3D11DomainShader*</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="NumClassInstances">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11DomainShader*, ID3D11ClassInstance**, uint, void&gt;)(lpVtbl[<vtbl explicit="False">64</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDomainShader">pDomainShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="NumClassInstances">NumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSSetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">65</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSSetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">66</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSSetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">67</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSSetUnorderedAccessViews" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumUAVs">
+                    <type>uint</type>
+                </param>
+                <param name="ppUnorderedAccessViews">
+                    <type>ID3D11UnorderedAccessView**</type>
+                </param>
+                <param name="pUAVInitialCounts">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11UnorderedAccessView**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">68</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumUAVs">NumUAVs</param>, <param name="ppUnorderedAccessViews">ppUnorderedAccessViews</param>, <param name="pUAVInitialCounts">pUAVInitialCounts</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSSetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pComputeShader">
+                    <type>ID3D11ComputeShader*</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="NumClassInstances">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11ComputeShader*, ID3D11ClassInstance**, uint, void&gt;)(lpVtbl[<vtbl explicit="False">69</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pComputeShader">pComputeShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="NumClassInstances">NumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSSetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">70</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSSetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">71</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSGetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">72</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSGetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">73</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSGetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppPixelShader">
+                    <type>ID3D11PixelShader**</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="pNumClassInstances">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11PixelShader**, ID3D11ClassInstance**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">74</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppPixelShader">ppPixelShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="pNumClassInstances">pNumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSGetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">75</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSGetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppVertexShader">
+                    <type>ID3D11VertexShader**</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="pNumClassInstances">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11VertexShader**, ID3D11ClassInstance**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">76</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppVertexShader">ppVertexShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="pNumClassInstances">pNumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSGetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">77</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IAGetInputLayout" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppInputLayout">
+                    <type>ID3D11InputLayout**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11InputLayout**, void&gt;)(lpVtbl[<vtbl explicit="False">78</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppInputLayout">ppInputLayout</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IAGetVertexBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppVertexBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pStrides">
+                    <type>uint*</type>
+                </param>
+                <param name="pOffsets">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">79</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppVertexBuffers">ppVertexBuffers</param>, <param name="pStrides">pStrides</param>, <param name="pOffsets">pOffsets</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IAGetIndexBuffer" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pIndexBuffer">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="Format">
+                    <type>DXGI_FORMAT*</type>
+                </param>
+                <param name="Offset">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Buffer**, DXGI_FORMAT*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">80</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pIndexBuffer">pIndexBuffer</param>, <param name="Format">Format</param>, <param name="Offset">Offset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSGetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">81</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSGetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppGeometryShader">
+                    <type>ID3D11GeometryShader**</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="pNumClassInstances">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11GeometryShader**, ID3D11ClassInstance**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">82</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppGeometryShader">ppGeometryShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="pNumClassInstances">pNumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IAGetPrimitiveTopology" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pTopology">
+                    <type>D3D_PRIMITIVE_TOPOLOGY*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, D3D_PRIMITIVE_TOPOLOGY*, void&gt;)(lpVtbl[<vtbl explicit="False">83</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pTopology">pTopology</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSGetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">84</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSGetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">85</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPredication" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppPredicate">
+                    <type>ID3D11Predicate**</type>
+                </param>
+                <param name="pPredicateValue">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Predicate**, int*, void&gt;)(lpVtbl[<vtbl explicit="False">86</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppPredicate">ppPredicate</param>, <param name="pPredicateValue">pPredicateValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSGetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">87</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSGetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">88</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMGetRenderTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppRenderTargetViews">
+                    <type>ID3D11RenderTargetView**</type>
+                </param>
+                <param name="ppDepthStencilView">
+                    <type>ID3D11DepthStencilView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, void&gt;)(lpVtbl[<vtbl explicit="False">89</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="NumViews">NumViews</param>, <param name="ppRenderTargetViews">ppRenderTargetViews</param>, <param name="ppDepthStencilView">ppDepthStencilView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMGetRenderTargetsAndUnorderedAccessViews" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumRTVs">
+                    <type>uint</type>
+                </param>
+                <param name="ppRenderTargetViews">
+                    <type>ID3D11RenderTargetView**</type>
+                </param>
+                <param name="ppDepthStencilView">
+                    <type>ID3D11DepthStencilView**</type>
+                </param>
+                <param name="UAVStartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumUAVs">
+                    <type>uint</type>
+                </param>
+                <param name="ppUnorderedAccessViews">
+                    <type>ID3D11UnorderedAccessView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, uint, uint, ID3D11UnorderedAccessView**, void&gt;)(lpVtbl[<vtbl explicit="False">90</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="NumRTVs">NumRTVs</param>, <param name="ppRenderTargetViews">ppRenderTargetViews</param>, <param name="ppDepthStencilView">ppDepthStencilView</param>, <param name="UAVStartSlot">UAVStartSlot</param>, <param name="NumUAVs">NumUAVs</param>, <param name="ppUnorderedAccessViews">ppUnorderedAccessViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMGetBlendState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppBlendState">
+                    <type>ID3D11BlendState**</type>
+                </param>
+                <param name="BlendFactor">
+                    <type>float*</type>
+                </param>
+                <param name="pSampleMask">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11BlendState**, float*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">91</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppBlendState">ppBlendState</param>, <param name="BlendFactor">BlendFactor</param>, <param name="pSampleMask">pSampleMask</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMGetDepthStencilState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppDepthStencilState">
+                    <type>ID3D11DepthStencilState**</type>
+                </param>
+                <param name="pStencilRef">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11DepthStencilState**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">92</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppDepthStencilState">ppDepthStencilState</param>, <param name="pStencilRef">pStencilRef</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SOGetTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSOTargets">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">93</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppSOTargets">ppSOTargets</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSGetState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppRasterizerState">
+                    <type>ID3D11RasterizerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11RasterizerState**, void&gt;)(lpVtbl[<vtbl explicit="False">94</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppRasterizerState">ppRasterizerState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSGetViewports" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pNumViewports">
+                    <type>uint*</type>
+                </param>
+                <param name="pViewports">
+                    <type>D3D11_VIEWPORT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint*, D3D11_VIEWPORT*, void&gt;)(lpVtbl[<vtbl explicit="False">95</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pNumViewports">pNumViewports</param>, <param name="pViewports">pViewports</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSGetScissorRects" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pNumRects">
+                    <type>uint*</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint*, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">96</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pNumRects">pNumRects</param>, <param name="pRects">pRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSGetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">97</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSGetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppHullShader">
+                    <type>ID3D11HullShader**</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="pNumClassInstances">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11HullShader**, ID3D11ClassInstance**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">98</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppHullShader">ppHullShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="pNumClassInstances">pNumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSGetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">99</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSGetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">100</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSGetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">101</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSGetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppDomainShader">
+                    <type>ID3D11DomainShader**</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="pNumClassInstances">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11DomainShader**, ID3D11ClassInstance**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">102</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppDomainShader">ppDomainShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="pNumClassInstances">pNumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSGetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">103</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSGetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">104</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSGetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D11ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">105</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSGetUnorderedAccessViews" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumUAVs">
+                    <type>uint</type>
+                </param>
+                <param name="ppUnorderedAccessViews">
+                    <type>ID3D11UnorderedAccessView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11UnorderedAccessView**, void&gt;)(lpVtbl[<vtbl explicit="False">106</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumUAVs">NumUAVs</param>, <param name="ppUnorderedAccessViews">ppUnorderedAccessViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSGetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppComputeShader">
+                    <type>ID3D11ComputeShader**</type>
+                </param>
+                <param name="ppClassInstances">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <param name="pNumClassInstances">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11ComputeShader**, ID3D11ClassInstance**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">107</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ppComputeShader">ppComputeShader</param>, <param name="ppClassInstances">ppClassInstances</param>, <param name="pNumClassInstances">pNumClassInstances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSGetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D11SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">108</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSGetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">109</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearState" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, void&gt;)(lpVtbl[<vtbl explicit="False">110</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Flush" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, void&gt;)(lpVtbl[<vtbl explicit="False">111</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetType" access="public" unsafe="true">
+                <type>D3D11_DEVICE_CONTEXT_TYPE</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, D3D11_DEVICE_CONTEXT_TYPE&gt;)(lpVtbl[<vtbl explicit="False">112</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetContextFlags" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint&gt;)(lpVtbl[<vtbl explicit="False">113</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FinishCommandList" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="RestoreDeferredContextState">
+                    <type>int</type>
+                </param>
+                <param name="ppCommandList">
+                    <type>ID3D11CommandList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, int, ID3D11CommandList**, int&gt;)(lpVtbl[<vtbl explicit="False">114</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="RestoreDeferredContextState">RestoreDeferredContextState</param>, <param name="ppCommandList">ppCommandList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopySubresourceRegion1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="DstX">
+                    <type>uint</type>
+                </param>
+                <param name="DstY">
+                    <type>uint</type>
+                </param>
+                <param name="DstZ">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="SrcSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcBox">
+                    <type>D3D11_BOX*</type>
+                </param>
+                <param name="CopyFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, D3D11_BOX*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">115</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="DstX">DstX</param>, <param name="DstY">DstY</param>, <param name="DstZ">DstZ</param>, <param name="pSrcResource">pSrcResource</param>, <param name="SrcSubresource">SrcSubresource</param>, <param name="pSrcBox">pSrcBox</param>, <param name="CopyFlags">CopyFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdateSubresource1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pDstBox">
+                    <type>D3D11_BOX*</type>
+                </param>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcRowPitch">
+                    <type>uint</type>
+                </param>
+                <param name="SrcDepthPitch">
+                    <type>uint</type>
+                </param>
+                <param name="CopyFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, uint, D3D11_BOX*, void*, uint, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">116</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="pDstBox">pDstBox</param>, <param name="pSrcData">pSrcData</param>, <param name="SrcRowPitch">SrcRowPitch</param>, <param name="SrcDepthPitch">SrcDepthPitch</param>, <param name="CopyFlags">CopyFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DiscardResource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, void&gt;)(lpVtbl[<vtbl explicit="False">117</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DiscardView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pResourceView">
+                    <type>ID3D11View*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11View*, void&gt;)(lpVtbl[<vtbl explicit="False">118</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pResourceView">pResourceView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSSetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">119</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSSetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">120</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSSetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">121</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSSetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">122</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">123</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSSetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">124</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSGetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">125</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HSGetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">126</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DSGetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">127</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSGetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">128</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSGetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">129</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CSGetConstantBuffers1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D11Buffer**</type>
+                </param>
+                <param name="pFirstConstant">
+                    <type>uint*</type>
+                </param>
+                <param name="pNumConstants">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, uint, uint, ID3D11Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">130</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>, <param name="pFirstConstant">pFirstConstant</param>, <param name="pNumConstants">pNumConstants</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SwapDeviceContextState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pState">
+                    <type>ID3DDeviceContextState*</type>
+                </param>
+                <param name="ppPreviousState">
+                    <type>ID3DDeviceContextState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3DDeviceContextState*, ID3DDeviceContextState**, void&gt;)(lpVtbl[<vtbl explicit="False">131</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pState">pState</param>, <param name="ppPreviousState">ppPreviousState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pView">
+                    <type>ID3D11View*</type>
+                </param>
+                <param name="Color">
+                    <type>float*</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="NumRects">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11View*, float*, RECT*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">132</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pView">pView</param>, <param name="Color">Color</param>, <param name="pRect">pRect</param>, <param name="NumRects">NumRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DiscardView1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pResourceView">
+                    <type>ID3D11View*</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <param name="NumRects">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11View*, RECT*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">133</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pResourceView">pResourceView</param>, <param name="pRects">pRects</param>, <param name="NumRects">NumRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdateTileMappings" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTiledResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="NumTiledResourceRegions">
+                    <type>uint</type>
+                </param>
+                <param name="pTiledResourceRegionStartCoordinates">
+                    <type>D3D11_TILED_RESOURCE_COORDINATE*</type>
+                </param>
+                <param name="pTiledResourceRegionSizes">
+                    <type>D3D11_TILE_REGION_SIZE*</type>
+                </param>
+                <param name="pTilePool">
+                    <type>ID3D11Buffer*</type>
+                </param>
+                <param name="NumRanges">
+                    <type>uint</type>
+                </param>
+                <param name="pRangeFlags">
+                    <type>uint*</type>
+                </param>
+                <param name="pTilePoolStartOffsets">
+                    <type>uint*</type>
+                </param>
+                <param name="pRangeTileCounts">
+                    <type>uint*</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, uint, D3D11_TILED_RESOURCE_COORDINATE*, D3D11_TILE_REGION_SIZE*, ID3D11Buffer*, uint, uint*, uint*, uint*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">134</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pTiledResource">pTiledResource</param>, <param name="NumTiledResourceRegions">NumTiledResourceRegions</param>, <param name="pTiledResourceRegionStartCoordinates">pTiledResourceRegionStartCoordinates</param>, <param name="pTiledResourceRegionSizes">pTiledResourceRegionSizes</param>, <param name="pTilePool">pTilePool</param>, <param name="NumRanges">NumRanges</param>, <param name="pRangeFlags">pRangeFlags</param>, <param name="pTilePoolStartOffsets">pTilePoolStartOffsets</param>, <param name="pRangeTileCounts">pRangeTileCounts</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyTileMappings" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDestTiledResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="pDestRegionStartCoordinate">
+                    <type>D3D11_TILED_RESOURCE_COORDINATE*</type>
+                </param>
+                <param name="pSourceTiledResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="pSourceRegionStartCoordinate">
+                    <type>D3D11_TILED_RESOURCE_COORDINATE*</type>
+                </param>
+                <param name="pTileRegionSize">
+                    <type>D3D11_TILE_REGION_SIZE*</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, D3D11_TILED_RESOURCE_COORDINATE*, ID3D11Resource*, D3D11_TILED_RESOURCE_COORDINATE*, D3D11_TILE_REGION_SIZE*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">135</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDestTiledResource">pDestTiledResource</param>, <param name="pDestRegionStartCoordinate">pDestRegionStartCoordinate</param>, <param name="pSourceTiledResource">pSourceTiledResource</param>, <param name="pSourceRegionStartCoordinate">pSourceRegionStartCoordinate</param>, <param name="pTileRegionSize">pTileRegionSize</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyTiles" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pTiledResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="pTileRegionStartCoordinate">
+                    <type>D3D11_TILED_RESOURCE_COORDINATE*</type>
+                </param>
+                <param name="pTileRegionSize">
+                    <type>D3D11_TILE_REGION_SIZE*</type>
+                </param>
+                <param name="pBuffer">
+                    <type>ID3D11Buffer*</type>
+                </param>
+                <param name="BufferStartOffsetInBytes">
+                    <type>ulong</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, D3D11_TILED_RESOURCE_COORDINATE*, D3D11_TILE_REGION_SIZE*, ID3D11Buffer*, ulong, uint, void&gt;)(lpVtbl[<vtbl explicit="False">136</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pTiledResource">pTiledResource</param>, <param name="pTileRegionStartCoordinate">pTileRegionStartCoordinate</param>, <param name="pTileRegionSize">pTileRegionSize</param>, <param name="pBuffer">pBuffer</param>, <param name="BufferStartOffsetInBytes">BufferStartOffsetInBytes</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdateTiles" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDestTiledResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="pDestTileRegionStartCoordinate">
+                    <type>D3D11_TILED_RESOURCE_COORDINATE*</type>
+                </param>
+                <param name="pDestTileRegionSize">
+                    <type>D3D11_TILE_REGION_SIZE*</type>
+                </param>
+                <param name="pSourceTileData">
+                    <type>void*</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Resource*, D3D11_TILED_RESOURCE_COORDINATE*, D3D11_TILE_REGION_SIZE*, void*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">137</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pDestTiledResource">pDestTiledResource</param>, <param name="pDestTileRegionStartCoordinate">pDestTileRegionStartCoordinate</param>, <param name="pDestTileRegionSize">pDestTileRegionSize</param>, <param name="pSourceTileData">pSourceTileData</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResizeTilePool" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTilePool">
+                    <type>ID3D11Buffer*</type>
+                </param>
+                <param name="NewSizeInBytes">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Buffer*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">138</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pTilePool">pTilePool</param>, <param name="NewSizeInBytes">NewSizeInBytes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TiledResourceBarrier" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pTiledResourceOrViewAccessBeforeBarrier">
+                    <type>ID3D11DeviceChild*</type>
+                </param>
+                <param name="pTiledResourceOrViewAccessAfterBarrier">
+                    <type>ID3D11DeviceChild*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11DeviceChild*, ID3D11DeviceChild*, void&gt;)(lpVtbl[<vtbl explicit="False">139</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pTiledResourceOrViewAccessBeforeBarrier">pTiledResourceOrViewAccessBeforeBarrier</param>, <param name="pTiledResourceOrViewAccessAfterBarrier">pTiledResourceOrViewAccessAfterBarrier</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsAnnotationEnabled" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, int&gt;)(lpVtbl[<vtbl explicit="False">140</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMarkerInt" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pLabel">
+                    <type>ushort*</type>
+                </param>
+                <param name="Data">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ushort*, int, void&gt;)(lpVtbl[<vtbl explicit="False">141</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pLabel">pLabel</param>, <param name="Data">Data</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginEventInt" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pLabel">
+                    <type>ushort*</type>
+                </param>
+                <param name="Data">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, ushort*, int, void&gt;)(lpVtbl[<vtbl explicit="False">142</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pLabel">pLabel</param>, <param name="Data">Data</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndEvent" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, void&gt;)(lpVtbl[<vtbl explicit="False">143</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Flush1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ContextType">
+                    <type>D3D11_CONTEXT_TYPE</type>
+                </param>
+                <param name="hEvent">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, D3D11_CONTEXT_TYPE, IntPtr, void&gt;)(lpVtbl[<vtbl explicit="False">144</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="ContextType">ContextType</param>, <param name="hEvent">hEvent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetHardwareProtectionState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="HwProtectionEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, int, void&gt;)(lpVtbl[<vtbl explicit="False">145</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="HwProtectionEnable">HwProtectionEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetHardwareProtectionState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pHwProtectionEnable">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11DeviceContext4*, int*, void&gt;)(lpVtbl[<vtbl explicit="False">146</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pHwProtectionEnable">pHwProtectionEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Signal" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFence">
+                    <type>ID3D11Fence*</type>
+                </param>
+                <param name="Value">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Fence*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">147</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pFence">pFence</param>, <param name="Value">Value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Wait" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFence">
+                    <type>ID3D11Fence*</type>
+                </param>
+                <param name="Value">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11DeviceContext4*, ID3D11Fence*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">148</vtbl>]))(<param special="thisPtr">(ID3D11DeviceContext4*)Unsafe.AsPointer(ref this)</param>, <param name="pFence">pFence</param>, <param name="Value">Value</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

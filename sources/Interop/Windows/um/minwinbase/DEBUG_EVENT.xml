@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/minwinbase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DEBUG_EVENT" access="public">
+            <field name="dwDebugEventCode" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwProcessId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwThreadId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="u" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/minwinbase.h:365:5)">_u_e__Union</type>
+            </field>
+            <struct name="_u_e__Union" access="public" layout="Explicit">
+                <field name="Exception" access="public" offset="0">
+                    <type native="">EXCEPTION_DEBUG_INFO</type>
+                </field>
+                <field name="CreateThread" access="public" offset="0">
+                    <type native="">CREATE_THREAD_DEBUG_INFO</type>
+                </field>
+                <field name="CreateProcessInfo" access="public" offset="0">
+                    <type native="">CREATE_PROCESS_DEBUG_INFO</type>
+                </field>
+                <field name="ExitThread" access="public" offset="0">
+                    <type native="">EXIT_THREAD_DEBUG_INFO</type>
+                </field>
+                <field name="ExitProcess" access="public" offset="0">
+                    <type native="">EXIT_PROCESS_DEBUG_INFO</type>
+                </field>
+                <field name="LoadDll" access="public" offset="0">
+                    <type native="">LOAD_DLL_DEBUG_INFO</type>
+                </field>
+                <field name="UnloadDll" access="public" offset="0">
+                    <type native="">UNLOAD_DLL_DEBUG_INFO</type>
+                </field>
+                <field name="DebugString" access="public" offset="0">
+                    <type native="">OUTPUT_DEBUG_STRING_INFO</type>
+                </field>
+                <field name="RipInfo" access="public" offset="0">
+                    <type native="">RIP_INFO</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincodec.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IWICPalette" access="public" native="struct IWICPalette : IUnknown" uuid="00000040-a8f2-4877-ba0a-fd2b6645fb94" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InitializePredefined" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ePaletteType">
+                    <type>WICBitmapPaletteType</type>
+                </param>
+                <param name="fAddTransparentColor">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, WICBitmapPaletteType, int, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="ePaletteType">ePaletteType</param>, <param name="fAddTransparentColor">fAddTransparentColor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InitializeCustom" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pColors">
+                    <type>uint*</type>
+                </param>
+                <param name="cCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, uint*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="pColors">pColors</param>, <param name="cCount">cCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InitializeFromBitmap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pISurface">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="cCount">
+                    <type>uint</type>
+                </param>
+                <param name="fAddTransparentColor">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, IWICBitmapSource*, uint, int, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="pISurface">pISurface</param>, <param name="cCount">cCount</param>, <param name="fAddTransparentColor">fAddTransparentColor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InitializeFromPalette" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIPalette">
+                    <type>IWICPalette*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, IWICPalette*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="pIPalette">pIPalette</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pePaletteType">
+                    <type>WICBitmapPaletteType*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, WICBitmapPaletteType*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="pePaletteType">pePaletteType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetColorCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="pcCount">pcCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetColors" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cCount">
+                    <type>uint</type>
+                </param>
+                <param name="pColors">
+                    <type>uint*</type>
+                </param>
+                <param name="pcActualColors">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, uint, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="cCount">cCount</param>, <param name="pColors">pColors</param>, <param name="pcActualColors">pcActualColors</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsBlackWhite" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfIsBlackWhite">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="pfIsBlackWhite">pfIsBlackWhite</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsGrayscale" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfIsGrayscale">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="pfIsGrayscale">pfIsGrayscale</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HasAlpha" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfHasAlpha">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPalette*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IWICPalette*)Unsafe.AsPointer(ref this)</param>, <param name="pfHasAlpha">pfHasAlpha</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

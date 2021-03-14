@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="CIP_STATUS" access="public">
+            <type>int</type>
+            <enumerator name="CIP_DISK_FULL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CIP_ACCESS_DENIED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CIP_DISK_FULL + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CIP_NEWER_VERSION_EXISTS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CIP_ACCESS_DENIED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CIP_OLDER_VERSION_EXISTS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CIP_NEWER_VERSION_EXISTS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CIP_NAME_CONFLICT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CIP_OLDER_VERSION_EXISTS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CIP_TRUST_VERIFICATION_COMPONENT_MISSING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CIP_NAME_CONFLICT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CIP_EXE_SELF_REGISTERATION_TIMEOUT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CIP_TRUST_VERIFICATION_COMPONENT_MISSING + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CIP_UNSAFE_TO_ABORT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CIP_EXE_SELF_REGISTERATION_TIMEOUT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CIP_NEED_REBOOT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CIP_UNSAFE_TO_ABORT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="CIP_NEED_REBOOT_UI_PERMISSION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(CIP_NEED_REBOOT + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

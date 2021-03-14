@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IBaseFilter" access="public" native="struct IBaseFilter : IMediaFilter" uuid="56a86895-0ad4-11ce-b03a-0020af0ba770" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetClassID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClassID">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="pClassID">pClassID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Stop" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Pause" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Run" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tStart">
+                    <type>long</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, long, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="tStart">tStart</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwMilliSecsTimeout">
+                    <type>uint</type>
+                </param>
+                <param name="State">
+                    <type>FILTER_STATE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, uint, FILTER_STATE*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="dwMilliSecsTimeout">dwMilliSecsTimeout</param>, <param name="State">State</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSyncSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClock">
+                    <type>IReferenceClock*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, IReferenceClock*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="pClock">pClock</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSyncSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClock">
+                    <type>IReferenceClock**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, IReferenceClock**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="pClock">pClock</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumPins" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumPins**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, IEnumPins**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindPin" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Id">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppPin">
+                    <type>IPin**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, ushort*, IPin**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="Id">Id</param>, <param name="ppPin">ppPin</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryFilterInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pInfo">
+                    <type>FILTER_INFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, FILTER_INFO*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="pInfo">pInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="JoinFilterGraph" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pGraph">
+                    <type>IFilterGraph*</type>
+                </param>
+                <param name="pName">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, IFilterGraph*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="pGraph">pGraph</param>, <param name="pName">pName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryVendorInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pVendorInfo">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBaseFilter*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IBaseFilter*)Unsafe.AsPointer(ref this)</param>, <param name="pVendorInfo">pVendorInfo</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

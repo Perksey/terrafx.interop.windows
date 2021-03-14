@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinTrust.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_PROVIDER_SGNR" access="public" unsafe="true">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="sftVerifyAsOf" access="public">
+                <type native="">FILETIME</type>
+            </field>
+            <field name="csCertChain" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pasCertChain" access="public">
+                <type native="struct _CRYPT_PROVIDER_CERT *">CRYPT_PROVIDER_CERT*</type>
+            </field>
+            <field name="dwSignerType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="psSigner" access="public">
+                <type native="CMSG_SIGNER_INFO *">CMSG_SIGNER_INFO*</type>
+            </field>
+            <field name="dwError" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="csCounterSigners" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pasCounterSigners" access="public">
+                <type native="struct _CRYPT_PROVIDER_SGNR *">CRYPT_PROVIDER_SGNR*</type>
+            </field>
+            <field name="pChainContext" access="public">
+                <type native="PCCERT_CHAIN_CONTEXT">CERT_CHAIN_CONTEXT*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

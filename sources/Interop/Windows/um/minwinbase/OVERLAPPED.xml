@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/minwinbase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="OVERLAPPED" access="public" unsafe="true">
+            <field name="Internal" access="public">
+                <type native="ULONG_PTR">nuint</type>
+            </field>
+            <field name="InternalHigh" access="public">
+                <type native="ULONG_PTR">nuint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_OVERLAPPED::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/minwinbase.h:55:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Offset" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.Offset, 1));
+        </code>
+                </get>
+            </field>
+            <field name="OffsetHigh" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.OffsetHigh, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Pointer" access="public">
+                <type native="">ref void*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;Pointer;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="hEvent" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="_OVERLAPPED::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/minwinbase.h:56:9)">_Anonymous_e__Struct</type>
+                </field>
+                <field name="Pointer" access="public" offset="0">
+                    <type native="PVOID">void*</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="Offset" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="OffsetHigh" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

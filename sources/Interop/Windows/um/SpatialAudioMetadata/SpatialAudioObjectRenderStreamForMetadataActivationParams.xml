@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/SpatialAudioMetadata.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SpatialAudioObjectRenderStreamForMetadataActivationParams" access="public" unsafe="true" layout="Sequential" pack="1">
+            <field name="ObjectFormat" access="public">
+                <type native="const WAVEFORMATEX *">WAVEFORMATEX*</type>
+            </field>
+            <field name="StaticObjectTypeMask" access="public">
+                <type native="">AudioObjectType</type>
+            </field>
+            <field name="MinDynamicObjectCount" access="public">
+                <type native="UINT32">uint</type>
+            </field>
+            <field name="MaxDynamicObjectCount" access="public">
+                <type native="UINT32">uint</type>
+            </field>
+            <field name="Category" access="public">
+                <type native="">AUDIO_STREAM_CATEGORY</type>
+            </field>
+            <field name="EventHandle" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <field name="MetadataFormatId" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="MaxMetadataItemCount" access="public">
+                <type native="UINT16">ushort</type>
+            </field>
+            <field name="MetadataActivationParams" access="public">
+                <type native="const PROPVARIANT *">PROPVARIANT*</type>
+            </field>
+            <field name="NotifyObject" access="public">
+                <type native="ISpatialAudioObjectRenderStreamNotify *">ISpatialAudioObjectRenderStreamNotify*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/MLOperatorAuthor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMLOperatorKernelContext" access="public" native="struct IMLOperatorKernelContext : IUnknown" uuid="82536a28-f022-4769-9d3f-8b278f84c0c3" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorKernelContext*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMLOperatorKernelContext*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorKernelContext*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMLOperatorKernelContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorKernelContext*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMLOperatorKernelContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputTensor" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputIndex">
+                    <type>uint</type>
+                </param>
+                <param name="tensor">
+                    <type>IMLOperatorTensor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorKernelContext*, uint, IMLOperatorTensor**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMLOperatorKernelContext*)Unsafe.AsPointer(ref this)</param>, <param name="inputIndex">inputIndex</param>, <param name="tensor">tensor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputTensor" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="outputIndex">
+                    <type>uint</type>
+                </param>
+                <param name="tensor">
+                    <type>IMLOperatorTensor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorKernelContext*, uint, IMLOperatorTensor**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMLOperatorKernelContext*)Unsafe.AsPointer(ref this)</param>, <param name="outputIndex">outputIndex</param>, <param name="tensor">tensor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputTensor" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="outputIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dimensionCount">
+                    <type>uint</type>
+                </param>
+                <param name="dimensionSizes">
+                    <type>uint*</type>
+                </param>
+                <param name="tensor">
+                    <type>IMLOperatorTensor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorKernelContext*, uint, uint, uint*, IMLOperatorTensor**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMLOperatorKernelContext*)Unsafe.AsPointer(ref this)</param>, <param name="outputIndex">outputIndex</param>, <param name="dimensionCount">dimensionCount</param>, <param name="dimensionSizes">dimensionSizes</param>, <param name="tensor">tensor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AllocateTemporaryData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="size">
+                    <type>nuint</type>
+                </param>
+                <param name="data">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorKernelContext*, nuint, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMLOperatorKernelContext*)Unsafe.AsPointer(ref this)</param>, <param name="size">size</param>, <param name="data">data</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetExecutionInterface" access="public" unsafe="true">
+                <type>void</type>
+                <param name="executionObject">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IMLOperatorKernelContext*, IUnknown**, void&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMLOperatorKernelContext*)Unsafe.AsPointer(ref this)</param>, <param name="executionObject">executionObject</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

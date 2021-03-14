@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_RETRIEVE_AUX_INFO" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pLastSyncTime" access="public">
+                <type native="FILETIME *">FILETIME*</type>
+            </field>
+            <field name="dwMaxUrlRetrievalByteCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pPreFetchInfo" access="public">
+                <type native="PCRYPTNET_URL_CACHE_PRE_FETCH_INFO">CRYPTNET_URL_CACHE_PRE_FETCH_INFO*</type>
+            </field>
+            <field name="pFlushInfo" access="public">
+                <type native="PCRYPTNET_URL_CACHE_FLUSH_INFO">CRYPTNET_URL_CACHE_FLUSH_INFO*</type>
+            </field>
+            <field name="ppResponseInfo" access="public">
+                <type native="PCRYPTNET_URL_CACHE_RESPONSE_INFO *">CRYPTNET_URL_CACHE_RESPONSE_INFO**</type>
+            </field>
+            <field name="pwszCacheFileNamePrefix" access="public">
+                <type native="LPWSTR">ushort*</type>
+            </field>
+            <field name="pftCacheResync" access="public">
+                <type native="LPFILETIME">FILETIME*</type>
+            </field>
+            <field name="fProxyCacheRetrieval" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="dwHttpStatusCode" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ppwszErrorResponseHeaders" access="public">
+                <type native="LPWSTR *">ushort**</type>
+            </field>
+            <field name="ppErrorContentBlob" access="public">
+                <type native="PCRYPT_DATA_BLOB *">CRYPTOAPI_BLOB**</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFQualityManager" access="public" native="struct IMFQualityManager : IUnknown" uuid="8d009d86-5b9f-4115-b1fc-9f80d52ab8ab" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFQualityManager*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFQualityManager*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFQualityManager*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFQualityManager*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFQualityManager*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFQualityManager*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyTopology" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTopology">
+                    <type>IMFTopology*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFQualityManager*, IMFTopology*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFQualityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pTopology">pTopology</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyPresentationClock" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClock">
+                    <type>IMFPresentationClock*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFQualityManager*, IMFPresentationClock*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFQualityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pClock">pClock</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyProcessInput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNode">
+                    <type>IMFTopologyNode*</type>
+                </param>
+                <param name="lInputIndex">
+                    <type>int</type>
+                </param>
+                <param name="pSample">
+                    <type>IMFSample*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFQualityManager*, IMFTopologyNode*, int, IMFSample*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFQualityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pNode">pNode</param>, <param name="lInputIndex">lInputIndex</param>, <param name="pSample">pSample</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyProcessOutput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNode">
+                    <type>IMFTopologyNode*</type>
+                </param>
+                <param name="lOutputIndex">
+                    <type>int</type>
+                </param>
+                <param name="pSample">
+                    <type>IMFSample*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFQualityManager*, IMFTopologyNode*, int, IMFSample*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFQualityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pNode">pNode</param>, <param name="lOutputIndex">lOutputIndex</param>, <param name="pSample">pSample</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyQualityEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pObject">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pEvent">
+                    <type>IMFMediaEvent*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFQualityManager*, IUnknown*, IMFMediaEvent*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFQualityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pObject">pObject</param>, <param name="pEvent">pEvent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Shutdown" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFQualityManager*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFQualityManager*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

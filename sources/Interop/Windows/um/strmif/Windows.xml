@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="IID_IAMFilterGraphCallback" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x56a868fd, 0x0ad4, 0x11ce, 0xb0, 0xa3, 0x0, 0x20, 0xaf, 0x0b, 0xa7, 0x70)
+            </code>
+                </value>
+            </constant>
+            <constant name="CDEF_CLASS_DEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="CDEF_BYPASS_CLASS_MANAGER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="CDEF_MERIT_ABOVE_DO_NOT_USE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="CDEF_DEVMON_CMGR_DEVICE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="CDEF_DEVMON_DMO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0020
+            </code>
+                </value>
+            </constant>
+            <constant name="CDEF_DEVMON_PNP_DEVICE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0040
+            </code>
+                </value>
+            </constant>
+            <constant name="CDEF_DEVMON_FILTER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0080
+            </code>
+                </value>
+            </constant>
+            <constant name="CDEF_DEVMON_SELECTIVE_MASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00f0
+            </code>
+                </value>
+            </constant>
+            <constant name="CHARS_IN_GUID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>39
+            </code>
+                </value>
+            </constant>
+            <constant name="MAX_PIN_NAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>128
+            </code>
+                </value>
+            </constant>
+            <constant name="MAX_FILTER_NAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>128
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_GBF_PREVFRAMESKIPPED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_GBF_NOTASYNCPOINT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_GBF_NOWAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_GBF_NODDSURFACELOCK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="ADVISE_ALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>
+                        <value></value>
+                        <value></value>(((((int)ADVISE_CLIPPING | (int)ADVISE_PALETTE) | (int)ADVISE_COLORKEY) | (int)ADVISE_POSITION))
+            </code>
+                </value>
+            </constant>
+            <constant name="ADVISE_ALL2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>
+                        <value></value>
+                        <value></value>
+                        <value></value>(((((((int)ADVISE_CLIPPING | (int)ADVISE_PALETTE) | (int)ADVISE_COLORKEY) | (int)ADVISE_POSITION)) | (int)ADVISE_DISPLAY_CHANGE))
+            </code>
+                </value>
+            </constant>
+            <constant name="AMF_AUTOMATICGAIN" access="public">
+                <type primitive="True">double</type>
+                <value>
+                    <code>-1.0
+            </code>
+                </value>
+            </constant>
+            <constant name="AnalogVideo_NTSC_Mask" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000007
+            </code>
+                </value>
+            </constant>
+            <constant name="AnalogVideo_PAL_Mask" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100FF0
+            </code>
+                </value>
+            </constant>
+            <constant name="AnalogVideo_SECAM_Mask" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x000FF000
+            </code>
+                </value>
+            </constant>
+            <constant name="KSPROPERTY_SUPPORT_GET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="KSPROPERTY_SUPPORT_SET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="MPEG2_PROGRAM_STREAM_MAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MPEG2_PROGRAM_ELEMENTARY_STREAM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MPEG2_PROGRAM_DIRECTORY_PES_PACKET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MPEG2_PROGRAM_PACK_HEADER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="MPEG2_PROGRAM_PES_STREAM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="MPEG2_PROGRAM_SYSTEM_HEADER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000005
+            </code>
+                </value>
+            </constant>
+            <constant name="SUBSTREAM_FILTER_VAL_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_GETDECODERCAP_QUERY_VMR_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="VMR_NOTSUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="VMR_SUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_QUERY_DECODER_VMR_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_QUERY_DECODER_DXVA_1_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_QUERY_DECODER_DVD_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_QUERY_DECODER_ATSC_SD_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_QUERY_DECODER_ATSC_HD_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000005
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_GETDECODERCAP_QUERY_VMR9_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000006
+            </code>
+                </value>
+            </constant>
+            <constant name="AM_GETDECODERCAP_QUERY_EVR_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000007
+            </code>
+                </value>
+            </constant>
+            <constant name="DECODER_CAP_NOTSUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DECODER_CAP_SUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="VMRBITMAP_DISABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="VMRBITMAP_HDC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="VMRBITMAP_ENTIREDDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="VMRBITMAP_SRCCOLORKEY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="VMRBITMAP_SRCRECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_TITLE_MENU" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x000
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_STREAM_DATA_CURRENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x800
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_STREAM_DATA_VMGM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x400
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_STREAM_DATA_VTSM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x401
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_DEFAULT_AUDIO_STREAM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0f
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_AUDIO_CAPS_AC3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_AUDIO_CAPS_MPEG2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_AUDIO_CAPS_LPCM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_AUDIO_CAPS_DTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DVD_AUDIO_CAPS_SDDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_ICreateDevEnum" value="0x29840822, 0x5B84, 0x11D0, 0xBD, 0x3B, 0x00, 0xA0, 0xC9, 0x11, 0xCE, 0x86" />
+            <iid name="IID_IPin" value="0x56A86891, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IEnumPins" value="0x56A86892, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IEnumMediaTypes" value="0x89C31040, 0x846B, 0x11CE, 0x97, 0xD3, 0x00, 0xAA, 0x00, 0x55, 0x59, 0x5A" />
+            <iid name="IID_IFilterGraph" value="0x56A8689F, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IEnumFilters" value="0x56A86893, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IMediaFilter" value="0x56A86899, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IBaseFilter" value="0x56A86895, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IReferenceClock" value="0x56A86897, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IReferenceClockTimerControl" value="0xEBEC459C, 0x2ECA, 0x4D42, 0xA8, 0xAF, 0x30, 0xDF, 0x55, 0x76, 0x14, 0xB8" />
+            <iid name="IID_IReferenceClock2" value="0x36B73885, 0xC2C8, 0x11CF, 0x8B, 0x46, 0x00, 0x80, 0x5F, 0x6C, 0xEF, 0x60" />
+            <iid name="IID_IMediaSample" value="0x56A8689A, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IMediaSample2" value="0x36B73884, 0xC2C8, 0x11CF, 0x8B, 0x46, 0x00, 0x80, 0x5F, 0x6C, 0xEF, 0x60" />
+            <iid name="IID_IMediaSample2Config" value="0x68961E68, 0x832B, 0x41EA, 0xBC, 0x91, 0x63, 0x59, 0x3F, 0x3E, 0x70, 0xE3" />
+            <iid name="IID_IMemAllocator" value="0x56A8689C, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IMemAllocatorCallbackTemp" value="0x379A0CF0, 0xC1DE, 0x11D2, 0xAB, 0xF5, 0x00, 0xA0, 0xC9, 0x05, 0xF3, 0x75" />
+            <iid name="IID_IMemAllocatorNotifyCallbackTemp" value="0x92980B30, 0xC1DE, 0x11D2, 0xAB, 0xF5, 0x00, 0xA0, 0xC9, 0x05, 0xF3, 0x75" />
+            <iid name="IID_IMemInputPin" value="0x56A8689D, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IAMovieSetup" value="0xA3D8CEC0, 0x7E5A, 0x11CF, 0xBB, 0xC5, 0x00, 0x80, 0x5F, 0x6C, 0xEF, 0x20" />
+            <iid name="IID_IMediaSeeking" value="0x36B73880, 0xC2C8, 0x11CF, 0x8B, 0x46, 0x00, 0x80, 0x5F, 0x6C, 0xEF, 0x60" />
+            <iid name="IID_ICodecAPI" value="0x901DB4C7, 0x31CE, 0x41A2, 0x85, 0xDC, 0x8F, 0xA0, 0xBF, 0x41, 0xB8, 0xDA" />
+            <iid name="IID_IEnumRegFilters" value="0x56A868A4, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IFilterMapper" value="0x56A868A3, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IFilterMapper2" value="0xB79BB0B0, 0x33C1, 0x11D1, 0xAB, 0xE1, 0x00, 0xA0, 0xC9, 0x05, 0xF3, 0x75" />
+            <iid name="IID_IFilterMapper3" value="0xB79BB0B1, 0x33C1, 0x11D1, 0xAB, 0xE1, 0x00, 0xA0, 0xC9, 0x05, 0xF3, 0x75" />
+            <iid name="IID_IQualityControl" value="0x56A868A5, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IOverlayNotify" value="0x56A868A0, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IOverlayNotify2" value="0x680EFA10, 0xD535, 0x11D1, 0x87, 0xC8, 0x00, 0xA0, 0xC9, 0x22, 0x31, 0x96" />
+            <iid name="IID_IOverlay" value="0x56A868A1, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IMediaEventSink" value="0x56A868A2, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IFileSourceFilter" value="0x56A868A6, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IFileSinkFilter" value="0xA2104830, 0x7C70, 0x11CF, 0x8B, 0xCE, 0x00, 0xAA, 0x00, 0xA3, 0xF1, 0xA6" />
+            <iid name="IID_IFileSinkFilter2" value="0x00855B90, 0xCE1B, 0x11D0, 0xBD, 0x4F, 0x00, 0xA0, 0xC9, 0x11, 0xCE, 0x86" />
+            <iid name="IID_IGraphBuilder" value="0x56A868A9, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_ICaptureGraphBuilder" value="0xBF87B6E0, 0x8C27, 0x11D0, 0xB3, 0xF0, 0x00, 0xAA, 0x00, 0x37, 0x61, 0xC5" />
+            <iid name="IID_IAMCopyCaptureFileProgress" value="0x670D1D20, 0xA068, 0x11D0, 0xB3, 0xF0, 0x00, 0xAA, 0x00, 0x37, 0x61, 0xC5" />
+            <iid name="IID_ICaptureGraphBuilder2" value="0x93E5A4E0, 0x2D50, 0x11D2, 0xAB, 0xFA, 0x00, 0xA0, 0xC9, 0xC6, 0xE3, 0x8D" />
+            <iid name="IID_IFilterGraph2" value="0x36B73882, 0xC2C8, 0x11CF, 0x8B, 0x46, 0x00, 0x80, 0x5F, 0x6C, 0xEF, 0x60" />
+            <iid name="IID_IFilterGraph3" value="0xAAF38154, 0xB80B, 0x422F, 0x91, 0xE6, 0xB6, 0x64, 0x67, 0x50, 0x9A, 0x07" />
+            <iid name="IID_IStreamBuilder" value="0x56A868BF, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IAsyncReader" value="0x56A868AA, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IGraphVersion" value="0x56A868AB, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IResourceConsumer" value="0x56A868AD, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IResourceManager" value="0x56A868AC, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IDistributorNotify" value="0x56A868AF, 0x0AD4, 0x11CE, 0xB0, 0x3A, 0x00, 0x20, 0xAF, 0x0B, 0xA7, 0x70" />
+            <iid name="IID_IAMStreamControl" value="0x36B73881, 0xC2C8, 0x11CF, 0x8B, 0x46, 0x00, 0x80, 0x5F, 0x6C, 0xEF, 0x60" />
+            <iid name="IID_ISeekingPassThru" value="0x36B73883, 0xC2C8, 0x11CF, 0x8B, 0x46, 0x00, 0x80, 0x5F, 0x6C, 0xEF, 0x60" />
+            <iid name="IID_IAMStreamConfig" value="0xC6E13340, 0x30AC, 0x11D0, 0xA1, 0x8C, 0x00, 0xA0, 0xC9, 0x11, 0x89, 0x56" />
+            <iid name="IID_IConfigInterleaving" value="0xBEE3D220, 0x157B, 0x11D0, 0xBD, 0x23, 0x00, 0xA0, 0xC9, 0x11, 0xCE, 0x86" />
+            <iid name="IID_IConfigAviMux" value="0x5ACD6AA0, 0xF482, 0x11CE, 0x8B, 0x67, 0x00, 0xAA, 0x00, 0xA3, 0xF1, 0xA6" />
+            <iid name="IID_IAMVideoCompression" value="0xC6E13343, 0x30AC, 0x11D0, 0xA1, 0x8C, 0x00, 0xA0, 0xC9, 0x11, 0x89, 0x56" />
+            <iid name="IID_IAMVfwCaptureDialogs" value="0xD8D715A0, 0x6E5E, 0x11D0, 0xB3, 0xF0, 0x00, 0xAA, 0x00, 0x37, 0x61, 0xC5" />
+            <iid name="IID_IAMVfwCompressDialogs" value="0xD8D715A3, 0x6E5E, 0x11D0, 0xB3, 0xF0, 0x00, 0xAA, 0x00, 0x37, 0x61, 0xC5" />
+            <iid name="IID_IAMDroppedFrames" value="0xC6E13344, 0x30AC, 0x11D0, 0xA1, 0x8C, 0x00, 0xA0, 0xC9, 0x11, 0x89, 0x56" />
+            <iid name="IID_IAMAudioInputMixer" value="0x54C39221, 0x8380, 0x11D0, 0xB3, 0xF0, 0x00, 0xAA, 0x00, 0x37, 0x61, 0xC5" />
+            <iid name="IID_IAMBufferNegotiation" value="0x56ED71A0, 0xAF5F, 0x11D0, 0xB3, 0xF0, 0x00, 0xAA, 0x00, 0x37, 0x61, 0xC5" />
+            <iid name="IID_IAMAnalogVideoDecoder" value="0xC6E13350, 0x30AC, 0x11D0, 0xA1, 0x8C, 0x00, 0xA0, 0xC9, 0x11, 0x89, 0x56" />
+            <iid name="IID_IAMVideoProcAmp" value="0xC6E13360, 0x30AC, 0x11D0, 0xA1, 0x8C, 0x00, 0xA0, 0xC9, 0x11, 0x89, 0x56" />
+            <iid name="IID_IAMCameraControl" value="0xC6E13370, 0x30AC, 0x11D0, 0xA1, 0x8C, 0x00, 0xA0, 0xC9, 0x11, 0x89, 0x56" />
+            <iid name="IID_IAMVideoControl" value="0x6A2E0670, 0x28E4, 0x11D0, 0xA1, 0x8C, 0x00, 0xA0, 0xC9, 0x11, 0x89, 0x56" />
+            <iid name="IID_IAMCrossbar" value="0xC6E13380, 0x30AC, 0x11D0, 0xA1, 0x8C, 0x00, 0xA0, 0xC9, 0x11, 0x89, 0x56" />
+            <iid name="IID_IAMTuner" value="0x211A8761, 0x03AC, 0x11D1, 0x8D, 0x13, 0x00, 0xAA, 0x00, 0xBD, 0x83, 0x39" />
+            <iid name="IID_IAMTunerNotification" value="0x211A8760, 0x03AC, 0x11D1, 0x8D, 0x13, 0x00, 0xAA, 0x00, 0xBD, 0x83, 0x39" />
+            <iid name="IID_IAMTVTuner" value="0x211A8766, 0x03AC, 0x11D1, 0x8D, 0x13, 0x00, 0xAA, 0x00, 0xBD, 0x83, 0x39" />
+            <iid name="IID_IBPCSatelliteTuner" value="0x211A8765, 0x03AC, 0x11D1, 0x8D, 0x13, 0x00, 0xAA, 0x00, 0xBD, 0x83, 0x39" />
+            <iid name="IID_IAMTVAudio" value="0x83EC1C30, 0x23D1, 0x11D1, 0x99, 0xE6, 0x00, 0xA0, 0xC9, 0x56, 0x02, 0x66" />
+            <iid name="IID_IAMTVAudioNotification" value="0x83EC1C33, 0x23D1, 0x11D1, 0x99, 0xE6, 0x00, 0xA0, 0xC9, 0x56, 0x02, 0x66" />
+            <iid name="IID_IAMAnalogVideoEncoder" value="0xC6E133B0, 0x30AC, 0x11D0, 0xA1, 0x8C, 0x00, 0xA0, 0xC9, 0x11, 0x89, 0x56" />
+            <iid name="IID_IKsPropertySet" value="0x31EFAC30, 0x515C, 0x11D0, 0xA9, 0xAA, 0x00, 0xAA, 0x00, 0x61, 0xBE, 0x93" />
+            <iid name="IID_IMediaPropertyBag" value="0x6025A880, 0xC0D5, 0x11D0, 0xBD, 0x4E, 0x00, 0xA0, 0xC9, 0x11, 0xCE, 0x86" />
+            <iid name="IID_IPersistMediaPropertyBag" value="0x5738E040, 0xB67F, 0x11D0, 0xBD, 0x4D, 0x00, 0xA0, 0xC9, 0x11, 0xCE, 0x86" />
+            <iid name="IID_IAMPhysicalPinInfo" value="0xF938C991, 0x3029, 0x11CF, 0x8C, 0x44, 0x00, 0xAA, 0x00, 0x6B, 0x68, 0x14" />
+            <iid name="IID_IAMExtDevice" value="0xB5730A90, 0x1A2C, 0x11CF, 0x8C, 0x23, 0x00, 0xAA, 0x00, 0x6B, 0x68, 0x14" />
+            <iid name="IID_IAMExtTransport" value="0xA03CD5F0, 0x3045, 0x11CF, 0x8C, 0x44, 0x00, 0xAA, 0x00, 0x6B, 0x68, 0x14" />
+            <iid name="IID_IAMTimecodeReader" value="0x9B496CE1, 0x811B, 0x11CF, 0x8C, 0x77, 0x00, 0xAA, 0x00, 0x6B, 0x68, 0x14" />
+            <iid name="IID_IAMTimecodeGenerator" value="0x9B496CE0, 0x811B, 0x11CF, 0x8C, 0x77, 0x00, 0xAA, 0x00, 0x6B, 0x68, 0x14" />
+            <iid name="IID_IAMTimecodeDisplay" value="0x9B496CE2, 0x811B, 0x11CF, 0x8C, 0x77, 0x00, 0xAA, 0x00, 0x6B, 0x68, 0x14" />
+            <iid name="IID_IAMDevMemoryAllocator" value="0xC6545BF0, 0xE76B, 0x11D0, 0xBD, 0x52, 0x00, 0xA0, 0xC9, 0x11, 0xCE, 0x86" />
+            <iid name="IID_IAMDevMemoryControl" value="0xC6545BF1, 0xE76B, 0x11D0, 0xBD, 0x52, 0x00, 0xA0, 0xC9, 0x11, 0xCE, 0x86" />
+            <iid name="IID_IAMStreamSelect" value="0xC1960960, 0x17F5, 0x11D1, 0xAB, 0xE1, 0x00, 0xA0, 0xC9, 0x05, 0xF3, 0x75" />
+            <iid name="IID_IAMResourceControl" value="0x8389D2D0, 0x77D7, 0x11D1, 0xAB, 0xE6, 0x00, 0xA0, 0xC9, 0x05, 0xF3, 0x75" />
+            <iid name="IID_IAMClockAdjust" value="0x4D5466B0, 0xA49C, 0x11D1, 0xAB, 0xE8, 0x00, 0xA0, 0xC9, 0x05, 0xF3, 0x75" />
+            <iid name="IID_IAMFilterMiscFlags" value="0x2DD74950, 0xA890, 0x11D1, 0xAB, 0xE8, 0x00, 0xA0, 0xC9, 0x05, 0xF3, 0x75" />
+            <iid name="IID_IDrawVideoImage" value="0x48EFB120, 0xAB49, 0x11D2, 0xAE, 0xD2, 0x00, 0xA0, 0xC9, 0x95, 0xE8, 0xD5" />
+            <iid name="IID_IDecimateVideoImage" value="0x2E5EA3E0, 0xE924, 0x11D2, 0xB6, 0xDA, 0x00, 0xA0, 0xC9, 0x95, 0xE8, 0xDF" />
+            <iid name="IID_IAMVideoDecimationProperties" value="0x60D32930, 0x13DA, 0x11D3, 0x9E, 0xC6, 0xC4, 0xFC, 0xAE, 0xF5, 0xC7, 0xBE" />
+            <iid name="IID_IVideoFrameStep" value="0xE46A9787, 0x2B71, 0x444D, 0xA4, 0xB5, 0x1F, 0xAB, 0x7B, 0x70, 0x8D, 0x6A" />
+            <iid name="IID_IAMLatency" value="0x62EA93BA, 0xEC62, 0x11D2, 0xB7, 0x70, 0x00, 0xC0, 0x4F, 0xB6, 0xBD, 0x3D" />
+            <iid name="IID_IAMPushSource" value="0xF185FE76, 0xE64E, 0x11D2, 0xB7, 0x6E, 0x00, 0xC0, 0x4F, 0xB6, 0xBD, 0x3D" />
+            <iid name="IID_IAMDeviceRemoval" value="0xF90A6130, 0xB658, 0x11D2, 0xAE, 0x49, 0x00, 0x00, 0xF8, 0x75, 0x4B, 0x99" />
+            <iid name="IID_IDVEnc" value="0xD18E17A0, 0xAACB, 0x11D0, 0xAF, 0xB0, 0x00, 0xAA, 0x00, 0xB6, 0x7A, 0x42" />
+            <iid name="IID_IIPDVDec" value="0xB8E8BD60, 0x0BFE, 0x11D0, 0xAF, 0x91, 0x00, 0xAA, 0x00, 0xB6, 0x7A, 0x42" />
+            <iid name="IID_IDVRGB219" value="0x58473A19, 0x2BC8, 0x4663, 0x80, 0x12, 0x25, 0xF8, 0x1B, 0xAB, 0xDD, 0xD1" />
+            <iid name="IID_IDVSplitter" value="0x92A3A302, 0xDA7C, 0x4A1F, 0xBA, 0x7E, 0x18, 0x02, 0xBB, 0x5D, 0x2D, 0x02" />
+            <iid name="IID_IAMAudioRendererStats" value="0x22320CB2, 0xD41A, 0x11D2, 0xBF, 0x7C, 0xD7, 0xCB, 0x9D, 0xF0, 0xBF, 0x93" />
+            <iid name="IID_IAMGraphStreams" value="0x632105FA, 0x072E, 0x11D3, 0x8A, 0xF9, 0x00, 0xC0, 0x4F, 0xB6, 0xBD, 0x3D" />
+            <iid name="IID_IAMOverlayFX" value="0x62FAE250, 0x7E65, 0x4460, 0xBF, 0xC9, 0x63, 0x98, 0xB3, 0x22, 0x07, 0x3C" />
+            <iid name="IID_IAMOpenProgress" value="0x8E1C39A1, 0xDE53, 0x11CF, 0xAA, 0x63, 0x00, 0x80, 0xC7, 0x44, 0x52, 0x8D" />
+            <iid name="IID_IMpeg2Demultiplexer" value="0x436EEE9C, 0x264F, 0x4242, 0x90, 0xE1, 0x4E, 0x33, 0x0C, 0x10, 0x75, 0x12" />
+            <iid name="IID_IEnumStreamIdMap" value="0x945C1566, 0x6202, 0x46FC, 0x96, 0xC7, 0xD8, 0x7F, 0x28, 0x9C, 0x65, 0x34" />
+            <iid name="IID_IMPEG2StreamIdMap" value="0xD0E04C47, 0x25B8, 0x4369, 0x92, 0x5A, 0x36, 0x2A, 0x01, 0xD9, 0x54, 0x44" />
+            <iid name="IID_IRegisterServiceProvider" value="0x7B3A2F01, 0x0751, 0x48DD, 0xB5, 0x56, 0x00, 0x47, 0x85, 0x17, 0x1C, 0x54" />
+            <iid name="IID_IAMClockSlave" value="0x9FD52741, 0x176D, 0x4B36, 0x8F, 0x51, 0xCA, 0x8F, 0x93, 0x32, 0x23, 0xBE" />
+            <iid name="IID_IAMGraphBuilderCallback" value="0x4995F511, 0x9DDB, 0x4F12, 0xBD, 0x3B, 0xF0, 0x46, 0x11, 0x80, 0x7B, 0x79" />
+            <iid name="IID_IGetCapabilitiesKey" value="0xA8809222, 0x07BB, 0x48EA, 0x95, 0x1C, 0x33, 0x15, 0x81, 0x00, 0x62, 0x5B" />
+            <iid name="IID_IEncoderAPI" value="0x70423839, 0x6ACC, 0x4B23, 0xB0, 0x79, 0x21, 0xDB, 0xF0, 0x81, 0x56, 0xA5" />
+            <iid name="IID_IVideoEncoder" value="0x02997C3B, 0x8E1B, 0x460E, 0x92, 0x70, 0x54, 0x5E, 0x0D, 0xE9, 0x56, 0x3E" />
+            <iid name="IID_IAMDecoderCaps" value="0xC0DFF467, 0xD499, 0x4986, 0x97, 0x2B, 0xE1, 0xD9, 0x09, 0x0F, 0xA9, 0x41" />
+            <iid name="IID_IAMCertifiedOutputProtection" value="0x6FEDED3E, 0x0FF1, 0x4901, 0xA2, 0xF1, 0x43, 0xF7, 0x01, 0x2C, 0x85, 0x15" />
+            <iid name="IID_IAMAsyncReaderTimestampScaling" value="0xCF7B26FC, 0x9A00, 0x485B, 0x81, 0x47, 0x3E, 0x78, 0x9D, 0x5E, 0x8F, 0x67" />
+            <iid name="IID_IAMPluginControl" value="0x0E26A181, 0xF40C, 0x4635, 0x87, 0x86, 0x97, 0x62, 0x84, 0xB5, 0x29, 0x81" />
+            <iid name="IID_IPinConnection" value="0x4A9A62D3, 0x27D4, 0x403D, 0x91, 0xE9, 0x89, 0xF5, 0x40, 0xE5, 0x55, 0x34" />
+            <iid name="IID_IPinFlowControl" value="0xC56E9858, 0xDBF3, 0x4F6B, 0x81, 0x19, 0x38, 0x4A, 0xF2, 0x06, 0x0D, 0xEB" />
+            <iid name="IID_IGraphConfig" value="0x03A1EB8E, 0x32BF, 0x4245, 0x85, 0x02, 0x11, 0x4D, 0x08, 0xA9, 0xCB, 0x88" />
+            <iid name="IID_IGraphConfigCallback" value="0xADE0FD60, 0xD19D, 0x11D2, 0xAB, 0xF6, 0x00, 0xA0, 0xC9, 0x05, 0xF3, 0x75" />
+            <iid name="IID_IFilterChain" value="0xDCFBDCF6, 0x0DC2, 0x45F5, 0x9A, 0xB2, 0x7C, 0x33, 0x0E, 0xA0, 0x9C, 0x29" />
+            <iid name="IID_IVMRImagePresenter" value="0xCE704FE7, 0xE71E, 0x41FB, 0xBA, 0xA2, 0xC4, 0x40, 0x3E, 0x11, 0x82, 0xF5" />
+            <iid name="IID_IVMRSurfaceAllocator" value="0x31CE832E, 0x4484, 0x458B, 0x8C, 0xCA, 0xF4, 0xD7, 0xE3, 0xDB, 0x0B, 0x52" />
+            <iid name="IID_IVMRSurfaceAllocatorNotify" value="0xAADA05A8, 0x5A4E, 0x4729, 0xAF, 0x0B, 0xCE, 0xA2, 0x7A, 0xED, 0x51, 0xE2" />
+            <iid name="IID_IVMRWindowlessControl" value="0x0EB1088C, 0x4DCD, 0x46F0, 0x87, 0x8F, 0x39, 0xDA, 0xE8, 0x6A, 0x51, 0xB7" />
+            <iid name="IID_IVMRMixerControl" value="0x1C1A17B0, 0xBED0, 0x415D, 0x97, 0x4B, 0xDC, 0x66, 0x96, 0x13, 0x15, 0x99" />
+            <iid name="IID_IVMRMonitorConfig" value="0x9CF0B1B6, 0xFBAA, 0x4B7F, 0x88, 0xCF, 0xCF, 0x1F, 0x13, 0x0A, 0x0D, 0xCE" />
+            <iid name="IID_IVMRFilterConfig" value="0x9E5530C5, 0x7034, 0x48B4, 0xBB, 0x46, 0x0B, 0x8A, 0x6E, 0xFC, 0x8E, 0x36" />
+            <iid name="IID_IVMRAspectRatioControl" value="0xEDE80B5C, 0xBAD6, 0x4623, 0xB5, 0x37, 0x65, 0x58, 0x6C, 0x9F, 0x8D, 0xFD" />
+            <iid name="IID_IVMRDeinterlaceControl" value="0xBB057577, 0x0DB8, 0x4E6A, 0x87, 0xA7, 0x1A, 0x8C, 0x9A, 0x50, 0x5A, 0x0F" />
+            <iid name="IID_IVMRMixerBitmap" value="0x1E673275, 0x0257, 0x40AA, 0xAF, 0x20, 0x7C, 0x60, 0x8D, 0x4A, 0x04, 0x28" />
+            <iid name="IID_IVMRImageCompositor" value="0x7A4FB5AF, 0x479F, 0x4074, 0xBB, 0x40, 0xCE, 0x67, 0x22, 0xE4, 0x3C, 0x82" />
+            <iid name="IID_IVMRVideoStreamControl" value="0x058D1F11, 0x2A54, 0x4BEF, 0xBD, 0x54, 0xDF, 0x70, 0x66, 0x26, 0xB7, 0x27" />
+            <iid name="IID_IVMRSurface" value="0xA9849BBE, 0x9EC8, 0x4263, 0xB7, 0x64, 0x62, 0x73, 0x0F, 0x0D, 0x15, 0xD0" />
+            <iid name="IID_IVMRImagePresenterConfig" value="0x9F3A1C85, 0x8555, 0x49BA, 0x93, 0x5F, 0xBE, 0x5B, 0x5B, 0x29, 0xD1, 0x78" />
+            <iid name="IID_IVMRImagePresenterExclModeConfig" value="0xE6F7CE40, 0x4673, 0x44F1, 0x8F, 0x77, 0x54, 0x99, 0xD6, 0x8C, 0xB4, 0xEA" />
+            <iid name="IID_IVPManager" value="0xAAC18C18, 0xE186, 0x46D2, 0x82, 0x5D, 0xA1, 0xF8, 0xDC, 0x8E, 0x39, 0x5A" />
+            <iid name="IID_IDvdControl" value="0xA70EFE61, 0xE2A3, 0x11D0, 0xA9, 0xBE, 0x00, 0xAA, 0x00, 0x61, 0xBE, 0x93" />
+            <iid name="IID_IDvdInfo" value="0xA70EFE60, 0xE2A3, 0x11D0, 0xA9, 0xBE, 0x00, 0xAA, 0x00, 0x61, 0xBE, 0x93" />
+            <iid name="IID_IDvdCmd" value="0x5A4A97E4, 0x94EE, 0x4A55, 0x97, 0x51, 0x74, 0xB5, 0x64, 0x3A, 0xA2, 0x7D" />
+            <iid name="IID_IDvdState" value="0x86303D6D, 0x1C4A, 0x4087, 0xAB, 0x42, 0xF7, 0x11, 0x16, 0x70, 0x48, 0xEF" />
+            <iid name="IID_IDvdControl2" value="0x33BC7430, 0xEEC0, 0x11D2, 0x82, 0x01, 0x00, 0xA0, 0xC9, 0xD7, 0x48, 0x42" />
+            <iid name="IID_IDvdInfo2" value="0x34151510, 0xEEC0, 0x11D2, 0x82, 0x01, 0x00, 0xA0, 0xC9, 0xD7, 0x48, 0x42" />
+            <iid name="IID_IDvdGraphBuilder" value="0xFCC152B6, 0xF372, 0x11D0, 0x8E, 0x00, 0x00, 0xC0, 0x4F, 0xD7, 0xC0, 0x8B" />
+            <iid name="IID_IDDrawExclModeVideo" value="0x153ACC21, 0xD83B, 0x11D1, 0x82, 0xBF, 0x00, 0xA0, 0xC9, 0x69, 0x6C, 0x8F" />
+            <iid name="IID_IDDrawExclModeVideoCallback" value="0x913C24A0, 0x20AB, 0x11D2, 0x90, 0x38, 0x00, 0xA0, 0xC9, 0x69, 0x72, 0x98" />
+        </class>
+    </namespace>
+</bindings>

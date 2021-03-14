@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DRIVE_LAYOUT_INFORMATION_EX" access="public">
+            <field name="PartitionStyle" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="PartitionCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_DRIVE_LAYOUT_INFORMATION_EX::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:8568:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Mbr" access="public">
+                <type native="">ref DRIVE_LAYOUT_INFORMATION_MBR</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Mbr, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Gpt" access="public">
+                <type native="">ref DRIVE_LAYOUT_INFORMATION_GPT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Gpt, 1));
+        </code>
+                </get>
+            </field>
+            <field name="PartitionEntry" access="public">
+                <type native="PARTITION_INFORMATION_EX [1]" count="1" fixed="_PartitionEntry_e__FixedBuffer">PARTITION_INFORMATION_EX</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="Mbr" access="public" offset="0">
+                    <type native="">DRIVE_LAYOUT_INFORMATION_MBR</type>
+                </field>
+                <field name="Gpt" access="public" offset="0">
+                    <type native="">DRIVE_LAYOUT_INFORMATION_GPT</type>
+                </field>
+            </struct>
+            <struct name="_PartitionEntry_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">PARTITION_INFORMATION_EX</type>
+                </field>
+                <indexer access="public">
+                    <type>ref PARTITION_INFORMATION_EX</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;PARTITION_INFORMATION_EX&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

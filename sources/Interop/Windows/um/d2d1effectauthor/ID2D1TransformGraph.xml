@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1effectauthor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID2D1TransformGraph" access="public" native="struct ID2D1TransformGraph : IUnknown" uuid="13d29038-c3e6-4034-9081-13b53a417992" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputCount" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, uint&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSingleTransformNode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="node">
+                    <type>ID2D1TransformNode*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, ID2D1TransformNode*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>, <param name="node">node</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddNode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="node">
+                    <type>ID2D1TransformNode*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, ID2D1TransformNode*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>, <param name="node">node</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveNode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="node">
+                    <type>ID2D1TransformNode*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, ID2D1TransformNode*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>, <param name="node">node</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputNode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="node">
+                    <type>ID2D1TransformNode*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, ID2D1TransformNode*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>, <param name="node">node</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ConnectNode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fromNode">
+                    <type>ID2D1TransformNode*</type>
+                </param>
+                <param name="toNode">
+                    <type>ID2D1TransformNode*</type>
+                </param>
+                <param name="toNodeInputIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, ID2D1TransformNode*, ID2D1TransformNode*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>, <param name="fromNode">fromNode</param>, <param name="toNode">toNode</param>, <param name="toNodeInputIndex">toNodeInputIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ConnectToEffectInput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="toEffectInputIndex">
+                    <type>uint</type>
+                </param>
+                <param name="node">
+                    <type>ID2D1TransformNode*</type>
+                </param>
+                <param name="toNodeInputIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, uint, ID2D1TransformNode*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>, <param name="toEffectInputIndex">toEffectInputIndex</param>, <param name="node">node</param>, <param name="toNodeInputIndex">toNodeInputIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Clear" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1TransformGraph*, void&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPassthroughGraph" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effectInputIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1TransformGraph*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID2D1TransformGraph*)Unsafe.AsPointer(ref this)</param>, <param name="effectInputIndex">effectInputIndex</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

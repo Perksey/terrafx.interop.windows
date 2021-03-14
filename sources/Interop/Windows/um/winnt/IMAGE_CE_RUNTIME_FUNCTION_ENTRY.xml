@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMAGE_CE_RUNTIME_FUNCTION_ENTRY" access="public">
+            <field name="FuncStart" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="_bitfield" access="public">
+                <type native="">uint</type>
+            </field>
+            <field name="PrologLen" access="public">
+                <type native="DWORD : 8">uint</type>
+                <get inlining="aggressive">
+                    <code>return <bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>FFu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>FFu</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>FFu</bitwidthHexString>);
+        </code>
+                </set>
+            </field>
+            <field name="FuncLen" access="public">
+                <type native="DWORD : 22">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>8</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>3FFFFFu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>3FFFFFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>8</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>3FFFFFu</bitwidthHexString>) &lt;&lt; 8);
+        </code>
+                </set>
+            </field>
+            <field name="ThirtyTwoBit" access="public">
+                <type native="DWORD : 1">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>30</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>30</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 30);
+        </code>
+                </set>
+            </field>
+            <field name="ExceptionFlag" access="public">
+                <type native="DWORD : 1">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>31</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>31</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 31);
+        </code>
+                </set>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

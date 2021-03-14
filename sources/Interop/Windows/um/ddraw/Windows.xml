@@ -1,0 +1,4396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ddraw.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <constant name="CLSID_DirectDraw" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xD7B70EE0, 0x4340, 0x11CF, 0xB0, 0x63, 0x00, 0x20, 0xAF, 0xC2, 0xCD, 0x35)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_DirectDraw7" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3c305196, 0x50db, 0x11d3, 0x9c, 0xfe, 0x00, 0xc0, 0x4f, 0xd9, 0x30, 0xc5)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_DirectDrawClipper" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x593817A0, 0x7DB3, 0x11CF, 0xA2, 0xDE, 0x00, 0xAA, 0x00, 0xb9, 0x33, 0x56)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDraw" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6C14DB80, 0xA733, 0x11CE, 0xA5, 0x21, 0x00, 0x20, 0xAF, 0x0B, 0xE5, 0x60)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDraw2" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xB3A6F3E0, 0x2B43, 0x11CF, 0xA2, 0xDE, 0x00, 0xAA, 0x00, 0xB9, 0x33, 0x56)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDraw4" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9c59509a, 0x39bd, 0x11d1, 0x8c, 0x4a, 0x00, 0xc0, 0x4f, 0xd9, 0x30, 0xc5)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDraw7" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x15e65ec0, 0x3b9c, 0x11d2, 0xb9, 0x2f, 0x00, 0x60, 0x97, 0x97, 0xea, 0x5b)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDrawSurface" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6C14DB81, 0xA733, 0x11CE, 0xA5, 0x21, 0x00, 0x20, 0xAF, 0x0B, 0xE5, 0x60)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDrawSurface2" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57805885, 0x6eec, 0x11cf, 0x94, 0x41, 0xa8, 0x23, 0x03, 0xc1, 0x0e, 0x27)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDrawSurface3" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xDA044E00, 0x69B2, 0x11D0, 0xA1, 0xD5, 0x00, 0xAA, 0x00, 0xB8, 0xDF, 0xBB)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDrawSurface4" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x0B2B8630, 0xAD35, 0x11D0, 0x8E, 0xA6, 0x00, 0x60, 0x97, 0x97, 0xEA, 0x5B)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDrawSurface7" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x06675a80, 0x3b9b, 0x11d2, 0xb9, 0x2f, 0x00, 0x60, 0x97, 0x97, 0xea, 0x5b)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDrawPalette" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6C14DB84, 0xA733, 0x11CE, 0xA5, 0x21, 0x00, 0x20, 0xAF, 0x0B, 0xE5, 0x60)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDrawClipper" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6C14DB85, 0xA733, 0x11CE, 0xA5, 0x21, 0x00, 0x20, 0xAF, 0x0B, 0xE5, 0x60)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDrawColorControl" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4B9F0EE0, 0x0D7E, 0x11D0, 0x9B, 0x06, 0x00, 0xA0, 0xC9, 0x03, 0xA3, 0xB8)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDirectDrawGammaControl" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x69C11C3E, 0xB46B, 0x11D1, 0xAD, 0x7A, 0x00, 0xC0, 0x4F, 0xC2, 0x9B, 0x4E)
+            </code>
+                </value>
+            </constant>
+            <function name="DirectDrawEnumerateW" access="public" lib="ddraw" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpCallback">
+                    <type>delegate* unmanaged&lt;Guid*, ushort*, ushort*, void*, int&gt;</type>
+                </param>
+                <param name="lpContext">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="DirectDrawEnumerateA" access="public" lib="ddraw" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpCallback">
+                    <type>delegate* unmanaged&lt;Guid*, sbyte*, sbyte*, void*, int&gt;</type>
+                </param>
+                <param name="lpContext">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="DirectDrawEnumerateExW" access="public" lib="ddraw" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpCallback">
+                    <type>delegate* unmanaged&lt;Guid*, ushort*, ushort*, void*, IntPtr, int&gt;</type>
+                </param>
+                <param name="lpContext">
+                    <type>void*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DirectDrawEnumerateExA" access="public" lib="ddraw" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpCallback">
+                    <type>delegate* unmanaged&lt;Guid*, sbyte*, sbyte*, void*, IntPtr, int&gt;</type>
+                </param>
+                <param name="lpContext">
+                    <type>void*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DirectDrawCreate" access="public" lib="ddraw" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpGUID">
+                    <type>Guid*</type>
+                </param>
+                <param name="lplpDD">
+                    <type>IDirectDraw**</type>
+                </param>
+                <param name="pUnkOuter">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <function name="DirectDrawCreateEx" access="public" lib="ddraw" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="lplpDD">
+                    <type>void**</type>
+                </param>
+                <param name="iid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnkOuter">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <function name="DirectDrawCreateClipper" access="public" lib="ddraw" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lplpDDClipper">
+                    <type>IDirectDrawClipper**</type>
+                </param>
+                <param name="pUnkOuter">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <constant name="DIRECTDRAW_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0700
+            </code>
+                </value>
+            </constant>
+            <constant name="_FACDD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x876
+            </code>
+                </value>
+            </constant>
+            <constant name="FOURCC_DXT1" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>
+                        <value></value>
+                        <value></value>(((uint)(byte)('D') | ((uint)(byte)('X') &lt;&lt; 8) | ((uint)(byte)('T') &lt;&lt; 16) | ((uint)(byte)('1') &lt;&lt; 24)))
+            </code>
+                </value>
+            </constant>
+            <constant name="FOURCC_DXT2" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>
+                        <value></value>
+                        <value></value>(((uint)(byte)('D') | ((uint)(byte)('X') &lt;&lt; 8) | ((uint)(byte)('T') &lt;&lt; 16) | ((uint)(byte)('2') &lt;&lt; 24)))
+            </code>
+                </value>
+            </constant>
+            <constant name="FOURCC_DXT3" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>
+                        <value></value>
+                        <value></value>(((uint)(byte)('D') | ((uint)(byte)('X') &lt;&lt; 8) | ((uint)(byte)('T') &lt;&lt; 16) | ((uint)(byte)('3') &lt;&lt; 24)))
+            </code>
+                </value>
+            </constant>
+            <constant name="FOURCC_DXT4" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>
+                        <value></value>
+                        <value></value>(((uint)(byte)('D') | ((uint)(byte)('X') &lt;&lt; 8) | ((uint)(byte)('T') &lt;&lt; 16) | ((uint)(byte)('4') &lt;&lt; 24)))
+            </code>
+                </value>
+            </constant>
+            <constant name="FOURCC_DXT5" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>
+                        <value></value>
+                        <value></value>(((uint)(byte)('D') | ((uint)(byte)('X') &lt;&lt; 8) | ((uint)(byte)('T') &lt;&lt; 16) | ((uint)(byte)('5') &lt;&lt; 24)))
+            </code>
+                </value>
+            </constant>
+            <constant name="DirectDrawEnumerate" access="public">
+                <type primitive="False">delegate*&lt;delegate* unmanaged&lt;Guid*, ushort*, ushort*, void*, int&gt;, void*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>DirectDrawEnumerateW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="DirectDrawEnumerateEx" access="public">
+                <type primitive="False">delegate*&lt;delegate* unmanaged&lt;Guid*, ushort*, ushort*, void*, IntPtr, int&gt;, void*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>DirectDrawEnumerateExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="DDENUM_ATTACHEDSECONDARYDEVICES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUM_DETACHEDSECONDARYDEVICES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUM_NONDISPLAYDEVICES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="REGSTR_KEY_DDHW_DESCRIPTION" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x44, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="REGSTR_KEY_DDHW_DRIVERNAME" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x44, 0x72, 0x69, 0x76, 0x65, 0x72, 0x4E, 0x61, 0x6D, 0x65, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="REGSTR_PATH_DDHW" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x48, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x5C, 0x44, 0x69, 0x72, 0x65, 0x63, 0x74, 0x44, 0x72, 0x61, 0x77, 0x44, 0x72, 0x69, 0x76, 0x65, 0x72, 0x73, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCREATE_HARDWAREONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCREATE_EMULATIONONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DD_ROP_SPACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(256 / 32)
+            </code>
+                </value>
+            </constant>
+            <constant name="MAX_DDDEVICEID_STRING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>512
+            </code>
+                </value>
+            </constant>
+            <constant name="DDGDI_GETHOSTIDENTIFIER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_CAPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_HEIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_WIDTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_PITCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_BACKBUFFERCOUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_ZBUFFERBITDEPTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_ALPHABITDEPTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_LPSURFACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_PIXELFORMAT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_CKDESTOVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_CKDESTBLT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_CKSRCOVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_CKSRCBLT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_MIPMAPCOUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_REFRESHRATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_LINEARSIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_TEXTURESTAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_FVF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_SRCVBHANDLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_DEPTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSD_ALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00fff9ee
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSD_GUID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSD_COMPRESSION_RATIO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSD_SCAPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSD_OSCAPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSD_ALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000000f
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSDCAPS_OPTCOMPRESSED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSDCAPS_OPTREORDERED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSDCAPS_MONOLITHICMIPMAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSDCAPS_VALIDSCAPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x30004800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOSDCAPS_VALIDOSCAPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000007
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCOLOR_BRIGHTNESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCOLOR_CONTRAST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCOLOR_HUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCOLOR_SATURATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCOLOR_SHARPNESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCOLOR_GAMMA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCOLOR_COLORENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_RESERVED1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_ALPHA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_BACKBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_COMPLEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_FLIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_FRONTBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_OFFSCREENPLAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_OVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_PALETTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_PRIMARYSURFACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_RESERVED3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_PRIMARYSURFACELEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_SYSTEMMEMORY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_TEXTURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_3DDEVICE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_VIDEOMEMORY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_VISIBLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_WRITEONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_ZBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_OWNDC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_LIVEVIDEO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_HWCODEC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_MODEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_MIPMAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_RESERVED2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_ALLOCONLOAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_VIDEOPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x08000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_LOCALVIDMEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_NONLOCALVIDMEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_STANDARDVGAMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS_OPTIMIZED" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_RESERVED4" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_HARDWAREDEINTERLACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_HINTDYNAMIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_HINTSTATIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_TEXTUREMANAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_RESERVED1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_RESERVED2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_OPAQUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_HINTANTIALIASING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_CUBEMAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_CUBEMAP_POSITIVEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_CUBEMAP_NEGATIVEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_CUBEMAP_POSITIVEY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_CUBEMAP_NEGATIVEY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_CUBEMAP_POSITIVEZ" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_CUBEMAP_NEGATIVEZ" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_CUBEMAP_ALLFACES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000400 | 0x00000800 | 0x00001000 | 0x00002000 | 0x00004000 | 0x00008000)
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_MIPMAPSUBLEVEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_D3DTEXTUREMANAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_DONOTPERSIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_STEREOSURFACELEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_VOLUME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_NOTUSERLOCKABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_POINTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_RTPATCHES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_NPATCHES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_RESERVED3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_DISCARDBACKBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_ENABLEALPHACHANNEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_EXTENDEDFORMATPRIMARY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS2_ADDITIONALPRIMARY" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_MULTISAMPLE_MASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000001F
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_MULTISAMPLE_QUALITY_MASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x000000E0
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_MULTISAMPLE_QUALITY_SHIFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_RESERVED1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_RESERVED2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_LIGHTWEIGHTMIPMAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_AUTOGENMIPMAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_DMAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_CREATESHAREDRESOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_READONLYRESOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCAPS3_OPENSHAREDRESOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_3D" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_ALIGNBOUNDARYDEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_ALIGNSIZEDEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_ALIGNBOUNDARYSRC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_ALIGNSIZESRC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_ALIGNSTRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_BLT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_BLTQUEUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_BLTFOURCC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_BLTSTRETCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_GDI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_OVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_OVERLAYCANTCLIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_OVERLAYFOURCC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_OVERLAYSTRETCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_PALETTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_PALETTEVSYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_READSCANLINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_RESERVED1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_VBI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_ZBLTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_ZOVERLAYS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_COLORKEY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_ALPHA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_COLORKEYHWASSIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_NOHARDWARE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_BLTCOLORFILL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_BANKSWITCHED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x08000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_BLTDEPTHFILL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_CANCLIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_CANCLIPSTRETCHED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS_CANBLTSYSMEM" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CERTIFIED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_NO2DDURING3DSCENE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_VIDEOPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_AUTOFLIPOVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANBOBINTERLEAVED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANBOBNONINTERLEAVED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_COLORCONTROLOVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_COLORCONTROLPRIMARY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANDROPZ16BIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_NONLOCALVIDMEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_NONLOCALVIDMEMCAPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_NOPAGELOCKREQUIRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_WIDESURFACES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANFLIPODDEVEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANBOBHARDWARE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_COPYFOURCC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_PRIMARYGAMMA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANRENDERWINDOWED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANCALIBRATEGAMMA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_FLIPINTERVAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_FLIPNOVSYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANMANAGETEXTURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_TEXMANINNONLOCALVIDMEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_STEREO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_SYSTONONLOCAL_AS_SYSTOLOCAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_RESERVED1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x08000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANMANAGERESOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_DYNAMICTEXTURES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANAUTOGENMIPMAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCAPS2_CANSHARERESOURCE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_BLTALPHAEDGEBLEND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_BLTALPHAPIXELS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_BLTALPHAPIXELSNEG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_BLTALPHASURFACES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_BLTALPHASURFACESNEG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_OVERLAYALPHAEDGEBLEND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_OVERLAYALPHAPIXELS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_OVERLAYALPHAPIXELSNEG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_OVERLAYALPHASURFACES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXALPHACAPS_OVERLAYALPHASURFACESNEG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTARITHSTRETCHY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTARITHSTRETCHYN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTMIRRORLEFTRIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTMIRRORUPDOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTROTATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTROTATION90" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTSHRINKX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTSHRINKXN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTSHRINKY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTSHRINKYN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTSTRETCHX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTSTRETCHXN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTSTRETCHY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTSTRETCHYN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYARITHSTRETCHY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYARITHSTRETCHYN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYSHRINKX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYSHRINKXN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYSHRINKY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYSHRINKYN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYSTRETCHX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYSTRETCHXN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYSTRETCHY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYSTRETCHYN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYMIRRORLEFTRIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x08000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYMIRRORUPDOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYDEINTERLACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTALPHA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_BLTFILTER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYALPHA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFXCAPS_OVERLAYFILTER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSVCAPS_RESERVED1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSVCAPS_RESERVED2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSVCAPS_RESERVED3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSVCAPS_RESERVED4" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSVCAPS_STEREOSEQUENTIAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_4BIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_8BITENTRIES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_8BIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_INITIALIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_PRIMARYSURFACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_PRIMARYSURFACELEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_ALLOW256" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_VSYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_1BIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_2BIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPCAPS_ALPHA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSPD_IUNKNOWNPOINTER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSPD_VOLATILE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBD_1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBD_2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBD_4" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBD_8" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBD_16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBD_24" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0X00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBD_32" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEY_COLORSPACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEY_DESTBLT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEY_DESTOVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEY_SRCBLT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEY_SRCOVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_DESTBLT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_DESTBLTCLRSPACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_DESTBLTCLRSPACEYUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_DESTBLTYUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_DESTOVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_DESTOVERLAYCLRSPACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_DESTOVERLAYCLRSPACEYUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_DESTOVERLAYONEACTIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_DESTOVERLAYYUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_SRCBLT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_SRCBLTCLRSPACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_SRCBLTCLRSPACEYUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_SRCBLTYUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_SRCOVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_SRCOVERLAYCLRSPACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_SRCOVERLAYCLRSPACEYUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_SRCOVERLAYONEACTIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_SRCOVERLAYYUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDCKEYCAPS_NOCOSTOVERLAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_ALPHAPIXELS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_ALPHA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_FOURCC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_PALETTEINDEXED4" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_PALETTEINDEXEDTO8" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_PALETTEINDEXED8" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_RGB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_COMPRESSED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_RGBTOYUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_YUV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_ZBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_PALETTEINDEXED1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_PALETTEINDEXED2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_ZPIXELS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_STENCILBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_ALPHAPREMULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_LUMINANCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_BUMPLUMINANCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDPF_BUMPDUDV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUMSURFACES_ALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUMSURFACES_MATCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUMSURFACES_NOMATCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUMSURFACES_CANBECREATED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUMSURFACES_DOESEXIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSDM_STANDARDVGAMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDEDM_REFRESHRATES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDEDM_STANDARDVGAMODES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_FULLSCREEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_ALLOWREBOOT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_NOWINDOWCHANGES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_NORMAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_EXCLUSIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_ALLOWMODEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_SETFOCUSWINDOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_SETDEVICEWINDOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_CREATEDEVICEWINDOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_MULTITHREADED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_FPUSETUP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSCL_FPUPRESERVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ALPHADEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ALPHADESTCONSTOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ALPHADESTNEG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ALPHADESTSURFACEOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ALPHAEDGEBLEND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ALPHASRC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ALPHASRCCONSTOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ALPHASRCNEG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ALPHASRCSURFACEOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ASYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_COLORFILL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_DDFX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_DDROPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_KEYDEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_KEYDESTOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_KEYSRC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_KEYSRCOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ROP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ROTATIONANGLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ZBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ZBUFFERDESTCONSTOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ZBUFFERDESTOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ZBUFFERSRCCONSTOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_ZBUFFERSRCOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_WAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_DEPTHFILL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_DONOTWAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x08000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_PRESENTATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_LAST_PRESENTATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_EXTENDED_FLAGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLT_EXTENDED_LINEAR_CONTENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFAST_NOCOLORKEY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFAST_SRCCOLORKEY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFAST_DESTCOLORKEY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFAST_WAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFAST_DONOTWAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFLIP_WAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFLIP_EVEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFLIP_ODD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFLIP_NOVSYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFLIP_INTERVAL2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFLIP_INTERVAL3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x03000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFLIP_INTERVAL4" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFLIP_STEREO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDFLIP_DONOTWAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ALPHADEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ALPHADESTCONSTOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ALPHADESTNEG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ALPHADESTSURFACEOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ALPHAEDGEBLEND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ALPHASRC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ALPHASRCCONSTOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ALPHASRCNEG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ALPHASRCSURFACEOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_HIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_KEYDEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_KEYDESTOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_KEYSRC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_KEYSRCOVERRIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_SHOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ADDDIRTYRECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_REFRESHDIRTYRECTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_REFRESHALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_DDFX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_AUTOFLIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_BOB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_OVERRIDEBOBWEAVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_INTERLEAVED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_BOBHARDWARE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_ARGBSCALEFACTORS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVER_DEGRADEARGBSCALING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_SURFACEMEMORYPTR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_WAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_READONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_WRITEONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_NOSYSLOCK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_NOOVERWRITE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_DISCARDCONTENTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_OKTOSWAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_DONOTWAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_HASVOLUMETEXTUREBOXRECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDLOCK_NODIRTYUPDATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFX_ARITHSTRETCHY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFX_MIRRORLEFTRIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFX_MIRRORUPDOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFX_NOTEARING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFX_ROTATE180" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFX_ROTATE270" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFX_ROTATE90" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFX_ZBUFFERRANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="DDBLTFX_ZBUFFERBASEDEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERFX_ARITHSTRETCHY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERFX_MIRRORLEFTRIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERFX_MIRRORUPDOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERFX_DEINTERLACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DDWAITVB_BLOCKBEGIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDWAITVB_BLOCKBEGINEVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDWAITVB_BLOCKEND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDGFS_CANFLIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDGFS_ISFLIPDONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDGBS_CANBLT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDGBS_ISBLTDONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUMOVERLAYZ_BACKTOFRONT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUMOVERLAYZ_FRONTTOBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERZ_SENDTOFRONT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERZ_SENDTOBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERZ_MOVEFORWARD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERZ_MOVEBACKWARD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERZ_INSERTINFRONTOF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DDOVERZ_INSERTINBACKOF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000005
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSGR_CALIBRATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDSMT_ISTESTREQUIRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDEM_MODEPASSED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DDEM_MODEFAILED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DD_OK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>((int)0)
+            </code>
+                </value>
+            </constant>
+            <constant name="DD_FALSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>((int)1)
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUMRET_CANCEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="DDENUMRET_OK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="DDERR_ALREADYINITIALIZED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(5))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_CANNOTATTACHSURFACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(10))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_CANNOTDETACHSURFACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(20))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_CURRENTLYNOTAVAIL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(40))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_EXCEPTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(55))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_GENERIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x80004005)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_HEIGHTALIGN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(90))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INCOMPATIBLEPRIMARY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(95))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDCAPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(100))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDCLIPLIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(110))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(120))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDOBJECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(130))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDPARAMS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x80070057)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDPIXELFORMAT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(145))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDRECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(150))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_LOCKEDSURFACES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(160))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NO3D" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(170))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOALPHAHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(180))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOSTEREOHARDWARE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(181))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOSURFACELEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(182))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOCLIPLIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(205))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOCOLORCONVHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(210))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOCOOPERATIVELEVELSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(212))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOCOLORKEY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(215))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOCOLORKEYHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(220))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NODIRECTDRAWSUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(222))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOEXCLUSIVEMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(225))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOFLIPHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(230))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOGDI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(240))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOMIRRORHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(250))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTFOUND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(255))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOOVERLAYHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(260))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_OVERLAPPINGRECTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(270))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NORASTEROPHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(280))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOROTATIONHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(290))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOSTRETCHHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(310))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOT4BITCOLOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(316))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOT4BITCOLORINDEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(317))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOT8BITCOLOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(320))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTEXTUREHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(330))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOVSYNCHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(335))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOZBUFFERHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(340))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOZOVERLAYHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(350))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_OUTOFCAPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(360))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_OUTOFMEMORY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x8007000E)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_OUTOFVIDEOMEMORY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(380))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_OVERLAYCANTCLIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(382))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_OVERLAYCOLORKEYONLYONEACTIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(384))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_PALETTEBUSY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(387))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_COLORKEYNOTSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(400))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_SURFACEALREADYATTACHED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(410))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_SURFACEALREADYDEPENDENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(420))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_SURFACEBUSY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(430))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_CANTLOCKSURFACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(435))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_SURFACEISOBSCURED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(440))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_SURFACELOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(450))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_SURFACENOTATTACHED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(460))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_TOOBIGHEIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(470))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_TOOBIGSIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(480))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_TOOBIGWIDTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(490))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_UNSUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x80004001)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_UNSUPPORTEDFORMAT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(510))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_UNSUPPORTEDMASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(520))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDSTREAM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(521))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_VERTICALBLANKINPROGRESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(537))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_WASSTILLDRAWING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(540))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_DDSCAPSCOMPLEXREQUIRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(542))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_XALIGN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(560))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDDIRECTDRAWGUID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(561))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_DIRECTDRAWALREADYCREATED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(562))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NODIRECTDRAWHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(563))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_PRIMARYSURFACEALREADYEXISTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(564))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOEMULATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(565))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_REGIONTOOSMALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(566))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_CLIPPERISUSINGHWND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(567))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOCLIPPERATTACHED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(568))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOHWND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(569))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_HWNDSUBCLASSED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(570))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_HWNDALREADYSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(571))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOPALETTEATTACHED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(572))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOPALETTEHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(573))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_BLTFASTCANTCLIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(574))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOBLTHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(575))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NODDROPSHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(576))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_OVERLAYNOTVISIBLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(577))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOOVERLAYDEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(578))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDPOSITION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(579))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTAOVERLAYSURFACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(580))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_EXCLUSIVEMODEALREADYSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(581))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTFLIPPABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(582))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_CANTDUPLICATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(583))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTLOCKED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(584))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_CANTCREATEDC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(585))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NODC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(586))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_WRONGMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(587))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_IMPLICITLYCREATED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(588))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTPALETTIZED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(589))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_UNSUPPORTEDMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(590))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOMIPMAPHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(591))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_INVALIDSURFACETYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(592))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOOPTIMIZEHW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(600))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTLOADED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(601))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOFOCUSWINDOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(602))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTONMIPMAPSUBLEVEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(603))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_DCALREADYCREATED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(620))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NONONLOCALVIDMEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(630))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_CANTPAGELOCK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(640))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_CANTPAGEUNLOCK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(660))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTPAGELOCKED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(680))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_MOREDATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(690))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_EXPIRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(691))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_TESTFINISHED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(692))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NEWMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(693))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_D3DNOTINITIALIZED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(694))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_VIDEONOTACTIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(695))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOMONITORINFORMATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(696))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NODRIVERSUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(697))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_DEVICEDOESNTOWNSURFACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(0x876) &lt;&lt; 16) | ((uint)(699))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="DDERR_NOTINITIALIZED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800401F0)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

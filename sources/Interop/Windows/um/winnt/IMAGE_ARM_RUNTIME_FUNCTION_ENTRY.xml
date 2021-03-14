@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMAGE_ARM_RUNTIME_FUNCTION_ENTRY" access="public">
+            <field name="BeginAddress" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_IMAGE_ARM_RUNTIME_FUNCTION_ENTRY::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:18783:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="UnwindData" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.UnwindData, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Flag" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.Flag;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.Flag = value;
+        </code>
+                </set>
+            </field>
+            <field name="FunctionLength" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.FunctionLength;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.FunctionLength = value;
+        </code>
+                </set>
+            </field>
+            <field name="Ret" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.Ret;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.Ret = value;
+        </code>
+                </set>
+            </field>
+            <field name="H" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.H;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.H = value;
+        </code>
+                </set>
+            </field>
+            <field name="Reg" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.Reg;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.Reg = value;
+        </code>
+                </set>
+            </field>
+            <field name="R" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.R;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.R = value;
+        </code>
+                </set>
+            </field>
+            <field name="L" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.L;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.L = value;
+        </code>
+                </set>
+            </field>
+            <field name="C" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.C;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.C = value;
+        </code>
+                </set>
+            </field>
+            <field name="StackAdjust" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.StackAdjust;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.StackAdjust = value;
+        </code>
+                </set>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="UnwindData" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="_IMAGE_ARM_RUNTIME_FUNCTION_ENTRY::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:18785:9)">_Anonymous_e__Struct</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="_bitfield" access="public">
+                        <type native="">uint</type>
+                    </field>
+                    <field name="Flag" access="public">
+                        <type native="DWORD : 2">uint</type>
+                        <get inlining="aggressive">
+                            <code>return <bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>3u</bitwidthHexString>);
+        </code>
+                        </set>
+                    </field>
+                    <field name="FunctionLength" access="public">
+                        <type native="DWORD : 11">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>2</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>7FFu</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>7FFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>2</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>7FFu</bitwidthHexString>) &lt;&lt; 2);
+        </code>
+                        </set>
+                    </field>
+                    <field name="Ret" access="public">
+                        <type native="DWORD : 2">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>13</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>13</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>3u</bitwidthHexString>) &lt;&lt; 13);
+        </code>
+                        </set>
+                    </field>
+                    <field name="H" access="public">
+                        <type native="DWORD : 1">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>15</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>15</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 15);
+        </code>
+                        </set>
+                    </field>
+                    <field name="Reg" access="public">
+                        <type native="DWORD : 3">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>16</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>7u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>7u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>16</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>7u</bitwidthHexString>) &lt;&lt; 16);
+        </code>
+                        </set>
+                    </field>
+                    <field name="R" access="public">
+                        <type native="DWORD : 1">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>19</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>19</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 19);
+        </code>
+                        </set>
+                    </field>
+                    <field name="L" access="public">
+                        <type native="DWORD : 1">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>20</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>20</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 20);
+        </code>
+                        </set>
+                    </field>
+                    <field name="C" access="public">
+                        <type native="DWORD : 1">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>21</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>21</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 21);
+        </code>
+                        </set>
+                    </field>
+                    <field name="StackAdjust" access="public">
+                        <type native="DWORD : 10">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>22</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>3FFu</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>3FFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>22</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>3FFu</bitwidthHexString>) &lt;&lt; 22);
+        </code>
+                        </set>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

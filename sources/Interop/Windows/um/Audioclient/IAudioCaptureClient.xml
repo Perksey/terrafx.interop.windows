@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/Audioclient.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAudioCaptureClient" access="public" native="struct IAudioCaptureClient : IUnknown" uuid="c8adbd64-e71e-48a0-a4de-185c395cd317" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioCaptureClient*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAudioCaptureClient*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioCaptureClient*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAudioCaptureClient*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioCaptureClient*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAudioCaptureClient*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppData">
+                    <type>byte**</type>
+                </param>
+                <param name="pNumFramesToRead">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwFlags">
+                    <type>uint*</type>
+                </param>
+                <param name="pu64DevicePosition">
+                    <type>ulong*</type>
+                </param>
+                <param name="pu64QPCPosition">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioCaptureClient*, byte**, uint*, uint*, ulong*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAudioCaptureClient*)Unsafe.AsPointer(ref this)</param>, <param name="ppData">ppData</param>, <param name="pNumFramesToRead">pNumFramesToRead</param>, <param name="pdwFlags">pdwFlags</param>, <param name="pu64DevicePosition">pu64DevicePosition</param>, <param name="pu64QPCPosition">pu64QPCPosition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NumFramesRead">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioCaptureClient*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAudioCaptureClient*)Unsafe.AsPointer(ref this)</param>, <param name="NumFramesRead">NumFramesRead</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNextPacketSize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNumFramesInNextPacket">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioCaptureClient*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAudioCaptureClient*)Unsafe.AsPointer(ref this)</param>, <param name="pNumFramesInNextPacket">pNumFramesInNextPacket</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

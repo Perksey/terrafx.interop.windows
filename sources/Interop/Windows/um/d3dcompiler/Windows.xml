@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3dcompiler.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="D3DReadFileToBlob" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppContents">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DWriteBlobToFile" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBlob">
+                    <type>ID3DBlob*</type>
+                </param>
+                <param name="pFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="bOverwrite">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="D3DCompile" access="public" lib="D3DCompiler" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="pSourceName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pDefines">
+                    <type>D3D_SHADER_MACRO*</type>
+                </param>
+                <param name="pInclude">
+                    <type>ID3DInclude*</type>
+                </param>
+                <param name="pEntrypoint">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pTarget">
+                    <type>sbyte*</type>
+                </param>
+                <param name="Flags1">
+                    <type>uint</type>
+                </param>
+                <param name="Flags2">
+                    <type>uint</type>
+                </param>
+                <param name="ppCode">
+                    <type>ID3DBlob**</type>
+                </param>
+                <param name="ppErrorMsgs">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DCompile2" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="pSourceName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pDefines">
+                    <type>D3D_SHADER_MACRO*</type>
+                </param>
+                <param name="pInclude">
+                    <type>ID3DInclude*</type>
+                </param>
+                <param name="pEntrypoint">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pTarget">
+                    <type>sbyte*</type>
+                </param>
+                <param name="Flags1">
+                    <type>uint</type>
+                </param>
+                <param name="Flags2">
+                    <type>uint</type>
+                </param>
+                <param name="SecondaryDataFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pSecondaryData">
+                    <type>void*</type>
+                </param>
+                <param name="SecondaryDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="ppCode">
+                    <type>ID3DBlob**</type>
+                </param>
+                <param name="ppErrorMsgs">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DCompileFromFile" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pDefines">
+                    <type>D3D_SHADER_MACRO*</type>
+                </param>
+                <param name="pInclude">
+                    <type>ID3DInclude*</type>
+                </param>
+                <param name="pEntrypoint">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pTarget">
+                    <type>sbyte*</type>
+                </param>
+                <param name="Flags1">
+                    <type>uint</type>
+                </param>
+                <param name="Flags2">
+                    <type>uint</type>
+                </param>
+                <param name="ppCode">
+                    <type>ID3DBlob**</type>
+                </param>
+                <param name="ppErrorMsgs">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DPreprocess" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="pSourceName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pDefines">
+                    <type>D3D_SHADER_MACRO*</type>
+                </param>
+                <param name="pInclude">
+                    <type>ID3DInclude*</type>
+                </param>
+                <param name="ppCodeText">
+                    <type>ID3DBlob**</type>
+                </param>
+                <param name="ppErrorMsgs">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DGetDebugInfo" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="ppDebugInfo">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DReflect" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="pInterface">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppReflector">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="D3DReflectLibrary" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppReflector">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="D3DDisassemble" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="szComments">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ppDisassembly">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DDisassembleRegion" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="szComments">
+                    <type>sbyte*</type>
+                </param>
+                <param name="StartByteOffset">
+                    <type>nuint</type>
+                </param>
+                <param name="NumInsts">
+                    <type>nuint</type>
+                </param>
+                <param name="pFinishByteOffset">
+                    <type>nuint*</type>
+                </param>
+                <param name="ppDisassembly">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DCreateLinker" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppLinker">
+                    <type>ID3D11Linker**</type>
+                </param>
+            </function>
+            <function name="D3DLoadModule" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="cbSrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="ppModule">
+                    <type>ID3D11Module**</type>
+                </param>
+            </function>
+            <function name="D3DCreateFunctionLinkingGraph" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="uFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppFunctionLinkingGraph">
+                    <type>ID3D11FunctionLinkingGraph**</type>
+                </param>
+            </function>
+            <function name="D3DGetTraceInstructionOffsets" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="StartInstIndex">
+                    <type>nuint</type>
+                </param>
+                <param name="NumInsts">
+                    <type>nuint</type>
+                </param>
+                <param name="pOffsets">
+                    <type>nuint*</type>
+                </param>
+                <param name="pTotalInsts">
+                    <type>nuint*</type>
+                </param>
+            </function>
+            <function name="D3DGetInputSignatureBlob" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="ppSignatureBlob">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DGetOutputSignatureBlob" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="ppSignatureBlob">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DGetInputAndOutputSignatureBlob" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="ppSignatureBlob">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DStripShader" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pShaderBytecode">
+                    <type>void*</type>
+                </param>
+                <param name="BytecodeLength">
+                    <type>nuint</type>
+                </param>
+                <param name="uStripFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppStrippedBlob">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DGetBlobPart" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="Part">
+                    <type>D3D_BLOB_PART</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="ppPart">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DSetBlobPart" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="Part">
+                    <type>D3D_BLOB_PART</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="pPart">
+                    <type>void*</type>
+                </param>
+                <param name="PartSize">
+                    <type>nuint</type>
+                </param>
+                <param name="ppNewShader">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DCreateBlob" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="Size">
+                    <type>nuint</type>
+                </param>
+                <param name="ppBlob">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DCompressShaders" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="uNumShaders">
+                    <type>uint</type>
+                </param>
+                <param name="pShaderData">
+                    <type>D3D_SHADER_DATA*</type>
+                </param>
+                <param name="uFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCompressedData">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+            <function name="D3DDecompressShaders" access="public" lib="D3DCompiler_47" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="uNumShaders">
+                    <type>uint</type>
+                </param>
+                <param name="uStartIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pIndices">
+                    <type>uint*</type>
+                </param>
+                <param name="uFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaders">
+                    <type>ID3DBlob**</type>
+                </param>
+                <param name="pTotalShaders">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <constant name="D3DCOMPILER_DLL_W" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"d3dcompiler_47.dll"
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILER_DLL_A" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x64, 0x33, 0x64, 0x63, 0x6F, 0x6D, 0x70, 0x69, 0x6C, 0x65, 0x72, 0x5F, 0x34, 0x37, 0x2E, 0x64, 0x6C, 0x6C, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_COMPILER_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>47
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILER_DLL" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"d3dcompiler_47.dll"
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_DEBUG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_SKIP_VALIDATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_SKIP_OPTIMIZATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_PACK_MATRIX_ROW_MAJOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_PACK_MATRIX_COLUMN_MAJOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 4)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_PARTIAL_PRECISION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 5)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_FORCE_VS_SOFTWARE_NO_OPT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 6)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_FORCE_PS_SOFTWARE_NO_OPT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 7)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_NO_PRESHADER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 8)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_AVOID_FLOW_CONTROL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 9)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_PREFER_FLOW_CONTROL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 10)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_ENABLE_STRICTNESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 11)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_ENABLE_BACKWARDS_COMPATIBILITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 12)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_IEEE_STRICTNESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 13)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_OPTIMIZATION_LEVEL0" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 14)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_OPTIMIZATION_LEVEL1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_OPTIMIZATION_LEVEL2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((1 &lt;&lt; 14) | (1 &lt;&lt; 15))
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_OPTIMIZATION_LEVEL3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 15)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_RESERVED16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 16)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_RESERVED17" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 17)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_WARNINGS_ARE_ERRORS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 18)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_RESOURCES_MAY_ALIAS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 19)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_ENABLE_UNBOUNDED_DESCRIPTOR_TABLES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 20)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_ALL_RESOURCES_BOUND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 21)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_DEBUG_NAME_FOR_SOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 22)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_DEBUG_NAME_FOR_BINARY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 23)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_EFFECT_CHILD_EFFECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_EFFECT_ALLOW_SLOW_OPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_FLAGS2_FORCE_ROOT_SIGNATURE_LATEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_FLAGS2_FORCE_ROOT_SIGNATURE_1_0" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 4)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_FLAGS2_FORCE_ROOT_SIGNATURE_1_1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 5)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_COMPILE_STANDARD_FILE_INCLUDE" access="public">
+                <type primitive="False">ID3DInclude*</type>
+                <value>
+                    <code>
+                        <value>
+                            <value></value>
+                        </value>((ID3DInclude*)(nuint)1)
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_SECDATA_MERGE_UAV_SLOTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_SECDATA_PRESERVE_TEMPLATE_SLOTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="D3DCOMPILE_SECDATA_REQUIRE_TEMPLATE_MATCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_DISASM_ENABLE_COLOR_CODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_DISASM_ENABLE_DEFAULT_VALUE_PRINTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_DISASM_ENABLE_INSTRUCTION_NUMBERING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_DISASM_ENABLE_INSTRUCTION_CYCLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_DISASM_DISABLE_DEBUG_INFO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_DISASM_ENABLE_INSTRUCTION_OFFSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_DISASM_INSTRUCTION_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_DISASM_PRINT_HEX_LITERALS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_GET_INST_OFFSETS_INCLUDE_NON_EXECUTABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="D3D_COMPRESS_SHADER_KEEP_ALL_PARTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

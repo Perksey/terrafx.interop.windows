@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfobjects.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFByteStream" access="public" native="struct IMFByteStream : IUnknown" uuid="ad4c1b00-4bf7-422f-9175-756693d9130d" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCapabilities" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwCapabilities">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pdwCapabilities">pdwCapabilities</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLength" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pqwLength">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pqwLength">pqwLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetLength" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="qwLength">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="qwLength">qwLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pqwPosition">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pqwPosition">pqwPosition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetCurrentPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="qwPosition">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="qwPosition">qwPosition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsEndOfStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfEndOfStream">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pfEndOfStream">pfEndOfStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Read" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pb">
+                    <type>byte*</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="pcbRead">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, byte*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pb">pb</param>, <param name="cb">cb</param>, <param name="pcbRead">pcbRead</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginRead" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pb">
+                    <type>byte*</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="pCallback">
+                    <type>IMFAsyncCallback*</type>
+                </param>
+                <param name="punkState">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, byte*, uint, IMFAsyncCallback*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pb">pb</param>, <param name="cb">cb</param>, <param name="pCallback">pCallback</param>, <param name="punkState">punkState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndRead" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResult">
+                    <type>IMFAsyncResult*</type>
+                </param>
+                <param name="pcbRead">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, IMFAsyncResult*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pResult">pResult</param>, <param name="pcbRead">pcbRead</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Write" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pb">
+                    <type>byte*</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="pcbWritten">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, byte*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pb">pb</param>, <param name="cb">cb</param>, <param name="pcbWritten">pcbWritten</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginWrite" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pb">
+                    <type>byte*</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="pCallback">
+                    <type>IMFAsyncCallback*</type>
+                </param>
+                <param name="punkState">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, byte*, uint, IMFAsyncCallback*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pb">pb</param>, <param name="cb">cb</param>, <param name="pCallback">pCallback</param>, <param name="punkState">punkState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndWrite" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResult">
+                    <type>IMFAsyncResult*</type>
+                </param>
+                <param name="pcbWritten">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, IMFAsyncResult*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="pResult">pResult</param>, <param name="pcbWritten">pcbWritten</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Seek" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="SeekOrigin">
+                    <type>MFBYTESTREAM_SEEK_ORIGIN</type>
+                </param>
+                <param name="llSeekOffset">
+                    <type>long</type>
+                </param>
+                <param name="dwSeekFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pqwCurrentPosition">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, MFBYTESTREAM_SEEK_ORIGIN, long, uint, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>, <param name="SeekOrigin">SeekOrigin</param>, <param name="llSeekOffset">llSeekOffset</param>, <param name="dwSeekFlags">dwSeekFlags</param>, <param name="pqwCurrentPosition">pqwCurrentPosition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Flush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Close" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFByteStream*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IMFByteStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

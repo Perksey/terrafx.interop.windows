@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpEnginePronunciation" access="public" native="struct ISpEnginePronunciation : IUnknown" uuid="c360ce4b-76d1-4214-ad68-52657d5083da" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEnginePronunciation*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpEnginePronunciation*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEnginePronunciation*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpEnginePronunciation*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEnginePronunciation*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpEnginePronunciation*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Normalize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszWord">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszLeftContext">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszRightContext">
+                    <type>ushort*</type>
+                </param>
+                <param name="LangID">
+                    <type>ushort</type>
+                </param>
+                <param name="pNormalizationList">
+                    <type>SPNORMALIZATIONLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEnginePronunciation*, ushort*, ushort*, ushort*, ushort, SPNORMALIZATIONLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpEnginePronunciation*)Unsafe.AsPointer(ref this)</param>, <param name="pszWord">pszWord</param>, <param name="pszLeftContext">pszLeftContext</param>, <param name="pszRightContext">pszRightContext</param>, <param name="LangID">LangID</param>, <param name="pNormalizationList">pNormalizationList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPronunciations" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszWord">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszLeftContext">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszRightContext">
+                    <type>ushort*</type>
+                </param>
+                <param name="LangID">
+                    <type>ushort</type>
+                </param>
+                <param name="pEnginePronunciationList">
+                    <type>SPWORDPRONUNCIATIONLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpEnginePronunciation*, ushort*, ushort*, ushort*, ushort, SPWORDPRONUNCIATIONLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpEnginePronunciation*)Unsafe.AsPointer(ref this)</param>, <param name="pszWord">pszWord</param>, <param name="pszLeftContext">pszLeftContext</param>, <param name="pszRightContext">pszRightContext</param>, <param name="LangID">LangID</param>, <param name="pEnginePronunciationList">pEnginePronunciationList</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

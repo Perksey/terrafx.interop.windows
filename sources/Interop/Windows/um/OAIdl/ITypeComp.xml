@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/OAIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITypeComp" access="public" native="struct ITypeComp : IUnknown" uuid="00020403-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITypeComp*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITypeComp*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITypeComp*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITypeComp*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITypeComp*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITypeComp*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Bind" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="szName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lHashVal">
+                    <type>uint</type>
+                </param>
+                <param name="wFlags">
+                    <type>ushort</type>
+                </param>
+                <param name="ppTInfo">
+                    <type>ITypeInfo**</type>
+                </param>
+                <param name="pDescKind">
+                    <type>DESCKIND*</type>
+                </param>
+                <param name="pBindPtr">
+                    <type>BINDPTR*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITypeComp*, ushort*, uint, ushort, ITypeInfo**, DESCKIND*, BINDPTR*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITypeComp*)Unsafe.AsPointer(ref this)</param>, <param name="szName">szName</param>, <param name="lHashVal">lHashVal</param>, <param name="wFlags">wFlags</param>, <param name="ppTInfo">ppTInfo</param>, <param name="pDescKind">pDescKind</param>, <param name="pBindPtr">pBindPtr</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BindType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="szName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lHashVal">
+                    <type>uint</type>
+                </param>
+                <param name="ppTInfo">
+                    <type>ITypeInfo**</type>
+                </param>
+                <param name="ppTComp">
+                    <type>ITypeComp**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITypeComp*, ushort*, uint, ITypeInfo**, ITypeComp**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITypeComp*)Unsafe.AsPointer(ref this)</param>, <param name="szName">szName</param>, <param name="lHashVal">lHashVal</param>, <param name="ppTInfo">ppTInfo</param>, <param name="ppTComp">ppTComp</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

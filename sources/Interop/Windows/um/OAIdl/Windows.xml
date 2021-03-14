@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/OAIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="FADF_AUTO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_STATIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_EMBEDDED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x4)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_FIXEDSIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x10)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_RECORD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x20)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_HAVEIID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x40)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_HAVEVARTYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x80)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_BSTR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x100)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_UNKNOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x200)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_DISPATCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x400)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_VARIANT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x800)
+            </code>
+                </value>
+            </constant>
+            <constant name="FADF_RESERVED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0xf008)
+            </code>
+                </value>
+            </constant>
+            <constant name="PARAMFLAG_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0)
+            </code>
+                </value>
+            </constant>
+            <constant name="PARAMFLAG_FIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="PARAMFLAG_FOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="PARAMFLAG_FLCID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x4)
+            </code>
+                </value>
+            </constant>
+            <constant name="PARAMFLAG_FRETVAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x8)
+            </code>
+                </value>
+            </constant>
+            <constant name="PARAMFLAG_FOPT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x10)
+            </code>
+                </value>
+            </constant>
+            <constant name="PARAMFLAG_FHASDEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x20)
+            </code>
+                </value>
+            </constant>
+            <constant name="PARAMFLAG_FHASCUSTDATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x40)
+            </code>
+                </value>
+            </constant>
+            <constant name="IDLFLAG_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IDLFLAG_FIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x1))
+            </code>
+                </value>
+            </constant>
+            <constant name="IDLFLAG_FOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IDLFLAG_FLCID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x4))
+            </code>
+                </value>
+            </constant>
+            <constant name="IDLFLAG_FRETVAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x8))
+            </code>
+                </value>
+            </constant>
+            <constant name="IMPLTYPEFLAG_FDEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="IMPLTYPEFLAG_FSOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="IMPLTYPEFLAG_FRESTRICTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x4)
+            </code>
+                </value>
+            </constant>
+            <constant name="IMPLTYPEFLAG_FDEFAULTVTABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x8)
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_UNKNOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_VALUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0)
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_PROPERTYPUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-3)
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_NEWENUM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-4)
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_EVALUATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-5)
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_CONSTRUCTOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-6)
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_DESTRUCTOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-7)
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_COLLECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-8)
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_ICreateTypeInfo" value="0x00020405, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ICreateTypeInfo2" value="0x0002040E, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ICreateTypeLib" value="0x00020406, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ICreateTypeLib2" value="0x0002040F, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_IDispatch" value="0x00020400, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_IEnumVARIANT" value="0x00020404, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ITypeComp" value="0x00020403, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ITypeInfo" value="0x00020401, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ITypeInfo2" value="0x00020412, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ITypeLib" value="0x00020402, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ITypeLib2" value="0x00020411, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ITypeChangeEvents" value="0x00020410, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_IErrorInfo" value="0x1CF2B120, 0x547D, 0x101B, 0x8E, 0x65, 0x08, 0x00, 0x2B, 0x2B, 0xD1, 0x19" />
+            <iid name="IID_ICreateErrorInfo" value="0x22F03340, 0x547D, 0x101B, 0x8E, 0x65, 0x08, 0x00, 0x2B, 0x2B, 0xD1, 0x19" />
+            <iid name="IID_ISupportErrorInfo" value="0xDF0B3D60, 0x548F, 0x101B, 0x8E, 0x65, 0x08, 0x00, 0x2B, 0x2B, 0xD1, 0x19" />
+            <iid name="IID_ITypeFactory" value="0x0000002E, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_ITypeMarshal" value="0x0000002D, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_IRecordInfo" value="0x0000002F, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46" />
+            <iid name="IID_IErrorLog" value="0x3127CA40, 0x446E, 0x11CE, 0x81, 0x35, 0x00, 0xAA, 0x00, 0x4B, 0xB8, 0x51" />
+            <iid name="IID_IPropertyBag" value="0x55272A00, 0x42CB, 0x11CE, 0x81, 0x35, 0x00, 0xAA, 0x00, 0x4B, 0xB8, 0x51" />
+            <iid name="IID_ITypeLibRegistrationReader" value="0xED6A8A2A, 0xB160, 0x4E77, 0x8F, 0x73, 0xAA, 0x74, 0x35, 0xCD, 0x5C, 0x27" />
+            <iid name="IID_ITypeLibRegistration" value="0x76A3E735, 0x02DF, 0x4A12, 0x98, 0xEB, 0x04, 0x3A, 0xD3, 0x60, 0x0A, 0xF3" />
+        </class>
+    </namespace>
+</bindings>

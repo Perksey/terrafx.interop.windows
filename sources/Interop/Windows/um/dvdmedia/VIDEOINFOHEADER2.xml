@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dvdmedia.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="VIDEOINFOHEADER2" access="public">
+            <field name="rcSource" access="public">
+                <type native="">RECT</type>
+            </field>
+            <field name="rcTarget" access="public">
+                <type native="">RECT</type>
+            </field>
+            <field name="dwBitRate" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwBitErrorRate" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="AvgTimePerFrame" access="public">
+                <type native="REFERENCE_TIME">long</type>
+            </field>
+            <field name="dwInterlaceFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwCopyProtectFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwPictAspectRatioX" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwPictAspectRatioY" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="tagVIDEOINFOHEADER2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/dvdmedia.h:317:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="dwControlFlags" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.dwControlFlags, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwReserved1" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.dwReserved1, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwReserved2" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="bmiHeader" access="public">
+                <type native="">BITMAPINFOHEADER</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="dwControlFlags" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="dwReserved1" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

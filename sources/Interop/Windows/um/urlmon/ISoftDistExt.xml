@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISoftDistExt" access="public" native="struct ISoftDistExt : IUnknown" uuid="b15b8dc1-c7e1-11d0-8680-00aa00bdcb71" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISoftDistExt*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISoftDistExt*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISoftDistExt*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISoftDistExt*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISoftDistExt*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISoftDistExt*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProcessSoftDist" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="szCDFURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="pSoftDistElement">
+                    <type>IXMLElement*</type>
+                </param>
+                <param name="lpsdi">
+                    <type>SOFTDISTINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISoftDistExt*, ushort*, IXMLElement*, SOFTDISTINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISoftDistExt*)Unsafe.AsPointer(ref this)</param>, <param name="szCDFURL">szCDFURL</param>, <param name="pSoftDistElement">pSoftDistElement</param>, <param name="lpsdi">lpsdi</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFirstCodeBase" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="szCodeBase">
+                    <type>ushort**</type>
+                </param>
+                <param name="dwMaxSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISoftDistExt*, ushort**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISoftDistExt*)Unsafe.AsPointer(ref this)</param>, <param name="szCodeBase">szCodeBase</param>, <param name="dwMaxSize">dwMaxSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNextCodeBase" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="szCodeBase">
+                    <type>ushort**</type>
+                </param>
+                <param name="dwMaxSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISoftDistExt*, ushort**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISoftDistExt*)Unsafe.AsPointer(ref this)</param>, <param name="szCodeBase">szCodeBase</param>, <param name="dwMaxSize">dwMaxSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AsyncInstallDistributionUnit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pvReserved">
+                    <type>void*</type>
+                </param>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="lpcbh">
+                    <type>CODEBASEHOLD*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISoftDistExt*, IBindCtx*, void*, uint, CODEBASEHOLD*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISoftDistExt*)Unsafe.AsPointer(ref this)</param>, <param name="pbc">pbc</param>, <param name="pvReserved">pvReserved</param>, <param name="flags">flags</param>, <param name="lpcbh">lpcbh</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

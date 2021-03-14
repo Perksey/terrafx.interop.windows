@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mmeapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MIXERLINECONTROLSA" access="public" unsafe="true" layout="Sequential" pack="1">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwLineID" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="tagMIXERLINECONTROLSA::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/mmeapi.h:2255:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="dwControlID" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.dwControlID, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwControlType" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.dwControlType, 1));
+        </code>
+                </get>
+            </field>
+            <field name="cControls" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbmxctrl" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pamxctrl" access="public">
+                <type native="LPMIXERCONTROLA">MIXERCONTROLA*</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit" pack="1">
+                <field name="dwControlID" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="dwControlType" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

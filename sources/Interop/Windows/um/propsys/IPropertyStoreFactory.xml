@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/propsys.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IPropertyStoreFactory" access="public" native="struct IPropertyStoreFactory : IUnknown" uuid="bc110b6d-57e8-4148-a9c6-91015ab2f3a5" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreFactory*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IPropertyStoreFactory*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IPropertyStoreFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IPropertyStoreFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyStore" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="flags">
+                    <type>GETPROPERTYSTOREFLAGS</type>
+                </param>
+                <param name="pUnkFactory">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreFactory*, GETPROPERTYSTOREFLAGS, IUnknown*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IPropertyStoreFactory*)Unsafe.AsPointer(ref this)</param>, <param name="flags">flags</param>, <param name="pUnkFactory">pUnkFactory</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyStoreForKeys" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rgKeys">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="cKeys">
+                    <type>uint</type>
+                </param>
+                <param name="flags">
+                    <type>GETPROPERTYSTOREFLAGS</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreFactory*, PROPERTYKEY*, uint, GETPROPERTYSTOREFLAGS, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IPropertyStoreFactory*)Unsafe.AsPointer(ref this)</param>, <param name="rgKeys">rgKeys</param>, <param name="cKeys">cKeys</param>, <param name="flags">flags</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

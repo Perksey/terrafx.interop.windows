@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wingdi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DEVMODEW" access="public" unsafe="true">
+            <field name="dmDeviceName" access="public">
+                <type native="WCHAR [32]" count="32" fixed="_dmDeviceName_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="dmSpecVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="dmDriverVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="dmSize" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="dmDriverExtra" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="dmFields" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous1" access="public">
+                <type native="_devicemodeW::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wingdi.h:2256:5)">_Anonymous1_e__Union</type>
+            </field>
+            <field name="dmOrientation" access="public">
+                <type native="">ref short</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous1.dmOrientation, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmPaperSize" access="public">
+                <type native="">ref short</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous1.dmPaperSize, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmPaperLength" access="public">
+                <type native="">ref short</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous1.dmPaperLength, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmPaperWidth" access="public">
+                <type native="">ref short</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous1.dmPaperWidth, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmScale" access="public">
+                <type native="">ref short</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous1.dmScale, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmCopies" access="public">
+                <type native="">ref short</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous1.dmCopies, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmDefaultSource" access="public">
+                <type native="">ref short</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous1.dmDefaultSource, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmPrintQuality" access="public">
+                <type native="">ref short</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous1.dmPrintQuality, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmPosition" access="public">
+                <type native="">ref POINTL</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous2.dmPosition, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmDisplayOrientation" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous2.dmDisplayOrientation, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmDisplayFixedOutput" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous2.dmDisplayFixedOutput, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmColor" access="public">
+                <type native="">short</type>
+            </field>
+            <field name="dmDuplex" access="public">
+                <type native="">short</type>
+            </field>
+            <field name="dmYResolution" access="public">
+                <type native="">short</type>
+            </field>
+            <field name="dmTTOption" access="public">
+                <type native="">short</type>
+            </field>
+            <field name="dmCollate" access="public">
+                <type native="">short</type>
+            </field>
+            <field name="dmFormName" access="public">
+                <type native="WCHAR [32]" count="32" fixed="_dmFormName_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="dmLogPixels" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="dmBitsPerPel" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmPelsWidth" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmPelsHeight" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous2" access="public">
+                <type native="_devicemodeW::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wingdi.h:2285:5)">_Anonymous2_e__Union</type>
+            </field>
+            <field name="dmDisplayFlags" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.dmDisplayFlags, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmNup" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.dmNup, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dmDisplayFrequency" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmICMMethod" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmICMIntent" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmMediaType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmDitherType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmReserved1" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmReserved2" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmPanningWidth" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dmPanningHeight" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <struct name="_Anonymous1_e__Union" access="public" layout="Explicit">
+                <field name="Anonymous1" access="public" offset="0">
+                    <type native="_devicemodeW::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wingdi.h:2258:7)">_Anonymous1_e__Struct</type>
+                </field>
+                <field name="Anonymous2" access="public" offset="0">
+                    <type native="_devicemodeW::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wingdi.h:2269:7)">_Anonymous2_e__Struct</type>
+                </field>
+                <struct name="_Anonymous1_e__Struct" access="public">
+                    <field name="dmOrientation" access="public">
+                        <type native="">short</type>
+                    </field>
+                    <field name="dmPaperSize" access="public">
+                        <type native="">short</type>
+                    </field>
+                    <field name="dmPaperLength" access="public">
+                        <type native="">short</type>
+                    </field>
+                    <field name="dmPaperWidth" access="public">
+                        <type native="">short</type>
+                    </field>
+                    <field name="dmScale" access="public">
+                        <type native="">short</type>
+                    </field>
+                    <field name="dmCopies" access="public">
+                        <type native="">short</type>
+                    </field>
+                    <field name="dmDefaultSource" access="public">
+                        <type native="">short</type>
+                    </field>
+                    <field name="dmPrintQuality" access="public">
+                        <type native="">short</type>
+                    </field>
+                </struct>
+                <struct name="_Anonymous2_e__Struct" access="public">
+                    <field name="dmPosition" access="public">
+                        <type native="">POINTL</type>
+                    </field>
+                    <field name="dmDisplayOrientation" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="dmDisplayFixedOutput" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                </struct>
+            </struct>
+            <struct name="_Anonymous2_e__Union" access="public" layout="Explicit">
+                <field name="dmDisplayFlags" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="dmNup" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

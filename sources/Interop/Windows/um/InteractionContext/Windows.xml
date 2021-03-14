@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/InteractionContext.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreateInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="DestroyInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="RegisterOutputCallbackInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="outputCallback">
+                    <type>delegate* unmanaged&lt;void*, INTERACTION_CONTEXT_OUTPUT*, void&gt;</type>
+                </param>
+                <param name="clientData">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="RegisterOutputCallbackInteractionContext2" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="outputCallback">
+                    <type>delegate* unmanaged&lt;void*, INTERACTION_CONTEXT_OUTPUT2*, void&gt;</type>
+                </param>
+                <param name="clientData">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="SetInteractionConfigurationInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="configurationCount">
+                    <type>uint</type>
+                </param>
+                <param name="configuration">
+                    <type>INTERACTION_CONTEXT_CONFIGURATION*</type>
+                </param>
+            </function>
+            <function name="GetInteractionConfigurationInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="configurationCount">
+                    <type>uint</type>
+                </param>
+                <param name="configuration">
+                    <type>INTERACTION_CONTEXT_CONFIGURATION*</type>
+                </param>
+            </function>
+            <function name="SetPropertyInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="contextProperty">
+                    <type>INTERACTION_CONTEXT_PROPERTY</type>
+                </param>
+                <param name="value">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetPropertyInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="contextProperty">
+                    <type>INTERACTION_CONTEXT_PROPERTY</type>
+                </param>
+                <param name="value">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetInertiaParameterInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="inertiaParameter">
+                    <type>INERTIA_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float</type>
+                </param>
+            </function>
+            <function name="GetInertiaParameterInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="inertiaParameter">
+                    <type>INERTIA_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float*</type>
+                </param>
+            </function>
+            <function name="SetCrossSlideParametersInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="parameterCount">
+                    <type>uint</type>
+                </param>
+                <param name="crossSlideParameters">
+                    <type>CROSS_SLIDE_PARAMETER*</type>
+                </param>
+            </function>
+            <function name="GetCrossSlideParameterInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="threshold">
+                    <type>CROSS_SLIDE_THRESHOLD</type>
+                </param>
+                <param name="distance">
+                    <type>float*</type>
+                </param>
+            </function>
+            <function name="SetTapParameterInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="parameter">
+                    <type>TAP_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float</type>
+                </param>
+            </function>
+            <function name="GetTapParameterInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="parameter">
+                    <type>TAP_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float*</type>
+                </param>
+            </function>
+            <function name="SetHoldParameterInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="parameter">
+                    <type>HOLD_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float</type>
+                </param>
+            </function>
+            <function name="GetHoldParameterInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="parameter">
+                    <type>HOLD_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float*</type>
+                </param>
+            </function>
+            <function name="SetTranslationParameterInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="parameter">
+                    <type>TRANSLATION_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float</type>
+                </param>
+            </function>
+            <function name="GetTranslationParameterInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="parameter">
+                    <type>TRANSLATION_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float*</type>
+                </param>
+            </function>
+            <function name="SetMouseWheelParameterInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="parameter">
+                    <type>MOUSE_WHEEL_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float</type>
+                </param>
+            </function>
+            <function name="GetMouseWheelParameterInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="parameter">
+                    <type>MOUSE_WHEEL_PARAMETER</type>
+                </param>
+                <param name="value">
+                    <type>float*</type>
+                </param>
+            </function>
+            <function name="ResetInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetStateInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pointerInfo">
+                    <type>POINTER_INFO*</type>
+                </param>
+                <param name="state">
+                    <type>INTERACTION_STATE*</type>
+                </param>
+            </function>
+            <function name="AddPointerInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pointerId">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="RemovePointerInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pointerId">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="ProcessPointerFramesInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="entriesCount">
+                    <type>uint</type>
+                </param>
+                <param name="pointerCount">
+                    <type>uint</type>
+                </param>
+                <param name="pointerInfo">
+                    <type>POINTER_INFO*</type>
+                </param>
+            </function>
+            <function name="BufferPointerPacketsInteractionContext" access="public" lib="ninput" static="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="entriesCount">
+                    <type>uint</type>
+                </param>
+                <param name="pointerInfo">
+                    <type>POINTER_INFO*</type>
+                </param>
+            </function>
+            <function name="ProcessBufferedPacketsInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="ProcessInertiaInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="StopInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="SetPivotInteractionContext" access="public" lib="ninput" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="interactionContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="x">
+                    <type>float</type>
+                </param>
+                <param name="y">
+                    <type>float</type>
+                </param>
+                <param name="radius">
+                    <type>float</type>
+                </param>
+            </function>
+            <constant name="CROSS_SLIDE_THRESHOLD_INVALID_VALUE" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>3.402823466e+38F
+            </code>
+                </value>
+            </constant>
+            <constant name="INERTIA_PARAMETER_INVALID_VALUE" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>3.402823466e+38F
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfmediaengine.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFMediaKeys2" access="public" native="struct IMFMediaKeys2 : IMFMediaKeys" uuid="45892507-ad66-4de2-83a2-acbb13cd8d43" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSession" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="mimeType">
+                    <type>ushort*</type>
+                </param>
+                <param name="initData">
+                    <type>byte*</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="customData">
+                    <type>byte*</type>
+                </param>
+                <param name="cbCustomData">
+                    <type>uint</type>
+                </param>
+                <param name="notify">
+                    <type>IMFMediaKeySessionNotify*</type>
+                </param>
+                <param name="ppSession">
+                    <type>IMFMediaKeySession**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, ushort*, byte*, uint, byte*, uint, IMFMediaKeySessionNotify*, IMFMediaKeySession**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>, <param name="mimeType">mimeType</param>, <param name="initData">initData</param>, <param name="cb">cb</param>, <param name="customData">customData</param>, <param name="cbCustomData">cbCustomData</param>, <param name="notify">notify</param>, <param name="ppSession">ppSession</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_KeySystem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="keySystem">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>, <param name="keySystem">keySystem</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Shutdown" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSuspendNotify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="notify">
+                    <type>IMFCdmSuspendNotify**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, IMFCdmSuspendNotify**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>, <param name="notify">notify</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSession2" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="eSessionType">
+                    <type>MF_MEDIAKEYSESSION_TYPE</type>
+                </param>
+                <param name="pMFMediaKeySessionNotify2">
+                    <type>IMFMediaKeySessionNotify2*</type>
+                </param>
+                <param name="ppSession">
+                    <type>IMFMediaKeySession2**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, MF_MEDIAKEYSESSION_TYPE, IMFMediaKeySessionNotify2*, IMFMediaKeySession2**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>, <param name="eSessionType">eSessionType</param>, <param name="pMFMediaKeySessionNotify2">pMFMediaKeySessionNotify2</param>, <param name="ppSession">ppSession</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetServerCertificate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbServerCertificate">
+                    <type>byte*</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>, <param name="pbServerCertificate">pbServerCertificate</param>, <param name="cb">cb</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDOMException" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="systemCode">
+                    <type>int</type>
+                </param>
+                <param name="code">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaKeys2*, int, int*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFMediaKeys2*)Unsafe.AsPointer(ref this)</param>, <param name="systemCode">systemCode</param>, <param name="code">code</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IInternetSession" access="public" native="struct IInternetSession : IUnknown" uuid="79eac9e7-baf9-11ce-8c82-00aa004ba90b" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterNameSpace" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCF">
+                    <type>IClassFactory*</type>
+                </param>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pwzProtocol">
+                    <type>ushort*</type>
+                </param>
+                <param name="cPatterns">
+                    <type>uint</type>
+                </param>
+                <param name="ppwzPatterns">
+                    <type>ushort**</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, IClassFactory*, Guid*, ushort*, uint, ushort**, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>, <param name="pCF">pCF</param>, <param name="rclsid">rclsid</param>, <param name="pwzProtocol">pwzProtocol</param>, <param name="cPatterns">cPatterns</param>, <param name="ppwzPatterns">ppwzPatterns</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterNameSpace" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCF">
+                    <type>IClassFactory*</type>
+                </param>
+                <param name="pszProtocol">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, IClassFactory*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>, <param name="pCF">pCF</param>, <param name="pszProtocol">pszProtocol</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterMimeFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCF">
+                    <type>IClassFactory*</type>
+                </param>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pwzType">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, IClassFactory*, Guid*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>, <param name="pCF">pCF</param>, <param name="rclsid">rclsid</param>, <param name="pwzType">pwzType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterMimeFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCF">
+                    <type>IClassFactory*</type>
+                </param>
+                <param name="pwzType">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, IClassFactory*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>, <param name="pCF">pCF</param>, <param name="pwzType">pwzType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBinding" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="szUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="pUnkOuter">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppUnk">
+                    <type>IUnknown**</type>
+                </param>
+                <param name="ppOInetProt">
+                    <type>IInternetProtocol**</type>
+                </param>
+                <param name="dwOption">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, IBindCtx*, ushort*, IUnknown*, IUnknown**, IInternetProtocol**, uint, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>, <param name="pBC">pBC</param>, <param name="szUrl">szUrl</param>, <param name="pUnkOuter">pUnkOuter</param>, <param name="ppUnk">ppUnk</param>, <param name="ppOInetProt">ppOInetProt</param>, <param name="dwOption">dwOption</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSessionOption" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOption">
+                    <type>uint</type>
+                </param>
+                <param name="pBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="dwBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, uint, void*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>, <param name="dwOption">dwOption</param>, <param name="pBuffer">pBuffer</param>, <param name="dwBufferLength">dwBufferLength</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSessionOption" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOption">
+                    <type>uint</type>
+                </param>
+                <param name="pBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="pdwBufferLength">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSession*, uint, void*, uint*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IInternetSession*)Unsafe.AsPointer(ref this)</param>, <param name="dwOption">dwOption</param>, <param name="pBuffer">pBuffer</param>, <param name="pdwBufferLength">pdwBufferLength</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

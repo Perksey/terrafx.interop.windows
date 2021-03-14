@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincodec.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WICRawToneCurve" access="public">
+            <field name="cPoints" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="aPoints" access="public">
+                <type native="WICRawToneCurvePoint [1]" count="1" fixed="_aPoints_e__FixedBuffer">WICRawToneCurvePoint</type>
+            </field>
+            <struct name="_aPoints_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">WICRawToneCurvePoint</type>
+                </field>
+                <indexer access="public">
+                    <type>ref WICRawToneCurvePoint</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;WICRawToneCurvePoint&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

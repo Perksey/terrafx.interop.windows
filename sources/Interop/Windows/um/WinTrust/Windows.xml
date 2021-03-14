@@ -1,0 +1,1474 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinTrust.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="WinVerifyTrust" access="public" lib="wintrust" static="true">
+                <type native="LONG">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pgActionID">
+                    <type>Guid*</type>
+                </param>
+                <param name="pWVTData">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="WinVerifyTrustEx" access="public" lib="wintrust" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pgActionID">
+                    <type>Guid*</type>
+                </param>
+                <param name="pWinTrustData">
+                    <type>WINTRUST_DATA*</type>
+                </param>
+            </function>
+            <function name="WintrustGetRegPolicyFlags" access="public" lib="wintrust" static="true">
+                <type>void</type>
+                <param name="pdwPolicyFlags">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="WintrustSetRegPolicyFlags" access="public" lib="wintrust" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="dwPolicyFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WintrustAddActionID" access="public" lib="wintrust" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pgActionID">
+                    <type>Guid*</type>
+                </param>
+                <param name="fdwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="psProvInfo">
+                    <type>CRYPT_REGISTER_ACTIONID*</type>
+                </param>
+            </function>
+            <function name="WintrustRemoveActionID" access="public" lib="wintrust" static="true">
+                <type native="BOOL">int</type>
+                <param name="pgActionID">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="WintrustLoadFunctionPointers" access="public" lib="wintrust" static="true">
+                <type native="BOOL">int</type>
+                <param name="pgActionID">
+                    <type>Guid*</type>
+                </param>
+                <param name="pPfns">
+                    <type>CRYPT_PROVIDER_FUNCTIONS*</type>
+                </param>
+            </function>
+            <function name="WintrustAddDefaultForUsage" access="public" lib="wintrust" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pszUsageOID">
+                    <type>sbyte*</type>
+                </param>
+                <param name="psDefUsage">
+                    <type>CRYPT_PROVIDER_REGDEFUSAGE*</type>
+                </param>
+            </function>
+            <function name="WintrustGetDefaultForUsage" access="public" lib="wintrust" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="dwAction">
+                    <type>uint</type>
+                </param>
+                <param name="pszUsageOID">
+                    <type>sbyte*</type>
+                </param>
+                <param name="psUsage">
+                    <type>CRYPT_PROVIDER_DEFUSAGE*</type>
+                </param>
+            </function>
+            <function name="WTHelperGetProvSignerFromChain" access="public" lib="wintrust" static="true">
+                <type native="CRYPT_PROVIDER_SGNR *">CRYPT_PROVIDER_SGNR*</type>
+                <param name="pProvData">
+                    <type>CRYPT_PROVIDER_DATA*</type>
+                </param>
+                <param name="idxSigner">
+                    <type>uint</type>
+                </param>
+                <param name="fCounterSigner">
+                    <type>int</type>
+                </param>
+                <param name="idxCounterSigner">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WTHelperGetProvCertFromChain" access="public" lib="wintrust" static="true">
+                <type native="CRYPT_PROVIDER_CERT *">CRYPT_PROVIDER_CERT*</type>
+                <param name="pSgnr">
+                    <type>CRYPT_PROVIDER_SGNR*</type>
+                </param>
+                <param name="idxCert">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WTHelperProvDataFromStateData" access="public" lib="wintrust" static="true">
+                <type native="CRYPT_PROVIDER_DATA *">CRYPT_PROVIDER_DATA*</type>
+                <param name="hStateData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WTHelperGetProvPrivateDataFromChain" access="public" lib="wintrust" static="true">
+                <type native="CRYPT_PROVIDER_PRIVDATA *">CRYPT_PROVIDER_PRIVDATA*</type>
+                <param name="pProvData">
+                    <type>CRYPT_PROVIDER_DATA*</type>
+                </param>
+                <param name="pgProviderID">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="WTHelperCertIsSelfSigned" access="public" lib="wintrust" static="true">
+                <type native="BOOL">int</type>
+                <param name="dwEncoding">
+                    <type>uint</type>
+                </param>
+                <param name="pCert">
+                    <type>CERT_INFO*</type>
+                </param>
+            </function>
+            <function name="WTHelperCertCheckValidSignature" access="public" lib="wintrust" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pProvData">
+                    <type>CRYPT_PROVIDER_DATA*</type>
+                </param>
+            </function>
+            <function name="OpenPersonalTrustDBDialogEx" access="public" lib="wintrust" static="true">
+                <type native="BOOL">int</type>
+                <param name="hwndParent">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pvReserved">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="OpenPersonalTrustDBDialog" access="public" lib="wintrust" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hwndParent">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WintrustSetDefaultIncludePEPageHashes" access="public" lib="wintrust" static="true" unsafe="true">
+                <type>void</type>
+                <param name="fIncludePEPageHashes">
+                    <type>int</type>
+                </param>
+            </function>
+            <constant name="WINTRUST_CONFIG_REGPATH" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Software\\Microsoft\\Cryptography\\Wintrust\\Config"
+            </code>
+                </value>
+            </constant>
+            <constant name="WINTRUST_MAX_HEADER_BYTES_TO_MAP_VALUE_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"MaxHeaderBytesToMap"
+            </code>
+                </value>
+            </constant>
+            <constant name="WINTRUST_MAX_HEADER_BYTES_TO_MAP_DEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00A00000
+            </code>
+                </value>
+            </constant>
+            <constant name="WINTRUST_MAX_HASH_BYTES_TO_MAP_VALUE_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"MaxHashBytesToMap"
+            </code>
+                </value>
+            </constant>
+            <constant name="WINTRUST_MAX_HASH_BYTES_TO_MAP_DEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_UI_ALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_UI_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_UI_NOBAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_UI_NOGOOD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_REVOKE_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_REVOKE_WHOLECHAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_CHOICE_FILE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_CHOICE_CATALOG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_CHOICE_BLOB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_CHOICE_SIGNER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_CHOICE_CERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_STATEACTION_IGNORE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_STATEACTION_VERIFY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_STATEACTION_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_STATEACTION_AUTO_CACHE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_STATEACTION_AUTO_CACHE_FLUSH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_PROV_FLAGS_MASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000FFFF
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_USE_IE4_TRUST_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_NO_IE4_CHAIN_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_NO_POLICY_USAGE_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_REVOCATION_CHECK_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_REVOCATION_CHECK_END_CERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_REVOCATION_CHECK_CHAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_REVOCATION_CHECK_CHAIN_EXCLUDE_ROOT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_SAFER_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_HASH_ONLY_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_USE_DEFAULT_OSVER_CHECK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_LIFETIME_SIGNING_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_CACHE_ONLY_URL_RETRIEVAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_DISABLE_MD2_MD4" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_MOTW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_CODE_INTEGRITY_DRIVER_MODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_UICONTEXT_EXECUTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="WTD_UICONTEXT_INSTALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_VERIFY_SPECIFIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_GET_SECONDARY_SIG_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_VERIFY_SEALING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_INPUT_FLAG_MASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000007
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_OUT_SEALING_STATUS_VERIFIED" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_OUT_HAS_SEALING_INTENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_OUT_FILE_SUPPORTS_SEAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20000000
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_OUTPUT_FLAG_MASK" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xe0000000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTCI_DONT_OPEN_STORES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WTCI_OPEN_ONLY_ROOT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="WTCI_USE_LOCAL_MACHINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_TRUSTTEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_TESTCANBEVALID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_IGNOREEXPIRATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_IGNOREREVOKATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_OFFLINEOK_IND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_OFFLINEOK_COM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_OFFLINEOKNBU_IND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_OFFLINEOKNBU_COM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_VERIFY_V1_OFF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_IGNOREREVOCATIONONTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="WTPF_ALLOWONLYPERTRUST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_WVTPARAMS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_FILEIO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_SIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_SIPSUBJINFO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_CATALOGFILE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>6
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_CERTSTORE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>7
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MESSAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MSG_SIGNERCOUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>9
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MSG_INNERCNTTYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>10
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MSG_INNERCNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>11
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MSG_STORE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>12
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MSG_SIGNERINFO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>13
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MSG_SIGNERCERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>14
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MSG_CERTCHAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>15
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MSG_COUNTERSIGINFO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>16
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_MSG_COUNTERSIGCERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>17
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_VERIFY_MSGHASH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>18
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_VERIFY_MSGINDIRECTDATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>19
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_FINAL_WVTINIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>30
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_FINAL_INITPROV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>31
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_FINAL_OBJPROV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>32
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_FINAL_SIGPROV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>33
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_FINAL_CERTPROV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>34
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_FINAL_CERTCHKPROV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>35
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_FINAL_POLICYPROV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>36
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_STEP_FINAL_UIPROV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>37
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUSTERROR_MAX_STEPS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>38
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_CHOICE_SIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_USE_NT5_CHAIN_FLAG" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_REVOCATION_CHECK_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_REVOCATION_CHECK_END_CERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_REVOCATION_CHECK_CHAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_REVOCATION_CHECK_CHAIN_EXCLUDE_ROOT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_RETURN_LOWER_QUALITY_CHAINS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_UISTATE_MODE_PROMPT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_UISTATE_MODE_BLOCK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_UISTATE_MODE_ALLOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="CPD_UISTATE_MODE_MASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_OBJTRUST_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_SIGTRUST_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="WSS_CERTTRUST_SUPPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="SGNR_TYPE_TIMESTAMP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="CERT_CONFIDENCE_SIG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="CERT_CONFIDENCE_TIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="CERT_CONFIDENCE_TIMENEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="CERT_CONFIDENCE_AUTHIDEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="CERT_CONFIDENCE_HYGIENE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="CERT_CONFIDENCE_HIGHEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x11111000
+            </code>
+                </value>
+            </constant>
+            <constant name="WT_CURRENT_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="WT_PROVIDER_DLL_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"WINTRUST.DLL"
+            </code>
+                </value>
+            </constant>
+            <constant name="WT_PROVIDER_CERTTRUST_FUNCTION" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"WintrustCertificateTrust"
+            </code>
+                </value>
+            </constant>
+            <constant name="WT_ADD_ACTION_ID_RET_RESULT_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="DWACTION_ALLOCANDFILL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="DWACTION_FREE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="szOID_TRUSTED_CODESIGNING_CA_LIST" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x32, 0x2E, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="szOID_TRUSTED_CLIENT_AUTH_CA_LIST" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x32, 0x2E, 0x32, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="szOID_TRUSTED_SERVER_AUTH_CA_LIST" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x32, 0x2E, 0x33, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_COMMON_NAME_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x32, 0x2E, 0x35, 0x2E, 0x34, 0x2E, 0x33, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_TIME_STAMP_REQUEST_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x33, 0x2E, 0x32, 0x2E, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_INDIRECT_DATA_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x34, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_SP_AGENCY_INFO_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x31, 0x30, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_STATEMENT_TYPE_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x31, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_SP_OPUS_INFO_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x31, 0x32, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_CERT_EXTENSIONS_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x31, 0x34, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_PE_IMAGE_DATA_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x31, 0x35, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_RAW_FILE_DATA_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x31, 0x38, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_STRUCTURED_STORAGE_DATA_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x31, 0x39, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_JAVA_CLASS_DATA_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x32, 0x30, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_INDIVIDUAL_SP_KEY_PURPOSE_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x32, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_COMMERCIAL_SP_KEY_PURPOSE_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x32, 0x32, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_CAB_DATA_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x32, 0x35, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_GLUE_RDN_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x32, 0x35, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_MINIMAL_CRITERIA_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x32, 0x36, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_FINANCIAL_CRITERIA_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x32, 0x37, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_LINK_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x32, 0x38, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_SIGINFO_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x31, 0x2E, 0x33, 0x30, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_PE_IMAGE_PAGE_HASHES_V1_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x33, 0x2E, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_PE_IMAGE_PAGE_HASHES_V2_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x33, 0x2E, 0x32, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="szOID_NESTED_SIGNATURE" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x34, 0x2E, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="szOID_INTENT_TO_SEAL" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x34, 0x2E, 0x32, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="szOID_SEALING_SIGNATURE" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x34, 0x2E, 0x33, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="szOID_SEALING_TIMESTAMP" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x34, 0x2E, 0x34, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="szOID_ENHANCED_HASH" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x35, 0x2E, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_RELAXED_PE_MARKER_CHECK_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x36, 0x2E, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_ENCRYPTED_DIGEST_RETRY_COUNT_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x32, 0x2E, 0x36, 0x2E, 0x32, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="szOID_PKCS_9_SEQUENCE_NUMBER" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x32, 0x2E, 0x38, 0x34, 0x30, 0x2E, 0x31, 0x31, 0x33, 0x35, 0x34, 0x39, 0x2E, 0x31, 0x2E, 0x39, 0x2E, 0x32, 0x35, 0x2E, 0x34, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="CAT_NAMEVALUE_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x31, 0x32, 0x2E, 0x32, 0x2E, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="CAT_MEMBERINFO_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x31, 0x32, 0x2E, 0x32, 0x2E, 0x32, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="CAT_MEMBERINFO2_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x31, 0x32, 0x2E, 0x32, 0x2E, 0x33, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_WINDOWS_HELLO_COMPATIBILITY_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x31, 0x30, 0x2E, 0x34, 0x31, 0x2E, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_NATURAL_AUTH_PLUGIN_OBJID" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x31, 0x2E, 0x33, 0x2E, 0x36, 0x2E, 0x31, 0x2E, 0x34, 0x2E, 0x31, 0x2E, 0x33, 0x31, 0x31, 0x2E, 0x39, 0x36, 0x2E, 0x31, 0x2E, 0x31, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_SP_AGENCY_INFO_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_MINIMAL_CRITERIA_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2001)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_FINANCIAL_CRITERIA_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2002)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_INDIRECT_DATA_CONTENT_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2003)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_PE_IMAGE_DATA_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2004)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_LINK_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2005)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_STATEMENT_TYPE_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2006)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_SP_OPUS_INFO_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2007)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_CAB_DATA_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2008)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_JAVA_CLASS_DATA_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2009)
+            </code>
+                </value>
+            </constant>
+            <constant name="INTENT_TO_SEAL_ATTRIBUTE_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2010)
+            </code>
+                </value>
+            </constant>
+            <constant name="SEALING_SIGNATURE_ATTRIBUTE_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2011)
+            </code>
+                </value>
+            </constant>
+            <constant name="SEALING_TIMESTAMP_ATTRIBUTE_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2012)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_SIGINFO_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2130)
+            </code>
+                </value>
+            </constant>
+            <constant name="CAT_NAMEVALUE_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2221)
+            </code>
+                </value>
+            </constant>
+            <constant name="CAT_MEMBERINFO_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2222)
+            </code>
+                </value>
+            </constant>
+            <constant name="CAT_MEMBERINFO2_STRUCT" access="public">
+                <type primitive="False">sbyte*</type>
+                <value>
+                    <code>
+                        <value></value>((sbyte*)2223)
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_UUID_LENGTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>16
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_URL_LINK_CHOICE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_MONIKER_LINK_CHOICE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_FILE_LINK_CHOICE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="WIN_CERT_REVISION_1_0" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0100)
+            </code>
+                </value>
+            </constant>
+            <constant name="WIN_CERT_REVISION_2_0" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0200)
+            </code>
+                </value>
+            </constant>
+            <constant name="WIN_CERT_TYPE_X509" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0001)
+            </code>
+                </value>
+            </constant>
+            <constant name="WIN_CERT_TYPE_PKCS_SIGNED_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0002)
+            </code>
+                </value>
+            </constant>
+            <constant name="WIN_CERT_TYPE_RESERVED_1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0003)
+            </code>
+                </value>
+            </constant>
+            <constant name="WIN_CERT_TYPE_TS_STACK_SIGNED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0004)
+            </code>
+                </value>
+            </constant>
+            <constant name="WT_TRUSTDBDIALOG_NO_UI_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WT_TRUSTDBDIALOG_ONLY_PUB_TAB_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="WT_TRUSTDBDIALOG_WRITE_LEGACY_REG_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="WT_TRUSTDBDIALOG_WRITE_IEAK_STORE_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

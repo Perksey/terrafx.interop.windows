@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/combaseapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CoGetMalloc" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwMemContext">
+                    <type>uint</type>
+                </param>
+                <param name="ppMalloc">
+                    <type>IMalloc**</type>
+                </param>
+            </function>
+            <function name="CreateStreamOnHGlobal" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hGlobal">
+                    <type>IntPtr</type>
+                </param>
+                <param name="fDeleteOnRelease">
+                    <type>int</type>
+                </param>
+                <param name="ppstm">
+                    <type>IStream**</type>
+                </param>
+            </function>
+            <function name="GetHGlobalFromStream" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pstm">
+                    <type>IStream*</type>
+                </param>
+                <param name="phglobal">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="CoUninitialize" access="public" lib="Ole32" static="true" unsafe="true">
+                <type>void</type>
+            </function>
+            <function name="CoGetCurrentProcess" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="CoInitializeEx" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pvReserved">
+                    <type>void*</type>
+                </param>
+                <param name="dwCoInit">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoGetCallerTID" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpdwTID">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CoGetCurrentLogicalThreadId" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pguid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CoGetContextToken" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pToken">
+                    <type>nuint*</type>
+                </param>
+            </function>
+            <function name="CoGetDefaultContext" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="aptType">
+                    <type>APTTYPE</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CoGetApartmentType" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAptType">
+                    <type>APTTYPE*</type>
+                </param>
+                <param name="pAptQualifier">
+                    <type>APTTYPEQUALIFIER*</type>
+                </param>
+            </function>
+            <function name="CoDecodeProxy" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwClientPid">
+                    <type>uint</type>
+                </param>
+                <param name="ui64ProxyAddress">
+                    <type>ulong</type>
+                </param>
+                <param name="pServerInformation">
+                    <type>ServerInformation*</type>
+                </param>
+            </function>
+            <function name="CoIncrementMTAUsage" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pCookie">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="CoDecrementMTAUsage" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Cookie">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="CoAllowUnmarshalerCLSID" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CoGetObjectContext" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CoGetClassObject" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwClsContext">
+                    <type>uint</type>
+                </param>
+                <param name="pvReserved">
+                    <type>void*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CoRegisterClassObject" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwClsContext">
+                    <type>uint</type>
+                </param>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="lpdwRegister">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CoRevokeClassObject" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwRegister">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoResumeClassObjects" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="CoSuspendClassObjects" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="CoAddRefServerProcess" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="ULONG">uint</type>
+            </function>
+            <function name="CoReleaseServerProcess" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="ULONG">uint</type>
+            </function>
+            <function name="CoGetPSClsid" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pClsid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CoRegisterPSClsid" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CoRegisterSurrogate" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSurrogate">
+                    <type>ISurrogate*</type>
+                </param>
+            </function>
+            <function name="CoGetMarshalSizeMax" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pulSize">
+                    <type>uint*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwDestContext">
+                    <type>uint</type>
+                </param>
+                <param name="pvDestContext">
+                    <type>void*</type>
+                </param>
+                <param name="mshlflags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoMarshalInterface" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwDestContext">
+                    <type>uint</type>
+                </param>
+                <param name="pvDestContext">
+                    <type>void*</type>
+                </param>
+                <param name="mshlflags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoUnmarshalInterface" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CoMarshalHresult" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pstm">
+                    <type>IStream*</type>
+                </param>
+                <param name="hresult">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="CoUnmarshalHresult" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pstm">
+                    <type>IStream*</type>
+                </param>
+                <param name="phresult">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="CoReleaseMarshalData" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+            </function>
+            <function name="CoDisconnectObject" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoLockObjectExternal" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="fLock">
+                    <type>int</type>
+                </param>
+                <param name="fLastUnlockReleases">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="CoGetStandardMarshal" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwDestContext">
+                    <type>uint</type>
+                </param>
+                <param name="pvDestContext">
+                    <type>void*</type>
+                </param>
+                <param name="mshlflags">
+                    <type>uint</type>
+                </param>
+                <param name="ppMarshal">
+                    <type>IMarshal**</type>
+                </param>
+            </function>
+            <function name="CoGetStdMarshalEx" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnkOuter">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="smexflags">
+                    <type>uint</type>
+                </param>
+                <param name="ppUnkInner">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <function name="CoIsHandlerConnected" access="public" lib="Ole32" static="true">
+                <type native="BOOL">int</type>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <function name="CoMarshalInterThreadInterfaceInStream" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppStm">
+                    <type>IStream**</type>
+                </param>
+            </function>
+            <function name="CoGetInterfaceAndReleaseStream" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <param name="iid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CoCreateFreeThreadedMarshaler" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="punkOuter">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppunkMarshal">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <function name="CoFreeUnusedLibraries" access="public" lib="Ole32" static="true" unsafe="true">
+                <type>void</type>
+            </function>
+            <function name="CoFreeUnusedLibrariesEx" access="public" lib="combase" static="true" unsafe="true">
+                <type>void</type>
+                <param name="dwUnloadDelay">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoDisconnectContext" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwTimeout">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInitializeSecurity" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSecDesc">
+                    <type>void*</type>
+                </param>
+                <param name="cAuthSvc">
+                    <type>int</type>
+                </param>
+                <param name="asAuthSvc">
+                    <type>SOLE_AUTHENTICATION_SERVICE*</type>
+                </param>
+                <param name="pReserved1">
+                    <type>void*</type>
+                </param>
+                <param name="dwAuthnLevel">
+                    <type>uint</type>
+                </param>
+                <param name="dwImpLevel">
+                    <type>uint</type>
+                </param>
+                <param name="pAuthList">
+                    <type>void*</type>
+                </param>
+                <param name="dwCapabilities">
+                    <type>uint</type>
+                </param>
+                <param name="pReserved3">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="CoGetCallContext" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppInterface">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CoQueryProxyBlanket" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pProxy">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pwAuthnSvc">
+                    <type>uint*</type>
+                </param>
+                <param name="pAuthzSvc">
+                    <type>uint*</type>
+                </param>
+                <param name="pServerPrincName">
+                    <type>ushort**</type>
+                </param>
+                <param name="pAuthnLevel">
+                    <type>uint*</type>
+                </param>
+                <param name="pImpLevel">
+                    <type>uint*</type>
+                </param>
+                <param name="pAuthInfo">
+                    <type>void**</type>
+                </param>
+                <param name="pCapabilites">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CoSetProxyBlanket" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pProxy">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwAuthnSvc">
+                    <type>uint</type>
+                </param>
+                <param name="dwAuthzSvc">
+                    <type>uint</type>
+                </param>
+                <param name="pServerPrincName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwAuthnLevel">
+                    <type>uint</type>
+                </param>
+                <param name="dwImpLevel">
+                    <type>uint</type>
+                </param>
+                <param name="pAuthInfo">
+                    <type>void*</type>
+                </param>
+                <param name="dwCapabilities">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoCopyProxy" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pProxy">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppCopy">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <function name="CoQueryClientBlanket" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAuthnSvc">
+                    <type>uint*</type>
+                </param>
+                <param name="pAuthzSvc">
+                    <type>uint*</type>
+                </param>
+                <param name="pServerPrincName">
+                    <type>ushort**</type>
+                </param>
+                <param name="pAuthnLevel">
+                    <type>uint*</type>
+                </param>
+                <param name="pImpLevel">
+                    <type>uint*</type>
+                </param>
+                <param name="pPrivs">
+                    <type>void**</type>
+                </param>
+                <param name="pCapabilities">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CoImpersonateClient" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="CoRevertToSelf" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="CoQueryAuthenticationServices" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pcAuthSvc">
+                    <type>uint*</type>
+                </param>
+                <param name="asAuthSvc">
+                    <type>SOLE_AUTHENTICATION_SERVICE**</type>
+                </param>
+            </function>
+            <function name="CoSwitchCallContext" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pNewObject">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppOldObject">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <function name="CoCreateInstance" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnkOuter">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwClsContext">
+                    <type>uint</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CoCreateInstanceEx" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="Clsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="punkOuter">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwClsCtx">
+                    <type>uint</type>
+                </param>
+                <param name="pServerInfo">
+                    <type>COSERVERINFO*</type>
+                </param>
+                <param name="dwCount">
+                    <type>uint</type>
+                </param>
+                <param name="pResults">
+                    <type>MULTI_QI*</type>
+                </param>
+            </function>
+            <function name="CoCreateInstanceFromApp" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="Clsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="punkOuter">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwClsCtx">
+                    <type>uint</type>
+                </param>
+                <param name="reserved">
+                    <type>void*</type>
+                </param>
+                <param name="dwCount">
+                    <type>uint</type>
+                </param>
+                <param name="pResults">
+                    <type>MULTI_QI*</type>
+                </param>
+            </function>
+            <function name="CoRegisterActivationFilter" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pActivationFilter">
+                    <type>IActivationFilter*</type>
+                </param>
+            </function>
+            <function name="CoGetCancelObject" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwThreadId">
+                    <type>uint</type>
+                </param>
+                <param name="iid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppUnk">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CoSetCancelObject" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <function name="CoCancelCall" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwThreadId">
+                    <type>uint</type>
+                </param>
+                <param name="ulTimeout">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoTestCancel" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="CoEnableCallCancellation" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pReserved">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="CoDisableCallCancellation" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pReserved">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="StringFromCLSID" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="lplpsz">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="CLSIDFromString" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpsz">
+                    <type>ushort*</type>
+                </param>
+                <param name="pclsid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="StringFromIID" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="lplpsz">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="IIDFromString" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpsz">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpiid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="ProgIDFromCLSID" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="lplpszProgID">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="CLSIDFromProgID" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpszProgID">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpclsid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="StringFromGUID2" access="public" lib="Ole32" static="true">
+                <type>int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="lpsz">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchMax">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="CoCreateGuid" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pguid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="PropVariantCopy" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pvarDest">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="pvarSrc">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="PropVariantClear" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="FreePropVariantArray" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="cVariants">
+                    <type>uint</type>
+                </param>
+                <param name="rgvars">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="CoWaitForMultipleHandles" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwTimeout">
+                    <type>uint</type>
+                </param>
+                <param name="cHandles">
+                    <type>uint</type>
+                </param>
+                <param name="pHandles">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="lpdwindex">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CoWaitForMultipleObjects" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwTimeout">
+                    <type>uint</type>
+                </param>
+                <param name="cHandles">
+                    <type>uint</type>
+                </param>
+                <param name="pHandles">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="lpdwindex">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CoGetTreatAsClass" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="clsidOld">
+                    <type>Guid*</type>
+                </param>
+                <param name="pClsidNew">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CoInvalidateRemoteMachineBindings" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszMachineName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="RoGetAgileReference" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="options">
+                    <type>AgileReferenceOptions</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppAgileReference">
+                    <type>IAgileReference**</type>
+                </param>
+            </function>
+            <function name="DllGetClassObject" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="DllCanUnloadNow" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="CoTaskMemAlloc" access="public" lib="Ole32" static="true">
+                <type native="LPVOID">void*</type>
+                <param name="cb">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="CoTaskMemRealloc" access="public" lib="Ole32" static="true">
+                <type native="LPVOID">void*</type>
+                <param name="pv">
+                    <type>void*</type>
+                </param>
+                <param name="cb">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="CoTaskMemFree" access="public" lib="Ole32" static="true">
+                <type>void</type>
+                <param name="pv">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="CoFileTimeNow" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpFileTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="CLSIDFromProgIDEx" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpszProgID">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpclsid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CoRegisterDeviceCatalog" access="public" lib="Ole32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="deviceInstanceId">
+                    <type>ushort*</type>
+                </param>
+                <param name="cookie">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="CoRevokeDeviceCatalog" access="public" lib="Ole32" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cookie">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <constant name="CLSCTX_INPROC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>((int)CLSCTX_INPROC_SERVER | (int)CLSCTX_INPROC_HANDLER)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSCTX_ALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>
+                        <value></value>
+                        <value></value>((int)CLSCTX_INPROC_SERVER | (int)CLSCTX_INPROC_HANDLER | (int)CLSCTX_LOCAL_SERVER | (int)CLSCTX_REMOTE_SERVER)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSCTX_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>
+                        <value></value>
+                        <value></value>((int)CLSCTX_INPROC_SERVER | (int)CLSCTX_LOCAL_SERVER | (int)CLSCTX_REMOTE_SERVER)
+            </code>
+                </value>
+            </constant>
+            <constant name="_CRT_INTERNAL_COMBASE_SYMBOL_PREFIX" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x5F, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="COM_RIGHTS_EXECUTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="COM_RIGHTS_EXECUTE_LOCAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="COM_RIGHTS_EXECUTE_REMOTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="COM_RIGHTS_ACTIVATE_LOCAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="COM_RIGHTS_ACTIVATE_REMOTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>16
+            </code>
+                </value>
+            </constant>
+            <constant name="COM_RIGHTS_RESERVED1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>32
+            </code>
+                </value>
+            </constant>
+            <constant name="COM_RIGHTS_RESERVED2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>64
+            </code>
+                </value>
+            </constant>
+            <constant name="CWMO_MAX_HANDLES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>56
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

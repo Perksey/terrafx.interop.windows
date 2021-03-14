@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISurrogateService" access="public" native="struct ISurrogateService : IUnknown" uuid="000001d4-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISurrogateService*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISurrogateService*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISurrogateService*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISurrogateService*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISurrogateService*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISurrogateService*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Init" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguidProcessID">
+                    <type>Guid*</type>
+                </param>
+                <param name="pProcessLock">
+                    <type>IProcessLock*</type>
+                </param>
+                <param name="pfApplicationAware">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISurrogateService*, Guid*, IProcessLock*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISurrogateService*)Unsafe.AsPointer(ref this)</param>, <param name="rguidProcessID">rguidProcessID</param>, <param name="pProcessLock">pProcessLock</param>, <param name="pfApplicationAware">pfApplicationAware</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ApplicationLaunch" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguidApplID">
+                    <type>Guid*</type>
+                </param>
+                <param name="appType">
+                    <type>ApplicationType</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISurrogateService*, Guid*, ApplicationType, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISurrogateService*)Unsafe.AsPointer(ref this)</param>, <param name="rguidApplID">rguidApplID</param>, <param name="appType">appType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ApplicationFree" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguidApplID">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISurrogateService*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISurrogateService*)Unsafe.AsPointer(ref this)</param>, <param name="rguidApplID">rguidApplID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CatalogRefresh" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISurrogateService*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISurrogateService*)Unsafe.AsPointer(ref this)</param>, <param name="ulReserved">ulReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProcessShutdown" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="shutdownType">
+                    <type>ShutdownType</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISurrogateService*, ShutdownType, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISurrogateService*)Unsafe.AsPointer(ref this)</param>, <param name="shutdownType">shutdownType</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

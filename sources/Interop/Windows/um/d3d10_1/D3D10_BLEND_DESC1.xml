@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d10_1.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D10_BLEND_DESC1" access="public">
+            <field name="AlphaToCoverageEnable" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="IndependentBlendEnable" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="RenderTarget" access="public">
+                <type native="D3D10_RENDER_TARGET_BLEND_DESC1 [8]" count="8" fixed="_RenderTarget_e__FixedBuffer">D3D10_RENDER_TARGET_BLEND_DESC1</type>
+            </field>
+            <struct name="_RenderTarget_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">D3D10_RENDER_TARGET_BLEND_DESC1</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">D3D10_RENDER_TARGET_BLEND_DESC1</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">D3D10_RENDER_TARGET_BLEND_DESC1</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">D3D10_RENDER_TARGET_BLEND_DESC1</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">D3D10_RENDER_TARGET_BLEND_DESC1</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">D3D10_RENDER_TARGET_BLEND_DESC1</type>
+                </field>
+                <field name="e6" access="public">
+                    <type native="">D3D10_RENDER_TARGET_BLEND_DESC1</type>
+                </field>
+                <field name="e7" access="public">
+                    <type native="">D3D10_RENDER_TARGET_BLEND_DESC1</type>
+                </field>
+                <indexer access="public">
+                    <type>ref D3D10_RENDER_TARGET_BLEND_DESC1</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;D3D10_RENDER_TARGET_BLEND_DESC1&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 8);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

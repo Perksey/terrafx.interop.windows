@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CMSG_KEY_AGREE_RECIPIENT_INFO" access="public" unsafe="true">
+            <field name="dwVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwOriginatorChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_CMSG_KEY_AGREE_RECIPIENT_INFO::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:7799:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="OriginatorCertId" access="public">
+                <type native="">ref CERT_ID</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.OriginatorCertId, 1));
+        </code>
+                </get>
+            </field>
+            <field name="OriginatorPublicKeyInfo" access="public">
+                <type native="">ref CERT_PUBLIC_KEY_INFO</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.OriginatorPublicKeyInfo, 1));
+        </code>
+                </get>
+            </field>
+            <field name="UserKeyingMaterial" access="public">
+                <type native="CRYPT_DATA_BLOB">CRYPTOAPI_BLOB</type>
+            </field>
+            <field name="KeyEncryptionAlgorithm" access="public">
+                <type native="">CRYPT_ALGORITHM_IDENTIFIER</type>
+            </field>
+            <field name="cRecipientEncryptedKeys" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="rgpRecipientEncryptedKeys" access="public">
+                <type native="PCMSG_RECIPIENT_ENCRYPTED_KEY_INFO *">CMSG_RECIPIENT_ENCRYPTED_KEY_INFO**</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="OriginatorCertId" access="public" offset="0">
+                    <type native="">CERT_ID</type>
+                </field>
+                <field name="OriginatorPublicKeyInfo" access="public" offset="0">
+                    <type native="">CERT_PUBLIC_KEY_INFO</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

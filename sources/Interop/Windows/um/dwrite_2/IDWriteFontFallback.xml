@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dwrite_2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDWriteFontFallback" access="public" native="struct IDWriteFontFallback : IUnknown" uuid="efa008f9-f7a1-48bf-b05c-f224713cc0ff" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFallback*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDWriteFontFallback*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFallback*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDWriteFontFallback*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFallback*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDWriteFontFallback*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="MapCharacters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="analysisSource">
+                    <type>IDWriteTextAnalysisSource*</type>
+                </param>
+                <param name="textPosition">
+                    <type>uint</type>
+                </param>
+                <param name="textLength">
+                    <type>uint</type>
+                </param>
+                <param name="baseFontCollection">
+                    <type>IDWriteFontCollection*</type>
+                </param>
+                <param name="baseFamilyName">
+                    <type>ushort*</type>
+                </param>
+                <param name="baseWeight">
+                    <type>DWRITE_FONT_WEIGHT</type>
+                </param>
+                <param name="baseStyle">
+                    <type>DWRITE_FONT_STYLE</type>
+                </param>
+                <param name="baseStretch">
+                    <type>DWRITE_FONT_STRETCH</type>
+                </param>
+                <param name="mappedLength">
+                    <type>uint*</type>
+                </param>
+                <param name="mappedFont">
+                    <type>IDWriteFont**</type>
+                </param>
+                <param name="scale">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFallback*, IDWriteTextAnalysisSource*, uint, uint, IDWriteFontCollection*, ushort*, DWRITE_FONT_WEIGHT, DWRITE_FONT_STYLE, DWRITE_FONT_STRETCH, uint*, IDWriteFont**, float*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDWriteFontFallback*)Unsafe.AsPointer(ref this)</param>, <param name="analysisSource">analysisSource</param>, <param name="textPosition">textPosition</param>, <param name="textLength">textLength</param>, <param name="baseFontCollection">baseFontCollection</param>, <param name="baseFamilyName">baseFamilyName</param>, <param name="baseWeight">baseWeight</param>, <param name="baseStyle">baseStyle</param>, <param name="baseStretch">baseStretch</param>, <param name="mappedLength">mappedLength</param>, <param name="mappedFont">mappedFont</param>, <param name="scale">scale</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

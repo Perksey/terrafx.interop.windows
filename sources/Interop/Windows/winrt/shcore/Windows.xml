@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from winrt/shcore.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreateRandomAccessStreamOnFile" access="public" lib="shcore" static="true">
+                <type native="HRESULT">int</type>
+                <param name="filePath">
+                    <type>ushort*</type>
+                </param>
+                <param name="accessMode">
+                    <type>uint</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CreateRandomAccessStreamOverStream" access="public" lib="shcore" static="true">
+                <type native="HRESULT">int</type>
+                <param name="stream">
+                    <type>IStream*</type>
+                </param>
+                <param name="options">
+                    <type>BSOS_OPTIONS</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CreateStreamOverRandomAccessStream" access="public" lib="shcore" static="true">
+                <type native="HRESULT">int</type>
+                <param name="randomAccessStream">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

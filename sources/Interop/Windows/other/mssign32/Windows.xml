@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from https://docs.microsoft.com/en-us/windows/win32/appxpkg/how-to-programmatically-sign-a-package
+        // Original source is Copyright © Microsoft. All rights reserved. Licensed under the MIT License (MIT).
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="SignerSignEx2" access="public" lib="mssign32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pSubjectInfo">
+                    <type>SIGNER_SUBJECT_INFO*</type>
+                </param>
+                <param name="pSignerCert">
+                    <type>SIGNER_CERT*</type>
+                </param>
+                <param name="pSignatureInfo">
+                    <type>SIGNER_SIGNATURE_INFO*</type>
+                </param>
+                <param name="pProviderInfo">
+                    <type>SIGNER_PROVIDER_INFO*</type>
+                </param>
+                <param name="dwTimestampFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pszTimestampAlgorithmOid">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pwszHttpTimeStamp">
+                    <type>ushort*</type>
+                </param>
+                <param name="psRequest">
+                    <type>CRYPT_ATTRIBUTES*</type>
+                </param>
+                <param name="pSipData">
+                    <type>void*</type>
+                </param>
+                <param name="ppSignerContext">
+                    <type>SIGNER_CONTEXT**</type>
+                </param>
+                <param name="pCryptoPolicy">
+                    <type>CERT_STRONG_SIGN_PARA*</type>
+                </param>
+                <param name="pReserved">
+                    <type>void*</type>
+                </param>
+            </function>
+            <constant name="SIGNER_SUBJECT_FILE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_SUBJECT_BLOB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_NO_ATTR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_AUTHCODE_ATTR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="PVK_TYPE_FILE_NAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="PVK_TYPE_KEYCONTAINER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_CERT_POLICY_STORE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_CERT_POLICY_CHAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_CERT_POLICY_SPC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_CERT_POLICY_CHAIN_NO_ROOT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x08
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_CERT_SPC_FILE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_CERT_STORE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02
+            </code>
+                </value>
+            </constant>
+            <constant name="SIGNER_CERT_SPC_CHAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x03
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdlbase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMarshal" access="public" native="struct IMarshal : IUnknown" uuid="00000003-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMarshal*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMarshal*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMarshal*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMarshal*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMarshal*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMarshal*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUnmarshalClass" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pv">
+                    <type>void*</type>
+                </param>
+                <param name="dwDestContext">
+                    <type>uint</type>
+                </param>
+                <param name="pvDestContext">
+                    <type>void*</type>
+                </param>
+                <param name="mshlflags">
+                    <type>uint</type>
+                </param>
+                <param name="pCid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMarshal*, Guid*, void*, uint, void*, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMarshal*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="pv">pv</param>, <param name="dwDestContext">dwDestContext</param>, <param name="pvDestContext">pvDestContext</param>, <param name="mshlflags">mshlflags</param>, <param name="pCid">pCid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMarshalSizeMax" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pv">
+                    <type>void*</type>
+                </param>
+                <param name="dwDestContext">
+                    <type>uint</type>
+                </param>
+                <param name="pvDestContext">
+                    <type>void*</type>
+                </param>
+                <param name="mshlflags">
+                    <type>uint</type>
+                </param>
+                <param name="pSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMarshal*, Guid*, void*, uint, void*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMarshal*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="pv">pv</param>, <param name="dwDestContext">dwDestContext</param>, <param name="pvDestContext">pvDestContext</param>, <param name="mshlflags">mshlflags</param>, <param name="pSize">pSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="MarshalInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pv">
+                    <type>void*</type>
+                </param>
+                <param name="dwDestContext">
+                    <type>uint</type>
+                </param>
+                <param name="pvDestContext">
+                    <type>void*</type>
+                </param>
+                <param name="mshlflags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMarshal*, IStream*, Guid*, void*, uint, void*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMarshal*)Unsafe.AsPointer(ref this)</param>, <param name="pStm">pStm</param>, <param name="riid">riid</param>, <param name="pv">pv</param>, <param name="dwDestContext">dwDestContext</param>, <param name="pvDestContext">pvDestContext</param>, <param name="mshlflags">mshlflags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnmarshalInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMarshal*, IStream*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMarshal*)Unsafe.AsPointer(ref this)</param>, <param name="pStm">pStm</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseMarshalData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMarshal*, IStream*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMarshal*)Unsafe.AsPointer(ref this)</param>, <param name="pStm">pStm</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DisconnectObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMarshal*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMarshal*)Unsafe.AsPointer(ref this)</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

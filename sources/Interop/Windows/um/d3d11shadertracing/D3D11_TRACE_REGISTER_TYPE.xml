@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11shadertracing.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="D3D11_TRACE_REGISTER_TYPE" access="public">
+            <type>int</type>
+            <enumerator name="D3D11_TRACE_OUTPUT_NULL_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_OUTPUT_NULL_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_PRIMITIVE_ID_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_IMMEDIATE_CONSTANT_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_PRIMITIVE_ID_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_TEMP_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_IMMEDIATE_CONSTANT_BUFFER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INDEXABLE_TEMP_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_TEMP_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_OUTPUT_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INDEXABLE_TEMP_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_OUTPUT_DEPTH_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_OUTPUT_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_CONSTANT_BUFFER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_OUTPUT_DEPTH_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_IMMEDIATE32" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_CONSTANT_BUFFER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_SAMPLER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_IMMEDIATE32 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_RESOURCE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_SAMPLER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_RASTERIZER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_RESOURCE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_OUTPUT_COVERAGE_MASK" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_RASTERIZER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_STREAM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_OUTPUT_COVERAGE_MASK + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_THIS_POINTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_STREAM + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_OUTPUT_CONTROL_POINT_ID_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_THIS_POINTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_FORK_INSTANCE_ID_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_OUTPUT_CONTROL_POINT_ID_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_JOIN_INSTANCE_ID_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_FORK_INSTANCE_ID_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_CONTROL_POINT_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_JOIN_INSTANCE_ID_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_OUTPUT_CONTROL_POINT_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_CONTROL_POINT_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_PATCH_CONSTANT_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_OUTPUT_CONTROL_POINT_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_DOMAIN_POINT_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_PATCH_CONSTANT_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_UNORDERED_ACCESS_VIEW" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_DOMAIN_POINT_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_THREAD_GROUP_SHARED_MEMORY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_UNORDERED_ACCESS_VIEW + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_THREAD_ID_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_THREAD_GROUP_SHARED_MEMORY + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_THREAD_GROUP_ID_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_THREAD_ID_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_THREAD_GROUP_ID_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_COVERAGE_MASK_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_FLATTENED_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_COVERAGE_MASK_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_GS_INSTANCE_ID_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_FLATTENED_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_OUTPUT_DEPTH_GREATER_EQUAL_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_GS_INSTANCE_ID_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_OUTPUT_DEPTH_LESS_EQUAL_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_OUTPUT_DEPTH_GREATER_EQUAL_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_IMMEDIATE64" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_OUTPUT_DEPTH_LESS_EQUAL_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INPUT_CYCLE_COUNTER_REGISTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_IMMEDIATE64 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="D3D11_TRACE_INTERFACE_POINTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(D3D11_TRACE_INPUT_CYCLE_COUNTER_REGISTER + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

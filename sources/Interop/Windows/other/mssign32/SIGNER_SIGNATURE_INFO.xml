@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from https://docs.microsoft.com/en-us/windows/win32/appxpkg/how-to-programmatically-sign-a-package
+        // Original source is Copyright © Microsoft. All rights reserved. Licensed under the MIT License (MIT).
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SIGNER_SIGNATURE_INFO" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="algidHash" access="public">
+                <type native="ALG_ID">uint</type>
+            </field>
+            <field name="dwAttrChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_SIGNER_SIGNATURE_INFO::(anonymous union at ./mssign32.h:53:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="pAttrAuthcode" access="public">
+                <type native="">ref SIGNER_ATTR_AUTHCODE*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pAttrAuthcode;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="psAuthenticated" access="public">
+                <type native="PCRYPT_ATTRIBUTES">CRYPT_ATTRIBUTES*</type>
+            </field>
+            <field name="psUnauthenticated" access="public">
+                <type native="PCRYPT_ATTRIBUTES">CRYPT_ATTRIBUTES*</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pAttrAuthcode" access="public" offset="0">
+                    <type native="SIGNER_ATTR_AUTHCODE *">SIGNER_ATTR_AUTHCODE*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

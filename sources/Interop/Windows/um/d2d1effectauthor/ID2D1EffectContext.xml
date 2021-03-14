@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1effectauthor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID2D1EffectContext" access="public" native="struct ID2D1EffectContext : IUnknown" uuid="3d9f916b-27dc-4ad7-b4f1-64945340f563" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDpi" access="public" unsafe="true">
+                <type>void</type>
+                <param name="dpiX">
+                    <type>float*</type>
+                </param>
+                <param name="dpiY">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1EffectContext*, float*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="dpiX">dpiX</param>, <param name="dpiY">dpiY</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateEffect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effectId">
+                    <type>Guid*</type>
+                </param>
+                <param name="effect">
+                    <type>ID2D1Effect**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, Guid*, ID2D1Effect**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="effectId">effectId</param>, <param name="effect">effect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMaximumSupportedFeatureLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="featureLevels">
+                    <type>D3D_FEATURE_LEVEL*</type>
+                </param>
+                <param name="featureLevelsCount">
+                    <type>uint</type>
+                </param>
+                <param name="maximumSupportedFeatureLevel">
+                    <type>D3D_FEATURE_LEVEL*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, D3D_FEATURE_LEVEL*, uint, D3D_FEATURE_LEVEL*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="featureLevels">featureLevels</param>, <param name="featureLevelsCount">featureLevelsCount</param>, <param name="maximumSupportedFeatureLevel">maximumSupportedFeatureLevel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTransformNodeFromEffect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effect">
+                    <type>ID2D1Effect*</type>
+                </param>
+                <param name="transformNode">
+                    <type>ID2D1TransformNode**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, ID2D1Effect*, ID2D1TransformNode**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="effect">effect</param>, <param name="transformNode">transformNode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBlendTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="numInputs">
+                    <type>uint</type>
+                </param>
+                <param name="blendDescription">
+                    <type>D2D1_BLEND_DESCRIPTION*</type>
+                </param>
+                <param name="transform">
+                    <type>ID2D1BlendTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, uint, D2D1_BLEND_DESCRIPTION*, ID2D1BlendTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="numInputs">numInputs</param>, <param name="blendDescription">blendDescription</param>, <param name="transform">transform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBorderTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="extendModeX">
+                    <type>D2D1_EXTEND_MODE</type>
+                </param>
+                <param name="extendModeY">
+                    <type>D2D1_EXTEND_MODE</type>
+                </param>
+                <param name="transform">
+                    <type>ID2D1BorderTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, D2D1_EXTEND_MODE, D2D1_EXTEND_MODE, ID2D1BorderTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="extendModeX">extendModeX</param>, <param name="extendModeY">extendModeY</param>, <param name="transform">transform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateOffsetTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="offset">
+                    <type>POINT</type>
+                </param>
+                <param name="transform">
+                    <type>ID2D1OffsetTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, POINT, ID2D1OffsetTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="offset">offset</param>, <param name="transform">transform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBoundsAdjustmentTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="outputRectangle">
+                    <type>RECT*</type>
+                </param>
+                <param name="transform">
+                    <type>ID2D1BoundsAdjustmentTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, RECT*, ID2D1BoundsAdjustmentTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="outputRectangle">outputRectangle</param>, <param name="transform">transform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadPixelShader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="shaderId">
+                    <type>Guid*</type>
+                </param>
+                <param name="shaderBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="shaderBufferCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, Guid*, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="shaderId">shaderId</param>, <param name="shaderBuffer">shaderBuffer</param>, <param name="shaderBufferCount">shaderBufferCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadVertexShader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="resourceId">
+                    <type>Guid*</type>
+                </param>
+                <param name="shaderBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="shaderBufferCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, Guid*, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="resourceId">resourceId</param>, <param name="shaderBuffer">shaderBuffer</param>, <param name="shaderBufferCount">shaderBufferCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadComputeShader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="resourceId">
+                    <type>Guid*</type>
+                </param>
+                <param name="shaderBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="shaderBufferCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, Guid*, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="resourceId">resourceId</param>, <param name="shaderBuffer">shaderBuffer</param>, <param name="shaderBufferCount">shaderBufferCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsShaderLoaded" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="shaderId">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="shaderId">shaderId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateResourceTexture" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="resourceId">
+                    <type>Guid*</type>
+                </param>
+                <param name="resourceTextureProperties">
+                    <type>D2D1_RESOURCE_TEXTURE_PROPERTIES*</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="strides">
+                    <type>uint*</type>
+                </param>
+                <param name="dataSize">
+                    <type>uint</type>
+                </param>
+                <param name="resourceTexture">
+                    <type>ID2D1ResourceTexture**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, Guid*, D2D1_RESOURCE_TEXTURE_PROPERTIES*, byte*, uint*, uint, ID2D1ResourceTexture**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="resourceId">resourceId</param>, <param name="resourceTextureProperties">resourceTextureProperties</param>, <param name="data">data</param>, <param name="strides">strides</param>, <param name="dataSize">dataSize</param>, <param name="resourceTexture">resourceTexture</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindResourceTexture" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="resourceId">
+                    <type>Guid*</type>
+                </param>
+                <param name="resourceTexture">
+                    <type>ID2D1ResourceTexture**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, Guid*, ID2D1ResourceTexture**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="resourceId">resourceId</param>, <param name="resourceTexture">resourceTexture</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVertexBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="vertexBufferProperties">
+                    <type>D2D1_VERTEX_BUFFER_PROPERTIES*</type>
+                </param>
+                <param name="resourceId">
+                    <type>Guid*</type>
+                </param>
+                <param name="customVertexBufferProperties">
+                    <type>D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES*</type>
+                </param>
+                <param name="buffer">
+                    <type>ID2D1VertexBuffer**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, D2D1_VERTEX_BUFFER_PROPERTIES*, Guid*, D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES*, ID2D1VertexBuffer**, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="vertexBufferProperties">vertexBufferProperties</param>, <param name="resourceId">resourceId</param>, <param name="customVertexBufferProperties">customVertexBufferProperties</param>, <param name="buffer">buffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindVertexBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="resourceId">
+                    <type>Guid*</type>
+                </param>
+                <param name="buffer">
+                    <type>ID2D1VertexBuffer**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, Guid*, ID2D1VertexBuffer**, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="resourceId">resourceId</param>, <param name="buffer">buffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="space">
+                    <type>D2D1_COLOR_SPACE</type>
+                </param>
+                <param name="profile">
+                    <type>byte*</type>
+                </param>
+                <param name="profileSize">
+                    <type>uint</type>
+                </param>
+                <param name="colorContext">
+                    <type>ID2D1ColorContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, D2D1_COLOR_SPACE, byte*, uint, ID2D1ColorContext**, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="space">space</param>, <param name="profile">profile</param>, <param name="profileSize">profileSize</param>, <param name="colorContext">colorContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorContextFromFilename" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="filename">
+                    <type>ushort*</type>
+                </param>
+                <param name="colorContext">
+                    <type>ID2D1ColorContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, ushort*, ID2D1ColorContext**, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="filename">filename</param>, <param name="colorContext">colorContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorContextFromWicColorContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wicColorContext">
+                    <type>IWICColorContext*</type>
+                </param>
+                <param name="colorContext">
+                    <type>ID2D1ColorContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, IWICColorContext*, ID2D1ColorContext**, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="wicColorContext">wicColorContext</param>, <param name="colorContext">colorContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckFeatureSupport" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="feature">
+                    <type>D2D1_FEATURE</type>
+                </param>
+                <param name="featureSupportData">
+                    <type>void*</type>
+                </param>
+                <param name="featureSupportDataSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, D2D1_FEATURE, void*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="feature">feature</param>, <param name="featureSupportData">featureSupportData</param>, <param name="featureSupportDataSize">featureSupportDataSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsBufferPrecisionSupported" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="bufferPrecision">
+                    <type>D2D1_BUFFER_PRECISION</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1EffectContext*, D2D1_BUFFER_PRECISION, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ID2D1EffectContext*)Unsafe.AsPointer(ref this)</param>, <param name="bufferPrecision">bufferPrecision</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

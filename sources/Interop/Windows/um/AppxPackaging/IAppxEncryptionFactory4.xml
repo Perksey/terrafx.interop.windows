@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/AppxPackaging.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAppxEncryptionFactory4" access="public" native="struct IAppxEncryptionFactory4 : IUnknown" uuid="a879611f-12fd-41fe-85d5-06ae779bbaf5" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory4*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory4*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory4*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EncryptPackage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="outputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="settings">
+                    <type>APPX_ENCRYPTED_PACKAGE_SETTINGS2*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <param name="exemptedFiles">
+                    <type>APPX_ENCRYPTED_EXEMPTIONS*</type>
+                </param>
+                <param name="memoryLimit">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory4*, IStream*, IStream*, APPX_ENCRYPTED_PACKAGE_SETTINGS2*, APPX_KEY_INFO*, APPX_ENCRYPTED_EXEMPTIONS*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="outputStream">outputStream</param>, <param name="settings">settings</param>, <param name="keyInfo">keyInfo</param>, <param name="exemptedFiles">exemptedFiles</param>, <param name="memoryLimit">memoryLimit</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

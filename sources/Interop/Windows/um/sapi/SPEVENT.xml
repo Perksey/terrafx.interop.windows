@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SPEVENT" access="public">
+            <field name="_bitfield" access="public">
+                <type native="">int</type>
+            </field>
+            <field name="eEventId" access="public">
+                <type native="SPEVENTENUM : 16">SPEVENTENUM</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>SPEVENTENUM</typeName>)(<bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>FFFF</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>FFFF</bitwidthHexStringBacking>) | ((int)(value) &amp; 0x<bitwidthHexString>FFFF</bitwidthHexString>);
+        </code>
+                </set>
+            </field>
+            <field name="elParamType" access="public">
+                <type native="SPEVENTLPARAMTYPE : 16">SPEVENTLPARAMTYPE</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>SPEVENTLPARAMTYPE</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>16</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>FFFF</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>FFFF</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>16</bitfieldOffset>)) | (((int)(value) &amp; 0x<bitwidthHexString>FFFF</bitwidthHexString>) &lt;&lt; 16);
+        </code>
+                </set>
+            </field>
+            <field name="ulStreamNum" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="ullAudioStreamOffset" access="public">
+                <type native="ULONGLONG">ulong</type>
+            </field>
+            <field name="wParam" access="public">
+                <type native="WPARAM">nuint</type>
+            </field>
+            <field name="lParam" access="public">
+                <type native="LPARAM">nint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

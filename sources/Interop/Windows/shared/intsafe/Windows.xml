@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/intsafe.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="INTSAFE_E_ARITHMETIC_OVERFLOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x80070216)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INT8_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-127 - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="SHORT_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-32768)
+            </code>
+                </value>
+            </constant>
+            <constant name="INT16_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-32767 - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="INT_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-2147483647 - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="INT32_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-2147483647 - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="LONG_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-2147483647 - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="LONGLONG_MIN" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>(-9223372036854775807L - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="LONG64_MIN" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>(-9223372036854775807L - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="INT64_MIN" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>(-9223372036854775807L - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="INT_PTR_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-2147483647 - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="LONG_PTR_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-2147483647 - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="PTRDIFF_T_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-2147483647 - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="SSIZE_T_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-2147483647 - 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="INT8_MAX" access="public">
+                <type primitive="True">sbyte</type>
+                <value>
+                    <code>127
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT8_MAX" access="public">
+                <type primitive="True">byte</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <code>0xff
+            </code>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="BYTE_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0xff
+            </code>
+                </value>
+            </constant>
+            <constant name="SHORT_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>32767
+            </code>
+                </value>
+            </constant>
+            <constant name="INT16_MAX" access="public">
+                <type primitive="True">short</type>
+                <value>
+                    <code>32767
+            </code>
+                </value>
+            </constant>
+            <constant name="USHORT_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0xffff
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT16_MAX" access="public">
+                <type primitive="True">ushort</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <code>0xffff
+            </code>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="WORD_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0xffff
+            </code>
+                </value>
+            </constant>
+            <constant name="INT_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2147483647
+            </code>
+                </value>
+            </constant>
+            <constant name="INT32_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2147483647
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT_MAX" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffff
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT32_MAX" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="LONG_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2147483647
+            </code>
+                </value>
+            </constant>
+            <constant name="ULONG_MAX" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="DWORD_MAX" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="LONGLONG_MAX" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>9223372036854775807L
+            </code>
+                </value>
+            </constant>
+            <constant name="LONG64_MAX" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>9223372036854775807L
+            </code>
+                </value>
+            </constant>
+            <constant name="INT64_MAX" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>9223372036854775807L
+            </code>
+                </value>
+            </constant>
+            <constant name="ULONGLONG_MAX" access="public">
+                <type primitive="True">ulong</type>
+                <value>
+                    <code>0xffffffffffffffffUL
+            </code>
+                </value>
+            </constant>
+            <constant name="DWORDLONG_MAX" access="public">
+                <type primitive="True">ulong</type>
+                <value>
+                    <code>0xffffffffffffffffUL
+            </code>
+                </value>
+            </constant>
+            <constant name="ULONG64_MAX" access="public">
+                <type primitive="True">ulong</type>
+                <value>
+                    <code>0xffffffffffffffffUL
+            </code>
+                </value>
+            </constant>
+            <constant name="DWORD64_MAX" access="public">
+                <type primitive="True">ulong</type>
+                <value>
+                    <code>0xffffffffffffffffUL
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT64_MAX" access="public">
+                <type primitive="True">ulong</type>
+                <value>
+                    <code>0xffffffffffffffffUL
+            </code>
+                </value>
+            </constant>
+            <constant name="INT_PTR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2147483647
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT_PTR_MAX" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffff
+            </code>
+                </value>
+            </constant>
+            <constant name="LONG_PTR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2147483647
+            </code>
+                </value>
+            </constant>
+            <constant name="ULONG_PTR_MAX" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="DWORD_PTR_MAX" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="PTRDIFF_T_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2147483647
+            </code>
+                </value>
+            </constant>
+            <constant name="SIZE_T_MAX" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffff
+            </code>
+                </value>
+            </constant>
+            <constant name="SSIZE_T_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2147483647
+            </code>
+                </value>
+            </constant>
+            <constant name="_SIZE_T_MAX" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="INT8_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT8_ERROR" access="public">
+                <type primitive="True">byte</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <code>0xff
+            </code>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="BYTE_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0xff
+            </code>
+                </value>
+            </constant>
+            <constant name="SHORT_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="INT16_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="USHORT_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0xffff
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT16_ERROR" access="public">
+                <type primitive="True">ushort</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <code>0xffff
+            </code>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="WORD_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0xffff
+            </code>
+                </value>
+            </constant>
+            <constant name="INT_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="INT32_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffff
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT32_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="LONG_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="ULONG_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="DWORD_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="LONGLONG_ERROR" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>(-1L)
+            </code>
+                </value>
+            </constant>
+            <constant name="LONG64_ERROR" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>(-1L)
+            </code>
+                </value>
+            </constant>
+            <constant name="INT64_ERROR" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>(-1L)
+            </code>
+                </value>
+            </constant>
+            <constant name="ULONGLONG_ERROR" access="public">
+                <type primitive="True">ulong</type>
+                <value>
+                    <code>0xffffffffffffffffUL
+            </code>
+                </value>
+            </constant>
+            <constant name="DWORDLONG_ERROR" access="public">
+                <type primitive="True">ulong</type>
+                <value>
+                    <code>0xffffffffffffffffUL
+            </code>
+                </value>
+            </constant>
+            <constant name="ULONG64_ERROR" access="public">
+                <type primitive="True">ulong</type>
+                <value>
+                    <code>0xffffffffffffffffUL
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT64_ERROR" access="public">
+                <type primitive="True">ulong</type>
+                <value>
+                    <code>0xffffffffffffffffUL
+            </code>
+                </value>
+            </constant>
+            <constant name="INT_PTR_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="UINT_PTR_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffff
+            </code>
+                </value>
+            </constant>
+            <constant name="LONG_PTR_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="ULONG_PTR_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="DWORD_PTR_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+            <constant name="PTRDIFF_T_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="SIZE_T_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffff
+            </code>
+                </value>
+            </constant>
+            <constant name="SSIZE_T_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-1)
+            </code>
+                </value>
+            </constant>
+            <constant name="_SIZE_T_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffffU
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

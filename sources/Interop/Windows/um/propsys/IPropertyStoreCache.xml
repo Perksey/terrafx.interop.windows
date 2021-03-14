@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/propsys.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IPropertyStoreCache" access="public" native="struct IPropertyStoreCache : IPropertyStore" uuid="3017056d-9a91-4e90-937d-746c72abbf4f" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cProps">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>, <param name="cProps">cProps</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAt" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="iProp">
+                    <type>uint</type>
+                </param>
+                <param name="pkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, uint, PROPERTYKEY*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>, <param name="iProp">iProp</param>, <param name="pkey">pkey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="pv">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, PROPERTYKEY*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>, <param name="key">key</param>, <param name="pv">pv</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="propvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, PROPERTYKEY*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>, <param name="key">key</param>, <param name="propvar">propvar</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Commit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="pstate">
+                    <type>PSC_STATE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, PROPERTYKEY*, PSC_STATE*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>, <param name="key">key</param>, <param name="pstate">pstate</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetValueAndState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="ppropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="pstate">
+                    <type>PSC_STATE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, PROPERTYKEY*, PROPVARIANT*, PSC_STATE*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>, <param name="key">key</param>, <param name="ppropvar">ppropvar</param>, <param name="pstate">pstate</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="state">
+                    <type>PSC_STATE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, PROPERTYKEY*, PSC_STATE, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>, <param name="key">key</param>, <param name="state">state</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetValueAndState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="ppropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="state">
+                    <type>PSC_STATE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStoreCache*, PROPERTYKEY*, PROPVARIANT*, PSC_STATE, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IPropertyStoreCache*)Unsafe.AsPointer(ref this)</param>, <param name="key">key</param>, <param name="ppropvar">ppropvar</param>, <param name="state">state</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

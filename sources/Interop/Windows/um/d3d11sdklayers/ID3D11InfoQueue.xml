@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11sdklayers.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D11InfoQueue" access="public" native="struct ID3D11InfoQueue : IUnknown" uuid="6543dbb6-1b48-42f5-ab82-e97ec74326f6" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMessageCountLimit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="MessageCountLimit">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="MessageCountLimit">MessageCountLimit</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearStoredMessages" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11InfoQueue*, void&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMessage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="MessageIndex">
+                    <type>ulong</type>
+                </param>
+                <param name="pMessage">
+                    <type>D3D11_MESSAGE*</type>
+                </param>
+                <param name="pMessageByteLength">
+                    <type>nuint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, ulong, D3D11_MESSAGE*, nuint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="MessageIndex">MessageIndex</param>, <param name="pMessage">pMessage</param>, <param name="pMessageByteLength">pMessageByteLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNumMessagesAllowedByStorageFilter" access="public" unsafe="true">
+                <type native="UINT64">ulong</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, ulong&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNumMessagesDeniedByStorageFilter" access="public" unsafe="true">
+                <type native="UINT64">ulong</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, ulong&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNumStoredMessages" access="public" unsafe="true">
+                <type native="UINT64">ulong</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, ulong&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNumStoredMessagesAllowedByRetrievalFilter" access="public" unsafe="true">
+                <type native="UINT64">ulong</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, ulong&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNumMessagesDiscardedByMessageCountLimit" access="public" unsafe="true">
+                <type native="UINT64">ulong</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, ulong&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMessageCountLimit" access="public" unsafe="true">
+                <type native="UINT64">ulong</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, ulong&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddStorageFilterEntries" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>D3D11_INFO_QUEUE_FILTER*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStorageFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>D3D11_INFO_QUEUE_FILTER*</type>
+                </param>
+                <param name="pFilterByteLength">
+                    <type>nuint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, nuint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>, <param name="pFilterByteLength">pFilterByteLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearStorageFilter" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11InfoQueue*, void&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushEmptyStorageFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushCopyOfStorageFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushStorageFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>D3D11_INFO_QUEUE_FILTER*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PopStorageFilter" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11InfoQueue*, void&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStorageFilterStackSize" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, uint&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRetrievalFilterEntries" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>D3D11_INFO_QUEUE_FILTER*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRetrievalFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>D3D11_INFO_QUEUE_FILTER*</type>
+                </param>
+                <param name="pFilterByteLength">
+                    <type>nuint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, nuint*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>, <param name="pFilterByteLength">pFilterByteLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearRetrievalFilter" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11InfoQueue*, void&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushEmptyRetrievalFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushCopyOfRetrievalFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushRetrievalFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>D3D11_INFO_QUEUE_FILTER*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PopRetrievalFilter" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11InfoQueue*, void&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRetrievalFilterStackSize" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, uint&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddMessage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Category">
+                    <type>D3D11_MESSAGE_CATEGORY</type>
+                </param>
+                <param name="Severity">
+                    <type>D3D11_MESSAGE_SEVERITY</type>
+                </param>
+                <param name="ID">
+                    <type>D3D11_MESSAGE_ID</type>
+                </param>
+                <param name="pDescription">
+                    <type>sbyte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_MESSAGE_CATEGORY, D3D11_MESSAGE_SEVERITY, D3D11_MESSAGE_ID, sbyte*, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="Category">Category</param>, <param name="Severity">Severity</param>, <param name="ID">ID</param>, <param name="pDescription">pDescription</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddApplicationMessage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Severity">
+                    <type>D3D11_MESSAGE_SEVERITY</type>
+                </param>
+                <param name="pDescription">
+                    <type>sbyte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_MESSAGE_SEVERITY, sbyte*, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="Severity">Severity</param>, <param name="pDescription">pDescription</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetBreakOnCategory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Category">
+                    <type>D3D11_MESSAGE_CATEGORY</type>
+                </param>
+                <param name="bEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_MESSAGE_CATEGORY, int, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="Category">Category</param>, <param name="bEnable">bEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetBreakOnSeverity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Severity">
+                    <type>D3D11_MESSAGE_SEVERITY</type>
+                </param>
+                <param name="bEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_MESSAGE_SEVERITY, int, int&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="Severity">Severity</param>, <param name="bEnable">bEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetBreakOnID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ID">
+                    <type>D3D11_MESSAGE_ID</type>
+                </param>
+                <param name="bEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_MESSAGE_ID, int, int&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="ID">ID</param>, <param name="bEnable">bEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBreakOnCategory" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="Category">
+                    <type>D3D11_MESSAGE_CATEGORY</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_MESSAGE_CATEGORY, int&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="Category">Category</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBreakOnSeverity" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="Severity">
+                    <type>D3D11_MESSAGE_SEVERITY</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_MESSAGE_SEVERITY, int&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="Severity">Severity</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBreakOnID" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="ID">
+                    <type>D3D11_MESSAGE_ID</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, D3D11_MESSAGE_ID, int&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="ID">ID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMuteDebugOutput" access="public" unsafe="true">
+                <type>void</type>
+                <param name="bMute">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11InfoQueue*, int, void&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>, <param name="bMute">bMute</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMuteDebugOutput" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11InfoQueue*, int&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(ID3D11InfoQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

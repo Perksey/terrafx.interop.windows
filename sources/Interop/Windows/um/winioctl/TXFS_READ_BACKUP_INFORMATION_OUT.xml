@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="TXFS_READ_BACKUP_INFORMATION_OUT" access="public" unsafe="true">
+            <field name="Anonymous" access="public">
+                <type native="_TXFS_READ_BACKUP_INFORMATION_OUT::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:12887:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="BufferLength" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.BufferLength, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Buffer" access="public">
+                <type native="">Span&lt;byte&gt;</type>
+                <get inlining="aggressive">
+                    <code>return MemoryMarshal.CreateSpan(ref Anonymous.Buffer[0], 1);
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="BufferLength" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="Buffer" access="public" offset="0">
+                    <type native="BYTE [1]" count="1" fixed="_Buffer_e__FixedBuffer">byte</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

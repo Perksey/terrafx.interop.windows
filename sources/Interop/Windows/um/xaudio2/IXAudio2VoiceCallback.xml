@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/xaudio2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IXAudio2VoiceCallback" access="public" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="OnVoiceProcessingPassStart" access="public" unsafe="true">
+                <type>void</type>
+                <param name="BytesRequired">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2VoiceCallback*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IXAudio2VoiceCallback*)Unsafe.AsPointer(ref this)</param>, <param name="BytesRequired">BytesRequired</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnVoiceProcessingPassEnd" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2VoiceCallback*, void&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IXAudio2VoiceCallback*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnStreamEnd" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2VoiceCallback*, void&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IXAudio2VoiceCallback*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnBufferStart" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBufferContext">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2VoiceCallback*, void*, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IXAudio2VoiceCallback*)Unsafe.AsPointer(ref this)</param>, <param name="pBufferContext">pBufferContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnBufferEnd" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBufferContext">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2VoiceCallback*, void*, void&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IXAudio2VoiceCallback*)Unsafe.AsPointer(ref this)</param>, <param name="pBufferContext">pBufferContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnLoopEnd" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBufferContext">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2VoiceCallback*, void*, void&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IXAudio2VoiceCallback*)Unsafe.AsPointer(ref this)</param>, <param name="pBufferContext">pBufferContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnVoiceError" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBufferContext">
+                    <type>void*</type>
+                </param>
+                <param name="Error">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2VoiceCallback*, void*, int, void&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IXAudio2VoiceCallback*)Unsafe.AsPointer(ref this)</param>, <param name="pBufferContext">pBufferContext</param>, <param name="Error">Error</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

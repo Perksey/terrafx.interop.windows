@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ICodecAPI" access="public" native="struct ICodecAPI : IUnknown" uuid="901db4c7-31ce-41a2-85dc-8fa0bf41b8da" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsSupported" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsModifiable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetParameterRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <param name="ValueMin">
+                    <type>VARIANT*</type>
+                </param>
+                <param name="ValueMax">
+                    <type>VARIANT*</type>
+                </param>
+                <param name="SteppingDelta">
+                    <type>VARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, VARIANT*, VARIANT*, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>, <param name="ValueMin">ValueMin</param>, <param name="ValueMax">ValueMax</param>, <param name="SteppingDelta">SteppingDelta</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetParameterValues" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <param name="Values">
+                    <type>VARIANT**</type>
+                </param>
+                <param name="ValuesCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, VARIANT**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>, <param name="Values">Values</param>, <param name="ValuesCount">ValuesCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDefaultValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <param name="Value">
+                    <type>VARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>, <param name="Value">Value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <param name="Value">
+                    <type>VARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>, <param name="Value">Value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <param name="Value">
+                    <type>VARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>, <param name="Value">Value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterForEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <param name="userData">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, nint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>, <param name="userData">userData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterForEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAllDefaults" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetValueWithNotify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Api">
+                    <type>Guid*</type>
+                </param>
+                <param name="Value">
+                    <type>VARIANT*</type>
+                </param>
+                <param name="ChangedParam">
+                    <type>Guid**</type>
+                </param>
+                <param name="ChangedParamCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid*, VARIANT*, Guid**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="Api">Api</param>, <param name="Value">Value</param>, <param name="ChangedParam">ChangedParam</param>, <param name="ChangedParamCount">ChangedParamCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAllDefaultsWithNotify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ChangedParam">
+                    <type>Guid**</type>
+                </param>
+                <param name="ChangedParamCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, Guid**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="ChangedParam">ChangedParam</param>, <param name="ChangedParamCount">ChangedParamCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAllSettings" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="__MIDL__ICodecAPI0000">
+                    <type>IStream*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, IStream*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="__MIDL__ICodecAPI0000">__MIDL__ICodecAPI0000</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAllSettings" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="__MIDL__ICodecAPI0001">
+                    <type>IStream*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, IStream*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="__MIDL__ICodecAPI0001">__MIDL__ICodecAPI0001</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAllSettingsWithNotify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="__MIDL__ICodecAPI0002">
+                    <type>IStream*</type>
+                </param>
+                <param name="ChangedParam">
+                    <type>Guid**</type>
+                </param>
+                <param name="ChangedParamCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodecAPI*, IStream*, Guid**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ICodecAPI*)Unsafe.AsPointer(ref this)</param>, <param name="__MIDL__ICodecAPI0002">__MIDL__ICodecAPI0002</param>, <param name="ChangedParam">ChangedParam</param>, <param name="ChangedParamCount">ChangedParamCount</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

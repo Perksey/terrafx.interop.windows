@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="MFNETSOURCE_STATISTICS_IDS" access="public">
+            <type>int</type>
+            <enumerator name="MFNETSOURCE_RECVPACKETS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_LOSTPACKETS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_RECVPACKETS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_RESENDSREQUESTED_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_LOSTPACKETS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_RESENDSRECEIVED_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_RESENDSREQUESTED_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_RECOVEREDBYECCPACKETS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_RESENDSRECEIVED_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_RECOVEREDBYRTXPACKETS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_RECOVEREDBYECCPACKETS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_OUTPACKETS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_RECOVEREDBYRTXPACKETS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_RECVRATE_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_OUTPACKETS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_AVGBANDWIDTHBPS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_RECVRATE_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_BYTESRECEIVED_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_AVGBANDWIDTHBPS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_PROTOCOL_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_BYTESRECEIVED_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_TRANSPORT_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_PROTOCOL_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_CACHE_STATE_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_TRANSPORT_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_LINKBANDWIDTH_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_CACHE_STATE_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_CONTENTBITRATE_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_LINKBANDWIDTH_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_SPEEDFACTOR_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_CONTENTBITRATE_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_BUFFERSIZE_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_SPEEDFACTOR_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_BUFFERPROGRESS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_BUFFERSIZE_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_LASTBWSWITCHTS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_BUFFERPROGRESS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_SEEKRANGESTART_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_LASTBWSWITCHTS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_SEEKRANGEEND_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_SEEKRANGESTART_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_BUFFERINGCOUNT_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_SEEKRANGEEND_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_INCORRECTLYSIGNEDPACKETS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_BUFFERINGCOUNT_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_SIGNEDSESSION_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_INCORRECTLYSIGNEDPACKETS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_MAXBITRATE_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_SIGNEDSESSION_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_RECEPTION_QUALITY_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_MAXBITRATE_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_RECOVEREDPACKETS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_RECEPTION_QUALITY_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_VBR_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_RECOVEREDPACKETS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_DOWNLOADPROGRESS_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_VBR_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MFNETSOURCE_UNPREDEFINEDPROTOCOLNAME_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MFNETSOURCE_DOWNLOADPROGRESS_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

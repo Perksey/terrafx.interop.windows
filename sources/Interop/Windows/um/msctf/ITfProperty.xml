@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfProperty" access="public" native="struct ITfProperty : ITfReadOnlyProperty" uuid="e2449660-9542-11d2-bf46-00105a2799b5" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pguid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>, <param name="pguid">pguid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumRanges" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="ppEnum">
+                    <type>IEnumTfRanges**</type>
+                </param>
+                <param name="pTargetRange">
+                    <type>ITfRange*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, uint, IEnumTfRanges**, ITfRange*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="ppEnum">ppEnum</param>, <param name="pTargetRange">pTargetRange</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="pvarValue">
+                    <type>VARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, uint, ITfRange*, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pRange">pRange</param>, <param name="pvarValue">pvarValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppContext">
+                    <type>ITfContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, ITfContext**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>, <param name="ppContext">ppContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="ppRange">
+                    <type>ITfRange**</type>
+                </param>
+                <param name="aPos">
+                    <type>TfAnchor</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, uint, ITfRange*, ITfRange**, TfAnchor, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pRange">pRange</param>, <param name="ppRange">ppRange</param>, <param name="aPos">aPos</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetValueStore" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="pPropStore">
+                    <type>ITfPropertyStore*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, uint, ITfRange*, ITfPropertyStore*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pRange">pRange</param>, <param name="pPropStore">pPropStore</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="pvarValue">
+                    <type>VARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, uint, ITfRange*, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pRange">pRange</param>, <param name="pvarValue">pvarValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Clear" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfProperty*, uint, ITfRange*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITfProperty*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pRange">pRange</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

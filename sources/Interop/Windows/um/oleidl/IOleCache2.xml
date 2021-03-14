@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/oleidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IOleCache2" access="public" native="struct IOleCache2 : IOleCache" uuid="00000128-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Cache" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pformatetc">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="advf">
+                    <type>uint</type>
+                </param>
+                <param name="pdwConnection">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, FORMATETC*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>, <param name="pformatetc">pformatetc</param>, <param name="advf">advf</param>, <param name="pdwConnection">pdwConnection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Uncache" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwConnection">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>, <param name="dwConnection">dwConnection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumCache" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppenumSTATDATA">
+                    <type>IEnumSTATDATA**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, IEnumSTATDATA**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>, <param name="ppenumSTATDATA">ppenumSTATDATA</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InitCache" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDataObject">
+                    <type>IDataObject*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, IDataObject*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>, <param name="pDataObject">pDataObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pformatetc">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="pmedium">
+                    <type>STGMEDIUM*</type>
+                </param>
+                <param name="fRelease">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, FORMATETC*, STGMEDIUM*, int, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>, <param name="pformatetc">pformatetc</param>, <param name="pmedium">pmedium</param>, <param name="fRelease">fRelease</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdateCache" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDataObject">
+                    <type>IDataObject*</type>
+                </param>
+                <param name="grfUpdf">
+                    <type>uint</type>
+                </param>
+                <param name="pReserved">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, IDataObject*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>, <param name="pDataObject">pDataObject</param>, <param name="grfUpdf">grfUpdf</param>, <param name="pReserved">pReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DiscardCache" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwDiscardOptions">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleCache2*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IOleCache2*)Unsafe.AsPointer(ref this)</param>, <param name="dwDiscardOptions">dwDiscardOptions</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

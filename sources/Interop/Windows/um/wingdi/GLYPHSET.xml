@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wingdi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="GLYPHSET" access="public">
+            <field name="cbThis" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="flAccel" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cGlyphsSupported" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cRanges" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ranges" access="public">
+                <type native="WCRANGE [1]" count="1" fixed="_ranges_e__FixedBuffer">WCRANGE</type>
+            </field>
+            <struct name="_ranges_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">WCRANGE</type>
+                </field>
+                <indexer access="public">
+                    <type>ref WCRANGE</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;WCRANGE&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

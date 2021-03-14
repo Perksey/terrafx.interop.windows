@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMallocSpy" access="public" native="struct IMallocSpy : IUnknown" uuid="0000001d-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PreAlloc" access="public" unsafe="true">
+                <type native="SIZE_T">nuint</type>
+                <param name="cbRequest">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, nuint, nuint&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="cbRequest">cbRequest</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PostAlloc" access="public" unsafe="true">
+                <type native="void *">void*</type>
+                <param name="pActual">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, void*, void*&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="pActual">pActual</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PreFree" access="public" unsafe="true">
+                <type native="void *">void*</type>
+                <param name="pRequest">
+                    <type>void*</type>
+                </param>
+                <param name="fSpyed">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, void*, int, void*&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="pRequest">pRequest</param>, <param name="fSpyed">fSpyed</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PostFree" access="public" unsafe="true">
+                <type>void</type>
+                <param name="fSpyed">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IMallocSpy*, int, void&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="fSpyed">fSpyed</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PreRealloc" access="public" unsafe="true">
+                <type native="SIZE_T">nuint</type>
+                <param name="pRequest">
+                    <type>void*</type>
+                </param>
+                <param name="cbRequest">
+                    <type>nuint</type>
+                </param>
+                <param name="ppNewRequest">
+                    <type>void**</type>
+                </param>
+                <param name="fSpyed">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, void*, nuint, void**, int, nuint&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="pRequest">pRequest</param>, <param name="cbRequest">cbRequest</param>, <param name="ppNewRequest">ppNewRequest</param>, <param name="fSpyed">fSpyed</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PostRealloc" access="public" unsafe="true">
+                <type native="void *">void*</type>
+                <param name="pActual">
+                    <type>void*</type>
+                </param>
+                <param name="fSpyed">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, void*, int, void*&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="pActual">pActual</param>, <param name="fSpyed">fSpyed</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PreGetSize" access="public" unsafe="true">
+                <type native="void *">void*</type>
+                <param name="pRequest">
+                    <type>void*</type>
+                </param>
+                <param name="fSpyed">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, void*, int, void*&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="pRequest">pRequest</param>, <param name="fSpyed">fSpyed</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PostGetSize" access="public" unsafe="true">
+                <type native="SIZE_T">nuint</type>
+                <param name="cbActual">
+                    <type>nuint</type>
+                </param>
+                <param name="fSpyed">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, nuint, int, nuint&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="cbActual">cbActual</param>, <param name="fSpyed">fSpyed</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PreDidAlloc" access="public" unsafe="true">
+                <type native="void *">void*</type>
+                <param name="pRequest">
+                    <type>void*</type>
+                </param>
+                <param name="fSpyed">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, void*, int, void*&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="pRequest">pRequest</param>, <param name="fSpyed">fSpyed</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PostDidAlloc" access="public" unsafe="true">
+                <type>int</type>
+                <param name="pRequest">
+                    <type>void*</type>
+                </param>
+                <param name="fSpyed">
+                    <type>int</type>
+                </param>
+                <param name="fActual">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMallocSpy*, void*, int, int, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>, <param name="pRequest">pRequest</param>, <param name="fSpyed">fSpyed</param>, <param name="fActual">fActual</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PreHeapMinimize" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;IMallocSpy*, void&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PostHeapMinimize" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;IMallocSpy*, void&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMallocSpy*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

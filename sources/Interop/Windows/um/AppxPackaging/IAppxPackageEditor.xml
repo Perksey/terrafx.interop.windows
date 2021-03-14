@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/AppxPackaging.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAppxPackageEditor" access="public" native="struct IAppxPackageEditor : IUnknown" uuid="e2adb6dc-5e71-4416-86b6-86e5f5291a6b" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageEditor*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAppxPackageEditor*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageEditor*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAppxPackageEditor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageEditor*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAppxPackageEditor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetWorkingDirectory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="workingDirectory">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageEditor*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAppxPackageEditor*)Unsafe.AsPointer(ref this)</param>, <param name="workingDirectory">workingDirectory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDeltaPackage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="updatedPackageStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="baselinePackageStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="deltaPackageStream">
+                    <type>IStream*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageEditor*, IStream*, IStream*, IStream*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAppxPackageEditor*)Unsafe.AsPointer(ref this)</param>, <param name="updatedPackageStream">updatedPackageStream</param>, <param name="baselinePackageStream">baselinePackageStream</param>, <param name="deltaPackageStream">deltaPackageStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDeltaPackageUsingBaselineBlockMap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="updatedPackageStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="baselineBlockMapStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="baselinePackageFullName">
+                    <type>ushort*</type>
+                </param>
+                <param name="deltaPackageStream">
+                    <type>IStream*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageEditor*, IStream*, IStream*, ushort*, IStream*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAppxPackageEditor*)Unsafe.AsPointer(ref this)</param>, <param name="updatedPackageStream">updatedPackageStream</param>, <param name="baselineBlockMapStream">baselineBlockMapStream</param>, <param name="baselinePackageFullName">baselinePackageFullName</param>, <param name="deltaPackageStream">deltaPackageStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdatePackage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="baselinePackageStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="deltaPackageStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="updateOption">
+                    <type>APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_OPTION</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageEditor*, IStream*, IStream*, APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_OPTION, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAppxPackageEditor*)Unsafe.AsPointer(ref this)</param>, <param name="baselinePackageStream">baselinePackageStream</param>, <param name="deltaPackageStream">deltaPackageStream</param>, <param name="updateOption">updateOption</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdateEncryptedPackage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="baselineEncryptedPackageStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="deltaPackageStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="updateOption">
+                    <type>APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_OPTION</type>
+                </param>
+                <param name="settings">
+                    <type>APPX_ENCRYPTED_PACKAGE_SETTINGS2*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageEditor*, IStream*, IStream*, APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_OPTION, APPX_ENCRYPTED_PACKAGE_SETTINGS2*, APPX_KEY_INFO*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAppxPackageEditor*)Unsafe.AsPointer(ref this)</param>, <param name="baselineEncryptedPackageStream">baselineEncryptedPackageStream</param>, <param name="deltaPackageStream">deltaPackageStream</param>, <param name="updateOption">updateOption</param>, <param name="settings">settings</param>, <param name="keyInfo">keyInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdatePackageManifest" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="packageStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="updatedManifestStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="isPackageEncrypted">
+                    <type>int</type>
+                </param>
+                <param name="options">
+                    <type>APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTIONS</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackageEditor*, IStream*, IStream*, int, APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTIONS, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAppxPackageEditor*)Unsafe.AsPointer(ref this)</param>, <param name="packageStream">packageStream</param>, <param name="updatedManifestStream">updatedManifestStream</param>, <param name="isPackageEncrypted">isPackageEncrypted</param>, <param name="options">options</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_TIMESTAMP_REQUEST" access="public" unsafe="true">
+            <field name="dwVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="HashAlgorithm" access="public">
+                <type native="">CRYPT_ALGORITHM_IDENTIFIER</type>
+            </field>
+            <field name="HashedMessage" access="public">
+                <type native="CRYPT_DER_BLOB">CRYPTOAPI_BLOB</type>
+            </field>
+            <field name="pszTSAPolicyId" access="public">
+                <type native="LPSTR">sbyte*</type>
+            </field>
+            <field name="Nonce" access="public">
+                <type native="CRYPT_INTEGER_BLOB">CRYPTOAPI_BLOB</type>
+            </field>
+            <field name="fCertReq" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="cExtension" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="rgExtension" access="public">
+                <type native="PCERT_EXTENSION">CERT_EXTENSION*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

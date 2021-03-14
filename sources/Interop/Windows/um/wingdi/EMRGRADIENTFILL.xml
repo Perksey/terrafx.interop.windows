@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wingdi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="EMRGRADIENTFILL" access="public">
+            <field name="emr" access="public">
+                <type native="">EMR</type>
+            </field>
+            <field name="rclBounds" access="public">
+                <type native="">RECTL</type>
+            </field>
+            <field name="nVer" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="nTri" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ulMode" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="Ver" access="public">
+                <type native="TRIVERTEX [1]" count="1" fixed="_Ver_e__FixedBuffer">TRIVERTEX</type>
+            </field>
+            <struct name="_Ver_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">TRIVERTEX</type>
+                </field>
+                <indexer access="public">
+                    <type>ref TRIVERTEX</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;TRIVERTEX&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

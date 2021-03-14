@@ -1,0 +1,3811 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="MF_WVC1_PROG_SINGLE_SLICE_CONTENT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x67EC2559, 0x0F2F, 0x4420, 0xA4, 0xDD, 0x2F, 0x8E, 0xE7, 0xA5, 0x73, 0x8B)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PROGRESSIVE_CODING_CONTENT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x8F020EEA, 0x1508, 0x471F, 0x9D, 0xA6, 0x50, 0x7D, 0x7C, 0xFA, 0x40, 0xDB)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_NALU_LENGTH_SET" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xA7911D53, 0x12A4, 0x4965, 0xAE, 0x70, 0x6E, 0xAD, 0xD6, 0xFF, 0x05, 0x51)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_NALU_LENGTH_INFORMATION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x19124E7C, 0xAD4B, 0x465F, 0xBB, 0x18, 0x20, 0x18, 0x62, 0x87, 0xB6, 0xAF)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_USER_DATA_PAYLOAD" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xd1d4985d, 0xdc92, 0x457a, 0xb3, 0xa0, 0x65, 0x1a, 0x33, 0xa3, 0x10, 0x47)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MPEG4SINK_SPSPPS_PASSTHROUGH" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x5601a134, 0x2005, 0x4ad2, 0xb3, 0x7d, 0x22, 0xa6, 0xc5, 0x54, 0xde, 0xb2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MPEG4SINK_MOOV_BEFORE_MDAT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf672e3ac, 0xe1e6, 0x4f10, 0xb5, 0xec, 0x5f, 0x3b, 0x30, 0x82, 0x88, 0x16)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MPEG4SINK_MINIMUM_PROPERTIES_SIZE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xdca1ed52, 0x450e, 0x4a22, 0x8c, 0x62, 0x4e, 0xd4, 0x52, 0xf7, 0xa1, 0x87)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MPEG4SINK_MIN_FRAGMENT_DURATION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa30b570c, 0x8efd, 0x45e8, 0x94, 0xfe, 0x27, 0xc8, 0x4b, 0x5b, 0xdf, 0xf6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MPEG4SINK_MAX_CODED_SEQUENCES_PER_FRAGMENT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xfc1b3bd6, 0x692d, 0x4ce5, 0x92, 0x99, 0x73, 0x8a, 0xa5, 0x46, 0x3e, 0x9a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SESSION_TOPOLOADER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1e83d482, 0x1f1c, 0x4571, 0x84, 0x5, 0x88, 0xf4, 0xb2, 0x18, 0x1f, 0x71)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SESSION_GLOBAL_TIME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1e83d482, 0x1f1c, 0x4571, 0x84, 0x5, 0x88, 0xf4, 0xb2, 0x18, 0x1f, 0x72)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SESSION_QUALITY_MANAGER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1e83d482, 0x1f1c, 0x4571, 0x84, 0x5, 0x88, 0xf4, 0xb2, 0x18, 0x1f, 0x73)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SESSION_CONTENT_PROTECTION_MANAGER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1e83d482, 0x1f1c, 0x4571, 0x84, 0x5, 0x88, 0xf4, 0xb2, 0x18, 0x1f, 0x74)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SESSION_SERVER_CONTEXT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xafe5b291, 0x50fa, 0x46e8, 0xb9, 0xbe, 0xc, 0xc, 0x3c, 0xe4, 0xb3, 0xa5)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SESSION_REMOTE_SOURCE_MODE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf4033ef4, 0x9bb3, 0x4378, 0x94, 0x1f, 0x85, 0xa0, 0x85, 0x6b, 0xc2, 0x44)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SESSION_APPROX_EVENT_OCCURRENCE_TIME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x190e852f, 0x6238, 0x42d1, 0xb5, 0xaf, 0x69, 0xea, 0x33, 0x8e, 0xf8, 0x50)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PMP_SERVER_CONTEXT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2f00c910, 0xd2cf, 0x4278, 0x8b, 0x6a, 0xd0, 0x77, 0xfa, 0xc3, 0xa2, 0x5f)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateMediaSession" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pConfiguration">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="ppMediaSession">
+                    <type>IMFMediaSession**</type>
+                </param>
+            </function>
+            <function name="MFCreatePMPMediaSession" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwCreationFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pConfiguration">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="ppMediaSession">
+                    <type>IMFMediaSession**</type>
+                </param>
+                <param name="ppEnablerActivate">
+                    <type>IMFActivate**</type>
+                </param>
+            </function>
+            <function name="MFCreateSourceResolver" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppISourceResolver">
+                    <type>IMFSourceResolver**</type>
+                </param>
+            </function>
+            <function name="CreatePropertyStore" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppStore">
+                    <type>IPropertyStore**</type>
+                </param>
+            </function>
+            <function name="MFGetSupportedSchemes" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pPropVarSchemeArray">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="MFGetSupportedMimeTypes" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pPropVarMimeTypeArray">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <constant name="MFPKEY_SourceOpenMonitor" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x074d4637, 0xb5ae, 0x465d, 0xaf, 0x17, 0x1a, 0x53, 0x8d, 0x28, 0x59, 0xdd),
+                pid = 0x02,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_ASFMediaSource_ApproxSeek" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0xb4cd270f, 0x244d, 0x4969, 0xbb, 0x92, 0x3f, 0x0f, 0xb8, 0x31, 0x6f, 0x10),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_ASFMediaSource_IterativeSeekIfNoIndex" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x170b65dc, 0x4a4e, 0x407a, 0xac, 0x22, 0x57, 0x7f, 0x50, 0xe4, 0xa3, 0x7c),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_ASFMediaSource_IterativeSeek_Max_Count" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x170b65dc, 0x4a4e, 0x407a, 0xac, 0x22, 0x57, 0x7f, 0x50, 0xe4, 0xa3, 0x7c),
+                pid = 0x02,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_ASFMediaSource_IterativeSeek_Tolerance_In_MilliSecond" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x170b65dc, 0x4a4e, 0x407a, 0xac, 0x22, 0x57, 0x7f, 0x50, 0xe4, 0xa3, 0x7c),
+                pid = 0x03,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_Content_DLNA_Profile_ID" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0xcfa31b45, 0x525d, 0x4998, 0xbb, 0x44, 0x3f, 0x7d, 0x81, 0x54, 0x2f, 0xa4),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_MediaSource_DisableReadAhead" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x26366c14, 0xc5bf, 0x4c76, 0x88, 0x7b, 0x9f, 0x17, 0x54, 0xdb, 0x5f, 0x9),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_SBESourceMode" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x3fae10bb, 0xf859, 0x4192, 0xb5, 0x62, 0x18, 0x68, 0xd3, 0xda, 0x3a, 0x02),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_PMP_Creation_Callback" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x28bb4de2, 0x26a2, 0x4870, 0xb7, 0x20, 0xd2, 0x6b, 0xbe, 0xb1, 0x49, 0x42),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_HTTP_ByteStream_Enable_Urlmon" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0xeda8afdf, 0xc171, 0x417f, 0x8d, 0x17, 0x2e, 0x09, 0x18, 0x30, 0x32, 0x92),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_HTTP_ByteStream_Urlmon_Bind_Flags" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0xeda8afdf, 0xc171, 0x417f, 0x8d, 0x17, 0x2e, 0x09, 0x18, 0x30, 0x32, 0x92),
+                pid = 0x02,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_HTTP_ByteStream_Urlmon_Security_Id" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0xeda8afdf, 0xc171, 0x417f, 0x8d, 0x17, 0x2e, 0x09, 0x18, 0x30, 0x32, 0x92),
+                pid = 0x03,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_HTTP_ByteStream_Urlmon_Window" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0xeda8afdf, 0xc171, 0x417f, 0x8d, 0x17, 0x2e, 0x09, 0x18, 0x30, 0x32, 0x92),
+                pid = 0x04,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_HTTP_ByteStream_Urlmon_Callback_QueryService" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0xeda8afdf, 0xc171, 0x417f, 0x8d, 0x17, 0x2e, 0x09, 0x18, 0x30, 0x32, 0x92),
+                pid = 0x05,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_MediaProtectionSystemId" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x636b271d, 0xddc7, 0x49e9, 0xa6, 0xc6, 0x47, 0x38, 0x59, 0x62, 0xe5, 0xbd),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_MediaProtectionSystemContext" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x636b271d, 0xddc7, 0x49e9, 0xa6, 0xc6, 0x47, 0x38, 0x59, 0x62, 0xe5, 0xbd),
+                pid = 0x02,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_MediaProtectionSystemIdMapping" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x636b271d, 0xddc7, 0x49e9, 0xa6, 0xc6, 0x47, 0x38, 0x59, 0x62, 0xe5, 0xbd),
+                pid = 0x03,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_MediaProtectionContainerGuid" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x42af3d7c, 0xcf, 0x4a0f, 0x81, 0xf0, 0xad, 0xf5, 0x24, 0xa5, 0xa5, 0xb5),
+                pid = 0x1,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_MediaProtectionSystemContextsPerTrack" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x4454b092, 0xd3da, 0x49b0, 0x84, 0x52, 0x68, 0x50, 0xc7, 0xdb, 0x76, 0x4d),
+                pid = 0x03,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_HTTP_ByteStream_Download_Mode" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x817f11b7, 0xa982, 0x46ec, 0xa4, 0x49, 0xef, 0x58, 0xae, 0xd5, 0x3c, 0xa8),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_HTTP_ByteStream_Caching_Mode" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x86a2403e, 0xc78b, 0x44d7, 0x8b, 0xc8, 0xff, 0x72, 0x58, 0x11, 0x75, 0x08),
+                pid = 0x01,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPKEY_HTTP_ByteStream_Cache_Limit" access="public">
+                <type primitive="False">PROPERTYKEY</type>
+                <value>
+                    <code>new PROPERTYKEY
+            {
+                fmtid = new Guid(0x86a2403e, 0xc78b, 0x44d7, 0x8b, 0xc8, 0xff, 0x72, 0x58, 0x11, 0x75, 0x08),
+                pid = 0x02,
+            }
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TIME_FORMAT_ENTRY_RELATIVE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4399f178, 0x46d3, 0x4504, 0xaf, 0xda, 0x20, 0xd3, 0x2e, 0x9b, 0xa3, 0x60)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SOURCE_STREAM_SUPPORTS_HW_CONNECTION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa38253aa, 0x6314, 0x42fd, 0xa3, 0xce, 0xbb, 0x27, 0xb6, 0x85, 0x99, 0x46)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_STREAM_SINK_SUPPORTS_HW_CONNECTION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9b465cbf, 0x597, 0x4f9e, 0x9f, 0x3c, 0xb9, 0x7e, 0xee, 0xf9, 0x3, 0x59)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_STREAM_SINK_SUPPORTS_ROTATION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xb3e96280, 0xbd05, 0x41a5, 0x97, 0xad, 0x8a, 0x7f, 0xee, 0x24, 0xb9, 0x12)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SINK_VIDEO_PTS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2162bde7, 0x421e, 0x4b90, 0x9b, 0x33, 0xe5, 0x8f, 0xbf, 0x1d, 0x58, 0xb6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SINK_VIDEO_NATIVE_WIDTH" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xe6d6a707, 0x1505, 0x4747, 0x9b, 0x10, 0x72, 0xd2, 0xd1, 0x58, 0xcb, 0x3a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SINK_VIDEO_NATIVE_HEIGHT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf0ca6705, 0x490c, 0x43e8, 0x94, 0x1c, 0xc0, 0xb3, 0x20, 0x6b, 0x9a, 0x65)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SINK_VIDEO_DISPLAY_ASPECT_RATIO_NUMERATOR" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xd0f33b22, 0xb78a, 0x4879, 0xb4, 0x55, 0xf0, 0x3e, 0xf3, 0xfa, 0x82, 0xcd)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SINK_VIDEO_DISPLAY_ASPECT_RATIO_DENOMINATOR" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6ea1eb97, 0x1fe0, 0x4f10, 0xa6, 0xe4, 0x1f, 0x4f, 0x66, 0x15, 0x64, 0xe0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BD_MVC_PLANE_OFFSET_METADATA" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x62a654e4, 0xb76c, 0x4901, 0x98, 0x23, 0x2c, 0xb6, 0x15, 0xd4, 0x73, 0x18)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_LUMA_KEY_ENABLE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7369820f, 0x76de, 0x43ca, 0x92, 0x84, 0x47, 0xb8, 0xf3, 0x7e, 0x06, 0x49)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_LUMA_KEY_LOWER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x93d7b8d5, 0x0b81, 0x4715, 0xae, 0xa0, 0x87, 0x25, 0x87, 0x16, 0x21, 0xe9)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_LUMA_KEY_UPPER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xd09f39bb, 0x4602, 0x4c31, 0xa7, 0x06, 0xa1, 0x21, 0x71, 0xa5, 0x11, 0x0a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_USER_EXTENDED_ATTRIBUTES" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xc02abac6, 0xfeb2, 0x4541, 0x92, 0x2f, 0x92, 0x0b, 0x43, 0x70, 0x27, 0x22)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_INDEPENDENT_STILL_IMAGE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xea12af41, 0x0710, 0x42c9, 0xa1, 0x27, 0xda, 0xa3, 0xe7, 0x84, 0x83, 0xa5)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_XVP_SAMPLE_LOCK_TIMEOUT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xaa4ddb29, 0x5134, 0x4363, 0xac, 0x72, 0x83, 0xec, 0x4b, 0xc1, 0x4, 0x26)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_PROJECTSTART" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7ed3f802, 0x86bb, 0x4b3f, 0xb7, 0xe4, 0x7c, 0xb4, 0x3a, 0xfd, 0x4b, 0x80)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_PROJECTSTOP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7ed3f803, 0x86bb, 0x4b3f, 0xb7, 0xe4, 0x7c, 0xb4, 0x3a, 0xfd, 0x4b, 0x80)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_NO_MARKIN_MARKOUT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7ed3f804, 0x86bb, 0x4b3f, 0xb7, 0xe4, 0x7c, 0xb4, 0x3a, 0xfd, 0x4b, 0x80)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_DXVA_MODE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1e8d34f6, 0xf5ab, 0x4e23, 0xbb, 0x88, 0x87, 0x4a, 0xa3, 0xa1, 0xa7, 0x4d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_ENABLE_XVP_FOR_PLAYBACK" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1967731f, 0xcd78, 0x42fc, 0xb0, 0x26, 0x9, 0x92, 0xa5, 0x6e, 0x56, 0x93)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_STATIC_PLAYBACK_OPTIMIZATIONS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xb86cac42, 0x41a6, 0x4b79, 0x89, 0x7a, 0x1a, 0xb0, 0xe5, 0x2b, 0x4a, 0x1b)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_PLAYBACK_MAX_DIMS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x5715cf19, 0x5768, 0x44aa, 0xad, 0x6e, 0x87, 0x21, 0xf1, 0xb0, 0xf9, 0xbb)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_HARDWARE_MODE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xd2d362fd, 0x4e4f, 0x4191, 0xa5, 0x79, 0xc6, 0x18, 0xb6, 0x67, 0x6, 0xaf)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_PLAYBACK_FRAMERATE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xc164737a, 0xc2b1, 0x4553, 0x83, 0xbb, 0x5a, 0x52, 0x60, 0x72, 0x44, 0x8f)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_DYNAMIC_CHANGE_NOT_ALLOWED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xd529950b, 0xd484, 0x4527, 0xa9, 0xcd, 0xb1, 0x90, 0x95, 0x32, 0xb5, 0xb0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_ENUMERATE_SOURCE_TYPES" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6248c36d, 0x5d0b, 0x4f40, 0xa0, 0xbb, 0xb0, 0xb3, 0x05, 0xf7, 0x76, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_START_TIME_ON_PRESENTATION_SWITCH" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xc8cc113f, 0x7951, 0x4548, 0xaa, 0xd6, 0x9e, 0xd6, 0x20, 0x2e, 0x62, 0xb3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DISABLE_LOCALLY_REGISTERED_PLUGINS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x66b16da9, 0xadd4, 0x47e0, 0xa1, 0x6b, 0x5a, 0xf1, 0xfb, 0x48, 0x36, 0x34)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_LOCAL_PLUGIN_CONTROL_POLICY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xd91b0085, 0xc86d, 0x4f81, 0x88, 0x22, 0x8c, 0x68, 0xe1, 0xd7, 0xfa, 0x04)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateTopology" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppTopo">
+                    <type>IMFTopology**</type>
+                </param>
+            </function>
+            <constant name="MF_TOPONODE_FLUSH" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbce8, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_DRAIN" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbce9, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_D3DAWARE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbced, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPOLOGY_RESOLUTION_STATUS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcde, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_ERRORCODE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcee, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_CONNECT_METHOD" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcf1, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_LOCKED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcf7, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_WORKQUEUE_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcf8, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_WORKQUEUE_MMCSS_CLASS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcf9, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_DECRYPTOR" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcfa, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_DISCARDABLE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcfb, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_ERROR_MAJORTYPE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcfd, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_ERROR_SUBTYPE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcfe, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_WORKQUEUE_MMCSS_TASKID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbcff, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_WORKQUEUE_MMCSS_PRIORITY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x5001f840, 0x2816, 0x48f4, 0x93, 0x64, 0xad, 0x1e, 0xf6, 0x61, 0xa1, 0x23)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_WORKQUEUE_ITEM_PRIORITY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa1ff99be, 0x5e97, 0x4a53, 0xb4, 0x94, 0x56, 0x8c, 0x64, 0x2c, 0x0f, 0xf3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_MARKIN_HERE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbd00, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_MARKOUT_HERE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbd01, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_DECODER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x494bbd02, 0xb031, 0x4e38, 0x97, 0xc4, 0xd5, 0x42, 0x2d, 0xd6, 0x18, 0xdc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_MEDIASTART" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x835c58ea, 0xe075, 0x4bc7, 0xbc, 0xba, 0x4d, 0xe0, 0x00, 0xdf, 0x9a, 0xe6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_MEDIASTOP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x835c58eb, 0xe075, 0x4bc7, 0xbc, 0xba, 0x4d, 0xe0, 0x00, 0xdf, 0x9a, 0xe6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_SOURCE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x835c58ec, 0xe075, 0x4bc7, 0xbc, 0xba, 0x4d, 0xe0, 0x00, 0xdf, 0x9a, 0xe6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_PRESENTATION_DESCRIPTOR" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x835c58ed, 0xe075, 0x4bc7, 0xbc, 0xba, 0x4d, 0xe0, 0x00, 0xdf, 0x9a, 0xe6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_STREAM_DESCRIPTOR" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x835c58ee, 0xe075, 0x4bc7, 0xbc, 0xba, 0x4d, 0xe0, 0x00, 0xdf, 0x9a, 0xe6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_SEQUENCE_ELEMENTID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x835c58ef, 0xe075, 0x4bc7, 0xbc, 0xba, 0x4d, 0xe0, 0x00, 0xdf, 0x9a, 0xe6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_TRANSFORM_OBJECTID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x88dcc0c9, 0x293e, 0x4e8b, 0x9a, 0xeb, 0xa, 0xd6, 0x4c, 0xc0, 0x16, 0xb0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_STREAMID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x14932f9b, 0x9087, 0x4bb4, 0x84, 0x12, 0x51, 0x67, 0x14, 0x5c, 0xbe, 0x04)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_NOSHUTDOWN_ON_REMOVE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x14932f9c, 0x9087, 0x4bb4, 0x84, 0x12, 0x51, 0x67, 0x14, 0x5c, 0xbe, 0x04)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_RATELESS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x14932f9d, 0x9087, 0x4bb4, 0x84, 0x12, 0x51, 0x67, 0x14, 0x5c, 0xbe, 0x04)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_DISABLE_PREROLL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x14932f9e, 0x9087, 0x4bb4, 0x84, 0x12, 0x51, 0x67, 0x14, 0x5c, 0xbe, 0x04)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_PRIMARYOUTPUT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6304ef99, 0x16b2, 0x4ebe, 0x9d, 0x67, 0xe4, 0xc5, 0x39, 0xb3, 0xa2, 0x59)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateTopologyNode" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="NodeType">
+                    <type>MF_TOPOLOGY_TYPE</type>
+                </param>
+                <param name="ppNode">
+                    <type>IMFTopologyNode**</type>
+                </param>
+            </function>
+            <function name="MFGetTopoNodeCurrentType" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pNode">
+                    <type>IMFTopologyNode*</type>
+                </param>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="fOutput">
+                    <type>int</type>
+                </param>
+                <param name="ppType">
+                    <type>IMFMediaType**</type>
+                </param>
+            </function>
+            <function name="MFGetService" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="punkObject">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="guidService">
+                    <type>Guid*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="MFGetSystemTime" access="public" lib="mfplat" static="true" unsafe="true">
+                <type native="MFTIME">long</type>
+            </function>
+            <function name="MFCreatePresentationClock" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppPresentationClock">
+                    <type>IMFPresentationClock**</type>
+                </param>
+            </function>
+            <function name="MFCreateSystemTimeSource" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppSystemTimeSource">
+                    <type>IMFPresentationTimeSource**</type>
+                </param>
+            </function>
+            <constant name="MF_PD_PMPHOST_CONTEXT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d31, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_APP_CONTEXT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d32, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_DURATION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d33, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_TOTAL_FILE_SIZE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d34, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_AUDIO_ENCODING_BITRATE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d35, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_VIDEO_ENCODING_BITRATE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d36, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_MIME_TYPE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d37, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_LAST_MODIFIED_TIME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d38, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_PLAYBACK_ELEMENT_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d39, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_PREFERRED_LANGUAGE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d3A, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_PLAYBACK_BOUNDARY_TIME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6c990d3b, 0xbb8e, 0x477a, 0x85, 0x98, 0xd, 0x5d, 0x96, 0xfc, 0xd8, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_AUDIO_ISVARIABLEBITRATE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x33026ee0, 0xe387, 0x4582, 0xae, 0x0a, 0x34, 0xa2, 0xad, 0x3b, 0xaa, 0x18)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_ADAPTIVE_STREAMING" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xEA0D5D97, 0x29F9, 0x488B, 0xAE, 0x6B, 0x7D, 0x6B, 0x41, 0x36, 0x11, 0x2B)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreatePresentationDescriptor" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="cStreamDescriptors">
+                    <type>uint</type>
+                </param>
+                <param name="apStreamDescriptors">
+                    <type>IMFStreamDescriptor**</type>
+                </param>
+                <param name="ppPresentationDescriptor">
+                    <type>IMFPresentationDescriptor**</type>
+                </param>
+            </function>
+            <function name="MFRequireProtectedEnvironment" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pPresentationDescriptor">
+                    <type>IMFPresentationDescriptor*</type>
+                </param>
+            </function>
+            <function name="MFSerializePresentationDescriptor" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pPD">
+                    <type>IMFPresentationDescriptor*</type>
+                </param>
+                <param name="pcbData">
+                    <type>uint*</type>
+                </param>
+                <param name="ppbData">
+                    <type>byte**</type>
+                </param>
+            </function>
+            <function name="MFDeserializePresentationDescriptor" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="cbData">
+                    <type>uint</type>
+                </param>
+                <param name="pbData">
+                    <type>byte*</type>
+                </param>
+                <param name="ppPD">
+                    <type>IMFPresentationDescriptor**</type>
+                </param>
+            </function>
+            <constant name="MF_SD_LANGUAGE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xaf2180, 0xbdc2, 0x423c, 0xab, 0xca, 0xf5, 0x3, 0x59, 0x3b, 0xc1, 0x21)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SD_PROTECTED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xaf2181, 0xbdc2, 0x423c, 0xab, 0xca, 0xf5, 0x3, 0x59, 0x3b, 0xc1, 0x21)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SD_STREAM_NAME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4f1b099d, 0xd314, 0x41e5, 0xa7, 0x81, 0x7f, 0xef, 0xaa, 0x4c, 0x50, 0x1f)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SD_MUTUALLY_EXCLUSIVE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x23ef79c, 0x388d, 0x487f, 0xac, 0x17, 0x69, 0x6c, 0xd6, 0xe3, 0xc6, 0xf5)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateStreamDescriptor" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIdentifier">
+                    <type>uint</type>
+                </param>
+                <param name="cMediaTypes">
+                    <type>uint</type>
+                </param>
+                <param name="apMediaTypes">
+                    <type>IMFMediaType**</type>
+                </param>
+                <param name="ppDescriptor">
+                    <type>IMFStreamDescriptor**</type>
+                </param>
+            </function>
+            <function name="MFCreateSimpleTypeHandler" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppHandler">
+                    <type>IMFMediaTypeHandler**</type>
+                </param>
+            </function>
+            <constant name="MF_ACTIVATE_CUSTOM_VIDEO_MIXER_CLSID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xba491360, 0xbe50, 0x451e, 0x95, 0xab, 0x6d, 0x4a, 0xcc, 0xc7, 0xda, 0xd8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_ACTIVATE_CUSTOM_VIDEO_MIXER_ACTIVATE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xba491361, 0xbe50, 0x451e, 0x95, 0xab, 0x6d, 0x4a, 0xcc, 0xc7, 0xda, 0xd8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_ACTIVATE_CUSTOM_VIDEO_MIXER_FLAGS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xba491362, 0xbe50, 0x451e, 0x95, 0xab, 0x6d, 0x4a, 0xcc, 0xc7, 0xda, 0xd8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_ACTIVATE_CUSTOM_VIDEO_PRESENTER_CLSID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xba491364, 0xbe50, 0x451e, 0x95, 0xab, 0x6d, 0x4a, 0xcc, 0xc7, 0xda, 0xd8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_ACTIVATE_CUSTOM_VIDEO_PRESENTER_ACTIVATE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xba491365, 0xbe50, 0x451e, 0x95, 0xab, 0x6d, 0x4a, 0xcc, 0xc7, 0xda, 0xd8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_ACTIVATE_CUSTOM_VIDEO_PRESENTER_FLAGS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xba491366, 0xbe50, 0x451e, 0x95, 0xab, 0x6d, 0x4a, 0xcc, 0xc7, 0xda, 0xd8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_ACTIVATE_MFT_LOCKED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xc1f6093c, 0x7f65, 0x4fbd, 0x9e, 0x39, 0x5f, 0xae, 0xc3, 0xc4, 0xfb, 0xd7)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_ACTIVATE_VIDEO_WINDOW" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9a2dbbdd, 0xf57e, 0x4162, 0x82, 0xb9, 0x68, 0x31, 0x37, 0x76, 0x82, 0xd3)
+            </code>
+                </value>
+            </constant>
+            <function name="MFShutdownObject" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <function name="MFCreateAudioRenderer" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAudioAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="ppSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreateAudioRendererActivate" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppActivate">
+                    <type>IMFActivate**</type>
+                </param>
+            </function>
+            <constant name="MF_AUDIO_RENDERER_ATTRIBUTE_FLAGS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xede4b5e0, 0xf805, 0x4d6c, 0x99, 0xb3, 0xdb, 0x01, 0xbf, 0x95, 0xdf, 0xab)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_AUDIO_RENDERER_ATTRIBUTE_SESSION_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xede4b5e3, 0xf805, 0x4d6c, 0x99, 0xb3, 0xdb, 0x01, 0xbf, 0x95, 0xdf, 0xab)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_AUDIO_RENDERER_ATTRIBUTE_ENDPOINT_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xb10aaec3, 0xef71, 0x4cc3, 0xb8, 0x73, 0x5, 0xa9, 0xa0, 0x8b, 0x9f, 0x8e)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_AUDIO_RENDERER_ATTRIBUTE_ENDPOINT_ROLE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6ba644ff, 0x27c5, 0x4d02, 0x98, 0x87, 0xc2, 0x86, 0x19, 0xfd, 0xb9, 0x1b)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_AUDIO_RENDERER_ATTRIBUTE_STREAM_CATEGORY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa9770471, 0x92ec, 0x4df4, 0x94, 0xfe, 0x81, 0xc3, 0x6f, 0xc, 0x3a, 0x7a)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateVideoRendererActivate" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwndVideo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ppActivate">
+                    <type>IMFActivate**</type>
+                </param>
+            </function>
+            <function name="MFCreateMPEG4MediaSink" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pIByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="pVideoMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="pAudioMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="ppIMediaSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreate3GPMediaSink" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pIByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="pVideoMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="pAudioMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="ppIMediaSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreateMP3MediaSink" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pTargetByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="ppMediaSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreateAC3MediaSink" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pTargetByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="pAudioMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="ppMediaSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreateADTSMediaSink" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pTargetByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="pAudioMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="ppMediaSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreateMuxSink" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="guidOutputSubType">
+                    <type>Guid</type>
+                </param>
+                <param name="pOutputAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="pOutputByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="ppMuxSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreateFMPEG4MediaSink" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pIByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="pVideoMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="pAudioMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="ppIMediaSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreateAVIMediaSink" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pIByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="pVideoMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="pAudioMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="ppIMediaSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreateWAVEMediaSink" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pTargetByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="pAudioMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="ppMediaSink">
+                    <type>IMFMediaSink**</type>
+                </param>
+            </function>
+            <function name="MFCreateTopoLoader" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppObj">
+                    <type>IMFTopoLoader**</type>
+                </param>
+            </function>
+            <constant name="MFENABLETYPE_WMDRMV1_LicenseAcquisition" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4ff6eeaf, 0xb43, 0x4797, 0x9b, 0x85, 0xab, 0xf3, 0x18, 0x15, 0xe7, 0xb0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFENABLETYPE_WMDRMV7_LicenseAcquisition" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3306df, 0x4a06, 0x4884, 0xa0, 0x97, 0xef, 0x6d, 0x22, 0xec, 0x84, 0xa3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFENABLETYPE_WMDRMV7_Individualization" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xacd2c84a, 0xb303, 0x4f65, 0xbc, 0x2c, 0x2c, 0x84, 0x8d, 0x1, 0xa9, 0x89)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFENABLETYPE_MF_UpdateRevocationInformation" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xe558b0b5, 0xb3c4, 0x44a0, 0x92, 0x4c, 0x50, 0xd1, 0x78, 0x93, 0x23, 0x85)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFENABLETYPE_MF_UpdateUntrustedComponent" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9879f3d6, 0xcee2, 0x48e6, 0xb5, 0x73, 0x97, 0x67, 0xab, 0x17, 0x2f, 0x16)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFENABLETYPE_MF_RebootRequired" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6d4d3d4b, 0x0ece, 0x4652, 0x8b, 0x3a, 0xf2, 0xd2, 0x42, 0x60, 0xd8, 0x87)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_METADATA_PROVIDER_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xdb214084, 0x58a4, 0x4d2e, 0xb8, 0x4f, 0x6f, 0x75, 0x5b, 0x2f, 0x7a, 0xd)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PROPERTY_HANDLER_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa3face02, 0x32b8, 0x41dd, 0x90, 0xe7, 0x5f, 0xef, 0x7c, 0x89, 0x91, 0xb5)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_RATE_CONTROL_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x866fa297, 0xb802, 0x4bf8, 0x9d, 0xc9, 0x5e, 0x3b, 0x6a, 0x9f, 0x53, 0xc9)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TIMECODE_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa0d502a7, 0x0eb3, 0x4885, 0xb1, 0xb9, 0x9f, 0xeb, 0x0d, 0x08, 0x34, 0x54)
+            </code>
+                </value>
+            </constant>
+            <constant name="MR_POLICY_VOLUME_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1abaa2ac, 0x9d3b, 0x47c6, 0xab, 0x48, 0xc5, 0x95, 0x6, 0xde, 0x78, 0x4d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MR_CAPTURE_POLICY_VOLUME_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x24030acd, 0x107a, 0x4265, 0x97, 0x5c, 0x41, 0x4e, 0x33, 0xe6, 0x5f, 0x2a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MR_STREAM_VOLUME_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf8b5fa2f, 0x32ef, 0x46f5, 0xb1, 0x72, 0x13, 0x21, 0x21, 0x2f, 0xb2, 0xc4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MR_AUDIO_POLICY_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x911fd737, 0x6775, 0x4ab0, 0xa6, 0x14, 0x29, 0x78, 0x62, 0xfd, 0xac, 0x88)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateSampleGrabberSinkActivate" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pIMFMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="pIMFSampleGrabberSinkCallback">
+                    <type>IMFSampleGrabberSinkCallback*</type>
+                </param>
+                <param name="ppIActivate">
+                    <type>IMFActivate**</type>
+                </param>
+            </function>
+            <constant name="MF_SAMPLEGRABBERSINK_SAMPLE_TIME_OFFSET" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x62e3d776, 0x8100, 0x4e03, 0xa6, 0xe8, 0xbd, 0x38, 0x57, 0xac, 0x9c, 0x47)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SAMPLEGRABBERSINK_IGNORE_CLOCK" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x0efda2c0, 0x2b69, 0x4e2e, 0xab, 0x8d, 0x46, 0xdc, 0xbf, 0xf7, 0xd2, 0x5d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_QUALITY_SERVICES" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xb7e2be11, 0x2f96, 0x4640, 0xb5, 0x2c, 0x28, 0x23, 0x65, 0xbd, 0xf1, 0x6c)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_WORKQUEUE_SERVICES" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x8e37d489, 0x41e0, 0x413a, 0x90, 0x68, 0x28, 0x7c, 0x88, 0x6d, 0x8d, 0xda)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateStandardQualityManager" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppQualityManager">
+                    <type>IMFQualityManager**</type>
+                </param>
+            </function>
+            <constant name="MF_QUALITY_NOTIFY_PROCESSING_LATENCY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf6b44af8, 0x604d, 0x46fe, 0xa9, 0x5d, 0x45, 0x47, 0x9b, 0x10, 0xc9, 0xbc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_QUALITY_NOTIFY_SAMPLE_LAG" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x30d15206, 0xed2a, 0x4760, 0xbe, 0x17, 0xeb, 0x4a, 0x9f, 0x12, 0x29, 0x5c)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TIME_FORMAT_SEGMENT_OFFSET" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xc8b8be77, 0x869c, 0x431d, 0x81, 0x2e, 0x16, 0x96, 0x93, 0xf6, 0x5a, 0x39)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateSequencerSource" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pReserved">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppSequencerSource">
+                    <type>IMFSequencerSource**</type>
+                </param>
+            </function>
+            <function name="MFCreateSequencerSegmentOffset" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwId">
+                    <type>uint</type>
+                </param>
+                <param name="hnsOffset">
+                    <type>long</type>
+                </param>
+                <param name="pvarSegmentOffset">
+                    <type>PROPVARIANT*</type>
+                </param>
+            </function>
+            <function name="MFCreateAggregateSource" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSourceCollection">
+                    <type>IMFCollection*</type>
+                </param>
+                <param name="ppAggSource">
+                    <type>IMFMediaSource**</type>
+                </param>
+            </function>
+            <constant name="MF_SOURCE_PRESENTATION_PROVIDER_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xe002aadc, 0xf4af, 0x4ee5, 0x98, 0x47, 0x05, 0x3e, 0xdf, 0x84, 0x04, 0x26)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TOPONODE_ATTRIBUTE_EDITOR_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x65656e1a, 0x077f, 0x4472, 0x83, 0xef, 0x31, 0x6f, 0x11, 0xd5, 0x08, 0x7a)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateCredentialCache" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppCache">
+                    <type>IMFNetCredentialCache**</type>
+                </param>
+            </function>
+            <constant name="MFNETSOURCE_SSLCERTIFICATE_MANAGER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x55e6cb27, 0xe69b, 0x4267, 0x94, 0x0c, 0x2d, 0x7e, 0xc5, 0xbb, 0x8a, 0x0f)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_RESOURCE_FILTER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x815d0ff6, 0x265a, 0x4477, 0x9e, 0x46, 0x7b, 0x80, 0xad, 0x80, 0xb5, 0xfb)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateProxyLocator" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszProtocol">
+                    <type>ushort*</type>
+                </param>
+                <param name="pProxyConfig">
+                    <type>IPropertyStore*</type>
+                </param>
+                <param name="ppProxyLocator">
+                    <type>IMFNetProxyLocator**</type>
+                </param>
+            </function>
+            <constant name="MFNET_SAVEJOB_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xb85a587f, 0x3d02, 0x4e52, 0x95, 0x65, 0x55, 0xd3, 0xec, 0x1e, 0x7f, 0xf7)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateNetSchemePlugin" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvHandler">
+                    <type>void**</type>
+                </param>
+            </function>
+            <constant name="MFNETSOURCE_STATISTICS_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f275, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_STATISTICS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f274, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_BUFFERINGTIME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f276, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_ACCELERATEDSTREAMINGDURATION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f277, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_MAXUDPACCELERATEDSTREAMINGDURATION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4aab2879, 0xbbe1, 0x4994, 0x9f, 0xf0, 0x54, 0x95, 0xbd, 0x25, 0x1, 0x29)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_MAXBUFFERTIMEMS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x408b24e6, 0x4038, 0x4401, 0xb5, 0xb2, 0xfe, 0x70, 0x1a, 0x9e, 0xbf, 0x10)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_CONNECTIONBANDWIDTH" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f278, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_CACHEENABLED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f279, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_AUTORECONNECTLIMIT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f27a, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_RESENDSENABLED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f27b, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_THINNINGENABLED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f27c, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PROTOCOL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f27d, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_TRANSPORT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f27e, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PREVIEWMODEENABLED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f27f, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_CREDENTIAL_MANAGER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f280, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PPBANDWIDTH" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f281, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_AUTORECONNECTPROGRESS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f282, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PROXYLOCATORFACTORY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f283, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_BROWSERUSERAGENT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f28b, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_BROWSERWEBPAGE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f28c, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PLAYERVERSION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f28d, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PLAYERID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f28e, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_HOSTEXE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f28f, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_HOSTVERSION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f291, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PLAYERUSERAGENT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f292, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_CLIENTGUID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x60a2c4a6, 0xf197, 0x4c14, 0xa5, 0xbf, 0x88, 0x83, 0xd, 0x24, 0x58, 0xaf)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_LOGURL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f293, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_ENABLE_UDP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f294, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_ENABLE_TCP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f295, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_ENABLE_MSB" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f296, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_ENABLE_RTSP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f298, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_ENABLE_HTTP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f299, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_ENABLE_STREAMING" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f29c, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_ENABLE_DOWNLOAD" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f29d, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_ENABLE_PRIVATEMODE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x824779d8, 0xf18b, 0x4405, 0x8c, 0xf1, 0x46, 0x4f, 0xb5, 0xaa, 0x8f, 0x71)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_UDP_PORT_RANGE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f29a, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PROXYINFO" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f29b, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_DRMNET_LICENSE_REPRESENTATION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x47eae1bd, 0xbdfe, 0x42e2, 0x82, 0xf3, 0x54, 0xa4, 0x8c, 0x17, 0x96, 0x2d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PROXYSETTINGS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f287, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PROXYHOSTNAME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f284, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PROXYPORT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f288, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PROXYEXCEPTIONLIST" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f285, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PROXYBYPASSFORLOCAL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f286, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PROXYRERUNAUTODETECTION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3cb1f289, 0x0505, 0x4c5d, 0xae, 0x71, 0x0a, 0x55, 0x63, 0x44, 0xef, 0xa1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_STREAM_LANGUAGE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9ab44318, 0xf7cd, 0x4f2d, 0x8d, 0x6d, 0xfa, 0x35, 0xb4, 0x92, 0xce, 0xcb)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_LOGPARAMS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x64936ae8, 0x9418, 0x453a, 0x8c, 0xda, 0x3e, 0xa, 0x66, 0x8b, 0x35, 0x3b)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_PEERMANAGER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x48b29adb, 0xfebf, 0x45ee, 0xa9, 0xbf, 0xef, 0xb8, 0x1c, 0x49, 0x2e, 0xfc)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_FRIENDLYNAME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x5b2a7757, 0xbc6b, 0x447e, 0xaa, 0x06, 0x0d, 0xda, 0x1c, 0x64, 0x6e, 0x2f)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BYTESTREAMHANDLER_ACCEPTS_SHARE_WRITE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa6e1f733, 0x3001, 0x4915, 0x81, 0x50, 0x15, 0x58, 0xa2, 0x18, 0xe, 0xc8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BYTESTREAM_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xab025e2b, 0x16d9, 0x4180, 0xa1, 0x27, 0xba, 0x6c, 0x70, 0x15, 0x61, 0x61)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MEDIA_PROTECTION_MANAGER_PROPERTIES" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x38BD81A9, 0xACEA, 0x4C73, 0x89, 0xB2, 0x55, 0x32, 0xC0, 0xAE, 0xCA, 0x79)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_SPDIF" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xb94a712, 0xad3e, 0x4cee, 0x83, 0xce, 0xce, 0x32, 0xe3, 0xdb, 0x65, 0x22)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_UNKNOWN" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xac3aef5c, 0xce43, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_PCI" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xac3aef5d, 0xce43, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_PCIX" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xac3aef5e, 0xce43, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_PCI_Express" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xac3aef5f, 0xce43, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_AGP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xac3aef60, 0xce43, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_VGA" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5968, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_SVIDEO" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5969, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_COMPOSITE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd596a, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_COMPONENT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd596b, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_DVI" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd596c, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_HDMI" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd596d, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_LVDS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd596e, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_D_JPN" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5970, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_SDI" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5971, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_DISPLAYPORT_EXTERNAL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5972, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_DISPLAYPORT_EMBEDDED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5973, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_UDI_EXTERNAL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5974, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_UDI_EMBEDDED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5975, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_MIRACAST" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5977, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_TRANSPORT_AGNOSTIC_DIGITAL_MODE_A" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5978, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONNECTOR_TRANSPORT_AGNOSTIC_DIGITAL_MODE_B" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x57cd5979, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_POLICY_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xb160c24d, 0xc059, 0x48f1, 0xa9, 0x1, 0x9e, 0xe2, 0x98, 0xa9, 0xa8, 0xc3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_DISABLE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x8cc6d81b, 0xfec6, 0x4d8f, 0x96, 0x4b, 0xcf, 0xba, 0x0b, 0x0d, 0xad, 0x0d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_CONSTRICTVIDEO" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x193370ce, 0xc5e4, 0x4c3a, 0x8a, 0x66, 0x69, 0x59, 0xb4, 0xda, 0x44, 0x42)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_CONSTRICTVIDEO_NOOPM" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa580e8cd, 0xc247, 0x4957, 0xb9, 0x83, 0x3c, 0x2e, 0xeb, 0xd1, 0xff, 0x59)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_CONSTRICTAUDIO" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xffc99b44, 0xdf48, 0x4e16, 0x8e, 0x66, 0x09, 0x68, 0x92, 0xc1, 0x57, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_TRUSTEDAUDIODRIVERS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x65bdf3d2, 0x0168, 0x4816, 0xa5, 0x33, 0x55, 0xd4, 0x7b, 0x02, 0x71, 0x01)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_HDCP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xAE7CC03D, 0xC828, 0x4021, 0xac, 0xb7, 0xd5, 0x78, 0xd2, 0x7a, 0xaf, 0x13)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_CGMSA" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xE57E69E9, 0x226B, 0x4d31, 0xB4, 0xE3, 0xD3, 0xDB, 0x00, 0x87, 0x36, 0xDD)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_ACP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xc3fd11c6, 0xf8b7, 0x4d20, 0xb0, 0x08, 0x1d, 0xb1, 0x7d, 0x61, 0xf2, 0xda)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_WMDRMOTA" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa267a6a1, 0x362e, 0x47d0, 0x88, 0x05, 0x46, 0x28, 0x59, 0x8a, 0x23, 0xe4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_FFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x462a56b2, 0x2866, 0x4bb6, 0x98, 0x0d, 0x6d, 0x8d, 0x9e, 0xdb, 0x1a, 0x8c)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_PROTECTED_SURFACE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4f5d9566, 0xe742, 0x4a25, 0x8d, 0x1f, 0xd2, 0x87, 0xb5, 0xfa, 0x0a, 0xde)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_DISABLE_SCREEN_SCRAPE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa21179a4, 0xb7cd, 0x40d8, 0x96, 0x14, 0x8e, 0xf2, 0x37, 0x1b, 0xa7, 0x8d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_VIDEO_FRAMES" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x36a59cbc, 0x7401, 0x4a8c, 0xbc, 0x20, 0x46, 0xa7, 0xc9, 0xe5, 0x97, 0xf0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_HARDWARE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4ee7f0c1, 0x9ed7, 0x424f, 0xb6, 0xbe, 0x99, 0x6b, 0x33, 0x52, 0x88, 0x56)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_HDCP_WITH_TYPE_ENFORCEMENT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa4a585e8, 0xed60, 0x442d, 0x81, 0x4d, 0xdb, 0x4d, 0x42, 0x20, 0xa0, 0x6d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTIONATTRIBUTE_BEST_EFFORT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xc8e06331, 0x75f0, 0x4ec1, 0x8e, 0x77, 0x17, 0x57, 0x8f, 0x77, 0x3b, 0x46)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTIONATTRIBUTE_FAIL_OVER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x8536abc5, 0x38f1, 0x4151, 0x9c, 0xce, 0xf5, 0x5d, 0x94, 0x12, 0x29, 0xac)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTION_GRAPHICS_TRANSFER_AES_ENCRYPTION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xc873de64, 0xd8a5, 0x49e6, 0x88, 0xbb, 0xfb, 0x96, 0x3f, 0xd3, 0xd4, 0xce)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTIONATTRIBUTE_CONSTRICTVIDEO_IMAGESIZE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x8476fc, 0x4b58, 0x4d80, 0xa7, 0x90, 0xe7, 0x29, 0x76, 0x73, 0x16, 0x1d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFPROTECTIONATTRIBUTE_HDCP_SRM" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6f302107, 0x3477, 0x4468, 0x8a, 0x8, 0xee, 0xf9, 0xdb, 0x10, 0xe2, 0xf)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SampleProtectionSalt" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x5403deee, 0xb9ee, 0x438f, 0xaa, 0x83, 0x38, 0x4, 0x99, 0x7e, 0x56, 0x9d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_REMOTE_PROXY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2f00c90e, 0xd2cf, 0x4278, 0x8b, 0x6a, 0xd0, 0x77, 0xfa, 0xc3, 0xa2, 0x5f)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_CreateMediaExtensionObject" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xef65a54d, 0x0788, 0x45b8, 0x8b, 0x14, 0xbc, 0x0f, 0x6a, 0x6b, 0x51, 0x37)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreatePMPServer" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwCreationFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppPMPServer">
+                    <type>IMFPMPServer**</type>
+                </param>
+            </function>
+            <function name="MFCreateRemoteDesktopPlugin" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppPlugin">
+                    <type>IMFRemoteDesktopPlugin**</type>
+                </param>
+            </function>
+            <function name="CreateNamedPropertyStore" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppStore">
+                    <type>INamedPropertyStore**</type>
+                </param>
+            </function>
+            <constant name="MF_SAMI_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x49a89ae7, 0xb4d9, 0x4ef2, 0xaa, 0x5c, 0xf6, 0x5a, 0x3e, 0x5, 0xae, 0x4e)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_PD_SAMI_STYLELIST" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xe0b73c7f, 0x486d, 0x484e, 0x98, 0x72, 0x4d, 0xe5, 0x19, 0x2a, 0x7b, 0xf8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SD_SAMI_LANGUAGE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x36fcb98a, 0x6cd0, 0x44cb, 0xac, 0xb9, 0xa8, 0xf5, 0x60, 0xd, 0xd0, 0xbb)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateSampleCopierMFT" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppCopierMFT">
+                    <type>IMFTransform**</type>
+                </param>
+            </function>
+            <constant name="MF_TRANSCODE_CONTAINERTYPE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x150ff23f, 0x4abc, 0x478b, 0xac, 0x4f, 0xe1, 0x91, 0x6f, 0xba, 0x1c, 0xca)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_ASF" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x430f6f6e, 0xb6bf, 0x4fc1, 0xa0, 0xbd, 0x9e, 0xe4, 0x6e, 0xee, 0x2a, 0xfb)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_MPEG4" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xdc6cd05d, 0xb9d0, 0x40ef, 0xbd, 0x35, 0xfa, 0x62, 0x2c, 0x1a, 0xb2, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_MP3" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xe438b912, 0x83f1, 0x4de6, 0x9e, 0x3a, 0x9f, 0xfb, 0xc6, 0xdd, 0x24, 0xd1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_FLAC" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x31344aa3, 0x05a9, 0x42b5, 0x90, 0x1b, 0x8e, 0x9d, 0x42, 0x57, 0xf7, 0x5e)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_3GP" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x34c50167, 0x4472, 0x4f34, 0x9e, 0xa0, 0xc4, 0x9f, 0xba, 0xcf, 0x03, 0x7d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_AC3" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6d8d91c3, 0x8c91, 0x4ed1, 0x87, 0x42, 0x8c, 0x34, 0x7d, 0x5b, 0x44, 0xd0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_ADTS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x132fd27d, 0x0f02, 0x43de, 0xa3, 0x01, 0x38, 0xfb, 0xbb, 0xb3, 0x83, 0x4e)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_MPEG2" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xbfc2dbf9, 0x7bb4, 0x4f8f, 0xaf, 0xde, 0xe1, 0x12, 0xc4, 0x4b, 0xa8, 0x82)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_WAVE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x64c3453c, 0x0f26, 0x4741, 0xbe, 0x63, 0x87, 0xbd, 0xf8, 0xbb, 0x93, 0x5b)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_AVI" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7edfe8af, 0x402f, 0x4d76, 0xa3, 0x3c, 0x61, 0x9f, 0xd1, 0x57, 0xd0, 0xf1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_FMPEG4" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9ba876f1, 0x419f, 0x4b77, 0xa1, 0xe0, 0x35, 0x95, 0x9d, 0x9d, 0x40, 0x4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFTranscodeContainerType_AMR" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x25d5ad3, 0x621a, 0x475b, 0x96, 0x4d, 0x66, 0xb1, 0xc8, 0x24, 0xf0, 0x79)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TRANSCODE_SKIP_METADATA_TRANSFER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4e4469ef, 0xb571, 0x4959, 0x8f, 0x83, 0x3d, 0xcf, 0xba, 0x33, 0xa3, 0x93)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TRANSCODE_TOPOLOGYMODE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3e3df610, 0x394a, 0x40b2, 0x9d, 0xea, 0x3b, 0xab, 0x65, 0xb, 0xeb, 0xf2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TRANSCODE_ADJUST_PROFILE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9c37c21b, 0x60f, 0x487c, 0xa6, 0x90, 0x80, 0xd7, 0xf5, 0xd, 0x1c, 0x72)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TRANSCODE_ENCODINGPROFILE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6947787c, 0xf508, 0x4ea9, 0xb1, 0xe9, 0xa1, 0xfe, 0x3a, 0x49, 0xfb, 0xc9)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TRANSCODE_QUALITYVSSPEED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x98332df8, 0x03cd, 0x476b, 0x89, 0xfa, 0x3f, 0x9e, 0x44, 0x2d, 0xec, 0x9f)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TRANSCODE_DONOT_INSERT_ENCODER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf45aa7ce, 0xab24, 0x4012, 0xa1, 0x1b, 0xdc, 0x82, 0x20, 0x20, 0x14, 0x10)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_VIDEO_PROCESSOR_ALGORITHM" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4a0a1e1f, 0x272c, 0x4fb6, 0x9e, 0xb1, 0xdb, 0x33, 0xc, 0xbc, 0x97, 0xca)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_XVP_DISABLE_FRC" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2c0afa19, 0x7a97, 0x4d5a, 0x9e, 0xe8, 0x16, 0xd4, 0xfc, 0x51, 0x8d, 0x8c)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_XVP_CALLER_ALLOCATES_OUTPUT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4a2cabc, 0xcab, 0x40b1, 0xa1, 0xb9, 0x75, 0xbc, 0x36, 0x58, 0xf0, 0x0)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateTranscodeProfile" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppTranscodeProfile">
+                    <type>IMFTranscodeProfile**</type>
+                </param>
+            </function>
+            <function name="MFCreateTranscodeTopology" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrc">
+                    <type>IMFMediaSource*</type>
+                </param>
+                <param name="pwszOutputFilePath">
+                    <type>ushort*</type>
+                </param>
+                <param name="pProfile">
+                    <type>IMFTranscodeProfile*</type>
+                </param>
+                <param name="ppTranscodeTopo">
+                    <type>IMFTopology**</type>
+                </param>
+            </function>
+            <function name="MFCreateTranscodeTopologyFromByteStream" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrc">
+                    <type>IMFMediaSource*</type>
+                </param>
+                <param name="pOutputStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="pProfile">
+                    <type>IMFTranscodeProfile*</type>
+                </param>
+                <param name="ppTranscodeTopo">
+                    <type>IMFTopology**</type>
+                </param>
+            </function>
+            <function name="MFTranscodeGetAudioOutputAvailableTypes" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="guidSubType">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwMFTFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pCodecConfig">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="ppAvailableTypes">
+                    <type>IMFCollection**</type>
+                </param>
+            </function>
+            <function name="MFCreateTranscodeSinkActivate" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppActivate">
+                    <type>IMFActivate**</type>
+                </param>
+            </function>
+            <constant name="MF_LOCAL_MFT_REGISTRATION_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xddf5cf9c, 0x4506, 0x45aa, 0xab, 0xf0, 0x6d, 0x5d, 0x94, 0xdd, 0x1b, 0x4a)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateTrackedSample" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppMFSample">
+                    <type>IMFTrackedSample**</type>
+                </param>
+            </function>
+            <function name="MFCreateMFByteStreamOnStream" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="ppByteStream">
+                    <type>IMFByteStream**</type>
+                </param>
+            </function>
+            <function name="MFCreateStreamOnMFByteStream" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="ppStream">
+                    <type>IStream**</type>
+                </param>
+            </function>
+            <function name="MFCreateMFByteStreamOnStreamEx" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="punkStream">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppByteStream">
+                    <type>IMFByteStream**</type>
+                </param>
+            </function>
+            <function name="MFCreateStreamOnMFByteStreamEx" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="MFCreateMediaTypeFromProperties" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="punkStream">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="ppMediaType">
+                    <type>IMFMediaType**</type>
+                </param>
+            </function>
+            <function name="MFCreatePropertiesFromMediaType" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <constant name="MF_WRAPPED_BUFFER_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xab544072, 0xc269, 0x4ebc, 0xa5, 0x52, 0x1c, 0x3b, 0x32, 0xbe, 0xd5, 0xca)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_WRAPPED_SAMPLE_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x31f52bf2, 0xd03e, 0x4048, 0x80, 0xd0, 0x9c, 0x10, 0x46, 0xd8, 0x7c, 0x61)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_WRAPPED_OBJECT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2b182c4c, 0xd6ac, 0x49f4, 0x89, 0x15, 0xf7, 0x18, 0x87, 0xdb, 0x70, 0xcd)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_HttpSchemePlugin" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x44cb442b, 0x9da9, 0x49df, 0xb3, 0xfd, 0x2, 0x37, 0x77, 0xb1, 0x6e, 0x50)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_UrlmonSchemePlugin" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9ec4b4f9, 0x3029, 0x45ad, 0x94, 0x7b, 0x34, 0x4d, 0xe2, 0xa2, 0x49, 0xe2)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_NetSchemePlugin" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xe9f4ebab, 0xd97b, 0x463e, 0xa2, 0xb1, 0xc5, 0x4e, 0xe3, 0xf9, 0x41, 0x4d)
+            </code>
+                </value>
+            </constant>
+            <function name="MFEnumDeviceSources" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="pppSourceActivate">
+                    <type>IMFActivate***</type>
+                </param>
+                <param name="pcSourceActivate">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="MFCreateDeviceSource" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="ppSource">
+                    <type>IMFMediaSource**</type>
+                </param>
+            </function>
+            <function name="MFCreateDeviceSourceActivate" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="ppActivate">
+                    <type>IMFActivate**</type>
+                </param>
+            </function>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xc60ac5fe, 0x252a, 0x478f, 0xa0, 0xef, 0xbc, 0x8f, 0xa5, 0xf7, 0xca, 0xd3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_HW_SOURCE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xde7046ba, 0x54d6, 0x4487, 0xa2, 0xa4, 0xec, 0x7c, 0xd, 0x1b, 0xd1, 0x63)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_FRIENDLY_NAME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x60d0e559, 0x52f8, 0x4fa2, 0xbb, 0xce, 0xac, 0xdb, 0x34, 0xa8, 0xec, 0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_MEDIA_TYPE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x56a819ca, 0xc78, 0x4de4, 0xa0, 0xa7, 0x3d, 0xda, 0xba, 0xf, 0x24, 0xd4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_CATEGORY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x77f0ae69, 0xc3bd, 0x4509, 0x94, 0x1d, 0x46, 0x7e, 0x4d, 0x24, 0x89, 0x9e)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_SYMBOLIC_LINK" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x58f0aad8, 0x22bf, 0x4f8a, 0xbb, 0x3d, 0xd2, 0xc4, 0x97, 0x8c, 0x6e, 0x2f)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_SYMBOLIC_LINK" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x98d24b5e, 0x5930, 0x4614, 0xb5, 0xa1, 0xf6, 0x0, 0xf9, 0x35, 0x5a, 0x78)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_MAX_BUFFERS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7dd9b730, 0x4f2d, 0x41d5, 0x8f, 0x95, 0xc, 0xc9, 0xa9, 0x12, 0xba, 0x26)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ENDPOINT_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x30da9258, 0xfeb9, 0x47a7, 0xa4, 0x53, 0x76, 0x3a, 0x7a, 0x8e, 0x1c, 0x5f)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ROLE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xbc9d118e, 0x8c67, 0x4a18, 0x85, 0xd4, 0x12, 0xd3, 0x0, 0x40, 0x5, 0x52)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_PROVIDER_DEVICE_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x36689d42, 0xa06c, 0x40ae, 0x84, 0xcf, 0xf5, 0xa0, 0x34, 0x6, 0x7c, 0xc4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_XADDRESS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xbca0be52, 0xc327, 0x44c7, 0x9b, 0x7d, 0x7f, 0xa8, 0xd9, 0xb5, 0xbc, 0xda)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_STREAM_URL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9d7b40d2, 0x3617, 0x4043, 0x93, 0xe3, 0x8d, 0x6d, 0xa9, 0xbb, 0x34, 0x92)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_USERNAME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x5d01add, 0x949f, 0x46eb, 0xbc, 0x8e, 0x8b, 0xd, 0x2b, 0x32, 0xd7, 0x9d)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_PASSWORD" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa0fd7e16, 0x42d9, 0x49df, 0x84, 0xc0, 0xe8, 0x2c, 0x5e, 0xab, 0x88, 0x74)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_FrameServerNetworkCameraSource" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7a213aa7, 0x866f, 0x414a, 0x8c, 0x1a, 0x27, 0x5c, 0x72, 0x83, 0xa3, 0x95)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_GUID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x14dd9a1c, 0x7cff, 0x41be, 0xb1, 0xb9, 0xba, 0x1a, 0xc6, 0xec, 0xb5, 0x71)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_GUID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x8ac3587a, 0x4ae7, 0x42d8, 0x99, 0xe0, 0x0a, 0x60, 0x13, 0xee, 0xf9, 0x0f)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_IMAGE_STREAM" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa7ffb865, 0xe7b2, 0x43b0, 0x9f, 0x6f, 0x9a, 0xf2, 0xa0, 0xe5, 0xf, 0xc0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_INDEPENDENT_IMAGE_STREAM" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3eeec7e, 0xd605, 0x4576, 0x8b, 0x29, 0x65, 0x80, 0xb4, 0x90, 0xd7, 0xd3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_STREAM_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x11bd5120, 0xd124, 0x446b, 0x88, 0xe6, 0x17, 0x6, 0x2, 0x57, 0xff, 0xf9)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_STREAM_CATEGORY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2939e7b8, 0xa62e, 0x4579, 0xb6, 0x74, 0xd4, 0x7, 0x3d, 0xfa, 0xbb, 0xba)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_FRAMESERVER_SHARED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1CB378E9, 0xB279, 0x41D4, 0xAF, 0x97, 0x34, 0xA2, 0x43, 0xE6, 0x83, 0x20)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_TRANSFORM_STREAM_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xe63937b7, 0xdaaf, 0x4d49, 0x81, 0x5f, 0xd8, 0x26, 0xf8, 0xad, 0x31, 0xe7)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_EXTENSION_PLUGIN_CLSID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x048e6558, 0x60c4, 0x4173, 0xbd, 0x5b, 0x6a, 0x3c, 0xa2, 0x89, 0x6a, 0xee)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICEMFT_EXTENSION_PLUGIN_CLSID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x844dbae, 0x34fa, 0x48a0, 0xa7, 0x83, 0x8e, 0x69, 0x6f, 0xb1, 0xc9, 0xa8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_EXTENSION_PLUGIN_CONNECTION_POINT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x37f9375c, 0xe664, 0x4ea4, 0xaa, 0xe4, 0xcb, 0x6d, 0x1d, 0xac, 0xa1, 0xf4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_TAKEPHOTO_TRIGGER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1d180e34, 0x538c, 0x4fbb, 0xa7, 0x5a, 0x85, 0x9a, 0xf7, 0xd2, 0x61, 0xa6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_MAX_FRAME_BUFFERS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1684cebe, 0x3175, 0x4985, 0x88, 0x2c, 0x0e, 0xfd, 0x3e, 0x8a, 0xc1, 0x1e)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICEMFT_CONNECTED_FILTER_KSCONTROL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6a2c4fa6, 0xd179, 0x41cd, 0x95, 0x23, 0x82, 0x23, 0x71, 0xea, 0x40, 0xe5)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICEMFT_CONNECTED_PIN_KSCONTROL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xe63310f7, 0xb244, 0x4ef8, 0x9a, 0x7d, 0x24, 0xc7, 0x4e, 0x32, 0xeb, 0xd0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICE_THERMAL_STATE_CHANGED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x70ccd0af, 0xfc9f, 0x4deb, 0xa8, 0x75, 0x9f, 0xec, 0xd1, 0x6c, 0x5b, 0xd4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFSampleExtension_DeviceTimestamp" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x8f3e35e7, 0x2dcd, 0x4887, 0x86, 0x22, 0x2a, 0x58, 0xba, 0xa6, 0x52, 0xb0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFSampleExtension_Spatial_CameraViewTransform" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4e251fa4, 0x830f, 0x4770, 0x85, 0x9a, 0x4b, 0x8d, 0x99, 0xaa, 0x80, 0x9b)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFSampleExtension_Spatial_CameraCoordinateSystem" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9d13c82f, 0x2199, 0x4e67, 0x91, 0xcd, 0xd1, 0xa4, 0x18, 0x1f, 0x25, 0x34)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFSampleExtension_Spatial_CameraProjectionTransform" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x47f9fcb5, 0x2a02, 0x4f26, 0xa4, 0x77, 0x79, 0x2f, 0xdf, 0x95, 0x88, 0x6a)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateProtectedEnvironmentAccess" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppAccess">
+                    <type>IMFProtectedEnvironmentAccess**</type>
+                </param>
+            </function>
+            <function name="MFLoadSignedLibrary" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppLib">
+                    <type>IMFSignedLibrary**</type>
+                </param>
+            </function>
+            <function name="MFGetSystemId" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppId">
+                    <type>IMFSystemId**</type>
+                </param>
+            </function>
+            <function name="MFGetLocalId" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="verifier">
+                    <type>byte*</type>
+                </param>
+                <param name="size">
+                    <type>uint</type>
+                </param>
+                <param name="id">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <constant name="CLSID_MPEG2ByteStreamPlugin" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x40871c59, 0xab40, 0x471f, 0x8d, 0xc3, 0x1f, 0x25, 0x9d, 0x86, 0x24, 0x79)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MEDIASOURCE_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf09992f7, 0x9fba, 0x4c4a, 0xa3, 0x7f, 0x8c, 0x47, 0xb4, 0xe1, 0xdf, 0xe7)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_ACCESS_CONTROLLED_MEDIASOURCE_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x14a5031, 0x2f05, 0x4c6a, 0x9f, 0x9c, 0x7d, 0xd, 0xc4, 0xed, 0xa5, 0xf4)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateContentProtectionDevice" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ProtectionSystemId">
+                    <type>Guid*</type>
+                </param>
+                <param name="ContentProtectionDevice">
+                    <type>IMFContentProtectionDevice**</type>
+                </param>
+            </function>
+            <function name="MFIsContentProtectionDeviceSupported" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ProtectionSystemId">
+                    <type>Guid*</type>
+                </param>
+                <param name="isSupported">
+                    <type>int*</type>
+                </param>
+            </function>
+            <constant name="MF_CONTENT_DECRYPTOR_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x68a72927, 0xfc7b, 0x44ee, 0x85, 0xf4, 0x7c, 0x51, 0xbd, 0x55, 0xa6, 0x59)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_CONTENT_PROTECTION_DEVICE_SERVICE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xff58436f, 0x76a0, 0x41fe, 0xb5, 0x66, 0x10, 0xcc, 0x53, 0x96, 0x2e, 0xdd)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateContentDecryptorContext" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="guidMediaProtectionSystemId">
+                    <type>Guid*</type>
+                </param>
+                <param name="pD3DManager">
+                    <type>IMFDXGIDeviceManager*</type>
+                </param>
+                <param name="pContentProtectionDevice">
+                    <type>IMFContentProtectionDevice*</type>
+                </param>
+                <param name="ppContentDecryptorContext">
+                    <type>IMFContentDecryptorContext**</type>
+                </param>
+            </function>
+            <constant name="MF_SD_AUDIO_ENCODER_DELAY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x8e85422c, 0x73de, 0x403f, 0x9a, 0x35, 0x55, 0x0a, 0xd6, 0xe8, 0xb9, 0x51)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SD_AUDIO_ENCODER_PADDING" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x529c7f2c, 0xac4b, 0x4e3f, 0xbf, 0xc3, 0x09, 0x02, 0x19, 0x49, 0x82, 0xcb)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MSH264DecoderMFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x62CE7E72, 0x4C71, 0x4d20, 0xB1, 0x5D, 0x45, 0x28, 0x31, 0xA8, 0x7D, 0x9D)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MSH264EncoderMFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6ca50344, 0x051a, 0x4ded, 0x97, 0x79, 0xa4, 0x33, 0x05, 0x16, 0x5e, 0x35)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MSDDPlusDecMFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x177C0AFE, 0x900B, 0x48d4, 0x9E, 0x4C, 0x57, 0xAD, 0xD2, 0x50, 0xB3, 0xD4)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MP3DecMediaObject" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xbbeea841, 0x0a63, 0x4f52, 0xa7, 0xab, 0xa9, 0xb3, 0xa8, 0x4e, 0xd3, 0x8a)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MSAACDecMFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x32d186a7, 0x218f, 0x4c75, 0x88, 0x76, 0xdd, 0x77, 0x27, 0x3a, 0x89, 0x99)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MSH265DecoderMFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x420A51A3, 0xD605, 0x430C, 0xB4, 0xFC, 0x45, 0x27, 0x4F, 0xA6, 0xC5, 0x62)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_WMVDecoderMFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x82d353df, 0x90bd, 0x4382, 0x8b, 0xc2, 0x3f, 0x61, 0x92, 0xb7, 0x6e, 0x34)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_WMADecMediaObject" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2eeb4adf, 0x4578, 0x4d10, 0xbc, 0xa7, 0xbb, 0x95, 0x5f, 0x56, 0x32, 0x0a)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MSMPEGAudDecMFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x70707B39, 0xB2CA, 0x4015, 0xAB, 0xEA, 0xF8, 0x44, 0x7D, 0x22, 0xD8, 0x8B)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MSMPEGDecoderMFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2D709E52, 0x123F, 0x49b5, 0x9C, 0xBC, 0x9A, 0xF5, 0xCD, 0xE2, 0x8F, 0xB9)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_AudioResamplerMediaObject" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf447b69e, 0x1884, 0x4a7e, 0x80, 0x55, 0x34, 0x6f, 0x74, 0xd6, 0xed, 0xb3)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MSVPxDecoder" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xE3AAF548, 0xC9A4, 0x4C6E, 0x23, 0x4D, 0x5A, 0xDA, 0x37, 0x4B, 0x00, 0x00)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MSOpusDecoder" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x63e17c10, 0x2d43, 0x4c42, 0x8f, 0xe3, 0x8d, 0x8b, 0x63, 0xe4, 0x6a, 0x6a)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_VideoProcessorMFT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x88753b26, 0x5b24, 0x49bd, 0xb2, 0xe7, 0xc, 0x44, 0x5c, 0x78, 0xc9, 0x82)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_CROSS_ORIGIN_SUPPORT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9842207c, 0xb02c, 0x4271, 0xa2, 0xfc, 0x72, 0xe4, 0x93, 0x8, 0xe5, 0xc2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFNETSOURCE_HTTP_DOWNLOAD_SESSION_PROVIDER" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7d55081e, 0x307d, 0x4d6d, 0xa6, 0x63, 0xa9, 0x3b, 0xe9, 0x7c, 0x4b, 0x5c)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SD_MEDIASOURCE_STATUS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1913678b, 0xfc0f, 0x44da, 0x8f, 0x43, 0x1b, 0xa3, 0xb5, 0x26, 0xf4, 0xae)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SD_VIDEO_SPHERICAL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xa51da449, 0x3fdc, 0x478c, 0xbc, 0xb5, 0x30, 0xbe, 0x76, 0x59, 0x5f, 0x55)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SD_VIDEO_SPHERICAL_FORMAT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4a8fc407, 0x6ea1, 0x46c8, 0xb5, 0x67, 0x69, 0x71, 0xd4, 0xa1, 0x39, 0xc3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_SD_VIDEO_SPHERICAL_INITIAL_VIEWDIRECTION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x11d25a49, 0xbb62, 0x467f, 0x9d, 0xb1, 0xc1, 0x71, 0x65, 0x71, 0x6c, 0x49)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MEDIASOURCE_EXPOSE_ALL_STREAMS" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xe7f250b8, 0x8fd9, 0x4a09, 0xb6, 0xc1, 0x6a, 0x31, 0x5c, 0x7c, 0x72, 0xe)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_ST_MEDIASOURCE_COLLECTION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x616DE972, 0x83AD, 0x4950, 0x81, 0x70, 0x63, 0x0D, 0x19, 0xCB, 0xE3, 0x07)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_FILTER_KSCONTROL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x46783CCA, 0x3DF5, 0x4923, 0xA9, 0xEF, 0x36, 0xB7, 0x22, 0x3E, 0xDD, 0xE0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_PIN_KSCONTROL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xEF3EF9A7, 0x87F2, 0x48CA, 0xBE, 0x02, 0x67, 0x48, 0x78, 0x91, 0x8E, 0x98)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_SOURCE_ATTRIBUTES" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2F8CB617, 0x361B, 0x434F, 0x85, 0xEA, 0x99, 0xA0, 0x3E, 0x1C, 0xE4, 0xE0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_FRAMESERVER_HIDDEN" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xF402567B, 0x4D91, 0x4179, 0x96, 0xD1, 0x74, 0xC8, 0x48, 0x0C, 0x20, 0x34)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_STF_VERSION_INFO" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6770BD39, 0xEF82, 0x44EE, 0xA4, 0x9B, 0x93, 0x4B, 0xEB, 0x24, 0xAE, 0xF7)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_STF_VERSION_DATE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x31A165D5, 0xDF67, 0x4095, 0x8E, 0x44, 0x88, 0x68, 0xFC, 0x20, 0xDB, 0xFD)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_REQUIRED_CAPABILITIES" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6D8B957E, 0x7CF6, 0x43F4, 0xAF, 0x56, 0x9C, 0x0E, 0x1E, 0x4F, 0xCB, 0xE1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_REQUIRED_SDDL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x331AE85D, 0xC0D3, 0x49BA, 0x83, 0xBA, 0x82, 0xA1, 0x2D, 0x63, 0xCD, 0xD6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICEMFT_SENSORPROFILE_COLLECTION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x36EBDC44, 0xB12C, 0x441B, 0x89, 0xF4, 0x08, 0xB2, 0xF4, 0x1A, 0x9C, 0xFC)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_DEVICESTREAM_SENSORSTREAM_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xE35B9FE4, 0x0659, 0x4CAD, 0xBB, 0x51, 0x33, 0x16, 0x0B, 0xE7, 0xE4, 0x13)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateSensorGroup" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="SensorGroupSymbolicLink">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppSensorGroup">
+                    <type>IMFSensorGroup**</type>
+                </param>
+            </function>
+            <function name="MFCreateSensorStream" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="StreamId">
+                    <type>uint</type>
+                </param>
+                <param name="pAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="pMediaTypeCollection">
+                    <type>IMFCollection*</type>
+                </param>
+                <param name="ppStream">
+                    <type>IMFSensorStream**</type>
+                </param>
+            </function>
+            <function name="MFCreateSensorProfile" access="public" lib="mfsensorgroup" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ProfileType">
+                    <type>Guid*</type>
+                </param>
+                <param name="ProfileIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Constraints">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppProfile">
+                    <type>IMFSensorProfile**</type>
+                </param>
+            </function>
+            <function name="MFCreateSensorProfileCollection" access="public" lib="mfsensorgroup" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppSensorProfile">
+                    <type>IMFSensorProfileCollection**</type>
+                </param>
+            </function>
+            <function name="MFCreateSensorActivityMonitor" access="public" lib="mfsensorgroup" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pCallback">
+                    <type>IMFSensorActivitiesReportCallback*</type>
+                </param>
+                <param name="ppActivityMonitor">
+                    <type>IMFSensorActivityMonitor**</type>
+                </param>
+            </function>
+            <constant name="MFStreamExtension_ExtendedCameraIntrinsics" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xaa74b3df, 0x9a2c, 0x48d6, 0x83, 0x93, 0x5b, 0xd1, 0xc1, 0xa8, 0x1e, 0x6e)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFSampleExtension_ExtendedCameraIntrinsics" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x560bc4a5, 0x4de0, 0x4113, 0x9c, 0xdc, 0x83, 0x2d, 0xb9, 0x74, 0xf, 0x3d)
+            </code>
+                </value>
+            </constant>
+            <function name="MFCreateExtendedCameraIntrinsics" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppExtendedCameraIntrinsics">
+                    <type>IMFExtendedCameraIntrinsics**</type>
+                </param>
+            </function>
+            <function name="MFCreateExtendedCameraIntrinsicModel" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="distortionModelType">
+                    <type>MFCameraIntrinsic_DistortionModelType</type>
+                </param>
+                <param name="ppExtendedCameraIntrinsicModel">
+                    <type>IMFExtendedCameraIntrinsicModel**</type>
+                </param>
+            </function>
+            <function name="MFCreateRelativePanelWatcher" access="public" lib="mf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="videoDeviceId">
+                    <type>ushort*</type>
+                </param>
+                <param name="displayMonitorDeviceId">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppRelativePanelWatcher">
+                    <type>IMFRelativePanelWatcher**</type>
+                </param>
+            </function>
+            <constant name="MEDIASINK_FIXED_STREAMS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MEDIASINK_CANNOT_MATCH_CLOCK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MEDIASINK_RATELESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="MEDIASINK_CLOCK_REQUIRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="MEDIASINK_CAN_PREROLL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="MEDIASINK_REQUIRE_REFERENCE_MEDIATYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCLOCK_FREQUENCY_HNS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCLOCK_TOLERANCE_UNKNOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>50000
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCLOCK_JITTER_ISR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1000
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCLOCK_JITTER_DPC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4000
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCLOCK_JITTER_PASSIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>10000
+            </code>
+                </value>
+            </constant>
+            <constant name="PRESENTATION_CURRENT_POSITION" access="public">
+                <type primitive="True">long</type>
+                <value>
+                    <code>0x7fffffffffffffff
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_AUDIO_RENDERER_ATTRIBUTE_FLAGS_CROSSPROCESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_AUDIO_RENDERER_ATTRIBUTE_FLAGS_NOPERSIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_AUDIO_RENDERER_ATTRIBUTE_FLAGS_DONT_ALLOW_FORMAT_CHANGES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="MFRR_INFO_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_USER_MODE_COMPONENT_LOAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_KERNEL_MODE_COMPONENT_LOAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_GRL_LOAD_FAILED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_INVALID_GRL_SIGNATURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_GRL_ABSENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_COMPONENT_REVOKED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_COMPONENT_INVALID_EKU" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_COMPONENT_CERT_REVOKED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_COMPONENT_INVALID_ROOT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_COMPONENT_HS_CERT_REVOKED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_COMPONENT_LS_CERT_REVOKED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BOOT_DRIVER_VERIFICATION_FAILED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_TEST_SIGNED_COMPONENT_LOADING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MINCRYPT_FAILURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="SHA_HASH_LEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>20
+            </code>
+                </value>
+            </constant>
+            <constant name="STR_HASH_LEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(20 * 2 + 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFSEQUENCER_INVALID_ELEMENT_ID" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0xffffffff)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFOUTPUTATTRIBUTE_DIGITAL" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x00000001)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFOUTPUTATTRIBUTE_NONSTANDARDIMPLEMENTATION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x00000002)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFOUTPUTATTRIBUTE_VIDEO" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x00000004)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFOUTPUTATTRIBUTE_COMPRESSED" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x00000008)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFOUTPUTATTRIBUTE_SOFTWARE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x00000010)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFOUTPUTATTRIBUTE_BUS" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x00000020)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFOUTPUTATTRIBUTE_BUSIMPLEMENTATION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x0000FF00)
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONTENTPROTECTIONDEVICE_FUNCTIONID_START" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MFCONTENTPROTECTIONDEVICE_REALTIMECLIENT_DATA_FUNCTIONID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_UNKNOWN_DURATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_IMFMediaSession" value="0x90377834, 0x21D0, 0x4DEE, 0x82, 0x14, 0xBA, 0x2E, 0x3E, 0x6C, 0x11, 0x27" />
+            <iid name="IID_IMFSourceResolver" value="0xFBE5A32D, 0xA497, 0x4B61, 0xBB, 0x85, 0x97, 0xB1, 0xA8, 0x48, 0xA6, 0xE3" />
+            <iid name="IID_IMFMediaSource" value="0x279A808D, 0xAEC7, 0x40C8, 0x9C, 0x6B, 0xA6, 0xB4, 0x92, 0xC7, 0x8A, 0x66" />
+            <iid name="IID_IMFMediaSourceEx" value="0x3C9B2EB9, 0x86D5, 0x4514, 0xA3, 0x94, 0xF5, 0x66, 0x64, 0xF9, 0xF0, 0xD8" />
+            <iid name="IID_IMFClockConsumer" value="0x6EF2A662, 0x47C0, 0x4666, 0xB1, 0x3D, 0xCB, 0xB7, 0x17, 0xF2, 0xFA, 0x2C" />
+            <iid name="IID_IMFMediaStream" value="0xD182108F, 0x4EC6, 0x443F, 0xAA, 0x42, 0xA7, 0x11, 0x06, 0xEC, 0x82, 0x5F" />
+            <iid name="IID_IMFMediaSink" value="0x6EF2A660, 0x47C0, 0x4666, 0xB1, 0x3D, 0xCB, 0xB7, 0x17, 0xF2, 0xFA, 0x2C" />
+            <iid name="IID_IMFStreamSink" value="0x0A97B3CF, 0x8E7C, 0x4A3D, 0x8F, 0x8C, 0x0C, 0x84, 0x3D, 0xC2, 0x47, 0xFB" />
+            <iid name="IID_IMFVideoSampleAllocator" value="0x86CBC910, 0xE533, 0x4751, 0x8E, 0x3B, 0xF1, 0x9B, 0x5B, 0x80, 0x6A, 0x03" />
+            <iid name="IID_IMFVideoSampleAllocatorNotify" value="0xA792CDBE, 0xC374, 0x4E89, 0x83, 0x35, 0x27, 0x8E, 0x7B, 0x99, 0x56, 0xA4" />
+            <iid name="IID_IMFVideoSampleAllocatorNotifyEx" value="0x3978AA1A, 0x6D5B, 0x4B7F, 0xA3, 0x40, 0x90, 0x89, 0x91, 0x89, 0xAE, 0x34" />
+            <iid name="IID_IMFVideoSampleAllocatorCallback" value="0x992388B4, 0x3372, 0x4F67, 0x8B, 0x6F, 0xC8, 0x4C, 0x07, 0x1F, 0x47, 0x51" />
+            <iid name="IID_IMFVideoSampleAllocatorEx" value="0x545B3A48, 0x3283, 0x4F62, 0x86, 0x6F, 0xA6, 0x2D, 0x8F, 0x59, 0x8F, 0x9F" />
+            <iid name="IID_IMFDXGIDeviceManagerSource" value="0x20BC074B, 0x7A8D, 0x4609, 0x8C, 0x3B, 0x64, 0xA0, 0xA3, 0xB5, 0xD7, 0xCE" />
+            <iid name="IID_IMFVideoProcessorControl" value="0xA3F675D5, 0x6119, 0x4F7F, 0xA1, 0x00, 0x1D, 0x8B, 0x28, 0x0F, 0x0E, 0xFB" />
+            <iid name="IID_IMFVideoProcessorControl2" value="0xBDE633D3, 0xE1DC, 0x4A7F, 0xA6, 0x93, 0xBB, 0xAE, 0x39, 0x9C, 0x4A, 0x20" />
+            <iid name="IID_IMFVideoProcessorControl3" value="0x2424B3F2, 0xEB23, 0x40F1, 0x91, 0xAA, 0x74, 0xBD, 0xDE, 0xEA, 0x08, 0x83" />
+            <iid name="IID_IMFVideoRendererEffectControl" value="0x604D33D7, 0xCF23, 0x41D5, 0x82, 0x24, 0x5B, 0xBB, 0xB1, 0xA8, 0x74, 0x75" />
+            <iid name="IID_IMFTopology" value="0x83CF873A, 0xF6DA, 0x4BC8, 0x82, 0x3F, 0xBA, 0xCF, 0xD5, 0x5D, 0xC4, 0x33" />
+            <iid name="IID_IMFTopologyNode" value="0x83CF873A, 0xF6DA, 0x4BC8, 0x82, 0x3F, 0xBA, 0xCF, 0xD5, 0x5D, 0xC4, 0x30" />
+            <iid name="IID_IMFGetService" value="0xFA993888, 0x4383, 0x415A, 0xA9, 0x30, 0xDD, 0x47, 0x2A, 0x8C, 0xF6, 0xF7" />
+            <iid name="IID_IMFClock" value="0x2EB1E945, 0x18B8, 0x4139, 0x9B, 0x1A, 0xD5, 0xD5, 0x84, 0x81, 0x85, 0x30" />
+            <iid name="IID_IMFPresentationClock" value="0x868CE85C, 0x8EA9, 0x4F55, 0xAB, 0x82, 0xB0, 0x09, 0xA9, 0x10, 0xA8, 0x05" />
+            <iid name="IID_IMFPresentationTimeSource" value="0x7FF12CCE, 0xF76F, 0x41C2, 0x86, 0x3B, 0x16, 0x66, 0xC8, 0xE5, 0xE1, 0x39" />
+            <iid name="IID_IMFClockStateSink" value="0xF6696E82, 0x74F7, 0x4F3D, 0xA1, 0x78, 0x8A, 0x5E, 0x09, 0xC3, 0x65, 0x9F" />
+            <iid name="IID_IMFPresentationDescriptor" value="0x03CB2711, 0x24D7, 0x4DB6, 0xA1, 0x7F, 0xF3, 0xA7, 0xA4, 0x79, 0xA5, 0x36" />
+            <iid name="IID_IMFStreamDescriptor" value="0x56C03D9C, 0x9DBB, 0x45F5, 0xAB, 0x4B, 0xD8, 0x0F, 0x47, 0xC0, 0x59, 0x38" />
+            <iid name="IID_IMFMediaTypeHandler" value="0xE93DCF6C, 0x4B07, 0x4E1E, 0x81, 0x23, 0xAA, 0x16, 0xED, 0x6E, 0xAD, 0xF5" />
+            <iid name="IID_IMFTimer" value="0xE56E4CBD, 0x8F70, 0x49D8, 0xA0, 0xF8, 0xED, 0xB3, 0xD6, 0xAB, 0x9B, 0xF2" />
+            <iid name="IID_IMFShutdown" value="0x97EC2EA4, 0x0E42, 0x4937, 0x97, 0xAC, 0x9D, 0x6D, 0x32, 0x88, 0x24, 0xE1" />
+            <iid name="IID_IMFTopoLoader" value="0xDE9A6157, 0xF660, 0x4643, 0xB5, 0x6A, 0xDF, 0x9F, 0x79, 0x98, 0xC7, 0xCD" />
+            <iid name="IID_IMFContentProtectionManager" value="0xACF92459, 0x6A61, 0x42BD, 0xB5, 0x7C, 0xB4, 0x3E, 0x51, 0x20, 0x3C, 0xB0" />
+            <iid name="IID_IMFContentEnabler" value="0xD3C4EF59, 0x49CE, 0x4381, 0x90, 0x71, 0xD5, 0xBC, 0xD0, 0x44, 0xC7, 0x70" />
+            <iid name="IID_IMFMetadata" value="0xF88CFB8C, 0xEF16, 0x4991, 0xB4, 0x50, 0xCB, 0x8C, 0x69, 0xE5, 0x17, 0x04" />
+            <iid name="IID_IMFMetadataProvider" value="0x56181D2D, 0xE221, 0x4ADB, 0xB1, 0xC8, 0x3C, 0xEE, 0x6A, 0x53, 0xF7, 0x6F" />
+            <iid name="IID_IMFRateSupport" value="0x0A9CCDBC, 0xD797, 0x4563, 0x96, 0x67, 0x94, 0xEC, 0x5D, 0x79, 0x29, 0x2D" />
+            <iid name="IID_IMFRateControl" value="0x88DDCD21, 0x03C3, 0x4275, 0x91, 0xED, 0x55, 0xEE, 0x39, 0x29, 0x32, 0x8F" />
+            <iid name="IID_IMFTimecodeTranslate" value="0xAB9D8661, 0xF7E8, 0x4EF4, 0x98, 0x61, 0x89, 0xF3, 0x34, 0xF9, 0x4E, 0x74" />
+            <iid name="IID_IMFSeekInfo" value="0x26AFEA53, 0xD9ED, 0x42B5, 0xAB, 0x80, 0xE6, 0x4F, 0x9E, 0xE3, 0x47, 0x79" />
+            <iid name="IID_IMFSimpleAudioVolume" value="0x089EDF13, 0xCF71, 0x4338, 0x8D, 0x13, 0x9E, 0x56, 0x9D, 0xBD, 0xC3, 0x19" />
+            <iid name="IID_IMFAudioStreamVolume" value="0x76B1BBDB, 0x4EC8, 0x4F36, 0xB1, 0x06, 0x70, 0xA9, 0x31, 0x6D, 0xF5, 0x93" />
+            <iid name="IID_IMFAudioPolicy" value="0xA0638C2B, 0x6465, 0x4395, 0x9A, 0xE7, 0xA3, 0x21, 0xA9, 0xFD, 0x28, 0x56" />
+            <iid name="IID_IMFSampleGrabberSinkCallback" value="0x8C7B80BF, 0xEE42, 0x4B59, 0xB1, 0xDF, 0x55, 0x66, 0x8E, 0x1B, 0xDC, 0xA8" />
+            <iid name="IID_IMFSampleGrabberSinkCallback2" value="0xCA86AA50, 0xC46E, 0x429E, 0xAB, 0x27, 0x16, 0xD6, 0xAC, 0x68, 0x44, 0xCB" />
+            <iid name="IID_IMFWorkQueueServices" value="0x35FE1BB8, 0xA3A9, 0x40FE, 0xBB, 0xEC, 0xEB, 0x56, 0x9C, 0x9C, 0xCC, 0xA3" />
+            <iid name="IID_IMFWorkQueueServicesEx" value="0x96BF961B, 0x40FE, 0x42F1, 0xBA, 0x9D, 0x32, 0x02, 0x38, 0xB4, 0x97, 0x00" />
+            <iid name="IID_IMFQualityManager" value="0x8D009D86, 0x5B9F, 0x4115, 0xB1, 0xFC, 0x9F, 0x80, 0xD5, 0x2A, 0xB8, 0xAB" />
+            <iid name="IID_IMFQualityAdvise" value="0xEC15E2E9, 0xE36B, 0x4F7C, 0x87, 0x58, 0x77, 0xD4, 0x52, 0xEF, 0x4C, 0xE7" />
+            <iid name="IID_IMFQualityAdvise2" value="0xF3706F0D, 0x8EA2, 0x4886, 0x80, 0x00, 0x71, 0x55, 0xE9, 0xEC, 0x2E, 0xAE" />
+            <iid name="IID_IMFQualityAdviseLimits" value="0xDFCD8E4D, 0x30B5, 0x4567, 0xAC, 0xAA, 0x8E, 0xB5, 0xB7, 0x85, 0x3D, 0xC9" />
+            <iid name="IID_IMFRealTimeClient" value="0x2347D60B, 0x3FB5, 0x480C, 0x88, 0x03, 0x8D, 0xF3, 0xAD, 0xCD, 0x3E, 0xF0" />
+            <iid name="IID_IMFRealTimeClientEx" value="0x03910848, 0xAB16, 0x4611, 0xB1, 0x00, 0x17, 0xB8, 0x8A, 0xE2, 0xF2, 0x48" />
+            <iid name="IID_IMFSequencerSource" value="0x197CD219, 0x19CB, 0x4DE1, 0xA6, 0x4C, 0xAC, 0xF2, 0xED, 0xCB, 0xE5, 0x9E" />
+            <iid name="IID_IMFMediaSourceTopologyProvider" value="0x0E1D6009, 0xC9F3, 0x442D, 0x8C, 0x51, 0xA4, 0x2D, 0x2D, 0x49, 0x45, 0x2F" />
+            <iid name="IID_IMFMediaSourcePresentationProvider" value="0x0E1D600A, 0xC9F3, 0x442D, 0x8C, 0x51, 0xA4, 0x2D, 0x2D, 0x49, 0x45, 0x2F" />
+            <iid name="IID_IMFTopologyNodeAttributeEditor" value="0x676AA6DD, 0x238A, 0x410D, 0xBB, 0x99, 0x65, 0x66, 0x8D, 0x01, 0x60, 0x5A" />
+            <iid name="IID_IMFByteStreamBuffering" value="0x6D66D782, 0x1D4F, 0x4DB7, 0x8C, 0x63, 0xCB, 0x8C, 0x77, 0xF1, 0xEF, 0x5E" />
+            <iid name="IID_IMFByteStreamCacheControl" value="0xF5042EA4, 0x7A96, 0x4A75, 0xAA, 0x7B, 0x2B, 0xE1, 0xEF, 0x7F, 0x88, 0xD5" />
+            <iid name="IID_IMFByteStreamTimeSeek" value="0x64976BFA, 0xFB61, 0x4041, 0x90, 0x69, 0x8C, 0x9A, 0x5F, 0x65, 0x9B, 0xEB" />
+            <iid name="IID_IMFByteStreamCacheControl2" value="0x71CE469C, 0xF34B, 0x49EA, 0xA5, 0x6B, 0x2D, 0x2A, 0x10, 0xE5, 0x11, 0x49" />
+            <iid name="IID_IMFNetCredential" value="0x5B87EF6A, 0x7ED8, 0x434F, 0xBA, 0x0E, 0x18, 0x4F, 0xAC, 0x16, 0x28, 0xD1" />
+            <iid name="IID_IMFNetCredentialManager" value="0x5B87EF6B, 0x7ED8, 0x434F, 0xBA, 0x0E, 0x18, 0x4F, 0xAC, 0x16, 0x28, 0xD1" />
+            <iid name="IID_IMFNetCredentialCache" value="0x5B87EF6C, 0x7ED8, 0x434F, 0xBA, 0x0E, 0x18, 0x4F, 0xAC, 0x16, 0x28, 0xD1" />
+            <iid name="IID_IMFSSLCertificateManager" value="0x61F7D887, 0x1230, 0x4A8B, 0xAE, 0xBA, 0x8A, 0xD4, 0x34, 0xD1, 0xA6, 0x4D" />
+            <iid name="IID_IMFNetResourceFilter" value="0x091878A3, 0xBF11, 0x4A5C, 0xBC, 0x9F, 0x33, 0x99, 0x5B, 0x06, 0xEF, 0x2D" />
+            <iid name="IID_IMFSourceOpenMonitor" value="0x059054B3, 0x027C, 0x494C, 0xA2, 0x7D, 0x91, 0x13, 0x29, 0x1C, 0xF8, 0x7F" />
+            <iid name="IID_IMFNetProxyLocator" value="0xE9CD0383, 0xA268, 0x4BB4, 0x82, 0xDE, 0x65, 0x8D, 0x53, 0x57, 0x4D, 0x41" />
+            <iid name="IID_IMFNetProxyLocatorFactory" value="0xE9CD0384, 0xA268, 0x4BB4, 0x82, 0xDE, 0x65, 0x8D, 0x53, 0x57, 0x4D, 0x41" />
+            <iid name="IID_IMFSaveJob" value="0xE9931663, 0x80BF, 0x4C6E, 0x98, 0xAF, 0x5D, 0xCF, 0x58, 0x74, 0x7D, 0x1F" />
+            <iid name="IID_IMFNetSchemeHandlerConfig" value="0x7BE19E73, 0xC9BF, 0x468A, 0xAC, 0x5A, 0xA5, 0xE8, 0x65, 0x3B, 0xEC, 0x87" />
+            <iid name="IID_IMFSchemeHandler" value="0x6D4C7B74, 0x52A0, 0x4BB7, 0xB0, 0xDB, 0x55, 0xF2, 0x9F, 0x47, 0xA6, 0x68" />
+            <iid name="IID_IMFByteStreamHandler" value="0xBB420AA4, 0x765B, 0x4A1F, 0x91, 0xFE, 0xD6, 0xA8, 0xA1, 0x43, 0x92, 0x4C" />
+            <iid name="IID_IMFTrustedInput" value="0x542612C4, 0xA1B8, 0x4632, 0xB5, 0x21, 0xDE, 0x11, 0xEA, 0x64, 0xA0, 0xB0" />
+            <iid name="IID_IMFInputTrustAuthority" value="0xD19F8E98, 0xB126, 0x4446, 0x89, 0x0C, 0x5D, 0xCB, 0x7A, 0xD7, 0x14, 0x53" />
+            <iid name="IID_IMFTrustedOutput" value="0xD19F8E95, 0xB126, 0x4446, 0x89, 0x0C, 0x5D, 0xCB, 0x7A, 0xD7, 0x14, 0x53" />
+            <iid name="IID_IMFOutputTrustAuthority" value="0xD19F8E94, 0xB126, 0x4446, 0x89, 0x0C, 0x5D, 0xCB, 0x7A, 0xD7, 0x14, 0x53" />
+            <iid name="IID_IMFOutputPolicy" value="0x7F00F10A, 0xDAED, 0x41AF, 0xAB, 0x26, 0x5F, 0xDF, 0xA4, 0xDF, 0xBA, 0x3C" />
+            <iid name="IID_IMFOutputSchema" value="0x7BE0FC5B, 0xABD9, 0x44FB, 0xA5, 0xC8, 0xF5, 0x01, 0x36, 0xE7, 0x15, 0x99" />
+            <iid name="IID_IMFSecureChannel" value="0xD0AE555D, 0x3B12, 0x4D97, 0xB0, 0x60, 0x09, 0x90, 0xBC, 0x5A, 0xEB, 0x67" />
+            <iid name="IID_IMFSampleProtection" value="0x8E36395F, 0xC7B9, 0x43C4, 0xA5, 0x4D, 0x51, 0x2B, 0x4A, 0xF6, 0x3C, 0x95" />
+            <iid name="IID_IMFMediaSinkPreroll" value="0x5DFD4B2A, 0x7674, 0x4110, 0xA4, 0xE6, 0x8A, 0x68, 0xFD, 0x5F, 0x36, 0x88" />
+            <iid name="IID_IMFFinalizableMediaSink" value="0xEAECB74A, 0x9A50, 0x42CE, 0x95, 0x41, 0x6A, 0x7F, 0x57, 0xAA, 0x4A, 0xD7" />
+            <iid name="IID_IMFStreamingSinkConfig" value="0x9DB7AA41, 0x3CC5, 0x40D4, 0x85, 0x09, 0x55, 0x58, 0x04, 0xAD, 0x34, 0xCC" />
+            <iid name="IID_IMFRemoteProxy" value="0x994E23AD, 0x1CC2, 0x493C, 0xB9, 0xFA, 0x46, 0xF1, 0xCB, 0x04, 0x0F, 0xA4" />
+            <iid name="IID_IMFObjectReferenceStream" value="0x09EF5BE3, 0xC8A7, 0x469E, 0x8B, 0x70, 0x73, 0xBF, 0x25, 0xBB, 0x19, 0x3F" />
+            <iid name="IID_IMFPMPHost" value="0xF70CA1A9, 0xFDC7, 0x4782, 0xB9, 0x94, 0xAD, 0xFF, 0xB1, 0xC9, 0x86, 0x06" />
+            <iid name="IID_IMFPMPClient" value="0x6C4E655D, 0xEAD8, 0x4421, 0xB6, 0xB9, 0x54, 0xDC, 0xDB, 0xBD, 0xF8, 0x20" />
+            <iid name="IID_IMFPMPServer" value="0x994E23AF, 0x1CC2, 0x493C, 0xB9, 0xFA, 0x46, 0xF1, 0xCB, 0x04, 0x0F, 0xA4" />
+            <iid name="IID_IMFRemoteDesktopPlugin" value="0x1CDE6309, 0xCAE0, 0x4940, 0x90, 0x7E, 0xC1, 0xEC, 0x9C, 0x3D, 0x1D, 0x4A" />
+            <iid name="IID_IMFSAMIStyle" value="0xA7E025DD, 0x5303, 0x4A62, 0x89, 0xD6, 0xE7, 0x47, 0xE1, 0xEF, 0xAC, 0x73" />
+            <iid name="IID_IMFTranscodeProfile" value="0x4ADFDBA3, 0x7AB0, 0x4953, 0xA6, 0x2B, 0x46, 0x1E, 0x7F, 0xF3, 0xDA, 0x1E" />
+            <iid name="IID_IMFTranscodeSinkInfoProvider" value="0x8CFFCD2E, 0x5A03, 0x4A3A, 0xAF, 0xF7, 0xED, 0xCD, 0x10, 0x7C, 0x62, 0x0E" />
+            <iid name="IID_IMFFieldOfUseMFTUnlock" value="0x508E71D3, 0xEC66, 0x4FC3, 0x87, 0x75, 0xB4, 0xB9, 0xED, 0x6B, 0xA8, 0x47" />
+            <iid name="IID_IMFLocalMFTRegistration" value="0x149C4D73, 0xB4BE, 0x4F8D, 0x8B, 0x87, 0x07, 0x9E, 0x92, 0x6B, 0x6A, 0xDD" />
+            <iid name="IID_IMFCapturePhotoConfirmation" value="0x19F68549, 0xCA8A, 0x4706, 0xA4, 0xEF, 0x48, 0x1D, 0xBC, 0x95, 0xE1, 0x2C" />
+            <iid name="IID_IMFPMPHostApp" value="0x84D2054A, 0x3AA1, 0x4728, 0xA3, 0xB0, 0x44, 0x0A, 0x41, 0x8C, 0xF4, 0x9C" />
+            <iid name="IID_IMFPMPClientApp" value="0xC004F646, 0xBE2C, 0x48F3, 0x93, 0xA2, 0xA0, 0x98, 0x3E, 0xBA, 0x11, 0x08" />
+            <iid name="IID_IMFMediaStreamSourceSampleRequest" value="0x380B9AF9, 0xA85B, 0x4E78, 0xA2, 0xAF, 0xEA, 0x5C, 0xE6, 0x45, 0xC6, 0xB4" />
+            <iid name="IID_IMFTrackedSample" value="0x245BF8E9, 0x0755, 0x40F7, 0x88, 0xA5, 0xAE, 0x0F, 0x18, 0xD5, 0x5E, 0x17" />
+            <iid name="IID_IMFProtectedEnvironmentAccess" value="0xEF5DC845, 0xF0D9, 0x4EC9, 0xB0, 0x0C, 0xCB, 0x51, 0x83, 0xD3, 0x84, 0x34" />
+            <iid name="IID_IMFSignedLibrary" value="0x4A724BCA, 0xFF6A, 0x4C07, 0x8E, 0x0D, 0x7A, 0x35, 0x84, 0x21, 0xCF, 0x06" />
+            <iid name="IID_IMFSystemId" value="0xFFF4AF3A, 0x1FC1, 0x4EF9, 0xA2, 0x9B, 0xD2, 0x6C, 0x49, 0xE2, 0xF3, 0x1A" />
+            <iid name="IID_IMFContentProtectionDevice" value="0xE6257174, 0xA060, 0x4C9A, 0xA0, 0x88, 0x3B, 0x1B, 0x47, 0x1C, 0xAD, 0x28" />
+            <iid name="IID_IMFContentDecryptorContext" value="0x7EC4B1BD, 0x43FB, 0x4763, 0x85, 0xD2, 0x64, 0xFC, 0xB5, 0xC5, 0xF4, 0xCB" />
+            <iid name="IID_IMFNetCrossOriginSupport" value="0xBC2B7D44, 0xA72D, 0x49D5, 0x83, 0x76, 0x14, 0x80, 0xDE, 0xE5, 0x8B, 0x22" />
+            <iid name="IID_IMFHttpDownloadRequest" value="0xF779FDDF, 0x26E7, 0x4270, 0x8A, 0x8B, 0xB9, 0x83, 0xD1, 0x85, 0x9D, 0xE0" />
+            <iid name="IID_IMFHttpDownloadSession" value="0x71FA9A2C, 0x53CE, 0x4662, 0xA1, 0x32, 0x1A, 0x7E, 0x8C, 0xBF, 0x62, 0xDB" />
+            <iid name="IID_IMFHttpDownloadSessionProvider" value="0x1B4CF4B9, 0x3A16, 0x4115, 0x83, 0x9D, 0x03, 0xCC, 0x5C, 0x99, 0xDF, 0x01" />
+            <iid name="IID_IMFMediaSource2" value="0xFBB03414, 0xD13B, 0x4786, 0x83, 0x19, 0x5A, 0xC5, 0x1F, 0xC0, 0xA1, 0x36" />
+            <iid name="IID_IMFMediaStream2" value="0xC5BC37D6, 0x75C7, 0x46A1, 0xA1, 0x32, 0x81, 0xB5, 0xF7, 0x23, 0xC2, 0x0F" />
+            <iid name="IID_IMFSensorDevice" value="0xFB9F48F2, 0x2A18, 0x4E28, 0x97, 0x30, 0x78, 0x6F, 0x30, 0xF0, 0x4D, 0xC4" />
+            <iid name="IID_IMFSensorGroup" value="0x4110243A, 0x9757, 0x461F, 0x89, 0xF1, 0xF2, 0x23, 0x45, 0xBC, 0xAB, 0x4E" />
+            <iid name="IID_IMFSensorStream" value="0xE9A42171, 0xC56E, 0x498A, 0x8B, 0x39, 0xED, 0xA5, 0xA0, 0x70, 0xB7, 0xFC" />
+            <iid name="IID_IMFSensorTransformFactory" value="0xEED9C2EE, 0x66B4, 0x4F18, 0xA6, 0x97, 0xAC, 0x7D, 0x39, 0x60, 0x21, 0x5C" />
+            <iid name="IID_IMFSensorProfile" value="0x22F765D1, 0x8DAB, 0x4107, 0x84, 0x6D, 0x56, 0xBA, 0xF7, 0x22, 0x15, 0xE7" />
+            <iid name="IID_IMFSensorProfileCollection" value="0xC95EA55B, 0x0187, 0x48BE, 0x93, 0x53, 0x8D, 0x25, 0x07, 0x66, 0x23, 0x51" />
+            <iid name="IID_IMFSensorProcessActivity" value="0x39DC7F4A, 0xB141, 0x4719, 0x81, 0x3C, 0xA7, 0xF4, 0x61, 0x62, 0xA2, 0xB8" />
+            <iid name="IID_IMFSensorActivityReport" value="0x3E8C4BE1, 0xA8C2, 0x4528, 0x90, 0xDE, 0x28, 0x51, 0xBD, 0xE5, 0xFE, 0xAD" />
+            <iid name="IID_IMFSensorActivitiesReport" value="0x683F7A5E, 0x4A19, 0x43CD, 0xB1, 0xA9, 0xDB, 0xF4, 0xAB, 0x3F, 0x77, 0x77" />
+            <iid name="IID_IMFSensorActivitiesReportCallback" value="0xDE5072EE, 0xDBE3, 0x46DC, 0x8A, 0x87, 0xB6, 0xF6, 0x31, 0x19, 0x47, 0x51" />
+            <iid name="IID_IMFSensorActivityMonitor" value="0xD0CEF145, 0xB3F4, 0x4340, 0xA2, 0xE5, 0x7A, 0x50, 0x80, 0xCA, 0x05, 0xCB" />
+            <iid name="IID_IMFExtendedCameraIntrinsicModel" value="0x5C595E64, 0x4630, 0x4231, 0x85, 0x5A, 0x12, 0x84, 0x2F, 0x73, 0x32, 0x45" />
+            <iid name="IID_IMFExtendedCameraIntrinsicsDistortionModel6KT" value="0x74C2653B, 0x5F55, 0x4EB1, 0x9F, 0x0F, 0x18, 0xB8, 0xF6, 0x8B, 0x7D, 0x3D" />
+            <iid name="IID_IMFExtendedCameraIntrinsicsDistortionModelArcTan" value="0x812D5F95, 0xB572, 0x45DC, 0xBA, 0xFC, 0xAE, 0x24, 0x19, 0x9D, 0xDD, 0xA8" />
+            <iid name="IID_IMFExtendedCameraIntrinsics" value="0x687F6DAC, 0x6987, 0x4750, 0xA1, 0x6A, 0x73, 0x4D, 0x1E, 0x7A, 0x10, 0xFE" />
+            <iid name="IID_IMFExtendedCameraControl" value="0x38E33520, 0xFCA1, 0x4845, 0xA2, 0x7A, 0x68, 0xB7, 0xC6, 0xAB, 0x37, 0x89" />
+            <iid name="IID_IMFExtendedCameraController" value="0xB91EBFEE, 0xCA03, 0x4AF4, 0x8A, 0x82, 0xA3, 0x17, 0x52, 0xF4, 0xA0, 0xFC" />
+            <iid name="IID_IMFRelativePanelReport" value="0xF25362EA, 0x2C0E, 0x447F, 0x81, 0xE2, 0x75, 0x59, 0x14, 0xCD, 0xC0, 0xC3" />
+            <iid name="IID_IMFRelativePanelWatcher" value="0x421AF7F6, 0x573E, 0x4AD0, 0x8F, 0xDA, 0x2E, 0x57, 0xCE, 0xDB, 0x18, 0xC6" />
+            <iid name="IID_IMFVideoCaptureSampleAllocator" value="0x725B77C7, 0xCA9F, 0x4FE5, 0x9D, 0x72, 0x99, 0x46, 0xBF, 0x9B, 0x3C, 0x70" />
+            <iid name="IID_IMFSampleAllocatorControl" value="0xDA62B958, 0x3A38, 0x4A97, 0xBD, 0x27, 0x14, 0x9C, 0x64, 0x0C, 0x07, 0x71" />
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/projectedfslib.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PRJ_CALLBACK_DATA" access="public" unsafe="true">
+            <field name="Size" access="public">
+                <type native="UINT32">uint</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="">PRJ_CALLBACK_DATA_FLAGS</type>
+            </field>
+            <field name="NamespaceVirtualizationContext" access="public">
+                <type native="PRJ_NAMESPACE_VIRTUALIZATION_CONTEXT">IntPtr</type>
+            </field>
+            <field name="CommandId" access="public">
+                <type native="INT32">int</type>
+            </field>
+            <field name="FileId" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="DataStreamId" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="FilePathName" access="public">
+                <type native="PCWSTR">ushort*</type>
+            </field>
+            <field name="VersionInfo" access="public">
+                <type native="PRJ_PLACEHOLDER_VERSION_INFO *">PRJ_PLACEHOLDER_VERSION_INFO*</type>
+            </field>
+            <field name="TriggeringProcessId" access="public">
+                <type native="UINT32">uint</type>
+            </field>
+            <field name="TriggeringProcessImageFileName" access="public">
+                <type native="PCWSTR">ushort*</type>
+            </field>
+            <field name="InstanceContext" access="public">
+                <type native="void *">void*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

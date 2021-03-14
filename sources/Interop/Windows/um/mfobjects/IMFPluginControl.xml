@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfobjects.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFPluginControl" access="public" native="struct IMFPluginControl : IUnknown" uuid="5c6c44bf-1db6-435b-9249-e8cd10fdec96" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPluginControl*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFPluginControl*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPluginControl*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFPluginControl*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPluginControl*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFPluginControl*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPreferredClsid" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pluginType">
+                    <type>uint</type>
+                </param>
+                <param name="selector">
+                    <type>ushort*</type>
+                </param>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPluginControl*, uint, ushort*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFPluginControl*)Unsafe.AsPointer(ref this)</param>, <param name="pluginType">pluginType</param>, <param name="selector">selector</param>, <param name="clsid">clsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPreferredClsidByIndex" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pluginType">
+                    <type>uint</type>
+                </param>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="selector">
+                    <type>ushort**</type>
+                </param>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPluginControl*, uint, uint, ushort**, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFPluginControl*)Unsafe.AsPointer(ref this)</param>, <param name="pluginType">pluginType</param>, <param name="index">index</param>, <param name="selector">selector</param>, <param name="clsid">clsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPreferredClsid" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pluginType">
+                    <type>uint</type>
+                </param>
+                <param name="selector">
+                    <type>ushort*</type>
+                </param>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPluginControl*, uint, ushort*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFPluginControl*)Unsafe.AsPointer(ref this)</param>, <param name="pluginType">pluginType</param>, <param name="selector">selector</param>, <param name="clsid">clsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsDisabled" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pluginType">
+                    <type>uint</type>
+                </param>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPluginControl*, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFPluginControl*)Unsafe.AsPointer(ref this)</param>, <param name="pluginType">pluginType</param>, <param name="clsid">clsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDisabledByIndex" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pluginType">
+                    <type>uint</type>
+                </param>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPluginControl*, uint, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFPluginControl*)Unsafe.AsPointer(ref this)</param>, <param name="pluginType">pluginType</param>, <param name="index">index</param>, <param name="clsid">clsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDisabled" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pluginType">
+                    <type>uint</type>
+                </param>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="disabled">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPluginControl*, uint, Guid*, int, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFPluginControl*)Unsafe.AsPointer(ref this)</param>, <param name="pluginType">pluginType</param>, <param name="clsid">clsid</param>, <param name="disabled">disabled</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

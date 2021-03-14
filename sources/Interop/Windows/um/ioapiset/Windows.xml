@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ioapiset.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreateIoCompletionPort" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="FileHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ExistingCompletionPort">
+                    <type>IntPtr</type>
+                </param>
+                <param name="CompletionKey">
+                    <type>nuint</type>
+                </param>
+                <param name="NumberOfConcurrentThreads">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetQueuedCompletionStatus" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="CompletionPort">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpNumberOfBytesTransferred">
+                    <type>uint*</type>
+                </param>
+                <param name="lpCompletionKey">
+                    <type>uint*</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED**</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetQueuedCompletionStatusEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="CompletionPort">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpCompletionPortEntries">
+                    <type>OVERLAPPED_ENTRY*</type>
+                </param>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="ulNumEntriesRemoved">
+                    <type>uint*</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <param name="fAlertable">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="PostQueuedCompletionStatus" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="CompletionPort">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwNumberOfBytesTransferred">
+                    <type>uint</type>
+                </param>
+                <param name="dwCompletionKey">
+                    <type>nuint</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+            </function>
+            <function name="DeviceIoControl" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hDevice">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwIoControlCode">
+                    <type>uint</type>
+                </param>
+                <param name="lpInBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nInBufferSize">
+                    <type>uint</type>
+                </param>
+                <param name="lpOutBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nOutBufferSize">
+                    <type>uint</type>
+                </param>
+                <param name="lpBytesReturned">
+                    <type>uint*</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+            </function>
+            <function name="GetOverlappedResult" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+                <param name="lpNumberOfBytesTransferred">
+                    <type>uint*</type>
+                </param>
+                <param name="bWait">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="CancelIoEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+            </function>
+            <function name="CancelIo" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetOverlappedResultEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+                <param name="lpNumberOfBytesTransferred">
+                    <type>uint*</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <param name="bAlertable">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="CancelSynchronousIo" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hThread">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFNetCrossOriginSupport" access="public" native="struct IMFNetCrossOriginSupport : IUnknown" uuid="bc2b7d44-a72d-49d5-8376-1480dee58b22" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFNetCrossOriginSupport*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFNetCrossOriginSupport*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFNetCrossOriginSupport*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFNetCrossOriginSupport*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFNetCrossOriginSupport*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFNetCrossOriginSupport*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCrossOriginPolicy" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPolicy">
+                    <type>MF_CROSS_ORIGIN_POLICY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFNetCrossOriginSupport*, MF_CROSS_ORIGIN_POLICY*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFNetCrossOriginSupport*)Unsafe.AsPointer(ref this)</param>, <param name="pPolicy">pPolicy</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSourceOrigin" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wszSourceOrigin">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFNetCrossOriginSupport*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFNetCrossOriginSupport*)Unsafe.AsPointer(ref this)</param>, <param name="wszSourceOrigin">wszSourceOrigin</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsSameOrigin" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wszURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="pfIsSameOrigin">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFNetCrossOriginSupport*, ushort*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFNetCrossOriginSupport*)Unsafe.AsPointer(ref this)</param>, <param name="wszURL">wszURL</param>, <param name="pfIsSameOrigin">pfIsSameOrigin</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/AppxPackaging.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAppxEncryptionFactory" access="public" native="struct IAppxEncryptionFactory : IUnknown" uuid="80e8e04d-8c88-44ae-a011-7cadf6fb2e72" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EncryptPackage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="outputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="settings">
+                    <type>APPX_ENCRYPTED_PACKAGE_SETTINGS*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <param name="exemptedFiles">
+                    <type>APPX_ENCRYPTED_EXEMPTIONS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, IStream*, IStream*, APPX_ENCRYPTED_PACKAGE_SETTINGS*, APPX_KEY_INFO*, APPX_ENCRYPTED_EXEMPTIONS*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="outputStream">outputStream</param>, <param name="settings">settings</param>, <param name="keyInfo">keyInfo</param>, <param name="exemptedFiles">exemptedFiles</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DecryptPackage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="outputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, IStream*, IStream*, APPX_KEY_INFO*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="outputStream">outputStream</param>, <param name="keyInfo">keyInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateEncryptedPackageWriter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="outputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="manifestStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="settings">
+                    <type>APPX_ENCRYPTED_PACKAGE_SETTINGS*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <param name="exemptedFiles">
+                    <type>APPX_ENCRYPTED_EXEMPTIONS*</type>
+                </param>
+                <param name="packageWriter">
+                    <type>IAppxEncryptedPackageWriter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, IStream*, IStream*, APPX_ENCRYPTED_PACKAGE_SETTINGS*, APPX_KEY_INFO*, APPX_ENCRYPTED_EXEMPTIONS*, IAppxEncryptedPackageWriter**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>, <param name="outputStream">outputStream</param>, <param name="manifestStream">manifestStream</param>, <param name="settings">settings</param>, <param name="keyInfo">keyInfo</param>, <param name="exemptedFiles">exemptedFiles</param>, <param name="packageWriter">packageWriter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateEncryptedPackageReader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <param name="packageReader">
+                    <type>IAppxPackageReader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, IStream*, APPX_KEY_INFO*, IAppxPackageReader**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="keyInfo">keyInfo</param>, <param name="packageReader">packageReader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EncryptBundle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="outputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="settings">
+                    <type>APPX_ENCRYPTED_PACKAGE_SETTINGS*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <param name="exemptedFiles">
+                    <type>APPX_ENCRYPTED_EXEMPTIONS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, IStream*, IStream*, APPX_ENCRYPTED_PACKAGE_SETTINGS*, APPX_KEY_INFO*, APPX_ENCRYPTED_EXEMPTIONS*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="outputStream">outputStream</param>, <param name="settings">settings</param>, <param name="keyInfo">keyInfo</param>, <param name="exemptedFiles">exemptedFiles</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DecryptBundle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="outputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, IStream*, IStream*, APPX_KEY_INFO*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="outputStream">outputStream</param>, <param name="keyInfo">keyInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateEncryptedBundleWriter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="outputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="bundleVersion">
+                    <type>ulong</type>
+                </param>
+                <param name="settings">
+                    <type>APPX_ENCRYPTED_PACKAGE_SETTINGS*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <param name="exemptedFiles">
+                    <type>APPX_ENCRYPTED_EXEMPTIONS*</type>
+                </param>
+                <param name="bundleWriter">
+                    <type>IAppxEncryptedBundleWriter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, IStream*, ulong, APPX_ENCRYPTED_PACKAGE_SETTINGS*, APPX_KEY_INFO*, APPX_ENCRYPTED_EXEMPTIONS*, IAppxEncryptedBundleWriter**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>, <param name="outputStream">outputStream</param>, <param name="bundleVersion">bundleVersion</param>, <param name="settings">settings</param>, <param name="keyInfo">keyInfo</param>, <param name="exemptedFiles">exemptedFiles</param>, <param name="bundleWriter">bundleWriter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateEncryptedBundleReader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="keyInfo">
+                    <type>APPX_KEY_INFO*</type>
+                </param>
+                <param name="bundleReader">
+                    <type>IAppxBundleReader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxEncryptionFactory*, IStream*, APPX_KEY_INFO*, IAppxBundleReader**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IAppxEncryptionFactory*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="keyInfo">keyInfo</param>, <param name="bundleReader">bundleReader</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

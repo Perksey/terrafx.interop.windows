@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMemAllocatorCallbackTemp" access="public" native="struct IMemAllocatorCallbackTemp : IMemAllocator" uuid="379a0cf0-c1de-11d2-abf5-00a0c905f375" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRequest">
+                    <type>ALLOCATOR_PROPERTIES*</type>
+                </param>
+                <param name="pActual">
+                    <type>ALLOCATOR_PROPERTIES*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, ALLOCATOR_PROPERTIES*, ALLOCATOR_PROPERTIES*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>, <param name="pRequest">pRequest</param>, <param name="pActual">pActual</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pProps">
+                    <type>ALLOCATOR_PROPERTIES*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, ALLOCATOR_PROPERTIES*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>, <param name="pProps">pProps</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Commit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Decommit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppBuffer">
+                    <type>IMediaSample**</type>
+                </param>
+                <param name="pStartTime">
+                    <type>long*</type>
+                </param>
+                <param name="pEndTime">
+                    <type>long*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, IMediaSample**, long*, long*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>, <param name="ppBuffer">ppBuffer</param>, <param name="pStartTime">pStartTime</param>, <param name="pEndTime">pEndTime</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pBuffer">
+                    <type>IMediaSample*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, IMediaSample*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>, <param name="pBuffer">pBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNotify">
+                    <type>IMemAllocatorNotifyCallbackTemp*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, IMemAllocatorNotifyCallbackTemp*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>, <param name="pNotify">pNotify</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFreeCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="plBuffersFree">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMemAllocatorCallbackTemp*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMemAllocatorCallbackTemp*)Unsafe.AsPointer(ref this)</param>, <param name="plBuffersFree">plBuffersFree</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

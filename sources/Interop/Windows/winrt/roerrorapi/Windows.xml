@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from winrt/roerrorapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="RoGetErrorReportingFlags" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pflags">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="RoSetErrorReportingFlags" access="public" lib="combase" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="RoResolveRestrictedErrorInfoReference" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reference">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppRestrictedErrorInfo">
+                    <type>IRestrictedErrorInfo**</type>
+                </param>
+            </function>
+            <function name="SetRestrictedErrorInfo" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pRestrictedErrorInfo">
+                    <type>IRestrictedErrorInfo*</type>
+                </param>
+            </function>
+            <function name="GetRestrictedErrorInfo" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ppRestrictedErrorInfo">
+                    <type>IRestrictedErrorInfo**</type>
+                </param>
+            </function>
+            <function name="RoOriginateErrorW" access="public" lib="combase" static="true">
+                <type native="BOOL">int</type>
+                <param name="error">
+                    <type>int</type>
+                </param>
+                <param name="cchMax">
+                    <type>uint</type>
+                </param>
+                <param name="message">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="RoOriginateError" access="public" lib="combase" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="error">
+                    <type>int</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="RoTransformErrorW" access="public" lib="combase" static="true">
+                <type native="BOOL">int</type>
+                <param name="oldError">
+                    <type>int</type>
+                </param>
+                <param name="newError">
+                    <type>int</type>
+                </param>
+                <param name="cchMax">
+                    <type>uint</type>
+                </param>
+                <param name="message">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="RoTransformError" access="public" lib="combase" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="oldError">
+                    <type>int</type>
+                </param>
+                <param name="newError">
+                    <type>int</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="RoCaptureErrorContext" access="public" lib="combase" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hr">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="RoFailFastWithErrorContext" access="public" lib="combase" static="true" unsafe="true">
+                <type>void</type>
+                <param name="hrError">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetErrorReportingFlags" access="public" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pflags">
+                    <type>uint*</type>
+                </param>
+                <code>return RoGetErrorReportingFlags(pflags);
+            </code>
+            </function>
+            <function name="SetErrorReportingFlags" access="public" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <code>return RoSetErrorReportingFlags(flags);
+            </code>
+            </function>
+            <function name="OriginateError" access="public" static="true">
+                <type native="BOOL">int</type>
+                <param name="error">
+                    <type>int</type>
+                </param>
+                <param name="cchMax">
+                    <type>uint</type>
+                </param>
+                <param name="message">
+                    <type>ushort*</type>
+                </param>
+                <code>if ((((int)(error)) &gt;= 0))
+            {
+                return 0;
+            }
+
+            return RoOriginateErrorW(error, cchMax, message);
+            </code>
+            </function>
+            <function name="OriginateError" access="public" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="error">
+                    <type>int</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <code>if ((((int)(error)) &gt;= 0))
+            {
+                return 0;
+            }
+
+            return RoOriginateError(error, message);
+            </code>
+            </function>
+            <function name="TransformError" access="public" static="true">
+                <type native="BOOL">int</type>
+                <param name="oldError">
+                    <type>int</type>
+                </param>
+                <param name="newError">
+                    <type>int</type>
+                </param>
+                <param name="cchMax">
+                    <type>uint</type>
+                </param>
+                <param name="message">
+                    <type>ushort*</type>
+                </param>
+                <code>if ((oldError == newError) || ((((int)(oldError)) &gt;= 0) &amp;&amp; (((int)(newError)) &gt;= 0)))
+            {
+                return 0;
+            }
+
+            return RoTransformErrorW(oldError, newError, cchMax, message);
+            </code>
+            </function>
+            <function name="TransformError" access="public" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="oldError">
+                    <type>int</type>
+                </param>
+                <param name="newError">
+                    <type>int</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <code>if ((oldError == newError) || ((((int)(oldError)) &gt;= 0) &amp;&amp; (((int)(newError)) &gt;= 0)))
+            {
+                return 0;
+            }
+
+            return RoTransformError(oldError, newError, message);
+            </code>
+            </function>
+            <function name="RoOriginateLanguageException" access="public" lib="combase" static="true">
+                <type native="BOOL">int</type>
+                <param name="error">
+                    <type>int</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="languageException">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <function name="RoClearError" access="public" lib="combase" static="true" unsafe="true">
+                <type>void</type>
+            </function>
+            <function name="RoReportUnhandledError" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pRestrictedErrorInfo">
+                    <type>IRestrictedErrorInfo*</type>
+                </param>
+            </function>
+            <function name="RoInspectThreadErrorInfo" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="targetTebAddress">
+                    <type>nuint</type>
+                </param>
+                <param name="machine">
+                    <type>ushort</type>
+                </param>
+                <param name="readMemoryCallback">
+                    <type>delegate* unmanaged&lt;void*, nuint, uint, byte*, int&gt;</type>
+                </param>
+                <param name="context">
+                    <type>void*</type>
+                </param>
+                <param name="targetErrorInfoAddress">
+                    <type>nuint*</type>
+                </param>
+            </function>
+            <function name="RoInspectCapturedStackBackTrace" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="targetErrorInfoAddress">
+                    <type>nuint</type>
+                </param>
+                <param name="machine">
+                    <type>ushort</type>
+                </param>
+                <param name="readMemoryCallback">
+                    <type>delegate* unmanaged&lt;void*, nuint, uint, byte*, int&gt;</type>
+                </param>
+                <param name="context">
+                    <type>void*</type>
+                </param>
+                <param name="frameCount">
+                    <type>uint*</type>
+                </param>
+                <param name="targetBackTraceAddress">
+                    <type>nuint*</type>
+                </param>
+            </function>
+            <function name="RoGetMatchingRestrictedErrorInfo" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hrIn">
+                    <type>int</type>
+                </param>
+                <param name="ppRestrictedErrorInfo">
+                    <type>IRestrictedErrorInfo**</type>
+                </param>
+            </function>
+            <function name="RoReportFailedDelegate" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="punkDelegate">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pRestrictedErrorInfo">
+                    <type>IRestrictedErrorInfo*</type>
+                </param>
+            </function>
+            <function name="IsErrorPropagationEnabled" access="public" lib="combase" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+            </function>
+            <constant name="MAX_ERROR_MESSAGE_CHARS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>512
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_RO_ORIGINATEERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>((uint)((0x1 &lt;&lt; 30) | (8 &lt;&lt; 16) | 0x201))
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_RO_TRANSFORMERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>((uint)((0x1 &lt;&lt; 30) | (8 &lt;&lt; 16) | 0x202))
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

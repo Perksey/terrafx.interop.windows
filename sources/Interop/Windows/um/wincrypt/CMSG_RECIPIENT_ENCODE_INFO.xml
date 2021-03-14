@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CMSG_RECIPIENT_ENCODE_INFO" access="public" unsafe="true">
+            <field name="dwRecipientChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_CMSG_RECIPIENT_ENCODE_INFO::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:7013:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="pKeyTrans" access="public">
+                <type native="">ref CMSG_KEY_TRANS_RECIPIENT_ENCODE_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pKeyTrans;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pKeyAgree" access="public">
+                <type native="">ref CMSG_KEY_AGREE_RECIPIENT_ENCODE_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pKeyAgree;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pMailList" access="public">
+                <type native="">ref CMSG_MAIL_LIST_RECIPIENT_ENCODE_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pMailList;
+        }
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pKeyTrans" access="public" offset="0">
+                    <type native="PCMSG_KEY_TRANS_RECIPIENT_ENCODE_INFO">CMSG_KEY_TRANS_RECIPIENT_ENCODE_INFO*</type>
+                </field>
+                <field name="pKeyAgree" access="public" offset="0">
+                    <type native="PCMSG_KEY_AGREE_RECIPIENT_ENCODE_INFO">CMSG_KEY_AGREE_RECIPIENT_ENCODE_INFO*</type>
+                </field>
+                <field name="pMailList" access="public" offset="0">
+                    <type native="PCMSG_MAIL_LIST_RECIPIENT_ENCODE_INFO">CMSG_MAIL_LIST_RECIPIENT_ENCODE_INFO*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinUser.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="TITLEBARINFOEX" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="rcTitleBar" access="public">
+                <type native="">RECT</type>
+            </field>
+            <field name="rgstate" access="public">
+                <type native="DWORD [6]" count="6" fixed="_rgstate_e__FixedBuffer">uint</type>
+            </field>
+            <field name="rgrect" access="public">
+                <type native="RECT [6]" count="6" fixed="_rgrect_e__FixedBuffer">RECT</type>
+            </field>
+            <struct name="_rgrect_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">RECT</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">RECT</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">RECT</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">RECT</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">RECT</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">RECT</type>
+                </field>
+                <indexer access="public">
+                    <type>ref RECT</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;RECT&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 6);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

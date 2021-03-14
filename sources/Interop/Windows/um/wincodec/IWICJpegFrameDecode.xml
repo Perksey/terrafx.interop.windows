@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincodec.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IWICJpegFrameDecode" access="public" native="struct IWICJpegFrameDecode : IUnknown" uuid="8939f66e-c46a-4c21-a9d1-98b327ce1679" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DoesSupportIndexing" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfIndexingSupported">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="pfIndexingSupported">pfIndexingSupported</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetIndexing" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="options">
+                    <type>WICJpegIndexingOptions</type>
+                </param>
+                <param name="horizontalIntervalSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, WICJpegIndexingOptions, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="options">options</param>, <param name="horizontalIntervalSize">horizontalIntervalSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearIndexing" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAcHuffmanTable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="scanIndex">
+                    <type>uint</type>
+                </param>
+                <param name="tableIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pAcHuffmanTable">
+                    <type>DXGI_JPEG_AC_HUFFMAN_TABLE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, uint, uint, DXGI_JPEG_AC_HUFFMAN_TABLE*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="scanIndex">scanIndex</param>, <param name="tableIndex">tableIndex</param>, <param name="pAcHuffmanTable">pAcHuffmanTable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDcHuffmanTable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="scanIndex">
+                    <type>uint</type>
+                </param>
+                <param name="tableIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pDcHuffmanTable">
+                    <type>DXGI_JPEG_DC_HUFFMAN_TABLE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, uint, uint, DXGI_JPEG_DC_HUFFMAN_TABLE*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="scanIndex">scanIndex</param>, <param name="tableIndex">tableIndex</param>, <param name="pDcHuffmanTable">pDcHuffmanTable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetQuantizationTable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="scanIndex">
+                    <type>uint</type>
+                </param>
+                <param name="tableIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pQuantizationTable">
+                    <type>DXGI_JPEG_QUANTIZATION_TABLE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, uint, uint, DXGI_JPEG_QUANTIZATION_TABLE*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="scanIndex">scanIndex</param>, <param name="tableIndex">tableIndex</param>, <param name="pQuantizationTable">pQuantizationTable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFrameHeader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFrameHeader">
+                    <type>WICJpegFrameHeader*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, WICJpegFrameHeader*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="pFrameHeader">pFrameHeader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetScanHeader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="scanIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pScanHeader">
+                    <type>WICJpegScanHeader*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, uint, WICJpegScanHeader*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="scanIndex">scanIndex</param>, <param name="pScanHeader">pScanHeader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyScan" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="scanIndex">
+                    <type>uint</type>
+                </param>
+                <param name="scanOffset">
+                    <type>uint</type>
+                </param>
+                <param name="cbScanData">
+                    <type>uint</type>
+                </param>
+                <param name="pbScanData">
+                    <type>byte*</type>
+                </param>
+                <param name="pcbScanDataActual">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, uint, uint, uint, byte*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="scanIndex">scanIndex</param>, <param name="scanOffset">scanOffset</param>, <param name="cbScanData">cbScanData</param>, <param name="pbScanData">pbScanData</param>, <param name="pcbScanDataActual">pcbScanDataActual</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyMinimalStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="streamOffset">
+                    <type>uint</type>
+                </param>
+                <param name="cbStreamData">
+                    <type>uint</type>
+                </param>
+                <param name="pbStreamData">
+                    <type>byte*</type>
+                </param>
+                <param name="pcbStreamDataActual">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICJpegFrameDecode*, uint, uint, byte*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IWICJpegFrameDecode*)Unsafe.AsPointer(ref this)</param>, <param name="streamOffset">streamOffset</param>, <param name="cbStreamData">cbStreamData</param>, <param name="pbStreamData">pbStreamData</param>, <param name="pcbStreamDataActual">pcbStreamDataActual</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

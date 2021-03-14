@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_IDENTIFIER" access="public" unsafe="true">
+            <field name="CodeSet" access="public">
+                <type native="">STORAGE_IDENTIFIER_CODE_SET</type>
+            </field>
+            <field name="Type" access="public">
+                <type native="">STORAGE_IDENTIFIER_TYPE</type>
+            </field>
+            <field name="IdentifierSize" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="NextOffset" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="Association" access="public">
+                <type native="">STORAGE_ASSOCIATION_TYPE</type>
+            </field>
+            <field name="Identifier" access="public">
+                <type native="BYTE [1]" count="1" fixed="_Identifier_e__FixedBuffer">byte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

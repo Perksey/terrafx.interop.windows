@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12video.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D12VideoDevice2" access="public" native="struct ID3D12VideoDevice2 : ID3D12VideoDevice1" uuid="f019ac49-f838-4a95-9b17-579437c8f513" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckFeatureSupport" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="FeatureVideo">
+                    <type>D3D12_FEATURE_VIDEO</type>
+                </param>
+                <param name="pFeatureSupportData">
+                    <type>void*</type>
+                </param>
+                <param name="FeatureSupportDataSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, D3D12_FEATURE_VIDEO, void*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="FeatureVideo">FeatureVideo</param>, <param name="pFeatureSupportData">pFeatureSupportData</param>, <param name="FeatureSupportDataSize">FeatureSupportDataSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoDecoder" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D12_VIDEO_DECODER_DESC*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppVideoDecoder">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, D3D12_VIDEO_DECODER_DESC*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="riid">riid</param>, <param name="ppVideoDecoder">ppVideoDecoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoDecoderHeap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pVideoDecoderHeapDesc">
+                    <type>D3D12_VIDEO_DECODER_HEAP_DESC*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppVideoDecoderHeap">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, D3D12_VIDEO_DECODER_HEAP_DESC*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoDecoderHeapDesc">pVideoDecoderHeapDesc</param>, <param name="riid">riid</param>, <param name="ppVideoDecoderHeap">ppVideoDecoderHeap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoProcessor" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NodeMask">
+                    <type>uint</type>
+                </param>
+                <param name="pOutputStreamDesc">
+                    <type>D3D12_VIDEO_PROCESS_OUTPUT_STREAM_DESC*</type>
+                </param>
+                <param name="NumInputStreamDescs">
+                    <type>uint</type>
+                </param>
+                <param name="pInputStreamDescs">
+                    <type>D3D12_VIDEO_PROCESS_INPUT_STREAM_DESC*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppVideoProcessor">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, uint, D3D12_VIDEO_PROCESS_OUTPUT_STREAM_DESC*, uint, D3D12_VIDEO_PROCESS_INPUT_STREAM_DESC*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="NodeMask">NodeMask</param>, <param name="pOutputStreamDesc">pOutputStreamDesc</param>, <param name="NumInputStreamDescs">NumInputStreamDescs</param>, <param name="pInputStreamDescs">pInputStreamDescs</param>, <param name="riid">riid</param>, <param name="ppVideoProcessor">ppVideoProcessor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoMotionEstimator" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D12_VIDEO_MOTION_ESTIMATOR_DESC*</type>
+                </param>
+                <param name="pProtectedResourceSession">
+                    <type>ID3D12ProtectedResourceSession*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppVideoMotionEstimator">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, D3D12_VIDEO_MOTION_ESTIMATOR_DESC*, ID3D12ProtectedResourceSession*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pProtectedResourceSession">pProtectedResourceSession</param>, <param name="riid">riid</param>, <param name="ppVideoMotionEstimator">ppVideoMotionEstimator</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoMotionVectorHeap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D12_VIDEO_MOTION_VECTOR_HEAP_DESC*</type>
+                </param>
+                <param name="pProtectedResourceSession">
+                    <type>ID3D12ProtectedResourceSession*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppVideoMotionVectorHeap">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, D3D12_VIDEO_MOTION_VECTOR_HEAP_DESC*, ID3D12ProtectedResourceSession*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pProtectedResourceSession">pProtectedResourceSession</param>, <param name="riid">riid</param>, <param name="ppVideoMotionVectorHeap">ppVideoMotionVectorHeap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoDecoder1" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D12_VIDEO_DECODER_DESC*</type>
+                </param>
+                <param name="pProtectedResourceSession">
+                    <type>ID3D12ProtectedResourceSession*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppVideoDecoder">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, D3D12_VIDEO_DECODER_DESC*, ID3D12ProtectedResourceSession*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pProtectedResourceSession">pProtectedResourceSession</param>, <param name="riid">riid</param>, <param name="ppVideoDecoder">ppVideoDecoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoDecoderHeap1" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pVideoDecoderHeapDesc">
+                    <type>D3D12_VIDEO_DECODER_HEAP_DESC*</type>
+                </param>
+                <param name="pProtectedResourceSession">
+                    <type>ID3D12ProtectedResourceSession*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppVideoDecoderHeap">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, D3D12_VIDEO_DECODER_HEAP_DESC*, ID3D12ProtectedResourceSession*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoDecoderHeapDesc">pVideoDecoderHeapDesc</param>, <param name="pProtectedResourceSession">pProtectedResourceSession</param>, <param name="riid">riid</param>, <param name="ppVideoDecoderHeap">ppVideoDecoderHeap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoProcessor1" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NodeMask">
+                    <type>uint</type>
+                </param>
+                <param name="pOutputStreamDesc">
+                    <type>D3D12_VIDEO_PROCESS_OUTPUT_STREAM_DESC*</type>
+                </param>
+                <param name="NumInputStreamDescs">
+                    <type>uint</type>
+                </param>
+                <param name="pInputStreamDescs">
+                    <type>D3D12_VIDEO_PROCESS_INPUT_STREAM_DESC*</type>
+                </param>
+                <param name="pProtectedResourceSession">
+                    <type>ID3D12ProtectedResourceSession*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppVideoProcessor">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, uint, D3D12_VIDEO_PROCESS_OUTPUT_STREAM_DESC*, uint, D3D12_VIDEO_PROCESS_INPUT_STREAM_DESC*, ID3D12ProtectedResourceSession*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="NodeMask">NodeMask</param>, <param name="pOutputStreamDesc">pOutputStreamDesc</param>, <param name="NumInputStreamDescs">NumInputStreamDescs</param>, <param name="pInputStreamDescs">pInputStreamDescs</param>, <param name="pProtectedResourceSession">pProtectedResourceSession</param>, <param name="riid">riid</param>, <param name="ppVideoProcessor">ppVideoProcessor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoExtensionCommand" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D12_VIDEO_EXTENSION_COMMAND_DESC*</type>
+                </param>
+                <param name="pCreationParameters">
+                    <type>void*</type>
+                </param>
+                <param name="CreationParametersDataSizeInBytes">
+                    <type>nuint</type>
+                </param>
+                <param name="pProtectedResourceSession">
+                    <type>ID3D12ProtectedResourceSession*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppVideoExtensionCommand">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, D3D12_VIDEO_EXTENSION_COMMAND_DESC*, void*, nuint, ID3D12ProtectedResourceSession*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pCreationParameters">pCreationParameters</param>, <param name="CreationParametersDataSizeInBytes">CreationParametersDataSizeInBytes</param>, <param name="pProtectedResourceSession">pProtectedResourceSession</param>, <param name="riid">riid</param>, <param name="ppVideoExtensionCommand">ppVideoExtensionCommand</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ExecuteExtensionCommand" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pExtensionCommand">
+                    <type>ID3D12VideoExtensionCommand*</type>
+                </param>
+                <param name="pExecutionParameters">
+                    <type>void*</type>
+                </param>
+                <param name="ExecutionParametersSizeInBytes">
+                    <type>nuint</type>
+                </param>
+                <param name="pOutputData">
+                    <type>void*</type>
+                </param>
+                <param name="OutputDataSizeInBytes">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12VideoDevice2*, ID3D12VideoExtensionCommand*, void*, nuint, void*, nuint, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID3D12VideoDevice2*)Unsafe.AsPointer(ref this)</param>, <param name="pExtensionCommand">pExtensionCommand</param>, <param name="pExecutionParameters">pExecutionParameters</param>, <param name="ExecutionParametersSizeInBytes">ExecutionParametersSizeInBytes</param>, <param name="pOutputData">pOutputData</param>, <param name="OutputDataSizeInBytes">OutputDataSizeInBytes</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

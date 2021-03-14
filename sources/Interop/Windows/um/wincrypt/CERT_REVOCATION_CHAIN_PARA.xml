@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CERT_REVOCATION_CHAIN_PARA" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hChainEngine" access="public">
+                <type native="HCERTCHAINENGINE">IntPtr</type>
+            </field>
+            <field name="hAdditionalStore" access="public">
+                <type native="HCERTSTORE">void*</type>
+            </field>
+            <field name="dwChainFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwUrlRetrievalTimeout" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pftCurrentTime" access="public">
+                <type native="LPFILETIME">FILETIME*</type>
+            </field>
+            <field name="pftCacheResync" access="public">
+                <type native="LPFILETIME">FILETIME*</type>
+            </field>
+            <field name="cbMaxUrlRetrievalByteCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

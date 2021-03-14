@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SYSTEM_CPU_SET_INFORMATION" access="public">
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Type" access="public">
+                <type native="">CPU_SET_INFORMATION_TYPE</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_SYSTEM_CPU_SET_INFORMATION::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:12628:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="CpuSet" access="public">
+                <type native="">ref _Anonymous_e__Union._CpuSet_e__Struct</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.CpuSet, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="CpuSet" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:12629:9)">_CpuSet_e__Struct</type>
+                </field>
+                <struct name="_CpuSet_e__Struct" access="public">
+                    <field name="Id" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="Group" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="LogicalProcessorIndex" access="public">
+                        <type native="BYTE">byte</type>
+                    </field>
+                    <field name="CoreIndex" access="public">
+                        <type native="BYTE">byte</type>
+                    </field>
+                    <field name="LastLevelCacheIndex" access="public">
+                        <type native="BYTE">byte</type>
+                    </field>
+                    <field name="NumaNodeIndex" access="public">
+                        <type native="BYTE">byte</type>
+                    </field>
+                    <field name="EfficiencyClass" access="public">
+                        <type native="BYTE">byte</type>
+                    </field>
+                    <field name="Anonymous1" access="public">
+                        <type native="_SYSTEM_CPU_SET_INFORMATION::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:12637:13)">_Anonymous1_e__Union</type>
+                    </field>
+                    <field name="AllFlags" access="public">
+                        <type native="">ref byte</type>
+                        <get inlining="aggressive">
+                            <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.AllFlags, 1));
+        </code>
+                        </get>
+                    </field>
+                    <field name="Parked" access="public">
+                        <type native="">byte</type>
+                        <get inlining="aggressive">
+                            <code>return Anonymous1.Anonymous.Parked;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>Anonymous1.Anonymous.Parked = value;
+        </code>
+                        </set>
+                    </field>
+                    <field name="Allocated" access="public">
+                        <type native="">byte</type>
+                        <get inlining="aggressive">
+                            <code>return Anonymous1.Anonymous.Allocated;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>Anonymous1.Anonymous.Allocated = value;
+        </code>
+                        </set>
+                    </field>
+                    <field name="AllocatedToTargetProcess" access="public">
+                        <type native="">byte</type>
+                        <get inlining="aggressive">
+                            <code>return Anonymous1.Anonymous.AllocatedToTargetProcess;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>Anonymous1.Anonymous.AllocatedToTargetProcess = value;
+        </code>
+                        </set>
+                    </field>
+                    <field name="RealTime" access="public">
+                        <type native="">byte</type>
+                        <get inlining="aggressive">
+                            <code>return Anonymous1.Anonymous.RealTime;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>Anonymous1.Anonymous.RealTime = value;
+        </code>
+                        </set>
+                    </field>
+                    <field name="ReservedFlags" access="public">
+                        <type native="">byte</type>
+                        <get inlining="aggressive">
+                            <code>return Anonymous1.Anonymous.ReservedFlags;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>Anonymous1.Anonymous.ReservedFlags = value;
+        </code>
+                        </set>
+                    </field>
+                    <field name="Anonymous2" access="public">
+                        <type native="_SYSTEM_CPU_SET_INFORMATION::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:12654:13)">_Anonymous2_e__Union</type>
+                    </field>
+                    <field name="Reserved" access="public">
+                        <type native="">ref uint</type>
+                        <get inlining="aggressive">
+                            <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.Reserved, 1));
+        </code>
+                        </get>
+                    </field>
+                    <field name="SchedulingClass" access="public">
+                        <type native="">ref byte</type>
+                        <get inlining="aggressive">
+                            <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.SchedulingClass, 1));
+        </code>
+                        </get>
+                    </field>
+                    <field name="AllocationTag" access="public">
+                        <type native="DWORD64">ulong</type>
+                    </field>
+                    <struct name="_Anonymous1_e__Union" access="public" layout="Explicit">
+                        <field name="AllFlags" access="public" offset="0">
+                            <type native="BYTE">byte</type>
+                        </field>
+                        <field name="Anonymous" access="public" offset="0">
+                            <type native="_SYSTEM_CPU_SET_INFORMATION::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:12645:17)">_Anonymous_e__Struct</type>
+                        </field>
+                        <struct name="_Anonymous_e__Struct" access="public">
+                            <field name="_bitfield" access="public">
+                                <type native="">byte</type>
+                            </field>
+                            <field name="Parked" access="public">
+                                <type native="BYTE : 1">byte</type>
+                                <get inlining="aggressive">
+                                    <code>return (<typeName>byte</typeName>)(<bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                                </get>
+                                <set inlining="aggressive">
+                                    <code>
+                                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>));
+        </code>
+                                </set>
+                            </field>
+                            <field name="Allocated" access="public">
+                                <type native="BYTE : 1">byte</type>
+                                <get inlining="aggressive">
+                                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>1</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                                </get>
+                                <set inlining="aggressive">
+                                    <code>
+                                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>1</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 1));
+        </code>
+                                </set>
+                            </field>
+                            <field name="AllocatedToTargetProcess" access="public">
+                                <type native="BYTE : 1">byte</type>
+                                <get inlining="aggressive">
+                                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>2</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                                </get>
+                                <set inlining="aggressive">
+                                    <code>
+                                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>2</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 2));
+        </code>
+                                </set>
+                            </field>
+                            <field name="RealTime" access="public">
+                                <type native="BYTE : 1">byte</type>
+                                <get inlining="aggressive">
+                                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>3</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                                </get>
+                                <set inlining="aggressive">
+                                    <code>
+                                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>3</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 3));
+        </code>
+                                </set>
+                            </field>
+                            <field name="ReservedFlags" access="public">
+                                <type native="BYTE : 4">byte</type>
+                                <get inlining="aggressive">
+                                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>4</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                                </get>
+                                <set inlining="aggressive">
+                                    <code>
+                                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>4</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 4));
+        </code>
+                                </set>
+                            </field>
+                        </struct>
+                    </struct>
+                    <struct name="_Anonymous2_e__Union" access="public" layout="Explicit">
+                        <field name="Reserved" access="public" offset="0">
+                            <type native="DWORD">uint</type>
+                        </field>
+                        <field name="SchedulingClass" access="public" offset="0">
+                            <type native="BYTE">byte</type>
+                        </field>
+                    </struct>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

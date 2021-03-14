@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SCM_PD_DEVICE_INFO" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DeviceGuid" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="UnsafeShutdownCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="PersistentMemorySizeInBytes" access="public">
+                <type native="DWORD64">ulong</type>
+            </field>
+            <field name="VolatileMemorySizeInBytes" access="public">
+                <type native="DWORD64">ulong</type>
+            </field>
+            <field name="TotalMemorySizeInBytes" access="public">
+                <type native="DWORD64">ulong</type>
+            </field>
+            <field name="SlotNumber" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DeviceHandle" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="PhysicalId" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="NumberOfFormatInterfaceCodes" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="FormatInterfaceCodes" access="public">
+                <type native="WORD [8]" count="8" fixed="_FormatInterfaceCodes_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="VendorId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ProductId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SubsystemDeviceId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SubsystemVendorId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ManufacturingLocation" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="ManufacturingWeek" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="ManufacturingYear" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="SerialNumber4Byte" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SerialNumberLengthInChars" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SerialNumber" access="public">
+                <type native="CHAR [1]" count="1" fixed="_SerialNumber_e__FixedBuffer">sbyte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfComposition" access="public" native="struct ITfComposition : IUnknown" uuid="20168d64-5a8f-4a5a-b7bd-cfa29f4d0fd9" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfComposition*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfComposition*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfComposition*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfComposition*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfComposition*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfComposition*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppRange">
+                    <type>ITfRange**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfComposition*, ITfRange**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfComposition*)Unsafe.AsPointer(ref this)</param>, <param name="ppRange">ppRange</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftStart" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ecWrite">
+                    <type>uint</type>
+                </param>
+                <param name="pNewStart">
+                    <type>ITfRange*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfComposition*, uint, ITfRange*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfComposition*)Unsafe.AsPointer(ref this)</param>, <param name="ecWrite">ecWrite</param>, <param name="pNewStart">pNewStart</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftEnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ecWrite">
+                    <type>uint</type>
+                </param>
+                <param name="pNewEnd">
+                    <type>ITfRange*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfComposition*, uint, ITfRange*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfComposition*)Unsafe.AsPointer(ref this)</param>, <param name="ecWrite">ecWrite</param>, <param name="pNewEnd">pNewEnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndComposition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ecWrite">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfComposition*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfComposition*)Unsafe.AsPointer(ref this)</param>, <param name="ecWrite">ecWrite</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

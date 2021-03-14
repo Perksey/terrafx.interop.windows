@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpeechRecognizer" access="public" native="struct ISpeechRecognizer : IDispatch" uuid="2d5f1c0c-bd75-4b08-9478-3b11fea2586c" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTypeInfoCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pctinfo">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="pctinfo">pctinfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTypeInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="iTInfo">
+                    <type>uint</type>
+                </param>
+                <param name="lcid">
+                    <type>uint</type>
+                </param>
+                <param name="ppTInfo">
+                    <type>ITypeInfo**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, uint, uint, ITypeInfo**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="iTInfo">iTInfo</param>, <param name="lcid">lcid</param>, <param name="ppTInfo">ppTInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetIDsOfNames" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rgszNames">
+                    <type>ushort**</type>
+                </param>
+                <param name="cNames">
+                    <type>uint</type>
+                </param>
+                <param name="lcid">
+                    <type>uint</type>
+                </param>
+                <param name="rgDispId">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, Guid*, ushort**, uint, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="rgszNames">rgszNames</param>, <param name="cNames">cNames</param>, <param name="lcid">lcid</param>, <param name="rgDispId">rgDispId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Invoke" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dispIdMember">
+                    <type>int</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="lcid">
+                    <type>uint</type>
+                </param>
+                <param name="wFlags">
+                    <type>ushort</type>
+                </param>
+                <param name="pDispParams">
+                    <type>DISPPARAMS*</type>
+                </param>
+                <param name="pVarResult">
+                    <type>VARIANT*</type>
+                </param>
+                <param name="pExcepInfo">
+                    <type>EXCEPINFO*</type>
+                </param>
+                <param name="puArgErr">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, int, Guid*, uint, ushort, DISPPARAMS*, VARIANT*, EXCEPINFO*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="dispIdMember">dispIdMember</param>, <param name="riid">riid</param>, <param name="lcid">lcid</param>, <param name="wFlags">wFlags</param>, <param name="pDispParams">pDispParams</param>, <param name="pVarResult">pVarResult</param>, <param name="pExcepInfo">pExcepInfo</param>, <param name="puArgErr">puArgErr</param>);
+        </code>
+                </body>
+            </function>
+            <function name="putref_Recognizer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Recognizer">
+                    <type>ISpeechObjectToken*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechObjectToken*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Recognizer">Recognizer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_Recognizer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Recognizer">
+                    <type>ISpeechObjectToken**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechObjectToken**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Recognizer">Recognizer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="put_AllowAudioInputFormatChangesOnNextSet" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Allow">
+                    <type>short</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, short, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Allow">Allow</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_AllowAudioInputFormatChangesOnNextSet" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Allow">
+                    <type>short*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, short*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Allow">Allow</param>);
+        </code>
+                </body>
+            </function>
+            <function name="putref_AudioInput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="AudioInput">
+                    <type>ISpeechObjectToken*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechObjectToken*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="AudioInput">AudioInput</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_AudioInput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="AudioInput">
+                    <type>ISpeechObjectToken**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechObjectToken**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="AudioInput">AudioInput</param>);
+        </code>
+                </body>
+            </function>
+            <function name="putref_AudioInputStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="AudioInputStream">
+                    <type>ISpeechBaseStream*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechBaseStream*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="AudioInputStream">AudioInputStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_AudioInputStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="AudioInputStream">
+                    <type>ISpeechBaseStream**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechBaseStream**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="AudioInputStream">AudioInputStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_IsShared" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Shared">
+                    <type>short*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, short*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Shared">Shared</param>);
+        </code>
+                </body>
+            </function>
+            <function name="put_State" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="State">
+                    <type>SpeechRecognizerState</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, SpeechRecognizerState, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="State">State</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_State" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="State">
+                    <type>SpeechRecognizerState*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, SpeechRecognizerState*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="State">State</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_Status" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Status">
+                    <type>ISpeechRecognizerStatus**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechRecognizerStatus**, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Status">Status</param>);
+        </code>
+                </body>
+            </function>
+            <function name="putref_Profile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Profile">
+                    <type>ISpeechObjectToken*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechObjectToken*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Profile">Profile</param>);
+        </code>
+                </body>
+            </function>
+            <function name="get_Profile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Profile">
+                    <type>ISpeechObjectToken**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechObjectToken**, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Profile">Profile</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EmulateRecognition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="TextElements">
+                    <type>VARIANT</type>
+                </param>
+                <param name="ElementDisplayAttributes">
+                    <type>VARIANT*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="LanguageId">
+                    <type>int</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, VARIANT, VARIANT*, int, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="TextElements">TextElements</param>, <param name="ElementDisplayAttributes">ElementDisplayAttributes</param>, <param name="LanguageId">LanguageId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRecoContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewContext">
+                    <type>ISpeechRecoContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ISpeechRecoContext**, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="NewContext">NewContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFormat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Type">
+                    <type>SpeechFormatType</type>
+                </param>
+                <param name="Format">
+                    <type>ISpeechAudioFormat**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, SpeechFormatType, ISpeechAudioFormat**, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Type">Type</param>, <param name="Format">Format</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPropertyNumber" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <param name="Value">
+                    <type>int</type>
+                </param>
+                <param name="Supported">
+                    <type>short*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ushort*, int, short*, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="Value">Value</param>, <param name="Supported">Supported</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyNumber" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <param name="Value">
+                    <type>int*</type>
+                </param>
+                <param name="Supported">
+                    <type>short*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ushort*, int*, short*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="Value">Value</param>, <param name="Supported">Supported</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPropertyString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <param name="Value">
+                    <type>ushort*</type>
+                </param>
+                <param name="Supported">
+                    <type>short*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ushort*, ushort*, short*, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="Value">Value</param>, <param name="Supported">Supported</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <param name="Value">
+                    <type>ushort**</type>
+                </param>
+                <param name="Supported">
+                    <type>short*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ushort*, ushort**, short*, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="Value">Value</param>, <param name="Supported">Supported</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsUISupported" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="TypeOfUI">
+                    <type>ushort*</type>
+                </param>
+                <param name="ExtraData">
+                    <type>VARIANT*</type>
+                </param>
+                <param name="Supported">
+                    <type>short*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ushort*, VARIANT*, short*, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="TypeOfUI">TypeOfUI</param>, <param name="ExtraData">ExtraData</param>, <param name="Supported">Supported</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DisplayUI" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hWndParent">
+                    <type>int</type>
+                </param>
+                <param name="Title">
+                    <type>ushort*</type>
+                </param>
+                <param name="TypeOfUI">
+                    <type>ushort*</type>
+                </param>
+                <param name="ExtraData">
+                    <type>VARIANT*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, int, ushort*, ushort*, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="hWndParent">hWndParent</param>, <param name="Title">Title</param>, <param name="TypeOfUI">TypeOfUI</param>, <param name="ExtraData">ExtraData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRecognizers" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="RequiredAttributes">
+                    <type>ushort*</type>
+                </param>
+                <param name="OptionalAttributes">
+                    <type>ushort*</type>
+                </param>
+                <param name="ObjectTokens">
+                    <type>ISpeechObjectTokens**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ushort*, ushort*, ISpeechObjectTokens**, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="RequiredAttributes">RequiredAttributes</param>, <param name="OptionalAttributes">OptionalAttributes</param>, <param name="ObjectTokens">ObjectTokens</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAudioInputs" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="RequiredAttributes">
+                    <type>ushort*</type>
+                </param>
+                <param name="OptionalAttributes">
+                    <type>ushort*</type>
+                </param>
+                <param name="ObjectTokens">
+                    <type>ISpeechObjectTokens**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ushort*, ushort*, ISpeechObjectTokens**, int&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="RequiredAttributes">RequiredAttributes</param>, <param name="OptionalAttributes">OptionalAttributes</param>, <param name="ObjectTokens">ObjectTokens</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetProfiles" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="RequiredAttributes">
+                    <type>ushort*</type>
+                </param>
+                <param name="OptionalAttributes">
+                    <type>ushort*</type>
+                </param>
+                <param name="ObjectTokens">
+                    <type>ISpeechObjectTokens**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpeechRecognizer*, ushort*, ushort*, ISpeechObjectTokens**, int&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(ISpeechRecognizer*)Unsafe.AsPointer(ref this)</param>, <param name="RequiredAttributes">RequiredAttributes</param>, <param name="OptionalAttributes">OptionalAttributes</param>, <param name="ObjectTokens">ObjectTokens</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/SetupAPI.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SP_NEWDEVICEWIZARD_DATA" access="public" layout="Sequential" pack="1">
+            <field name="ClassInstallHeader" access="public">
+                <type native="">SP_CLASSINSTALL_HEADER</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DynamicPages" access="public">
+                <type native="HPROPSHEETPAGE [20]" count="20" fixed="_DynamicPages_e__FixedBuffer">IntPtr</type>
+            </field>
+            <field name="NumDynamicPages" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hwndWizardDlg" access="public">
+                <type native="HWND">IntPtr</type>
+            </field>
+            <struct name="_DynamicPages_e__FixedBuffer" access="public" layout="Sequential" pack="1">
+                <field name="e0" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e6" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e7" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e8" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e9" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e10" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e11" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e12" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e13" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e14" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e15" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e16" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e17" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e18" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <field name="e19" access="public">
+                    <type native="">IntPtr</type>
+                </field>
+                <indexer access="public">
+                    <type>ref IntPtr</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;IntPtr&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 20);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

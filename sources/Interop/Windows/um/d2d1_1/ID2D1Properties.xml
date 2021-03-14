@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1_1.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID2D1Properties" access="public" native="struct ID2D1Properties : IUnknown" uuid="483473d7-cd46-4f9d-9d3a-3112aa80159d" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="SetValueByName" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="dataSize">
+                    <type>uint</type>
+                </param>
+                <code>return SetValueByName(name, D2D1_PROPERTY_TYPE_UNKNOWN, data, dataSize);
+        </code>
+            </function>
+            <function name="SetValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="dataSize">
+                    <type>uint</type>
+                </param>
+                <code>return SetValue(index, D2D1_PROPERTY_TYPE_UNKNOWN, data, dataSize);
+        </code>
+            </function>
+            <function name="GetValueByName" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="dataSize">
+                    <type>uint</type>
+                </param>
+                <code>return GetValueByName(name, D2D1_PROPERTY_TYPE_UNKNOWN, data, dataSize);
+        </code>
+            </function>
+            <function name="GetValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="dataSize">
+                    <type>uint</type>
+                </param>
+                <code>return GetValue(index, D2D1_PROPERTY_TYPE_UNKNOWN, data, dataSize);
+        </code>
+            </function>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyCount" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="nameCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="index">index</param>, <param name="name">name</param>, <param name="nameCount">nameCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyNameLength" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint, uint&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="index">index</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetType" access="public" unsafe="true">
+                <type>D2D1_PROPERTY_TYPE</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint, D2D1_PROPERTY_TYPE&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="index">index</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyIndex" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, ushort*, uint&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetValueByName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="type">
+                    <type>D2D1_PROPERTY_TYPE</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="dataSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, ushort*, D2D1_PROPERTY_TYPE, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="type">type</param>, <param name="data">data</param>, <param name="dataSize">dataSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="type">
+                    <type>D2D1_PROPERTY_TYPE</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="dataSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint, D2D1_PROPERTY_TYPE, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="index">index</param>, <param name="type">type</param>, <param name="data">data</param>, <param name="dataSize">dataSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetValueByName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="type">
+                    <type>D2D1_PROPERTY_TYPE</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="dataSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, ushort*, D2D1_PROPERTY_TYPE, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="type">type</param>, <param name="data">data</param>, <param name="dataSize">dataSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="type">
+                    <type>D2D1_PROPERTY_TYPE</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="dataSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint, D2D1_PROPERTY_TYPE, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="index">index</param>, <param name="type">type</param>, <param name="data">data</param>, <param name="dataSize">dataSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetValueSize" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint, uint&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="index">index</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSubProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="subProperties">
+                    <type>ID2D1Properties**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Properties*, uint, ID2D1Properties**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID2D1Properties*)Unsafe.AsPointer(ref this)</param>, <param name="index">index</param>, <param name="subProperties">subProperties</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

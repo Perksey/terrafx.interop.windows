@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wingdi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="EMRPLGBLT" access="public">
+            <field name="emr" access="public">
+                <type native="">EMR</type>
+            </field>
+            <field name="rclBounds" access="public">
+                <type native="">RECTL</type>
+            </field>
+            <field name="aptlDest" access="public">
+                <type native="POINTL [3]" count="3" fixed="_aptlDest_e__FixedBuffer">POINTL</type>
+            </field>
+            <field name="xSrc" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="ySrc" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="cxSrc" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="cySrc" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="xformSrc" access="public">
+                <type native="">XFORM</type>
+            </field>
+            <field name="crBkColorSrc" access="public">
+                <type native="COLORREF">uint</type>
+            </field>
+            <field name="iUsageSrc" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="offBmiSrc" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbBmiSrc" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="offBitsSrc" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbBitsSrc" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="xMask" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="yMask" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="iUsageMask" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="offBmiMask" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbBmiMask" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="offBitsMask" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbBitsMask" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <struct name="_aptlDest_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">POINTL</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">POINTL</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">POINTL</type>
+                </field>
+                <indexer access="public">
+                    <type>ref POINTL</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;POINTL&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 3);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

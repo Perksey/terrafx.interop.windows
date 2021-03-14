@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SYSTEM_POWER_CAPABILITIES" access="public" unsafe="true">
+            <field name="PowerButtonPresent" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="SleepButtonPresent" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="LidPresent" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="SystemS1" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="SystemS2" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="SystemS3" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="SystemS4" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="SystemS5" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="HiberFilePresent" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="FullWake" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="VideoDimPresent" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="ApmPresent" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="UpsPresent" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="ThermalControl" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="ProcessorThrottle" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="ProcessorMinThrottle" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="ProcessorMaxThrottle" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="FastSystemS4" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="Hiberboot" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="WakeAlarmPresent" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="AoAc" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="DiskSpinDown" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="HiberFileType" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="AoAcConnectivitySupported" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="spare3" access="public">
+                <type native="BYTE [6]" count="6" fixed="_spare3_e__FixedBuffer">byte</type>
+            </field>
+            <field name="SystemBatteriesPresent" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="BatteriesAreShortTerm" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="BatteryScale" access="public">
+                <type native="BATTERY_REPORTING_SCALE [3]" count="3" fixed="_BatteryScale_e__FixedBuffer">BATTERY_REPORTING_SCALE</type>
+            </field>
+            <field name="AcOnLineWake" access="public">
+                <type native="">SYSTEM_POWER_STATE</type>
+            </field>
+            <field name="SoftLidWake" access="public">
+                <type native="">SYSTEM_POWER_STATE</type>
+            </field>
+            <field name="RtcWake" access="public">
+                <type native="">SYSTEM_POWER_STATE</type>
+            </field>
+            <field name="MinDeviceWakeState" access="public">
+                <type native="">SYSTEM_POWER_STATE</type>
+            </field>
+            <field name="DefaultLowLatencyWake" access="public">
+                <type native="">SYSTEM_POWER_STATE</type>
+            </field>
+            <struct name="_BatteryScale_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">BATTERY_REPORTING_SCALE</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">BATTERY_REPORTING_SCALE</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">BATTERY_REPORTING_SCALE</type>
+                </field>
+                <indexer access="public">
+                    <type>ref BATTERY_REPORTING_SCALE</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;BATTERY_REPORTING_SCALE&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 3);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

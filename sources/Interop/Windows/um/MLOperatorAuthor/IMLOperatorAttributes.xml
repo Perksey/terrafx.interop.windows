@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/MLOperatorAuthor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMLOperatorAttributes" access="public" native="struct IMLOperatorAttributes : IUnknown" uuid="4b1b1759-ec40-466c-aab4-beb5347fd24c" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorAttributes*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMLOperatorAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorAttributes*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMLOperatorAttributes*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorAttributes*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMLOperatorAttributes*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAttributeElementCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>sbyte*</type>
+                </param>
+                <param name="type">
+                    <type>MLOperatorAttributeType</type>
+                </param>
+                <param name="elementCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorAttributes*, sbyte*, MLOperatorAttributeType, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMLOperatorAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="type">type</param>, <param name="elementCount">elementCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAttribute" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>sbyte*</type>
+                </param>
+                <param name="type">
+                    <type>MLOperatorAttributeType</type>
+                </param>
+                <param name="elementCount">
+                    <type>uint</type>
+                </param>
+                <param name="elementByteSize">
+                    <type>nuint</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorAttributes*, sbyte*, MLOperatorAttributeType, uint, nuint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMLOperatorAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="type">type</param>, <param name="elementCount">elementCount</param>, <param name="elementByteSize">elementByteSize</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStringAttributeElementLength" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>sbyte*</type>
+                </param>
+                <param name="elementIndex">
+                    <type>uint</type>
+                </param>
+                <param name="attributeElementByteSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorAttributes*, sbyte*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMLOperatorAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="elementIndex">elementIndex</param>, <param name="attributeElementByteSize">attributeElementByteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStringAttributeElement" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>sbyte*</type>
+                </param>
+                <param name="elementIndex">
+                    <type>uint</type>
+                </param>
+                <param name="attributeElementByteSize">
+                    <type>uint</type>
+                </param>
+                <param name="attributeElement">
+                    <type>sbyte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorAttributes*, sbyte*, uint, uint, sbyte*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMLOperatorAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="elementIndex">elementIndex</param>, <param name="attributeElementByteSize">attributeElementByteSize</param>, <param name="attributeElement">attributeElement</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

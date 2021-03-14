@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/PropIdlBase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IPropertyStorage" access="public" native="struct IPropertyStorage : IUnknown" uuid="00000138-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReadMultiple" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cpspec">
+                    <type>uint</type>
+                </param>
+                <param name="rgpspec">
+                    <type>PROPSPEC*</type>
+                </param>
+                <param name="rgpropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, uint, PROPSPEC*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="cpspec">cpspec</param>, <param name="rgpspec">rgpspec</param>, <param name="rgpropvar">rgpropvar</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WriteMultiple" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cpspec">
+                    <type>uint</type>
+                </param>
+                <param name="rgpspec">
+                    <type>PROPSPEC*</type>
+                </param>
+                <param name="rgpropvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="propidNameFirst">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, uint, PROPSPEC*, PROPVARIANT*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="cpspec">cpspec</param>, <param name="rgpspec">rgpspec</param>, <param name="rgpropvar">rgpropvar</param>, <param name="propidNameFirst">propidNameFirst</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DeleteMultiple" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cpspec">
+                    <type>uint</type>
+                </param>
+                <param name="rgpspec">
+                    <type>PROPSPEC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, uint, PROPSPEC*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="cpspec">cpspec</param>, <param name="rgpspec">rgpspec</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReadPropertyNames" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cpropid">
+                    <type>uint</type>
+                </param>
+                <param name="rgpropid">
+                    <type>uint*</type>
+                </param>
+                <param name="rglpwstrName">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, uint, uint*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="cpropid">cpropid</param>, <param name="rgpropid">rgpropid</param>, <param name="rglpwstrName">rglpwstrName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WritePropertyNames" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cpropid">
+                    <type>uint</type>
+                </param>
+                <param name="rgpropid">
+                    <type>uint*</type>
+                </param>
+                <param name="rglpwstrName">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, uint, uint*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="cpropid">cpropid</param>, <param name="rgpropid">rgpropid</param>, <param name="rglpwstrName">rglpwstrName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DeletePropertyNames" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cpropid">
+                    <type>uint</type>
+                </param>
+                <param name="rgpropid">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="cpropid">cpropid</param>, <param name="rgpropid">rgpropid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Commit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="grfCommitFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="grfCommitFlags">grfCommitFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Revert" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Enum" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppenum">
+                    <type>IEnumSTATPROPSTG**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, IEnumSTATPROPSTG**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="ppenum">ppenum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTimes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pctime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="patime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="pmtime">
+                    <type>FILETIME*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, FILETIME*, FILETIME*, FILETIME*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pctime">pctime</param>, <param name="patime">patime</param>, <param name="pmtime">pmtime</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetClass" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="clsid">clsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Stat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pstatpsstg">
+                    <type>STATPROPSETSTG*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyStorage*, STATPROPSETSTG*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IPropertyStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pstatpsstg">pstatpsstg</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

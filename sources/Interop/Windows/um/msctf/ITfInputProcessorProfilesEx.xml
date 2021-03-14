@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfInputProcessorProfilesEx" access="public" native="struct ITfInputProcessorProfilesEx : ITfInputProcessorProfiles" uuid="892f230f-fe00-4a41-a98e-fcd6de0d35ef" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Register" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Unregister" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddLanguageProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="pchDesc">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchDesc">
+                    <type>uint</type>
+                </param>
+                <param name="pchIconFile">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchFile">
+                    <type>uint</type>
+                </param>
+                <param name="uIconIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort, Guid*, ushort*, uint, ushort*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>, <param name="pchDesc">pchDesc</param>, <param name="cchDesc">cchDesc</param>, <param name="pchIconFile">pchIconFile</param>, <param name="cchFile">cchFile</param>, <param name="uIconIndex">uIconIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveLanguageProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumInputProcessorInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumGUID**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, IEnumGUID**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDefaultLanguageProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="catid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pguidProfile">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, ushort, Guid*, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="langid">langid</param>, <param name="catid">catid</param>, <param name="pclsid">pclsid</param>, <param name="pguidProfile">pguidProfile</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDefaultLanguageProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="guidProfiles">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, ushort, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="langid">langid</param>, <param name="rclsid">rclsid</param>, <param name="guidProfiles">guidProfiles</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ActivateLanguageProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfiles">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfiles">guidProfiles</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetActiveLanguageProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="plangid">
+                    <type>ushort*</type>
+                </param>
+                <param name="pguidProfile">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="plangid">plangid</param>, <param name="pguidProfile">pguidProfile</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLanguageProfileDescription" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="pbstrProfile">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort, Guid*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>, <param name="pbstrProfile">pbstrProfile</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="plangid">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="plangid">plangid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ChangeCurrentLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, ushort, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="langid">langid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLanguageList" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppLangId">
+                    <type>ushort**</type>
+                </param>
+                <param name="pulCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, ushort**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="ppLangId">ppLangId</param>, <param name="pulCount">pulCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumLanguageProfiles" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="ppEnum">
+                    <type>IEnumTfLanguageProfiles**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, ushort, IEnumTfLanguageProfiles**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="langid">langid</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnableLanguageProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="fEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort, Guid*, int, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>, <param name="fEnable">fEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsEnabledLanguageProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="pfEnable">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort, Guid*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>, <param name="pfEnable">pfEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnableLanguageProfileByDefault" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="fEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort, Guid*, int, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>, <param name="fEnable">fEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SubstituteKeyboardLayout" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="hKL">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort, Guid*, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>, <param name="hKL">hKL</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetLanguageProfileDisplayName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="pchFile">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchFile">
+                    <type>uint</type>
+                </param>
+                <param name="uResId">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfilesEx*, Guid*, ushort, Guid*, ushort*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfilesEx*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>, <param name="pchFile">pchFile</param>, <param name="cchFile">cchFile</param>, <param name="uResId">uResId</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

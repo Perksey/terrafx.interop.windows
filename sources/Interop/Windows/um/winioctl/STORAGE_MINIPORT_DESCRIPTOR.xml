@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_MINIPORT_DESCRIPTOR" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Portdriver" access="public">
+                <type native="">STORAGE_PORT_CODE_SET</type>
+            </field>
+            <field name="LUNResetSupported" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="TargetResetSupported" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="IoTimeoutValue" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="ExtraIoInfoSupported" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="Reserved0" access="public">
+                <type native="BYTE [3]" count="3" fixed="_Reserved0_e__FixedBuffer">byte</type>
+            </field>
+            <field name="Reserved1" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

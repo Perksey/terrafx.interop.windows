@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dcomp.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDCompositionSurfaceFactory" access="public" native="struct IDCompositionSurfaceFactory : IUnknown" uuid="e334bc12-3937-4e02-85eb-fcf4eb30d2c8" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionSurfaceFactory*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDCompositionSurfaceFactory*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionSurfaceFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDCompositionSurfaceFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionSurfaceFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDCompositionSurfaceFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="width">
+                    <type>uint</type>
+                </param>
+                <param name="height">
+                    <type>uint</type>
+                </param>
+                <param name="pixelFormat">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="alphaMode">
+                    <type>DXGI_ALPHA_MODE</type>
+                </param>
+                <param name="surface">
+                    <type>IDCompositionSurface**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionSurfaceFactory*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionSurface**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDCompositionSurfaceFactory*)Unsafe.AsPointer(ref this)</param>, <param name="width">width</param>, <param name="height">height</param>, <param name="pixelFormat">pixelFormat</param>, <param name="alphaMode">alphaMode</param>, <param name="surface">surface</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVirtualSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="initialWidth">
+                    <type>uint</type>
+                </param>
+                <param name="initialHeight">
+                    <type>uint</type>
+                </param>
+                <param name="pixelFormat">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="alphaMode">
+                    <type>DXGI_ALPHA_MODE</type>
+                </param>
+                <param name="virtualSurface">
+                    <type>IDCompositionVirtualSurface**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDCompositionSurfaceFactory*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionVirtualSurface**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDCompositionSurfaceFactory*)Unsafe.AsPointer(ref this)</param>, <param name="initialWidth">initialWidth</param>, <param name="initialHeight">initialHeight</param>, <param name="pixelFormat">pixelFormat</param>, <param name="alphaMode">alphaMode</param>, <param name="virtualSurface">virtualSurface</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

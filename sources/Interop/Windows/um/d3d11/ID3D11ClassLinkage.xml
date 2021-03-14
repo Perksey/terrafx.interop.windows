@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D11ClassLinkage" access="public" native="struct ID3D11ClassLinkage : ID3D11DeviceChild" uuid="ddf57cba-9543-46e4-a12b-f207a0fe7fed" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ClassLinkage*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D11ClassLinkage*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ClassLinkage*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D11ClassLinkage*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ClassLinkage*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D11ClassLinkage*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevice" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppDevice">
+                    <type>ID3D11Device**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11ClassLinkage*, ID3D11Device**, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D11ClassLinkage*)Unsafe.AsPointer(ref this)</param>, <param name="ppDevice">ppDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ClassLinkage*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D11ClassLinkage*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ClassLinkage*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D11ClassLinkage*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pData">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ClassLinkage*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D11ClassLinkage*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetClassInstance" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClassInstanceName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="InstanceIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppInstance">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ClassLinkage*, sbyte*, uint, ID3D11ClassInstance**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D11ClassLinkage*)Unsafe.AsPointer(ref this)</param>, <param name="pClassInstanceName">pClassInstanceName</param>, <param name="InstanceIndex">InstanceIndex</param>, <param name="ppInstance">ppInstance</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateClassInstance" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClassTypeName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ConstantBufferOffset">
+                    <type>uint</type>
+                </param>
+                <param name="ConstantVectorOffset">
+                    <type>uint</type>
+                </param>
+                <param name="TextureOffset">
+                    <type>uint</type>
+                </param>
+                <param name="SamplerOffset">
+                    <type>uint</type>
+                </param>
+                <param name="ppInstance">
+                    <type>ID3D11ClassInstance**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ClassLinkage*, sbyte*, uint, uint, uint, uint, ID3D11ClassInstance**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D11ClassLinkage*)Unsafe.AsPointer(ref this)</param>, <param name="pClassTypeName">pClassTypeName</param>, <param name="ConstantBufferOffset">ConstantBufferOffset</param>, <param name="ConstantVectorOffset">ConstantVectorOffset</param>, <param name="TextureOffset">TextureOffset</param>, <param name="SamplerOffset">SamplerOffset</param>, <param name="ppInstance">ppInstance</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

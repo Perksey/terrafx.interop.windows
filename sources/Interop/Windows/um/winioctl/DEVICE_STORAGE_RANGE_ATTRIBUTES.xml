@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DEVICE_STORAGE_RANGE_ATTRIBUTES" access="public">
+            <field name="LengthInBytes" access="public">
+                <type native="DWORDLONG">ulong</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_DEVICE_STORAGE_RANGE_ATTRIBUTES::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:4326:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="AllFlags" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.AllFlags, 1));
+        </code>
+                </get>
+            </field>
+            <field name="IsRangeBad" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.IsRangeBad;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.IsRangeBad = value;
+        </code>
+                </set>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="AllFlags" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="_DEVICE_STORAGE_RANGE_ATTRIBUTES::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:4330:9)">_Anonymous_e__Struct</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="_bitfield" access="public">
+                        <type native="">uint</type>
+                    </field>
+                    <field name="IsRangeBad" access="public">
+                        <type native="DWORD : 1">uint</type>
+                        <get inlining="aggressive">
+                            <code>return <bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>);
+        </code>
+                        </set>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

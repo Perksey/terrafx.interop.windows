@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/prsht.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="CreatePropertySheetPageA" access="public" lib="comctl32" static="true">
+                <type native="HPROPSHEETPAGE">IntPtr</type>
+                <param name="constPropSheetPagePointer">
+                    <type>PROPSHEETPAGEA*</type>
+                </param>
+            </function>
+            <function name="CreatePropertySheetPageW" access="public" lib="comctl32" static="true">
+                <type native="HPROPSHEETPAGE">IntPtr</type>
+                <param name="constPropSheetPagePointer">
+                    <type>PROPSHEETPAGEW*</type>
+                </param>
+            </function>
+            <function name="DestroyPropertySheetPage" access="public" lib="comctl32" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="param0">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="PropertySheetA" access="public" lib="comctl32" static="true">
+                <type native="INT_PTR">nint</type>
+                <param name="param0">
+                    <type>PROPSHEETHEADERA_V2*</type>
+                </param>
+            </function>
+            <function name="PropertySheetW" access="public" lib="comctl32" static="true">
+                <type native="INT_PTR">nint</type>
+                <param name="param0">
+                    <type>PROPSHEETHEADERW_V2*</type>
+                </param>
+            </function>
+            <constant name="SNDMSG" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, uint, nuint, nint, nint&gt;</type>
+                <value>
+                    <deref>
+                        <code>SendMessageW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="PSTMSG" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, uint, nuint, nint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>PostMessageW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="MAXPROPPAGES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>100
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_DEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_DLGINDIRECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_USEHICON" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_USEICONID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_USETITLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_RTLREADING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_HASHELP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_USEREFPARENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_USECALLBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_PREMATURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_HIDEHEADER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_USEHEADERTITLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_USEHEADERSUBTITLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSP_USEFUSIONCONTEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSPCB_ADDREF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="PSPCB_RELEASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="PSPCB_CREATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGEA_V1_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEA_V1)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGEW_V1_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEW_V1)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGEA_V2_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEA_V2)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGEW_V2_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEW_V2)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGEA_V3_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEA_V3)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGEW_V3_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEW_V3)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGEA_V4_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEA)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGEW_V4_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEW)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGE_V1_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEW_V1)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETPAGE_V2_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETPAGEW_V2)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSH_DEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_PROPTITLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_USEHICON" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_USEICONID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_PROPSHEETPAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_WIZARDHASFINISH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_WIZARD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_USEPSTARTPAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_NOAPPLYNOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_USECALLBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_HASHELP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_MODELESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_RTLREADING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_WIZARDCONTEXTHELP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_WIZARD97" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_WATERMARK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_USEHBMWATERMARK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_USEHPLWATERMARK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_STRETCHWATERMARK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_HEADER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_USEHBMHEADER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_USEPAGELANG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_WIZARD_LITE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_NOCONTEXTHELP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02000000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_AEROWIZARD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_RESIZABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04000000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_HEADERBITMAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x08000000
+            </code>
+                </value>
+            </constant>
+            <constant name="PSH_NOMARGIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="PROPSHEETHEADERA_V1_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETHEADERA_V1)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETHEADERW_V1_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETHEADERW_V1)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETHEADERA_V2_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETHEADERA_V2)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETHEADERW_V2_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETHEADERW_V2)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETHEADER_V1_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETHEADERW_V1)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PROPSHEETHEADER_V2_SIZE" access="public">
+                <type primitive="False">uint</type>
+                <value>
+                    <unchecked>
+                        <value>
+                            <cast>uint</cast>
+                            <value>
+                                <code>sizeof(PROPSHEETHEADERW_V2)
+            </code>
+                            </value>
+                        </value>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSCB_INITIALIZED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="PSCB_PRECREATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="PSCB_BUTTONPRESSED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="CreatePropertySheetPage" access="public">
+                <type primitive="False">delegate*&lt;PROPSHEETPAGEW*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreatePropertySheetPageW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="PropertySheet" access="public">
+                <type primitive="False">delegate*&lt;PROPSHEETHEADERW_V2*, nint&gt;</type>
+                <value>
+                    <deref>
+                        <code>PropertySheetW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="PSN_FIRST" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>(0U - 200U)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_LAST" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>(0U - 299U)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_SETACTIVE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 0)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_KILLACTIVE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_APPLY" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 2)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_RESET" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 3)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_HELP" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 5)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_WIZBACK" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 6)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_WIZNEXT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 7)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_WIZFINISH" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 8)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_QUERYCANCEL" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 9)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_GETOBJECT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 10)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_TRANSLATEACCELERATOR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 12)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSN_QUERYINITIALFOCUS" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((0U - 200U) - 13)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSNRET_NOERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="PSNRET_INVALID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="PSNRET_INVALID_NOCHANGEPAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="PSNRET_MESSAGEHANDLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETCURSEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 101)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_REMOVEPAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 102)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_ADDPAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 103)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_CHANGED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 104)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_RESTARTWINDOWS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 105)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_REBOOTSYSTEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 106)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_CANCELTOCLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 107)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_QUERYSIBLINGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 108)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_UNCHANGED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 109)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_APPLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 110)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETTITLEA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 111)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETTITLEW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 120)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETTITLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 120)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETWIZBUTTONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 112)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSWIZB_BACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="PSWIZB_NEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="PSWIZB_FINISH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="PSWIZB_DISABLEDFINISH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="PSWIZBF_ELEVATIONREQUIRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="PSWIZB_CANCEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_PRESSBUTTON" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 113)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSBTN_BACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="PSBTN_NEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="PSBTN_FINISH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="PSBTN_OK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="PSBTN_APPLYNOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="PSBTN_CANCEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="PSBTN_HELP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>6
+            </code>
+                </value>
+            </constant>
+            <constant name="PSBTN_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>6
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETCURSELID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 114)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETFINISHTEXTA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 115)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETFINISHTEXTW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 121)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETFINISHTEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 121)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_GETTABCONTROL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 116)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_ISDIALOGMESSAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 117)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_GETCURRENTPAGEHWND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 118)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_INSERTPAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 119)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSWIZF_SETCOLOR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>((uint)(-1))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PSM_SETHEADERTITLEA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 125)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETHEADERTITLEW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 126)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETHEADERTITLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 126)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETHEADERSUBTITLEA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 127)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETHEADERSUBTITLEW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 128)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETHEADERSUBTITLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 128)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_HWNDTOINDEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 129)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_INDEXTOHWND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 130)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_PAGETOINDEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 131)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_INDEXTOPAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 132)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_IDTOINDEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 133)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_INDEXTOID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 134)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_GETRESULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 135)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_RECALCPAGESIZES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 136)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETNEXTTEXTW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 137)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETNEXTTEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 137)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSWIZB_SHOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="PSWIZB_RESTORE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SHOWWIZBUTTONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 138)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_ENABLEWIZBUTTONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 139)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETBUTTONTEXTW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 140)
+            </code>
+                </value>
+            </constant>
+            <constant name="PSM_SETBUTTONTEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400 + 140)
+            </code>
+                </value>
+            </constant>
+            <constant name="ID_PSRESTARTWINDOWS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="ID_PSREBOOTSYSTEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2 | 0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="WIZ_CXDLG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>276
+            </code>
+                </value>
+            </constant>
+            <constant name="WIZ_CYDLG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>140
+            </code>
+                </value>
+            </constant>
+            <constant name="WIZ_CXBMP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>80
+            </code>
+                </value>
+            </constant>
+            <constant name="WIZ_BODYX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>92
+            </code>
+                </value>
+            </constant>
+            <constant name="WIZ_BODYCX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>184
+            </code>
+                </value>
+            </constant>
+            <constant name="PROP_SM_CXDLG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>212
+            </code>
+                </value>
+            </constant>
+            <constant name="PROP_SM_CYDLG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>188
+            </code>
+                </value>
+            </constant>
+            <constant name="PROP_MED_CXDLG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>227
+            </code>
+                </value>
+            </constant>
+            <constant name="PROP_MED_CYDLG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>215
+            </code>
+                </value>
+            </constant>
+            <constant name="PROP_LG_CXDLG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>252
+            </code>
+                </value>
+            </constant>
+            <constant name="PROP_LG_CYDLG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>218
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

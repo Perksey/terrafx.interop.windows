@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/imapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDiscMasterProgressEvents" access="public" native="struct IDiscMasterProgressEvents : IUnknown" uuid="ec9e51c1-4e5d-11d3-9144-00104ba11c5e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryCancel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbCancel">
+                    <type>byte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, byte*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>, <param name="pbCancel">pbCancel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyPnPActivity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyAddProgress" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nCompletedSteps">
+                    <type>int</type>
+                </param>
+                <param name="nTotalSteps">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, int, int, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>, <param name="nCompletedSteps">nCompletedSteps</param>, <param name="nTotalSteps">nTotalSteps</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyBlockProgress" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nCompleted">
+                    <type>int</type>
+                </param>
+                <param name="nTotal">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, int, int, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>, <param name="nCompleted">nCompleted</param>, <param name="nTotal">nTotal</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyTrackProgress" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nCurrentTrack">
+                    <type>int</type>
+                </param>
+                <param name="nTotalTracks">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, int, int, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>, <param name="nCurrentTrack">nCurrentTrack</param>, <param name="nTotalTracks">nTotalTracks</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyPreparingBurn" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nEstimatedSeconds">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, int, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>, <param name="nEstimatedSeconds">nEstimatedSeconds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyClosingDisc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nEstimatedSeconds">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, int, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>, <param name="nEstimatedSeconds">nEstimatedSeconds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyBurnComplete" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="status">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, int, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>, <param name="status">status</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyEraseComplete" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="status">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMasterProgressEvents*, int, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDiscMasterProgressEvents*)Unsafe.AsPointer(ref this)</param>, <param name="status">status</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SYSTEM_POWER_POLICY" access="public" unsafe="true">
+            <field name="Revision" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="PowerButton" access="public">
+                <type native="">POWER_ACTION_POLICY</type>
+            </field>
+            <field name="SleepButton" access="public">
+                <type native="">POWER_ACTION_POLICY</type>
+            </field>
+            <field name="LidClose" access="public">
+                <type native="">POWER_ACTION_POLICY</type>
+            </field>
+            <field name="LidOpenWake" access="public">
+                <type native="">SYSTEM_POWER_STATE</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Idle" access="public">
+                <type native="">POWER_ACTION_POLICY</type>
+            </field>
+            <field name="IdleTimeout" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="IdleSensitivity" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="DynamicThrottle" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="Spare2" access="public">
+                <type native="BYTE [2]" count="2" fixed="_Spare2_e__FixedBuffer">byte</type>
+            </field>
+            <field name="MinSleep" access="public">
+                <type native="">SYSTEM_POWER_STATE</type>
+            </field>
+            <field name="MaxSleep" access="public">
+                <type native="">SYSTEM_POWER_STATE</type>
+            </field>
+            <field name="ReducedLatencySleep" access="public">
+                <type native="">SYSTEM_POWER_STATE</type>
+            </field>
+            <field name="WinLogonFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Spare3" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DozeS4Timeout" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="BroadcastCapacityResolution" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DischargePolicy" access="public">
+                <type native="SYSTEM_POWER_LEVEL [4]" count="4" fixed="_DischargePolicy_e__FixedBuffer">SYSTEM_POWER_LEVEL</type>
+            </field>
+            <field name="VideoTimeout" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="VideoDimDisplay" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="VideoReserved" access="public">
+                <type native="DWORD [3]" count="3" fixed="_VideoReserved_e__FixedBuffer">uint</type>
+            </field>
+            <field name="SpindownTimeout" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="OptimizeForPower" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="FanThrottleTolerance" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="ForcedThrottle" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="MinThrottle" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="OverThrottled" access="public">
+                <type native="">POWER_ACTION_POLICY</type>
+            </field>
+            <struct name="_DischargePolicy_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">SYSTEM_POWER_LEVEL</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">SYSTEM_POWER_LEVEL</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">SYSTEM_POWER_LEVEL</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">SYSTEM_POWER_LEVEL</type>
+                </field>
+                <indexer access="public">
+                    <type>ref SYSTEM_POWER_LEVEL</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;SYSTEM_POWER_LEVEL&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 4);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

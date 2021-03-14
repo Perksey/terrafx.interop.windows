@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_HW_ENDURANCE_INFO" access="public" unsafe="true">
+            <field name="ValidFields" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="GroupId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:3015:5)">_Flags_e__Struct</type>
+            </field>
+            <field name="LifePercentage" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="BytesReadCount" access="public">
+                <type native="BYTE [16]" count="16" fixed="_BytesReadCount_e__FixedBuffer">byte</type>
+            </field>
+            <field name="ByteWriteCount" access="public">
+                <type native="BYTE [16]" count="16" fixed="_ByteWriteCount_e__FixedBuffer">byte</type>
+            </field>
+            <struct name="_Flags_e__Struct" access="public">
+                <field name="_bitfield" access="public">
+                    <type native="">uint</type>
+                </field>
+                <field name="Shared" access="public">
+                    <type native="DWORD : 1">uint</type>
+                    <get inlining="aggressive">
+                        <code>return <bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                    </get>
+                    <set inlining="aggressive">
+                        <code>
+                            <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>);
+        </code>
+                    </set>
+                </field>
+                <field name="Reserved" access="public">
+                    <type native="DWORD : 31">uint</type>
+                    <get inlining="aggressive">
+                        <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>1</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>7FFFFFFFu</bitwidthHexStringBacking>;
+        </code>
+                    </get>
+                    <set inlining="aggressive">
+                        <code>
+                            <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>7FFFFFFFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>1</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>7FFFFFFFu</bitwidthHexString>) &lt;&lt; 1);
+        </code>
+                    </set>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

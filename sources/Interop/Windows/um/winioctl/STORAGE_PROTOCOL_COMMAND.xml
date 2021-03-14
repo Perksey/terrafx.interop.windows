@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_PROTOCOL_COMMAND" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Length" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ProtocolType" access="public">
+                <type native="">STORAGE_PROTOCOL_TYPE</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ReturnStatus" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ErrorCode" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="CommandLength" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ErrorInfoLength" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DataToDeviceTransferLength" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DataFromDeviceTransferLength" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="TimeOutValue" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ErrorInfoOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DataToDeviceBufferOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DataFromDeviceBufferOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="CommandSpecific" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Reserved0" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="FixedProtocolReturnData" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Reserved1" access="public">
+                <type native="DWORD [3]" count="3" fixed="_Reserved1_e__FixedBuffer">uint</type>
+            </field>
+            <field name="Command" access="public">
+                <type native="BYTE [1]" count="1" fixed="_Command_e__FixedBuffer">byte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="REGFILTER2" access="public" unsafe="true">
+            <field name="dwVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwMerit" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="REGFILTER2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/strmif.h:5070:36)">_Anonymous_e__Union</type>
+            </field>
+            <field name="cPins" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous1.cPins, 1));
+        </code>
+                </get>
+            </field>
+            <field name="rgPins" access="public">
+                <type native="">ref REGFILTERPINS*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union._Anonymous1_e__Struct* pField = &amp;Anonymous.Anonymous1)
+        {
+            return ref pField-&gt;rgPins;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="cPins2" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous2.cPins2, 1));
+        </code>
+                </get>
+            </field>
+            <field name="rgPins2" access="public">
+                <type native="">ref REGFILTERPINS2*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union._Anonymous2_e__Struct* pField = &amp;Anonymous.Anonymous2)
+        {
+            return ref pField-&gt;rgPins2;
+        }
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="Anonymous1" access="public" offset="0">
+                    <type native="REGFILTER2::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/strmif.h:5072:24)">_Anonymous1_e__Struct</type>
+                </field>
+                <field name="Anonymous2" access="public" offset="0">
+                    <type native="REGFILTER2::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/strmif.h:5077:24)">_Anonymous2_e__Struct</type>
+                </field>
+                <struct name="_Anonymous1_e__Struct" access="public" unsafe="true">
+                    <field name="cPins" access="public">
+                        <type native="ULONG">uint</type>
+                    </field>
+                    <field name="rgPins" access="public">
+                        <type native="const REGFILTERPINS *">REGFILTERPINS*</type>
+                    </field>
+                </struct>
+                <struct name="_Anonymous2_e__Struct" access="public" unsafe="true">
+                    <field name="cPins2" access="public">
+                        <type native="ULONG">uint</type>
+                    </field>
+                    <field name="rgPins2" access="public">
+                        <type native="const REGFILTERPINS2 *">REGFILTERPINS2*</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

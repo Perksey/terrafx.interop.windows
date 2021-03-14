@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/audiopolicy.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAudioSessionManager2" access="public" native="struct IAudioSessionManager2 : IAudioSessionManager" uuid="77aa99a0-1bd6-484f-8bc7-2c654c9a9b6f" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAudioSessionControl" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="AudioSessionGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="StreamFlags">
+                    <type>uint</type>
+                </param>
+                <param name="SessionControl">
+                    <type>IAudioSessionControl**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, Guid*, uint, IAudioSessionControl**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>, <param name="AudioSessionGuid">AudioSessionGuid</param>, <param name="StreamFlags">StreamFlags</param>, <param name="SessionControl">SessionControl</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSimpleAudioVolume" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="AudioSessionGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="StreamFlags">
+                    <type>uint</type>
+                </param>
+                <param name="AudioVolume">
+                    <type>ISimpleAudioVolume**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, Guid*, uint, ISimpleAudioVolume**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>, <param name="AudioSessionGuid">AudioSessionGuid</param>, <param name="StreamFlags">StreamFlags</param>, <param name="AudioVolume">AudioVolume</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSessionEnumerator" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="SessionEnum">
+                    <type>IAudioSessionEnumerator**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, IAudioSessionEnumerator**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>, <param name="SessionEnum">SessionEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterSessionNotification" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="SessionNotification">
+                    <type>IAudioSessionNotification*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, IAudioSessionNotification*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>, <param name="SessionNotification">SessionNotification</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterSessionNotification" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="SessionNotification">
+                    <type>IAudioSessionNotification*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, IAudioSessionNotification*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>, <param name="SessionNotification">SessionNotification</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterDuckNotification" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="sessionID">
+                    <type>ushort*</type>
+                </param>
+                <param name="duckNotification">
+                    <type>IAudioVolumeDuckNotification*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, ushort*, IAudioVolumeDuckNotification*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>, <param name="sessionID">sessionID</param>, <param name="duckNotification">duckNotification</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterDuckNotification" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duckNotification">
+                    <type>IAudioVolumeDuckNotification*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionManager2*, IAudioVolumeDuckNotification*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IAudioSessionManager2*)Unsafe.AsPointer(ref this)</param>, <param name="duckNotification">duckNotification</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

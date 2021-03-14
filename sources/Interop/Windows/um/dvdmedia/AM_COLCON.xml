@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dvdmedia.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="AM_COLCON" access="public">
+            <field name="_bitfield1" access="public">
+                <type native="">byte</type>
+            </field>
+            <field name="emph1col" access="public">
+                <type native="UCHAR : 4">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)(<bitfieldName>_bitfield1</bitfieldName> &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield1</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield1 &amp; ~0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>));
+        </code>
+                </set>
+            </field>
+            <field name="emph2col" access="public">
+                <type native="UCHAR : 4">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield1</bitfieldName> &gt;&gt; <bitfieldOffset>4</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield1</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield1 &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>4</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 4));
+        </code>
+                </set>
+            </field>
+            <field name="_bitfield2" access="public">
+                <type native="">byte</type>
+            </field>
+            <field name="backcol" access="public">
+                <type native="UCHAR : 4">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)(<bitfieldName>_bitfield2</bitfieldName> &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield2</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield2 &amp; ~0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>));
+        </code>
+                </set>
+            </field>
+            <field name="patcol" access="public">
+                <type native="UCHAR : 4">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield2</bitfieldName> &gt;&gt; <bitfieldOffset>4</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield2</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield2 &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>4</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 4));
+        </code>
+                </set>
+            </field>
+            <field name="_bitfield3" access="public">
+                <type native="">byte</type>
+            </field>
+            <field name="emph1con" access="public">
+                <type native="UCHAR : 4">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)(<bitfieldName>_bitfield3</bitfieldName> &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield3</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield3 &amp; ~0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>));
+        </code>
+                </set>
+            </field>
+            <field name="emph2con" access="public">
+                <type native="UCHAR : 4">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield3</bitfieldName> &gt;&gt; <bitfieldOffset>4</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield3</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield3 &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>4</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 4));
+        </code>
+                </set>
+            </field>
+            <field name="_bitfield4" access="public">
+                <type native="">byte</type>
+            </field>
+            <field name="backcon" access="public">
+                <type native="UCHAR : 4">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)(<bitfieldName>_bitfield4</bitfieldName> &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield4</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield4 &amp; ~0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>));
+        </code>
+                </set>
+            </field>
+            <field name="patcon" access="public">
+                <type native="UCHAR : 4">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield4</bitfieldName> &gt;&gt; <bitfieldOffset>4</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield4</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield4 &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>4</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 4));
+        </code>
+                </set>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IInternetSecurityManager" access="public" native="struct IInternetSecurityManager : IUnknown" uuid="79eac9ee-baf9-11ce-8c82-00aa004ba90b" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSecuritySite" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSite">
+                    <type>IInternetSecurityMgrSite*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, IInternetSecurityMgrSite*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pSite">pSite</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSecuritySite" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppSite">
+                    <type>IInternetSecurityMgrSite**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, IInternetSecurityMgrSite**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>, <param name="ppSite">ppSite</param>);
+        </code>
+                </body>
+            </function>
+            <function name="MapUrlToZone" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwszUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="pdwZone">
+                    <type>uint*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, ushort*, uint*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pwszUrl">pwszUrl</param>, <param name="pdwZone">pdwZone</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSecurityId" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwszUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="pbSecurityId">
+                    <type>byte*</type>
+                </param>
+                <param name="pcbSecurityId">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, ushort*, byte*, uint*, nuint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pwszUrl">pwszUrl</param>, <param name="pbSecurityId">pbSecurityId</param>, <param name="pcbSecurityId">pcbSecurityId</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProcessUrlAction" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwszUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwAction">
+                    <type>uint</type>
+                </param>
+                <param name="pPolicy">
+                    <type>byte*</type>
+                </param>
+                <param name="cbPolicy">
+                    <type>uint</type>
+                </param>
+                <param name="pContext">
+                    <type>byte*</type>
+                </param>
+                <param name="cbContext">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, ushort*, uint, byte*, uint, byte*, uint, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pwszUrl">pwszUrl</param>, <param name="dwAction">dwAction</param>, <param name="pPolicy">pPolicy</param>, <param name="cbPolicy">cbPolicy</param>, <param name="pContext">pContext</param>, <param name="cbContext">cbContext</param>, <param name="dwFlags">dwFlags</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryCustomPolicy" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwszUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppPolicy">
+                    <type>byte**</type>
+                </param>
+                <param name="pcbPolicy">
+                    <type>uint*</type>
+                </param>
+                <param name="pContext">
+                    <type>byte*</type>
+                </param>
+                <param name="cbContext">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, ushort*, Guid*, byte**, uint*, byte*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>, <param name="pwszUrl">pwszUrl</param>, <param name="guidKey">guidKey</param>, <param name="ppPolicy">ppPolicy</param>, <param name="pcbPolicy">pcbPolicy</param>, <param name="pContext">pContext</param>, <param name="cbContext">cbContext</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetZoneMapping" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwZone">
+                    <type>uint</type>
+                </param>
+                <param name="lpszPattern">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, uint, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>, <param name="dwZone">dwZone</param>, <param name="lpszPattern">lpszPattern</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetZoneMappings" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwZone">
+                    <type>uint</type>
+                </param>
+                <param name="ppenumString">
+                    <type>IEnumString**</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetSecurityManager*, uint, IEnumString**, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IInternetSecurityManager*)Unsafe.AsPointer(ref this)</param>, <param name="dwZone">dwZone</param>, <param name="ppenumString">ppenumString</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

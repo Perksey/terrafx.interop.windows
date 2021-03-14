@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/xmllite.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreateXmlReader" access="public" lib="xmllite" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <param name="pMalloc">
+                    <type>IMalloc*</type>
+                </param>
+            </function>
+            <function name="CreateXmlReaderInputWithEncodingCodePage" access="public" lib="xmllite" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pInputStream">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pMalloc">
+                    <type>IMalloc*</type>
+                </param>
+                <param name="nEncodingCodePage">
+                    <type>uint</type>
+                </param>
+                <param name="fEncodingHint">
+                    <type>int</type>
+                </param>
+                <param name="pwszBaseUri">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppInput">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <function name="CreateXmlReaderInputWithEncodingName" access="public" lib="xmllite" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pInputStream">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pMalloc">
+                    <type>IMalloc*</type>
+                </param>
+                <param name="pwszEncodingName">
+                    <type>ushort*</type>
+                </param>
+                <param name="fEncodingHint">
+                    <type>int</type>
+                </param>
+                <param name="pwszBaseUri">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppInput">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <function name="CreateXmlWriter" access="public" lib="xmllite" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <param name="pMalloc">
+                    <type>IMalloc*</type>
+                </param>
+            </function>
+            <function name="CreateXmlWriterOutputWithEncodingCodePage" access="public" lib="xmllite" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pOutputStream">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pMalloc">
+                    <type>IMalloc*</type>
+                </param>
+                <param name="nEncodingCodePage">
+                    <type>uint</type>
+                </param>
+                <param name="ppOutput">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <function name="CreateXmlWriterOutputWithEncodingName" access="public" lib="xmllite" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pOutputStream">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pMalloc">
+                    <type>IMalloc*</type>
+                </param>
+                <param name="pwszEncodingName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppOutput">
+                    <type>IUnknown**</type>
+                </param>
+            </function>
+            <constant name="IID_IXmlReader" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7279FC81, 0x709D, 0x4095, 0xB6, 0x3D, 0x69, 0xFE, 0x4B, 0x0D, 0x90, 0x30)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IXmlWriter" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7279FC88, 0x709D, 0x4095, 0xB6, 0x3D, 0x69, 0xFE, 0x4B, 0x0D, 0x90, 0x30)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IXmlResolver" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7279FC82, 0x709D, 0x4095, 0xB6, 0x3D, 0x69, 0xFE, 0x4B, 0x0D, 0x90, 0x30)
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_IXmlWriterLite" value="0x862494C6, 0x1310, 0x4AAD, 0xB3, 0xCD, 0x2D, 0xBE, 0xEB, 0xF6, 0x70, 0xD3" />
+        </class>
+    </namespace>
+</bindings>

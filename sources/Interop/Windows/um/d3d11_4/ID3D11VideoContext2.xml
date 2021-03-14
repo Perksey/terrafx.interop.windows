@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11_4.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D11VideoContext2" access="public" native="struct ID3D11VideoContext2 : ID3D11VideoContext1" uuid="c4e7374c-6243-4d1b-ae87-52b4f740e261" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevice" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppDevice">
+                    <type>ID3D11Device**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11Device**, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="ppDevice">ppDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pData">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDecoderBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDecoder">
+                    <type>ID3D11VideoDecoder*</type>
+                </param>
+                <param name="Type">
+                    <type>D3D11_VIDEO_DECODER_BUFFER_TYPE</type>
+                </param>
+                <param name="pBufferSize">
+                    <type>uint*</type>
+                </param>
+                <param name="ppBuffer">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoDecoder*, D3D11_VIDEO_DECODER_BUFFER_TYPE, uint*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoder">pDecoder</param>, <param name="Type">Type</param>, <param name="pBufferSize">pBufferSize</param>, <param name="ppBuffer">ppBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseDecoderBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDecoder">
+                    <type>ID3D11VideoDecoder*</type>
+                </param>
+                <param name="Type">
+                    <type>D3D11_VIDEO_DECODER_BUFFER_TYPE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoDecoder*, D3D11_VIDEO_DECODER_BUFFER_TYPE, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoder">pDecoder</param>, <param name="Type">Type</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DecoderBeginFrame" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDecoder">
+                    <type>ID3D11VideoDecoder*</type>
+                </param>
+                <param name="pView">
+                    <type>ID3D11VideoDecoderOutputView*</type>
+                </param>
+                <param name="ContentKeySize">
+                    <type>uint</type>
+                </param>
+                <param name="pContentKey">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoDecoder*, ID3D11VideoDecoderOutputView*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoder">pDecoder</param>, <param name="pView">pView</param>, <param name="ContentKeySize">ContentKeySize</param>, <param name="pContentKey">pContentKey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DecoderEndFrame" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDecoder">
+                    <type>ID3D11VideoDecoder*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoDecoder*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoder">pDecoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SubmitDecoderBuffers" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDecoder">
+                    <type>ID3D11VideoDecoder*</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="pBufferDesc">
+                    <type>D3D11_VIDEO_DECODER_BUFFER_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoDecoder*, uint, D3D11_VIDEO_DECODER_BUFFER_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoder">pDecoder</param>, <param name="NumBuffers">NumBuffers</param>, <param name="pBufferDesc">pBufferDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DecoderExtension" access="public" unsafe="true">
+                <type native="APP_DEPRECATED_HRESULT">int</type>
+                <param name="pDecoder">
+                    <type>ID3D11VideoDecoder*</type>
+                </param>
+                <param name="pExtensionData">
+                    <type>D3D11_VIDEO_DECODER_EXTENSION*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoDecoder*, D3D11_VIDEO_DECODER_EXTENSION*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoder">pDecoder</param>, <param name="pExtensionData">pExtensionData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputTargetRect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="Enable">Enable</param>, <param name="pRect">pRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputBackgroundColor" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="YCbCr">
+                    <type>int</type>
+                </param>
+                <param name="pColor">
+                    <type>D3D11_VIDEO_COLOR*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int, D3D11_VIDEO_COLOR*, void&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="YCbCr">YCbCr</param>, <param name="pColor">pColor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputColorSpace" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pColorSpace">
+                    <type>D3D11_VIDEO_PROCESSOR_COLOR_SPACE*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, D3D11_VIDEO_PROCESSOR_COLOR_SPACE*, void&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pColorSpace">pColorSpace</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputAlphaFillMode" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="AlphaFillMode">
+                    <type>D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE, uint, void&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="AlphaFillMode">AlphaFillMode</param>, <param name="StreamIndex">StreamIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputConstriction" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="Size">
+                    <type>SIZE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int, SIZE, void&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="Enable">Enable</param>, <param name="Size">Size</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputStereoMode" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int, void&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="Enable">Enable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputExtension" access="public" unsafe="true">
+                <type native="APP_DEPRECATED_HRESULT">int</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pExtensionGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pExtensionGuid">pExtensionGuid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputTargetRect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="Enabled">
+                    <type>int*</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int*, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="Enabled">Enabled</param>, <param name="pRect">pRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputBackgroundColor" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pYCbCr">
+                    <type>int*</type>
+                </param>
+                <param name="pColor">
+                    <type>D3D11_VIDEO_COLOR*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int*, D3D11_VIDEO_COLOR*, void&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pYCbCr">pYCbCr</param>, <param name="pColor">pColor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputColorSpace" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pColorSpace">
+                    <type>D3D11_VIDEO_PROCESSOR_COLOR_SPACE*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, D3D11_VIDEO_PROCESSOR_COLOR_SPACE*, void&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pColorSpace">pColorSpace</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputAlphaFillMode" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pAlphaFillMode">
+                    <type>D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE*</type>
+                </param>
+                <param name="pStreamIndex">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pAlphaFillMode">pAlphaFillMode</param>, <param name="pStreamIndex">pStreamIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputConstriction" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <param name="pSize">
+                    <type>SIZE*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int*, SIZE*, void&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pEnabled">pEnabled</param>, <param name="pSize">pSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputStereoMode" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int*, void&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pEnabled">pEnabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputExtension" access="public" unsafe="true">
+                <type native="APP_DEPRECATED_HRESULT">int</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pExtensionGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pExtensionGuid">pExtensionGuid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamFrameFormat" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="FrameFormat">
+                    <type>D3D11_VIDEO_FRAME_FORMAT</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_FRAME_FORMAT, void&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="FrameFormat">FrameFormat</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamColorSpace" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pColorSpace">
+                    <type>D3D11_VIDEO_PROCESSOR_COLOR_SPACE*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_COLOR_SPACE*, void&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pColorSpace">pColorSpace</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamOutputRate" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="OutputRate">
+                    <type>D3D11_VIDEO_PROCESSOR_OUTPUT_RATE</type>
+                </param>
+                <param name="RepeatFrame">
+                    <type>int</type>
+                </param>
+                <param name="pCustomRate">
+                    <type>DXGI_RATIONAL*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE, int, DXGI_RATIONAL*, void&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="OutputRate">OutputRate</param>, <param name="RepeatFrame">RepeatFrame</param>, <param name="pCustomRate">pCustomRate</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamSourceRect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Enable">Enable</param>, <param name="pRect">pRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamDestRect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Enable">Enable</param>, <param name="pRect">pRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamAlpha" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="Alpha">
+                    <type>float</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int, float, void&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Enable">Enable</param>, <param name="Alpha">Alpha</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamPalette" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Count">
+                    <type>uint</type>
+                </param>
+                <param name="pEntries">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, uint, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Count">Count</param>, <param name="pEntries">pEntries</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamPixelAspectRatio" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="pSourceAspectRatio">
+                    <type>DXGI_RATIONAL*</type>
+                </param>
+                <param name="pDestinationAspectRatio">
+                    <type>DXGI_RATIONAL*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int, DXGI_RATIONAL*, DXGI_RATIONAL*, void&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Enable">Enable</param>, <param name="pSourceAspectRatio">pSourceAspectRatio</param>, <param name="pDestinationAspectRatio">pDestinationAspectRatio</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamLumaKey" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="Lower">
+                    <type>float</type>
+                </param>
+                <param name="Upper">
+                    <type>float</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int, float, float, void&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Enable">Enable</param>, <param name="Lower">Lower</param>, <param name="Upper">Upper</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamStereoFormat" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="Format">
+                    <type>D3D11_VIDEO_PROCESSOR_STEREO_FORMAT</type>
+                </param>
+                <param name="LeftViewFrame0">
+                    <type>int</type>
+                </param>
+                <param name="BaseViewFrame0">
+                    <type>int</type>
+                </param>
+                <param name="FlipMode">
+                    <type>D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE</type>
+                </param>
+                <param name="MonoOffset">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int, D3D11_VIDEO_PROCESSOR_STEREO_FORMAT, int, int, D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE, int, void&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Enable">Enable</param>, <param name="Format">Format</param>, <param name="LeftViewFrame0">LeftViewFrame0</param>, <param name="BaseViewFrame0">BaseViewFrame0</param>, <param name="FlipMode">FlipMode</param>, <param name="MonoOffset">MonoOffset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamAutoProcessingMode" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int, void&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Enable">Enable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamFilter" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Filter">
+                    <type>D3D11_VIDEO_PROCESSOR_FILTER</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="Level">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_FILTER, int, int, void&gt;)(lpVtbl[<vtbl explicit="False">38</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Filter">Filter</param>, <param name="Enable">Enable</param>, <param name="Level">Level</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamExtension" access="public" unsafe="true">
+                <type native="APP_DEPRECATED_HRESULT">int</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pExtensionGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">39</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pExtensionGuid">pExtensionGuid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamFrameFormat" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pFrameFormat">
+                    <type>D3D11_VIDEO_FRAME_FORMAT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_FRAME_FORMAT*, void&gt;)(lpVtbl[<vtbl explicit="False">40</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pFrameFormat">pFrameFormat</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamColorSpace" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pColorSpace">
+                    <type>D3D11_VIDEO_PROCESSOR_COLOR_SPACE*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_COLOR_SPACE*, void&gt;)(lpVtbl[<vtbl explicit="False">41</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pColorSpace">pColorSpace</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamOutputRate" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pOutputRate">
+                    <type>D3D11_VIDEO_PROCESSOR_OUTPUT_RATE*</type>
+                </param>
+                <param name="pRepeatFrame">
+                    <type>int*</type>
+                </param>
+                <param name="pCustomRate">
+                    <type>DXGI_RATIONAL*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE*, int*, DXGI_RATIONAL*, void&gt;)(lpVtbl[<vtbl explicit="False">42</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pOutputRate">pOutputRate</param>, <param name="pRepeatFrame">pRepeatFrame</param>, <param name="pCustomRate">pCustomRate</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamSourceRect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int*, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">43</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pEnabled">pEnabled</param>, <param name="pRect">pRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamDestRect" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int*, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">44</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pEnabled">pEnabled</param>, <param name="pRect">pRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamAlpha" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <param name="pAlpha">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">45</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pEnabled">pEnabled</param>, <param name="pAlpha">pAlpha</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamPalette" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Count">
+                    <type>uint</type>
+                </param>
+                <param name="pEntries">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, uint, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">46</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Count">Count</param>, <param name="pEntries">pEntries</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamPixelAspectRatio" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <param name="pSourceAspectRatio">
+                    <type>DXGI_RATIONAL*</type>
+                </param>
+                <param name="pDestinationAspectRatio">
+                    <type>DXGI_RATIONAL*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int*, DXGI_RATIONAL*, DXGI_RATIONAL*, void&gt;)(lpVtbl[<vtbl explicit="False">47</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pEnabled">pEnabled</param>, <param name="pSourceAspectRatio">pSourceAspectRatio</param>, <param name="pDestinationAspectRatio">pDestinationAspectRatio</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamLumaKey" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <param name="pLower">
+                    <type>float*</type>
+                </param>
+                <param name="pUpper">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int*, float*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">48</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pEnabled">pEnabled</param>, <param name="pLower">pLower</param>, <param name="pUpper">pUpper</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamStereoFormat" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnable">
+                    <type>int*</type>
+                </param>
+                <param name="pFormat">
+                    <type>D3D11_VIDEO_PROCESSOR_STEREO_FORMAT*</type>
+                </param>
+                <param name="pLeftViewFrame0">
+                    <type>int*</type>
+                </param>
+                <param name="pBaseViewFrame0">
+                    <type>int*</type>
+                </param>
+                <param name="pFlipMode">
+                    <type>D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE*</type>
+                </param>
+                <param name="MonoOffset">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int*, D3D11_VIDEO_PROCESSOR_STEREO_FORMAT*, int*, int*, D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE*, int*, void&gt;)(lpVtbl[<vtbl explicit="False">49</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pEnable">pEnable</param>, <param name="pFormat">pFormat</param>, <param name="pLeftViewFrame0">pLeftViewFrame0</param>, <param name="pBaseViewFrame0">pBaseViewFrame0</param>, <param name="pFlipMode">pFlipMode</param>, <param name="MonoOffset">MonoOffset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamAutoProcessingMode" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int*, void&gt;)(lpVtbl[<vtbl explicit="False">50</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pEnabled">pEnabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamFilter" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Filter">
+                    <type>D3D11_VIDEO_PROCESSOR_FILTER</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <param name="pLevel">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_FILTER, int*, int*, void&gt;)(lpVtbl[<vtbl explicit="False">51</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Filter">Filter</param>, <param name="pEnabled">pEnabled</param>, <param name="pLevel">pLevel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamExtension" access="public" unsafe="true">
+                <type native="APP_DEPRECATED_HRESULT">int</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pExtensionGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">52</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pExtensionGuid">pExtensionGuid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorBlt" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pView">
+                    <type>ID3D11VideoProcessorOutputView*</type>
+                </param>
+                <param name="OutputFrame">
+                    <type>uint</type>
+                </param>
+                <param name="StreamCount">
+                    <type>uint</type>
+                </param>
+                <param name="pStreams">
+                    <type>D3D11_VIDEO_PROCESSOR_STREAM*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, ID3D11VideoProcessorOutputView*, uint, uint, D3D11_VIDEO_PROCESSOR_STREAM*, int&gt;)(lpVtbl[<vtbl explicit="False">53</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pView">pView</param>, <param name="OutputFrame">OutputFrame</param>, <param name="StreamCount">StreamCount</param>, <param name="pStreams">pStreams</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NegotiateCryptoSessionKeyExchange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCryptoSession">
+                    <type>ID3D11CryptoSession*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11CryptoSession*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">54</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoSession">pCryptoSession</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EncryptionBlt" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pCryptoSession">
+                    <type>ID3D11CryptoSession*</type>
+                </param>
+                <param name="pSrcSurface">
+                    <type>ID3D11Texture2D*</type>
+                </param>
+                <param name="pDstSurface">
+                    <type>ID3D11Texture2D*</type>
+                </param>
+                <param name="IVSize">
+                    <type>uint</type>
+                </param>
+                <param name="pIV">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11CryptoSession*, ID3D11Texture2D*, ID3D11Texture2D*, uint, void*, void&gt;)(lpVtbl[<vtbl explicit="False">55</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoSession">pCryptoSession</param>, <param name="pSrcSurface">pSrcSurface</param>, <param name="pDstSurface">pDstSurface</param>, <param name="IVSize">IVSize</param>, <param name="pIV">pIV</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DecryptionBlt" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pCryptoSession">
+                    <type>ID3D11CryptoSession*</type>
+                </param>
+                <param name="pSrcSurface">
+                    <type>ID3D11Texture2D*</type>
+                </param>
+                <param name="pDstSurface">
+                    <type>ID3D11Texture2D*</type>
+                </param>
+                <param name="pEncryptedBlockInfo">
+                    <type>D3D11_ENCRYPTED_BLOCK_INFO*</type>
+                </param>
+                <param name="ContentKeySize">
+                    <type>uint</type>
+                </param>
+                <param name="pContentKey">
+                    <type>void*</type>
+                </param>
+                <param name="IVSize">
+                    <type>uint</type>
+                </param>
+                <param name="pIV">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11CryptoSession*, ID3D11Texture2D*, ID3D11Texture2D*, D3D11_ENCRYPTED_BLOCK_INFO*, uint, void*, uint, void*, void&gt;)(lpVtbl[<vtbl explicit="False">56</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoSession">pCryptoSession</param>, <param name="pSrcSurface">pSrcSurface</param>, <param name="pDstSurface">pDstSurface</param>, <param name="pEncryptedBlockInfo">pEncryptedBlockInfo</param>, <param name="ContentKeySize">ContentKeySize</param>, <param name="pContentKey">pContentKey</param>, <param name="IVSize">IVSize</param>, <param name="pIV">pIV</param>);
+        </code>
+                </body>
+            </function>
+            <function name="StartSessionKeyRefresh" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pCryptoSession">
+                    <type>ID3D11CryptoSession*</type>
+                </param>
+                <param name="RandomNumberSize">
+                    <type>uint</type>
+                </param>
+                <param name="pRandomNumber">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11CryptoSession*, uint, void*, void&gt;)(lpVtbl[<vtbl explicit="False">57</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoSession">pCryptoSession</param>, <param name="RandomNumberSize">RandomNumberSize</param>, <param name="pRandomNumber">pRandomNumber</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FinishSessionKeyRefresh" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pCryptoSession">
+                    <type>ID3D11CryptoSession*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11CryptoSession*, void&gt;)(lpVtbl[<vtbl explicit="False">58</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoSession">pCryptoSession</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEncryptionBltKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCryptoSession">
+                    <type>ID3D11CryptoSession*</type>
+                </param>
+                <param name="KeySize">
+                    <type>uint</type>
+                </param>
+                <param name="pReadbackKey">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11CryptoSession*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">59</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoSession">pCryptoSession</param>, <param name="KeySize">KeySize</param>, <param name="pReadbackKey">pReadbackKey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NegotiateAuthenticatedChannelKeyExchange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pChannel">
+                    <type>ID3D11AuthenticatedChannel*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11AuthenticatedChannel*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">60</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pChannel">pChannel</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryAuthenticatedChannel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pChannel">
+                    <type>ID3D11AuthenticatedChannel*</type>
+                </param>
+                <param name="InputSize">
+                    <type>uint</type>
+                </param>
+                <param name="pInput">
+                    <type>void*</type>
+                </param>
+                <param name="OutputSize">
+                    <type>uint</type>
+                </param>
+                <param name="pOutput">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11AuthenticatedChannel*, uint, void*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">61</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pChannel">pChannel</param>, <param name="InputSize">InputSize</param>, <param name="pInput">pInput</param>, <param name="OutputSize">OutputSize</param>, <param name="pOutput">pOutput</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ConfigureAuthenticatedChannel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pChannel">
+                    <type>ID3D11AuthenticatedChannel*</type>
+                </param>
+                <param name="InputSize">
+                    <type>uint</type>
+                </param>
+                <param name="pInput">
+                    <type>void*</type>
+                </param>
+                <param name="pOutput">
+                    <type>D3D11_AUTHENTICATED_CONFIGURE_OUTPUT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11AuthenticatedChannel*, uint, void*, D3D11_AUTHENTICATED_CONFIGURE_OUTPUT*, int&gt;)(lpVtbl[<vtbl explicit="False">62</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pChannel">pChannel</param>, <param name="InputSize">InputSize</param>, <param name="pInput">pInput</param>, <param name="pOutput">pOutput</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamRotation" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="Rotation">
+                    <type>D3D11_VIDEO_PROCESSOR_ROTATION</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int, D3D11_VIDEO_PROCESSOR_ROTATION, void&gt;)(lpVtbl[<vtbl explicit="False">63</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Enable">Enable</param>, <param name="Rotation">Rotation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamRotation" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnable">
+                    <type>int*</type>
+                </param>
+                <param name="pRotation">
+                    <type>D3D11_VIDEO_PROCESSOR_ROTATION*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int*, D3D11_VIDEO_PROCESSOR_ROTATION*, void&gt;)(lpVtbl[<vtbl explicit="False">64</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pEnable">pEnable</param>, <param name="pRotation">pRotation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SubmitDecoderBuffers1" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDecoder">
+                    <type>ID3D11VideoDecoder*</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="pBufferDesc">
+                    <type>D3D11_VIDEO_DECODER_BUFFER_DESC1*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoDecoder*, uint, D3D11_VIDEO_DECODER_BUFFER_DESC1*, int&gt;)(lpVtbl[<vtbl explicit="False">65</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoder">pDecoder</param>, <param name="NumBuffers">NumBuffers</param>, <param name="pBufferDesc">pBufferDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDataForNewHardwareKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCryptoSession">
+                    <type>ID3D11CryptoSession*</type>
+                </param>
+                <param name="PrivateInputSize">
+                    <type>uint</type>
+                </param>
+                <param name="pPrivatInputData">
+                    <type>void*</type>
+                </param>
+                <param name="pPrivateOutputData">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11CryptoSession*, uint, void*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">66</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoSession">pCryptoSession</param>, <param name="PrivateInputSize">PrivateInputSize</param>, <param name="pPrivatInputData">pPrivatInputData</param>, <param name="pPrivateOutputData">pPrivateOutputData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckCryptoSessionStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCryptoSession">
+                    <type>ID3D11CryptoSession*</type>
+                </param>
+                <param name="pStatus">
+                    <type>D3D11_CRYPTO_SESSION_STATUS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11CryptoSession*, D3D11_CRYPTO_SESSION_STATUS*, int&gt;)(lpVtbl[<vtbl explicit="False">67</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoSession">pCryptoSession</param>, <param name="pStatus">pStatus</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DecoderEnableDownsampling" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDecoder">
+                    <type>ID3D11VideoDecoder*</type>
+                </param>
+                <param name="InputColorSpace">
+                    <type>DXGI_COLOR_SPACE_TYPE</type>
+                </param>
+                <param name="pOutputDesc">
+                    <type>D3D11_VIDEO_SAMPLE_DESC*</type>
+                </param>
+                <param name="ReferenceFrameCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoDecoder*, DXGI_COLOR_SPACE_TYPE, D3D11_VIDEO_SAMPLE_DESC*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">68</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoder">pDecoder</param>, <param name="InputColorSpace">InputColorSpace</param>, <param name="pOutputDesc">pOutputDesc</param>, <param name="ReferenceFrameCount">ReferenceFrameCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DecoderUpdateDownsampling" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDecoder">
+                    <type>ID3D11VideoDecoder*</type>
+                </param>
+                <param name="pOutputDesc">
+                    <type>D3D11_VIDEO_SAMPLE_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoDecoder*, D3D11_VIDEO_SAMPLE_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">69</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoder">pDecoder</param>, <param name="pOutputDesc">pOutputDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputColorSpace1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="ColorSpace">
+                    <type>DXGI_COLOR_SPACE_TYPE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, DXGI_COLOR_SPACE_TYPE, void&gt;)(lpVtbl[<vtbl explicit="False">70</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="ColorSpace">ColorSpace</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputShaderUsage" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="ShaderUsage">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int, void&gt;)(lpVtbl[<vtbl explicit="False">71</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="ShaderUsage">ShaderUsage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputColorSpace1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pColorSpace">
+                    <type>DXGI_COLOR_SPACE_TYPE*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, DXGI_COLOR_SPACE_TYPE*, void&gt;)(lpVtbl[<vtbl explicit="False">72</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pColorSpace">pColorSpace</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputShaderUsage" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pShaderUsage">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, int*, void&gt;)(lpVtbl[<vtbl explicit="False">73</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pShaderUsage">pShaderUsage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamColorSpace1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ColorSpace">
+                    <type>DXGI_COLOR_SPACE_TYPE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, DXGI_COLOR_SPACE_TYPE, void&gt;)(lpVtbl[<vtbl explicit="False">74</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="ColorSpace">ColorSpace</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamMirror" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enable">
+                    <type>int</type>
+                </param>
+                <param name="FlipHorizontal">
+                    <type>int</type>
+                </param>
+                <param name="FlipVertical">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int, int, int, void&gt;)(lpVtbl[<vtbl explicit="False">75</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Enable">Enable</param>, <param name="FlipHorizontal">FlipHorizontal</param>, <param name="FlipVertical">FlipVertical</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamColorSpace1" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pColorSpace">
+                    <type>DXGI_COLOR_SPACE_TYPE*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, DXGI_COLOR_SPACE_TYPE*, void&gt;)(lpVtbl[<vtbl explicit="False">76</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pColorSpace">pColorSpace</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamMirror" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnable">
+                    <type>int*</type>
+                </param>
+                <param name="pFlipHorizontal">
+                    <type>int*</type>
+                </param>
+                <param name="pFlipVertical">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, int*, int*, int*, void&gt;)(lpVtbl[<vtbl explicit="False">77</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pEnable">pEnable</param>, <param name="pFlipHorizontal">pFlipHorizontal</param>, <param name="pFlipVertical">pFlipVertical</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetBehaviorHints" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="OutputWidth">
+                    <type>uint</type>
+                </param>
+                <param name="OutputHeight">
+                    <type>uint</type>
+                </param>
+                <param name="OutputFormat">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="StreamCount">
+                    <type>uint</type>
+                </param>
+                <param name="pStreams">
+                    <type>D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT*</type>
+                </param>
+                <param name="pBehaviorHints">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, uint, DXGI_FORMAT, uint, D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">78</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="OutputWidth">OutputWidth</param>, <param name="OutputHeight">OutputHeight</param>, <param name="OutputFormat">OutputFormat</param>, <param name="StreamCount">StreamCount</param>, <param name="pStreams">pStreams</param>, <param name="pBehaviorHints">pBehaviorHints</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetOutputHDRMetaData" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="Type">
+                    <type>DXGI_HDR_METADATA_TYPE</type>
+                </param>
+                <param name="Size">
+                    <type>uint</type>
+                </param>
+                <param name="pHDRMetaData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, DXGI_HDR_METADATA_TYPE, uint, void*, void&gt;)(lpVtbl[<vtbl explicit="False">79</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="Type">Type</param>, <param name="Size">Size</param>, <param name="pHDRMetaData">pHDRMetaData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetOutputHDRMetaData" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="pType">
+                    <type>DXGI_HDR_METADATA_TYPE*</type>
+                </param>
+                <param name="Size">
+                    <type>uint</type>
+                </param>
+                <param name="pMetaData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, DXGI_HDR_METADATA_TYPE*, uint, void*, void&gt;)(lpVtbl[<vtbl explicit="False">80</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="pType">pType</param>, <param name="Size">Size</param>, <param name="pMetaData">pMetaData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorSetStreamHDRMetaData" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Type">
+                    <type>DXGI_HDR_METADATA_TYPE</type>
+                </param>
+                <param name="Size">
+                    <type>uint</type>
+                </param>
+                <param name="pHDRMetaData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, DXGI_HDR_METADATA_TYPE, uint, void*, void&gt;)(lpVtbl[<vtbl explicit="False">81</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="Type">Type</param>, <param name="Size">Size</param>, <param name="pHDRMetaData">pHDRMetaData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VideoProcessorGetStreamHDRMetaData" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVideoProcessor">
+                    <type>ID3D11VideoProcessor*</type>
+                </param>
+                <param name="StreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pType">
+                    <type>DXGI_HDR_METADATA_TYPE*</type>
+                </param>
+                <param name="Size">
+                    <type>uint</type>
+                </param>
+                <param name="pMetaData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, DXGI_HDR_METADATA_TYPE*, uint, void*, void&gt;)(lpVtbl[<vtbl explicit="False">82</vtbl>]))(<param special="thisPtr">(ID3D11VideoContext2*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoProcessor">pVideoProcessor</param>, <param name="StreamIndex">StreamIndex</param>, <param name="pType">pType</param>, <param name="Size">Size</param>, <param name="pMetaData">pMetaData</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IBindStatusCallbackEx" access="public" native="struct IBindStatusCallbackEx : IBindStatusCallback" uuid="aaa74ef9-8ee7-4659-88d9-f8c504da73cc" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnStartBinding" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <param name="pib">
+                    <type>IBinding*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, uint, IBinding*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwReserved">dwReserved</param>, <param name="pib">pib</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPriority" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pnPriority">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="pnPriority">pnPriority</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnLowResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="reserved">reserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnProgress" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulProgress">
+                    <type>uint</type>
+                </param>
+                <param name="ulProgressMax">
+                    <type>uint</type>
+                </param>
+                <param name="ulStatusCode">
+                    <type>uint</type>
+                </param>
+                <param name="szStatusText">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, uint, uint, uint, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="ulProgress">ulProgress</param>, <param name="ulProgressMax">ulProgressMax</param>, <param name="ulStatusCode">ulStatusCode</param>, <param name="szStatusText">szStatusText</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnStopBinding" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hresult">
+                    <type>int</type>
+                </param>
+                <param name="szError">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, int, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="hresult">hresult</param>, <param name="szError">szError</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBindInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="grfBINDF">
+                    <type>uint*</type>
+                </param>
+                <param name="pbindinfo">
+                    <type>BINDINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, uint*, BINDINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="grfBINDF">grfBINDF</param>, <param name="pbindinfo">pbindinfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnDataAvailable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="grfBSCF">
+                    <type>uint</type>
+                </param>
+                <param name="dwSize">
+                    <type>uint</type>
+                </param>
+                <param name="pformatetc">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="pstgmed">
+                    <type>STGMEDIUM*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, uint, uint, FORMATETC*, STGMEDIUM*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="grfBSCF">grfBSCF</param>, <param name="dwSize">dwSize</param>, <param name="pformatetc">pformatetc</param>, <param name="pstgmed">pstgmed</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnObjectAvailable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="punk">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="punk">punk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBindInfoEx" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="grfBINDF">
+                    <type>uint*</type>
+                </param>
+                <param name="pbindinfo">
+                    <type>BINDINFO*</type>
+                </param>
+                <param name="grfBINDF2">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwReserved">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindStatusCallbackEx*, uint*, BINDINFO*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IBindStatusCallbackEx*)Unsafe.AsPointer(ref this)</param>, <param name="grfBINDF">grfBINDF</param>, <param name="pbindinfo">pbindinfo</param>, <param name="grfBINDF2">grfBINDF2</param>, <param name="pdwReserved">pdwReserved</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

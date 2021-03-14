@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="VOLUME_DISK_EXTENTS" access="public">
+            <field name="NumberOfDiskExtents" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Extents" access="public">
+                <type native="DISK_EXTENT [1]" count="1" fixed="_Extents_e__FixedBuffer">DISK_EXTENT</type>
+            </field>
+            <struct name="_Extents_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">DISK_EXTENT</type>
+                </field>
+                <indexer access="public">
+                    <type>ref DISK_EXTENT</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;DISK_EXTENT&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

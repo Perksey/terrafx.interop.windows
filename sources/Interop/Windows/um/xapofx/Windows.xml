@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/xapofx.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreateFX" access="public" lib="Windows.Media.Audio.dll" static="true">
+                <type native="HRESULT">int</type>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pEffect">
+                    <type>IUnknown**</type>
+                </param>
+                <param name="pInitDat">
+                    <type>void*</type>
+                    <init>
+                        <code>null
+            </code>
+                    </init>
+                </param>
+                <param name="InitDataByteSize">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+            </code>
+                    </init>
+                </param>
+            </function>
+            <constant name="FXEQ_MIN_FRAMERATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>22000
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_MAX_FRAMERATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>48000
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_MIN_FREQUENCY_CENTER" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>20.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_MAX_FREQUENCY_CENTER" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>20000.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_DEFAULT_FREQUENCY_CENTER_0" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>100.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_DEFAULT_FREQUENCY_CENTER_1" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>800.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_DEFAULT_FREQUENCY_CENTER_2" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>2000.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_DEFAULT_FREQUENCY_CENTER_3" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>10000.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_MIN_GAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.126f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_MAX_GAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>7.94f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_DEFAULT_GAIN" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>1.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_MIN_BANDWIDTH" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.1f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_MAX_BANDWIDTH" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>2.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXEQ_DEFAULT_BANDWIDTH" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>1.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXMASTERINGLIMITER_MIN_RELEASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="FXMASTERINGLIMITER_MAX_RELEASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>20
+            </code>
+                </value>
+            </constant>
+            <constant name="FXMASTERINGLIMITER_DEFAULT_RELEASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>6
+            </code>
+                </value>
+            </constant>
+            <constant name="FXMASTERINGLIMITER_MIN_LOUDNESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="FXMASTERINGLIMITER_MAX_LOUDNESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1800
+            </code>
+                </value>
+            </constant>
+            <constant name="FXMASTERINGLIMITER_DEFAULT_LOUDNESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1000
+            </code>
+                </value>
+            </constant>
+            <constant name="FXREVERB_MIN_DIFFUSION" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXREVERB_MAX_DIFFUSION" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>1.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXREVERB_DEFAULT_DIFFUSION" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.9f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXREVERB_MIN_ROOMSIZE" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0001f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXREVERB_MAX_ROOMSIZE" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>1.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXREVERB_DEFAULT_ROOMSIZE" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.6f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXLOUDNESS_DEFAULT_MOMENTARY_MS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>400
+            </code>
+                </value>
+            </constant>
+            <constant name="FXLOUDNESS_DEFAULT_SHORTTERM_MS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3000
+            </code>
+                </value>
+            </constant>
+            <constant name="FXECHO_MIN_WETDRYMIX" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXECHO_MAX_WETDRYMIX" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>1.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXECHO_DEFAULT_WETDRYMIX" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.5f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXECHO_MIN_FEEDBACK" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXECHO_MAX_FEEDBACK" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>1.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXECHO_DEFAULT_FEEDBACK" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>0.5f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXECHO_MIN_DELAY" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>1.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXECHO_MAX_DELAY" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>2000.0f
+            </code>
+                </value>
+            </constant>
+            <constant name="FXECHO_DEFAULT_DELAY" access="public">
+                <type primitive="True">float</type>
+                <value>
+                    <code>500.0f
+            </code>
+                </value>
+            </constant>
+            <iid name="CLSID_FXEQ" value="0xF5E01117, 0xD6C4, 0x485A, 0xA3, 0xF5, 0x69, 0x51, 0x96, 0xF3, 0xDB, 0xFA" />
+            <iid name="CLSID_FXMasteringLimiter" value="0xC4137916, 0x2BE1, 0x46FD, 0x85, 0x99, 0x44, 0x15, 0x36, 0xF4, 0x98, 0x56" />
+            <iid name="CLSID_FXReverb" value="0x7D9ACA56, 0xCB68, 0x4807, 0xB6, 0x32, 0xB1, 0x37, 0x35, 0x2E, 0x85, 0x96" />
+            <iid name="CLSID_FXEcho" value="0x5039D740, 0xF736, 0x449A, 0x84, 0xD3, 0xA5, 0x62, 0x02, 0x55, 0x7B, 0x87" />
+        </class>
+    </namespace>
+</bindings>

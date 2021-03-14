@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinUser.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="INPUT" access="public">
+            <field name="type" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="tagINPUT::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/WinUser.h:6123:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="mi" access="public">
+                <type native="">ref MOUSEINPUT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.mi, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ki" access="public">
+                <type native="">ref KEYBDINPUT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ki, 1));
+        </code>
+                </get>
+            </field>
+            <field name="hi" access="public">
+                <type native="">ref HARDWAREINPUT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.hi, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="mi" access="public" offset="0">
+                    <type native="">MOUSEINPUT</type>
+                </field>
+                <field name="ki" access="public" offset="0">
+                    <type native="">KEYBDINPUT</type>
+                </field>
+                <field name="hi" access="public" offset="0">
+                    <type native="">HARDWAREINPUT</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

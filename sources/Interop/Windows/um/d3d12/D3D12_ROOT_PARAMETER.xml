@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D12_ROOT_PARAMETER" access="public">
+            <field name="ParameterType" access="public">
+                <type native="">D3D12_ROOT_PARAMETER_TYPE</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="D3D12_ROOT_PARAMETER::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:3451:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="DescriptorTable" access="public">
+                <type native="">ref D3D12_ROOT_DESCRIPTOR_TABLE</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.DescriptorTable, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Constants" access="public">
+                <type native="">ref D3D12_ROOT_CONSTANTS</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Constants, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Descriptor" access="public">
+                <type native="">ref D3D12_ROOT_DESCRIPTOR</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Descriptor, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ShaderVisibility" access="public">
+                <type native="">D3D12_SHADER_VISIBILITY</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="DescriptorTable" access="public" offset="0">
+                    <type native="">D3D12_ROOT_DESCRIPTOR_TABLE</type>
+                </field>
+                <field name="Constants" access="public" offset="0">
+                    <type native="">D3D12_ROOT_CONSTANTS</type>
+                </field>
+                <field name="Descriptor" access="public" offset="0">
+                    <type native="">D3D12_ROOT_DESCRIPTOR</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

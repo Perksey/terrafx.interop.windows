@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfmediaengine.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFTimedText" access="public" native="struct IMFTimedText : IUnknown" uuid="1f2a94c9-a3df-430d-9d0f-acd85ddc29af" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterNotifications" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="notify">
+                    <type>IMFTimedTextNotify*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, IMFTimedTextNotify*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="notify">notify</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectTrack" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="trackId">
+                    <type>uint</type>
+                </param>
+                <param name="selected">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, uint, int, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="trackId">trackId</param>, <param name="selected">selected</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddDataSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="byteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="label">
+                    <type>ushort*</type>
+                </param>
+                <param name="language">
+                    <type>ushort*</type>
+                </param>
+                <param name="kind">
+                    <type>MF_TIMED_TEXT_TRACK_KIND</type>
+                </param>
+                <param name="isDefault">
+                    <type>int</type>
+                </param>
+                <param name="trackId">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, IMFByteStream*, ushort*, ushort*, MF_TIMED_TEXT_TRACK_KIND, int, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="byteStream">byteStream</param>, <param name="label">label</param>, <param name="language">language</param>, <param name="kind">kind</param>, <param name="isDefault">isDefault</param>, <param name="trackId">trackId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddDataSourceFromUrl" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="url">
+                    <type>ushort*</type>
+                </param>
+                <param name="label">
+                    <type>ushort*</type>
+                </param>
+                <param name="language">
+                    <type>ushort*</type>
+                </param>
+                <param name="kind">
+                    <type>MF_TIMED_TEXT_TRACK_KIND</type>
+                </param>
+                <param name="isDefault">
+                    <type>int</type>
+                </param>
+                <param name="trackId">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, ushort*, ushort*, ushort*, MF_TIMED_TEXT_TRACK_KIND, int, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="url">url</param>, <param name="label">label</param>, <param name="language">language</param>, <param name="kind">kind</param>, <param name="isDefault">isDefault</param>, <param name="trackId">trackId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddTrack" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="label">
+                    <type>ushort*</type>
+                </param>
+                <param name="language">
+                    <type>ushort*</type>
+                </param>
+                <param name="kind">
+                    <type>MF_TIMED_TEXT_TRACK_KIND</type>
+                </param>
+                <param name="track">
+                    <type>IMFTimedTextTrack**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, ushort*, ushort*, MF_TIMED_TEXT_TRACK_KIND, IMFTimedTextTrack**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="label">label</param>, <param name="language">language</param>, <param name="kind">kind</param>, <param name="track">track</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveTrack" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="track">
+                    <type>IMFTimedTextTrack*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, IMFTimedTextTrack*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="track">track</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCueTimeOffset" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="offset">
+                    <type>double*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, double*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="offset">offset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetCueTimeOffset" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="offset">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, double, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="offset">offset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTracks" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tracks">
+                    <type>IMFTimedTextTrackList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, IMFTimedTextTrackList**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="tracks">tracks</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetActiveTracks" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="activeTracks">
+                    <type>IMFTimedTextTrackList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, IMFTimedTextTrackList**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="activeTracks">activeTracks</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTextTracks" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="textTracks">
+                    <type>IMFTimedTextTrackList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, IMFTimedTextTrackList**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="textTracks">textTracks</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMetadataTracks" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="metadataTracks">
+                    <type>IMFTimedTextTrackList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, IMFTimedTextTrackList**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="metadataTracks">metadataTracks</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetInBandEnabled" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="enabled">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, int, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>, <param name="enabled">enabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsInBandEnabled" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTimedText*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IMFTimedText*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ddraw.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDirectDraw" access="public" native="struct IDirectDraw : IUnknown" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Compact" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateClipper" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>uint</type>
+                </param>
+                <param name="param1">
+                    <type>IDirectDrawClipper**</type>
+                </param>
+                <param name="param2">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint, IDirectDrawClipper**, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>, <param name="param2">param2</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePalette" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>uint</type>
+                </param>
+                <param name="param1">
+                    <type>PALETTEENTRY*</type>
+                </param>
+                <param name="param2">
+                    <type>IDirectDrawPalette**</type>
+                </param>
+                <param name="param3">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint, PALETTEENTRY*, IDirectDrawPalette**, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>, <param name="param2">param2</param>, <param name="param3">param3</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>DDSURFACEDESC*</type>
+                </param>
+                <param name="param1">
+                    <type>IDirectDrawSurface**</type>
+                </param>
+                <param name="param2">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, DDSURFACEDESC*, IDirectDrawSurface**, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>, <param name="param2">param2</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DuplicateSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IDirectDrawSurface*</type>
+                </param>
+                <param name="param1">
+                    <type>IDirectDrawSurface**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, IDirectDrawSurface*, IDirectDrawSurface**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumDisplayModes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>uint</type>
+                </param>
+                <param name="param1">
+                    <type>DDSURFACEDESC*</type>
+                </param>
+                <param name="param2">
+                    <type>void*</type>
+                </param>
+                <param name="param3">
+                    <type>delegate* unmanaged&lt;DDSURFACEDESC*, void*, int&gt;</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint, DDSURFACEDESC*, void*, delegate* unmanaged&lt;DDSURFACEDESC*, void*, int&gt;, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>, <param name="param2">param2</param>, <param name="param3">param3</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumSurfaces" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>uint</type>
+                </param>
+                <param name="param1">
+                    <type>DDSURFACEDESC*</type>
+                </param>
+                <param name="param2">
+                    <type>void*</type>
+                </param>
+                <param name="param3">
+                    <type>delegate* unmanaged&lt;IDirectDrawSurface*, DDSURFACEDESC*, void*, int&gt;</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint, DDSURFACEDESC*, void*, delegate* unmanaged&lt;IDirectDrawSurface*, DDSURFACEDESC*, void*, int&gt;, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>, <param name="param2">param2</param>, <param name="param3">param3</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FlipToGDISurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCaps" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>DDCAPS_DX7*</type>
+                </param>
+                <param name="param1">
+                    <type>DDCAPS_DX7*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, DDCAPS_DX7*, DDCAPS_DX7*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDisplayMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>DDSURFACEDESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, DDSURFACEDESC*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFourCCCodes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>uint*</type>
+                </param>
+                <param name="param1">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGDISurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IDirectDrawSurface**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, IDirectDrawSurface**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMonitorFrequency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetScanLine" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVerticalBlankStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Initialize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RestoreDisplayMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetCooperativeLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IntPtr</type>
+                </param>
+                <param name="param1">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, IntPtr, uint, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDisplayMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>uint</type>
+                </param>
+                <param name="param1">
+                    <type>uint</type>
+                </param>
+                <param name="param2">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>, <param name="param2">param2</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WaitForVerticalBlank" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>uint</type>
+                </param>
+                <param name="param1">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDirectDraw*, uint, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IDirectDraw*)Unsafe.AsPointer(ref this)</param>, <param name="param0">param0</param>, <param name="param1">param1</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ddraw.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DDOVERLAYFX" access="public" unsafe="true">
+            <field name="dwSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwAlphaEdgeBlendBitDepth" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwAlphaEdgeBlend" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwReserved" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwAlphaDestConstBitDepth" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous1" access="public">
+                <type native="_DDOVERLAYFX::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/ddraw.h:775:5)">_Anonymous1_e__Union</type>
+            </field>
+            <field name="dwAlphaDestConst" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.dwAlphaDestConst, 1));
+        </code>
+                </get>
+            </field>
+            <field name="lpDDSAlphaDest" access="public">
+                <type native="">ref IDirectDrawSurface*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous1_e__Union* pField = &amp;Anonymous1)
+        {
+            return ref pField-&gt;lpDDSAlphaDest;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="dwAlphaSrcConstBitDepth" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous2" access="public">
+                <type native="_DDOVERLAYFX::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/ddraw.h:781:5)">_Anonymous2_e__Union</type>
+            </field>
+            <field name="dwAlphaSrcConst" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.dwAlphaSrcConst, 1));
+        </code>
+                </get>
+            </field>
+            <field name="lpDDSAlphaSrc" access="public">
+                <type native="">ref IDirectDrawSurface*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous2_e__Union* pField = &amp;Anonymous2)
+        {
+            return ref pField-&gt;lpDDSAlphaSrc;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="dckDestColorkey" access="public">
+                <type native="">DDCOLORKEY</type>
+            </field>
+            <field name="dckSrcColorkey" access="public">
+                <type native="">DDCOLORKEY</type>
+            </field>
+            <field name="dwDDFX" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <struct name="_Anonymous1_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="dwAlphaDestConst" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="lpDDSAlphaDest" access="public" offset="0">
+                    <type native="LPDIRECTDRAWSURFACE">IDirectDrawSurface*</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous2_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="dwAlphaSrcConst" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="lpDDSAlphaSrc" access="public" offset="0">
+                    <type native="LPDIRECTDRAWSURFACE">IDirectDrawSurface*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

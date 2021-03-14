@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_TEMPERATURE_DATA_DESCRIPTOR" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="CriticalTemperature" access="public">
+                <type native="SHORT">short</type>
+            </field>
+            <field name="WarningTemperature" access="public">
+                <type native="SHORT">short</type>
+            </field>
+            <field name="InfoCount" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="Reserved0" access="public">
+                <type native="BYTE [2]" count="2" fixed="_Reserved0_e__FixedBuffer">byte</type>
+            </field>
+            <field name="Reserved1" access="public">
+                <type native="DWORD [2]" count="2" fixed="_Reserved1_e__FixedBuffer">uint</type>
+            </field>
+            <field name="TemperatureInfo" access="public">
+                <type native="STORAGE_TEMPERATURE_INFO [1]" count="1" fixed="_TemperatureInfo_e__FixedBuffer">STORAGE_TEMPERATURE_INFO</type>
+            </field>
+            <struct name="_TemperatureInfo_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">STORAGE_TEMPERATURE_INFO</type>
+                </field>
+                <indexer access="public">
+                    <type>ref STORAGE_TEMPERATURE_INFO</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;STORAGE_TEMPERATURE_INFO&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

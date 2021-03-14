@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpShortcut" access="public" native="struct ISpShortcut : IUnknown" uuid="3df681e2-ea56-11d9-8bde-f66bad1e3f3a" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddShortcut" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszDisplay">
+                    <type>ushort*</type>
+                </param>
+                <param name="LangID">
+                    <type>ushort</type>
+                </param>
+                <param name="pszSpoken">
+                    <type>ushort*</type>
+                </param>
+                <param name="shType">
+                    <type>SPSHORTCUTTYPE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, ushort*, ushort, ushort*, SPSHORTCUTTYPE, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>, <param name="pszDisplay">pszDisplay</param>, <param name="LangID">LangID</param>, <param name="pszSpoken">pszSpoken</param>, <param name="shType">shType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveShortcut" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszDisplay">
+                    <type>ushort*</type>
+                </param>
+                <param name="LangID">
+                    <type>ushort</type>
+                </param>
+                <param name="pszSpoken">
+                    <type>ushort*</type>
+                </param>
+                <param name="shType">
+                    <type>SPSHORTCUTTYPE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, ushort*, ushort, ushort*, SPSHORTCUTTYPE, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>, <param name="pszDisplay">pszDisplay</param>, <param name="LangID">LangID</param>, <param name="pszSpoken">pszSpoken</param>, <param name="shType">shType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetShortcuts" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="LangID">
+                    <type>ushort</type>
+                </param>
+                <param name="pShortcutpairList">
+                    <type>SPSHORTCUTPAIRLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, ushort, SPSHORTCUTPAIRLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>, <param name="LangID">LangID</param>, <param name="pShortcutpairList">pShortcutpairList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGeneration" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwGeneration">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>, <param name="pdwGeneration">pdwGeneration</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWordsFromGenerationChange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwGeneration">
+                    <type>uint*</type>
+                </param>
+                <param name="pWordList">
+                    <type>SPWORDLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, uint*, SPWORDLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>, <param name="pdwGeneration">pdwGeneration</param>, <param name="pWordList">pWordList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWords" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwGeneration">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <param name="pWordList">
+                    <type>SPWORDLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, uint*, uint*, SPWORDLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>, <param name="pdwGeneration">pdwGeneration</param>, <param name="pdwCookie">pdwCookie</param>, <param name="pWordList">pWordList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetShortcutsForGeneration" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwGeneration">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <param name="pShortcutpairList">
+                    <type>SPSHORTCUTPAIRLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, uint*, uint*, SPSHORTCUTPAIRLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>, <param name="pdwGeneration">pdwGeneration</param>, <param name="pdwCookie">pdwCookie</param>, <param name="pShortcutpairList">pShortcutpairList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGenerationChange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwGeneration">
+                    <type>uint*</type>
+                </param>
+                <param name="pShortcutpairList">
+                    <type>SPSHORTCUTPAIRLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpShortcut*, uint*, SPSHORTCUTPAIRLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ISpShortcut*)Unsafe.AsPointer(ref this)</param>, <param name="pdwGeneration">pdwGeneration</param>, <param name="pShortcutpairList">pShortcutpairList</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

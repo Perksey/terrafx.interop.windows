@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CMC_TAGGED_REQUEST" access="public" unsafe="true">
+            <field name="dwTaggedRequestChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_CMC_TAGGED_REQUEST::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:5231:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="pTaggedCertRequest" access="public">
+                <type native="">ref CMC_TAGGED_CERT_REQUEST*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pTaggedCertRequest;
+        }
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pTaggedCertRequest" access="public" offset="0">
+                    <type native="PCMC_TAGGED_CERT_REQUEST">CMC_TAGGED_CERT_REQUEST*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

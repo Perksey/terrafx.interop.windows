@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/synchapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="InitializeSRWLock" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="SRWLock">
+                    <type>RTL_SRWLOCK*</type>
+                </param>
+            </function>
+            <function name="ReleaseSRWLockExclusive" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="SRWLock">
+                    <type>RTL_SRWLOCK*</type>
+                </param>
+            </function>
+            <function name="ReleaseSRWLockShared" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="SRWLock">
+                    <type>RTL_SRWLOCK*</type>
+                </param>
+            </function>
+            <function name="AcquireSRWLockExclusive" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="SRWLock">
+                    <type>RTL_SRWLOCK*</type>
+                </param>
+            </function>
+            <function name="AcquireSRWLockShared" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="SRWLock">
+                    <type>RTL_SRWLOCK*</type>
+                </param>
+            </function>
+            <function name="TryAcquireSRWLockExclusive" access="public" lib="kernel32" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="SRWLock">
+                    <type>RTL_SRWLOCK*</type>
+                </param>
+            </function>
+            <function name="TryAcquireSRWLockShared" access="public" lib="kernel32" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="SRWLock">
+                    <type>RTL_SRWLOCK*</type>
+                </param>
+            </function>
+            <function name="InitializeCriticalSection" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpCriticalSection">
+                    <type>RTL_CRITICAL_SECTION*</type>
+                </param>
+            </function>
+            <function name="EnterCriticalSection" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpCriticalSection">
+                    <type>RTL_CRITICAL_SECTION*</type>
+                </param>
+            </function>
+            <function name="LeaveCriticalSection" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpCriticalSection">
+                    <type>RTL_CRITICAL_SECTION*</type>
+                </param>
+            </function>
+            <function name="InitializeCriticalSectionAndSpinCount" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpCriticalSection">
+                    <type>RTL_CRITICAL_SECTION*</type>
+                </param>
+                <param name="dwSpinCount">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="InitializeCriticalSectionEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpCriticalSection">
+                    <type>RTL_CRITICAL_SECTION*</type>
+                </param>
+                <param name="dwSpinCount">
+                    <type>uint</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetCriticalSectionSpinCount" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpCriticalSection">
+                    <type>RTL_CRITICAL_SECTION*</type>
+                </param>
+                <param name="dwSpinCount">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="TryEnterCriticalSection" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpCriticalSection">
+                    <type>RTL_CRITICAL_SECTION*</type>
+                </param>
+            </function>
+            <function name="DeleteCriticalSection" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpCriticalSection">
+                    <type>RTL_CRITICAL_SECTION*</type>
+                </param>
+            </function>
+            <function name="InitOnceInitialize" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="InitOnce">
+                    <type>RTL_RUN_ONCE*</type>
+                </param>
+            </function>
+            <function name="InitOnceExecuteOnce" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="InitOnce">
+                    <type>RTL_RUN_ONCE*</type>
+                </param>
+                <param name="InitFn">
+                    <type>delegate* unmanaged&lt;RTL_RUN_ONCE*, void*, void**, int&gt;</type>
+                </param>
+                <param name="Parameter">
+                    <type>void*</type>
+                </param>
+                <param name="Context">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="InitOnceBeginInitialize" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpInitOnce">
+                    <type>RTL_RUN_ONCE*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="fPending">
+                    <type>int*</type>
+                </param>
+                <param name="lpContext">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="InitOnceComplete" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpInitOnce">
+                    <type>RTL_RUN_ONCE*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpContext">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="InitializeConditionVariable" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="ConditionVariable">
+                    <type>RTL_CONDITION_VARIABLE*</type>
+                </param>
+            </function>
+            <function name="WakeConditionVariable" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="ConditionVariable">
+                    <type>RTL_CONDITION_VARIABLE*</type>
+                </param>
+            </function>
+            <function name="WakeAllConditionVariable" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="ConditionVariable">
+                    <type>RTL_CONDITION_VARIABLE*</type>
+                </param>
+            </function>
+            <function name="SleepConditionVariableCS" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ConditionVariable">
+                    <type>RTL_CONDITION_VARIABLE*</type>
+                </param>
+                <param name="CriticalSection">
+                    <type>RTL_CRITICAL_SECTION*</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SleepConditionVariableSRW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ConditionVariable">
+                    <type>RTL_CONDITION_VARIABLE*</type>
+                </param>
+                <param name="SRWLock">
+                    <type>RTL_SRWLOCK*</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetEvent" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hEvent">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="ResetEvent" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hEvent">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="ReleaseSemaphore" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSemaphore">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lReleaseCount">
+                    <type>int</type>
+                </param>
+                <param name="lpPreviousCount">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="ReleaseMutex" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hMutex">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WaitForSingleObject" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SleepEx" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <param name="bAlertable">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="WaitForSingleObjectEx" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <param name="bAlertable">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="WaitForMultipleObjectsEx" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="nCount">
+                    <type>uint</type>
+                </param>
+                <param name="lpHandles">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="bWaitAll">
+                    <type>int</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <param name="bAlertable">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="CreateMutexA" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpMutexAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="bInitialOwner">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="CreateMutexW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpMutexAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="bInitialOwner">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="OpenMutexW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="bInheritHandle">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="CreateEventA" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpEventAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="bManualReset">
+                    <type>int</type>
+                </param>
+                <param name="bInitialState">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="CreateEventW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpEventAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="bManualReset">
+                    <type>int</type>
+                </param>
+                <param name="bInitialState">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="OpenEventA" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="bInheritHandle">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="OpenEventW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="bInheritHandle">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="OpenSemaphoreW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="bInheritHandle">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="OpenWaitableTimerW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="bInheritHandle">
+                    <type>int</type>
+                </param>
+                <param name="lpTimerName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="SetWaitableTimerEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hTimer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpDueTime">
+                    <type>LARGE_INTEGER*</type>
+                </param>
+                <param name="lPeriod">
+                    <type>int</type>
+                </param>
+                <param name="pfnCompletionRoutine">
+                    <type>delegate* unmanaged&lt;void*, uint, uint, void&gt;</type>
+                </param>
+                <param name="lpArgToCompletionRoutine">
+                    <type>void*</type>
+                </param>
+                <param name="WakeContext">
+                    <type>REASON_CONTEXT*</type>
+                </param>
+                <param name="TolerableDelay">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetWaitableTimer" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hTimer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpDueTime">
+                    <type>LARGE_INTEGER*</type>
+                </param>
+                <param name="lPeriod">
+                    <type>int</type>
+                </param>
+                <param name="pfnCompletionRoutine">
+                    <type>delegate* unmanaged&lt;void*, uint, uint, void&gt;</type>
+                </param>
+                <param name="lpArgToCompletionRoutine">
+                    <type>void*</type>
+                </param>
+                <param name="fResume">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="CancelWaitableTimer" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hTimer">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="CreateMutexExA" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpMutexAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateMutexExW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpMutexAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateEventExA" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpEventAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateEventExW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpEventAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateSemaphoreExW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpSemaphoreAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lInitialCount">
+                    <type>int</type>
+                </param>
+                <param name="lMaximumCount">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateWaitableTimerExW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpTimerAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpTimerName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="EnterSynchronizationBarrier" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpBarrier">
+                    <type>RTL_BARRIER*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="InitializeSynchronizationBarrier" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpBarrier">
+                    <type>RTL_BARRIER*</type>
+                </param>
+                <param name="lTotalThreads">
+                    <type>int</type>
+                </param>
+                <param name="lSpinCount">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="DeleteSynchronizationBarrier" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpBarrier">
+                    <type>RTL_BARRIER*</type>
+                </param>
+            </function>
+            <function name="Sleep" access="public" lib="kernel32" static="true" unsafe="true">
+                <type>void</type>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WaitOnAddress" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Address">
+                    <type>void*</type>
+                </param>
+                <param name="CompareAddress">
+                    <type>void*</type>
+                </param>
+                <param name="AddressSize">
+                    <type>nuint</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WakeByAddressSingle" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="Address">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="WakeByAddressAll" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="Address">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="SignalObjectAndWait" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hObjectToSignal">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hObjectToWaitOn">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <param name="bAlertable">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="WaitForMultipleObjects" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="nCount">
+                    <type>uint</type>
+                </param>
+                <param name="lpHandles">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="bWaitAll">
+                    <type>int</type>
+                </param>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateSemaphoreW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpSemaphoreAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lInitialCount">
+                    <type>int</type>
+                </param>
+                <param name="lMaximumCount">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="CreateWaitableTimerW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpTimerAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="bManualReset">
+                    <type>int</type>
+                </param>
+                <param name="lpTimerName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <constant name="INIT_ONCE_CHECK_ONLY" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000001U
+            </code>
+                </value>
+            </constant>
+            <constant name="INIT_ONCE_ASYNC" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000002U
+            </code>
+                </value>
+            </constant>
+            <constant name="INIT_ONCE_INIT_FAILED" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000004U
+            </code>
+                </value>
+            </constant>
+            <constant name="INIT_ONCE_CTX_RESERVED_BITS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="CONDITION_VARIABLE_LOCKMODE_SHARED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTEX_MODIFY_STATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTEX_ALL_ACCESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x000F0000) | (0x00100000) | 0x0001)
+            </code>
+                </value>
+            </constant>
+            <constant name="CreateMutex" access="public">
+                <type primitive="False">delegate*&lt;SECURITY_ATTRIBUTES*, int, ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateMutexW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OpenMutex" access="public">
+                <type primitive="False">delegate*&lt;uint, int, ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>OpenMutexW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CreateEvent" access="public">
+                <type primitive="False">delegate*&lt;SECURITY_ATTRIBUTES*, int, int, ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateEventW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OpenEvent" access="public">
+                <type primitive="False">delegate*&lt;uint, int, ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>OpenEventW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OpenSemaphore" access="public">
+                <type primitive="False">delegate*&lt;uint, int, ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>OpenSemaphoreW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OpenWaitableTimer" access="public">
+                <type primitive="False">delegate*&lt;uint, int, ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>OpenWaitableTimerW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CREATE_MUTEX_INITIAL_OWNER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="CreateMutexEx" access="public">
+                <type primitive="False">delegate*&lt;SECURITY_ATTRIBUTES*, ushort*, uint, uint, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateMutexExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CREATE_EVENT_MANUAL_RESET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="CREATE_EVENT_INITIAL_SET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="CreateEventEx" access="public">
+                <type primitive="False">delegate*&lt;SECURITY_ATTRIBUTES*, ushort*, uint, uint, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateEventExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CreateSemaphoreEx" access="public">
+                <type primitive="False">delegate*&lt;SECURITY_ATTRIBUTES*, int, int, ushort*, uint, uint, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateSemaphoreExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CREATE_WAITABLE_TIMER_MANUAL_RESET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="CREATE_WAITABLE_TIMER_HIGH_RESOLUTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="CreateWaitableTimerEx" access="public">
+                <type primitive="False">delegate*&lt;SECURITY_ATTRIBUTES*, ushort*, uint, uint, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateWaitableTimerExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SYNCHRONIZATION_BARRIER_FLAGS_SPIN_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="SYNCHRONIZATION_BARRIER_FLAGS_BLOCK_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02
+            </code>
+                </value>
+            </constant>
+            <constant name="SYNCHRONIZATION_BARRIER_FLAGS_NO_DELETE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x04
+            </code>
+                </value>
+            </constant>
+            <constant name="CreateSemaphore" access="public">
+                <type primitive="False">delegate*&lt;SECURITY_ATTRIBUTES*, int, int, ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateSemaphoreW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CreateWaitableTimer" access="public">
+                <type primitive="False">delegate*&lt;SECURITY_ATTRIBUTES*, int, ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateWaitableTimerW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

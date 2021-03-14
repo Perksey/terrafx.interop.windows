@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1_1.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID2D1Factory1" access="public" native="struct ID2D1Factory1 : ID2D1Factory" uuid="bb12d362-daee-4b9a-aa1d-14ba401cfa1f" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="CreateDrawingStateBlock" access="public">
+                <type native="HRESULT">int</type>
+                <param name="drawingStateDescription">
+                    <type>D2D1_DRAWING_STATE_DESCRIPTION*</type>
+                </param>
+                <param name="drawingStateBlock">
+                    <type>ID2D1DrawingStateBlock**</type>
+                </param>
+                <code>return CreateDrawingStateBlock(drawingStateDescription, null, drawingStateBlock);
+        </code>
+            </function>
+            <function name="CreateDrawingStateBlock" access="public">
+                <type native="HRESULT">int</type>
+                <param name="drawingStateBlock">
+                    <type>ID2D1DrawingStateBlock**</type>
+                </param>
+                <code>return CreateDrawingStateBlock(null, null, drawingStateBlock);
+        </code>
+            </function>
+            <function name="CreateDrawingStateBlock" access="public">
+                <type native="HRESULT">int</type>
+                <param name="drawingStateDescription">
+                    <type>D2D1_DRAWING_STATE_DESCRIPTION1*</type>
+                </param>
+                <param name="drawingStateBlock">
+                    <type>ID2D1DrawingStateBlock1**</type>
+                </param>
+                <code>return CreateDrawingStateBlock(drawingStateDescription, null, drawingStateBlock);
+        </code>
+            </function>
+            <function name="CreateDrawingStateBlock" access="public">
+                <type native="HRESULT">int</type>
+                <param name="drawingStateBlock">
+                    <type>ID2D1DrawingStateBlock1**</type>
+                </param>
+                <code>return CreateDrawingStateBlock(null, null, drawingStateBlock);
+        </code>
+            </function>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReloadSystemMetrics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDesktopDpi" access="public" unsafe="true">
+                <type>void</type>
+                <param name="dpiX">
+                    <type>float*</type>
+                </param>
+                <param name="dpiY">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1Factory1*, float*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="dpiX">dpiX</param>, <param name="dpiY">dpiY</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRectangleGeometry" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rectangle">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="rectangleGeometry">
+                    <type>ID2D1RectangleGeometry**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D_RECT_F*, ID2D1RectangleGeometry**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="rectangle">rectangle</param>, <param name="rectangleGeometry">rectangleGeometry</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRoundedRectangleGeometry" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="roundedRectangle">
+                    <type>D2D1_ROUNDED_RECT*</type>
+                </param>
+                <param name="roundedRectangleGeometry">
+                    <type>ID2D1RoundedRectangleGeometry**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D1_ROUNDED_RECT*, ID2D1RoundedRectangleGeometry**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="roundedRectangle">roundedRectangle</param>, <param name="roundedRectangleGeometry">roundedRectangleGeometry</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateEllipseGeometry" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ellipse">
+                    <type>D2D1_ELLIPSE*</type>
+                </param>
+                <param name="ellipseGeometry">
+                    <type>ID2D1EllipseGeometry**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D1_ELLIPSE*, ID2D1EllipseGeometry**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="ellipse">ellipse</param>, <param name="ellipseGeometry">ellipseGeometry</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateGeometryGroup" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fillMode">
+                    <type>D2D1_FILL_MODE</type>
+                </param>
+                <param name="geometries">
+                    <type>ID2D1Geometry**</type>
+                </param>
+                <param name="geometriesCount">
+                    <type>uint</type>
+                </param>
+                <param name="geometryGroup">
+                    <type>ID2D1GeometryGroup**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D1_FILL_MODE, ID2D1Geometry**, uint, ID2D1GeometryGroup**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="fillMode">fillMode</param>, <param name="geometries">geometries</param>, <param name="geometriesCount">geometriesCount</param>, <param name="geometryGroup">geometryGroup</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTransformedGeometry" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="sourceGeometry">
+                    <type>ID2D1Geometry*</type>
+                </param>
+                <param name="transform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="transformedGeometry">
+                    <type>ID2D1TransformedGeometry**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, ID2D1Geometry*, D2D_MATRIX_3X2_F*, ID2D1TransformedGeometry**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="sourceGeometry">sourceGeometry</param>, <param name="transform">transform</param>, <param name="transformedGeometry">transformedGeometry</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePathGeometry" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pathGeometry">
+                    <type>ID2D1PathGeometry**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, ID2D1PathGeometry**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="pathGeometry">pathGeometry</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateStrokeStyle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="strokeStyleProperties">
+                    <type>D2D1_STROKE_STYLE_PROPERTIES*</type>
+                </param>
+                <param name="dashes">
+                    <type>float*</type>
+                </param>
+                <param name="dashesCount">
+                    <type>uint</type>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D1_STROKE_STYLE_PROPERTIES*, float*, uint, ID2D1StrokeStyle**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="strokeStyleProperties">strokeStyleProperties</param>, <param name="dashes">dashes</param>, <param name="dashesCount">dashesCount</param>, <param name="strokeStyle">strokeStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDrawingStateBlock" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="drawingStateDescription">
+                    <type>D2D1_DRAWING_STATE_DESCRIPTION*</type>
+                </param>
+                <param name="textRenderingParams">
+                    <type>IDWriteRenderingParams*</type>
+                </param>
+                <param name="drawingStateBlock">
+                    <type>ID2D1DrawingStateBlock**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D1_DRAWING_STATE_DESCRIPTION*, IDWriteRenderingParams*, ID2D1DrawingStateBlock**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="drawingStateDescription">drawingStateDescription</param>, <param name="textRenderingParams">textRenderingParams</param>, <param name="drawingStateBlock">drawingStateBlock</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateWicBitmapRenderTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="target">
+                    <type>IWICBitmap*</type>
+                </param>
+                <param name="renderTargetProperties">
+                    <type>D2D1_RENDER_TARGET_PROPERTIES*</type>
+                </param>
+                <param name="renderTarget">
+                    <type>ID2D1RenderTarget**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, IWICBitmap*, D2D1_RENDER_TARGET_PROPERTIES*, ID2D1RenderTarget**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="target">target</param>, <param name="renderTargetProperties">renderTargetProperties</param>, <param name="renderTarget">renderTarget</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateHwndRenderTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="renderTargetProperties">
+                    <type>D2D1_RENDER_TARGET_PROPERTIES*</type>
+                </param>
+                <param name="hwndRenderTargetProperties">
+                    <type>D2D1_HWND_RENDER_TARGET_PROPERTIES*</type>
+                </param>
+                <param name="hwndRenderTarget">
+                    <type>ID2D1HwndRenderTarget**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D1_RENDER_TARGET_PROPERTIES*, D2D1_HWND_RENDER_TARGET_PROPERTIES*, ID2D1HwndRenderTarget**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="renderTargetProperties">renderTargetProperties</param>, <param name="hwndRenderTargetProperties">hwndRenderTargetProperties</param>, <param name="hwndRenderTarget">hwndRenderTarget</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDxgiSurfaceRenderTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dxgiSurface">
+                    <type>IDXGISurface*</type>
+                </param>
+                <param name="renderTargetProperties">
+                    <type>D2D1_RENDER_TARGET_PROPERTIES*</type>
+                </param>
+                <param name="renderTarget">
+                    <type>ID2D1RenderTarget**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, IDXGISurface*, D2D1_RENDER_TARGET_PROPERTIES*, ID2D1RenderTarget**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="dxgiSurface">dxgiSurface</param>, <param name="renderTargetProperties">renderTargetProperties</param>, <param name="renderTarget">renderTarget</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDCRenderTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="renderTargetProperties">
+                    <type>D2D1_RENDER_TARGET_PROPERTIES*</type>
+                </param>
+                <param name="dcRenderTarget">
+                    <type>ID2D1DCRenderTarget**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D1_RENDER_TARGET_PROPERTIES*, ID2D1DCRenderTarget**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="renderTargetProperties">renderTargetProperties</param>, <param name="dcRenderTarget">dcRenderTarget</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDevice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dxgiDevice">
+                    <type>IDXGIDevice*</type>
+                </param>
+                <param name="d2dDevice">
+                    <type>ID2D1Device**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, IDXGIDevice*, ID2D1Device**, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="dxgiDevice">dxgiDevice</param>, <param name="d2dDevice">d2dDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateStrokeStyle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="strokeStyleProperties">
+                    <type>D2D1_STROKE_STYLE_PROPERTIES1*</type>
+                </param>
+                <param name="dashes">
+                    <type>float*</type>
+                </param>
+                <param name="dashesCount">
+                    <type>uint</type>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D1_STROKE_STYLE_PROPERTIES1*, float*, uint, ID2D1StrokeStyle1**, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="strokeStyleProperties">strokeStyleProperties</param>, <param name="dashes">dashes</param>, <param name="dashesCount">dashesCount</param>, <param name="strokeStyle">strokeStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePathGeometry" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pathGeometry">
+                    <type>ID2D1PathGeometry1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, ID2D1PathGeometry1**, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="pathGeometry">pathGeometry</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDrawingStateBlock" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="drawingStateDescription">
+                    <type>D2D1_DRAWING_STATE_DESCRIPTION1*</type>
+                </param>
+                <param name="textRenderingParams">
+                    <type>IDWriteRenderingParams*</type>
+                </param>
+                <param name="drawingStateBlock">
+                    <type>ID2D1DrawingStateBlock1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, D2D1_DRAWING_STATE_DESCRIPTION1*, IDWriteRenderingParams*, ID2D1DrawingStateBlock1**, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="drawingStateDescription">drawingStateDescription</param>, <param name="textRenderingParams">textRenderingParams</param>, <param name="drawingStateBlock">drawingStateBlock</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateGdiMetafile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="metafileStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="metafile">
+                    <type>ID2D1GdiMetafile**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, IStream*, ID2D1GdiMetafile**, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="metafileStream">metafileStream</param>, <param name="metafile">metafile</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterEffectFromStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="classId">
+                    <type>Guid*</type>
+                </param>
+                <param name="propertyXml">
+                    <type>IStream*</type>
+                </param>
+                <param name="bindings">
+                    <type>D2D1_PROPERTY_BINDING*</type>
+                </param>
+                <param name="bindingsCount">
+                    <type>uint</type>
+                </param>
+                <param name="effectFactory">
+                    <type>delegate* unmanaged&lt;IUnknown**, int&gt;</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, Guid*, IStream*, D2D1_PROPERTY_BINDING*, uint, delegate* unmanaged&lt;IUnknown**, int&gt;, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="classId">classId</param>, <param name="propertyXml">propertyXml</param>, <param name="bindings">bindings</param>, <param name="bindingsCount">bindingsCount</param>, <param name="effectFactory">effectFactory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterEffectFromString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="classId">
+                    <type>Guid*</type>
+                </param>
+                <param name="propertyXml">
+                    <type>ushort*</type>
+                </param>
+                <param name="bindings">
+                    <type>D2D1_PROPERTY_BINDING*</type>
+                </param>
+                <param name="bindingsCount">
+                    <type>uint</type>
+                </param>
+                <param name="effectFactory">
+                    <type>delegate* unmanaged&lt;IUnknown**, int&gt;</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, Guid*, ushort*, D2D1_PROPERTY_BINDING*, uint, delegate* unmanaged&lt;IUnknown**, int&gt;, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="classId">classId</param>, <param name="propertyXml">propertyXml</param>, <param name="bindings">bindings</param>, <param name="bindingsCount">bindingsCount</param>, <param name="effectFactory">effectFactory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterEffect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="classId">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="classId">classId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRegisteredEffects" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effects">
+                    <type>Guid*</type>
+                </param>
+                <param name="effectsCount">
+                    <type>uint</type>
+                </param>
+                <param name="effectsReturned">
+                    <type>uint*</type>
+                </param>
+                <param name="effectsRegistered">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, Guid*, uint, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="effects">effects</param>, <param name="effectsCount">effectsCount</param>, <param name="effectsReturned">effectsReturned</param>, <param name="effectsRegistered">effectsRegistered</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEffectProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effectId">
+                    <type>Guid*</type>
+                </param>
+                <param name="properties">
+                    <type>ID2D1Properties**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Factory1*, Guid*, ID2D1Properties**, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ID2D1Factory1*)Unsafe.AsPointer(ref this)</param>, <param name="effectId">effectId</param>, <param name="properties">properties</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

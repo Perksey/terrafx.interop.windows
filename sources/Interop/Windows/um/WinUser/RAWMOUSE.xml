@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinUser.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="RAWMOUSE" access="public">
+            <field name="usFlags" access="public">
+                <type native="USHORT">ushort</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="tagRAWMOUSE::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/WinUser.h:14914:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="ulButtons" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ulButtons, 1));
+        </code>
+                </get>
+            </field>
+            <field name="usButtonFlags" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.usButtonFlags, 1));
+        </code>
+                </get>
+            </field>
+            <field name="usButtonData" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.usButtonData, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ulRawButtons" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="lLastX" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="lLastY" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="ulExtraInformation" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="ulButtons" access="public" offset="0">
+                    <type native="ULONG">uint</type>
+                </field>
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="tagRAWMOUSE::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/WinUser.h:14916:9)">_Anonymous_e__Struct</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="usButtonFlags" access="public">
+                        <type native="USHORT">ushort</type>
+                    </field>
+                    <field name="usButtonData" access="public">
+                        <type native="USHORT">ushort</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WS_SERVICE_ENDPOINT" access="public" unsafe="true">
+            <field name="address" access="public">
+                <type native="">WS_ENDPOINT_ADDRESS</type>
+            </field>
+            <field name="channelBinding" access="public">
+                <type native="">WS_CHANNEL_BINDING</type>
+            </field>
+            <field name="channelType" access="public">
+                <type native="">WS_CHANNEL_TYPE</type>
+            </field>
+            <field name="securityDescription" access="public">
+                <type native="const WS_SECURITY_DESCRIPTION *">WS_SECURITY_DESCRIPTION*</type>
+            </field>
+            <field name="contract" access="public">
+                <type native="const WS_SERVICE_CONTRACT *">WS_SERVICE_CONTRACT*</type>
+            </field>
+            <field name="authorizationCallback" access="public">
+                <type native="WS_SERVICE_SECURITY_CALLBACK">delegate* unmanaged&lt;IntPtr, int*, IntPtr, int&gt;</type>
+            </field>
+            <field name="properties" access="public">
+                <type native="const WS_SERVICE_ENDPOINT_PROPERTY *">WS_SERVICE_ENDPOINT_PROPERTY*</type>
+            </field>
+            <field name="propertyCount" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="channelProperties" access="public">
+                <type native="">WS_CHANNEL_PROPERTIES</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

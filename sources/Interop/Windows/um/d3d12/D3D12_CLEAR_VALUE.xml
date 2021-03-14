@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D12_CLEAR_VALUE" access="public" unsafe="true">
+            <field name="Format" access="public">
+                <type native="">DXGI_FORMAT</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="D3D12_CLEAR_VALUE::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:2582:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Color" access="public">
+                <type native="">Span&lt;float&gt;</type>
+                <get inlining="aggressive">
+                    <code>return MemoryMarshal.CreateSpan(ref Anonymous.Color[0], 4);
+        </code>
+                </get>
+            </field>
+            <field name="DepthStencil" access="public">
+                <type native="">ref D3D12_DEPTH_STENCIL_VALUE</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.DepthStencil, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="Color" access="public" offset="0">
+                    <type native="FLOAT [4]" count="4" fixed="_Color_e__FixedBuffer">float</type>
+                </field>
+                <field name="DepthStencil" access="public" offset="0">
+                    <type native="">D3D12_DEPTH_STENCIL_VALUE</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

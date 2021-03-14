@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SPPHRASEPROPERTY" access="public" unsafe="true">
+            <field name="pszName" access="public">
+                <type native="LPCWSTR">ushort*</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="SPPHRASEPROPERTY::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/sapi.h:5475:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="ulId" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ulId, 1));
+        </code>
+                </get>
+            </field>
+            <field name="bType" access="public">
+                <type native="">ref byte</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.bType, 1));
+        </code>
+                </get>
+            </field>
+            <field name="bReserved" access="public">
+                <type native="">ref byte</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.bReserved, 1));
+        </code>
+                </get>
+            </field>
+            <field name="usArrayIndex" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.usArrayIndex, 1));
+        </code>
+                </get>
+            </field>
+            <field name="pszValue" access="public">
+                <type native="LPCWSTR">ushort*</type>
+            </field>
+            <field name="vValue" access="public">
+                <type native="">VARIANT</type>
+            </field>
+            <field name="ulFirstElement" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="ulCountOfElements" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="pNextSibling" access="public">
+                <type native="const SPPHRASEPROPERTY *">SPPHRASEPROPERTY*</type>
+            </field>
+            <field name="pFirstChild" access="public">
+                <type native="const SPPHRASEPROPERTY *">SPPHRASEPROPERTY*</type>
+            </field>
+            <field name="SREngineConfidence" access="public">
+                <type native="">float</type>
+            </field>
+            <field name="Confidence" access="public">
+                <type native="signed char">sbyte</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="ulId" access="public" offset="0">
+                    <type native="ULONG">uint</type>
+                </field>
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="SPPHRASEPROPERTY::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/sapi.h:5478:9)">_Anonymous_e__Struct</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="bType" access="public">
+                        <type native="">byte</type>
+                    </field>
+                    <field name="bReserved" access="public">
+                        <type native="">byte</type>
+                    </field>
+                    <field name="usArrayIndex" access="public">
+                        <type native="unsigned short">ushort</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

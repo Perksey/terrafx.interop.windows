@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/UIAnimation.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IUIAnimationStoryboard" access="public" native="struct IUIAnimationStoryboard : IUnknown" uuid="a8ff128f-9bf9-4af1-9e67-e5e410defb84" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="variable">
+                    <type>IUIAnimationVariable*</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, IUIAnimationVariable*, IUIAnimationTransition*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="variable">variable</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddKeyframeAtOffset" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="existingKeyframe">
+                    <type>UI_ANIMATION_KEYFRAME*</type>
+                </param>
+                <param name="offset">
+                    <type>double</type>
+                </param>
+                <param name="keyframe">
+                    <type>UI_ANIMATION_KEYFRAME**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, UI_ANIMATION_KEYFRAME*, double, UI_ANIMATION_KEYFRAME**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="existingKeyframe">existingKeyframe</param>, <param name="offset">offset</param>, <param name="keyframe">keyframe</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddKeyframeAfterTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="transition">
+                    <type>IUIAnimationTransition*</type>
+                </param>
+                <param name="keyframe">
+                    <type>UI_ANIMATION_KEYFRAME**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, IUIAnimationTransition*, UI_ANIMATION_KEYFRAME**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="transition">transition</param>, <param name="keyframe">keyframe</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddTransitionAtKeyframe" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="variable">
+                    <type>IUIAnimationVariable*</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition*</type>
+                </param>
+                <param name="startKeyframe">
+                    <type>UI_ANIMATION_KEYFRAME*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, IUIAnimationVariable*, IUIAnimationTransition*, UI_ANIMATION_KEYFRAME*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="variable">variable</param>, <param name="transition">transition</param>, <param name="startKeyframe">startKeyframe</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddTransitionBetweenKeyframes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="variable">
+                    <type>IUIAnimationVariable*</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition*</type>
+                </param>
+                <param name="startKeyframe">
+                    <type>UI_ANIMATION_KEYFRAME*</type>
+                </param>
+                <param name="endKeyframe">
+                    <type>UI_ANIMATION_KEYFRAME*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, IUIAnimationVariable*, IUIAnimationTransition*, UI_ANIMATION_KEYFRAME*, UI_ANIMATION_KEYFRAME*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="variable">variable</param>, <param name="transition">transition</param>, <param name="startKeyframe">startKeyframe</param>, <param name="endKeyframe">endKeyframe</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RepeatBetweenKeyframes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="startKeyframe">
+                    <type>UI_ANIMATION_KEYFRAME*</type>
+                </param>
+                <param name="endKeyframe">
+                    <type>UI_ANIMATION_KEYFRAME*</type>
+                </param>
+                <param name="repetitionCount">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, UI_ANIMATION_KEYFRAME*, UI_ANIMATION_KEYFRAME*, int, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="startKeyframe">startKeyframe</param>, <param name="endKeyframe">endKeyframe</param>, <param name="repetitionCount">repetitionCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HoldVariable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="variable">
+                    <type>IUIAnimationVariable*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, IUIAnimationVariable*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="variable">variable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetLongestAcceptableDelay" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="delay">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, double, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="delay">delay</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Schedule" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="timeNow">
+                    <type>double</type>
+                </param>
+                <param name="schedulingResult">
+                    <type>UI_ANIMATION_SCHEDULING_RESULT*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, double, UI_ANIMATION_SCHEDULING_RESULT*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="timeNow">timeNow</param>, <param name="schedulingResult">schedulingResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Conclude" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Finish" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="completionDeadline">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, double, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="completionDeadline">completionDeadline</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Abandon" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTag" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="@object">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="id">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, IUnknown*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="@object">@object</param>, <param name="id">id</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTag" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="@object">
+                    <type>IUnknown**</type>
+                </param>
+                <param name="id">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, IUnknown**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="@object">@object</param>, <param name="id">id</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="status">
+                    <type>UI_ANIMATION_STORYBOARD_STATUS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, UI_ANIMATION_STORYBOARD_STATUS*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="status">status</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetElapsedTime" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="elapsedTime">
+                    <type>double*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, double*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="elapsedTime">elapsedTime</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetStoryboardEventHandler" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="handler">
+                    <type>IUIAnimationStoryboardEventHandler*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationStoryboard*, IUIAnimationStoryboardEventHandler*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IUIAnimationStoryboard*)Unsafe.AsPointer(ref this)</param>, <param name="handler">handler</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

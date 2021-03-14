@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_CRYPTO_DESCRIPTOR" access="public">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="NumKeysSupported" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="NumCryptoCapabilities" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="CryptoCapabilities" access="public">
+                <type native="STORAGE_CRYPTO_CAPABILITY [1]" count="1" fixed="_CryptoCapabilities_e__FixedBuffer">STORAGE_CRYPTO_CAPABILITY</type>
+            </field>
+            <struct name="_CryptoCapabilities_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">STORAGE_CRYPTO_CAPABILITY</type>
+                </field>
+                <indexer access="public">
+                    <type>ref STORAGE_CRYPTO_CAPABILITY</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;STORAGE_CRYPTO_CAPABILITY&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dxcapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved. Licensed under the University of Illinois Open Source License.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDxcContainerReflection" access="public" native="struct IDxcContainerReflection : IUnknown" uuid="d2c21b26-8350-4bdc-976a-331ce6f4c54c" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerReflection*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDxcContainerReflection*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDxcContainerReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDxcContainerReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Load" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pContainer">
+                    <type>IDxcBlob*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerReflection*, IDxcBlob*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDxcContainerReflection*)Unsafe.AsPointer(ref this)</param>, <param name="pContainer">pContainer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPartCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResult">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerReflection*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDxcContainerReflection*)Unsafe.AsPointer(ref this)</param>, <param name="pResult">pResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPartKind" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="idx">
+                    <type>uint</type>
+                </param>
+                <param name="pResult">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerReflection*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDxcContainerReflection*)Unsafe.AsPointer(ref this)</param>, <param name="idx">idx</param>, <param name="pResult">pResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPartContent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="idx">
+                    <type>uint</type>
+                </param>
+                <param name="ppResult">
+                    <type>IDxcBlob**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerReflection*, uint, IDxcBlob**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDxcContainerReflection*)Unsafe.AsPointer(ref this)</param>, <param name="idx">idx</param>, <param name="ppResult">ppResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindFirstPartKind" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="kind">
+                    <type>uint</type>
+                </param>
+                <param name="pResult">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerReflection*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDxcContainerReflection*)Unsafe.AsPointer(ref this)</param>, <param name="kind">kind</param>, <param name="pResult">pResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPartReflection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="idx">
+                    <type>uint</type>
+                </param>
+                <param name="iid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerReflection*, uint, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDxcContainerReflection*)Unsafe.AsPointer(ref this)</param>, <param name="idx">idx</param>, <param name="iid">iid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

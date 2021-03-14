@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dxcapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved. Licensed under the University of Illinois Open Source License.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDxcLinker" access="public" native="struct IDxcLinker : IUnknown" uuid="f1b5be2a-62dd-4327-a1c2-42ac1e1e78e6" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcLinker*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDxcLinker*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcLinker*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDxcLinker*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcLinker*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDxcLinker*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterLibrary" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLibName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pLib">
+                    <type>IDxcBlob*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcLinker*, ushort*, IDxcBlob*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDxcLinker*)Unsafe.AsPointer(ref this)</param>, <param name="pLibName">pLibName</param>, <param name="pLib">pLib</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Link" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pEntryName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pTargetProfile">
+                    <type>ushort*</type>
+                </param>
+                <param name="pLibNames">
+                    <type>ushort**</type>
+                </param>
+                <param name="libCount">
+                    <type>uint</type>
+                </param>
+                <param name="pArguments">
+                    <type>ushort**</type>
+                </param>
+                <param name="argCount">
+                    <type>uint</type>
+                </param>
+                <param name="ppResult">
+                    <type>IDxcOperationResult**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcLinker*, ushort*, ushort*, ushort**, uint, ushort**, uint, IDxcOperationResult**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDxcLinker*)Unsafe.AsPointer(ref this)</param>, <param name="pEntryName">pEntryName</param>, <param name="pTargetProfile">pTargetProfile</param>, <param name="pLibNames">pLibNames</param>, <param name="libCount">libCount</param>, <param name="pArguments">pArguments</param>, <param name="argCount">argCount</param>, <param name="ppResult">ppResult</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

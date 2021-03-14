@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/prsht.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PROPSHEETHEADERA_V2" access="public" unsafe="true">
+            <field name="dwSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hwndParent" access="public">
+                <type native="HWND">IntPtr</type>
+            </field>
+            <field name="hInstance" access="public">
+                <type native="HINSTANCE">IntPtr</type>
+            </field>
+            <field name="Anonymous1" access="public">
+                <type native="_PROPSHEETHEADERA_V2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/prsht.h:479:5)">_Anonymous1_e__Union</type>
+            </field>
+            <field name="hIcon" access="public">
+                <type native="">ref IntPtr</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.hIcon, 1));
+        </code>
+                </get>
+            </field>
+            <field name="pszIcon" access="public">
+                <type native="">ref sbyte*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous1_e__Union* pField = &amp;Anonymous1)
+        {
+            return ref pField-&gt;pszIcon;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pszCaption" access="public">
+                <type native="LPCSTR">sbyte*</type>
+            </field>
+            <field name="nPages" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="Anonymous2" access="public">
+                <type native="_PROPSHEETHEADERA_V2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/prsht.h:479:5)">_Anonymous2_e__Union</type>
+            </field>
+            <field name="nStartPage" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.nStartPage, 1));
+        </code>
+                </get>
+            </field>
+            <field name="pStartPage" access="public">
+                <type native="">ref sbyte*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous2_e__Union* pField = &amp;Anonymous2)
+        {
+            return ref pField-&gt;pStartPage;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="Anonymous3" access="public">
+                <type native="_PROPSHEETHEADERA_V2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/prsht.h:479:5)">_Anonymous3_e__Union</type>
+            </field>
+            <field name="ppsp" access="public">
+                <type native="">ref PROPSHEETPAGEA*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous3_e__Union* pField = &amp;Anonymous3)
+        {
+            return ref pField-&gt;ppsp;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="phpage" access="public">
+                <type native="">ref IntPtr*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous3_e__Union* pField = &amp;Anonymous3)
+        {
+            return ref pField-&gt;phpage;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pfnCallback" access="public">
+                <type native="PFNPROPSHEETCALLBACK">delegate* unmanaged&lt;IntPtr, uint, nint, int&gt;</type>
+            </field>
+            <field name="Anonymous4" access="public">
+                <type native="_PROPSHEETHEADERA_V2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/prsht.h:480:5)">_Anonymous4_e__Union</type>
+            </field>
+            <field name="hbmWatermark" access="public">
+                <type native="">ref IntPtr</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous4.hbmWatermark, 1));
+        </code>
+                </get>
+            </field>
+            <field name="pszbmWatermark" access="public">
+                <type native="">ref sbyte*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous4_e__Union* pField = &amp;Anonymous4)
+        {
+            return ref pField-&gt;pszbmWatermark;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="hplWatermark" access="public">
+                <type native="HPALETTE">IntPtr</type>
+            </field>
+            <field name="Anonymous5" access="public">
+                <type native="_PROPSHEETHEADERA_V2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/prsht.h:486:5)">_Anonymous5_e__Union</type>
+            </field>
+            <field name="hbmHeader" access="public">
+                <type native="">ref IntPtr</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous5.hbmHeader, 1));
+        </code>
+                </get>
+            </field>
+            <field name="pszbmHeader" access="public">
+                <type native="">ref sbyte*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous5_e__Union* pField = &amp;Anonymous5)
+        {
+            return ref pField-&gt;pszbmHeader;
+        }
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous1_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="hIcon" access="public" offset="0">
+                    <type native="HICON">IntPtr</type>
+                </field>
+                <field name="pszIcon" access="public" offset="0">
+                    <type native="LPCSTR">sbyte*</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous2_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="nStartPage" access="public" offset="0">
+                    <type native="UINT">uint</type>
+                </field>
+                <field name="pStartPage" access="public" offset="0">
+                    <type native="LPCSTR">sbyte*</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous3_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="ppsp" access="public" offset="0">
+                    <type native="LPCPROPSHEETPAGEA">PROPSHEETPAGEA*</type>
+                </field>
+                <field name="phpage" access="public" offset="0">
+                    <type native="HPROPSHEETPAGE *">IntPtr*</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous4_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="hbmWatermark" access="public" offset="0">
+                    <type native="HBITMAP">IntPtr</type>
+                </field>
+                <field name="pszbmWatermark" access="public" offset="0">
+                    <type native="LPCSTR">sbyte*</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous5_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="hbmHeader" access="public" offset="0">
+                    <type native="HBITMAP">IntPtr</type>
+                </field>
+                <field name="pszbmHeader" access="public" offset="0">
+                    <type native="LPCSTR">sbyte*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

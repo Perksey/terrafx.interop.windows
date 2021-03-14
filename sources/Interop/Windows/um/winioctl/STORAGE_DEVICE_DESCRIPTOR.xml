@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_DEVICE_DESCRIPTOR" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DeviceType" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="DeviceTypeModifier" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="RemovableMedia" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="CommandQueueing" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="VendorIdOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ProductIdOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ProductRevisionOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SerialNumberOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="BusType" access="public">
+                <type native="">STORAGE_BUS_TYPE</type>
+            </field>
+            <field name="RawPropertiesLength" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="RawDeviceProperties" access="public">
+                <type native="BYTE [1]" count="1" fixed="_RawDeviceProperties_e__FixedBuffer">byte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

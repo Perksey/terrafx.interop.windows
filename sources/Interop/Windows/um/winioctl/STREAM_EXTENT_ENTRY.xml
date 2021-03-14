@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STREAM_EXTENT_ENTRY" access="public">
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ExtentInformation" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:14721:5)">_ExtentInformation_e__Union</type>
+            </field>
+            <struct name="_ExtentInformation_e__Union" access="public" layout="Explicit">
+                <field name="RetrievalPointers" access="public" offset="0">
+                    <type native="">RETRIEVAL_POINTERS_BUFFER</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

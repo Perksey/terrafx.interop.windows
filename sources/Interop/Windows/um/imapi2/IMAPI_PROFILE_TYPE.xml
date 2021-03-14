@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/imapi2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="IMAPI_PROFILE_TYPE" access="public">
+            <type>int</type>
+            <enumerator name="IMAPI_PROFILE_TYPE_INVALID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_NON_REMOVABLE_DISK" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_REMOVABLE_DISK" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x2
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_MO_ERASABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x3
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_MO_WRITE_ONCE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x4
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_AS_MO" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x5
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_CDROM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x8
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_CD_RECORDABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x9
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_CD_REWRITABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0xa
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVDROM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x10
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_DASH_RECORDABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x11
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_RAM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x12
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_DASH_REWRITABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x13
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_DASH_RW_SEQUENTIAL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x14
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_DASH_R_DUAL_SEQUENTIAL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x15
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_DASH_R_DUAL_LAYER_JUMP" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x16
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_PLUS_RW" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x1a
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_PLUS_R" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x1b
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DDCDROM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x20
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DDCD_RECORDABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x21
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DDCD_REWRITABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x22
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_PLUS_RW_DUAL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x2a
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_DVD_PLUS_R_DUAL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x2b
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_BD_ROM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x40
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_BD_R_SEQUENTIAL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x41
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_BD_R_RANDOM_RECORDING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x42
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_BD_REWRITABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x43
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_HD_DVD_ROM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x50
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_HD_DVD_RECORDABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x51
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_HD_DVD_RAM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x52
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="IMAPI_PROFILE_TYPE_NON_STANDARD" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0xffff
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

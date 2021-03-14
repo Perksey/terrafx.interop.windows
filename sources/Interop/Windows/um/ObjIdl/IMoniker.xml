@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMoniker" access="public" native="struct IMoniker : IPersistStream" uuid="0000000f-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetClassID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClassID">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pClassID">pClassID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsDirty" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Load" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IStream*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pStm">pStm</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Save" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <param name="fClearDirty">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IStream*, int, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pStm">pStm</param>, <param name="fClearDirty">fClearDirty</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSizeMax" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcbSize">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, ULARGE_INTEGER*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pcbSize">pcbSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BindToObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pmkToLeft">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="riidResult">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvResult">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IBindCtx*, IMoniker*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pbc">pbc</param>, <param name="pmkToLeft">pmkToLeft</param>, <param name="riidResult">riidResult</param>, <param name="ppvResult">ppvResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BindToStorage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pmkToLeft">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObj">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IBindCtx*, IMoniker*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pbc">pbc</param>, <param name="pmkToLeft">pmkToLeft</param>, <param name="riid">riid</param>, <param name="ppvObj">ppvObj</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Reduce" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="dwReduceHowFar">
+                    <type>uint</type>
+                </param>
+                <param name="ppmkToLeft">
+                    <type>IMoniker**</type>
+                </param>
+                <param name="ppmkReduced">
+                    <type>IMoniker**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IBindCtx*, uint, IMoniker**, IMoniker**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pbc">pbc</param>, <param name="dwReduceHowFar">dwReduceHowFar</param>, <param name="ppmkToLeft">ppmkToLeft</param>, <param name="ppmkReduced">ppmkReduced</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ComposeWith" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pmkRight">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="fOnlyIfNotGeneric">
+                    <type>int</type>
+                </param>
+                <param name="ppmkComposite">
+                    <type>IMoniker**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IMoniker*, int, IMoniker**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pmkRight">pmkRight</param>, <param name="fOnlyIfNotGeneric">fOnlyIfNotGeneric</param>, <param name="ppmkComposite">ppmkComposite</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Enum" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fForward">
+                    <type>int</type>
+                </param>
+                <param name="ppenumMoniker">
+                    <type>IEnumMoniker**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, int, IEnumMoniker**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="fForward">fForward</param>, <param name="ppenumMoniker">ppenumMoniker</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsEqual" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pmkOtherMoniker">
+                    <type>IMoniker*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IMoniker*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pmkOtherMoniker">pmkOtherMoniker</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Hash" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwHash">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pdwHash">pdwHash</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsRunning" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pmkToLeft">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="pmkNewlyRunning">
+                    <type>IMoniker*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IBindCtx*, IMoniker*, IMoniker*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pbc">pbc</param>, <param name="pmkToLeft">pmkToLeft</param>, <param name="pmkNewlyRunning">pmkNewlyRunning</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTimeOfLastChange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pmkToLeft">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="pFileTime">
+                    <type>FILETIME*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IBindCtx*, IMoniker*, FILETIME*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pbc">pbc</param>, <param name="pmkToLeft">pmkToLeft</param>, <param name="pFileTime">pFileTime</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Inverse" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppmk">
+                    <type>IMoniker**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IMoniker**, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="ppmk">ppmk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CommonPrefixWith" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pmkOther">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="ppmkPrefix">
+                    <type>IMoniker**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IMoniker*, IMoniker**, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pmkOther">pmkOther</param>, <param name="ppmkPrefix">ppmkPrefix</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RelativePathTo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pmkOther">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="ppmkRelPath">
+                    <type>IMoniker**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IMoniker*, IMoniker**, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pmkOther">pmkOther</param>, <param name="ppmkRelPath">ppmkRelPath</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDisplayName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pmkToLeft">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="ppszDisplayName">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IBindCtx*, IMoniker*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pbc">pbc</param>, <param name="pmkToLeft">pmkToLeft</param>, <param name="ppszDisplayName">ppszDisplayName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ParseDisplayName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pmkToLeft">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="pszDisplayName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pchEaten">
+                    <type>uint*</type>
+                </param>
+                <param name="ppmkOut">
+                    <type>IMoniker**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, IBindCtx*, IMoniker*, ushort*, uint*, IMoniker**, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pbc">pbc</param>, <param name="pmkToLeft">pmkToLeft</param>, <param name="pszDisplayName">pszDisplayName</param>, <param name="pchEaten">pchEaten</param>, <param name="ppmkOut">ppmkOut</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsSystemMoniker" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwMksys">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMoniker*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IMoniker*)Unsafe.AsPointer(ref this)</param>, <param name="pdwMksys">pdwMksys</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

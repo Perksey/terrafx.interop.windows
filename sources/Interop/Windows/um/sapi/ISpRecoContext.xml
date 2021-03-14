@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpRecoContext" access="public" native="struct ISpRecoContext : ISpEventSource" uuid="f740a62f-7c15-489e-8234-940a33d9272d" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifySink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNotifySink">
+                    <type>ISpNotifySink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ISpNotifySink*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pNotifySink">pNotifySink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyWindowMessage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hWnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Msg">
+                    <type>uint</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, IntPtr, uint, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="hWnd">hWnd</param>, <param name="Msg">Msg</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyCallbackFunction" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfnCallback">
+                    <type>delegate* unmanaged&lt;nuint, nint, void&gt;*</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, delegate* unmanaged&lt;nuint, nint, void&gt;*, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pfnCallback">pfnCallback</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyCallbackInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSpCallback">
+                    <type>ISpNotifyCallback*</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ISpNotifyCallback*, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pSpCallback">pSpCallback</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyWin32Event" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WaitForNotifyEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="dwMilliseconds">dwMilliseconds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNotifyEventHandle" access="public" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, IntPtr&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetInterest" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ullEventInterest">
+                    <type>ulong</type>
+                </param>
+                <param name="ullQueuedInterest">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ulong, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="ullEventInterest">ullEventInterest</param>, <param name="ullQueuedInterest">ullQueuedInterest</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEvents" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="pEventArray">
+                    <type>SPEVENT*</type>
+                </param>
+                <param name="pulFetched">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, uint, SPEVENT*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="ulCount">ulCount</param>, <param name="pEventArray">pEventArray</param>, <param name="pulFetched">pulFetched</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pInfo">
+                    <type>SPEVENTSOURCEINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, SPEVENTSOURCEINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pInfo">pInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRecognizer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppRecognizer">
+                    <type>ISpRecognizer**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ISpRecognizer**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="ppRecognizer">ppRecognizer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateGrammar" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ullGrammarId">
+                    <type>ulong</type>
+                </param>
+                <param name="ppGrammar">
+                    <type>ISpRecoGrammar**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ulong, ISpRecoGrammar**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="ullGrammarId">ullGrammarId</param>, <param name="ppGrammar">ppGrammar</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStatus">
+                    <type>SPRECOCONTEXTSTATUS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, SPRECOCONTEXTSTATUS*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pStatus">pStatus</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMaxAlternates" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcAlternates">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pcAlternates">pcAlternates</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMaxAlternates" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cAlternates">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="cAlternates">cAlternates</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAudioOptions" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Options">
+                    <type>SPAUDIOOPTIONS</type>
+                </param>
+                <param name="pAudioFormatId">
+                    <type>Guid*</type>
+                </param>
+                <param name="pWaveFormatEx">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, SPAUDIOOPTIONS, Guid*, WAVEFORMATEX*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="Options">Options</param>, <param name="pAudioFormatId">pAudioFormatId</param>, <param name="pWaveFormatEx">pWaveFormatEx</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAudioOptions" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pOptions">
+                    <type>SPAUDIOOPTIONS*</type>
+                </param>
+                <param name="pAudioFormatId">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppCoMemWFEX">
+                    <type>WAVEFORMATEX**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, SPAUDIOOPTIONS*, Guid*, WAVEFORMATEX**, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pOptions">pOptions</param>, <param name="pAudioFormatId">pAudioFormatId</param>, <param name="ppCoMemWFEX">ppCoMemWFEX</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DeserializeResult" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSerializedResult">
+                    <type>SPSERIALIZEDRESULT*</type>
+                </param>
+                <param name="ppResult">
+                    <type>ISpRecoResult**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, SPSERIALIZEDRESULT*, ISpRecoResult**, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pSerializedResult">pSerializedResult</param>, <param name="ppResult">ppResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Bookmark" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Options">
+                    <type>SPBOOKMARKOPTIONS</type>
+                </param>
+                <param name="ullStreamPosition">
+                    <type>ulong</type>
+                </param>
+                <param name="lparamEvent">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, SPBOOKMARKOPTIONS, ulong, nint, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="Options">Options</param>, <param name="ullStreamPosition">ullStreamPosition</param>, <param name="lparamEvent">lparamEvent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAdaptationData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pAdaptationData">
+                    <type>ushort*</type>
+                </param>
+                <param name="cch">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pAdaptationData">pAdaptationData</param>, <param name="cch">cch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Pause" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Resume" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetVoice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pVoice">
+                    <type>ISpVoice*</type>
+                </param>
+                <param name="fAllowFormatChanges">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ISpVoice*, int, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pVoice">pVoice</param>, <param name="fAllowFormatChanges">fAllowFormatChanges</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVoice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppVoice">
+                    <type>ISpVoice**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ISpVoice**, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="ppVoice">ppVoice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetVoicePurgeEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ullEventInterest">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="ullEventInterest">ullEventInterest</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVoicePurgeEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pullEventInterest">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="pullEventInterest">pullEventInterest</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetContextState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="eContextState">
+                    <type>SPCONTEXTSTATE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, SPCONTEXTSTATE, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="eContextState">eContextState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetContextState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="peContextState">
+                    <type>SPCONTEXTSTATE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoContext*, SPCONTEXTSTATE*, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ISpRecoContext*)Unsafe.AsPointer(ref this)</param>, <param name="peContextState">peContextState</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

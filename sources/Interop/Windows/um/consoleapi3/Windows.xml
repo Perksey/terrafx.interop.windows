@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/consoleapi3.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="GetNumberOfConsoleMouseButtons" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpNumberOfMouseButtons">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetConsoleFontSize" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type>COORD</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="nFont">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetCurrentConsoleFont" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bMaximumWindow">
+                    <type>int</type>
+                </param>
+                <param name="lpConsoleCurrentFont">
+                    <type>CONSOLE_FONT_INFO*</type>
+                </param>
+            </function>
+            <function name="GetCurrentConsoleFontEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bMaximumWindow">
+                    <type>int</type>
+                </param>
+                <param name="lpConsoleCurrentFontEx">
+                    <type>CONSOLE_FONT_INFOEX*</type>
+                </param>
+            </function>
+            <function name="SetCurrentConsoleFontEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bMaximumWindow">
+                    <type>int</type>
+                </param>
+                <param name="lpConsoleCurrentFontEx">
+                    <type>CONSOLE_FONT_INFOEX*</type>
+                </param>
+            </function>
+            <function name="GetConsoleSelectionInfo" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpConsoleSelectionInfo">
+                    <type>CONSOLE_SELECTION_INFO*</type>
+                </param>
+            </function>
+            <function name="GetConsoleHistoryInfo" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpConsoleHistoryInfo">
+                    <type>CONSOLE_HISTORY_INFO*</type>
+                </param>
+            </function>
+            <function name="SetConsoleHistoryInfo" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpConsoleHistoryInfo">
+                    <type>CONSOLE_HISTORY_INFO*</type>
+                </param>
+            </function>
+            <function name="GetConsoleDisplayMode" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpModeFlags">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetConsoleDisplayMode" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpNewScreenBufferDimensions">
+                    <type>COORD*</type>
+                </param>
+            </function>
+            <function name="GetConsoleWindow" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="HWND">IntPtr</type>
+            </function>
+            <function name="AddConsoleAliasA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Source">
+                    <type>sbyte*</type>
+                </param>
+                <param name="Target">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ExeName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="AddConsoleAliasW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Source">
+                    <type>ushort*</type>
+                </param>
+                <param name="Target">
+                    <type>ushort*</type>
+                </param>
+                <param name="ExeName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetConsoleAliasA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="Source">
+                    <type>sbyte*</type>
+                </param>
+                <param name="TargetBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="TargetBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="ExeName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="GetConsoleAliasW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="Source">
+                    <type>ushort*</type>
+                </param>
+                <param name="TargetBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="TargetBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="ExeName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetConsoleAliasesLengthA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="ExeName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="GetConsoleAliasesLengthW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="ExeName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetConsoleAliasExesLengthA" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="GetConsoleAliasExesLengthW" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="GetConsoleAliasesA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="AliasBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="AliasBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="ExeName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="GetConsoleAliasesW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="AliasBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="AliasBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="ExeName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetConsoleAliasExesA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="ExeNameBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ExeNameBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetConsoleAliasExesW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="ExeNameBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="ExeNameBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="ExpungeConsoleCommandHistoryA" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="ExeName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="ExpungeConsoleCommandHistoryW" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="ExeName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="SetConsoleNumberOfCommandsA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Number">
+                    <type>uint</type>
+                </param>
+                <param name="ExeName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="SetConsoleNumberOfCommandsW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Number">
+                    <type>uint</type>
+                </param>
+                <param name="ExeName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetConsoleCommandHistoryLengthA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="ExeName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="GetConsoleCommandHistoryLengthW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="ExeName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetConsoleCommandHistoryA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="Commands">
+                    <type>sbyte*</type>
+                </param>
+                <param name="CommandBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="ExeName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="GetConsoleCommandHistoryW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="Commands">
+                    <type>ushort*</type>
+                </param>
+                <param name="CommandBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="ExeName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetConsoleProcessList" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpdwProcessList">
+                    <type>uint*</type>
+                </param>
+                <param name="dwProcessCount">
+                    <type>uint</type>
+                </param>
+            </function>
+            <constant name="CONSOLE_NO_SELECTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000
+            </code>
+                </value>
+            </constant>
+            <constant name="CONSOLE_SELECTION_IN_PROGRESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="CONSOLE_SELECTION_NOT_EMPTY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="CONSOLE_MOUSE_SELECTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="CONSOLE_MOUSE_DOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="HISTORY_NO_DUP_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="CONSOLE_FULLSCREEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="CONSOLE_FULLSCREEN_HARDWARE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="CONSOLE_FULLSCREEN_MODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="CONSOLE_WINDOWED_MODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="AddConsoleAlias" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>AddConsoleAliasW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetConsoleAlias" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetConsoleAliasW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetConsoleAliasesLength" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetConsoleAliasesLengthW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetConsoleAliasExesLength" access="public">
+                <type primitive="False">delegate*&lt;uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetConsoleAliasExesLengthW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetConsoleAliases" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetConsoleAliasesW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetConsoleAliasExes" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetConsoleAliasExesW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ExpungeConsoleCommandHistory" access="public">
+                <type primitive="False">delegate*&lt;ushort*, void&gt;</type>
+                <value>
+                    <deref>
+                        <code>ExpungeConsoleCommandHistoryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SetConsoleNumberOfCommands" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetConsoleNumberOfCommandsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetConsoleCommandHistoryLength" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetConsoleCommandHistoryLengthW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetConsoleCommandHistory" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetConsoleCommandHistoryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinTrust.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_PROVIDER_SIGSTATE" access="public" unsafe="true">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="rhSecondarySigs" access="public">
+                <type native="HCRYPTMSG *">void**</type>
+            </field>
+            <field name="hPrimarySig" access="public">
+                <type native="HCRYPTMSG">void*</type>
+            </field>
+            <field name="fFirstAttemptMade" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="fNoMoreSigs" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="cSecondarySigs" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwCurrentIndex" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="fSupportMultiSig" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="dwCryptoPolicySupport" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="iAttemptCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="fCheckedSealing" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="pSealingSignature" access="public">
+                <type native="struct _SEALING_SIGNATURE_ATTRIBUTE *">SEALING_SIGNATURE_ATTRIBUTE*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

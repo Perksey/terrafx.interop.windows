@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/dxgi1_4.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDXGIFactory4" access="public" native="struct IDXGIFactory4 : IDXGIFactory3" uuid="1bc6ea02-ef36-464f-bf0c-21ca39e5168a" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnknown">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="pUnknown">pUnknown</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetParent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppParent">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppParent">ppParent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumAdapters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Adapter">
+                    <type>uint</type>
+                </param>
+                <param name="ppAdapter">
+                    <type>IDXGIAdapter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, uint, IDXGIAdapter**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="Adapter">Adapter</param>, <param name="ppAdapter">ppAdapter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="MakeWindowAssociation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="WindowHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IntPtr, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="WindowHandle">WindowHandle</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWindowAssociation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pWindowHandle">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="pWindowHandle">pWindowHandle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSwapChain" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDevice">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pDesc">
+                    <type>DXGI_SWAP_CHAIN_DESC*</type>
+                </param>
+                <param name="ppSwapChain">
+                    <type>IDXGISwapChain**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IUnknown*, DXGI_SWAP_CHAIN_DESC*, IDXGISwapChain**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="pDevice">pDevice</param>, <param name="pDesc">pDesc</param>, <param name="ppSwapChain">ppSwapChain</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSoftwareAdapter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Module">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ppAdapter">
+                    <type>IDXGIAdapter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IntPtr, IDXGIAdapter**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="Module">Module</param>, <param name="ppAdapter">ppAdapter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumAdapters1" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Adapter">
+                    <type>uint</type>
+                </param>
+                <param name="ppAdapter">
+                    <type>IDXGIAdapter1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, uint, IDXGIAdapter1**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="Adapter">Adapter</param>, <param name="ppAdapter">ppAdapter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsCurrent" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsWindowedStereoEnabled" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSwapChainForHwnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDevice">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="hWnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pDesc">
+                    <type>DXGI_SWAP_CHAIN_DESC1*</type>
+                </param>
+                <param name="pFullscreenDesc">
+                    <type>DXGI_SWAP_CHAIN_FULLSCREEN_DESC*</type>
+                </param>
+                <param name="pRestrictToOutput">
+                    <type>IDXGIOutput*</type>
+                </param>
+                <param name="ppSwapChain">
+                    <type>IDXGISwapChain1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IUnknown*, IntPtr, DXGI_SWAP_CHAIN_DESC1*, DXGI_SWAP_CHAIN_FULLSCREEN_DESC*, IDXGIOutput*, IDXGISwapChain1**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="pDevice">pDevice</param>, <param name="hWnd">hWnd</param>, <param name="pDesc">pDesc</param>, <param name="pFullscreenDesc">pFullscreenDesc</param>, <param name="pRestrictToOutput">pRestrictToOutput</param>, <param name="ppSwapChain">ppSwapChain</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSwapChainForCoreWindow" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDevice">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pWindow">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pDesc">
+                    <type>DXGI_SWAP_CHAIN_DESC1*</type>
+                </param>
+                <param name="pRestrictToOutput">
+                    <type>IDXGIOutput*</type>
+                </param>
+                <param name="ppSwapChain">
+                    <type>IDXGISwapChain1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IUnknown*, IUnknown*, DXGI_SWAP_CHAIN_DESC1*, IDXGIOutput*, IDXGISwapChain1**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="pDevice">pDevice</param>, <param name="pWindow">pWindow</param>, <param name="pDesc">pDesc</param>, <param name="pRestrictToOutput">pRestrictToOutput</param>, <param name="ppSwapChain">ppSwapChain</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSharedResourceAdapterLuid" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hResource">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pLuid">
+                    <type>LUID*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IntPtr, LUID*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="hResource">hResource</param>, <param name="pLuid">pLuid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterStereoStatusWindow" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="WindowHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="wMsg">
+                    <type>uint</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IntPtr, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="WindowHandle">WindowHandle</param>, <param name="wMsg">wMsg</param>, <param name="pdwCookie">pdwCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterStereoStatusEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hEvent">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IntPtr, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="hEvent">hEvent</param>, <param name="pdwCookie">pdwCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterStereoStatus" access="public" unsafe="true">
+                <type>void</type>
+                <param name="dwCookie">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDXGIFactory4*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="dwCookie">dwCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterOcclusionStatusWindow" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="WindowHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="wMsg">
+                    <type>uint</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IntPtr, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="WindowHandle">WindowHandle</param>, <param name="wMsg">wMsg</param>, <param name="pdwCookie">pdwCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterOcclusionStatusEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hEvent">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IntPtr, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="hEvent">hEvent</param>, <param name="pdwCookie">pdwCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterOcclusionStatus" access="public" unsafe="true">
+                <type>void</type>
+                <param name="dwCookie">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDXGIFactory4*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="dwCookie">dwCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSwapChainForComposition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDevice">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pDesc">
+                    <type>DXGI_SWAP_CHAIN_DESC1*</type>
+                </param>
+                <param name="pRestrictToOutput">
+                    <type>IDXGIOutput*</type>
+                </param>
+                <param name="ppSwapChain">
+                    <type>IDXGISwapChain1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, IUnknown*, DXGI_SWAP_CHAIN_DESC1*, IDXGIOutput*, IDXGISwapChain1**, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="pDevice">pDevice</param>, <param name="pDesc">pDesc</param>, <param name="pRestrictToOutput">pRestrictToOutput</param>, <param name="ppSwapChain">ppSwapChain</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCreationFlags" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, uint&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumAdapterByLuid" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="AdapterLuid">
+                    <type>LUID</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvAdapter">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, LUID, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="AdapterLuid">AdapterLuid</param>, <param name="riid">riid</param>, <param name="ppvAdapter">ppvAdapter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumWarpAdapter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvAdapter">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIFactory4*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(IDXGIFactory4*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvAdapter">ppvAdapter</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

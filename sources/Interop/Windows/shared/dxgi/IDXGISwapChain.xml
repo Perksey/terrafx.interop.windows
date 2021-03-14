@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/dxgi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDXGISwapChain" access="public" native="struct IDXGISwapChain : IDXGIDeviceSubObject" uuid="310d36a0-d2e7-4c0a-aa04-6a9d23b8886a" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnknown">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="pUnknown">pUnknown</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetParent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppParent">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppParent">ppParent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppDevice">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppDevice">ppDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Present" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="SyncInterval">
+                    <type>uint</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="SyncInterval">SyncInterval</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Buffer">
+                    <type>uint</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppSurface">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, uint, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="Buffer">Buffer</param>, <param name="riid">riid</param>, <param name="ppSurface">ppSurface</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetFullscreenState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Fullscreen">
+                    <type>int</type>
+                </param>
+                <param name="pTarget">
+                    <type>IDXGIOutput*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, int, IDXGIOutput*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="Fullscreen">Fullscreen</param>, <param name="pTarget">pTarget</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFullscreenState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFullscreen">
+                    <type>int*</type>
+                </param>
+                <param name="ppTarget">
+                    <type>IDXGIOutput**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, int*, IDXGIOutput**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="pFullscreen">pFullscreen</param>, <param name="ppTarget">ppTarget</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDesc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>DXGI_SWAP_CHAIN_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, DXGI_SWAP_CHAIN_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResizeBuffers" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="BufferCount">
+                    <type>uint</type>
+                </param>
+                <param name="Width">
+                    <type>uint</type>
+                </param>
+                <param name="Height">
+                    <type>uint</type>
+                </param>
+                <param name="NewFormat">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="SwapChainFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, uint, uint, uint, DXGI_FORMAT, uint, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="BufferCount">BufferCount</param>, <param name="Width">Width</param>, <param name="Height">Height</param>, <param name="NewFormat">NewFormat</param>, <param name="SwapChainFlags">SwapChainFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResizeTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNewTargetParameters">
+                    <type>DXGI_MODE_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, DXGI_MODE_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="pNewTargetParameters">pNewTargetParameters</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetContainingOutput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppOutput">
+                    <type>IDXGIOutput**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, IDXGIOutput**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="ppOutput">ppOutput</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFrameStatistics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStats">
+                    <type>DXGI_FRAME_STATISTICS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, DXGI_FRAME_STATISTICS*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="pStats">pStats</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLastPresentCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLastPresentCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGISwapChain*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IDXGISwapChain*)Unsafe.AsPointer(ref this)</param>, <param name="pLastPresentCount">pLastPresentCount</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

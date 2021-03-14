@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CERT_CHAIN" access="public" unsafe="true">
+            <field name="cCerts" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="certs" access="public">
+                <type native="PCERT_BLOB">CRYPTOAPI_BLOB*</type>
+            </field>
+            <field name="keyLocatorInfo" access="public">
+                <type native="">CRYPT_KEY_PROV_INFO</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

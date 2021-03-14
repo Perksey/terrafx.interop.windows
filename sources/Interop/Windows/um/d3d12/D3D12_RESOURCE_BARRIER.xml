@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D12_RESOURCE_BARRIER" access="public">
+            <field name="Type" access="public">
+                <type native="">D3D12_RESOURCE_BARRIER_TYPE</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="">D3D12_RESOURCE_BARRIER_FLAGS</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="D3D12_RESOURCE_BARRIER::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:2754:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Transition" access="public">
+                <type native="">ref D3D12_RESOURCE_TRANSITION_BARRIER</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Transition, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Aliasing" access="public">
+                <type native="">ref D3D12_RESOURCE_ALIASING_BARRIER</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Aliasing, 1));
+        </code>
+                </get>
+            </field>
+            <field name="UAV" access="public">
+                <type native="">ref D3D12_RESOURCE_UAV_BARRIER</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.UAV, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="Transition" access="public" offset="0">
+                    <type native="">D3D12_RESOURCE_TRANSITION_BARRIER</type>
+                </field>
+                <field name="Aliasing" access="public" offset="0">
+                    <type native="">D3D12_RESOURCE_ALIASING_BARRIER</type>
+                </field>
+                <field name="UAV" access="public" offset="0">
+                    <type native="">D3D12_RESOURCE_UAV_BARRIER</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

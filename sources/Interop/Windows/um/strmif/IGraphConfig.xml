@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IGraphConfig" access="public" native="struct IGraphConfig : IUnknown" uuid="03a1eb8e-32bf-4245-8502-114d08a9cb88" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Reconnect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pOutputPin">
+                    <type>IPin*</type>
+                </param>
+                <param name="pInputPin">
+                    <type>IPin*</type>
+                </param>
+                <param name="pmtFirstConnection">
+                    <type>AM_MEDIA_TYPE*</type>
+                </param>
+                <param name="pUsingFilter">
+                    <type>IBaseFilter*</type>
+                </param>
+                <param name="hAbortEvent">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, IPin*, IPin*, AM_MEDIA_TYPE*, IBaseFilter*, IntPtr, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="pOutputPin">pOutputPin</param>, <param name="pInputPin">pInputPin</param>, <param name="pmtFirstConnection">pmtFirstConnection</param>, <param name="pUsingFilter">pUsingFilter</param>, <param name="hAbortEvent">hAbortEvent</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Reconfigure" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCallback">
+                    <type>IGraphConfigCallback*</type>
+                </param>
+                <param name="pvContext">
+                    <type>void*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="hAbortEvent">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, IGraphConfigCallback*, void*, uint, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="pCallback">pCallback</param>, <param name="pvContext">pvContext</param>, <param name="dwFlags">dwFlags</param>, <param name="hAbortEvent">hAbortEvent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddFilterToCache" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>IBaseFilter*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, IBaseFilter*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumCacheFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pEnum">
+                    <type>IEnumFilters**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, IEnumFilters**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="pEnum">pEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveFilterFromCache" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>IBaseFilter*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, IBaseFilter*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStartTime" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="prtStart">
+                    <type>long*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, long*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="prtStart">prtStart</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushThroughData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pOutputPin">
+                    <type>IPin*</type>
+                </param>
+                <param name="pConnection">
+                    <type>IPinConnection*</type>
+                </param>
+                <param name="hEventAbort">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, IPin*, IPinConnection*, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="pOutputPin">pOutputPin</param>, <param name="pConnection">pConnection</param>, <param name="hEventAbort">hEventAbort</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetFilterFlags" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>IBaseFilter*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, IBaseFilter*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFilterFlags" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>IBaseFilter*</type>
+                </param>
+                <param name="pdwFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, IBaseFilter*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>, <param name="pdwFlags">pdwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveFilterEx" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFilter">
+                    <type>IBaseFilter*</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IGraphConfig*, IBaseFilter*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IGraphConfig*)Unsafe.AsPointer(ref this)</param>, <param name="pFilter">pFilter</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

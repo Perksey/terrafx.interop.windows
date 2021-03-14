@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D12_GRAPHICS_PIPELINE_STATE_DESC" access="public" unsafe="true">
+            <field name="pRootSignature" access="public">
+                <type native="ID3D12RootSignature *">ID3D12RootSignature*</type>
+            </field>
+            <field name="VS" access="public">
+                <type native="">D3D12_SHADER_BYTECODE</type>
+            </field>
+            <field name="PS" access="public">
+                <type native="">D3D12_SHADER_BYTECODE</type>
+            </field>
+            <field name="DS" access="public">
+                <type native="">D3D12_SHADER_BYTECODE</type>
+            </field>
+            <field name="HS" access="public">
+                <type native="">D3D12_SHADER_BYTECODE</type>
+            </field>
+            <field name="GS" access="public">
+                <type native="">D3D12_SHADER_BYTECODE</type>
+            </field>
+            <field name="StreamOutput" access="public">
+                <type native="">D3D12_STREAM_OUTPUT_DESC</type>
+            </field>
+            <field name="BlendState" access="public">
+                <type native="">D3D12_BLEND_DESC</type>
+            </field>
+            <field name="SampleMask" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="RasterizerState" access="public">
+                <type native="">D3D12_RASTERIZER_DESC</type>
+            </field>
+            <field name="DepthStencilState" access="public">
+                <type native="">D3D12_DEPTH_STENCIL_DESC</type>
+            </field>
+            <field name="InputLayout" access="public">
+                <type native="">D3D12_INPUT_LAYOUT_DESC</type>
+            </field>
+            <field name="IBStripCutValue" access="public">
+                <type native="">D3D12_INDEX_BUFFER_STRIP_CUT_VALUE</type>
+            </field>
+            <field name="PrimitiveTopologyType" access="public">
+                <type native="">D3D12_PRIMITIVE_TOPOLOGY_TYPE</type>
+            </field>
+            <field name="NumRenderTargets" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="RTVFormats" access="public">
+                <type native="DXGI_FORMAT [8]" count="8" fixed="_RTVFormats_e__FixedBuffer">DXGI_FORMAT</type>
+            </field>
+            <field name="DSVFormat" access="public">
+                <type native="">DXGI_FORMAT</type>
+            </field>
+            <field name="SampleDesc" access="public">
+                <type native="">DXGI_SAMPLE_DESC</type>
+            </field>
+            <field name="NodeMask" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="CachedPSO" access="public">
+                <type native="">D3D12_CACHED_PIPELINE_STATE</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="">D3D12_PIPELINE_STATE_FLAGS</type>
+            </field>
+            <struct name="_RTVFormats_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">DXGI_FORMAT</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">DXGI_FORMAT</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">DXGI_FORMAT</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">DXGI_FORMAT</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">DXGI_FORMAT</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">DXGI_FORMAT</type>
+                </field>
+                <field name="e6" access="public">
+                    <type native="">DXGI_FORMAT</type>
+                </field>
+                <field name="e7" access="public">
+                    <type native="">DXGI_FORMAT</type>
+                </field>
+                <indexer access="public">
+                    <type>ref DXGI_FORMAT</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;DXGI_FORMAT&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 8);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

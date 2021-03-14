@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from winrt/winstring.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="WindowsCreateString" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="sourceString">
+                    <type>ushort*</type>
+                </param>
+                <param name="length">
+                    <type>uint</type>
+                </param>
+                <param name="@string">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsCreateStringReference" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="sourceString">
+                    <type>ushort*</type>
+                </param>
+                <param name="length">
+                    <type>uint</type>
+                </param>
+                <param name="hstringHeader">
+                    <type>HSTRING_HEADER*</type>
+                </param>
+                <param name="@string">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsDeleteString" access="public" lib="ComBase" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WindowsDuplicateString" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+                <param name="newString">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsGetStringLen" access="public" lib="ComBase" static="true" unsafe="true">
+                <type native="UINT32">uint</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WindowsGetStringRawBuffer" access="public" lib="ComBase" static="true">
+                <type native="PCWSTR">ushort*</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+                <param name="length">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="WindowsIsStringEmpty" access="public" lib="ComBase" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WindowsStringHasEmbeddedNull" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hasEmbedNull">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="WindowsCompareStringOrdinal" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="string1">
+                    <type>IntPtr</type>
+                </param>
+                <param name="string2">
+                    <type>IntPtr</type>
+                </param>
+                <param name="result">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="WindowsSubstring" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+                <param name="startIndex">
+                    <type>uint</type>
+                </param>
+                <param name="newString">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsSubstringWithSpecifiedLength" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+                <param name="startIndex">
+                    <type>uint</type>
+                </param>
+                <param name="length">
+                    <type>uint</type>
+                </param>
+                <param name="newString">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsConcatString" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="string1">
+                    <type>IntPtr</type>
+                </param>
+                <param name="string2">
+                    <type>IntPtr</type>
+                </param>
+                <param name="newString">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsReplaceString" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+                <param name="stringReplaced">
+                    <type>IntPtr</type>
+                </param>
+                <param name="stringReplaceWith">
+                    <type>IntPtr</type>
+                </param>
+                <param name="newString">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsTrimStringStart" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+                <param name="trimString">
+                    <type>IntPtr</type>
+                </param>
+                <param name="newString">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsTrimStringEnd" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="@string">
+                    <type>IntPtr</type>
+                </param>
+                <param name="trimString">
+                    <type>IntPtr</type>
+                </param>
+                <param name="newString">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsPreallocateStringBuffer" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="length">
+                    <type>uint</type>
+                </param>
+                <param name="charBuffer">
+                    <type>ushort**</type>
+                </param>
+                <param name="bufferHandle">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsPromoteStringBuffer" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="bufferHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="@string">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WindowsDeleteStringBuffer" access="public" lib="ComBase" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bufferHandle">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WindowsInspectString" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="targetHString">
+                    <type>nuint</type>
+                </param>
+                <param name="machine">
+                    <type>ushort</type>
+                </param>
+                <param name="callback">
+                    <type>delegate* unmanaged&lt;void*, nuint, uint, byte*, int&gt;</type>
+                </param>
+                <param name="context">
+                    <type>void*</type>
+                </param>
+                <param name="length">
+                    <type>uint*</type>
+                </param>
+                <param name="targetStringAddress">
+                    <type>nuint*</type>
+                </param>
+            </function>
+            <function name="WindowsInspectString2" access="public" lib="ComBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="targetHString">
+                    <type>ulong</type>
+                </param>
+                <param name="machine">
+                    <type>ushort</type>
+                </param>
+                <param name="callback">
+                    <type>delegate* unmanaged&lt;void*, ulong, uint, byte*, int&gt;</type>
+                </param>
+                <param name="context">
+                    <type>void*</type>
+                </param>
+                <param name="length">
+                    <type>uint*</type>
+                </param>
+                <param name="targetStringAddress">
+                    <type>ulong*</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfmediaengine.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFMediaEngineProtectedContent" access="public" native="struct IMFMediaEngineProtectedContent : IUnknown" uuid="9f8021e8-9c8c-487e-bb5c-79aa4779938c" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineProtectedContent*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFMediaEngineProtectedContent*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineProtectedContent*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFMediaEngineProtectedContent*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineProtectedContent*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFMediaEngineProtectedContent*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShareResources" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnkDeviceContext">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineProtectedContent*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFMediaEngineProtectedContent*)Unsafe.AsPointer(ref this)</param>, <param name="pUnkDeviceContext">pUnkDeviceContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRequiredProtections" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFrameProtectionFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineProtectedContent*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFMediaEngineProtectedContent*)Unsafe.AsPointer(ref this)</param>, <param name="pFrameProtectionFlags">pFrameProtectionFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOPMWindow" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineProtectedContent*, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFMediaEngineProtectedContent*)Unsafe.AsPointer(ref this)</param>, <param name="hwnd">hwnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TransferVideoFrame" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDstSurf">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pSrc">
+                    <type>MFVideoNormalizedRect*</type>
+                </param>
+                <param name="pDst">
+                    <type>RECT*</type>
+                </param>
+                <param name="pBorderClr">
+                    <type>MFARGB*</type>
+                </param>
+                <param name="pFrameProtectionFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineProtectedContent*, IUnknown*, MFVideoNormalizedRect*, RECT*, MFARGB*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFMediaEngineProtectedContent*)Unsafe.AsPointer(ref this)</param>, <param name="pDstSurf">pDstSurf</param>, <param name="pSrc">pSrc</param>, <param name="pDst">pDst</param>, <param name="pBorderClr">pBorderClr</param>, <param name="pFrameProtectionFlags">pFrameProtectionFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetContentProtectionManager" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCPM">
+                    <type>IMFContentProtectionManager*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineProtectedContent*, IMFContentProtectionManager*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFMediaEngineProtectedContent*)Unsafe.AsPointer(ref this)</param>, <param name="pCPM">pCPM</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetApplicationCertificate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbBlob">
+                    <type>byte*</type>
+                </param>
+                <param name="cbBlob">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineProtectedContent*, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFMediaEngineProtectedContent*)Unsafe.AsPointer(ref this)</param>, <param name="pbBlob">pbBlob</param>, <param name="cbBlob">cbBlob</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

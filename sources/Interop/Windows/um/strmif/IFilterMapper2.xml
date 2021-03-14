@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IFilterMapper2" access="public" native="struct IFilterMapper2 : IUnknown" uuid="b79bb0b0-33c1-11d1-abe1-00a0c905f375" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IFilterMapper2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IFilterMapper2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IFilterMapper2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateCategory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="clsidCategory">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwCategoryMerit">
+                    <type>uint</type>
+                </param>
+                <param name="Description">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper2*, Guid*, uint, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IFilterMapper2*)Unsafe.AsPointer(ref this)</param>, <param name="clsidCategory">clsidCategory</param>, <param name="dwCategoryMerit">dwCategoryMerit</param>, <param name="Description">Description</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pclsidCategory">
+                    <type>Guid*</type>
+                </param>
+                <param name="szInstance">
+                    <type>ushort*</type>
+                </param>
+                <param name="Filter">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper2*, Guid*, ushort*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IFilterMapper2*)Unsafe.AsPointer(ref this)</param>, <param name="pclsidCategory">pclsidCategory</param>, <param name="szInstance">szInstance</param>, <param name="Filter">Filter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="clsidFilter">
+                    <type>Guid*</type>
+                </param>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppMoniker">
+                    <type>IMoniker**</type>
+                </param>
+                <param name="pclsidCategory">
+                    <type>Guid*</type>
+                </param>
+                <param name="szInstance">
+                    <type>ushort*</type>
+                </param>
+                <param name="prf2">
+                    <type>REGFILTER2*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper2*, Guid*, ushort*, IMoniker**, Guid*, ushort*, REGFILTER2*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IFilterMapper2*)Unsafe.AsPointer(ref this)</param>, <param name="clsidFilter">clsidFilter</param>, <param name="Name">Name</param>, <param name="ppMoniker">ppMoniker</param>, <param name="pclsidCategory">pclsidCategory</param>, <param name="szInstance">szInstance</param>, <param name="prf2">prf2</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumMatchingFilters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumMoniker**</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="bExactMatch">
+                    <type>int</type>
+                </param>
+                <param name="dwMerit">
+                    <type>uint</type>
+                </param>
+                <param name="bInputNeeded">
+                    <type>int</type>
+                </param>
+                <param name="cInputTypes">
+                    <type>uint</type>
+                </param>
+                <param name="pInputTypes">
+                    <type>Guid*</type>
+                </param>
+                <param name="pMedIn">
+                    <type>REGPINMEDIUM*</type>
+                </param>
+                <param name="pPinCategoryIn">
+                    <type>Guid*</type>
+                </param>
+                <param name="bRender">
+                    <type>int</type>
+                </param>
+                <param name="bOutputNeeded">
+                    <type>int</type>
+                </param>
+                <param name="cOutputTypes">
+                    <type>uint</type>
+                </param>
+                <param name="pOutputTypes">
+                    <type>Guid*</type>
+                </param>
+                <param name="pMedOut">
+                    <type>REGPINMEDIUM*</type>
+                </param>
+                <param name="pPinCategoryOut">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper2*, IEnumMoniker**, uint, int, uint, int, uint, Guid*, REGPINMEDIUM*, Guid*, int, int, uint, Guid*, REGPINMEDIUM*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IFilterMapper2*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>, <param name="dwFlags">dwFlags</param>, <param name="bExactMatch">bExactMatch</param>, <param name="dwMerit">dwMerit</param>, <param name="bInputNeeded">bInputNeeded</param>, <param name="cInputTypes">cInputTypes</param>, <param name="pInputTypes">pInputTypes</param>, <param name="pMedIn">pMedIn</param>, <param name="pPinCategoryIn">pPinCategoryIn</param>, <param name="bRender">bRender</param>, <param name="bOutputNeeded">bOutputNeeded</param>, <param name="cOutputTypes">cOutputTypes</param>, <param name="pOutputTypes">pOutputTypes</param>, <param name="pMedOut">pMedOut</param>, <param name="pPinCategoryOut">pPinCategoryOut</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

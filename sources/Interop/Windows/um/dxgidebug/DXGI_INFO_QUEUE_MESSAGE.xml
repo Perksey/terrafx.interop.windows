@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dxgidebug.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DXGI_INFO_QUEUE_MESSAGE" access="public" unsafe="true">
+            <field name="Producer" access="public">
+                <type native="DXGI_DEBUG_ID">Guid</type>
+            </field>
+            <field name="Category" access="public">
+                <type native="">DXGI_INFO_QUEUE_MESSAGE_CATEGORY</type>
+            </field>
+            <field name="Severity" access="public">
+                <type native="">DXGI_INFO_QUEUE_MESSAGE_SEVERITY</type>
+            </field>
+            <field name="ID" access="public">
+                <type native="DXGI_INFO_QUEUE_MESSAGE_ID">int</type>
+            </field>
+            <field name="pDescription" access="public">
+                <type native="const char *">sbyte*</type>
+            </field>
+            <field name="DescriptionByteLength" access="public">
+                <type native="SIZE_T">nuint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

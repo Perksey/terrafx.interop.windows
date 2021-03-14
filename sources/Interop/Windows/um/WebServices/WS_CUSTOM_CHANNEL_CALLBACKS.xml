@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WS_CUSTOM_CHANNEL_CALLBACKS" access="public" unsafe="true">
+            <field name="createChannelCallback" access="public">
+                <type native="WS_CREATE_CHANNEL_CALLBACK">delegate* unmanaged&lt;WS_CHANNEL_TYPE, void*, uint, void**, IntPtr, int&gt;</type>
+            </field>
+            <field name="freeChannelCallback" access="public">
+                <type native="WS_FREE_CHANNEL_CALLBACK">delegate* unmanaged&lt;void*, void&gt;</type>
+            </field>
+            <field name="resetChannelCallback" access="public">
+                <type native="WS_RESET_CHANNEL_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, int&gt;</type>
+            </field>
+            <field name="openChannelCallback" access="public">
+                <type native="WS_OPEN_CHANNEL_CALLBACK">delegate* unmanaged&lt;void*, WS_ENDPOINT_ADDRESS*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="closeChannelCallback" access="public">
+                <type native="WS_CLOSE_CHANNEL_CALLBACK">delegate* unmanaged&lt;void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="abortChannelCallback" access="public">
+                <type native="WS_ABORT_CHANNEL_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, int&gt;</type>
+            </field>
+            <field name="getChannelPropertyCallback" access="public">
+                <type native="WS_GET_CHANNEL_PROPERTY_CALLBACK">delegate* unmanaged&lt;void*, WS_CHANNEL_PROPERTY_ID, void*, uint, IntPtr, int&gt;</type>
+            </field>
+            <field name="setChannelPropertyCallback" access="public">
+                <type native="WS_SET_CHANNEL_PROPERTY_CALLBACK">delegate* unmanaged&lt;void*, WS_CHANNEL_PROPERTY_ID, void*, uint, IntPtr, int&gt;</type>
+            </field>
+            <field name="writeMessageStartCallback" access="public">
+                <type native="WS_WRITE_MESSAGE_START_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="writeMessageEndCallback" access="public">
+                <type native="WS_WRITE_MESSAGE_END_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="readMessageStartCallback" access="public">
+                <type native="WS_READ_MESSAGE_START_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="readMessageEndCallback" access="public">
+                <type native="WS_READ_MESSAGE_END_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="abandonMessageCallback" access="public">
+                <type native="WS_ABANDON_MESSAGE_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, IntPtr, int&gt;</type>
+            </field>
+            <field name="shutdownSessionChannelCallback" access="public">
+                <type native="WS_SHUTDOWN_SESSION_CHANNEL_CALLBACK">delegate* unmanaged&lt;void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1svg.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID2D1SvgDocument" access="public" native="struct ID2D1SvgDocument : ID2D1Resource" uuid="86b88e4d-afa4-4d7b-88e4-68a51c4a0aec" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFactory" access="public" unsafe="true">
+                <type>void</type>
+                <param name="factory">
+                    <type>ID2D1Factory**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1SvgDocument*, ID2D1Factory**, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="factory">factory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetViewportSize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="viewportSize">
+                    <type>D2D_SIZE_F</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, D2D_SIZE_F, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="viewportSize">viewportSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetViewportSize" access="public" unsafe="true">
+                <type native="D2D1_SIZE_F">D2D_SIZE_F</type>
+                <body>
+                    <code>
+                        <fixup type="*result">D2D_SIZE_F</fixup> result;
+        return *((delegate* unmanaged&lt;ID2D1SvgDocument*, D2D_SIZE_F*, D2D_SIZE_F*&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param><param special="retFixup">, &amp;result</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRoot" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="root">
+                    <type>ID2D1SvgElement*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, ID2D1SvgElement*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="root">root</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRoot" access="public" unsafe="true">
+                <type>void</type>
+                <param name="root">
+                    <type>ID2D1SvgElement**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1SvgDocument*, ID2D1SvgElement**, void&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="root">root</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindElementById" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="id">
+                    <type>ushort*</type>
+                </param>
+                <param name="svgElement">
+                    <type>ID2D1SvgElement**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, ushort*, ID2D1SvgElement**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="id">id</param>, <param name="svgElement">svgElement</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Serialize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="outputXmlStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="subtree">
+                    <type>ID2D1SvgElement*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, IStream*, ID2D1SvgElement*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="outputXmlStream">outputXmlStream</param>, <param name="subtree">subtree</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Deserialize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputXmlStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="subtree">
+                    <type>ID2D1SvgElement**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, IStream*, ID2D1SvgElement**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="inputXmlStream">inputXmlStream</param>, <param name="subtree">subtree</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePaint" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="paintType">
+                    <type>D2D1_SVG_PAINT_TYPE</type>
+                </param>
+                <param name="color">
+                    <type>DXGI_RGBA*</type>
+                </param>
+                <param name="id">
+                    <type>ushort*</type>
+                </param>
+                <param name="paint">
+                    <type>ID2D1SvgPaint**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, D2D1_SVG_PAINT_TYPE, DXGI_RGBA*, ushort*, ID2D1SvgPaint**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="paintType">paintType</param>, <param name="color">color</param>, <param name="id">id</param>, <param name="paint">paint</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateStrokeDashArray" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dashes">
+                    <type>D2D1_SVG_LENGTH*</type>
+                </param>
+                <param name="dashesCount">
+                    <type>uint</type>
+                </param>
+                <param name="strokeDashArray">
+                    <type>ID2D1SvgStrokeDashArray**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, D2D1_SVG_LENGTH*, uint, ID2D1SvgStrokeDashArray**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="dashes">dashes</param>, <param name="dashesCount">dashesCount</param>, <param name="strokeDashArray">strokeDashArray</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePointCollection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="points">
+                    <type>D2D_POINT_2F*</type>
+                </param>
+                <param name="pointsCount">
+                    <type>uint</type>
+                </param>
+                <param name="pointCollection">
+                    <type>ID2D1SvgPointCollection**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, D2D_POINT_2F*, uint, ID2D1SvgPointCollection**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="points">points</param>, <param name="pointsCount">pointsCount</param>, <param name="pointCollection">pointCollection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePathData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="segmentData">
+                    <type>float*</type>
+                </param>
+                <param name="segmentDataCount">
+                    <type>uint</type>
+                </param>
+                <param name="commands">
+                    <type>D2D1_SVG_PATH_COMMAND*</type>
+                </param>
+                <param name="commandsCount">
+                    <type>uint</type>
+                </param>
+                <param name="pathData">
+                    <type>ID2D1SvgPathData**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgDocument*, float*, uint, D2D1_SVG_PATH_COMMAND*, uint, ID2D1SvgPathData**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID2D1SvgDocument*)Unsafe.AsPointer(ref this)</param>, <param name="segmentData">segmentData</param>, <param name="segmentDataCount">segmentDataCount</param>, <param name="commands">commands</param>, <param name="commandsCount">commandsCount</param>, <param name="pathData">pathData</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

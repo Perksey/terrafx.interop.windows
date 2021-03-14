@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfobjects.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MFVideoSurfaceInfo" access="public">
+            <field name="Format" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="PaletteEntries" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Palette" access="public">
+                <type native="MFPaletteEntry [1]" count="1" fixed="_Palette_e__FixedBuffer">MFPaletteEntry</type>
+            </field>
+            <struct name="_Palette_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">MFPaletteEntry</type>
+                </field>
+                <indexer access="public">
+                    <type>ref MFPaletteEntry</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;MFPaletteEntry&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

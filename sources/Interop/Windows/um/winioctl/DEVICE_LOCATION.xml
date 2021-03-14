@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DEVICE_LOCATION" access="public">
+            <field name="Socket" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Slot" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Adapter" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Port" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_DEVICE_LOCATION::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:2922:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Channel" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous1.Channel, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Device" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous1.Device, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Target" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous2.Target, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Lun" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous2.Lun, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="Anonymous1" access="public" offset="0">
+                    <type native="_DEVICE_LOCATION::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:2924:9)">_Anonymous1_e__Struct</type>
+                </field>
+                <field name="Anonymous2" access="public" offset="0">
+                    <type native="_DEVICE_LOCATION::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:2932:9)">_Anonymous2_e__Struct</type>
+                </field>
+                <struct name="_Anonymous1_e__Struct" access="public">
+                    <field name="Channel" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="Device" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                </struct>
+                <struct name="_Anonymous2_e__Struct" access="public">
+                    <field name="Target" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="Lun" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

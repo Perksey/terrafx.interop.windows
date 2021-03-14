@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="userSTGMEDIUM" access="public" unsafe="true">
+            <field name="pUnkForRelease" access="public">
+                <type native="IUnknown *">IUnknown*</type>
+            </field>
+            <struct name="_STGMEDIUM_UNION" access="public">
+                <field name="tymed" access="public">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="u" access="public">
+                    <type native="union __MIDL_IAdviseSink_0003">_u_e__Union</type>
+                </field>
+                <struct name="_u_e__Union" access="public" unsafe="true" layout="Explicit">
+                    <field name="hMetaFilePict" access="public" offset="0">
+                        <type native="wireHMETAFILEPICT">userHMETAFILEPICT*</type>
+                    </field>
+                    <field name="hHEnhMetaFile" access="public" offset="0">
+                        <type native="wireHENHMETAFILE">userHENHMETAFILE*</type>
+                    </field>
+                    <field name="hGdiHandle" access="public" offset="0">
+                        <type native="GDI_OBJECT *">GDI_OBJECT*</type>
+                    </field>
+                    <field name="hGlobal" access="public" offset="0">
+                        <type native="wireHGLOBAL">userHGLOBAL*</type>
+                    </field>
+                    <field name="lpszFileName" access="public" offset="0">
+                        <type native="LPOLESTR">ushort*</type>
+                    </field>
+                    <field name="pstm" access="public" offset="0">
+                        <type native="BYTE_BLOB *">BYTE_BLOB*</type>
+                    </field>
+                    <field name="pstg" access="public" offset="0">
+                        <type native="BYTE_BLOB *">BYTE_BLOB*</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

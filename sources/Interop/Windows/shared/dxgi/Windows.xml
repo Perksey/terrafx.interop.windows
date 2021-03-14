@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/dxgi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreateDXGIFactory" access="public" lib="dxgi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppFactory">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="CreateDXGIFactory1" access="public" lib="dxgi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppFactory">
+                    <type>void**</type>
+                </param>
+            </function>
+            <constant name="IID_IDXGIObject" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xaec22fb8, 0x76f3, 0x4639, 0x9b, 0xe0, 0x28, 0xeb, 0x43, 0xa6, 0x7a, 0x2e)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIDeviceSubObject" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x3d3e0379, 0xf9de, 0x4d58, 0xbb, 0x6c, 0x18, 0xd6, 0x29, 0x92, 0xf1, 0xa6)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIResource" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x035f3ab4, 0x482e, 0x4e50, 0xb4, 0x1f, 0x8a, 0x7f, 0x8b, 0xd8, 0x96, 0x0b)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIKeyedMutex" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9d8e1289, 0xd7b3, 0x465f, 0x81, 0x26, 0x25, 0x0e, 0x34, 0x9a, 0xf8, 0x5d)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGISurface" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xcafcb56c, 0x6ac3, 0x4889, 0xbf, 0x47, 0x9e, 0x23, 0xbb, 0xd2, 0x60, 0xec)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGISurface1" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4AE63092, 0x6327, 0x4c1b, 0x80, 0xAE, 0xBF, 0xE1, 0x2E, 0xA3, 0x2B, 0x86)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIAdapter" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2411e7e1, 0x12ac, 0x4ccf, 0xbd, 0x14, 0x97, 0x98, 0xe8, 0x53, 0x4d, 0xc0)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIOutput" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xae02eedb, 0xc735, 0x4690, 0x8d, 0x52, 0x5a, 0x8d, 0xc2, 0x02, 0x13, 0xaa)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGISwapChain" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x310d36a0, 0xd2e7, 0x4c0a, 0xaa, 0x04, 0x6a, 0x9d, 0x23, 0xb8, 0x88, 0x6a)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIFactory" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x7b7166ec, 0x21c7, 0x44ae, 0xb2, 0x1a, 0xc9, 0xae, 0x32, 0x1a, 0xe3, 0x69)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIDevice" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x54ec77fa, 0x1377, 0x44e6, 0x8c, 0x32, 0x88, 0xfd, 0x5f, 0x44, 0xc8, 0x4c)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIFactory1" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x770aae78, 0xf26f, 0x4dba, 0xa8, 0x29, 0x25, 0x3c, 0x83, 0xd1, 0xb3, 0x87)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIAdapter1" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x29038f61, 0x3839, 0x4626, 0x91, 0xfd, 0x08, 0x68, 0x79, 0x01, 0x1a, 0x05)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IDXGIDevice1" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x77db970f, 0x6276, 0x48ba, 0xba, 0x28, 0x07, 0x01, 0x43, 0xb4, 0x39, 0x2c)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_USAGE_SHADER_INPUT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000010U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_USAGE_RENDER_TARGET_OUTPUT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000020U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_USAGE_BACK_BUFFER" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000040U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_USAGE_SHARED" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000080U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_USAGE_READ_ONLY" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000100U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_USAGE_DISCARD_ON_PRESENT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000200U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_USAGE_UNORDERED_ACCESS" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000400U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_RESOURCE_PRIORITY_MINIMUM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x28000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_RESOURCE_PRIORITY_LOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x50000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_RESOURCE_PRIORITY_NORMAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x78000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_RESOURCE_PRIORITY_HIGH" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0xa0000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_RESOURCE_PRIORITY_MAXIMUM" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0xc8000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_MAP_READ" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_MAP_WRITE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(2U)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_MAP_DISCARD" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(4U)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_ENUM_MODES_INTERLACED" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_ENUM_MODES_SCALING" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(2U)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_MAX_SWAP_CHAIN_BUFFERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(16)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_PRESENT_TEST" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000001U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_PRESENT_DO_NOT_SEQUENCE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000002U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_PRESENT_RESTART" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000004U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_PRESENT_DO_NOT_WAIT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000008U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_PRESENT_STEREO_PREFER_RIGHT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000010U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_PRESENT_STEREO_TEMPORARY_MONO" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000020U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_PRESENT_RESTRICT_TO_OUTPUT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000040U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_PRESENT_USE_DURATION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000100U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_PRESENT_ALLOW_TEARING" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x00000200U
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_MWA_NO_WINDOW_CHANGES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_MWA_NO_ALT_ENTER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_MWA_NO_PRINT_SCREEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1 &lt;&lt; 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="DXGI_MWA_VALID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x7)
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

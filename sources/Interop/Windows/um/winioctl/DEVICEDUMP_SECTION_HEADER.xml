@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DEVICEDUMP_SECTION_HEADER" access="public" unsafe="true" layout="Sequential" pack="1">
+            <field name="guidDeviceDataId" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="sOrganizationID" access="public">
+                <type native="BYTE [16]" count="16" fixed="_sOrganizationID_e__FixedBuffer">byte</type>
+            </field>
+            <field name="dwFirmwareRevision" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="sModelNumber" access="public">
+                <type native="BYTE [32]" count="32" fixed="_sModelNumber_e__FixedBuffer">byte</type>
+            </field>
+            <field name="szDeviceManufacturingID" access="public">
+                <type native="BYTE [32]" count="32" fixed="_szDeviceManufacturingID_e__FixedBuffer">byte</type>
+            </field>
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="bRestrictedPrivateDataVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwFirmwareIssueId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="szIssueDescriptionString" access="public">
+                <type native="BYTE [132]" count="132" fixed="_szIssueDescriptionString_e__FixedBuffer">byte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

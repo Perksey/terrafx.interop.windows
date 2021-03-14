@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/amvideo.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="VIDEOINFO" access="public" unsafe="true">
+            <field name="rcSource" access="public">
+                <type native="">RECT</type>
+            </field>
+            <field name="rcTarget" access="public">
+                <type native="">RECT</type>
+            </field>
+            <field name="dwBitRate" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwBitErrorRate" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="AvgTimePerFrame" access="public">
+                <type native="REFERENCE_TIME">long</type>
+            </field>
+            <field name="bmiHeader" access="public">
+                <type native="">BITMAPINFOHEADER</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="tagVIDEOINFO::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/amvideo.h:319:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="bmiColors" access="public">
+                <type native="">Span&lt;RGBQUAD&gt;</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.bmiColors.AsSpan();
+        </code>
+                </get>
+            </field>
+            <field name="dwBitMasks" access="public">
+                <type native="">Span&lt;uint&gt;</type>
+                <get inlining="aggressive">
+                    <code>return MemoryMarshal.CreateSpan(ref Anonymous.dwBitMasks[0], 3);
+        </code>
+                </get>
+            </field>
+            <field name="TrueColorInfo" access="public">
+                <type native="">ref TRUECOLORINFO</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.TrueColorInfo, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="bmiColors" access="public" offset="0">
+                    <type native="RGBQUAD [256]" count="256" fixed="_bmiColors_e__FixedBuffer">RGBQUAD</type>
+                </field>
+                <field name="dwBitMasks" access="public" offset="0">
+                    <type native="DWORD [3]" count="3" fixed="_dwBitMasks_e__FixedBuffer">uint</type>
+                </field>
+                <field name="TrueColorInfo" access="public" offset="0">
+                    <type native="">TRUECOLORINFO</type>
+                </field>
+                <struct name="_bmiColors_e__FixedBuffer" access="public">
+                    <field name="e0" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e1" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e2" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e3" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e4" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e5" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e6" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e7" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e8" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e9" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e10" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e11" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e12" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e13" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e14" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e15" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e16" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e17" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e18" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e19" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e20" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e21" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e22" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e23" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e24" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e25" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e26" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e27" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e28" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e29" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e30" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e31" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e32" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e33" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e34" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e35" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e36" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e37" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e38" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e39" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e40" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e41" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e42" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e43" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e44" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e45" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e46" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e47" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e48" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e49" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e50" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e51" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e52" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e53" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e54" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e55" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e56" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e57" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e58" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e59" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e60" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e61" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e62" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e63" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e64" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e65" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e66" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e67" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e68" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e69" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e70" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e71" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e72" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e73" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e74" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e75" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e76" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e77" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e78" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e79" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e80" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e81" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e82" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e83" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e84" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e85" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e86" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e87" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e88" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e89" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e90" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e91" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e92" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e93" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e94" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e95" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e96" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e97" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e98" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e99" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e100" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e101" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e102" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e103" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e104" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e105" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e106" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e107" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e108" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e109" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e110" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e111" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e112" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e113" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e114" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e115" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e116" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e117" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e118" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e119" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e120" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e121" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e122" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e123" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e124" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e125" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e126" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e127" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e128" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e129" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e130" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e131" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e132" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e133" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e134" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e135" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e136" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e137" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e138" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e139" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e140" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e141" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e142" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e143" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e144" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e145" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e146" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e147" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e148" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e149" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e150" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e151" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e152" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e153" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e154" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e155" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e156" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e157" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e158" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e159" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e160" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e161" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e162" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e163" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e164" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e165" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e166" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e167" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e168" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e169" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e170" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e171" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e172" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e173" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e174" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e175" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e176" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e177" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e178" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e179" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e180" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e181" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e182" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e183" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e184" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e185" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e186" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e187" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e188" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e189" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e190" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e191" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e192" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e193" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e194" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e195" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e196" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e197" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e198" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e199" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e200" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e201" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e202" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e203" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e204" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e205" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e206" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e207" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e208" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e209" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e210" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e211" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e212" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e213" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e214" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e215" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e216" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e217" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e218" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e219" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e220" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e221" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e222" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e223" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e224" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e225" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e226" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e227" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e228" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e229" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e230" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e231" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e232" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e233" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e234" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e235" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e236" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e237" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e238" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e239" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e240" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e241" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e242" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e243" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e244" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e245" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e246" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e247" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e248" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e249" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e250" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e251" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e252" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e253" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e254" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <field name="e255" access="public">
+                        <type native="">RGBQUAD</type>
+                    </field>
+                    <indexer access="public">
+                        <type>ref RGBQUAD</type>
+                        <param name="index">
+                            <type>int</type>
+                        </param>
+                        <get inlining="aggressive">
+                            <code>return ref AsSpan()[index];
+        </code>
+                        </get>
+                    </indexer>
+                    <function name="AsSpan" access="public" unsafe="true">
+                        <type>Span&lt;RGBQUAD&gt;</type>
+                        <code>MemoryMarshal.CreateSpan(ref e0, 256);
+        </code>
+                    </function>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

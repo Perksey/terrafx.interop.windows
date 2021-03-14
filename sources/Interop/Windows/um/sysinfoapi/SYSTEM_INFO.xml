@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sysinfoapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SYSTEM_INFO" access="public" unsafe="true">
+            <field name="Anonymous" access="public">
+                <type native="_SYSTEM_INFO::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/sysinfoapi.h:48:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="dwOemId" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.dwOemId, 1));
+        </code>
+                </get>
+            </field>
+            <field name="wProcessorArchitecture" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.wProcessorArchitecture, 1));
+        </code>
+                </get>
+            </field>
+            <field name="wReserved" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.wReserved, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwPageSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="lpMinimumApplicationAddress" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+            <field name="lpMaximumApplicationAddress" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+            <field name="dwActiveProcessorMask" access="public">
+                <type native="DWORD_PTR">nuint</type>
+            </field>
+            <field name="dwNumberOfProcessors" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwProcessorType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwAllocationGranularity" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="wProcessorLevel" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="wProcessorRevision" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="dwOemId" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="_SYSTEM_INFO::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/sysinfoapi.h:50:9)">_Anonymous_e__Struct</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="wProcessorArchitecture" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="wReserved" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

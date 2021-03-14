@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SPRECOGNIZERSTATUS" access="public" unsafe="true">
+            <field name="AudioStatus" access="public">
+                <type native="">SPAUDIOSTATUS</type>
+            </field>
+            <field name="ullRecognitionStreamPos" access="public">
+                <type native="ULONGLONG">ulong</type>
+            </field>
+            <field name="ulStreamNumber" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="ulNumActive" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="clsidEngine" access="public">
+                <type native="CLSID">Guid</type>
+            </field>
+            <field name="cLangIDs" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="aLangID" access="public">
+                <type native="WORD [20]" count="20" fixed="_aLangID_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="ullRecognitionStreamTime" access="public">
+                <type native="ULONGLONG">ulong</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

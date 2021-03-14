@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dxcapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved. Licensed under the University of Illinois Open Source License.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDxcContainerBuilder" access="public" native="struct IDxcContainerBuilder : IUnknown" uuid="334b1f50-2292-4b35-99a1-25588d8c17fe" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerBuilder*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDxcContainerBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerBuilder*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDxcContainerBuilder*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerBuilder*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDxcContainerBuilder*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Load" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDxilContainerHeader">
+                    <type>IDxcBlob*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerBuilder*, IDxcBlob*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDxcContainerBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="pDxilContainerHeader">pDxilContainerHeader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddPart" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fourCC">
+                    <type>uint</type>
+                </param>
+                <param name="pSource">
+                    <type>IDxcBlob*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerBuilder*, uint, IDxcBlob*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDxcContainerBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="fourCC">fourCC</param>, <param name="pSource">pSource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemovePart" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fourCC">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerBuilder*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDxcContainerBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="fourCC">fourCC</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SerializeContainer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppResult">
+                    <type>IDxcOperationResult**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcContainerBuilder*, IDxcOperationResult**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDxcContainerBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="ppResult">ppResult</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

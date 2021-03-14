@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/windows.data.pdf.interop.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IPdfRendererNative" access="public" native="struct IPdfRendererNative : IUnknown" uuid="7d9dcd91-d277-4947-8527-07a0daeda94a" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPdfRendererNative*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IPdfRendererNative*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPdfRendererNative*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IPdfRendererNative*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPdfRendererNative*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IPdfRendererNative*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RenderPageToSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdfPage">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pSurface">
+                    <type>IDXGISurface*</type>
+                </param>
+                <param name="offset">
+                    <type>POINT</type>
+                </param>
+                <param name="pRenderParams">
+                    <type>PDF_RENDER_PARAMS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPdfRendererNative*, IUnknown*, IDXGISurface*, POINT, PDF_RENDER_PARAMS*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IPdfRendererNative*)Unsafe.AsPointer(ref this)</param>, <param name="pdfPage">pdfPage</param>, <param name="pSurface">pSurface</param>, <param name="offset">offset</param>, <param name="pRenderParams">pRenderParams</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RenderPageToDeviceContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdfPage">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pD2DDeviceContext">
+                    <type>ID2D1DeviceContext*</type>
+                </param>
+                <param name="pRenderParams">
+                    <type>PDF_RENDER_PARAMS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPdfRendererNative*, IUnknown*, ID2D1DeviceContext*, PDF_RENDER_PARAMS*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IPdfRendererNative*)Unsafe.AsPointer(ref this)</param>, <param name="pdfPage">pdfPage</param>, <param name="pD2DDeviceContext">pD2DDeviceContext</param>, <param name="pRenderParams">pRenderParams</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

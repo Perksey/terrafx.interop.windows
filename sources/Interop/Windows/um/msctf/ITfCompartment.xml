@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfCompartment" access="public" native="struct ITfCompartment : IUnknown" uuid="bb08f7a9-607a-4384-8623-056892b64371" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCompartment*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfCompartment*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCompartment*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfCompartment*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCompartment*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfCompartment*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tid">
+                    <type>uint</type>
+                </param>
+                <param name="pvarValue">
+                    <type>VARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCompartment*, uint, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfCompartment*)Unsafe.AsPointer(ref this)</param>, <param name="tid">tid</param>, <param name="pvarValue">pvarValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pvarValue">
+                    <type>VARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCompartment*, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfCompartment*)Unsafe.AsPointer(ref this)</param>, <param name="pvarValue">pvarValue</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

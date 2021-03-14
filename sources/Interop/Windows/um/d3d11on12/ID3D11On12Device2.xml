@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11on12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D11On12Device2" access="public" native="struct ID3D11On12Device2 : ID3D11On12Device1" uuid="dc90f331-4740-43fa-866e-67f12cb58223" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11On12Device2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D11On12Device2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11On12Device2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D11On12Device2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11On12Device2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D11On12Device2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateWrappedResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource12">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pFlags11">
+                    <type>D3D11_RESOURCE_FLAGS*</type>
+                </param>
+                <param name="InState">
+                    <type>D3D12_RESOURCE_STATES</type>
+                </param>
+                <param name="OutState">
+                    <type>D3D12_RESOURCE_STATES</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppResource11">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11On12Device2*, IUnknown*, D3D11_RESOURCE_FLAGS*, D3D12_RESOURCE_STATES, D3D12_RESOURCE_STATES, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D11On12Device2*)Unsafe.AsPointer(ref this)</param>, <param name="pResource12">pResource12</param>, <param name="pFlags11">pFlags11</param>, <param name="InState">InState</param>, <param name="OutState">OutState</param>, <param name="riid">riid</param>, <param name="ppResource11">ppResource11</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseWrappedResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppResources">
+                    <type>ID3D11Resource**</type>
+                </param>
+                <param name="NumResources">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11On12Device2*, ID3D11Resource**, uint, void&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D11On12Device2*)Unsafe.AsPointer(ref this)</param>, <param name="ppResources">ppResources</param>, <param name="NumResources">NumResources</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AcquireWrappedResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppResources">
+                    <type>ID3D11Resource**</type>
+                </param>
+                <param name="NumResources">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11On12Device2*, ID3D11Resource**, uint, void&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D11On12Device2*)Unsafe.AsPointer(ref this)</param>, <param name="ppResources">ppResources</param>, <param name="NumResources">NumResources</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetD3D12Device" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvDevice">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11On12Device2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D11On12Device2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvDevice">ppvDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnwrapUnderlyingResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource11">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="pCommandQueue">
+                    <type>ID3D12CommandQueue*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvResource12">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11On12Device2*, ID3D11Resource*, ID3D12CommandQueue*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D11On12Device2*)Unsafe.AsPointer(ref this)</param>, <param name="pResource11">pResource11</param>, <param name="pCommandQueue">pCommandQueue</param>, <param name="riid">riid</param>, <param name="ppvResource12">ppvResource12</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReturnUnderlyingResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource11">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="NumSync">
+                    <type>uint</type>
+                </param>
+                <param name="pSignalValues">
+                    <type>ulong*</type>
+                </param>
+                <param name="ppFences">
+                    <type>ID3D12Fence**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11On12Device2*, ID3D11Resource*, uint, ulong*, ID3D12Fence**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D11On12Device2*)Unsafe.AsPointer(ref this)</param>, <param name="pResource11">pResource11</param>, <param name="NumSync">NumSync</param>, <param name="pSignalValues">pSignalValues</param>, <param name="ppFences">ppFences</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

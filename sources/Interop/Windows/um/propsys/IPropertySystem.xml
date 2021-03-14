@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/propsys.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IPropertySystem" access="public" native="struct IPropertySystem : IUnknown" uuid="ca724e8a-c3e6-442b-88a4-6fb0db8035a3" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyDescription" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="propkey">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, PROPERTYKEY*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>, <param name="propkey">propkey</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyDescriptionByName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszCanonicalName">
+                    <type>ushort*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, ushort*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>, <param name="pszCanonicalName">pszCanonicalName</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyDescriptionListFromString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszPropList">
+                    <type>ushort*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, ushort*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>, <param name="pszPropList">pszPropList</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumeratePropertyDescriptions" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="filterOn">
+                    <type>PROPDESC_ENUMFILTER</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, PROPDESC_ENUMFILTER, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>, <param name="filterOn">filterOn</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FormatForDisplay" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="propvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="pdff">
+                    <type>PROPDESC_FORMAT_FLAGS</type>
+                </param>
+                <param name="pszText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, PROPERTYKEY*, PROPVARIANT*, PROPDESC_FORMAT_FLAGS, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>, <param name="key">key</param>, <param name="propvar">propvar</param>, <param name="pdff">pdff</param>, <param name="pszText">pszText</param>, <param name="cchText">cchText</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FormatForDisplayAlloc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="key">
+                    <type>PROPERTYKEY*</type>
+                </param>
+                <param name="propvar">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="pdff">
+                    <type>PROPDESC_FORMAT_FLAGS</type>
+                </param>
+                <param name="ppszDisplay">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, PROPERTYKEY*, PROPVARIANT*, PROPDESC_FORMAT_FLAGS, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>, <param name="key">key</param>, <param name="propvar">propvar</param>, <param name="pdff">pdff</param>, <param name="ppszDisplay">ppszDisplay</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterPropertySchema" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszPath">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>, <param name="pszPath">pszPath</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterPropertySchema" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszPath">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>, <param name="pszPath">pszPath</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RefreshPropertySchema" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertySystem*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IPropertySystem*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

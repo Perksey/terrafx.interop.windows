@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="AM_AUDIO_RENDERER_STAT_PARAM" access="public">
+            <type>int</type>
+            <enumerator name="AM_AUDREND_STAT_PARAM_BREAK_COUNT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_SLAVE_MODE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_BREAK_COUNT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_SILENCE_DUR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_SLAVE_MODE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_LAST_BUFFER_DUR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_SILENCE_DUR + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_DISCONTINUITIES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_LAST_BUFFER_DUR + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_SLAVE_RATE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_DISCONTINUITIES + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_SLAVE_DROPWRITE_DUR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_SLAVE_RATE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_SLAVE_HIGHLOWERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_SLAVE_DROPWRITE_DUR + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_SLAVE_LASTHIGHLOWERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_SLAVE_HIGHLOWERROR + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_SLAVE_ACCUMERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_SLAVE_LASTHIGHLOWERROR + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_BUFFERFULLNESS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_SLAVE_ACCUMERROR + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AM_AUDREND_STAT_PARAM_JITTER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(AM_AUDREND_STAT_PARAM_BUFFERFULLNESS + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

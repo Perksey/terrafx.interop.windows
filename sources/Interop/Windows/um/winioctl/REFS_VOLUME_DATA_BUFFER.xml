@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="REFS_VOLUME_DATA_BUFFER" access="public">
+            <field name="ByteCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="MajorVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="MinorVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="BytesPerPhysicalSector" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="VolumeSerialNumber" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="NumberSectors" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="TotalClusters" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="FreeClusters" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="TotalReserved" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="BytesPerSector" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="BytesPerCluster" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="MaximumSizeOfResidentFile" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="FastTierDataFillRatio" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="SlowTierDataFillRatio" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="DestagesFastTierToSlowTierRate" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="LARGE_INTEGER [9]" count="9" fixed="_Reserved_e__FixedBuffer">LARGE_INTEGER</type>
+            </field>
+            <struct name="_Reserved_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="e6" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="e7" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="e8" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <indexer access="public">
+                    <type>ref LARGE_INTEGER</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;LARGE_INTEGER&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 9);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

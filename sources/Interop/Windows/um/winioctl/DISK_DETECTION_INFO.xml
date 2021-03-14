@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DISK_DETECTION_INFO" access="public">
+            <field name="SizeOfDetectInfo" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DetectionType" access="public">
+                <type native="">DETECTION_TYPE</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_DISK_DETECTION_INFO::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:8627:9)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Int13" access="public">
+                <type native="">ref DISK_INT13_INFO</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.Int13, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ExInt13" access="public">
+                <type native="">ref DISK_EX_INT13_INFO</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.ExInt13, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="_DISK_DETECTION_INFO::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:8628:17)">_Anonymous_e__Struct</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="Int13" access="public">
+                        <type native="">DISK_INT13_INFO</type>
+                    </field>
+                    <field name="ExInt13" access="public">
+                        <type native="">DISK_EX_INT13_INFO</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

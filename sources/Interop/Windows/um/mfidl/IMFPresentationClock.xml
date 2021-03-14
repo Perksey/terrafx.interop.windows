@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFPresentationClock" access="public" native="struct IMFPresentationClock : IMFClock" uuid="868ce85c-8ea9-4f55-ab82-b009a910a805" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetClockCharacteristics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwCharacteristics">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="pdwCharacteristics">pdwCharacteristics</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCorrelatedTime" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <param name="pllClockTime">
+                    <type>long*</type>
+                </param>
+                <param name="phnsSystemTime">
+                    <type>long*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, uint, long*, long*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="dwReserved">dwReserved</param>, <param name="pllClockTime">pllClockTime</param>, <param name="phnsSystemTime">phnsSystemTime</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetContinuityKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwContinuityKey">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="pdwContinuityKey">pdwContinuityKey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <param name="peClockState">
+                    <type>MFCLOCK_STATE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, uint, MFCLOCK_STATE*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="dwReserved">dwReserved</param>, <param name="peClockState">peClockState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClockProperties">
+                    <type>MFCLOCK_PROPERTIES*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, MFCLOCK_PROPERTIES*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="pClockProperties">pClockProperties</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTimeSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTimeSource">
+                    <type>IMFPresentationTimeSource*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, IMFPresentationTimeSource*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="pTimeSource">pTimeSource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTimeSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppTimeSource">
+                    <type>IMFPresentationTimeSource**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, IMFPresentationTimeSource**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="ppTimeSource">ppTimeSource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTime" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="phnsClockTime">
+                    <type>long*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, long*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="phnsClockTime">phnsClockTime</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddClockStateSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStateSink">
+                    <type>IMFClockStateSink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, IMFClockStateSink*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="pStateSink">pStateSink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveClockStateSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStateSink">
+                    <type>IMFClockStateSink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, IMFClockStateSink*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="pStateSink">pStateSink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Start" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="llClockStartOffset">
+                    <type>long</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, long, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>, <param name="llClockStartOffset">llClockStartOffset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Stop" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Pause" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFPresentationClock*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IMFPresentationClock*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

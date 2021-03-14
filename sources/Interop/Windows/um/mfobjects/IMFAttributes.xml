@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfobjects.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFAttributes" access="public" native="struct IMFAttributes : IUnknown" uuid="2cd2d921-c447-44a7-a13c-4adabfc247e3" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetItem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pValue">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pValue">pValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetItemType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pType">
+                    <type>MF_ATTRIBUTE_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, MF_ATTRIBUTE_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pType">pType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CompareItem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="Value">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <param name="pbResult">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, PROPVARIANT*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="Value">Value</param>, <param name="pbResult">pbResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Compare" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTheirs">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="MatchType">
+                    <type>MF_ATTRIBUTES_MATCH_TYPE</type>
+                </param>
+                <param name="pbResult">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, IMFAttributes*, MF_ATTRIBUTES_MATCH_TYPE, int*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="pTheirs">pTheirs</param>, <param name="MatchType">MatchType</param>, <param name="pbResult">pbResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUINT32" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="punValue">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="punValue">punValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUINT64" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="punValue">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="punValue">punValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDouble" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pfValue">
+                    <type>double*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, double*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pfValue">pfValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGUID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pguidValue">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pguidValue">pguidValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStringLength" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pcchLength">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pcchLength">pcchLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pwszValue">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchBufSize">
+                    <type>uint</type>
+                </param>
+                <param name="pcchLength">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, ushort*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pwszValue">pwszValue</param>, <param name="cchBufSize">cchBufSize</param>, <param name="pcchLength">pcchLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAllocatedString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppwszValue">
+                    <type>ushort**</type>
+                </param>
+                <param name="pcchLength">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, ushort**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="ppwszValue">ppwszValue</param>, <param name="pcchLength">pcchLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBlobSize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pcbBlobSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pcbBlobSize">pcbBlobSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBlob" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pBuf">
+                    <type>byte*</type>
+                </param>
+                <param name="cbBufSize">
+                    <type>uint</type>
+                </param>
+                <param name="pcbBlobSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, byte*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pBuf">pBuf</param>, <param name="cbBufSize">cbBufSize</param>, <param name="pcbBlobSize">pcbBlobSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAllocatedBlob" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppBuf">
+                    <type>byte**</type>
+                </param>
+                <param name="pcbSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="ppBuf">ppBuf</param>, <param name="pcbSize">pcbSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUnknown" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetItem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="Value">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="Value">Value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DeleteItem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DeleteAllItems" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetUINT32" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="unValue">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="unValue">unValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetUINT64" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="unValue">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="unValue">unValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDouble" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="fValue">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, double, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="fValue">fValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGUID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="guidValue">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="guidValue">guidValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="wszValue">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="wszValue">wszValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetBlob" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pBuf">
+                    <type>byte*</type>
+                </param>
+                <param name="cbBufSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pBuf">pBuf</param>, <param name="cbBufSize">cbBufSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetUnknown" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnknown">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="guidKey">guidKey</param>, <param name="pUnknown">pUnknown</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LockStore" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnlockStore" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcItems">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="pcItems">pcItems</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetItemByIndex" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="unIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pguidKey">
+                    <type>Guid*</type>
+                </param>
+                <param name="pValue">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, uint, Guid*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="unIndex">unIndex</param>, <param name="pguidKey">pguidKey</param>, <param name="pValue">pValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyAllItems" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDest">
+                    <type>IMFAttributes*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFAttributes*, IMFAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(IMFAttributes*)Unsafe.AsPointer(ref this)</param>, <param name="pDest">pDest</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

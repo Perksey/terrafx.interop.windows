@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="AnalogVideoStandard" access="public">
+            <type>int</type>
+            <enumerator name="AnalogVideo_None" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_NTSC_M" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_NTSC_M_J" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x2
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_NTSC_433" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x4
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_PAL_B" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x10
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_PAL_D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x20
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_PAL_G" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x40
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_PAL_H" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x80
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_PAL_I" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x100
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_PAL_M" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x200
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_PAL_N" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x400
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_PAL_60" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x800
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_SECAM_B" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x1000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_SECAM_D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x2000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_SECAM_G" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x4000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_SECAM_H" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x8000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_SECAM_K" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x10000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_SECAM_K1" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x20000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_SECAM_L" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x40000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_SECAM_L1" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x80000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideo_PAL_N_COMBO" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x100000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideoMask_MCE_NTSC" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>((((((AnalogVideo_NTSC_M | AnalogVideo_NTSC_M_J) | AnalogVideo_NTSC_433) | AnalogVideo_PAL_M) | AnalogVideo_PAL_N) | AnalogVideo_PAL_60) | AnalogVideo_PAL_N_COMBO)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideoMask_MCE_PAL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>((((AnalogVideo_PAL_B | AnalogVideo_PAL_D) | AnalogVideo_PAL_G) | AnalogVideo_PAL_H) | AnalogVideo_PAL_I)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="AnalogVideoMask_MCE_SECAM" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(((((((AnalogVideo_SECAM_B | AnalogVideo_SECAM_D) | AnalogVideo_SECAM_G) | AnalogVideo_SECAM_H) | AnalogVideo_SECAM_K) | AnalogVideo_SECAM_K1) | AnalogVideo_SECAM_L) | AnalogVideo_SECAM_L1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STREAM_LAYOUT_ENTRY" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="NextStreamOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ExtentInformationOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="AllocationSize" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="EndOfFile" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="StreamInformationOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="AttributeTypeCode" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="AttributeFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="StreamIdentifierLength" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="StreamIdentifier" access="public">
+                <type native="WCHAR [1]" count="1" fixed="_StreamIdentifier_e__FixedBuffer">ushort</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

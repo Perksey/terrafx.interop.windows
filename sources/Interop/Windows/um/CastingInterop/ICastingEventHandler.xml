@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/CastingInterop.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ICastingEventHandler" access="public" native="struct ICastingEventHandler : IUnknown" uuid="c79a6cb7-bebd-47a6-a2ad-4d45ad79c7bc" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICastingEventHandler*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ICastingEventHandler*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICastingEventHandler*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ICastingEventHandler*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICastingEventHandler*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ICastingEventHandler*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnStateChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="newState">
+                    <type>CASTING_CONNECTION_STATE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICastingEventHandler*, CASTING_CONNECTION_STATE, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ICastingEventHandler*)Unsafe.AsPointer(ref this)</param>, <param name="newState">newState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnError" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="errorStatus">
+                    <type>CASTING_CONNECTION_ERROR_STATUS</type>
+                </param>
+                <param name="errorMessage">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICastingEventHandler*, CASTING_CONNECTION_ERROR_STATUS, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ICastingEventHandler*)Unsafe.AsPointer(ref this)</param>, <param name="errorStatus">errorStatus</param>, <param name="errorMessage">errorMessage</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

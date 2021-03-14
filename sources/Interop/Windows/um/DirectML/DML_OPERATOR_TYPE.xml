@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/DirectML.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="DML_OPERATOR_TYPE" access="public">
+            <type>int</type>
+            <enumerator name="DML_OPERATOR_INVALID" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_IDENTITY" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ABS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ACOS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ADD" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ASIN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ATAN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_CEIL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_CLIP" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_COS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_DIVIDE" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_EXP" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_FLOOR" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_LOG" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_LOGICAL_AND" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_LOGICAL_EQUALS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_LOGICAL_GREATER_THAN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_LOGICAL_LESS_THAN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_LOGICAL_NOT" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_LOGICAL_OR" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_LOGICAL_XOR" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_MAX" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_MEAN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_MIN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_MULTIPLY" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_POW" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_CONSTANT_POW" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_RECIP" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_SIN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_SQRT" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_SUBTRACT" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_TAN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_THRESHOLD" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_QUANTIZE_LINEAR" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_DEQUANTIZE_LINEAR" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_ELU" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_HARDMAX" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_HARD_SIGMOID" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_IDENTITY" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_LEAKY_RELU" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_LINEAR" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_LOG_SOFTMAX" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_PARAMETERIZED_RELU" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_PARAMETRIC_SOFTPLUS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_RELU" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_SCALED_ELU" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_SCALED_TANH" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_SIGMOID" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_SOFTMAX" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_SOFTPLUS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_SOFTSIGN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_TANH" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_THRESHOLDED_RELU" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_CONVOLUTION" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_GEMM" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_REDUCE" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_AVERAGE_POOLING" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_LP_POOLING" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_MAX_POOLING" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ROI_POOLING" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_SLICE" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_CAST" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_SPLIT" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_JOIN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_PADDING" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_VALUE_SCALE_2D" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_UPSAMPLE_2D" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_GATHER" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_SPACE_TO_DEPTH" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_DEPTH_TO_SPACE" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_TILE" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_TOP_K" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_BATCH_NORMALIZATION" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_MEAN_VARIANCE_NORMALIZATION" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_LOCAL_RESPONSE_NORMALIZATION" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_LP_NORMALIZATION" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_RNN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_LSTM" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_GRU" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_SIGN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_IS_NAN" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ERF" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_SINH" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_COSH" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_TANH" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ASINH" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ACOSH" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ATANH" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_IF" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ELEMENT_WISE_ADD1" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ACTIVATION_SHRINK" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_MAX_POOLING1" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_MAX_UNPOOLING" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_DIAGONAL_MATRIX" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_SCATTER" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_ONE_HOT" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DML_OPERATOR_RESAMPLE" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

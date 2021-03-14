@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_SPEC_VERSION" access="public" layout="Explicit">
+            <field name="Anonymous" access="public" offset="0">
+                <type native="_STORAGE_SPEC_VERSION::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:2461:5)">_Anonymous_e__Struct</type>
+            </field>
+            <field name="MinorVersion" access="public">
+                <type native="">ref _Anonymous_e__Struct._MinorVersion_e__Union</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.MinorVersion, 1));
+        </code>
+                </get>
+            </field>
+            <field name="MajorVersion" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.MajorVersion, 1));
+        </code>
+                </get>
+            </field>
+            <field name="AsUlong" access="public" offset="0">
+                <type native="DWORD">uint</type>
+            </field>
+            <struct name="_Anonymous_e__Struct" access="public">
+                <field name="MinorVersion" access="public">
+                    <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:2462:9)">_MinorVersion_e__Union</type>
+                </field>
+                <field name="MajorVersion" access="public">
+                    <type native="WORD">ushort</type>
+                </field>
+                <struct name="_MinorVersion_e__Union" access="public" layout="Explicit">
+                    <field name="Anonymous" access="public" offset="0">
+                        <type native="_STORAGE_SPEC_VERSION::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:2463:13)">_Anonymous_e__Struct</type>
+                    </field>
+                    <field name="SubMinor" access="public">
+                        <type native="">ref byte</type>
+                        <get inlining="aggressive">
+                            <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.SubMinor, 1));
+        </code>
+                        </get>
+                    </field>
+                    <field name="Minor" access="public">
+                        <type native="">ref byte</type>
+                        <get inlining="aggressive">
+                            <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Minor, 1));
+        </code>
+                        </get>
+                    </field>
+                    <field name="AsUshort" access="public" offset="0">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <struct name="_Anonymous_e__Struct" access="public">
+                        <field name="SubMinor" access="public">
+                            <type native="BYTE">byte</type>
+                        </field>
+                        <field name="Minor" access="public">
+                            <type native="BYTE">byte</type>
+                        </field>
+                    </struct>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

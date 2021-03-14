@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mftransform.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFTransform" access="public" native="struct IMFTransform : IUnknown" uuid="bf94c121-5b05-4e6f-8000-ba598961414d" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamLimits" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwInputMinimum">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwInputMaximum">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwOutputMinimum">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwOutputMaximum">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint*, uint*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="pdwInputMinimum">pdwInputMinimum</param>, <param name="pdwInputMaximum">pdwInputMaximum</param>, <param name="pdwOutputMinimum">pdwOutputMinimum</param>, <param name="pdwOutputMaximum">pdwOutputMaximum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcInputStreams">
+                    <type>uint*</type>
+                </param>
+                <param name="pcOutputStreams">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="pcInputStreams">pcInputStreams</param>, <param name="pcOutputStreams">pcOutputStreams</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamIDs" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputIDArraySize">
+                    <type>uint</type>
+                </param>
+                <param name="pdwInputIDs">
+                    <type>uint*</type>
+                </param>
+                <param name="dwOutputIDArraySize">
+                    <type>uint</type>
+                </param>
+                <param name="pdwOutputIDs">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, uint*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputIDArraySize">dwInputIDArraySize</param>, <param name="pdwInputIDs">pdwInputIDs</param>, <param name="dwOutputIDArraySize">dwOutputIDArraySize</param>, <param name="pdwOutputIDs">pdwOutputIDs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputStreamInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="pStreamInfo">
+                    <type>MFT_INPUT_STREAM_INFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, MFT_INPUT_STREAM_INFO*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamID">dwInputStreamID</param>, <param name="pStreamInfo">pStreamInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputStreamInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="pStreamInfo">
+                    <type>MFT_OUTPUT_STREAM_INFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, MFT_OUTPUT_STREAM_INFO*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamID">dwOutputStreamID</param>, <param name="pStreamInfo">pStreamInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pAttributes">
+                    <type>IMFAttributes**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, IMFAttributes**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="pAttributes">pAttributes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputStreamAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="pAttributes">
+                    <type>IMFAttributes**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, IMFAttributes**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamID">dwInputStreamID</param>, <param name="pAttributes">pAttributes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputStreamAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="pAttributes">
+                    <type>IMFAttributes**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, IMFAttributes**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamID">dwOutputStreamID</param>, <param name="pAttributes">pAttributes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DeleteInputStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamID">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamID">dwStreamID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddInputStreams" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cStreams">
+                    <type>uint</type>
+                </param>
+                <param name="adwStreamIDs">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="cStreams">cStreams</param>, <param name="adwStreamIDs">adwStreamIDs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputAvailableType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="dwTypeIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppType">
+                    <type>IMFMediaType**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, uint, IMFMediaType**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamID">dwInputStreamID</param>, <param name="dwTypeIndex">dwTypeIndex</param>, <param name="ppType">ppType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputAvailableType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="dwTypeIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppType">
+                    <type>IMFMediaType**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, uint, IMFMediaType**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamID">dwOutputStreamID</param>, <param name="dwTypeIndex">dwTypeIndex</param>, <param name="ppType">ppType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetInputType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="pType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, IMFMediaType*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamID">dwInputStreamID</param>, <param name="pType">pType</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="pType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, IMFMediaType*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamID">dwOutputStreamID</param>, <param name="pType">pType</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputCurrentType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="ppType">
+                    <type>IMFMediaType**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, IMFMediaType**, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamID">dwInputStreamID</param>, <param name="ppType">ppType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputCurrentType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="ppType">
+                    <type>IMFMediaType**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, IMFMediaType**, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamID">dwOutputStreamID</param>, <param name="ppType">ppType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="pdwFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamID">dwInputStreamID</param>, <param name="pdwFlags">pdwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="pdwFlags">pdwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputBounds" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hnsLowerBound">
+                    <type>long</type>
+                </param>
+                <param name="hnsUpperBound">
+                    <type>long</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, long, long, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="hnsLowerBound">hnsLowerBound</param>, <param name="hnsUpperBound">hnsUpperBound</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProcessEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="pEvent">
+                    <type>IMFMediaEvent*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, IMFMediaEvent*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamID">dwInputStreamID</param>, <param name="pEvent">pEvent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProcessMessage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="eMessage">
+                    <type>MFT_MESSAGE_TYPE</type>
+                </param>
+                <param name="ulParam">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, MFT_MESSAGE_TYPE, nuint, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="eMessage">eMessage</param>, <param name="ulParam">ulParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProcessInput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamID">
+                    <type>uint</type>
+                </param>
+                <param name="pSample">
+                    <type>IMFSample*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, IMFSample*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamID">dwInputStreamID</param>, <param name="pSample">pSample</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProcessOutput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="cOutputBufferCount">
+                    <type>uint</type>
+                </param>
+                <param name="pOutputSamples">
+                    <type>MFT_OUTPUT_DATA_BUFFER*</type>
+                </param>
+                <param name="pdwStatus">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFTransform*, uint, uint, MFT_OUTPUT_DATA_BUFFER*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IMFTransform*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="cOutputBufferCount">cOutputBufferCount</param>, <param name="pOutputSamples">pOutputSamples</param>, <param name="pdwStatus">pdwStatus</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

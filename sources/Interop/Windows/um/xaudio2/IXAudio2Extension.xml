@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/xaudio2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IXAudio2Extension" access="public" native="struct IXAudio2Extension : IUnknown" uuid="84ac29bb-d619-44d2-b197-e4acf7df3ed6" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2Extension*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IXAudio2Extension*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2Extension*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IXAudio2Extension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2Extension*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IXAudio2Extension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetProcessingQuantum" access="public" unsafe="true">
+                <type>void</type>
+                <param name="quantumNumerator">
+                    <type>uint*</type>
+                </param>
+                <param name="quantumDenominator">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2Extension*, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IXAudio2Extension*)Unsafe.AsPointer(ref this)</param>, <param name="quantumNumerator">quantumNumerator</param>, <param name="quantumDenominator">quantumDenominator</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetProcessor" access="public" unsafe="true">
+                <type>void</type>
+                <param name="processor">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2Extension*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IXAudio2Extension*)Unsafe.AsPointer(ref this)</param>, <param name="processor">processor</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

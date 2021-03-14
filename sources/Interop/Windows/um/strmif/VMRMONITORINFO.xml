@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="VMRMONITORINFO" access="public" unsafe="true">
+            <field name="guid" access="public">
+                <type native="">VMRGUID</type>
+            </field>
+            <field name="rcMonitor" access="public">
+                <type native="">RECT</type>
+            </field>
+            <field name="hMon" access="public">
+                <type native="HMONITOR">IntPtr</type>
+            </field>
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="szDevice" access="public">
+                <type native="wchar_t [32]" count="32" fixed="_szDevice_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="szDescription" access="public">
+                <type native="wchar_t [256]" count="256" fixed="_szDescription_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="liDriverVersion" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="dwVendorId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwDeviceId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwSubSysId" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwRevision" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

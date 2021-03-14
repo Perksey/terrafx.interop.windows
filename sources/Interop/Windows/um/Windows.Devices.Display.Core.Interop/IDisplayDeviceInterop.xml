@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/Windows.Devices.Display.Core.Interop.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDisplayDeviceInterop" access="public" native="struct IDisplayDeviceInterop : IUnknown" uuid="64338358-366a-471b-bd56-dd8ef48e439b" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDisplayDeviceInterop*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDisplayDeviceInterop*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDisplayDeviceInterop*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDisplayDeviceInterop*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDisplayDeviceInterop*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDisplayDeviceInterop*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSharedHandle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pObject">
+                    <type>IInspectable*</type>
+                </param>
+                <param name="pSecurityAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="Access">
+                    <type>uint</type>
+                </param>
+                <param name="Name">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pHandle">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDisplayDeviceInterop*, IInspectable*, SECURITY_ATTRIBUTES*, uint, IntPtr, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDisplayDeviceInterop*)Unsafe.AsPointer(ref this)</param>, <param name="pObject">pObject</param>, <param name="pSecurityAttributes">pSecurityAttributes</param>, <param name="Access">Access</param>, <param name="Name">Name</param>, <param name="pHandle">pHandle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OpenSharedHandle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NTHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="riid">
+                    <type>Guid</type>
+                </param>
+                <param name="ppvObj">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDisplayDeviceInterop*, IntPtr, Guid, void**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDisplayDeviceInterop*)Unsafe.AsPointer(ref this)</param>, <param name="NTHandle">NTHandle</param>, <param name="riid">riid</param>, <param name="ppvObj">ppvObj</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/hidclass.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="GUID_DEVINTERFACE_HID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x4D1E55B2, 0xF16F, 0x11CF, 0x88, 0xCB, 0x00, 0x11, 0x11, 0x00, 0x00, 0x30)
+            </code>
+                </value>
+            </constant>
+            <constant name="GUID_HID_INTERFACE_NOTIFY" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x2c4e2e88, 0x25e6, 0x4c33, 0x88, 0x2f, 0x3d, 0x82, 0xe6, 0x07, 0x36, 0x81)
+            </code>
+                </value>
+            </constant>
+            <constant name="GUID_HID_INTERFACE_HIDPARSE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf5c315a5, 0x69ac, 0x4bc2, 0x92, 0x79, 0xd0, 0xb6, 0x45, 0x76, 0xf4, 0x4b)
+            </code>
+                </value>
+            </constant>
+            <constant name="GUID_CLASS_INPUT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>GUID_DEVINTERFACE_HID
+            </code>
+                </value>
+            </constant>
+            <constant name="HID_REVISION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_DRIVER_CONFIG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((100)) &lt;&lt; 2) | (0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_SET_DRIVER_CONFIG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((101)) &lt;&lt; 2) | (0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_POLL_FREQUENCY_MSEC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((102)) &lt;&lt; 2) | (0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_SET_POLL_FREQUENCY_MSEC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((103)) &lt;&lt; 2) | (0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_GET_NUM_DEVICE_INPUT_BUFFERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((104)) &lt;&lt; 2) | (0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_SET_NUM_DEVICE_INPUT_BUFFERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((105)) &lt;&lt; 2) | (0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_COLLECTION_INFORMATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((106)) &lt;&lt; 2) | (0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_ENABLE_WAKE_ON_SX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((107)) &lt;&lt; 2) | (0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_SET_S0_IDLE_TIMEOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((108)) &lt;&lt; 2) | (0))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_COLLECTION_DESCRIPTOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((100)) &lt;&lt; 2) | (3))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_FLUSH_QUEUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((101)) &lt;&lt; 2) | (3))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_SET_FEATURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((100)) &lt;&lt; 2) | (1))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_SET_OUTPUT_REPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((101)) &lt;&lt; 2) | (1))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_FEATURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((100)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_GET_PHYSICAL_DESCRIPTOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((102)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_HARDWARE_ID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((103)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_INPUT_REPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((104)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_OUTPUT_REPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((105)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_MANUFACTURER_STRING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((110)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_PRODUCT_STRING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((111)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_SERIALNUMBER_STRING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((112)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_INDEXED_STRING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((120)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_GET_MS_GENRE_DESCRIPTOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((121)) &lt;&lt; 2) | (2))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_ENABLE_SECURE_READ" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((130)) &lt;&lt; 2) | (3))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_DISABLE_SECURE_READ" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((131)) &lt;&lt; 2) | (3))
+            </code>
+                </value>
+            </constant>
+            <constant name="IOCTL_HID_DEVICERESET_NOTIFICATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x0000000b) &lt;&lt; 16) | ((0) &lt;&lt; 14) | (((140)) &lt;&lt; 2) | (3))
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

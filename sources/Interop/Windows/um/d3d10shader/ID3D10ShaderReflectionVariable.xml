@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d10shader.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D10ShaderReflectionVariable" access="public" uuid="1bf63c95-2650-405d-99c1-3636bd1da0a1" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="GetDesc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D10_SHADER_VARIABLE_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10ShaderReflectionVariable*, D3D10_SHADER_VARIABLE_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D10ShaderReflectionVariable*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetType" access="public" unsafe="true">
+                <type native="ID3D10ShaderReflectionType *">ID3D10ShaderReflectionType*</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10ShaderReflectionVariable*, ID3D10ShaderReflectionType*&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D10ShaderReflectionVariable*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

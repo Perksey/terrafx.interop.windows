@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/SetupAPI.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SP_DEVINSTALL_PARAMS_A" access="public" unsafe="true" layout="Sequential" pack="1">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="FlagsEx" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hwndParent" access="public">
+                <type native="HWND">IntPtr</type>
+            </field>
+            <field name="InstallMsgHandler" access="public">
+                <type native="PSP_FILE_CALLBACK_W">delegate* unmanaged&lt;void*, uint, nuint, nuint, uint&gt;</type>
+            </field>
+            <field name="InstallMsgHandlerContext" access="public">
+                <type native="PVOID">void*</type>
+            </field>
+            <field name="FileQueue" access="public">
+                <type native="HSPFILEQ">void*</type>
+            </field>
+            <field name="ClassInstallReserved" access="public">
+                <type native="ULONG_PTR">nuint</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DriverPath" access="public">
+                <type native="CHAR [260]" count="260" fixed="_DriverPath_e__FixedBuffer">sbyte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

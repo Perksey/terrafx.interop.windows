@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/imapi2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="IMAPI_SECTOR_SIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(2048)
+            </code>
+                </value>
+            </constant>
+            <constant name="IMAPI2_DEFAULT_COMMAND_TIMEOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>10
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_DDISCMASTER2EVENTS_DEVICEADDED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_DDISCMASTER2EVENTS_DEVICEREMOVED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_EJECTMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_CLOSETRAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_ACQUIREEXCLUSIVEACCESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x102
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_RELEASEEXCLUSIVEACCESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x103
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_DISABLEMCN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x104
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_ENABLEMCN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x105
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_INITIALIZEDISCRECORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x106
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_ACTIVEDISCRECORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0)
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_VENDORID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x201
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_PRODUCTID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x202
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_PRODUCTREVISION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x203
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_VOLUMENAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x204
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_VOLUMEPATHNAMES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x205
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_DEVICECANLOADMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x206
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_LEGACYDEVICENUMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x207
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_SUPPORTEDFEATUREPAGES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x208
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_CURRENTFEATUREPAGES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x209
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_SUPPORTEDPROFILES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20A
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_CURRENTPROFILES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20B
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_SUPPORTEDMODEPAGES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20C
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCRECORDER2_EXCLUSIVEACCESSOWNER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20D
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2_WRITESECTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2_CANCELWRITE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x201
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2_DISCRECORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2_USESTREAMINGWRITE12" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2_STARTINGSECTORSPERSECOND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x102
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2_ENDINGSECTORSPERSECOND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x103
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2_BYTESPERSECTOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x104
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2_WRITEINPROGRESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x105
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2EVENTARGS_STARTLBA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2EVENTARGS_SECTORCOUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2EVENTARGS_LASTREADLBA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x102
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2EVENTARGS_LASTWRITTENLBA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x103
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2EVENTARGS_TOTALDEVICEBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x104
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2EVENTARGS_USEDDEVICEBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x105
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2EVENTARGS_TOTALSYSTEMBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x106
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2EVENTARGS_USEDSYSTEMBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x107
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IWRITEENGINE2EVENTARGS_FREESYSTEMBUFFER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x108
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_DWRITEENGINE2EVENTS_UPDATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2_RECORDERSUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x800
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2_MEDIASUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x801
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2_MEDIAPHYSICALLYBLANK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x700
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2_MEDIAHEURISTICALLYBLANK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x701
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2_SUPPORTEDMEDIATYPES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x702
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2ERASE_RECORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2ERASE_FULLERASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2ERASE_MEDIATYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x102
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2ERASE_CLIENTNAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x103
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2ERASE_ERASEMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x201
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2ERASEEVENTS_UPDATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_RECORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_BUFFERUNDERRUNFREEDISABLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_POSTGAPALREADYINIMAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x104
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_CURRENTMEDIASTATUS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x106
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_WRITEPROTECTSTATUS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x107
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_TOTALSECTORS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x108
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_FREESECTORS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x109
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_NEXTWRITABLEADDRESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10A
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_STARTSECTOROFPREVIOUSSESSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10B
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_LASTSECTOROFPREVIOUSSESSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10C
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_FORCEMEDIATOBECLOSED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10D
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_DISABLEDVDCOMPATIBILITYMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10E
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_CURRENTMEDIATYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10F
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_CLIENTNAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x110
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_REQUESTEDWRITESPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x111
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_REQUESTEDROTATIONTYPEISPURECAV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x112
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_CURRENTWRITESPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x113
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_CURRENTROTATIONTYPEISPURECAV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x114
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_SUPPORTEDWRITESPEEDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x115
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_SUPPORTEDWRITESPEEDDESCRIPTORS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x116
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_FORCEOVERWRITE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x117
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_MUTLISESSIONINTERFACES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x118
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_WRITE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_CANCELWRITE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x201
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATA_SETWRITESPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x202
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_DDISCFORMAT2DATAEVENTS_UPDATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATAEVENTARGS_ELAPSEDTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x300
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATAEVENTARGS_ESTIMATEDREMAININGTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x301
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATAEVENTARGS_ESTIMATEDTOTALTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x302
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2DATAEVENTARGS_CURRENTACTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x303
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_RECORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_BUFFERUNDERRUNFREEDISABLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x102
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_NUMBEROFEXISTINGTRACKS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x103
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_TOTALSECTORSONMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x104
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_FREESECTORSONMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x105
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_USEDSECTORSONMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x106
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_DONOTFINALIZEMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x107
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_EXPECTEDTABLEOFCONTENTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10A
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_CURRENTMEDIATYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10B
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_CLIENTNAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10E
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_REQUESTEDWRITESPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10F
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_REQUESTEDROTATIONTYPEISPURECAV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x110
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_CURRENTWRITESPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x111
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_CURRENTROTATIONTYPEISPURECAV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x112
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_SUPPORTEDWRITESPEEDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x113
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_SUPPORTEDWRITESPEEDDESCRIPTORS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x114
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_PREPAREMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_ADDAUDIOTRACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x201
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_CANCELADDTRACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x202
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_FINISHMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x203
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAO_SETWRITESPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x204
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_DDISCFORMAT2TAOEVENTS_UPDATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAOEVENTARGS_CURRENTTRACKNUMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x300
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAOEVENTARGS_CURRENTACTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x301
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAOEVENTARGS_ELAPSEDTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x302
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAOEVENTARGS_ESTIMATEDREMAININGTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x303
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2TAOEVENTARGS_ESTIMATEDTOTALTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x304
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_RECORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_BUFFERUNDERRUNFREEDISABLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x102
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_STARTOFNEXTSESSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x103
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_LASTPOSSIBLESTARTOFLEADOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x104
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_CURRENTMEDIATYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x105
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_SUPPORTEDDATASECTORTYPES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x108
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_REQUESTEDDATASECTORTYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x109
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_CLIENTNAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10A
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_REQUESTEDWRITESPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10B
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_REQUESTEDROTATIONTYPEISPURECAV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10C
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_CURRENTWRITESPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10D
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_CURRENTROTATIONTYPEISPURECAV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10E
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_SUPPORTEDWRITESPEEDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10F
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_SUPPORTEDWRITESPEEDDESCRIPTORS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x110
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_PREPAREMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_WRITEMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x201
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_WRITEMEDIAWITHVALIDATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x202
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_CANCELWRITE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x203
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_RELEASEMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x204
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCD_SETWRITESPEED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x205
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_DDISCFORMAT2RAWCDEVENTS_UPDATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCDEVENTARGS_CURRENTTRACKNUMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x300
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCDEVENTARGS_CURRENTACTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x301
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCDEVENTARGS_ELAPSEDTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x300
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCDEVENTARGS_ESTIMATEDREMAININGTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x301
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IDISCFORMAT2RAWCDEVENTARGS_ESTIMATEDTOTALTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x302
+            </code>
+                </value>
+            </constant>
+            <constant name="IMAPI_SECTORS_PER_SECOND_AT_1X_CD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>75
+            </code>
+                </value>
+            </constant>
+            <constant name="IMAPI_SECTORS_PER_SECOND_AT_1X_DVD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>680
+            </code>
+                </value>
+            </constant>
+            <constant name="IMAPI_SECTORS_PER_SECOND_AT_1X_BD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2195
+            </code>
+                </value>
+            </constant>
+            <constant name="IMAPI_SECTORS_PER_SECOND_AT_1X_HD_DVD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4568
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_SUPPORTEDONCURRENTMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_INUSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_IMPORTRECORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x102
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_FIRSTDATASESSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_STARTSECTOROFPREVIOUSSESSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x201
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_LASTSECTOROFPREVIOUSSESSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x202
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_NEXTWRITABLEADDRESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x203
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_FREESECTORS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x204
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_WRITEUNITSIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x205
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_LASTWRITTENADDRESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x206
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IMULTISESSION_SECTORSONMEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x207
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_CREATERESULTIMAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_ADDTRACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x201
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_ADDSPECIALPREGAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x202
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_ADDSUBCODERWGENERATOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x203
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_RESULTINGIMAGETYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_STARTOFLEADOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_STARTOFLEADOUTLIMIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x102
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_DISABLEGAPLESSAUDIO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x103
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_MEDIACATALOGNUMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x104
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_STARTINGTRACKNUMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x105
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_TRACKINFO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x106
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_NUMBEROFEXISTINGTRACKS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x107
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_USEDSECTORSONDISC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x108
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDIMAGECREATOR_EXPECTEDTABLEOFCONTENTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x109
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDTRACKINFO_STARTINGLBA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDTRACKINFO_SECTORCOUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDTRACKINFO_TRACKNUMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x102
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDTRACKINFO_SECTORTYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x103
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDTRACKINFO_ISRC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x104
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDTRACKINFO_DIGITALAUDIOCOPYSETTING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x105
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IRAWCDTRACKINFO_AUDIOHASPREEMPHASIS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x106
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IBLOCKRANGE_STARTLBA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IBLOCKRANGE_ENDLBA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x101
+            </code>
+                </value>
+            </constant>
+            <constant name="DISPID_IBLOCKRANGELIST_BLOCKRANGES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="IMAPILib2_MajorVersion" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="IMAPILib2_MinorVersion" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_IDiscMaster2" value="0x27354130, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_DDiscMaster2Events" value="0x27354131, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscRecorder2Ex" value="0x27354132, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscRecorder2" value="0x27354133, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IWriteEngine2" value="0x27354135, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IWriteEngine2EventArgs" value="0x27354136, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_DWriteEngine2Events" value="0x27354137, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscFormat2" value="0x27354152, 0x8F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscFormat2Erase" value="0x27354156, 0x8F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_DDiscFormat2EraseEvents" value="0x2735413A, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscFormat2Data" value="0x27354153, 0x9F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_DDiscFormat2DataEvents" value="0x2735413C, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscFormat2DataEventArgs" value="0x2735413D, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscFormat2TrackAtOnce" value="0x27354154, 0x8F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_DDiscFormat2TrackAtOnceEvents" value="0x2735413F, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscFormat2TrackAtOnceEventArgs" value="0x27354140, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscFormat2RawCD" value="0x27354155, 0x8F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_DDiscFormat2RawCDEvents" value="0x27354142, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IDiscFormat2RawCDEventArgs" value="0x27354143, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IBurnVerification" value="0xD2FFD834, 0x958B, 0x426D, 0x84, 0x70, 0x2A, 0x13, 0x87, 0x9C, 0x6A, 0x91" />
+            <iid name="IID_IWriteSpeedDescriptor" value="0x27354144, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IMultisession" value="0x27354150, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IMultisessionSequential" value="0x27354151, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IMultisessionSequential2" value="0xB507CA22, 0x2204, 0x11DD, 0x96, 0x6A, 0x00, 0x1A, 0xA0, 0x1B, 0xBC, 0x58" />
+            <iid name="IID_IMultisessionRandomWrite" value="0xB507CA23, 0x2204, 0x11DD, 0x96, 0x6A, 0x00, 0x1A, 0xA0, 0x1B, 0xBC, 0x58" />
+            <iid name="IID_IStreamPseudoRandomBased" value="0x27354145, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IStreamConcatenate" value="0x27354146, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IStreamInterleave" value="0x27354147, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="IID_IRawCDImageCreator" value="0x25983550, 0x9D65, 0x49CE, 0xB3, 0x35, 0x40, 0x63, 0x0D, 0x90, 0x12, 0x27" />
+            <iid name="IID_IRawCDImageTrackInfo" value="0x25983551, 0x9D65, 0x49CE, 0xB3, 0x35, 0x40, 0x63, 0x0D, 0x90, 0x12, 0x27" />
+            <iid name="IID_IBlockRange" value="0xB507CA25, 0x2204, 0x11DD, 0x96, 0x6A, 0x00, 0x1A, 0xA0, 0x1B, 0xBC, 0x58" />
+            <iid name="IID_IBlockRangeList" value="0xB507CA26, 0x2204, 0x11DD, 0x96, 0x6A, 0x00, 0x1A, 0xA0, 0x1B, 0xBC, 0x58" />
+            <iid name="IID_MsftDiscMaster2" value="0x2735412E, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftDiscRecorder2" value="0x2735412D, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftWriteEngine2" value="0x2735412C, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftDiscFormat2Erase" value="0x2735412B, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftDiscFormat2Data" value="0x2735412A, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftDiscFormat2TrackAtOnce" value="0x27354129, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftDiscFormat2RawCD" value="0x27354128, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftStreamZero" value="0x27354127, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftStreamPrng001" value="0x27354126, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftStreamConcatenate" value="0x27354125, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftStreamInterleave" value="0x27354124, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftWriteSpeedDescriptor" value="0x27354123, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftMultisessionSequential" value="0x27354122, 0x7F64, 0x5B0F, 0x8F, 0x00, 0x5D, 0x77, 0xAF, 0xBE, 0x26, 0x1E" />
+            <iid name="CLSID_MsftMultisessionRandomWrite" value="0xB507CA24, 0x2204, 0x11DD, 0x96, 0x6A, 0x00, 0x1A, 0xA0, 0x1B, 0xBC, 0x58" />
+            <iid name="CLSID_MsftRawCDImageCreator" value="0x25983561, 0x9D65, 0x49CE, 0xB3, 0x35, 0x40, 0x63, 0x0D, 0x90, 0x12, 0x27" />
+        </class>
+    </namespace>
+</bindings>

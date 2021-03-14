@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAsyncReader" access="public" native="struct IAsyncReader : IUnknown" uuid="56a868aa-0ad4-11ce-b03a-0020af0ba770" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RequestAllocator" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPreferred">
+                    <type>IMemAllocator*</type>
+                </param>
+                <param name="pProps">
+                    <type>ALLOCATOR_PROPERTIES*</type>
+                </param>
+                <param name="ppActual">
+                    <type>IMemAllocator**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, IMemAllocator*, ALLOCATOR_PROPERTIES*, IMemAllocator**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>, <param name="pPreferred">pPreferred</param>, <param name="pProps">pProps</param>, <param name="ppActual">ppActual</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Request" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSample">
+                    <type>IMediaSample*</type>
+                </param>
+                <param name="dwUser">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, IMediaSample*, nuint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>, <param name="pSample">pSample</param>, <param name="dwUser">dwUser</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WaitForNext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwTimeout">
+                    <type>uint</type>
+                </param>
+                <param name="ppSample">
+                    <type>IMediaSample**</type>
+                </param>
+                <param name="pdwUser">
+                    <type>nuint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, uint, IMediaSample**, nuint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>, <param name="dwTimeout">dwTimeout</param>, <param name="ppSample">ppSample</param>, <param name="pdwUser">pdwUser</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SyncReadAligned" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSample">
+                    <type>IMediaSample*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, IMediaSample*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>, <param name="pSample">pSample</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SyncRead" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="llPosition">
+                    <type>long</type>
+                </param>
+                <param name="lLength">
+                    <type>int</type>
+                </param>
+                <param name="pBuffer">
+                    <type>byte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, long, int, byte*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>, <param name="llPosition">llPosition</param>, <param name="lLength">lLength</param>, <param name="pBuffer">pBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Length" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTotal">
+                    <type>long*</type>
+                </param>
+                <param name="pAvailable">
+                    <type>long*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, long*, long*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>, <param name="pTotal">pTotal</param>, <param name="pAvailable">pAvailable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginFlush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndFlush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAsyncReader*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IAsyncReader*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

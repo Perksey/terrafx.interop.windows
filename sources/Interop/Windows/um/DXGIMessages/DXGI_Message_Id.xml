@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/DXGIMessages.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="DXGI_Message_Id" access="public">
+            <type>int</type>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferWidthInferred" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferHeightInferred" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_NoScanoutFlagChanged" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Creation_MaxBufferCountExceeded" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Creation_TooFewBuffers" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Creation_NoOutputWindow" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Destruction_OtherMethodsCalled" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetDesc_pDescIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetBuffer_ppSurfaceIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetBuffer_NoAllocatedBuffers" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferMustBeZero" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferOOB" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetContainingOutput_ppOutputIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_SyncIntervalOOB" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_InvalidNonPreRotatedFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_NoAllocatedBuffers" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_GetDXGIAdapterFailed" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOB" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_UnreleasedReferences" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidSwapChainFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidNonPreRotatedFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeTarget_RefreshRateDivideByZero" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_InvalidTarget" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetFrameStatistics_pStatsIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetLastPresentCount_pLastPresentCountIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_RemoteNotSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_TakeOwnership_FailedToAcquireFullscreenMutex" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ppAdapterInterfaceIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_EnumAdapters_ppAdapterInterfaceIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_ppSwapChainIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_pDescIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_UnknownSwapEffect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFlags" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedFlagAndWindowed" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_NullDeviceInterface" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_GetWindowAssociation_phWndIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_MakeWindowAssociation_InvalidFlags" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface_Map_InvalidSurface" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface_Map_FlagsSetToZero" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface_Map_DiscardAndReadFlagSet" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface_Map_DiscardButNotWriteFlagSet" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface_Map_NoCPUAccess" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface_Map_ReadFlagSetButCPUAccessIsDynamic" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface_Map_DiscardFlagSetButCPUAccessIsNotDynamic" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetDisplayModeList_pNumModesIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasInvalidWidthOrHeight" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetCammaControlCapabilities_NoOwnerDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_TakeOwnership_pDeviceIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_NoOwnerDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_pDestinationIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_MapOfDestinationFailed" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetFrameStatistics_NoOwnerDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetFrameStatistics_pStatsIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_SetGammaControl_NoOwnerDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetGammaControl_NoOwnerDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetGammaControl_NoGammaControls" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_SetDisplaySurface_IDXGIResourceNotSupportedBypPrimary" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_SetDisplaySurface_pPrimaryIsInvalid" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_SetDisplaySurface_NoOwnerDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteDeviceNotSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteDeviceNotSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteDeviceNotSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIDevice_CreateSurface_InvalidParametersWithpSharedResource" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIObject_GetPrivateData_puiDataSizeIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Creation_InvalidOutputWindow" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Release_SwapChainIsFullscreen" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_InvalidTargetSurfaceFormat" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ModuleIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_IDXGIDeviceNotSupportedBypConcernedDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_pModeToMatchOrpClosestMatchIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasRefreshRateDenominatorZero" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_UnknownFormatIsInvalidForConfiguration" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScanlineOrdering" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScaling" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeFormatAndDeviceCombination" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_Creation_CalledFromDllMain" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_OutputNotOwnedBySwapChainDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Creation_InvalidWindowStyle" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetFrameStatistics_UnsupportedStatistics" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetContainingOutput_SwapchainAdapterDoesNotControlOutput" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_SetOrGetGammaControl_pArrayIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_FullscreenInvalidForChildWindows" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_Release_CalledFromDllMain" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_UnreleasedHDC" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_NonPreRotatedAndGDICompatibleFlags" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedAndGDICompatibleFlags" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface1_GetDC_pHdcIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface1_GetDC_SurfaceNotTexture2D" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface1_GetDC_GDICompatibleFlagNotSet" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface1_GetDC_UnreleasedHDC" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface_Map_NoCPUAccess2" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface1_ReleaseDC_GetDCNotCalled" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface1_ReleaseDC_InvalidRectangleDimensions" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteOutputNotSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteOutputNotSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteOutputNotSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_pDeviceHasMismatchedDXGIFactory" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_NonOptimalFSConfiguration" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSequentialNotSupportedOnD3D10" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_BufferCountOOBForFlipSequential" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFormatForFlipSequential" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_MultiSamplingNotSupportedForFlipSequential" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOBForFlipSequential" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidFormatForFlipSequential" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_PartialPresentationBeforeStandardPresentation" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_FullscreenPartialPresentIsInvalid" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_InvalidPresentTestOrDoNotSequenceFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_ScrollInfoWithNoDirtyRectsSpecified" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_EmptyScrollRect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBounds" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBoundsWithOffset" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_EmptyDirtyRect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_DirtyRectOutOfBackbufferBounds" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_UnsupportedBufferUsageFlags" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_DoNotSequenceFlagSetButPreviousBufferIsUndefined" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_UnsupportedFlags" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_FlipModelChainMustResizeOrCreateOnFSTransition" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_pRestrictToOutputFromOtherIDXGIFactory" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictOutputNotSupportedOnAdapter" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagSetButInvalidpRestrictToOutput" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagdWithFullscreen" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_RestrictOutputFlagWithStaleSwapChain" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_OtherFlagsCausingInvalidPresentTestFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_UnavailableInSession0" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_MakeWindowAssociation_UnavailableInSession0" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_GetWindowAssociation_UnavailableInSession0" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIAdapter_EnumOutputs_UnavailableInSession0" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_StereoDisabled" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_UnregisterStatus_CookieNotFound" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFSOrOverlay" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFlipSequential" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_ProtectedContentWithRDPDriver" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithDWMOffOrInvalidDisplayAffinity" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_WidthOrHeightIsZero" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_OnlyFlipSequentialSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnAdapter" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnWindows7" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSTransitionWithCompositionSwapChain" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeTarget_InvalidWithCompositionSwapChain" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_WidthOrHeightIsZero" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneIsFlipModelOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingUnrecognized" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyFullscreenUnsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyUnsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_RestartIsFullscreenOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_ProtectedWindowlessPresentationRequiresDisplayOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_DisplayOnlyUnsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain1_SetBackgroundColor_OutOfRange" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyFullscreenUnsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyUnsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapchain_Present_ScrollUnsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain1_SetRotation_UnsupportedOS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain1_GetRotation_UnsupportedOS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapchain_Present_FullscreenRotation" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithMSAABuffers" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain1_SetRotation_FlipSequentialRequired" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain1_SetRotation_InvalidRotation" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain1_GetRotation_FlipSequentialRequired" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetHwnd_WrongType" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetCompositionSurface_WrongType" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetCoreWindow_WrongType" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetFullscreenDesc_NonHwnd" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_CoreWindow" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_UnsupportedOnWindows7" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_FSUnsupportedForModernApps" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_MakeWindowAssociation_ModernApp" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeTarget_ModernApp" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeTarget_pNewTargetParametersIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_SetDisplaySurface_ModernApp" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_TakeOwnership_ModernApp" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsInvalid" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_CreateSwapChainForCompositionSurface_InvalidHandle" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISurface1_GetDC_ModernApp" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneRequiresWindows8OrNewer" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoAndPreferRight" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithDoNotSequence" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithoutStereo" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoUnsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_ArraySizeMismatch" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithSwapEffectDiscard" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaUnrecognized" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsWindowlessOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsFlipModelOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictToOutputAdapterMismatch" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyOnLegacy" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyOnLegacy" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIResource1_CreateSubresourceSurface_InvalidIndex" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidScaling" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChainForCoreWindow_InvalidSwapEffect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIResource1_CreateSharedHandle_UnsupportedOS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusWindow_UnsupportedOS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusEvent_UnsupportedOS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput1_DuplicateOutput_UnsupportedOS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIDisplayControl_IsStereoEnabled_UnsupportedOS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidAlphaMode" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidResource" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidLUID" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_UnsupportedOS" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_2DOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_StagingOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NeedCPUAccessWrite" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NoShared" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_OnlyMipLevels1" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_MappedOrOfferedResource" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSUnsupportedForModernApps" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_FailedToGoFSButNonPreRotated" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChainOrRegisterOcclusionStatus_BlitModelUsedWhileRegisteredForOcclusionStatusEvents" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_BlitModelUsedWhileRegisteredForOcclusionStatusEvents" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreFlipModelOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreNotFullscreen" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_Waitable" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveWaitableFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetFrameLatencyWaitableObject_OnlyWaitable" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_OnlyWaitable" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_pMaxLatencyIsNULL" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_OnlyWaitable" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_MaxLatencyIsOutOfBounds" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_ForegroundIsCoreWindowOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_ForegroundUnsupportedOnAdapter" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidScaling" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidAlphaMode" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveForegroundFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixPointerCannotBeNull" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetMatrixTransform_RequiresCompositionSwapChain" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeFinite" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeTranslateAndOrScale" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetMatrixTransform_MatrixPointerCannotBeNull" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetMatrixTransform_RequiresCompositionSwapChain" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_DXGIGetDebugInterface1_NULL_ppDebug" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_DXGIGetDebugInterface1_InvalidFlags" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_Decode" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_Decode" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetSourceSize_FlipModel" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetSourceSize_Decode" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetSourceSize_WidthHeight" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetSourceSize_NullPointers" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetSourceSize_Decode" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIDecodeSwapChain_SetColorSpace_InvalidFlags" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIDecodeSwapChain_SetSourceRect_InvalidRect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIDecodeSwapChain_SetTargetRect_InvalidRect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIDecodeSwapChain_SetDestSize_InvalidSize" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIDecodeSwapChain_GetSourceRect_InvalidPointer" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIDecodeSwapChain_GetTargetRect_InvalidPointer" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIDecodeSwapChain_GetDestSize_InvalidPointer" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_PresentBuffer_YUV" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetSourceSize_YUV" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetSourceSize_YUV" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetMatrixTransform_YUV" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_GetMatrixTransform_YUV" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_PartialPresentation_YUV" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveFlag_YUV" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_Alignment_YUV" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_ShaderInputUnsupported_YUV" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_NullPointers" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_IDXGIDeviceNotSupportedBypConcernedDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIAdapter_EnumOutputs2_InvalidEnumOutputs2Flag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_FSUnsupportedForFlipDiscard" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_NullPointers" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_IDXGIDeviceNotSupportedBypConcernedDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain3_CheckColorSpaceSupport_NullPointers" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain3_SetColorSpace1_InvalidColorSpace" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidHwProtect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_HwProtectUnsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_HwProtectUnsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers1_D3D12Only" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers1_FlipModel" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers1_NodeMaskAndQueueRequired" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_CreateSwapChain_InvalidHwProtectGdiFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtectGdiFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_10BitFormatNotSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSwapEffectRequired" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidDevice" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_TakeOwnership_Unsupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidQueue" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain3_ResizeBuffers1_InvalidQueue" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChainForHwnd_InvalidScaling" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidSize" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidPointer" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidType" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_FullscreenAllowTearingIsInvalid" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresPresentIntervalZero" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresCreationFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveAllowTearingFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_AllowTearingFlagIsFlipModelOnly" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidFeature" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidSize" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput6_CheckHardwareCompositionSupport_NullPointer" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_SetFullscreenState_PerMonitorDpiShimApplied" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_DuplicateOutput_PerMonitorDpiShimApplied" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIOutput_DuplicateOutput1_PerMonitorDpiRequired" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory7_UnregisterAdaptersChangedEvent_CookieNotFound" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_LegacyBltModelSwapEffect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain4_SetHDRMetaData_MetadataUnchanged" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGISwapChain_Present_11On12_Released_Resource" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_IDXGIFactory_CreateSwapChain_MultipleSwapchainRefToSurface_DeferredDtr" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_DISCARD_BufferCount" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_SetFullscreenState_NotAvailable" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_ResizeBuffers_NotAvailable" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_ResizeTarget_NotAvailable" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerIndex" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleLayerIndex" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidRotation" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidBlend" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidResource" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidMultiPlaneOverlayResource" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForPrimary" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForOverlay" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSubResourceIndex" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSourceRect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidDestinationRect" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleResource" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_NotSharedResource" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidFlag" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidInterval" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_MSAA_NotSupported" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_ScalingAspectRatioStretch_Supported_ModernApp" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_GetFrameStatistics_NotAvailable_ModernApp" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present_ReplaceInterval0With1" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FailedRegisterWithCompositor" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow_AtRendering" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_SEQUENTIAL_BufferCount" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_Modern_CoreWindow_Only" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_Present1_RequiresOverlays" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_SetBackgroundColor_FlipSequentialRequired" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+            <enumerator name="DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired" access="">
+                <type primitive="False">int</type>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mmeapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MIXERCONTROLW" access="public" unsafe="true" layout="Sequential" pack="1">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwControlID" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwControlType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="fdwControl" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cMultipleItems" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="szShortName" access="public">
+                <type native="WCHAR [16]" count="16" fixed="_szShortName_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="szName" access="public">
+                <type native="WCHAR [64]" count="64" fixed="_szName_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="Bounds" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/mmeapi.h:2113:5)">_Bounds_e__Union</type>
+            </field>
+            <field name="Metrics" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/mmeapi.h:2124:5)">_Metrics_e__Union</type>
+            </field>
+            <struct name="_Bounds_e__Union" access="public" unsafe="true" layout="Explicit" pack="1">
+                <field name="Anonymous1" access="public" offset="0">
+                    <type native="tagMIXERCONTROLW::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/mmeapi.h:2114:9)">_Anonymous1_e__Struct</type>
+                </field>
+                <field name="lMinimum" access="public">
+                    <type native="">ref int</type>
+                    <get inlining="aggressive">
+                        <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.lMinimum, 1));
+        </code>
+                    </get>
+                </field>
+                <field name="lMaximum" access="public">
+                    <type native="">ref int</type>
+                    <get inlining="aggressive">
+                        <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.lMaximum, 1));
+        </code>
+                    </get>
+                </field>
+                <field name="Anonymous2" access="public" offset="0">
+                    <type native="tagMIXERCONTROLW::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/mmeapi.h:2118:9)">_Anonymous2_e__Struct</type>
+                </field>
+                <field name="dwMinimum" access="public">
+                    <type native="">ref uint</type>
+                    <get inlining="aggressive">
+                        <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.dwMinimum, 1));
+        </code>
+                    </get>
+                </field>
+                <field name="dwMaximum" access="public">
+                    <type native="">ref uint</type>
+                    <get inlining="aggressive">
+                        <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.dwMaximum, 1));
+        </code>
+                    </get>
+                </field>
+                <field name="dwReserved" access="public" offset="0">
+                    <type native="DWORD [6]" count="6" fixed="_dwReserved_e__FixedBuffer">uint</type>
+                </field>
+                <struct name="_Anonymous1_e__Struct" access="public" layout="Sequential" pack="1">
+                    <field name="lMinimum" access="public">
+                        <type native="LONG">int</type>
+                    </field>
+                    <field name="lMaximum" access="public">
+                        <type native="LONG">int</type>
+                    </field>
+                </struct>
+                <struct name="_Anonymous2_e__Struct" access="public" layout="Sequential" pack="1">
+                    <field name="dwMinimum" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="dwMaximum" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                </struct>
+            </struct>
+            <struct name="_Metrics_e__Union" access="public" unsafe="true" layout="Explicit" pack="1">
+                <field name="cSteps" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="cbCustomData" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="dwReserved" access="public" offset="0">
+                    <type native="DWORD [6]" count="6" fixed="_dwReserved_e__FixedBuffer">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

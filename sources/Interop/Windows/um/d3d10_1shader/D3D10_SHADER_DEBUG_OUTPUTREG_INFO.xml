@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d10_1shader.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D10_SHADER_DEBUG_OUTPUTREG_INFO" access="public" unsafe="true">
+            <field name="OutputRegisterSet" access="public">
+                <type native="">D3D10_SHADER_DEBUG_REGTYPE</type>
+            </field>
+            <field name="OutputReg" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="TempArrayReg" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="OutputComponents" access="public">
+                <type native="UINT [4]" count="4" fixed="_OutputComponents_e__FixedBuffer">uint</type>
+            </field>
+            <field name="OutputVars" access="public">
+                <type native="D3D10_SHADER_DEBUG_OUTPUTVAR [4]" count="4" fixed="_OutputVars_e__FixedBuffer">D3D10_SHADER_DEBUG_OUTPUTVAR</type>
+            </field>
+            <field name="IndexReg" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="IndexComp" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <struct name="_OutputVars_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">D3D10_SHADER_DEBUG_OUTPUTVAR</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">D3D10_SHADER_DEBUG_OUTPUTVAR</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">D3D10_SHADER_DEBUG_OUTPUTVAR</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">D3D10_SHADER_DEBUG_OUTPUTVAR</type>
+                </field>
+                <indexer access="public">
+                    <type>ref D3D10_SHADER_DEBUG_OUTPUTVAR</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;D3D10_SHADER_DEBUG_OUTPUTVAR&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 4);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

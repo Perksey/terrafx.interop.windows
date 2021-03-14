@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/OCIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IPropertyBag2" access="public" native="struct IPropertyBag2 : IUnknown" uuid="22f55882-280b-11d0-a8a9-00a0c90c2004" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyBag2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IPropertyBag2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyBag2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IPropertyBag2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyBag2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IPropertyBag2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Read" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cProperties">
+                    <type>uint</type>
+                </param>
+                <param name="pPropBag">
+                    <type>PROPBAG2*</type>
+                </param>
+                <param name="pErrLog">
+                    <type>IErrorLog*</type>
+                </param>
+                <param name="pvarValue">
+                    <type>VARIANT*</type>
+                </param>
+                <param name="phrError">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyBag2*, uint, PROPBAG2*, IErrorLog*, VARIANT*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IPropertyBag2*)Unsafe.AsPointer(ref this)</param>, <param name="cProperties">cProperties</param>, <param name="pPropBag">pPropBag</param>, <param name="pErrLog">pErrLog</param>, <param name="pvarValue">pvarValue</param>, <param name="phrError">phrError</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Write" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cProperties">
+                    <type>uint</type>
+                </param>
+                <param name="pPropBag">
+                    <type>PROPBAG2*</type>
+                </param>
+                <param name="pvarValue">
+                    <type>VARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyBag2*, uint, PROPBAG2*, VARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IPropertyBag2*)Unsafe.AsPointer(ref this)</param>, <param name="cProperties">cProperties</param>, <param name="pPropBag">pPropBag</param>, <param name="pvarValue">pvarValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CountProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcProperties">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyBag2*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IPropertyBag2*)Unsafe.AsPointer(ref this)</param>, <param name="pcProperties">pcProperties</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="iProperty">
+                    <type>uint</type>
+                </param>
+                <param name="cProperties">
+                    <type>uint</type>
+                </param>
+                <param name="pPropBag">
+                    <type>PROPBAG2*</type>
+                </param>
+                <param name="pcProperties">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyBag2*, uint, uint, PROPBAG2*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IPropertyBag2*)Unsafe.AsPointer(ref this)</param>, <param name="iProperty">iProperty</param>, <param name="cProperties">cProperties</param>, <param name="pPropBag">pPropBag</param>, <param name="pcProperties">pcProperties</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pstrName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwHint">
+                    <type>uint</type>
+                </param>
+                <param name="pUnkObject">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pErrLog">
+                    <type>IErrorLog*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPropertyBag2*, ushort*, uint, IUnknown*, IErrorLog*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IPropertyBag2*)Unsafe.AsPointer(ref this)</param>, <param name="pstrName">pstrName</param>, <param name="dwHint">dwHint</param>, <param name="pUnkObject">pUnkObject</param>, <param name="pErrLog">pErrLog</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

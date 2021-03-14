@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/wtypes.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DECIMAL" access="public">
+            <field name="wReserved" access="public">
+                <type native="USHORT">ushort</type>
+            </field>
+            <field name="Anonymous1" access="public">
+                <type native="tagDEC::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared/wtypes.h:697:5)">_Anonymous1_e__Union</type>
+            </field>
+            <field name="scale" access="public">
+                <type native="">ref byte</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous.scale, 1));
+        </code>
+                </get>
+            </field>
+            <field name="sign" access="public">
+                <type native="">ref byte</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.Anonymous.sign, 1));
+        </code>
+                </get>
+            </field>
+            <field name="signscale" access="public">
+                <type native="">ref ushort</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.signscale, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Hi32" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="Anonymous2" access="public">
+                <type native="tagDEC::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared/wtypes.h:705:5)">_Anonymous2_e__Union</type>
+            </field>
+            <field name="Lo32" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.Anonymous.Lo32, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Mid32" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.Anonymous.Mid32, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Lo64" access="public">
+                <type native="">ref ulong</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.Lo64, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous1_e__Union" access="public" layout="Explicit">
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="tagDEC::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared/wtypes.h:698:9)">_Anonymous_e__Struct</type>
+                </field>
+                <field name="signscale" access="public" offset="0">
+                    <type native="USHORT">ushort</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="scale" access="public">
+                        <type native="BYTE">byte</type>
+                    </field>
+                    <field name="sign" access="public">
+                        <type native="BYTE">byte</type>
+                    </field>
+                </struct>
+            </struct>
+            <struct name="_Anonymous2_e__Union" access="public" layout="Explicit">
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="tagDEC::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared/wtypes.h:706:9)">_Anonymous_e__Struct</type>
+                </field>
+                <field name="Lo64" access="public" offset="0">
+                    <type native="ULONGLONG">ulong</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="Lo32" access="public">
+                        <type native="ULONG">uint</type>
+                    </field>
+                    <field name="Mid32" access="public">
+                        <type native="ULONG">uint</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

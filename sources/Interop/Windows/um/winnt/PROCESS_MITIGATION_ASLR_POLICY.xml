@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PROCESS_MITIGATION_ASLR_POLICY" access="public">
+            <field name="Anonymous" access="public">
+                <type native="_PROCESS_MITIGATION_ASLR_POLICY::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:11730:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Flags, 1));
+        </code>
+                </get>
+            </field>
+            <field name="EnableBottomUpRandomization" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.EnableBottomUpRandomization;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.EnableBottomUpRandomization = value;
+        </code>
+                </set>
+            </field>
+            <field name="EnableForceRelocateImages" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.EnableForceRelocateImages;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.EnableForceRelocateImages = value;
+        </code>
+                </set>
+            </field>
+            <field name="EnableHighEntropy" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.EnableHighEntropy;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.EnableHighEntropy = value;
+        </code>
+                </set>
+            </field>
+            <field name="DisallowStrippedImages" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.DisallowStrippedImages;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.DisallowStrippedImages = value;
+        </code>
+                </set>
+            </field>
+            <field name="ReservedFlags" access="public">
+                <type native="">uint</type>
+                <get inlining="aggressive">
+                    <code>return Anonymous.Anonymous.ReservedFlags;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>Anonymous.Anonymous.ReservedFlags = value;
+        </code>
+                </set>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="Flags" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="_PROCESS_MITIGATION_ASLR_POLICY::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:11732:9)">_Anonymous_e__Struct</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public">
+                    <field name="_bitfield" access="public">
+                        <type native="">uint</type>
+                    </field>
+                    <field name="EnableBottomUpRandomization" access="public">
+                        <type native="DWORD : 1">uint</type>
+                        <get inlining="aggressive">
+                            <code>return <bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>);
+        </code>
+                        </set>
+                    </field>
+                    <field name="EnableForceRelocateImages" access="public">
+                        <type native="DWORD : 1">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>1</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>1</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 1);
+        </code>
+                        </set>
+                    </field>
+                    <field name="EnableHighEntropy" access="public">
+                        <type native="DWORD : 1">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>2</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>2</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 2);
+        </code>
+                        </set>
+                    </field>
+                    <field name="DisallowStrippedImages" access="public">
+                        <type native="DWORD : 1">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>3</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>3</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 3);
+        </code>
+                        </set>
+                    </field>
+                    <field name="ReservedFlags" access="public">
+                        <type native="DWORD : 28">uint</type>
+                        <get inlining="aggressive">
+                            <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>4</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>FFFFFFFu</bitwidthHexStringBacking>;
+        </code>
+                        </get>
+                        <set inlining="aggressive">
+                            <code>
+                                <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>FFFFFFFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>4</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>FFFFFFFu</bitwidthHexString>) &lt;&lt; 4);
+        </code>
+                        </set>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

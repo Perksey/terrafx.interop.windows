@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ICodeInstall" access="public" native="struct ICodeInstall : IWindowForBindingUI" uuid="79eac9d1-baf9-11ce-8c82-00aa004ba90b" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodeInstall*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ICodeInstall*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodeInstall*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ICodeInstall*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodeInstall*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ICodeInstall*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWindow" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguidReason">
+                    <type>Guid*</type>
+                </param>
+                <param name="phwnd">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodeInstall*, Guid*, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ICodeInstall*)Unsafe.AsPointer(ref this)</param>, <param name="rguidReason">rguidReason</param>, <param name="phwnd">phwnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnCodeInstallProblem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStatusCode">
+                    <type>uint</type>
+                </param>
+                <param name="szDestination">
+                    <type>ushort*</type>
+                </param>
+                <param name="szSource">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICodeInstall*, uint, ushort*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ICodeInstall*)Unsafe.AsPointer(ref this)</param>, <param name="ulStatusCode">ulStatusCode</param>, <param name="szDestination">szDestination</param>, <param name="szSource">szSource</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

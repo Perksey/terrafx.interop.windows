@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="QUERY_FILE_LAYOUT_INPUT" access="public">
+            <field name="Anonymous" access="public">
+                <type native="_QUERY_FILE_LAYOUT_INPUT::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:14347:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="FilterEntryCount" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.FilterEntryCount, 1));
+        </code>
+                </get>
+            </field>
+            <field name="NumberOfPairs" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.NumberOfPairs, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="FilterType" access="public">
+                <type native="">QUERY_FILE_LAYOUT_FILTER_TYPE</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Filter" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:14374:5)">_Filter_e__Union</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="FilterEntryCount" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+                <field name="NumberOfPairs" access="public" offset="0">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+            <struct name="_Filter_e__Union" access="public" layout="Explicit">
+                <field name="ClusterRanges" access="public" offset="0">
+                    <type native="CLUSTER_RANGE [1]" count="1" fixed="_ClusterRanges_e__FixedBuffer">CLUSTER_RANGE</type>
+                </field>
+                <field name="FileReferenceRanges" access="public" offset="0">
+                    <type native="FILE_REFERENCE_RANGE [1]" count="1" fixed="_FileReferenceRanges_e__FixedBuffer">FILE_REFERENCE_RANGE</type>
+                </field>
+                <field name="StorageReserveIds" access="public" offset="0">
+                    <type native="STORAGE_RESERVE_ID [1]" count="1" fixed="_StorageReserveIds_e__FixedBuffer">STORAGE_RESERVE_ID</type>
+                </field>
+                <struct name="_ClusterRanges_e__FixedBuffer" access="public">
+                    <field name="e0" access="public">
+                        <type native="">CLUSTER_RANGE</type>
+                    </field>
+                    <indexer access="public">
+                        <type>ref CLUSTER_RANGE</type>
+                        <param name="index">
+                            <type>int</type>
+                        </param>
+                        <get inlining="aggressive">
+                            <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                        </get>
+                    </indexer>
+                    <function name="AsSpan" access="public" unsafe="true">
+                        <type>Span&lt;CLUSTER_RANGE&gt;</type>
+                        <param name="length">
+                            <type>int</type>
+                        </param>
+                        <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                    </function>
+                </struct>
+                <struct name="_FileReferenceRanges_e__FixedBuffer" access="public">
+                    <field name="e0" access="public">
+                        <type native="">FILE_REFERENCE_RANGE</type>
+                    </field>
+                    <indexer access="public">
+                        <type>ref FILE_REFERENCE_RANGE</type>
+                        <param name="index">
+                            <type>int</type>
+                        </param>
+                        <get inlining="aggressive">
+                            <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                        </get>
+                    </indexer>
+                    <function name="AsSpan" access="public" unsafe="true">
+                        <type>Span&lt;FILE_REFERENCE_RANGE&gt;</type>
+                        <param name="length">
+                            <type>int</type>
+                        </param>
+                        <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                    </function>
+                </struct>
+                <struct name="_StorageReserveIds_e__FixedBuffer" access="public">
+                    <field name="e0" access="public">
+                        <type native="">STORAGE_RESERVE_ID</type>
+                    </field>
+                    <indexer access="public">
+                        <type>ref STORAGE_RESERVE_ID</type>
+                        <param name="index">
+                            <type>int</type>
+                        </param>
+                        <get inlining="aggressive">
+                            <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                        </get>
+                    </indexer>
+                    <function name="AsSpan" access="public" unsafe="true">
+                        <type>Span&lt;STORAGE_RESERVE_ID&gt;</type>
+                        <param name="length">
+                            <type>int</type>
+                        </param>
+                        <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                    </function>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

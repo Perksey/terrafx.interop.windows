@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/fileapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="CompareFileTime" access="public" lib="kernel32" static="true">
+                <type native="LONG">int</type>
+                <param name="lpFileTime1">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpFileTime2">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="CreateDirectoryA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpPathName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpSecurityAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+            </function>
+            <function name="CreateDirectoryW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpPathName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpSecurityAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+            </function>
+            <function name="CreateFileA" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="dwShareMode">
+                    <type>uint</type>
+                </param>
+                <param name="lpSecurityAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="dwCreationDisposition">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlagsAndAttributes">
+                    <type>uint</type>
+                </param>
+                <param name="hTemplateFile">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="CreateFileW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="dwShareMode">
+                    <type>uint</type>
+                </param>
+                <param name="lpSecurityAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="dwCreationDisposition">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlagsAndAttributes">
+                    <type>uint</type>
+                </param>
+                <param name="hTemplateFile">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="DefineDosDeviceW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpDeviceName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpTargetPath">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="DeleteFileA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="DeleteFileW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="DeleteVolumeMountPointW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpszVolumeMountPoint">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="FileTimeToLocalFileTime" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpFileTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpLocalFileTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="FindClose" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hFindFile">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="FindCloseChangeNotification" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hChangeHandle">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="FindFirstChangeNotificationA" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpPathName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="bWatchSubtree">
+                    <type>int</type>
+                </param>
+                <param name="dwNotifyFilter">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FindFirstChangeNotificationW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpPathName">
+                    <type>ushort*</type>
+                </param>
+                <param name="bWatchSubtree">
+                    <type>int</type>
+                </param>
+                <param name="dwNotifyFilter">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FindFirstFileA" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpFindFileData">
+                    <type>WIN32_FIND_DATAA*</type>
+                </param>
+            </function>
+            <function name="FindFirstFileW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpFindFileData">
+                    <type>WIN32_FIND_DATAW*</type>
+                </param>
+            </function>
+            <function name="FindFirstFileExA" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="fInfoLevelId">
+                    <type>FINDEX_INFO_LEVELS</type>
+                </param>
+                <param name="lpFindFileData">
+                    <type>void*</type>
+                </param>
+                <param name="fSearchOp">
+                    <type>FINDEX_SEARCH_OPS</type>
+                </param>
+                <param name="lpSearchFilter">
+                    <type>void*</type>
+                </param>
+                <param name="dwAdditionalFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FindFirstFileExW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="fInfoLevelId">
+                    <type>FINDEX_INFO_LEVELS</type>
+                </param>
+                <param name="lpFindFileData">
+                    <type>void*</type>
+                </param>
+                <param name="fSearchOp">
+                    <type>FINDEX_SEARCH_OPS</type>
+                </param>
+                <param name="lpSearchFilter">
+                    <type>void*</type>
+                </param>
+                <param name="dwAdditionalFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FindFirstVolumeW" access="public" lib="kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpszVolumeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FindNextChangeNotification" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hChangeHandle">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="FindNextFileA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFindFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpFindFileData">
+                    <type>WIN32_FIND_DATAA*</type>
+                </param>
+            </function>
+            <function name="FindNextFileW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFindFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpFindFileData">
+                    <type>WIN32_FIND_DATAW*</type>
+                </param>
+            </function>
+            <function name="FindNextVolumeW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFindVolume">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpszVolumeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FindVolumeClose" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hFindVolume">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="FlushFileBuffers" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetDiskFreeSpaceA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpRootPathName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpSectorsPerCluster">
+                    <type>uint*</type>
+                </param>
+                <param name="lpBytesPerSector">
+                    <type>uint*</type>
+                </param>
+                <param name="lpNumberOfFreeClusters">
+                    <type>uint*</type>
+                </param>
+                <param name="lpTotalNumberOfClusters">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetDiskFreeSpaceW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpRootPathName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpSectorsPerCluster">
+                    <type>uint*</type>
+                </param>
+                <param name="lpBytesPerSector">
+                    <type>uint*</type>
+                </param>
+                <param name="lpNumberOfFreeClusters">
+                    <type>uint*</type>
+                </param>
+                <param name="lpTotalNumberOfClusters">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetDiskFreeSpaceExA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpDirectoryName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpFreeBytesAvailableToCaller">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <param name="lpTotalNumberOfBytes">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <param name="lpTotalNumberOfFreeBytes">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+            </function>
+            <function name="GetDiskFreeSpaceExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpDirectoryName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpFreeBytesAvailableToCaller">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <param name="lpTotalNumberOfBytes">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <param name="lpTotalNumberOfFreeBytes">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+            </function>
+            <function name="GetDiskSpaceInformationA" access="public" lib="kernel32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rootPath">
+                    <type>sbyte*</type>
+                </param>
+                <param name="diskSpaceInfo">
+                    <type>DISK_SPACE_INFORMATION*</type>
+                </param>
+            </function>
+            <function name="GetDiskSpaceInformationW" access="public" lib="kernel32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rootPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="diskSpaceInfo">
+                    <type>DISK_SPACE_INFORMATION*</type>
+                </param>
+            </function>
+            <function name="GetDriveTypeA" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpRootPathName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="GetDriveTypeW" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpRootPathName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetFileAttributesA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="GetFileAttributesW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetFileAttributesExA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="fInfoLevelId">
+                    <type>GET_FILEEX_INFO_LEVELS</type>
+                </param>
+                <param name="lpFileInformation">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="GetFileAttributesExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="fInfoLevelId">
+                    <type>GET_FILEEX_INFO_LEVELS</type>
+                </param>
+                <param name="lpFileInformation">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="GetFileInformationByHandle" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpFileInformation">
+                    <type>BY_HANDLE_FILE_INFORMATION*</type>
+                </param>
+            </function>
+            <function name="GetFileSize" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpFileSizeHigh">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetFileSizeEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpFileSize">
+                    <type>LARGE_INTEGER*</type>
+                </param>
+            </function>
+            <function name="GetFileType" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetFinalPathNameByHandleA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpszFilePath">
+                    <type>sbyte*</type>
+                </param>
+                <param name="cchFilePath">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetFinalPathNameByHandleW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpszFilePath">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchFilePath">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetFileTime" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpCreationTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpLastAccessTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpLastWriteTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="GetFullPathNameW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="nBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpFilePart">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="GetFullPathNameA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpFilePart">
+                    <type>sbyte**</type>
+                </param>
+            </function>
+            <function name="GetLogicalDrives" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="GetLogicalDriveStringsW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="nBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetLongPathNameA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpszShortPath">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpszLongPath">
+                    <type>sbyte*</type>
+                </param>
+                <param name="cchBuffer">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetLongPathNameW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpszShortPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpszLongPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchBuffer">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetShortPathNameW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpszLongPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpszShortPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchBuffer">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetTempFileNameW" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpPathName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpPrefixString">
+                    <type>ushort*</type>
+                </param>
+                <param name="uUnique">
+                    <type>uint</type>
+                </param>
+                <param name="lpTempFileName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetVolumeInformationByHandleW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpVolumeNameBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="nVolumeNameSize">
+                    <type>uint</type>
+                </param>
+                <param name="lpVolumeSerialNumber">
+                    <type>uint*</type>
+                </param>
+                <param name="lpMaximumComponentLength">
+                    <type>uint*</type>
+                </param>
+                <param name="lpFileSystemFlags">
+                    <type>uint*</type>
+                </param>
+                <param name="lpFileSystemNameBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="nFileSystemNameSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetVolumeInformationW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpRootPathName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpVolumeNameBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="nVolumeNameSize">
+                    <type>uint</type>
+                </param>
+                <param name="lpVolumeSerialNumber">
+                    <type>uint*</type>
+                </param>
+                <param name="lpMaximumComponentLength">
+                    <type>uint*</type>
+                </param>
+                <param name="lpFileSystemFlags">
+                    <type>uint*</type>
+                </param>
+                <param name="lpFileSystemNameBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="nFileSystemNameSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetVolumePathNameW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpszFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpszVolumePathName">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="LocalFileTimeToFileTime" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpLocalFileTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpFileTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="LockFile" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFileOffsetLow">
+                    <type>uint</type>
+                </param>
+                <param name="dwFileOffsetHigh">
+                    <type>uint</type>
+                </param>
+                <param name="nNumberOfBytesToLockLow">
+                    <type>uint</type>
+                </param>
+                <param name="nNumberOfBytesToLockHigh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="LockFileEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <param name="nNumberOfBytesToLockLow">
+                    <type>uint</type>
+                </param>
+                <param name="nNumberOfBytesToLockHigh">
+                    <type>uint</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+            </function>
+            <function name="QueryDosDeviceW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpDeviceName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpTargetPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="ucchMax">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="ReadFile" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nNumberOfBytesToRead">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfBytesRead">
+                    <type>uint*</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+            </function>
+            <function name="ReadFileEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nNumberOfBytesToRead">
+                    <type>uint</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+                <param name="lpCompletionRoutine">
+                    <type>delegate* unmanaged&lt;uint, uint, OVERLAPPED*, void&gt;</type>
+                </param>
+            </function>
+            <function name="ReadFileScatter" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="aSegmentArray">
+                    <type>FILE_SEGMENT_ELEMENT*</type>
+                </param>
+                <param name="nNumberOfBytesToRead">
+                    <type>uint</type>
+                </param>
+                <param name="lpReserved">
+                    <type>uint*</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+            </function>
+            <function name="RemoveDirectoryA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpPathName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="RemoveDirectoryW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpPathName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="SetEndOfFile" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="SetFileAttributesA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="dwFileAttributes">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetFileAttributesW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFileAttributes">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetFileInformationByHandle" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="FileInformationClass">
+                    <type>FILE_INFO_BY_HANDLE_CLASS</type>
+                </param>
+                <param name="lpFileInformation">
+                    <type>void*</type>
+                </param>
+                <param name="dwBufferSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetFilePointer" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lDistanceToMove">
+                    <type>int</type>
+                </param>
+                <param name="lpDistanceToMoveHigh">
+                    <type>int*</type>
+                </param>
+                <param name="dwMoveMethod">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetFilePointerEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="liDistanceToMove">
+                    <type>LARGE_INTEGER</type>
+                </param>
+                <param name="lpNewFilePointer">
+                    <type>LARGE_INTEGER*</type>
+                </param>
+                <param name="dwMoveMethod">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetFileTime" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpCreationTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpLastAccessTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="lpLastWriteTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="SetFileValidData" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ValidDataLength">
+                    <type>long</type>
+                </param>
+            </function>
+            <function name="UnlockFile" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFileOffsetLow">
+                    <type>uint</type>
+                </param>
+                <param name="dwFileOffsetHigh">
+                    <type>uint</type>
+                </param>
+                <param name="nNumberOfBytesToUnlockLow">
+                    <type>uint</type>
+                </param>
+                <param name="nNumberOfBytesToUnlockHigh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="UnlockFileEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <param name="nNumberOfBytesToUnlockLow">
+                    <type>uint</type>
+                </param>
+                <param name="nNumberOfBytesToUnlockHigh">
+                    <type>uint</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+            </function>
+            <function name="WriteFile" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nNumberOfBytesToWrite">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfBytesWritten">
+                    <type>uint*</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+            </function>
+            <function name="WriteFileEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nNumberOfBytesToWrite">
+                    <type>uint</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+                <param name="lpCompletionRoutine">
+                    <type>delegate* unmanaged&lt;uint, uint, OVERLAPPED*, void&gt;</type>
+                </param>
+            </function>
+            <function name="WriteFileGather" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="aSegmentArray">
+                    <type>FILE_SEGMENT_ELEMENT*</type>
+                </param>
+                <param name="nNumberOfBytesToWrite">
+                    <type>uint</type>
+                </param>
+                <param name="lpReserved">
+                    <type>uint*</type>
+                </param>
+                <param name="lpOverlapped">
+                    <type>OVERLAPPED*</type>
+                </param>
+            </function>
+            <function name="GetTempPathW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="nBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetVolumeNameForVolumeMountPointW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpszVolumeMountPoint">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpszVolumeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetVolumePathNamesForVolumeNameW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpszVolumeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpszVolumePathNames">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpcchReturnLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CreateFile2" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="dwShareMode">
+                    <type>uint</type>
+                </param>
+                <param name="dwCreationDisposition">
+                    <type>uint</type>
+                </param>
+                <param name="pCreateExParams">
+                    <type>CREATEFILE2_EXTENDED_PARAMETERS*</type>
+                </param>
+            </function>
+            <function name="SetFileIoOverlappedRange" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="FileHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="OverlappedRangeStart">
+                    <type>byte*</type>
+                </param>
+                <param name="Length">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetCompressedFileSizeA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpFileSizeHigh">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetCompressedFileSizeW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpFileSizeHigh">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="FindFirstStreamW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="InfoLevel">
+                    <type>STREAM_INFO_LEVELS</type>
+                </param>
+                <param name="lpFindStreamData">
+                    <type>void*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FindNextStreamW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFindStream">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpFindStreamData">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="AreFileApisANSI" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+            </function>
+            <function name="GetTempPathA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="nBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="FindFirstFileNameW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="StringLength">
+                    <type>uint*</type>
+                </param>
+                <param name="LinkName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="FindNextFileNameW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hFindStream">
+                    <type>IntPtr</type>
+                </param>
+                <param name="StringLength">
+                    <type>uint*</type>
+                </param>
+                <param name="LinkName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetVolumeInformationA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpRootPathName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpVolumeNameBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nVolumeNameSize">
+                    <type>uint</type>
+                </param>
+                <param name="lpVolumeSerialNumber">
+                    <type>uint*</type>
+                </param>
+                <param name="lpMaximumComponentLength">
+                    <type>uint*</type>
+                </param>
+                <param name="lpFileSystemFlags">
+                    <type>uint*</type>
+                </param>
+                <param name="lpFileSystemNameBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nFileSystemNameSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetTempFileNameA" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpPathName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpPrefixString">
+                    <type>sbyte*</type>
+                </param>
+                <param name="uUnique">
+                    <type>uint</type>
+                </param>
+                <param name="lpTempFileName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="SetFileApisToOEM" access="public" lib="kernel32" static="true" unsafe="true">
+                <type>void</type>
+            </function>
+            <function name="SetFileApisToANSI" access="public" lib="kernel32" static="true" unsafe="true">
+                <type>void</type>
+            </function>
+            <constant name="CREATE_NEW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="CREATE_ALWAYS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="OPEN_EXISTING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="OPEN_ALWAYS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="TRUNCATE_EXISTING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="INVALID_FILE_SIZE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xFFFFFFFF)
+            </code>
+                </value>
+            </constant>
+            <constant name="INVALID_SET_FILE_POINTER" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((uint)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INVALID_FILE_ATTRIBUTES" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((uint)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="CreateDirectory" access="public">
+                <type primitive="False">delegate*&lt;ushort*, SECURITY_ATTRIBUTES*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateDirectoryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CreateFile" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, uint, SECURITY_ATTRIBUTES*, uint, uint, IntPtr, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>CreateFileW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="DefineDosDevice" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>DefineDosDeviceW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="DeleteFile" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>DeleteFileW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="DeleteVolumeMountPoint" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>DeleteVolumeMountPointW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="FindFirstChangeNotification" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int, uint, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>FindFirstChangeNotificationW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="FindFirstFile" access="public">
+                <type primitive="False">delegate*&lt;ushort*, WIN32_FIND_DATAW*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>FindFirstFileW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="FindFirstFileEx" access="public">
+                <type primitive="False">delegate*&lt;ushort*, FINDEX_INFO_LEVELS, void*, FINDEX_SEARCH_OPS, void*, uint, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>FindFirstFileExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="FindFirstVolume" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>FindFirstVolumeW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="FindNextFile" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, WIN32_FIND_DATAW*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>FindNextFileW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="FindNextVolume" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>FindNextVolumeW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetDiskFreeSpace" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint*, uint*, uint*, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetDiskFreeSpaceW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetDiskFreeSpaceEx" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ULARGE_INTEGER*, ULARGE_INTEGER*, ULARGE_INTEGER*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetDiskFreeSpaceExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetDiskSpaceInformation" access="public">
+                <type primitive="False">delegate*&lt;ushort*, DISK_SPACE_INFORMATION*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetDiskSpaceInformationW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetDriveType" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetDriveTypeW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetFileAttributes" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetFileAttributesW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetFileAttributesEx" access="public">
+                <type primitive="False">delegate*&lt;ushort*, GET_FILEEX_INFO_LEVELS, void*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetFileAttributesExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetFinalPathNameByHandle" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, uint, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetFinalPathNameByHandleW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetFullPathName" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, ushort*, ushort**, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetFullPathNameW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetLogicalDriveStrings" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetLogicalDriveStringsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetLongPathName" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetLongPathNameW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetShortPathName" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetShortPathNameW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetTempFileName" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetTempFileNameW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetVolumeInformation" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, uint*, uint*, uint*, ushort*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetVolumeInformationW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetVolumePathName" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetVolumePathNameW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="QueryDosDevice" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>QueryDosDeviceW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="RemoveDirectory" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>RemoveDirectoryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SetFileAttributes" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetFileAttributesW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetTempPath" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetTempPathW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetVolumeNameForVolumeMountPoint" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetVolumeNameForVolumeMountPointW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetVolumePathNamesForVolumeName" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetVolumePathNamesForVolumeNameW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetCompressedFileSize" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetCompressedFileSizeW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

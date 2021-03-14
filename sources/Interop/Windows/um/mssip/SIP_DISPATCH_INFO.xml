@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mssip.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SIP_DISPATCH_INFO" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hSIP" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <field name="pfGet" access="public">
+                <type native="pCryptSIPGetSignedDataMsg">delegate* unmanaged&lt;SIP_SUBJECTINFO*, uint*, uint, uint*, byte*, int&gt;</type>
+            </field>
+            <field name="pfPut" access="public">
+                <type native="pCryptSIPPutSignedDataMsg">delegate* unmanaged&lt;SIP_SUBJECTINFO*, uint, uint*, uint, byte*, int&gt;</type>
+            </field>
+            <field name="pfCreate" access="public">
+                <type native="pCryptSIPCreateIndirectData">delegate* unmanaged&lt;SIP_SUBJECTINFO*, uint*, SIP_INDIRECT_DATA*, int&gt;</type>
+            </field>
+            <field name="pfVerify" access="public">
+                <type native="pCryptSIPVerifyIndirectData">delegate* unmanaged&lt;SIP_SUBJECTINFO*, SIP_INDIRECT_DATA*, int&gt;</type>
+            </field>
+            <field name="pfRemove" access="public">
+                <type native="pCryptSIPRemoveSignedDataMsg">delegate* unmanaged&lt;SIP_SUBJECTINFO*, uint, int&gt;</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

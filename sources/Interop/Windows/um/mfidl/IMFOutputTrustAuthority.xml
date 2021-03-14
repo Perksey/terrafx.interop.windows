@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFOutputTrustAuthority" access="public" native="struct IMFOutputTrustAuthority : IUnknown" uuid="d19f8e94-b126-4446-890c-5dcb7ad71453" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFOutputTrustAuthority*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFOutputTrustAuthority*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFOutputTrustAuthority*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFOutputTrustAuthority*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFOutputTrustAuthority*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFOutputTrustAuthority*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAction" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pAction">
+                    <type>MFPOLICYMANAGER_ACTION*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFOutputTrustAuthority*, MFPOLICYMANAGER_ACTION*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFOutputTrustAuthority*)Unsafe.AsPointer(ref this)</param>, <param name="pAction">pAction</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPolicy" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppPolicy">
+                    <type>IMFOutputPolicy**</type>
+                </param>
+                <param name="nPolicy">
+                    <type>uint</type>
+                </param>
+                <param name="ppbTicket">
+                    <type>byte**</type>
+                </param>
+                <param name="pcbTicket">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFOutputTrustAuthority*, IMFOutputPolicy**, uint, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFOutputTrustAuthority*)Unsafe.AsPointer(ref this)</param>, <param name="ppPolicy">ppPolicy</param>, <param name="nPolicy">nPolicy</param>, <param name="ppbTicket">ppbTicket</param>, <param name="pcbTicket">pcbTicket</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

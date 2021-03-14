@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/wtypes.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CY" access="public" layout="Explicit">
+            <field name="Anonymous" access="public" offset="0">
+                <type native="tagCY::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared/wtypes.h:671:5)">_Anonymous_e__Struct</type>
+            </field>
+            <field name="Lo" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Lo, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Hi" access="public">
+                <type native="">ref int</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Hi, 1));
+        </code>
+                </get>
+            </field>
+            <field name="int64" access="public" offset="0">
+                <type native="LONGLONG">long</type>
+            </field>
+            <struct name="_Anonymous_e__Struct" access="public">
+                <field name="Lo" access="public">
+                    <type native="ULONG">uint</type>
+                </field>
+                <field name="Hi" access="public">
+                    <type native="LONG">int</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

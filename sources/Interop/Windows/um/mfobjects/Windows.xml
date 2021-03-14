@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfobjects.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="MFSerializeAttributesToStream" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAttr">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="dwOptions">
+                    <type>uint</type>
+                </param>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+            </function>
+            <function name="MFDeserializeAttributesFromStream" access="public" lib="mfplat" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAttr">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="dwOptions">
+                    <type>uint</type>
+                </param>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+            </function>
+            <constant name="MF_BYTESTREAM_ORIGIN_NAME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xfc358288, 0x3cb6, 0x460c, 0xa4, 0x24, 0xb6, 0x68, 0x12, 0x60, 0x37, 0x5a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BYTESTREAM_CONTENT_TYPE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xfc358289, 0x3cb6, 0x460c, 0xa4, 0x24, 0xb6, 0x68, 0x12, 0x60, 0x37, 0x5a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BYTESTREAM_DURATION" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xfc35828a, 0x3cb6, 0x460c, 0xa4, 0x24, 0xb6, 0x68, 0x12, 0x60, 0x37, 0x5a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BYTESTREAM_LAST_MODIFIED_TIME" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xfc35828b, 0x3cb6, 0x460c, 0xa4, 0x24, 0xb6, 0x68, 0x12, 0x60, 0x37, 0x5a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BYTESTREAM_IFO_FILE_URI" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xfc35828c, 0x3cb6, 0x460c, 0xa4, 0x24, 0xb6, 0x68, 0x12, 0x60, 0x37, 0x5a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BYTESTREAM_DLNA_PROFILE_ID" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xfc35828d, 0x3cb6, 0x460c, 0xa4, 0x24, 0xb6, 0x68, 0x12, 0x60, 0x37, 0x5a)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BYTESTREAM_EFFECTIVE_URL" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x9afa0209, 0x89d1, 0x42af, 0x84, 0x56, 0x1d, 0xe6, 0xb5, 0x62, 0xd6, 0x91)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_BYTESTREAM_TRANSCODED" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xb6c5c282, 0x4dc9, 0x4db9, 0xab, 0x48, 0xcf, 0x3b, 0x6d, 0x8b, 0xc5, 0xe0)
+            </code>
+                </value>
+            </constant>
+            <constant name="CLSID_MFByteStreamProxyClassFactory" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x770e8e77, 0x4916, 0x441c, 0xa9, 0xa7, 0xb3, 0x42, 0xd0, 0xee, 0xbc, 0x71)
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MEDIATYPE_EQUAL_MAJOR_TYPES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MEDIATYPE_EQUAL_FORMAT_TYPES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MEDIATYPE_EQUAL_FORMAT_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_MEDIATYPE_EQUAL_FORMAT_USER_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="MFVideoInterlace_FieldSingleUpperFirst" access="public">
+                <type primitive="True">MFVideoInterlaceMode</type>
+                <value>
+                    <code>MFVideoInterlace_FieldSingleUpper
+            </code>
+                </value>
+            </constant>
+            <constant name="MFVideoInterlace_FieldSingleLowerFirst" access="public">
+                <type primitive="True">MFVideoInterlaceMode</type>
+                <value>
+                    <code>MFVideoInterlace_FieldSingleLower
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_FAST_IO_PROCESSING_CALLBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_SIGNAL_CALLBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_BLOCKING_CALLBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_REPLY_CALLBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_LOCALIZE_REMOTE_CALLBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_CALLBACK_QUEUE_UNDEFINED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_CALLBACK_QUEUE_STANDARD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_CALLBACK_QUEUE_RT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_CALLBACK_QUEUE_IO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_CALLBACK_QUEUE_TIMER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_CALLBACK_QUEUE_MULTITHREADED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000005
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_CALLBACK_QUEUE_LONG_FUNCTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000007
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_CALLBACK_QUEUE_PRIVATE_MASK" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xFFFF0000
+            </code>
+                </value>
+            </constant>
+            <constant name="MFASYNC_CALLBACK_QUEUE_ALL" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xFFFFFFFF
+            </code>
+                </value>
+            </constant>
+            <constant name="MF_EVENT_FLAG_NO_WAIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_IS_READABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_IS_WRITABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_IS_SEEKABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_IS_REMOTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_IS_DIRECTORY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_HAS_SLOW_SEEK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_IS_PARTIALLY_DOWNLOADED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_SHARE_WRITE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_DOES_NOT_USE_NETWORK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="MFBYTESTREAM_SEEK_FLAG_CANCEL_PENDING_IO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_IMFAttributes" value="0x2CD2D921, 0xC447, 0x44A7, 0xA1, 0x3C, 0x4A, 0xDA, 0xBF, 0xC2, 0x47, 0xE3" />
+            <iid name="IID_IMFMediaBuffer" value="0x045FA593, 0x8799, 0x42B8, 0xBC, 0x8D, 0x89, 0x68, 0xC6, 0x45, 0x35, 0x07" />
+            <iid name="IID_IMFSample" value="0xC40A00F2, 0xB93A, 0x4D80, 0xAE, 0x8C, 0x5A, 0x1C, 0x63, 0x4F, 0x58, 0xE4" />
+            <iid name="IID_IMF2DBuffer" value="0x7DC9D5F9, 0x9ED9, 0x44EC, 0x9B, 0xBF, 0x06, 0x00, 0xBB, 0x58, 0x9F, 0xBB" />
+            <iid name="IID_IMF2DBuffer2" value="0x33AE5EA6, 0x4316, 0x436F, 0x8D, 0xDD, 0xD7, 0x3D, 0x22, 0xF8, 0x29, 0xEC" />
+            <iid name="IID_IMFDXGIBuffer" value="0xE7174CFA, 0x1C9E, 0x48B1, 0x88, 0x66, 0x62, 0x62, 0x26, 0xBF, 0xC2, 0x58" />
+            <iid name="IID_IMFMediaType" value="0x44AE0FA8, 0xEA31, 0x4109, 0x8D, 0x2E, 0x4C, 0xAE, 0x49, 0x97, 0xC5, 0x55" />
+            <iid name="IID_IMFAudioMediaType" value="0x26A0ADC3, 0xCE26, 0x4672, 0x93, 0x04, 0x69, 0x55, 0x2E, 0xDD, 0x3F, 0xAF" />
+            <iid name="IID_IMFVideoMediaType" value="0xB99F381F, 0xA8F9, 0x47A2, 0xA5, 0xAF, 0xCA, 0x3A, 0x22, 0x5A, 0x38, 0x90" />
+            <iid name="IID_IMFAsyncResult" value="0xAC6B7889, 0x0740, 0x4D51, 0x86, 0x19, 0x90, 0x59, 0x94, 0xA5, 0x5C, 0xC6" />
+            <iid name="IID_IMFAsyncCallback" value="0xA27003CF, 0x2354, 0x4F2A, 0x8D, 0x6A, 0xAB, 0x7C, 0xFF, 0x15, 0x43, 0x7E" />
+            <iid name="IID_IMFAsyncCallbackLogging" value="0xC7A4DCA1, 0xF5F0, 0x47B6, 0xB9, 0x2B, 0xBF, 0x01, 0x06, 0xD2, 0x57, 0x91" />
+            <iid name="IID_IMFMediaEvent" value="0xDF598932, 0xF10C, 0x4E39, 0xBB, 0xA2, 0xC3, 0x08, 0xF1, 0x01, 0xDA, 0xA3" />
+            <iid name="IID_IMFMediaEventGenerator" value="0x2CD0BD52, 0xBCD5, 0x4B89, 0xB6, 0x2C, 0xEA, 0xDC, 0x0C, 0x03, 0x1E, 0x7D" />
+            <iid name="IID_IMFRemoteAsyncCallback" value="0xA27003D0, 0x2354, 0x4F2A, 0x8D, 0x6A, 0xAB, 0x7C, 0xFF, 0x15, 0x43, 0x7E" />
+            <iid name="IID_IMFByteStream" value="0xAD4C1B00, 0x4BF7, 0x422F, 0x91, 0x75, 0x75, 0x66, 0x93, 0xD9, 0x13, 0x0D" />
+            <iid name="IID_IMFByteStreamProxyClassFactory" value="0xA6B43F84, 0x5C0A, 0x42E8, 0xA4, 0x4D, 0xB1, 0x85, 0x7A, 0x76, 0x99, 0x2F" />
+            <iid name="IID_IMFSampleOutputStream" value="0x8FEED468, 0x6F7E, 0x440D, 0x86, 0x9A, 0x49, 0xBD, 0xD2, 0x83, 0xAD, 0x0D" />
+            <iid name="IID_IMFCollection" value="0x5BC8A76B, 0x869A, 0x46A3, 0x9B, 0x03, 0xFA, 0x21, 0x8A, 0x66, 0xAE, 0xBE" />
+            <iid name="IID_IMFMediaEventQueue" value="0x36F846FC, 0x2256, 0x48B6, 0xB5, 0x8E, 0xE2, 0xB6, 0x38, 0x31, 0x65, 0x81" />
+            <iid name="IID_IMFActivate" value="0x7FEE9E9A, 0x4A89, 0x47A6, 0x89, 0x9C, 0xB6, 0xA5, 0x3A, 0x70, 0xFB, 0x67" />
+            <iid name="IID_IMFPluginControl" value="0x5C6C44BF, 0x1DB6, 0x435B, 0x92, 0x49, 0xE8, 0xCD, 0x10, 0xFD, 0xEC, 0x96" />
+            <iid name="IID_IMFPluginControl2" value="0xC6982083, 0x3DDC, 0x45CB, 0xAF, 0x5E, 0x0F, 0x7A, 0x8C, 0xE4, 0xDE, 0x77" />
+            <iid name="IID_IMFDXGIDeviceManager" value="0xEB533D5D, 0x2DB6, 0x40F8, 0x97, 0xA9, 0x49, 0x46, 0x92, 0x01, 0x4F, 0x07" />
+            <iid name="IID_IMFMuxStreamAttributesManager" value="0xCE8BD576, 0xE440, 0x43B3, 0xBE, 0x34, 0x1E, 0x53, 0xF5, 0x65, 0xF7, 0xE8" />
+            <iid name="IID_IMFMuxStreamMediaTypeManager" value="0x505A2C72, 0x42F7, 0x4690, 0xAE, 0xAB, 0x8F, 0x51, 0x3D, 0x0F, 0xFD, 0xB8" />
+            <iid name="IID_IMFMuxStreamSampleManager" value="0x74ABBC19, 0xB1CC, 0x4E41, 0xBB, 0x8B, 0x9D, 0x9B, 0x86, 0xA8, 0xF6, 0xCA" />
+            <iid name="IID_IMFSecureBuffer" value="0xC1209904, 0xE584, 0x4752, 0xA2, 0xD6, 0x7F, 0x21, 0x69, 0x3F, 0x8B, 0x21" />
+        </class>
+    </namespace>
+</bindings>

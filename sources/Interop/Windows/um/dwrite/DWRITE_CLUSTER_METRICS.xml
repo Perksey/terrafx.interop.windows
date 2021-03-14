@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dwrite.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DWRITE_CLUSTER_METRICS" access="public">
+            <field name="width" access="public">
+                <type native="FLOAT">float</type>
+            </field>
+            <field name="length" access="public">
+                <type native="UINT16">ushort</type>
+            </field>
+            <field name="_bitfield" access="public">
+                <type native="">ushort</type>
+            </field>
+            <field name="canWrapLineAfter" access="public">
+                <type native="UINT16 : 1">ushort</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>ushort</typeName>)(<bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>ushort</typeNameBacking>)((_bitfield &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>));
+        </code>
+                </set>
+            </field>
+            <field name="isWhitespace" access="public">
+                <type native="UINT16 : 1">ushort</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>ushort</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>1</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>ushort</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>1</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 1));
+        </code>
+                </set>
+            </field>
+            <field name="isNewline" access="public">
+                <type native="UINT16 : 1">ushort</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>ushort</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>2</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>ushort</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>2</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 2));
+        </code>
+                </set>
+            </field>
+            <field name="isSoftHyphen" access="public">
+                <type native="UINT16 : 1">ushort</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>ushort</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>3</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>ushort</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>3</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 3));
+        </code>
+                </set>
+            </field>
+            <field name="isRightToLeft" access="public">
+                <type native="UINT16 : 1">ushort</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>ushort</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>4</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>ushort</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>4</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 4));
+        </code>
+                </set>
+            </field>
+            <field name="padding" access="public">
+                <type native="UINT16 : 11">ushort</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>ushort</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>5</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>7FFu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>ushort</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>7FFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>5</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>7FFu</bitwidthHexString>) &lt;&lt; 5));
+        </code>
+                </set>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

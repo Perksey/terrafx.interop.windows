@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="TOKEN_ACCESS_INFORMATION" access="public" unsafe="true">
+            <field name="SidHash" access="public">
+                <type native="PSID_AND_ATTRIBUTES_HASH">SID_AND_ATTRIBUTES_HASH*</type>
+            </field>
+            <field name="RestrictedSidHash" access="public">
+                <type native="PSID_AND_ATTRIBUTES_HASH">SID_AND_ATTRIBUTES_HASH*</type>
+            </field>
+            <field name="Privileges" access="public">
+                <type native="PTOKEN_PRIVILEGES">TOKEN_PRIVILEGES*</type>
+            </field>
+            <field name="AuthenticationId" access="public">
+                <type native="">LUID</type>
+            </field>
+            <field name="TokenType" access="public">
+                <type native="">TOKEN_TYPE</type>
+            </field>
+            <field name="ImpersonationLevel" access="public">
+                <type native="">SECURITY_IMPERSONATION_LEVEL</type>
+            </field>
+            <field name="MandatoryPolicy" access="public">
+                <type native="">TOKEN_MANDATORY_POLICY</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="AppContainerNumber" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="PackageSid" access="public">
+                <type native="PSID">void*</type>
+            </field>
+            <field name="CapabilitiesHash" access="public">
+                <type native="PSID_AND_ATTRIBUTES_HASH">SID_AND_ATTRIBUTES_HASH*</type>
+            </field>
+            <field name="TrustLevelSid" access="public">
+                <type native="PSID">void*</type>
+            </field>
+            <field name="SecurityAttributes" access="public">
+                <type native="PSECURITY_ATTRIBUTES_OPAQUE">void*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3dcommon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3DDestructionNotifier" access="public" native="struct ID3DDestructionNotifier : IUnknown" uuid="a06eb39a-50da-425b-8c31-4eecd6c270f3" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3DDestructionNotifier*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3DDestructionNotifier*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3DDestructionNotifier*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3DDestructionNotifier*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3DDestructionNotifier*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3DDestructionNotifier*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterDestructionCallback" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="callbackFn">
+                    <type>delegate* unmanaged&lt;void*, void&gt;</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <param name="pCallbackID">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3DDestructionNotifier*, delegate* unmanaged&lt;void*, void&gt;, void*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3DDestructionNotifier*)Unsafe.AsPointer(ref this)</param>, <param name="callbackFn">callbackFn</param>, <param name="pData">pData</param>, <param name="pCallbackID">pCallbackID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterDestructionCallback" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="callbackID">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3DDestructionNotifier*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3DDestructionNotifier*)Unsafe.AsPointer(ref this)</param>, <param name="callbackID">callbackID</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

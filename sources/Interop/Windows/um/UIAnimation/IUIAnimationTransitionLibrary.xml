@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/UIAnimation.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IUIAnimationTransitionLibrary" access="public" native="struct IUIAnimationTransitionLibrary : IUnknown" uuid="ca5a14b1-d24f-48b8-8fe4-c78169ba954e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateInstantaneousTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="finalValue">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="finalValue">finalValue</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateConstantTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDiscreteTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="delay">
+                    <type>double</type>
+                </param>
+                <param name="finalValue">
+                    <type>double</type>
+                </param>
+                <param name="hold">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, double, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="delay">delay</param>, <param name="finalValue">finalValue</param>, <param name="hold">hold</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateLinearTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double</type>
+                </param>
+                <param name="finalValue">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>, <param name="finalValue">finalValue</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateLinearTransitionFromSpeed" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="speed">
+                    <type>double</type>
+                </param>
+                <param name="finalValue">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="speed">speed</param>, <param name="finalValue">finalValue</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSinusoidalTransitionFromVelocity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double</type>
+                </param>
+                <param name="period">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>, <param name="period">period</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSinusoidalTransitionFromRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double</type>
+                </param>
+                <param name="minimumValue">
+                    <type>double</type>
+                </param>
+                <param name="maximumValue">
+                    <type>double</type>
+                </param>
+                <param name="period">
+                    <type>double</type>
+                </param>
+                <param name="slope">
+                    <type>UI_ANIMATION_SLOPE</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, double, double, double, UI_ANIMATION_SLOPE, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>, <param name="minimumValue">minimumValue</param>, <param name="maximumValue">maximumValue</param>, <param name="period">period</param>, <param name="slope">slope</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateAccelerateDecelerateTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double</type>
+                </param>
+                <param name="finalValue">
+                    <type>double</type>
+                </param>
+                <param name="accelerationRatio">
+                    <type>double</type>
+                </param>
+                <param name="decelerationRatio">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, double, double, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>, <param name="finalValue">finalValue</param>, <param name="accelerationRatio">accelerationRatio</param>, <param name="decelerationRatio">decelerationRatio</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateReversalTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateCubicTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double</type>
+                </param>
+                <param name="finalValue">
+                    <type>double</type>
+                </param>
+                <param name="finalVelocity">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, double, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>, <param name="finalValue">finalValue</param>, <param name="finalVelocity">finalVelocity</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSmoothStopTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="maximumDuration">
+                    <type>double</type>
+                </param>
+                <param name="finalValue">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="maximumDuration">maximumDuration</param>, <param name="finalValue">finalValue</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateParabolicTransitionFromAcceleration" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="finalValue">
+                    <type>double</type>
+                </param>
+                <param name="finalVelocity">
+                    <type>double</type>
+                </param>
+                <param name="acceleration">
+                    <type>double</type>
+                </param>
+                <param name="transition">
+                    <type>IUIAnimationTransition**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationTransitionLibrary*, double, double, double, IUIAnimationTransition**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IUIAnimationTransitionLibrary*)Unsafe.AsPointer(ref this)</param>, <param name="finalValue">finalValue</param>, <param name="finalVelocity">finalVelocity</param>, <param name="acceleration">acceleration</param>, <param name="transition">transition</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

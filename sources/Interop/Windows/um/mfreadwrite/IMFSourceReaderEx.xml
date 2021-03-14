@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfreadwrite.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFSourceReaderEx" access="public" native="struct IMFSourceReaderEx : IMFSourceReader" uuid="7b981cf0-560e-4116-9875-b099895f23d7" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pfSelected">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="pfSelected">pfSelected</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetStreamSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="fSelected">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, int, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="fSelected">fSelected</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNativeMediaType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwMediaTypeIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppMediaType">
+                    <type>IMFMediaType**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, uint, IMFMediaType**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="dwMediaTypeIndex">dwMediaTypeIndex</param>, <param name="ppMediaType">ppMediaType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentMediaType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppMediaType">
+                    <type>IMFMediaType**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, IMFMediaType**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="ppMediaType">ppMediaType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetCurrentMediaType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pdwReserved">
+                    <type>uint*</type>
+                </param>
+                <param name="pMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, uint*, IMFMediaType*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="pdwReserved">pdwReserved</param>, <param name="pMediaType">pMediaType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetCurrentPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidTimeFormat">
+                    <type>Guid*</type>
+                </param>
+                <param name="varPosition">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, Guid*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="guidTimeFormat">guidTimeFormat</param>, <param name="varPosition">varPosition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReadSample" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwControlFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pdwActualStreamIndex">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwStreamFlags">
+                    <type>uint*</type>
+                </param>
+                <param name="pllTimestamp">
+                    <type>long*</type>
+                </param>
+                <param name="ppSample">
+                    <type>IMFSample**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, uint, uint*, uint*, long*, IMFSample**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="dwControlFlags">dwControlFlags</param>, <param name="pdwActualStreamIndex">pdwActualStreamIndex</param>, <param name="pdwStreamFlags">pdwStreamFlags</param>, <param name="pllTimestamp">pllTimestamp</param>, <param name="ppSample">ppSample</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Flush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetServiceForStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="guidService">
+                    <type>Guid*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, Guid*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="guidService">guidService</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPresentationAttribute" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="guidAttribute">
+                    <type>Guid*</type>
+                </param>
+                <param name="pvarAttribute">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, Guid*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="guidAttribute">guidAttribute</param>, <param name="pvarAttribute">pvarAttribute</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNativeMediaType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pMediaType">
+                    <type>IMFMediaType*</type>
+                </param>
+                <param name="pdwStreamFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, IMFMediaType*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="pMediaType">pMediaType</param>, <param name="pdwStreamFlags">pdwStreamFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddTransformForStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pTransformOrActivate">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="pTransformOrActivate">pTransformOrActivate</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveAllTransformsForStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTransformForStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwTransformIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pGuidCategory">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppTransform">
+                    <type>IMFTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderEx*, uint, uint, Guid*, IMFTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IMFSourceReaderEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="dwTransformIndex">dwTransformIndex</param>, <param name="pGuidCategory">pGuidCategory</param>, <param name="ppTransform">ppTransform</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

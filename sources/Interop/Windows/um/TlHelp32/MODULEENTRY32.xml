@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/TlHelp32.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MODULEENTRY32" access="public" unsafe="true">
+            <field name="dwSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="th32ModuleID" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="th32ProcessID" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="GlblcntUsage" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ProccntUsage" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="modBaseAddr" access="public">
+                <type native="BYTE *">byte*</type>
+            </field>
+            <field name="modBaseSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hModule" access="public">
+                <type native="HMODULE">IntPtr</type>
+            </field>
+            <field name="szModule" access="public">
+                <type native="char [256]" count="256" fixed="_szModule_e__FixedBuffer">sbyte</type>
+            </field>
+            <field name="szExePath" access="public">
+                <type native="char [260]" count="260" fixed="_szExePath_e__FixedBuffer">sbyte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

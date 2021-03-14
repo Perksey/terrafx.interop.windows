@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/TextStor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITextStoreAnchor" access="public" native="struct ITextStoreAnchor : IUnknown" uuid="9b2077b0-5f18-4dec-bee9-3cc722f5dfe0" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AdviseSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="punk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="dwMask">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, Guid*, IUnknown*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="punk">punk</param>, <param name="dwMask">dwMask</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnadviseSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="punk">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="punk">punk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RequestLock" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwLockFlags">
+                    <type>uint</type>
+                </param>
+                <param name="phrSession">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwLockFlags">dwLockFlags</param>, <param name="phrSession">phrSession</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdcs">
+                    <type>TS_STATUS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, TS_STATUS*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="pdcs">pdcs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryInsert" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="paTestStart">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="paTestEnd">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="cch">
+                    <type>uint</type>
+                </param>
+                <param name="ppaResultStart">
+                    <type>IAnchor**</type>
+                </param>
+                <param name="ppaResultEnd">
+                    <type>IAnchor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, IAnchor*, IAnchor*, uint, IAnchor**, IAnchor**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="paTestStart">paTestStart</param>, <param name="paTestEnd">paTestEnd</param>, <param name="cch">cch</param>, <param name="ppaResultStart">ppaResultStart</param>, <param name="ppaResultEnd">ppaResultEnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="pSelection">
+                    <type>TS_SELECTION_ANCHOR*</type>
+                </param>
+                <param name="pcFetched">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, uint, TS_SELECTION_ANCHOR*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="ulIndex">ulIndex</param>, <param name="ulCount">ulCount</param>, <param name="pSelection">pSelection</param>, <param name="pcFetched">pcFetched</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="pSelection">
+                    <type>TS_SELECTION_ANCHOR*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, TS_SELECTION_ANCHOR*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="ulCount">ulCount</param>, <param name="pSelection">pSelection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetText" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="paStart">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="paEnd">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="pchText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchReq">
+                    <type>uint</type>
+                </param>
+                <param name="pcch">
+                    <type>uint*</type>
+                </param>
+                <param name="fUpdateAnchor">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, IAnchor*, IAnchor*, ushort*, uint, uint*, int, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="paStart">paStart</param>, <param name="paEnd">paEnd</param>, <param name="pchText">pchText</param>, <param name="cchReq">cchReq</param>, <param name="pcch">pcch</param>, <param name="fUpdateAnchor">fUpdateAnchor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetText" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="paStart">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="paEnd">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="pchText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cch">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, IAnchor*, IAnchor*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="paStart">paStart</param>, <param name="paEnd">paEnd</param>, <param name="pchText">pchText</param>, <param name="cch">cch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFormattedText" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="paStart">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="paEnd">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="ppDataObject">
+                    <type>IDataObject**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, IAnchor*, IAnchor*, IDataObject**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="paStart">paStart</param>, <param name="paEnd">paEnd</param>, <param name="ppDataObject">ppDataObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEmbedded" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="paPos">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="rguidService">
+                    <type>Guid*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppunk">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, IAnchor*, Guid*, Guid*, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="paPos">paPos</param>, <param name="rguidService">rguidService</param>, <param name="riid">riid</param>, <param name="ppunk">ppunk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InsertEmbedded" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="paStart">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="paEnd">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="pDataObject">
+                    <type>IDataObject*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, IAnchor*, IAnchor*, IDataObject*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="paStart">paStart</param>, <param name="paEnd">paEnd</param>, <param name="pDataObject">pDataObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RequestSupportedAttrs" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="cFilterAttrs">
+                    <type>uint</type>
+                </param>
+                <param name="paFilterAttrs">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="cFilterAttrs">cFilterAttrs</param>, <param name="paFilterAttrs">paFilterAttrs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RequestAttrsAtPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="paPos">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="cFilterAttrs">
+                    <type>uint</type>
+                </param>
+                <param name="paFilterAttrs">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, IAnchor*, uint, Guid*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="paPos">paPos</param>, <param name="cFilterAttrs">cFilterAttrs</param>, <param name="paFilterAttrs">paFilterAttrs</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RequestAttrsTransitioningAtPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="paPos">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="cFilterAttrs">
+                    <type>uint</type>
+                </param>
+                <param name="paFilterAttrs">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, IAnchor*, uint, Guid*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="paPos">paPos</param>, <param name="cFilterAttrs">cFilterAttrs</param>, <param name="paFilterAttrs">paFilterAttrs</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindNextAttrTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="paStart">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="paHalt">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="cFilterAttrs">
+                    <type>uint</type>
+                </param>
+                <param name="paFilterAttrs">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pfFound">
+                    <type>int*</type>
+                </param>
+                <param name="plFoundOffset">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, IAnchor*, IAnchor*, uint, Guid*, uint, int*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="paStart">paStart</param>, <param name="paHalt">paHalt</param>, <param name="cFilterAttrs">cFilterAttrs</param>, <param name="paFilterAttrs">paFilterAttrs</param>, <param name="dwFlags">dwFlags</param>, <param name="pfFound">pfFound</param>, <param name="plFoundOffset">plFoundOffset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RetrieveRequestedAttrs" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="paAttrVals">
+                    <type>TS_ATTRVAL*</type>
+                </param>
+                <param name="pcFetched">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, TS_ATTRVAL*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="ulCount">ulCount</param>, <param name="paAttrVals">paAttrVals</param>, <param name="pcFetched">pcFetched</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStart" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppaStart">
+                    <type>IAnchor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, IAnchor**, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="ppaStart">ppaStart</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppaEnd">
+                    <type>IAnchor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, IAnchor**, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="ppaEnd">ppaEnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetActiveView" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pvcView">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="pvcView">pvcView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAnchorFromPoint" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="vcView">
+                    <type>uint</type>
+                </param>
+                <param name="ptScreen">
+                    <type>POINT*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppaSite">
+                    <type>IAnchor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, POINT*, uint, IAnchor**, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="vcView">vcView</param>, <param name="ptScreen">ptScreen</param>, <param name="dwFlags">dwFlags</param>, <param name="ppaSite">ppaSite</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTextExt" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="vcView">
+                    <type>uint</type>
+                </param>
+                <param name="paStart">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="paEnd">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+                <param name="pfClipped">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, IAnchor*, IAnchor*, RECT*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="vcView">vcView</param>, <param name="paStart">paStart</param>, <param name="paEnd">paEnd</param>, <param name="prc">prc</param>, <param name="pfClipped">pfClipped</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetScreenExt" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="vcView">
+                    <type>uint</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="vcView">vcView</param>, <param name="prc">prc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="vcView">
+                    <type>uint</type>
+                </param>
+                <param name="phwnd">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="vcView">vcView</param>, <param name="phwnd">phwnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryInsertEmbedded" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pguidService">
+                    <type>Guid*</type>
+                </param>
+                <param name="pFormatEtc">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="pfInsertable">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, Guid*, FORMATETC*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="pguidService">pguidService</param>, <param name="pFormatEtc">pFormatEtc</param>, <param name="pfInsertable">pfInsertable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InsertTextAtSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pchText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cch">
+                    <type>uint</type>
+                </param>
+                <param name="ppaStart">
+                    <type>IAnchor**</type>
+                </param>
+                <param name="ppaEnd">
+                    <type>IAnchor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, ushort*, uint, IAnchor**, IAnchor**, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="pchText">pchText</param>, <param name="cch">cch</param>, <param name="ppaStart">ppaStart</param>, <param name="ppaEnd">ppaEnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InsertEmbeddedAtSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pDataObject">
+                    <type>IDataObject*</type>
+                </param>
+                <param name="ppaStart">
+                    <type>IAnchor**</type>
+                </param>
+                <param name="ppaEnd">
+                    <type>IAnchor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITextStoreAnchor*, uint, IDataObject*, IAnchor**, IAnchor**, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ITextStoreAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="pDataObject">pDataObject</param>, <param name="ppaStart">ppaStart</param>, <param name="ppaEnd">ppaEnd</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

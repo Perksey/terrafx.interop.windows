@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/consoleapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="AllocConsole" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+            </function>
+            <function name="FreeConsole" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+            </function>
+            <function name="AttachConsole" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="dwProcessId">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetConsoleCP" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="UINT">uint</type>
+            </function>
+            <function name="GetConsoleOutputCP" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="UINT">uint</type>
+            </function>
+            <function name="GetConsoleMode" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpMode">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetConsoleMode" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwMode">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetNumberOfConsoleInputEvents" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpNumberOfEvents">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="ReadConsoleInputA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>INPUT_RECORD*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfEventsRead">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="ReadConsoleInputW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>INPUT_RECORD*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfEventsRead">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="PeekConsoleInputA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>INPUT_RECORD*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfEventsRead">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="PeekConsoleInputW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>INPUT_RECORD*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfEventsRead">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="ReadConsoleA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nNumberOfCharsToRead">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfCharsRead">
+                    <type>uint*</type>
+                </param>
+                <param name="pInputControl">
+                    <type>CONSOLE_READCONSOLE_CONTROL*</type>
+                </param>
+            </function>
+            <function name="ReadConsoleW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nNumberOfCharsToRead">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfCharsRead">
+                    <type>uint*</type>
+                </param>
+                <param name="pInputControl">
+                    <type>CONSOLE_READCONSOLE_CONTROL*</type>
+                </param>
+            </function>
+            <function name="WriteConsoleA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nNumberOfCharsToWrite">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfCharsWritten">
+                    <type>uint*</type>
+                </param>
+                <param name="lpReserved">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="WriteConsoleW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="nNumberOfCharsToWrite">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfCharsWritten">
+                    <type>uint*</type>
+                </param>
+                <param name="lpReserved">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="SetConsoleCtrlHandler" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="HandlerRoutine">
+                    <type>delegate* unmanaged&lt;uint, int&gt;</type>
+                </param>
+                <param name="Add">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="CreatePseudoConsole" access="public" lib="kernel32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="size">
+                    <type>COORD</type>
+                </param>
+                <param name="hInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="phPC">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="ResizePseudoConsole" access="public" lib="kernel32" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hPC">
+                    <type>void*</type>
+                </param>
+                <param name="size">
+                    <type>COORD</type>
+                </param>
+            </function>
+            <function name="ClosePseudoConsole" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="hPC">
+                    <type>void*</type>
+                </param>
+            </function>
+            <constant name="ATTACH_PARENT_PROCESS" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((uint)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="ENABLE_PROCESSED_INPUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_LINE_INPUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_ECHO_INPUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_WINDOW_INPUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_MOUSE_INPUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_INSERT_MODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0020
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_QUICK_EDIT_MODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0040
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_EXTENDED_FLAGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0080
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_AUTO_POSITION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0100
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_VIRTUAL_TERMINAL_INPUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0200
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_PROCESSED_OUTPUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_WRAP_AT_EOL_OUTPUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_VIRTUAL_TERMINAL_PROCESSING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="DISABLE_NEWLINE_AUTO_RETURN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_LVB_GRID_WORLDWIDE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="ReadConsoleInput" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, INPUT_RECORD*, uint, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>ReadConsoleInputW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="PeekConsoleInput" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, INPUT_RECORD*, uint, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>PeekConsoleInputW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ReadConsole" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, void*, uint, uint*, CONSOLE_READCONSOLE_CONTROL*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>ReadConsoleW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="WriteConsole" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, void*, uint, uint*, void*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>WriteConsoleW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CTRL_C_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="CTRL_BREAK_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="CTRL_CLOSE_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="CTRL_LOGOFF_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="CTRL_SHUTDOWN_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>6
+            </code>
+                </value>
+            </constant>
+            <constant name="PSEUDOCONSOLE_INHERIT_CURSOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

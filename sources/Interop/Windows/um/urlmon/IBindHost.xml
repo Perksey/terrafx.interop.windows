@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IBindHost" access="public" native="struct IBindHost : IUnknown" uuid="fc4801a1-2ba9-11cf-a229-00aa003d7352" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindHost*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IBindHost*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindHost*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IBindHost*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindHost*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IBindHost*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateMoniker" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="szName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="ppmk">
+                    <type>IMoniker**</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindHost*, ushort*, IBindCtx*, IMoniker**, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IBindHost*)Unsafe.AsPointer(ref this)</param>, <param name="szName">szName</param>, <param name="pBC">pBC</param>, <param name="ppmk">ppmk</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="MonikerBindToStorage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pMk">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pBSC">
+                    <type>IBindStatusCallback*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObj">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindHost*, IMoniker*, IBindCtx*, IBindStatusCallback*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IBindHost*)Unsafe.AsPointer(ref this)</param>, <param name="pMk">pMk</param>, <param name="pBC">pBC</param>, <param name="pBSC">pBSC</param>, <param name="riid">riid</param>, <param name="ppvObj">ppvObj</param>);
+        </code>
+                </body>
+            </function>
+            <function name="MonikerBindToObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pMk">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pBSC">
+                    <type>IBindStatusCallback*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObj">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IBindHost*, IMoniker*, IBindCtx*, IBindStatusCallback*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IBindHost*)Unsafe.AsPointer(ref this)</param>, <param name="pMk">pMk</param>, <param name="pBC">pBC</param>, <param name="pBSC">pBSC</param>, <param name="riid">riid</param>, <param name="ppvObj">ppvObj</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

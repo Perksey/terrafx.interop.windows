@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CREATE_DISK" access="public">
+            <field name="PartitionStyle" access="public">
+                <type native="">PARTITION_STYLE</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_CREATE_DISK::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:8461:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Mbr" access="public">
+                <type native="">ref CREATE_DISK_MBR</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Mbr, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Gpt" access="public">
+                <type native="">ref CREATE_DISK_GPT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Gpt, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="Mbr" access="public" offset="0">
+                    <type native="">CREATE_DISK_MBR</type>
+                </field>
+                <field name="Gpt" access="public" offset="0">
+                    <type native="">CREATE_DISK_GPT</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

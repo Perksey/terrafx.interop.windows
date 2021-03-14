@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wingdi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="EMRPOLYTEXTOUTA" access="public">
+            <field name="emr" access="public">
+                <type native="">EMR</type>
+            </field>
+            <field name="rclBounds" access="public">
+                <type native="">RECTL</type>
+            </field>
+            <field name="iGraphicsMode" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="exScale" access="public">
+                <type native="FLOAT">float</type>
+            </field>
+            <field name="eyScale" access="public">
+                <type native="FLOAT">float</type>
+            </field>
+            <field name="cStrings" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="aemrtext" access="public">
+                <type native="EMRTEXT [1]" count="1" fixed="_aemrtext_e__FixedBuffer">EMRTEXT</type>
+            </field>
+            <struct name="_aemrtext_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">EMRTEXT</type>
+                </field>
+                <indexer access="public">
+                    <type>ref EMRTEXT</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;EMRTEXT&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

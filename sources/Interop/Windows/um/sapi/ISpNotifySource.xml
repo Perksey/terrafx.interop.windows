@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpNotifySource" access="public" native="struct ISpNotifySource : IUnknown" uuid="5eff4aef-8487-11d2-961c-00c04f8ee628" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifySink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNotifySink">
+                    <type>ISpNotifySink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, ISpNotifySink*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>, <param name="pNotifySink">pNotifySink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyWindowMessage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hWnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Msg">
+                    <type>uint</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, IntPtr, uint, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>, <param name="hWnd">hWnd</param>, <param name="Msg">Msg</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyCallbackFunction" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfnCallback">
+                    <type>delegate* unmanaged&lt;nuint, nint, void&gt;*</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, delegate* unmanaged&lt;nuint, nint, void&gt;*, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>, <param name="pfnCallback">pfnCallback</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyCallbackInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSpCallback">
+                    <type>ISpNotifyCallback*</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, ISpNotifyCallback*, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>, <param name="pSpCallback">pSpCallback</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyWin32Event" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WaitForNotifyEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>, <param name="dwMilliseconds">dwMilliseconds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNotifyEventHandle" access="public" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpNotifySource*, IntPtr&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ISpNotifySource*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

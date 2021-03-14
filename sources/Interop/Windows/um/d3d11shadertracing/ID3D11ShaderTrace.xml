@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11shadertracing.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D11ShaderTrace" access="public" native="struct ID3D11ShaderTrace : IUnknown" uuid="36b013e6-2811-4845-baa7-d623fe0df104" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TraceReady" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTestCount">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>, <param name="pTestCount">pTestCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResetTrace" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D11ShaderTrace*, void&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTraceStats" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTraceStats">
+                    <type>D3D11_TRACE_STATS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, D3D11_TRACE_STATS*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>, <param name="pTraceStats">pTraceStats</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSelectStamp" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="stampIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>, <param name="stampIndex">stampIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInitialRegisterContents" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRegister">
+                    <type>D3D11_TRACE_REGISTER*</type>
+                </param>
+                <param name="pValue">
+                    <type>D3D11_TRACE_VALUE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, D3D11_TRACE_REGISTER*, D3D11_TRACE_VALUE*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>, <param name="pRegister">pRegister</param>, <param name="pValue">pValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStep" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="stepIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pTraceStep">
+                    <type>D3D11_TRACE_STEP*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, uint, D3D11_TRACE_STEP*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>, <param name="stepIndex">stepIndex</param>, <param name="pTraceStep">pTraceStep</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWrittenRegister" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="stepIndex">
+                    <type>uint</type>
+                </param>
+                <param name="writtenRegisterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pRegister">
+                    <type>D3D11_TRACE_REGISTER*</type>
+                </param>
+                <param name="pValue">
+                    <type>D3D11_TRACE_VALUE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, uint, uint, D3D11_TRACE_REGISTER*, D3D11_TRACE_VALUE*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>, <param name="stepIndex">stepIndex</param>, <param name="writtenRegisterIndex">writtenRegisterIndex</param>, <param name="pRegister">pRegister</param>, <param name="pValue">pValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetReadRegister" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="stepIndex">
+                    <type>uint</type>
+                </param>
+                <param name="readRegisterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pRegister">
+                    <type>D3D11_TRACE_REGISTER*</type>
+                </param>
+                <param name="pValue">
+                    <type>D3D11_TRACE_VALUE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11ShaderTrace*, uint, uint, D3D11_TRACE_REGISTER*, D3D11_TRACE_VALUE*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D11ShaderTrace*)Unsafe.AsPointer(ref this)</param>, <param name="stepIndex">stepIndex</param>, <param name="readRegisterIndex">readRegisterIndex</param>, <param name="pRegister">pRegister</param>, <param name="pValue">pValue</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

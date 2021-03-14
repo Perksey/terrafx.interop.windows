@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/projectedfslib.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PRJ_CALLBACKS" access="public" unsafe="true">
+            <field name="StartDirectoryEnumerationCallback" access="public">
+                <type native="PRJ_START_DIRECTORY_ENUMERATION_CB *">delegate* unmanaged&lt;PRJ_CALLBACK_DATA*, Guid*, int&gt;*</type>
+            </field>
+            <field name="EndDirectoryEnumerationCallback" access="public">
+                <type native="PRJ_END_DIRECTORY_ENUMERATION_CB *">delegate* unmanaged&lt;PRJ_CALLBACK_DATA*, Guid*, int&gt;*</type>
+            </field>
+            <field name="GetDirectoryEnumerationCallback" access="public">
+                <type native="PRJ_GET_DIRECTORY_ENUMERATION_CB *">delegate* unmanaged&lt;PRJ_CALLBACK_DATA*, Guid*, ushort*, IntPtr, int&gt;*</type>
+            </field>
+            <field name="GetPlaceholderInfoCallback" access="public">
+                <type native="PRJ_GET_PLACEHOLDER_INFO_CB *">delegate* unmanaged&lt;PRJ_CALLBACK_DATA*, int&gt;*</type>
+            </field>
+            <field name="GetFileDataCallback" access="public">
+                <type native="PRJ_GET_FILE_DATA_CB *">delegate* unmanaged&lt;PRJ_CALLBACK_DATA*, ulong, uint, int&gt;*</type>
+            </field>
+            <field name="QueryFileNameCallback" access="public">
+                <type native="PRJ_QUERY_FILE_NAME_CB *">delegate* unmanaged&lt;PRJ_CALLBACK_DATA*, int&gt;*</type>
+            </field>
+            <field name="NotificationCallback" access="public">
+                <type native="PRJ_NOTIFICATION_CB *">delegate* unmanaged&lt;PRJ_CALLBACK_DATA*, byte, PRJ_NOTIFICATION, ushort*, PRJ_NOTIFICATION_PARAMETERS*, int&gt;*</type>
+            </field>
+            <field name="CancelCommandCallback" access="public">
+                <type native="PRJ_CANCEL_COMMAND_CB *">delegate* unmanaged&lt;PRJ_CALLBACK_DATA*, void&gt;*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

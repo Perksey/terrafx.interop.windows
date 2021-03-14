@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/SetupAPI.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SP_DEVINFO_LIST_DETAIL_DATA_A" access="public" unsafe="true" layout="Sequential" pack="1">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ClassGuid" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="RemoteMachineHandle" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <field name="RemoteMachineName" access="public">
+                <type native="CHAR [263]" count="263" fixed="_RemoteMachineName_e__FixedBuffer">sbyte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

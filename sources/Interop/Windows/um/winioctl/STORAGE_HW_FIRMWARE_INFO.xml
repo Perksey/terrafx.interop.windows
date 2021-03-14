@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_HW_FIRMWARE_INFO" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="_bitfield" access="public">
+                <type native="">byte</type>
+            </field>
+            <field name="SupportUpgrade" access="public">
+                <type native="BYTE : 1">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)(<bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>));
+        </code>
+                </set>
+            </field>
+            <field name="Reserved0" access="public">
+                <type native="BYTE : 7">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>1</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>7Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>7Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>1</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>7Fu</bitwidthHexString>) &lt;&lt; 1));
+        </code>
+                </set>
+            </field>
+            <field name="SlotCount" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="ActiveSlot" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="PendingActivateSlot" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="FirmwareShared" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="BYTE [3]" count="3" fixed="_Reserved_e__FixedBuffer">byte</type>
+            </field>
+            <field name="ImagePayloadAlignment" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ImagePayloadMaxSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Slot" access="public">
+                <type native="STORAGE_HW_FIRMWARE_SLOT_INFO [1]" count="1" fixed="_Slot_e__FixedBuffer">STORAGE_HW_FIRMWARE_SLOT_INFO</type>
+            </field>
+            <struct name="_Slot_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">STORAGE_HW_FIRMWARE_SLOT_INFO</type>
+                </field>
+                <indexer access="public">
+                    <type>ref STORAGE_HW_FIRMWARE_SLOT_INFO</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;STORAGE_HW_FIRMWARE_SLOT_INFO&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

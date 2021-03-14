@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/MLOperatorAuthor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MLOperatorEdgeDescription" access="public">
+            <field name="edgeType" access="public">
+                <type native="">MLOperatorEdgeType</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="MLOperatorEdgeDescription::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/MLOperatorAuthor.h:119:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="reserved" access="public">
+                <type native="">ref ulong</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.reserved, 1));
+        </code>
+                </get>
+            </field>
+            <field name="tensorDataType" access="public">
+                <type native="">ref MLOperatorTensorDataType</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.tensorDataType, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="reserved" access="public" offset="0">
+                    <type native="uint64_t">ulong</type>
+                </field>
+                <field name="tensorDataType" access="public" offset="0">
+                    <type native="">MLOperatorTensorDataType</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

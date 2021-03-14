@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinTrust.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_PROVIDER_FUNCTIONS" access="public" unsafe="true">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pfnAlloc" access="public">
+                <type native="PFN_CPD_MEM_ALLOC">delegate* unmanaged&lt;uint, void*&gt;</type>
+            </field>
+            <field name="pfnFree" access="public">
+                <type native="PFN_CPD_MEM_FREE">delegate* unmanaged&lt;void*, void&gt;</type>
+            </field>
+            <field name="pfnAddStore2Chain" access="public">
+                <type native="PFN_CPD_ADD_STORE">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, void*, int&gt;</type>
+            </field>
+            <field name="pfnAddSgnr2Chain" access="public">
+                <type native="PFN_CPD_ADD_SGNR">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, int, uint, CRYPT_PROVIDER_SGNR*, int&gt;</type>
+            </field>
+            <field name="pfnAddCert2Chain" access="public">
+                <type native="PFN_CPD_ADD_CERT">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, uint, int, uint, CERT_CONTEXT*, int&gt;</type>
+            </field>
+            <field name="pfnAddPrivData2Chain" access="public">
+                <type native="PFN_CPD_ADD_PRIVDATA">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, CRYPT_PROVIDER_PRIVDATA*, int&gt;</type>
+            </field>
+            <field name="pfnInitialize" access="public">
+                <type native="PFN_PROVIDER_INIT_CALL">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+            <field name="pfnObjectTrust" access="public">
+                <type native="PFN_PROVIDER_OBJTRUST_CALL">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+            <field name="pfnSignatureTrust" access="public">
+                <type native="PFN_PROVIDER_SIGTRUST_CALL">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+            <field name="pfnCertificateTrust" access="public">
+                <type native="PFN_PROVIDER_CERTTRUST_CALL">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+            <field name="pfnFinalPolicy" access="public">
+                <type native="PFN_PROVIDER_FINALPOLICY_CALL">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+            <field name="pfnCertCheckPolicy" access="public">
+                <type native="PFN_PROVIDER_CERTCHKPOLICY_CALL">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, uint, int, uint, int&gt;</type>
+            </field>
+            <field name="pfnTestFinalPolicy" access="public">
+                <type native="PFN_PROVIDER_TESTFINALPOLICY_CALL">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+            <field name="psUIpfns" access="public">
+                <type native="struct _CRYPT_PROVUI_FUNCS *">CRYPT_PROVUI_FUNCS*</type>
+            </field>
+            <field name="pfnCleanupPolicy" access="public">
+                <type native="PFN_PROVIDER_CLEANUP_CALL">delegate* unmanaged&lt;CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

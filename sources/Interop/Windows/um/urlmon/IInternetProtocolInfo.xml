@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IInternetProtocolInfo" access="public" native="struct IInternetProtocolInfo : IUnknown" uuid="79eac9ec-baf9-11ce-8c82-00aa004ba90b" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolInfo*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IInternetProtocolInfo*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolInfo*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IInternetProtocolInfo*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolInfo*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IInternetProtocolInfo*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ParseUrl" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="ParseAction">
+                    <type>PARSEACTION</type>
+                </param>
+                <param name="dwParseFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pwzResult">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchResult">
+                    <type>uint</type>
+                </param>
+                <param name="pcchResult">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolInfo*, ushort*, PARSEACTION, uint, ushort*, uint, uint*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IInternetProtocolInfo*)Unsafe.AsPointer(ref this)</param>, <param name="pwzUrl">pwzUrl</param>, <param name="ParseAction">ParseAction</param>, <param name="dwParseFlags">dwParseFlags</param>, <param name="pwzResult">pwzResult</param>, <param name="cchResult">cchResult</param>, <param name="pcchResult">pcchResult</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CombineUrl" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzBaseUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="pwzRelativeUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwCombineFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pwzResult">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchResult">
+                    <type>uint</type>
+                </param>
+                <param name="pcchResult">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolInfo*, ushort*, ushort*, uint, ushort*, uint, uint*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IInternetProtocolInfo*)Unsafe.AsPointer(ref this)</param>, <param name="pwzBaseUrl">pwzBaseUrl</param>, <param name="pwzRelativeUrl">pwzRelativeUrl</param>, <param name="dwCombineFlags">dwCombineFlags</param>, <param name="pwzResult">pwzResult</param>, <param name="cchResult">cchResult</param>, <param name="pcchResult">pcchResult</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CompareUrl" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzUrl1">
+                    <type>ushort*</type>
+                </param>
+                <param name="pwzUrl2">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwCompareFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolInfo*, ushort*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IInternetProtocolInfo*)Unsafe.AsPointer(ref this)</param>, <param name="pwzUrl1">pwzUrl1</param>, <param name="pwzUrl2">pwzUrl2</param>, <param name="dwCompareFlags">dwCompareFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="OueryOption">
+                    <type>QUERYOPTION</type>
+                </param>
+                <param name="dwQueryFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="cbBuffer">
+                    <type>uint</type>
+                </param>
+                <param name="pcbBuf">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolInfo*, ushort*, QUERYOPTION, uint, void*, uint, uint*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IInternetProtocolInfo*)Unsafe.AsPointer(ref this)</param>, <param name="pwzUrl">pwzUrl</param>, <param name="OueryOption">OueryOption</param>, <param name="dwQueryFlags">dwQueryFlags</param>, <param name="pBuffer">pBuffer</param>, <param name="cbBuffer">cbBuffer</param>, <param name="pcbBuf">pcbBuf</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

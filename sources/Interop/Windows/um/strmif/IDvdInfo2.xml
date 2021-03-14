@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDvdInfo2" access="public" native="struct IDvdInfo2 : IUnknown" uuid="34151510-eec0-11d2-8201-00a0c9d74842" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentDomain" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDomain">
+                    <type>DVD_DOMAIN*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, DVD_DOMAIN*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pDomain">pDomain</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentLocation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLocation">
+                    <type>DVD_PLAYBACK_LOCATION2*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, DVD_PLAYBACK_LOCATION2*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pLocation">pLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTotalTitleTime" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTotalTime">
+                    <type>DVD_HMSF_TIMECODE*</type>
+                </param>
+                <param name="ulTimeCodeFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, DVD_HMSF_TIMECODE*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pTotalTime">pTotalTime</param>, <param name="ulTimeCodeFlags">ulTimeCodeFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentButton" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pulButtonsAvailable">
+                    <type>uint*</type>
+                </param>
+                <param name="pulCurrentButton">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pulButtonsAvailable">pulButtonsAvailable</param>, <param name="pulCurrentButton">pulCurrentButton</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentAngle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pulAnglesAvailable">
+                    <type>uint*</type>
+                </param>
+                <param name="pulCurrentAngle">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pulAnglesAvailable">pulAnglesAvailable</param>, <param name="pulCurrentAngle">pulCurrentAngle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentAudio" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pulStreamsAvailable">
+                    <type>uint*</type>
+                </param>
+                <param name="pulCurrentStream">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pulStreamsAvailable">pulStreamsAvailable</param>, <param name="pulCurrentStream">pulCurrentStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentSubpicture" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pulStreamsAvailable">
+                    <type>uint*</type>
+                </param>
+                <param name="pulCurrentStream">
+                    <type>uint*</type>
+                </param>
+                <param name="pbIsDisabled">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, uint*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pulStreamsAvailable">pulStreamsAvailable</param>, <param name="pulCurrentStream">pulCurrentStream</param>, <param name="pbIsDisabled">pbIsDisabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentUOPS" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pulUOPs">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pulUOPs">pulUOPs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAllSPRMs" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRegisterArray">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pRegisterArray">pRegisterArray</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAllGPRMs" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRegisterArray">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pRegisterArray">pRegisterArray</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAudioLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStream">
+                    <type>uint</type>
+                </param>
+                <param name="pLanguage">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulStream">ulStream</param>, <param name="pLanguage">pLanguage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSubpictureLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStream">
+                    <type>uint</type>
+                </param>
+                <param name="pLanguage">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulStream">ulStream</param>, <param name="pLanguage">pLanguage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTitleAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulTitle">
+                    <type>uint</type>
+                </param>
+                <param name="pMenu">
+                    <type>DVD_MenuAttributes*</type>
+                </param>
+                <param name="pTitle">
+                    <type>DVD_TitleAttributes*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, DVD_MenuAttributes*, DVD_TitleAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulTitle">ulTitle</param>, <param name="pMenu">pMenu</param>, <param name="pTitle">pTitle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVMGAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pATR">
+                    <type>DVD_MenuAttributes*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, DVD_MenuAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pATR">pATR</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentVideoAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pATR">
+                    <type>DVD_VideoAttributes*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, DVD_VideoAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pATR">pATR</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAudioAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStream">
+                    <type>uint</type>
+                </param>
+                <param name="pATR">
+                    <type>DVD_AudioAttributes*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, DVD_AudioAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulStream">ulStream</param>, <param name="pATR">pATR</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetKaraokeAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStream">
+                    <type>uint</type>
+                </param>
+                <param name="pAttributes">
+                    <type>DVD_KaraokeAttributes*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, DVD_KaraokeAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulStream">ulStream</param>, <param name="pAttributes">pAttributes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSubpictureAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStream">
+                    <type>uint</type>
+                </param>
+                <param name="pATR">
+                    <type>DVD_SubpictureAttributes*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, DVD_SubpictureAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulStream">ulStream</param>, <param name="pATR">pATR</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDVDVolumeInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pulNumOfVolumes">
+                    <type>uint*</type>
+                </param>
+                <param name="pulVolume">
+                    <type>uint*</type>
+                </param>
+                <param name="pSide">
+                    <type>DVD_DISC_SIDE*</type>
+                </param>
+                <param name="pulNumOfTitles">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, uint*, DVD_DISC_SIDE*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pulNumOfVolumes">pulNumOfVolumes</param>, <param name="pulVolume">pulVolume</param>, <param name="pSide">pSide</param>, <param name="pulNumOfTitles">pulNumOfTitles</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDVDTextNumberOfLanguages" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pulNumOfLangs">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pulNumOfLangs">pulNumOfLangs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDVDTextLanguageInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulLangIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pulNumOfStrings">
+                    <type>uint*</type>
+                </param>
+                <param name="pLangCode">
+                    <type>uint*</type>
+                </param>
+                <param name="pbCharacterSet">
+                    <type>DVD_TextCharSet*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, uint*, uint*, DVD_TextCharSet*, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulLangIndex">ulLangIndex</param>, <param name="pulNumOfStrings">pulNumOfStrings</param>, <param name="pLangCode">pLangCode</param>, <param name="pbCharacterSet">pbCharacterSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDVDTextStringAsNative" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulLangIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ulStringIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pbBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="ulMaxBufferSize">
+                    <type>uint</type>
+                </param>
+                <param name="pulActualSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pType">
+                    <type>DVD_TextStringType*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, uint, byte*, uint, uint*, DVD_TextStringType*, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulLangIndex">ulLangIndex</param>, <param name="ulStringIndex">ulStringIndex</param>, <param name="pbBuffer">pbBuffer</param>, <param name="ulMaxBufferSize">ulMaxBufferSize</param>, <param name="pulActualSize">pulActualSize</param>, <param name="pType">pType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDVDTextStringAsUnicode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulLangIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ulStringIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pchwBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="ulMaxBufferSize">
+                    <type>uint</type>
+                </param>
+                <param name="pulActualSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pType">
+                    <type>DVD_TextStringType*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, uint, ushort*, uint, uint*, DVD_TextStringType*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulLangIndex">ulLangIndex</param>, <param name="ulStringIndex">ulStringIndex</param>, <param name="pchwBuffer">pchwBuffer</param>, <param name="ulMaxBufferSize">ulMaxBufferSize</param>, <param name="pulActualSize">pulActualSize</param>, <param name="pType">pType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPlayerParentalLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pulParentalLevel">
+                    <type>uint*</type>
+                </param>
+                <param name="pbCountryCode">
+                    <type>byte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, byte*, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pulParentalLevel">pulParentalLevel</param>, <param name="pbCountryCode">pbCountryCode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNumberOfChapters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulTitle">
+                    <type>uint</type>
+                </param>
+                <param name="pulNumOfChapters">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulTitle">ulTitle</param>, <param name="pulNumOfChapters">pulNumOfChapters</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTitleParentalLevels" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulTitle">
+                    <type>uint</type>
+                </param>
+                <param name="pulParentalLevels">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulTitle">ulTitle</param>, <param name="pulParentalLevels">pulParentalLevels</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDVDDirectory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszwPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="ulMaxSize">
+                    <type>uint</type>
+                </param>
+                <param name="pulActualSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, ushort*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pszwPath">pszwPath</param>, <param name="ulMaxSize">ulMaxSize</param>, <param name="pulActualSize">pulActualSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsAudioStreamEnabled" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStreamNum">
+                    <type>uint</type>
+                </param>
+                <param name="pbEnabled">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulStreamNum">ulStreamNum</param>, <param name="pbEnabled">pbEnabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDiscID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszwPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="pullDiscID">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, ushort*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pszwPath">pszwPath</param>, <param name="pullDiscID">pullDiscID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStateData">
+                    <type>IDvdState**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, IDvdState**, int&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pStateData">pStateData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMenuLanguages" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLanguages">
+                    <type>uint*</type>
+                </param>
+                <param name="ulMaxLanguages">
+                    <type>uint</type>
+                </param>
+                <param name="pulActualLanguages">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pLanguages">pLanguages</param>, <param name="ulMaxLanguages">ulMaxLanguages</param>, <param name="pulActualLanguages">pulActualLanguages</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetButtonAtPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="point">
+                    <type>POINT</type>
+                </param>
+                <param name="pulButtonIndex">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, POINT, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="point">point</param>, <param name="pulButtonIndex">pulButtonIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCmdFromEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lParam1">
+                    <type>nint</type>
+                </param>
+                <param name="pCmdObj">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, nint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="lParam1">lParam1</param>, <param name="pCmdObj">pCmdObj</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDefaultMenuLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLanguage">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pLanguage">pLanguage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDefaultAudioLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLanguage">
+                    <type>uint*</type>
+                </param>
+                <param name="pAudioExtension">
+                    <type>DVD_AUDIO_LANG_EXT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, DVD_AUDIO_LANG_EXT*, int&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pLanguage">pLanguage</param>, <param name="pAudioExtension">pAudioExtension</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDefaultSubpictureLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLanguage">
+                    <type>uint*</type>
+                </param>
+                <param name="pSubpictureExtension">
+                    <type>DVD_SUBPICTURE_LANG_EXT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint*, DVD_SUBPICTURE_LANG_EXT*, int&gt;)(lpVtbl[<vtbl explicit="False">38</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pLanguage">pLanguage</param>, <param name="pSubpictureExtension">pSubpictureExtension</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDecoderCaps" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCaps">
+                    <type>DVD_DECODER_CAPS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, DVD_DECODER_CAPS*, int&gt;)(lpVtbl[<vtbl explicit="False">39</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="pCaps">pCaps</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetButtonRect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulButton">
+                    <type>uint</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">40</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulButton">ulButton</param>, <param name="pRect">pRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsSubpictureStreamEnabled" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStreamNum">
+                    <type>uint</type>
+                </param>
+                <param name="pbEnabled">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdInfo2*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">41</vtbl>]))(<param special="thisPtr">(IDvdInfo2*)Unsafe.AsPointer(ref this)</param>, <param name="ulStreamNum">ulStreamNum</param>, <param name="pbEnabled">pbEnabled</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from winrt/roparameterizediid.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="RoGetParameterizedTypeInstanceIID" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="nameElementCount">
+                    <type>uint</type>
+                </param>
+                <param name="nameElements">
+                    <type>ushort**</type>
+                </param>
+                <param name="metaDataLocator">
+                    <type>IRoMetaDataLocator*</type>
+                </param>
+                <param name="iid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pExtra">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="RoFreeParameterizedTypeExtra" access="public" lib="combase" static="true" unsafe="true">
+                <type>void</type>
+                <param name="extra">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="RoParameterizedTypeExtraGetTypeSignature" access="public" lib="combase" static="true">
+                <type native="PCSTR">sbyte*</type>
+                <param name="extra">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

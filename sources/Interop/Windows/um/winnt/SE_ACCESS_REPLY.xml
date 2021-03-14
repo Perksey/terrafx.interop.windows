@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SE_ACCESS_REPLY" access="public" unsafe="true">
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ResultListCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="GrantedAccess" access="public">
+                <type native="PACCESS_MASK">uint*</type>
+            </field>
+            <field name="AccessStatus" access="public">
+                <type native="PDWORD">uint*</type>
+            </field>
+            <field name="AccessReason" access="public">
+                <type native="PACCESS_REASONS">ACCESS_REASONS*</type>
+            </field>
+            <field name="Privileges" access="public">
+                <type native="PPRIVILEGE_SET *">PRIVILEGE_SET**</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/hidsdi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="HidD_GetAttributes" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Attributes">
+                    <type>HIDD_ATTRIBUTES*</type>
+                </param>
+            </function>
+            <function name="HidD_GetHidGuid" access="public" lib="hid" static="true">
+                <type>void</type>
+                <param name="HidGuid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="HidD_GetPreparsedData" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="HidD_FreePreparsedData" access="public" lib="hid" static="true" unsafe="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HidD_FlushQueue" access="public" lib="hid" static="true" unsafe="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HidD_GetConfiguration" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Configuration">
+                    <type>HIDD_CONFIGURATION*</type>
+                </param>
+                <param name="ConfigurationLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_SetConfiguration" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Configuration">
+                    <type>HIDD_CONFIGURATION*</type>
+                </param>
+                <param name="ConfigurationLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_GetFeature" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ReportBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="ReportBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_SetFeature" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ReportBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="ReportBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_GetInputReport" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ReportBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="ReportBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_SetOutputReport" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ReportBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="ReportBufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_GetNumInputBuffers" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="NumberBuffers">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="HidD_SetNumInputBuffers" access="public" lib="hid" static="true" unsafe="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="NumberBuffers">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_GetPhysicalDescriptor" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Buffer">
+                    <type>void*</type>
+                </param>
+                <param name="BufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_GetManufacturerString" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Buffer">
+                    <type>void*</type>
+                </param>
+                <param name="BufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_GetProductString" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Buffer">
+                    <type>void*</type>
+                </param>
+                <param name="BufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_GetIndexedString" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="StringIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Buffer">
+                    <type>void*</type>
+                </param>
+                <param name="BufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_GetSerialNumberString" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Buffer">
+                    <type>void*</type>
+                </param>
+                <param name="BufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidD_GetMsGenreDescriptor" access="public" lib="hid" static="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="HidDeviceObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Buffer">
+                    <type>void*</type>
+                </param>
+                <param name="BufferLength">
+                    <type>uint</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

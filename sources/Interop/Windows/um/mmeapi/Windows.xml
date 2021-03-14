@@ -1,0 +1,2917 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mmeapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="waveOutGetNumDevs" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="UINT">uint</type>
+            </function>
+            <function name="waveOutGetDevCapsA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pwoc">
+                    <type>WAVEOUTCAPSA*</type>
+                </param>
+                <param name="cbwoc">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutGetDevCapsW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pwoc">
+                    <type>WAVEOUTCAPSW*</type>
+                </param>
+                <param name="cbwoc">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutGetVolume" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pdwVolume">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="waveOutSetVolume" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwVolume">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutGetErrorTextA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="mmrError">
+                    <type>uint</type>
+                </param>
+                <param name="pszText">
+                    <type>sbyte*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutGetErrorTextW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="mmrError">
+                    <type>uint</type>
+                </param>
+                <param name="pszText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutOpen" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="phwo">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="uDeviceID">
+                    <type>uint</type>
+                </param>
+                <param name="pwfx">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <param name="dwCallback">
+                    <type>nuint</type>
+                </param>
+                <param name="dwInstance">
+                    <type>nuint</type>
+                </param>
+                <param name="fdwOpen">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutClose" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="waveOutPrepareHeader" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pwh">
+                    <type>WAVEHDR*</type>
+                </param>
+                <param name="cbwh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutUnprepareHeader" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pwh">
+                    <type>WAVEHDR*</type>
+                </param>
+                <param name="cbwh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutWrite" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pwh">
+                    <type>WAVEHDR*</type>
+                </param>
+                <param name="cbwh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutPause" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="waveOutRestart" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="waveOutReset" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="waveOutBreakLoop" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="waveOutGetPosition" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmmt">
+                    <type>MMTIME*</type>
+                </param>
+                <param name="cbmmt">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutGetPitch" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pdwPitch">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="waveOutSetPitch" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwPitch">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutGetPlaybackRate" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pdwRate">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="waveOutSetPlaybackRate" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwRate">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveOutGetID" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="puDeviceID">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="waveOutMessage" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uMsg">
+                    <type>uint</type>
+                </param>
+                <param name="dw1">
+                    <type>nuint</type>
+                </param>
+                <param name="dw2">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="waveInGetNumDevs" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="UINT">uint</type>
+            </function>
+            <function name="waveInGetDevCapsA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pwic">
+                    <type>WAVEINCAPSA*</type>
+                </param>
+                <param name="cbwic">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveInGetDevCapsW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pwic">
+                    <type>WAVEINCAPSW*</type>
+                </param>
+                <param name="cbwic">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveInGetErrorTextA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="mmrError">
+                    <type>uint</type>
+                </param>
+                <param name="pszText">
+                    <type>sbyte*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveInGetErrorTextW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="mmrError">
+                    <type>uint</type>
+                </param>
+                <param name="pszText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveInOpen" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="phwi">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="uDeviceID">
+                    <type>uint</type>
+                </param>
+                <param name="pwfx">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <param name="dwCallback">
+                    <type>nuint</type>
+                </param>
+                <param name="dwInstance">
+                    <type>nuint</type>
+                </param>
+                <param name="fdwOpen">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveInClose" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="waveInPrepareHeader" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pwh">
+                    <type>WAVEHDR*</type>
+                </param>
+                <param name="cbwh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveInUnprepareHeader" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pwh">
+                    <type>WAVEHDR*</type>
+                </param>
+                <param name="cbwh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveInAddBuffer" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pwh">
+                    <type>WAVEHDR*</type>
+                </param>
+                <param name="cbwh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveInStart" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="waveInStop" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="waveInReset" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="waveInGetPosition" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmmt">
+                    <type>MMTIME*</type>
+                </param>
+                <param name="cbmmt">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="waveInGetID" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="puDeviceID">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="waveInMessage" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hwi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uMsg">
+                    <type>uint</type>
+                </param>
+                <param name="dw1">
+                    <type>nuint</type>
+                </param>
+                <param name="dw2">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="midiOutGetNumDevs" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="UINT">uint</type>
+            </function>
+            <function name="midiStreamOpen" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="phms">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="puDeviceID">
+                    <type>uint*</type>
+                </param>
+                <param name="cMidi">
+                    <type>uint</type>
+                </param>
+                <param name="dwCallback">
+                    <type>nuint</type>
+                </param>
+                <param name="dwInstance">
+                    <type>nuint</type>
+                </param>
+                <param name="fdwOpen">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiStreamClose" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hms">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiStreamProperty" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hms">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lppropdata">
+                    <type>byte*</type>
+                </param>
+                <param name="dwProperty">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiStreamPosition" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hms">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpmmt">
+                    <type>MMTIME*</type>
+                </param>
+                <param name="cbmmt">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiStreamOut" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hms">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmh">
+                    <type>MIDIHDR*</type>
+                </param>
+                <param name="cbmh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiStreamPause" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hms">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiStreamRestart" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hms">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiStreamStop" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hms">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiConnect" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pReserved">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="midiDisconnect" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pReserved">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="midiOutGetDevCapsA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pmoc">
+                    <type>MIDIOUTCAPSA*</type>
+                </param>
+                <param name="cbmoc">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutGetDevCapsW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pmoc">
+                    <type>MIDIOUTCAPSW*</type>
+                </param>
+                <param name="cbmoc">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutGetVolume" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pdwVolume">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="midiOutSetVolume" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwVolume">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutGetErrorTextA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="mmrError">
+                    <type>uint</type>
+                </param>
+                <param name="pszText">
+                    <type>sbyte*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutGetErrorTextW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="mmrError">
+                    <type>uint</type>
+                </param>
+                <param name="pszText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutOpen" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="phmo">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="uDeviceID">
+                    <type>uint</type>
+                </param>
+                <param name="dwCallback">
+                    <type>nuint</type>
+                </param>
+                <param name="dwInstance">
+                    <type>nuint</type>
+                </param>
+                <param name="fdwOpen">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutClose" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiOutPrepareHeader" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmh">
+                    <type>MIDIHDR*</type>
+                </param>
+                <param name="cbmh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutUnprepareHeader" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmh">
+                    <type>MIDIHDR*</type>
+                </param>
+                <param name="cbmh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutShortMsg" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwMsg">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutLongMsg" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmh">
+                    <type>MIDIHDR*</type>
+                </param>
+                <param name="cbmh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutReset" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiOutCachePatches" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uBank">
+                    <type>uint</type>
+                </param>
+                <param name="pwpa">
+                    <type>ushort*</type>
+                </param>
+                <param name="fuCache">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutCacheDrumPatches" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uPatch">
+                    <type>uint</type>
+                </param>
+                <param name="pwkya">
+                    <type>ushort*</type>
+                </param>
+                <param name="fuCache">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiOutGetID" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="puDeviceID">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="midiOutMessage" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmo">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uMsg">
+                    <type>uint</type>
+                </param>
+                <param name="dw1">
+                    <type>nuint</type>
+                </param>
+                <param name="dw2">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="midiInGetNumDevs" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="UINT">uint</type>
+            </function>
+            <function name="midiInGetDevCapsA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pmic">
+                    <type>MIDIINCAPSA*</type>
+                </param>
+                <param name="cbmic">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiInGetDevCapsW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pmic">
+                    <type>MIDIINCAPSW*</type>
+                </param>
+                <param name="cbmic">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiInGetErrorTextA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="mmrError">
+                    <type>uint</type>
+                </param>
+                <param name="pszText">
+                    <type>sbyte*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiInGetErrorTextW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="mmrError">
+                    <type>uint</type>
+                </param>
+                <param name="pszText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiInOpen" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="phmi">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="uDeviceID">
+                    <type>uint</type>
+                </param>
+                <param name="dwCallback">
+                    <type>nuint</type>
+                </param>
+                <param name="dwInstance">
+                    <type>nuint</type>
+                </param>
+                <param name="fdwOpen">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiInClose" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiInPrepareHeader" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmh">
+                    <type>MIDIHDR*</type>
+                </param>
+                <param name="cbmh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiInUnprepareHeader" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmh">
+                    <type>MIDIHDR*</type>
+                </param>
+                <param name="cbmh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiInAddBuffer" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmh">
+                    <type>MIDIHDR*</type>
+                </param>
+                <param name="cbmh">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="midiInStart" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiInStop" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiInReset" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="midiInGetID" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="puDeviceID">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="midiInMessage" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmi">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uMsg">
+                    <type>uint</type>
+                </param>
+                <param name="dw1">
+                    <type>nuint</type>
+                </param>
+                <param name="dw2">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="auxGetNumDevs" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="UINT">uint</type>
+            </function>
+            <function name="auxGetDevCapsA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pac">
+                    <type>AUXCAPSA*</type>
+                </param>
+                <param name="cbac">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="auxGetDevCapsW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>nuint</type>
+                </param>
+                <param name="pac">
+                    <type>AUXCAPSW*</type>
+                </param>
+                <param name="cbac">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="auxSetVolume" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>uint</type>
+                </param>
+                <param name="dwVolume">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="auxGetVolume" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>uint</type>
+                </param>
+                <param name="pdwVolume">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="auxOutMessage" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uDeviceID">
+                    <type>uint</type>
+                </param>
+                <param name="uMsg">
+                    <type>uint</type>
+                </param>
+                <param name="dw1">
+                    <type>nuint</type>
+                </param>
+                <param name="dw2">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="mixerGetNumDevs" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="UINT">uint</type>
+            </function>
+            <function name="mixerGetDevCapsA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uMxId">
+                    <type>nuint</type>
+                </param>
+                <param name="pmxcaps">
+                    <type>MIXERCAPSA*</type>
+                </param>
+                <param name="cbmxcaps">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerGetDevCapsW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="uMxId">
+                    <type>nuint</type>
+                </param>
+                <param name="pmxcaps">
+                    <type>MIXERCAPSW*</type>
+                </param>
+                <param name="cbmxcaps">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerOpen" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="phmx">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="uMxId">
+                    <type>uint</type>
+                </param>
+                <param name="dwCallback">
+                    <type>nuint</type>
+                </param>
+                <param name="dwInstance">
+                    <type>nuint</type>
+                </param>
+                <param name="fdwOpen">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerClose" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmx">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="mixerMessage" access="public" lib="Winmm" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hmx">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uMsg">
+                    <type>uint</type>
+                </param>
+                <param name="dwParam1">
+                    <type>nuint</type>
+                </param>
+                <param name="dwParam2">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="mixerGetLineInfoA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmxobj">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmxl">
+                    <type>MIXERLINEA*</type>
+                </param>
+                <param name="fdwInfo">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerGetLineInfoW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmxobj">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmxl">
+                    <type>MIXERLINEW*</type>
+                </param>
+                <param name="fdwInfo">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerGetID" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmxobj">
+                    <type>IntPtr</type>
+                </param>
+                <param name="puMxId">
+                    <type>uint*</type>
+                </param>
+                <param name="fdwId">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerGetLineControlsA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmxobj">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmxlc">
+                    <type>MIXERLINECONTROLSA*</type>
+                </param>
+                <param name="fdwControls">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerGetLineControlsW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmxobj">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmxlc">
+                    <type>MIXERLINECONTROLSW*</type>
+                </param>
+                <param name="fdwControls">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerGetControlDetailsA" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmxobj">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmxcd">
+                    <type>MIXERCONTROLDETAILS*</type>
+                </param>
+                <param name="fdwDetails">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerGetControlDetailsW" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmxobj">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmxcd">
+                    <type>MIXERCONTROLDETAILS*</type>
+                </param>
+                <param name="fdwDetails">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="mixerSetControlDetails" access="public" lib="Winmm" static="true">
+                <type native="MMRESULT">uint</type>
+                <param name="hmxobj">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pmxcd">
+                    <type>MIXERCONTROLDETAILS*</type>
+                </param>
+                <param name="fdwDetails">
+                    <type>uint</type>
+                </param>
+            </function>
+            <constant name="WAVERR_BADFORMAT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32 + 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVERR_STILLPLAYING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32 + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVERR_UNPREPARED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32 + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVERR_SYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32 + 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVERR_LASTERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(32 + 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="WOM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BB
+            </code>
+                </value>
+            </constant>
+            <constant name="WOM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BC
+            </code>
+                </value>
+            </constant>
+            <constant name="WOM_DONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BD
+            </code>
+                </value>
+            </constant>
+            <constant name="WIM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BE
+            </code>
+                </value>
+            </constant>
+            <constant name="WIM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BF
+            </code>
+                </value>
+            </constant>
+            <constant name="WIM_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C0
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_MAPPER" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((uint)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_QUERY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_ALLOWSYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_MAPPED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_DIRECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_DIRECT_QUERY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0001 | 0x0008)
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_MAPPED_DEFAULT_COMMUNICATION_DEVICE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="WHDR_DONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WHDR_PREPARED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="WHDR_BEGINLOOP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="WHDR_ENDLOOP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="WHDR_INQUEUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVECAPS_PITCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVECAPS_PLAYBACKRATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVECAPS_VOLUME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVECAPS_LRVOLUME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVECAPS_SYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVECAPS_SAMPLEACCURATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0020
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_INVALIDFORMAT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_1M08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_1S08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_1M16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_1S16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_2M08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_2S08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_2M16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_2S16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_4M08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_4S08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_4M16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_4S16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_44M08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_44S08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_44M16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_44S16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_48M08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_48S08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_48M16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_48S16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_96M08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_96S08" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_96M16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_96S16" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVE_FORMAT_PCM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="waveOutGetDevCaps" access="public">
+                <type primitive="False">delegate*&lt;nuint, WAVEOUTCAPSW*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>waveOutGetDevCapsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="waveOutGetErrorText" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>waveOutGetErrorTextW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="waveInGetDevCaps" access="public">
+                <type primitive="False">delegate*&lt;nuint, WAVEINCAPSW*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>waveInGetDevCapsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="waveInGetErrorText" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>waveInGetErrorTextW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="MIDIERR_UNPREPARED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64 + 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIERR_STILLPLAYING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64 + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIERR_NOMAP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64 + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIERR_NOTREADY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64 + 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIERR_NODEVICE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64 + 4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIERR_INVALIDSETUP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64 + 5)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIERR_BADOPENMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64 + 6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIERR_DONT_CONTINUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64 + 7)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIERR_LASTERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(64 + 7)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIPATCHSIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>128
+            </code>
+                </value>
+            </constant>
+            <constant name="MIM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C1
+            </code>
+                </value>
+            </constant>
+            <constant name="MIM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C2
+            </code>
+                </value>
+            </constant>
+            <constant name="MIM_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C3
+            </code>
+                </value>
+            </constant>
+            <constant name="MIM_LONGDATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C4
+            </code>
+                </value>
+            </constant>
+            <constant name="MIM_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C5
+            </code>
+                </value>
+            </constant>
+            <constant name="MIM_LONGERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C6
+            </code>
+                </value>
+            </constant>
+            <constant name="MOM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C7
+            </code>
+                </value>
+            </constant>
+            <constant name="MOM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C8
+            </code>
+                </value>
+            </constant>
+            <constant name="MOM_DONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C9
+            </code>
+                </value>
+            </constant>
+            <constant name="MIM_MOREDATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3CC
+            </code>
+                </value>
+            </constant>
+            <constant name="MOM_POSITIONCB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3CA
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIMAPPER" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((uint)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="MIDI_MAPPER" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((uint)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="MIDI_IO_STATUS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDI_CACHE_ALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDI_CACHE_BESTFIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDI_CACHE_QUERY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDI_UNCACHE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="MOD_MIDIPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="MOD_SYNTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="MOD_SQSYNTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="MOD_FMSYNTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="MOD_MAPPER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="MOD_WAVETABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>6
+            </code>
+                </value>
+            </constant>
+            <constant name="MOD_SWSYNTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>7
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDICAPS_VOLUME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDICAPS_LRVOLUME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDICAPS_CACHE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDICAPS_STREAM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="MHDR_DONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MHDR_PREPARED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MHDR_INQUEUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="MHDR_ISSTRM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="MEVT_F_SHORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MEVT_F_LONG" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MEVT_F_CALLBACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MEVT_SHORTMSG" access="public">
+                <type primitive="True">byte</type>
+                <value>
+                    <code>
+                        <value></value>((byte)0x00)
+            </code>
+                </value>
+            </constant>
+            <constant name="MEVT_TEMPO" access="public">
+                <type primitive="True">byte</type>
+                <value>
+                    <code>
+                        <value></value>((byte)0x01)
+            </code>
+                </value>
+            </constant>
+            <constant name="MEVT_NOP" access="public">
+                <type primitive="True">byte</type>
+                <value>
+                    <code>
+                        <value></value>((byte)0x02)
+            </code>
+                </value>
+            </constant>
+            <constant name="MEVT_LONGMSG" access="public">
+                <type primitive="True">byte</type>
+                <value>
+                    <code>
+                        <value></value>((byte)0x80)
+            </code>
+                </value>
+            </constant>
+            <constant name="MEVT_COMMENT" access="public">
+                <type primitive="True">byte</type>
+                <value>
+                    <code>
+                        <value></value>((byte)0x82)
+            </code>
+                </value>
+            </constant>
+            <constant name="MEVT_VERSION" access="public">
+                <type primitive="True">byte</type>
+                <value>
+                    <code>
+                        <value></value>((byte)0x84)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDISTRM_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(-2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIPROP_SET" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIPROP_GET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIPROP_TIMEDIV" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIPROP_TEMPO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="midiOutGetDevCaps" access="public">
+                <type primitive="False">delegate*&lt;nuint, MIDIOUTCAPSW*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>midiOutGetDevCapsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="midiOutGetErrorText" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>midiOutGetErrorTextW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="midiInGetDevCaps" access="public">
+                <type primitive="False">delegate*&lt;nuint, MIDIINCAPSW*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>midiInGetDevCapsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="midiInGetErrorText" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>midiInGetErrorTextW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="AUX_MAPPER" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((uint)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUXCAPS_CDAUDIO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="AUXCAPS_AUXIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="AUXCAPS_VOLUME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="AUXCAPS_LRVOLUME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="auxGetDevCaps" access="public">
+                <type primitive="False">delegate*&lt;nuint, AUXCAPSW*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>auxGetDevCapsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="MIXER_SHORT_NAME_CHARS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>16
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_LONG_NAME_CHARS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>64
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERR_INVALLINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1024 + 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERR_INVALCONTROL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1024 + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERR_INVALVALUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1024 + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERR_LASTERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1024 + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_HANDLE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_MIXER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_HMIXER" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0x80000000 | 0x00000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_WAVEOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_HWAVEOUT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0x80000000 | 0x10000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_WAVEIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_HWAVEIN" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0x80000000 | 0x20000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_MIDIOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x30000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_HMIDIOUT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0x80000000 | 0x30000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_MIDIIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_HMIDIIN" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0x80000000 | 0x40000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_OBJECTF_AUX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x50000000
+            </code>
+                </value>
+            </constant>
+            <constant name="mixerGetDevCaps" access="public">
+                <type primitive="False">delegate*&lt;nuint, MIXERCAPSW*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>mixerGetDevCapsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_LINEF_ACTIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_LINEF_DISCONNECTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_LINEF_SOURCE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_FIRST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_UNDEFINED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_DIGITAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_LINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_MONITOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_SPEAKERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_HEADPHONES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 5)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_TELEPHONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_WAVEIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 7)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_VOICEIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_DST_LAST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 + 8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_FIRST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_UNDEFINED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_DIGITAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_LINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_MICROPHONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_SYNTHESIZER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_COMPACTDISC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 5)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_TELEPHONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_PCSPEAKER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 7)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_WAVEOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_AUXILIARY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 9)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_ANALOG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 10)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_COMPONENTTYPE_SRC_LAST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 + 10)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_TARGETTYPE_UNDEFINED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_TARGETTYPE_WAVEOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_TARGETTYPE_WAVEIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_TARGETTYPE_MIDIOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_TARGETTYPE_MIDIIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERLINE_TARGETTYPE_AUX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="mixerGetLineInfo" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, MIXERLINEW*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>mixerGetLineInfoW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINEINFOF_DESTINATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINEINFOF_SOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINEINFOF_LINEID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINEINFOF_COMPONENTTYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINEINFOF_TARGETTYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINEINFOF_QUERYMASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000000F
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLF_UNIFORM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLF_MULTIPLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLF_DISABLED" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_CLASS_MASK" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xF0000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_CLASS_CUSTOM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_CLASS_METER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_CLASS_SWITCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_CLASS_NUMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x30000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_CLASS_SLIDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_CLASS_FADER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x50000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_CLASS_TIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x60000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_CLASS_LIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x70000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_SUBCLASS_MASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0F000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_SC_SWITCH_BOOLEAN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_SC_SWITCH_BUTTON" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_SC_METER_POLLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_SC_TIME_MICROSECS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_SC_TIME_MILLISECS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_SC_LIST_SINGLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_SC_LIST_MULTIPLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_UNITS_MASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00FF0000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_UNITS_CUSTOM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_UNITS_BOOLEAN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_UNITS_SIGNED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_UNITS_UNSIGNED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00030000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_UNITS_DECIBELS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CT_UNITS_PERCENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00050000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_CUSTOM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000000 | 0x00000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_BOOLEANMETER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x10000000 | 0x00000000 | 0x00010000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_SIGNEDMETER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x10000000 | 0x00000000 | 0x00020000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_PEAKMETER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x10000000 | 0x00000000 | 0x00020000) + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_UNSIGNEDMETER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x10000000 | 0x00000000 | 0x00030000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_BOOLEAN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x20000000 | 0x00000000 | 0x00010000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_ONOFF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x20000000 | 0x00000000 | 0x00010000) + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_MUTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x20000000 | 0x00000000 | 0x00010000) + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_MONO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x20000000 | 0x00000000 | 0x00010000) + 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_LOUDNESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x20000000 | 0x00000000 | 0x00010000) + 4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_STEREOENH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x20000000 | 0x00000000 | 0x00010000) + 5)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_BASS_BOOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x20000000 | 0x00000000 | 0x00010000) + 0x00002277)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_BUTTON" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x20000000 | 0x01000000 | 0x00010000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_DECIBELS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x30000000 | 0x00040000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_SIGNED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x30000000 | 0x00020000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_UNSIGNED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x30000000 | 0x00030000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_PERCENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x30000000 | 0x00050000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_SLIDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x40000000 | 0x00020000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_PAN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x40000000 | 0x00020000) + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_QSOUNDPAN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x40000000 | 0x00020000) + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_FADER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x50000000 | 0x00030000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_VOLUME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x50000000 | 0x00030000) + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_BASS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x50000000 | 0x00030000) + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_TREBLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x50000000 | 0x00030000) + 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_EQUALIZER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x50000000 | 0x00030000) + 4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_SINGLESELECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x70000000 | 0x00000000 | 0x00010000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_MUX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x70000000 | 0x00000000 | 0x00010000) + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_MULTIPLESELECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x70000000 | 0x01000000 | 0x00010000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_MIXER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x70000000 | 0x01000000 | 0x00010000) + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_MICROTIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x60000000 | 0x00000000 | 0x00030000)
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERCONTROL_CONTROLTYPE_MILLITIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x60000000 | 0x01000000 | 0x00030000)
+            </code>
+                </value>
+            </constant>
+            <constant name="mixerGetLineControls" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, MIXERLINECONTROLSW*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>mixerGetLineControlsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINECONTROLSF_ALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINECONTROLSF_ONEBYID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINECONTROLSF_ONEBYTYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETLINECONTROLSF_QUERYMASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000000F
+            </code>
+                </value>
+            </constant>
+            <constant name="mixerGetControlDetails" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, MIXERCONTROLDETAILS*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>mixerGetControlDetailsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="MIXER_GETCONTROLDETAILSF_VALUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETCONTROLDETAILSF_LISTTEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_GETCONTROLDETAILSF_QUERYMASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000000F
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_SETCONTROLDETAILSF_VALUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_SETCONTROLDETAILSF_CUSTOM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXER_SETCONTROLDETAILSF_QUERYMASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000000F
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

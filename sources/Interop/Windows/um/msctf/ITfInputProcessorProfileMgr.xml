@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfInputProcessorProfileMgr" access="public" native="struct ITfInputProcessorProfileMgr : IUnknown" uuid="71c6e74c-0f28-11d8-a82a-00065b84435c" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ActivateProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwProfileType">
+                    <type>uint</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="hkl">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, uint, ushort, Guid*, Guid*, IntPtr, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>, <param name="dwProfileType">dwProfileType</param>, <param name="langid">langid</param>, <param name="clsid">clsid</param>, <param name="guidProfile">guidProfile</param>, <param name="hkl">hkl</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DeactivateProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwProfileType">
+                    <type>uint</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="hkl">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, uint, ushort, Guid*, Guid*, IntPtr, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>, <param name="dwProfileType">dwProfileType</param>, <param name="langid">langid</param>, <param name="clsid">clsid</param>, <param name="guidProfile">guidProfile</param>, <param name="hkl">hkl</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwProfileType">
+                    <type>uint</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="hkl">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pProfile">
+                    <type>TF_INPUTPROCESSORPROFILE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, uint, ushort, Guid*, Guid*, IntPtr, TF_INPUTPROCESSORPROFILE*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>, <param name="dwProfileType">dwProfileType</param>, <param name="langid">langid</param>, <param name="clsid">clsid</param>, <param name="guidProfile">guidProfile</param>, <param name="hkl">hkl</param>, <param name="pProfile">pProfile</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumProfiles" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="ppEnum">
+                    <type>IEnumTfInputProcessorProfiles**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, ushort, IEnumTfInputProcessorProfiles**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>, <param name="langid">langid</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseInputProcessor" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, Guid*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="pchDesc">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchDesc">
+                    <type>uint</type>
+                </param>
+                <param name="pchIconFile">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchFile">
+                    <type>uint</type>
+                </param>
+                <param name="uIconIndex">
+                    <type>uint</type>
+                </param>
+                <param name="hklsubstitute">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwPreferredLayout">
+                    <type>uint</type>
+                </param>
+                <param name="bEnabledByDefault">
+                    <type>int</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, Guid*, ushort, Guid*, ushort*, uint, ushort*, uint, uint, IntPtr, uint, int, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>, <param name="pchDesc">pchDesc</param>, <param name="cchDesc">cchDesc</param>, <param name="pchIconFile">pchIconFile</param>, <param name="cchFile">cchFile</param>, <param name="uIconIndex">uIconIndex</param>, <param name="hklsubstitute">hklsubstitute</param>, <param name="dwPreferredLayout">dwPreferredLayout</param>, <param name="bEnabledByDefault">bEnabledByDefault</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="guidProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, Guid*, ushort, Guid*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="langid">langid</param>, <param name="guidProfile">guidProfile</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetActiveProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="catid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pProfile">
+                    <type>TF_INPUTPROCESSORPROFILE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfInputProcessorProfileMgr*, Guid*, TF_INPUTPROCESSORPROFILE*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITfInputProcessorProfileMgr*)Unsafe.AsPointer(ref this)</param>, <param name="catid">catid</param>, <param name="pProfile">pProfile</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

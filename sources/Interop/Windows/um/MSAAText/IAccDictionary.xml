@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/MSAAText.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAccDictionary" access="public" native="struct IAccDictionary : IUnknown" uuid="1dc4cb5f-d737-474d-ade9-5ccfc9bc1cc9" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAccDictionary*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAccDictionary*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAccDictionary*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAccDictionary*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAccDictionary*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAccDictionary*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLocalizedString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Term">
+                    <type>Guid*</type>
+                </param>
+                <param name="lcid">
+                    <type>uint</type>
+                </param>
+                <param name="pResult">
+                    <type>ushort**</type>
+                </param>
+                <param name="plcid">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAccDictionary*, Guid*, uint, ushort**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAccDictionary*)Unsafe.AsPointer(ref this)</param>, <param name="Term">Term</param>, <param name="lcid">lcid</param>, <param name="pResult">pResult</param>, <param name="plcid">plcid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetParentTerm" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Term">
+                    <type>Guid*</type>
+                </param>
+                <param name="pParentTerm">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAccDictionary*, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAccDictionary*)Unsafe.AsPointer(ref this)</param>, <param name="Term">Term</param>, <param name="pParentTerm">pParentTerm</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMnemonicString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Term">
+                    <type>Guid*</type>
+                </param>
+                <param name="pResult">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAccDictionary*, Guid*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAccDictionary*)Unsafe.AsPointer(ref this)</param>, <param name="Term">Term</param>, <param name="pResult">pResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LookupMnemonicTerm" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bstrMnemonic">
+                    <type>ushort*</type>
+                </param>
+                <param name="pTerm">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAccDictionary*, ushort*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAccDictionary*)Unsafe.AsPointer(ref this)</param>, <param name="bstrMnemonic">bstrMnemonic</param>, <param name="pTerm">pTerm</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ConvertValueToString" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Term">
+                    <type>Guid*</type>
+                </param>
+                <param name="lcid">
+                    <type>uint</type>
+                </param>
+                <param name="varValue">
+                    <type>VARIANT</type>
+                </param>
+                <param name="pbstrResult">
+                    <type>ushort**</type>
+                </param>
+                <param name="plcid">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAccDictionary*, Guid*, uint, VARIANT, ushort**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAccDictionary*)Unsafe.AsPointer(ref this)</param>, <param name="Term">Term</param>, <param name="lcid">lcid</param>, <param name="varValue">varValue</param>, <param name="pbstrResult">pbstrResult</param>, <param name="plcid">plcid</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

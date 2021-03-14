@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1_3.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID2D1Device5" access="public" native="struct ID2D1Device5 : ID2D1Device4" uuid="d55ba0a4-6405-4694-aef5-08ee1a4358b4" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFactory" access="public" unsafe="true">
+                <type>void</type>
+                <param name="factory">
+                    <type>ID2D1Factory**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1Device5*, ID2D1Factory**, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="factory">factory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDeviceContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="options">
+                    <type>D2D1_DEVICE_CONTEXT_OPTIONS</type>
+                </param>
+                <param name="deviceContext">
+                    <type>ID2D1DeviceContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="options">options</param>, <param name="deviceContext">deviceContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePrintControl" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wicFactory">
+                    <type>IWICImagingFactory*</type>
+                </param>
+                <param name="documentTarget">
+                    <type>IPrintDocumentPackageTarget*</type>
+                </param>
+                <param name="printControlProperties">
+                    <type>D2D1_PRINT_CONTROL_PROPERTIES*</type>
+                </param>
+                <param name="printControl">
+                    <type>ID2D1PrintControl**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, IWICImagingFactory*, IPrintDocumentPackageTarget*, D2D1_PRINT_CONTROL_PROPERTIES*, ID2D1PrintControl**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="wicFactory">wicFactory</param>, <param name="documentTarget">documentTarget</param>, <param name="printControlProperties">printControlProperties</param>, <param name="printControl">printControl</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMaximumTextureMemory" access="public" unsafe="true">
+                <type>void</type>
+                <param name="maximumInBytes">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1Device5*, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="maximumInBytes">maximumInBytes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMaximumTextureMemory" access="public" unsafe="true">
+                <type native="UINT64">ulong</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, ulong&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="millisecondsSinceUse">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1Device5*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="millisecondsSinceUse">millisecondsSinceUse</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRenderingPriority" access="public" unsafe="true">
+                <type>D2D1_RENDERING_PRIORITY</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, D2D1_RENDERING_PRIORITY&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRenderingPriority" access="public" unsafe="true">
+                <type>void</type>
+                <param name="renderingPriority">
+                    <type>D2D1_RENDERING_PRIORITY</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1Device5*, D2D1_RENDERING_PRIORITY, void&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="renderingPriority">renderingPriority</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDeviceContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="options">
+                    <type>D2D1_DEVICE_CONTEXT_OPTIONS</type>
+                </param>
+                <param name="deviceContext1">
+                    <type>ID2D1DeviceContext1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext1**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="options">options</param>, <param name="deviceContext1">deviceContext1</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDeviceContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="options">
+                    <type>D2D1_DEVICE_CONTEXT_OPTIONS</type>
+                </param>
+                <param name="deviceContext2">
+                    <type>ID2D1DeviceContext2**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext2**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="options">options</param>, <param name="deviceContext2">deviceContext2</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FlushDeviceContexts" access="public" unsafe="true">
+                <type>void</type>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1Device5*, ID2D1Bitmap*, void&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="bitmap">bitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDxgiDevice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dxgiDevice">
+                    <type>IDXGIDevice**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, IDXGIDevice**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="dxgiDevice">dxgiDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDeviceContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="options">
+                    <type>D2D1_DEVICE_CONTEXT_OPTIONS</type>
+                </param>
+                <param name="deviceContext3">
+                    <type>ID2D1DeviceContext3**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext3**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="options">options</param>, <param name="deviceContext3">deviceContext3</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDeviceContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="options">
+                    <type>D2D1_DEVICE_CONTEXT_OPTIONS</type>
+                </param>
+                <param name="deviceContext4">
+                    <type>ID2D1DeviceContext4**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext4**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="options">options</param>, <param name="deviceContext4">deviceContext4</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMaximumColorGlyphCacheMemory" access="public" unsafe="true">
+                <type>void</type>
+                <param name="maximumInBytes">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1Device5*, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="maximumInBytes">maximumInBytes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMaximumColorGlyphCacheMemory" access="public" unsafe="true">
+                <type native="UINT64">ulong</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, ulong&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDeviceContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="options">
+                    <type>D2D1_DEVICE_CONTEXT_OPTIONS</type>
+                </param>
+                <param name="deviceContext5">
+                    <type>ID2D1DeviceContext5**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext5**, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID2D1Device5*)Unsafe.AsPointer(ref this)</param>, <param name="options">options</param>, <param name="deviceContext5">deviceContext5</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

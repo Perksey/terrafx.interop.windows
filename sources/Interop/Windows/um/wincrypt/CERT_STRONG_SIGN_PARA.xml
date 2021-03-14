@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CERT_STRONG_SIGN_PARA" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwInfoChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_CERT_STRONG_SIGN_PARA::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:6533:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="pvInfo" access="public">
+                <type native="">ref void*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pvInfo;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pSerializedInfo" access="public">
+                <type native="">ref CERT_STRONG_SIGN_SERIALIZED_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pSerializedInfo;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pszOID" access="public">
+                <type native="">ref sbyte*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pszOID;
+        }
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pvInfo" access="public" offset="0">
+                    <type native="void *">void*</type>
+                </field>
+                <field name="pSerializedInfo" access="public" offset="0">
+                    <type native="PCERT_STRONG_SIGN_SERIALIZED_INFO">CERT_STRONG_SIGN_SERIALIZED_INFO*</type>
+                </field>
+                <field name="pszOID" access="public" offset="0">
+                    <type native="LPSTR">sbyte*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

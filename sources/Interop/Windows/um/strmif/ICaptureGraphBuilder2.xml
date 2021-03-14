@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ICaptureGraphBuilder2" access="public" native="struct ICaptureGraphBuilder2 : IUnknown" uuid="93e5a4e0-2d50-11d2-abfa-00a0c9c6e38d" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetFiltergraph" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfg">
+                    <type>IGraphBuilder*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, IGraphBuilder*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="pfg">pfg</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFiltergraph" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppfg">
+                    <type>IGraphBuilder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, IGraphBuilder**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="ppfg">ppfg</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputFileName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pType">
+                    <type>Guid*</type>
+                </param>
+                <param name="lpstrFile">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppf">
+                    <type>IBaseFilter**</type>
+                </param>
+                <param name="ppSink">
+                    <type>IFileSinkFilter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, Guid*, ushort*, IBaseFilter**, IFileSinkFilter**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="pType">pType</param>, <param name="lpstrFile">lpstrFile</param>, <param name="ppf">ppf</param>, <param name="ppSink">ppSink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCategory">
+                    <type>Guid*</type>
+                </param>
+                <param name="pType">
+                    <type>Guid*</type>
+                </param>
+                <param name="pf">
+                    <type>IBaseFilter*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppint">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, Guid*, Guid*, IBaseFilter*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="pCategory">pCategory</param>, <param name="pType">pType</param>, <param name="pf">pf</param>, <param name="riid">riid</param>, <param name="ppint">ppint</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RenderStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCategory">
+                    <type>Guid*</type>
+                </param>
+                <param name="pType">
+                    <type>Guid*</type>
+                </param>
+                <param name="pSource">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pfCompressor">
+                    <type>IBaseFilter*</type>
+                </param>
+                <param name="pfRenderer">
+                    <type>IBaseFilter*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, Guid*, Guid*, IUnknown*, IBaseFilter*, IBaseFilter*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="pCategory">pCategory</param>, <param name="pType">pType</param>, <param name="pSource">pSource</param>, <param name="pfCompressor">pfCompressor</param>, <param name="pfRenderer">pfRenderer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ControlStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCategory">
+                    <type>Guid*</type>
+                </param>
+                <param name="pType">
+                    <type>Guid*</type>
+                </param>
+                <param name="pFilter">
+                    <type>IBaseFilter*</type>
+                </param>
+                <param name="pstart">
+                    <type>long*</type>
+                </param>
+                <param name="pstop">
+                    <type>long*</type>
+                </param>
+                <param name="wStartCookie">
+                    <type>ushort</type>
+                </param>
+                <param name="wStopCookie">
+                    <type>ushort</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, Guid*, Guid*, IBaseFilter*, long*, long*, ushort, ushort, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="pCategory">pCategory</param>, <param name="pType">pType</param>, <param name="pFilter">pFilter</param>, <param name="pstart">pstart</param>, <param name="pstop">pstop</param>, <param name="wStartCookie">wStartCookie</param>, <param name="wStopCookie">wStopCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AllocCapFile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lpstr">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwlSize">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, ushort*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="lpstr">lpstr</param>, <param name="dwlSize">dwlSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyCaptureFile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lpwstrOld">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpwstrNew">
+                    <type>ushort*</type>
+                </param>
+                <param name="fAllowEscAbort">
+                    <type>int</type>
+                </param>
+                <param name="pCallback">
+                    <type>IAMCopyCaptureFileProgress*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, ushort*, ushort*, int, IAMCopyCaptureFileProgress*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="lpwstrOld">lpwstrOld</param>, <param name="lpwstrNew">lpwstrNew</param>, <param name="fAllowEscAbort">fAllowEscAbort</param>, <param name="pCallback">pCallback</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindPin" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSource">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pindir">
+                    <type>PIN_DIRECTION</type>
+                </param>
+                <param name="pCategory">
+                    <type>Guid*</type>
+                </param>
+                <param name="pType">
+                    <type>Guid*</type>
+                </param>
+                <param name="fUnconnected">
+                    <type>int</type>
+                </param>
+                <param name="num">
+                    <type>int</type>
+                </param>
+                <param name="ppPin">
+                    <type>IPin**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICaptureGraphBuilder2*, IUnknown*, PIN_DIRECTION, Guid*, Guid*, int, int, IPin**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ICaptureGraphBuilder2*)Unsafe.AsPointer(ref this)</param>, <param name="pSource">pSource</param>, <param name="pindir">pindir</param>, <param name="pCategory">pCategory</param>, <param name="pType">pType</param>, <param name="fUnconnected">fUnconnected</param>, <param name="num">num</param>, <param name="ppPin">ppPin</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

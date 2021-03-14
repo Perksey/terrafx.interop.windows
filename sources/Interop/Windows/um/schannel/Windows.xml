@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/schannel.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="SslEmptyCacheA" access="public" lib="schannel" static="true">
+                <type native="BOOL">int</type>
+                <param name="pszTargetName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SslEmptyCacheW" access="public" lib="schannel" static="true">
+                <type native="BOOL">int</type>
+                <param name="pszTargetName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SslGenerateKeyPair" access="public" lib="schannel" static="true">
+                <type native="BOOL">int</type>
+                <param name="pCerts">
+                    <type>SSL_CREDENTIAL_CERTIFICATE*</type>
+                </param>
+                <param name="pszDN">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pszPassword">
+                    <type>sbyte*</type>
+                </param>
+                <param name="Bits">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SslGenerateRandomBits" access="public" lib="schannel" static="true">
+                <type>void</type>
+                <param name="pRandomData">
+                    <type>byte*</type>
+                </param>
+                <param name="cRandomData">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="SslCrackCertificate" access="public" lib="schannel" static="true">
+                <type native="BOOL">int</type>
+                <param name="pbCertificate">
+                    <type>byte*</type>
+                </param>
+                <param name="cbCertificate">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCertificate">
+                    <type>X509Certificate**</type>
+                </param>
+            </function>
+            <function name="SslFreeCertificate" access="public" lib="schannel" static="true">
+                <type>void</type>
+                <param name="pCertificate">
+                    <type>X509Certificate*</type>
+                </param>
+            </function>
+            <function name="SslGetMaximumKeySize" access="public" lib="schannel" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="Reserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SslGetDefaultIssuers" access="public" lib="schannel" static="true">
+                <type native="BOOL">int</type>
+                <param name="pbIssuers">
+                    <type>byte*</type>
+                </param>
+                <param name="pcbIssuers">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SslGetServerIdentity" access="public" lib="schannel" static="true">
+                <type native="SECURITY_STATUS">int</type>
+                <param name="ClientHello">
+                    <type>byte*</type>
+                </param>
+                <param name="ClientHelloSize">
+                    <type>uint</type>
+                </param>
+                <param name="ServerIdentity">
+                    <type>byte**</type>
+                </param>
+                <param name="ServerIdentitySize">
+                    <type>uint*</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SslGetExtensions" access="public" lib="schannel" static="true">
+                <type native="SECURITY_STATUS">int</type>
+                <param name="clientHello">
+                    <type>byte*</type>
+                </param>
+                <param name="clientHelloByteSize">
+                    <type>uint</type>
+                </param>
+                <param name="genericExtensions">
+                    <type>SCH_EXTENSION_DATA*</type>
+                </param>
+                <param name="genericExtensionsCount">
+                    <type>byte</type>
+                </param>
+                <param name="bytesToRead">
+                    <type>uint*</type>
+                </param>
+                <param name="flags">
+                    <type>SchGetExtensionsOptions</type>
+                </param>
+            </function>
+            <constant name="UNISP_NAME_A" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x4D, 0x69, 0x63, 0x72, 0x6F, 0x73, 0x6F, 0x66, 0x74, 0x20, 0x55, 0x6E, 0x69, 0x66, 0x69, 0x65, 0x64, 0x20, 0x53, 0x65, 0x63, 0x75, 0x72, 0x69, 0x74, 0x79, 0x20, 0x50, 0x72, 0x6F, 0x74, 0x6F, 0x63, 0x6F, 0x6C, 0x20, 0x50, 0x72, 0x6F, 0x76, 0x69, 0x64, 0x65, 0x72, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="UNISP_NAME_W" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft Unified Security Protocol Provider"
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL2SP_NAME_A" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x4D, 0x69, 0x63, 0x72, 0x6F, 0x73, 0x6F, 0x66, 0x74, 0x20, 0x53, 0x53, 0x4C, 0x20, 0x32, 0x2E, 0x30, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL2SP_NAME_W" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft SSL 2.0"
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL3SP_NAME_A" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x4D, 0x69, 0x63, 0x72, 0x6F, 0x73, 0x6F, 0x66, 0x74, 0x20, 0x53, 0x53, 0x4C, 0x20, 0x33, 0x2E, 0x30, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL3SP_NAME_W" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft SSL 3.0"
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1SP_NAME_A" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x4D, 0x69, 0x63, 0x72, 0x6F, 0x73, 0x6F, 0x66, 0x74, 0x20, 0x54, 0x4C, 0x53, 0x20, 0x31, 0x2E, 0x30, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1SP_NAME_W" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft TLS 1.0"
+            </code>
+                </value>
+            </constant>
+            <constant name="PCT1SP_NAME_A" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x4D, 0x69, 0x63, 0x72, 0x6F, 0x73, 0x6F, 0x66, 0x74, 0x20, 0x50, 0x43, 0x54, 0x20, 0x31, 0x2E, 0x30, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="PCT1SP_NAME_W" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft PCT 1.0"
+            </code>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_NAME_A" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x53, 0x63, 0x68, 0x61, 0x6E, 0x6E, 0x65, 0x6C, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_NAME_W" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Schannel"
+            </code>
+                </value>
+            </constant>
+            <constant name="DEFAULT_TLS_SSP_NAME_A" access="public">
+                <type primitive="False">ReadOnlySpan&lt;byte&gt;</type>
+                <value>
+                    <code>new byte[] { 0x44, 0x65, 0x66, 0x61, 0x75, 0x6C, 0x74, 0x20, 0x54, 0x4C, 0x53, 0x20, 0x53, 0x53, 0x50, 0x00 }
+            </code>
+                </value>
+            </constant>
+            <constant name="DEFAULT_TLS_SSP_NAME_W" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Default TLS SSP"
+            </code>
+                </value>
+            </constant>
+            <constant name="UNISP_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft Unified Security Protocol Provider"
+            </code>
+                </value>
+            </constant>
+            <constant name="PCT1SP_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft PCT 1.0"
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL2SP_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft SSL 2.0"
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL3SP_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft SSL 3.0"
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1SP_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Microsoft TLS 1.0"
+            </code>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Schannel"
+            </code>
+                </value>
+            </constant>
+            <constant name="DEFAULT_TLS_SSP_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"Default TLS SSP"
+            </code>
+                </value>
+            </constant>
+            <constant name="UNISP_RPC_ID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>14
+            </code>
+                </value>
+            </constant>
+            <constant name="RCRED_STATUS_NOCRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="RCRED_CRED_EXISTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="RCRED_STATUS_UNKNOWN_ISSUER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="LCRED_STATUS_NOCRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="LCRED_CRED_EXISTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="LCRED_STATUS_UNKNOWN_ISSUER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SZ_ALG_MAX_SIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>64
+            </code>
+                </value>
+            </constant>
+            <constant name="SECPKGCONTEXT_CONNECTION_INFO_EX_V1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="SECPKGCONTEXT_CIPHERINFO_V1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL_SESSION_RECONNECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="KERN_CONTEXT_CERT_INFO_V1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="ENABLE_TLS_CLIENT_EARLY_START" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_V1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_V2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_V3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_CRED_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CREDENTIALS_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000005
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_MAX_EXT_SUBSCRIPTIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_FORMAT_CERT_CONTEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_FORMAT_CERT_HASH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_FORMAT_CERT_HASH_STORE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_MAX_STORE_NAME_SIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>128
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_MAX_SUPPORTED_ALGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>256
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_MAX_SUPPORTED_CERTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>100
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_MACHINE_CERT_HASH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_NO_SYSTEM_MAPPER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_NO_SERVERNAME_CHECK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_MANUAL_CRED_VALIDATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_NO_DEFAULT_CREDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_AUTO_CRED_VALIDATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_USE_DEFAULT_CREDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_DISABLE_RECONNECTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_REVOCATION_CHECK_END_CERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_REVOCATION_CHECK_CHAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_REVOCATION_CHECK_CHAIN_EXCLUDE_ROOT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_IGNORE_NO_REVOCATION_CHECK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_IGNORE_REVOCATION_OFFLINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_RESTRICTED_ROOTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_REVOCATION_CHECK_CACHE_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_CACHE_ONLY_URL_RETRIEVAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_MEMORY_STORE_CERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_CACHE_ONLY_URL_RETRIEVAL_ON_CREATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_SEND_ROOT_CERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_SNI_CREDENTIAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_SNI_ENABLE_OCSP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00100000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_SEND_AUX_RECORD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00200000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_USE_STRONG_CRYPTO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00400000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_USE_PRESHAREDKEY_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_USE_DTLS_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01000000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_ALLOW_NULL_ENCRYPTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x02000000
+            </code>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_RENEGOTIATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_SHUTDOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_ALERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_SESSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_WARNING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_FATAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_CLOSE_NOTIFY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_UNEXPECTED_MESSAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>10
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_BAD_RECORD_MAC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>20
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_DECRYPTION_FAILED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>21
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_RECORD_OVERFLOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>22
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_DECOMPRESSION_FAIL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>30
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_HANDSHAKE_FAILURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>40
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_BAD_CERTIFICATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>42
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_UNSUPPORTED_CERT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>43
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_CERTIFICATE_REVOKED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>44
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_CERTIFICATE_EXPIRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>45
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_CERTIFICATE_UNKNOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>46
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_ILLEGAL_PARAMETER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>47
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_UNKNOWN_CA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>48
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_ACCESS_DENIED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>49
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_DECODE_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>50
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_DECRYPT_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>51
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_EXPORT_RESTRICTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>60
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_PROTOCOL_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>70
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_INSUFFIENT_SECURITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>71
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_INTERNAL_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>80
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_USER_CANCELED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>90
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_NO_RENEGOTIATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>100
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_UNSUPPORTED_EXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>110
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_UNKNOWN_PSK_IDENTITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>115
+            </code>
+                </value>
+            </constant>
+            <constant name="TLS1_ALERT_NO_APP_PROTOCOL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>120
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL_SESSION_ENABLE_RECONNECTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL_SESSION_DISABLE_RECONNECTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_PCT1_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_PCT1_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_PCT1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001 | 0x00000002)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL2_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL2_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000004 | 0x00000008)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL3_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL3_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000010 | 0x00000020)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000040 | 0x00000080)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL3TLS1_CLIENTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000080 | 0x00000020)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL3TLS1_SERVERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000040 | 0x00000010)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL3TLS1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x00000010 | 0x00000020) | (0x00000040 | 0x00000080))
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_UNI_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40000000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_UNI_CLIENT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_UNI" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0x40000000 | 0x80000000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_ALL" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0xffffffff
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_CLIENTS" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0x00000002 | 0x00000008 | 0x00000020 | 0x80000000 | 0x00000080)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SERVERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001 | 0x00000004 | 0x00000010 | 0x40000000 | 0x00000040)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_0_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_0_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_0" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000040 | 0x00000080)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_1_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_1_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000100 | 0x00000200)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_2_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_2_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000400 | 0x00000800)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_3_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_3_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 | 0x00002000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00010000 | 0x00020000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS1_0_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS1_0_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS1_0" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00010000 | 0x00020000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS1_2_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS1_2_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00080000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS1_2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00040000 | 0x00080000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS1_X_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00010000 | 0x00040000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS1_X_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00020000 | 0x00080000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_DTLS1_X" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x00010000 | 0x00040000) | (0x00020000 | 0x00080000))
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_1PLUS_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000100 | 0x00000400 | 0x00001000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_1PLUS_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000200 | 0x00000800 | 0x00002000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_1PLUS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x00000100 | 0x00000400 | 0x00001000) | (0x00000200 | 0x00000800 | 0x00002000))
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_3PLUS_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_3PLUS_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_3PLUS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00001000 | 0x00002000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_X_SERVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000040 | 0x00000100 | 0x00000400 | 0x00001000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_X_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000080 | 0x00000200 | 0x00000800 | 0x00002000)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_TLS1_X" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x00000040 | 0x00000100 | 0x00000400 | 0x00001000) | (0x00000080 | 0x00000200 | 0x00000800 | 0x00002000))
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL3TLS1_X_CLIENTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x00000080 | 0x00000200 | 0x00000800 | 0x00002000) | 0x00000020)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL3TLS1_X_SERVERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x00000040 | 0x00000100 | 0x00000400 | 0x00001000) | 0x00000010)
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_SSL3TLS1_X" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x00000010 | 0x00000020) | ((0x00000040 | 0x00000100 | 0x00000400 | 0x00001000) | (0x00000080 | 0x00000200 | 0x00000800 | 0x00002000)))
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_X_CLIENTS" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>((0x00000002 | 0x00000008 | 0x00000020 | 0x80000000 | 0x00000080) | (0x00000080 | 0x00000200 | 0x00000800 | 0x00002000) | (0x00020000 | 0x00080000))
+            </code>
+                </value>
+            </constant>
+            <constant name="SP_PROT_X_SERVERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((0x00000001 | 0x00000004 | 0x00000010 | 0x40000000 | 0x00000040) | (0x00000040 | 0x00000100 | 0x00000400 | 0x00001000) | (0x00010000 | 0x00040000))
+            </code>
+                </value>
+            </constant>
+            <constant name="SslEmptyCache" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SslEmptyCacheW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_SECRET_TYPE_CAPI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SCHANNEL_SECRET_PRIVKEY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_X509_CERTCHAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_X509_CAPI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SCH_CRED_CERT_CONTEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL_CRACK_CERTIFICATE_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"SslCrackCertificate"
+            </code>
+                </value>
+            </constant>
+            <constant name="SSL_FREE_CERTIFICATE_NAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"SslFreeCertificate"
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,1808 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/securitybaseapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="AccessCheck" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="ClientToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+                <param name="PrivilegeSet">
+                    <type>PRIVILEGE_SET*</type>
+                </param>
+                <param name="PrivilegeSetLength">
+                    <type>uint*</type>
+                </param>
+                <param name="GrantedAccess">
+                    <type>uint*</type>
+                </param>
+                <param name="AccessStatus">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="AccessCheckAndAuditAlarmW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SubsystemName">
+                    <type>ushort*</type>
+                </param>
+                <param name="HandleId">
+                    <type>void*</type>
+                </param>
+                <param name="ObjectTypeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ObjectName">
+                    <type>ushort*</type>
+                </param>
+                <param name="SecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+                <param name="ObjectCreation">
+                    <type>int</type>
+                </param>
+                <param name="GrantedAccess">
+                    <type>uint*</type>
+                </param>
+                <param name="AccessStatus">
+                    <type>int*</type>
+                </param>
+                <param name="pfGenerateOnClose">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="AccessCheckByType" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="PrincipalSelfSid">
+                    <type>void*</type>
+                </param>
+                <param name="ClientToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="ObjectTypeList">
+                    <type>OBJECT_TYPE_LIST*</type>
+                </param>
+                <param name="ObjectTypeListLength">
+                    <type>uint</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+                <param name="PrivilegeSet">
+                    <type>PRIVILEGE_SET*</type>
+                </param>
+                <param name="PrivilegeSetLength">
+                    <type>uint*</type>
+                </param>
+                <param name="GrantedAccess">
+                    <type>uint*</type>
+                </param>
+                <param name="AccessStatus">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="AccessCheckByTypeResultList" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="PrincipalSelfSid">
+                    <type>void*</type>
+                </param>
+                <param name="ClientToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="ObjectTypeList">
+                    <type>OBJECT_TYPE_LIST*</type>
+                </param>
+                <param name="ObjectTypeListLength">
+                    <type>uint</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+                <param name="PrivilegeSet">
+                    <type>PRIVILEGE_SET*</type>
+                </param>
+                <param name="PrivilegeSetLength">
+                    <type>uint*</type>
+                </param>
+                <param name="GrantedAccessList">
+                    <type>uint*</type>
+                </param>
+                <param name="AccessStatusList">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="AccessCheckByTypeAndAuditAlarmW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SubsystemName">
+                    <type>ushort*</type>
+                </param>
+                <param name="HandleId">
+                    <type>void*</type>
+                </param>
+                <param name="ObjectTypeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ObjectName">
+                    <type>ushort*</type>
+                </param>
+                <param name="SecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="PrincipalSelfSid">
+                    <type>void*</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="AuditType">
+                    <type>AUDIT_EVENT_TYPE</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="ObjectTypeList">
+                    <type>OBJECT_TYPE_LIST*</type>
+                </param>
+                <param name="ObjectTypeListLength">
+                    <type>uint</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+                <param name="ObjectCreation">
+                    <type>int</type>
+                </param>
+                <param name="GrantedAccess">
+                    <type>uint*</type>
+                </param>
+                <param name="AccessStatus">
+                    <type>int*</type>
+                </param>
+                <param name="pfGenerateOnClose">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="AccessCheckByTypeResultListAndAuditAlarmW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SubsystemName">
+                    <type>ushort*</type>
+                </param>
+                <param name="HandleId">
+                    <type>void*</type>
+                </param>
+                <param name="ObjectTypeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ObjectName">
+                    <type>ushort*</type>
+                </param>
+                <param name="SecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="PrincipalSelfSid">
+                    <type>void*</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="AuditType">
+                    <type>AUDIT_EVENT_TYPE</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="ObjectTypeList">
+                    <type>OBJECT_TYPE_LIST*</type>
+                </param>
+                <param name="ObjectTypeListLength">
+                    <type>uint</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+                <param name="ObjectCreation">
+                    <type>int</type>
+                </param>
+                <param name="GrantedAccessList">
+                    <type>uint*</type>
+                </param>
+                <param name="AccessStatusList">
+                    <type>uint*</type>
+                </param>
+                <param name="pfGenerateOnClose">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="AccessCheckByTypeResultListAndAuditAlarmByHandleW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SubsystemName">
+                    <type>ushort*</type>
+                </param>
+                <param name="HandleId">
+                    <type>void*</type>
+                </param>
+                <param name="ClientToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ObjectTypeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ObjectName">
+                    <type>ushort*</type>
+                </param>
+                <param name="SecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="PrincipalSelfSid">
+                    <type>void*</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="AuditType">
+                    <type>AUDIT_EVENT_TYPE</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="ObjectTypeList">
+                    <type>OBJECT_TYPE_LIST*</type>
+                </param>
+                <param name="ObjectTypeListLength">
+                    <type>uint</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+                <param name="ObjectCreation">
+                    <type>int</type>
+                </param>
+                <param name="GrantedAccessList">
+                    <type>uint*</type>
+                </param>
+                <param name="AccessStatusList">
+                    <type>uint*</type>
+                </param>
+                <param name="pfGenerateOnClose">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="AddAccessAllowedAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="AddAccessAllowedAceEx" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AceFlags">
+                    <type>uint</type>
+                </param>
+                <param name="AccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="AddAccessAllowedObjectAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AceFlags">
+                    <type>uint</type>
+                </param>
+                <param name="AccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="ObjectTypeGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="InheritedObjectTypeGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="AddAccessDeniedAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="AddAccessDeniedAceEx" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AceFlags">
+                    <type>uint</type>
+                </param>
+                <param name="AccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="AddAccessDeniedObjectAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AceFlags">
+                    <type>uint</type>
+                </param>
+                <param name="AccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="ObjectTypeGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="InheritedObjectTypeGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="AddAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="dwStartingAceIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pAceList">
+                    <type>void*</type>
+                </param>
+                <param name="nAceListLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="AddAuditAccessAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="dwAccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+                <param name="bAuditSuccess">
+                    <type>int</type>
+                </param>
+                <param name="bAuditFailure">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="AddAuditAccessAceEx" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AceFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwAccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+                <param name="bAuditSuccess">
+                    <type>int</type>
+                </param>
+                <param name="bAuditFailure">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="AddAuditAccessObjectAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AceFlags">
+                    <type>uint</type>
+                </param>
+                <param name="AccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="ObjectTypeGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="InheritedObjectTypeGuid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+                <param name="bAuditSuccess">
+                    <type>int</type>
+                </param>
+                <param name="bAuditFailure">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="AddMandatoryAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AceFlags">
+                    <type>uint</type>
+                </param>
+                <param name="MandatoryPolicy">
+                    <type>uint</type>
+                </param>
+                <param name="pLabelSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="AddResourceAttributeAce" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AceFlags">
+                    <type>uint</type>
+                </param>
+                <param name="AccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+                <param name="pAttributeInfo">
+                    <type>CLAIM_SECURITY_ATTRIBUTES_INFORMATION*</type>
+                </param>
+                <param name="pReturnLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="AddScopedPolicyIDAce" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceRevision">
+                    <type>uint</type>
+                </param>
+                <param name="AceFlags">
+                    <type>uint</type>
+                </param>
+                <param name="AccessMask">
+                    <type>uint</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="AdjustTokenGroups" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="TokenHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ResetToDefault">
+                    <type>int</type>
+                </param>
+                <param name="NewState">
+                    <type>TOKEN_GROUPS*</type>
+                </param>
+                <param name="BufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="PreviousState">
+                    <type>TOKEN_GROUPS*</type>
+                </param>
+                <param name="ReturnLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="AdjustTokenPrivileges" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="TokenHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="DisableAllPrivileges">
+                    <type>int</type>
+                </param>
+                <param name="NewState">
+                    <type>TOKEN_PRIVILEGES*</type>
+                </param>
+                <param name="BufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="PreviousState">
+                    <type>TOKEN_PRIVILEGES*</type>
+                </param>
+                <param name="ReturnLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="AllocateAndInitializeSid" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pIdentifierAuthority">
+                    <type>SID_IDENTIFIER_AUTHORITY*</type>
+                </param>
+                <param name="nSubAuthorityCount">
+                    <type>byte</type>
+                </param>
+                <param name="nSubAuthority0">
+                    <type>uint</type>
+                </param>
+                <param name="nSubAuthority1">
+                    <type>uint</type>
+                </param>
+                <param name="nSubAuthority2">
+                    <type>uint</type>
+                </param>
+                <param name="nSubAuthority3">
+                    <type>uint</type>
+                </param>
+                <param name="nSubAuthority4">
+                    <type>uint</type>
+                </param>
+                <param name="nSubAuthority5">
+                    <type>uint</type>
+                </param>
+                <param name="nSubAuthority6">
+                    <type>uint</type>
+                </param>
+                <param name="nSubAuthority7">
+                    <type>uint</type>
+                </param>
+                <param name="pSid">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="AllocateLocallyUniqueId" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Luid">
+                    <type>LUID*</type>
+                </param>
+            </function>
+            <function name="AreAllAccessesGranted" access="public" lib="advapi32" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="GrantedAccess">
+                    <type>uint</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="AreAnyAccessesGranted" access="public" lib="advapi32" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="GrantedAccess">
+                    <type>uint</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CheckTokenMembership" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="TokenHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="SidToCheck">
+                    <type>void*</type>
+                </param>
+                <param name="IsMember">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="CheckTokenCapability" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="TokenHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="CapabilitySidToCheck">
+                    <type>void*</type>
+                </param>
+                <param name="HasCapability">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetAppContainerAce" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Acl">
+                    <type>ACL*</type>
+                </param>
+                <param name="StartingAceIndex">
+                    <type>uint</type>
+                </param>
+                <param name="AppContainerAce">
+                    <type>void**</type>
+                </param>
+                <param name="AppContainerAceIndex">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CheckTokenMembershipEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="TokenHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="SidToCheck">
+                    <type>void*</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="IsMember">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="ConvertToAutoInheritPrivateObjectSecurity" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ParentDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="CurrentSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="NewSecurityDescriptor">
+                    <type>void**</type>
+                </param>
+                <param name="ObjectType">
+                    <type>Guid*</type>
+                </param>
+                <param name="IsDirectoryObject">
+                    <type>byte</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+            </function>
+            <function name="CopySid" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="nDestinationSidLength">
+                    <type>uint</type>
+                </param>
+                <param name="pDestinationSid">
+                    <type>void*</type>
+                </param>
+                <param name="pSourceSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="CreatePrivateObjectSecurity" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ParentDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="CreatorDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="NewDescriptor">
+                    <type>void**</type>
+                </param>
+                <param name="IsDirectoryObject">
+                    <type>int</type>
+                </param>
+                <param name="Token">
+                    <type>IntPtr</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+            </function>
+            <function name="CreatePrivateObjectSecurityEx" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ParentDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="CreatorDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="NewDescriptor">
+                    <type>void**</type>
+                </param>
+                <param name="ObjectType">
+                    <type>Guid*</type>
+                </param>
+                <param name="IsContainerObject">
+                    <type>int</type>
+                </param>
+                <param name="AutoInheritFlags">
+                    <type>uint</type>
+                </param>
+                <param name="Token">
+                    <type>IntPtr</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+            </function>
+            <function name="CreatePrivateObjectSecurityWithMultipleInheritance" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ParentDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="CreatorDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="NewDescriptor">
+                    <type>void**</type>
+                </param>
+                <param name="ObjectTypes">
+                    <type>Guid**</type>
+                </param>
+                <param name="GuidCount">
+                    <type>uint</type>
+                </param>
+                <param name="IsContainerObject">
+                    <type>int</type>
+                </param>
+                <param name="AutoInheritFlags">
+                    <type>uint</type>
+                </param>
+                <param name="Token">
+                    <type>IntPtr</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+            </function>
+            <function name="CreateRestrictedToken" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ExistingTokenHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="DisableSidCount">
+                    <type>uint</type>
+                </param>
+                <param name="SidsToDisable">
+                    <type>SID_AND_ATTRIBUTES*</type>
+                </param>
+                <param name="DeletePrivilegeCount">
+                    <type>uint</type>
+                </param>
+                <param name="PrivilegesToDelete">
+                    <type>LUID_AND_ATTRIBUTES*</type>
+                </param>
+                <param name="RestrictedSidCount">
+                    <type>uint</type>
+                </param>
+                <param name="SidsToRestrict">
+                    <type>SID_AND_ATTRIBUTES*</type>
+                </param>
+                <param name="NewTokenHandle">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="CreateWellKnownSid" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="WellKnownSidType">
+                    <type>WELL_KNOWN_SID_TYPE</type>
+                </param>
+                <param name="DomainSid">
+                    <type>void*</type>
+                </param>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+                <param name="cbSid">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="EqualDomainSid" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSid1">
+                    <type>void*</type>
+                </param>
+                <param name="pSid2">
+                    <type>void*</type>
+                </param>
+                <param name="pfEqual">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="DeleteAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceIndex">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DestroyPrivateObjectSecurity" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ObjectDescriptor">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="DuplicateToken" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ExistingTokenHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ImpersonationLevel">
+                    <type>SECURITY_IMPERSONATION_LEVEL</type>
+                </param>
+                <param name="DuplicateTokenHandle">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="DuplicateTokenEx" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hExistingToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="lpTokenAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="ImpersonationLevel">
+                    <type>SECURITY_IMPERSONATION_LEVEL</type>
+                </param>
+                <param name="TokenType">
+                    <type>TOKEN_TYPE</type>
+                </param>
+                <param name="phNewToken">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="EqualPrefixSid" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSid1">
+                    <type>void*</type>
+                </param>
+                <param name="pSid2">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="EqualSid" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSid1">
+                    <type>void*</type>
+                </param>
+                <param name="pSid2">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="FindFirstFreeAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="pAce">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="FreeSid" access="public" lib="advapi32" static="true">
+                <type native="PVOID">void*</type>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="GetAce" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="dwAceIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pAce">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="GetAclInformation" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="pAclInformation">
+                    <type>void*</type>
+                </param>
+                <param name="nAclInformationLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwAclInformationClass">
+                    <type>ACL_INFORMATION_CLASS</type>
+                </param>
+            </function>
+            <function name="GetFileSecurityW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="RequestedInformation">
+                    <type>uint</type>
+                </param>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpnLengthNeeded">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetKernelObjectSecurity" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Handle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="RequestedInformation">
+                    <type>uint</type>
+                </param>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpnLengthNeeded">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetLengthSid" access="public" lib="advapi32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="GetPrivateObjectSecurity" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ObjectDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="SecurityInformation">
+                    <type>uint</type>
+                </param>
+                <param name="ResultantDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="DescriptorLength">
+                    <type>uint</type>
+                </param>
+                <param name="ReturnLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetSecurityDescriptorControl" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="pControl">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpdwRevision">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetSecurityDescriptorDacl" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="lpbDaclPresent">
+                    <type>int*</type>
+                </param>
+                <param name="pDacl">
+                    <type>ACL**</type>
+                </param>
+                <param name="lpbDaclDefaulted">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetSecurityDescriptorGroup" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="pGroup">
+                    <type>void**</type>
+                </param>
+                <param name="lpbGroupDefaulted">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetSecurityDescriptorLength" access="public" lib="advapi32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="GetSecurityDescriptorOwner" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="pOwner">
+                    <type>void**</type>
+                </param>
+                <param name="lpbOwnerDefaulted">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetSecurityDescriptorRMControl" access="public" lib="advapi32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="SecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="RMControl">
+                    <type>byte*</type>
+                </param>
+            </function>
+            <function name="GetSecurityDescriptorSacl" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="lpbSaclPresent">
+                    <type>int*</type>
+                </param>
+                <param name="pSacl">
+                    <type>ACL**</type>
+                </param>
+                <param name="lpbSaclDefaulted">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetSidIdentifierAuthority" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="PSID_IDENTIFIER_AUTHORITY">SID_IDENTIFIER_AUTHORITY*</type>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="GetSidLengthRequired" access="public" lib="advapi32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="nSubAuthorityCount">
+                    <type>byte</type>
+                </param>
+            </function>
+            <function name="GetSidSubAuthority" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="PDWORD">uint*</type>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+                <param name="nSubAuthority">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetSidSubAuthorityCount" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="PUCHAR">byte*</type>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="GetTokenInformation" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="TokenHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="TokenInformationClass">
+                    <type>TOKEN_INFORMATION_CLASS</type>
+                </param>
+                <param name="TokenInformation">
+                    <type>void*</type>
+                </param>
+                <param name="TokenInformationLength">
+                    <type>uint</type>
+                </param>
+                <param name="ReturnLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetWindowsAccountDomainSid" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+                <param name="pDomainSid">
+                    <type>void*</type>
+                </param>
+                <param name="cbDomainSid">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="ImpersonateAnonymousToken" access="public" lib="advapi32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="ThreadHandle">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="ImpersonateLoggedOnUser" access="public" lib="advapi32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hToken">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="ImpersonateSelf" access="public" lib="advapi32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="ImpersonationLevel">
+                    <type>SECURITY_IMPERSONATION_LEVEL</type>
+                </param>
+            </function>
+            <function name="InitializeAcl" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="nAclLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwAclRevision">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="InitializeSecurityDescriptor" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="dwRevision">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="InitializeSid" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Sid">
+                    <type>void*</type>
+                </param>
+                <param name="pIdentifierAuthority">
+                    <type>SID_IDENTIFIER_AUTHORITY*</type>
+                </param>
+                <param name="nSubAuthorityCount">
+                    <type>byte</type>
+                </param>
+            </function>
+            <function name="IsTokenRestricted" access="public" lib="advapi32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="TokenHandle">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="IsValidAcl" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+            </function>
+            <function name="IsValidSecurityDescriptor" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="IsValidSid" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="IsWellKnownSid" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSid">
+                    <type>void*</type>
+                </param>
+                <param name="WellKnownSidType">
+                    <type>WELL_KNOWN_SID_TYPE</type>
+                </param>
+            </function>
+            <function name="MakeAbsoluteSD" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSelfRelativeSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="pAbsoluteSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="lpdwAbsoluteSecurityDescriptorSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pDacl">
+                    <type>ACL*</type>
+                </param>
+                <param name="lpdwDaclSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pSacl">
+                    <type>ACL*</type>
+                </param>
+                <param name="lpdwSaclSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pOwner">
+                    <type>void*</type>
+                </param>
+                <param name="lpdwOwnerSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pPrimaryGroup">
+                    <type>void*</type>
+                </param>
+                <param name="lpdwPrimaryGroupSize">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="MakeSelfRelativeSD" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAbsoluteSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="pSelfRelativeSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="lpdwBufferLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="MapGenericMask" access="public" lib="advapi32" static="true">
+                <type>void</type>
+                <param name="AccessMask">
+                    <type>uint*</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+            </function>
+            <function name="ObjectCloseAuditAlarmW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SubsystemName">
+                    <type>ushort*</type>
+                </param>
+                <param name="HandleId">
+                    <type>void*</type>
+                </param>
+                <param name="GenerateOnClose">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="ObjectDeleteAuditAlarmW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SubsystemName">
+                    <type>ushort*</type>
+                </param>
+                <param name="HandleId">
+                    <type>void*</type>
+                </param>
+                <param name="GenerateOnClose">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="ObjectOpenAuditAlarmW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SubsystemName">
+                    <type>ushort*</type>
+                </param>
+                <param name="HandleId">
+                    <type>void*</type>
+                </param>
+                <param name="ObjectTypeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ObjectName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="ClientToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="GrantedAccess">
+                    <type>uint</type>
+                </param>
+                <param name="Privileges">
+                    <type>PRIVILEGE_SET*</type>
+                </param>
+                <param name="ObjectCreation">
+                    <type>int</type>
+                </param>
+                <param name="AccessGranted">
+                    <type>int</type>
+                </param>
+                <param name="GenerateOnClose">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="ObjectPrivilegeAuditAlarmW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SubsystemName">
+                    <type>ushort*</type>
+                </param>
+                <param name="HandleId">
+                    <type>void*</type>
+                </param>
+                <param name="ClientToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="Privileges">
+                    <type>PRIVILEGE_SET*</type>
+                </param>
+                <param name="AccessGranted">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="PrivilegeCheck" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="ClientToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="RequiredPrivileges">
+                    <type>PRIVILEGE_SET*</type>
+                </param>
+                <param name="pfResult">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="PrivilegedServiceAuditAlarmW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SubsystemName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ServiceName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ClientToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Privileges">
+                    <type>PRIVILEGE_SET*</type>
+                </param>
+                <param name="AccessGranted">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="QuerySecurityAccessMask" access="public" lib="advapi32" static="true">
+                <type>void</type>
+                <param name="SecurityInformation">
+                    <type>uint</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="RevertToSelf" access="public" lib="advapi32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+            </function>
+            <function name="SetAclInformation" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pAcl">
+                    <type>ACL*</type>
+                </param>
+                <param name="pAclInformation">
+                    <type>void*</type>
+                </param>
+                <param name="nAclInformationLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwAclInformationClass">
+                    <type>ACL_INFORMATION_CLASS</type>
+                </param>
+            </function>
+            <function name="SetFileSecurityW" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="SecurityInformation">
+                    <type>uint</type>
+                </param>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="SetKernelObjectSecurity" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Handle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="SecurityInformation">
+                    <type>uint</type>
+                </param>
+                <param name="SecurityDescriptor">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="SetPrivateObjectSecurity" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="SecurityInformation">
+                    <type>uint</type>
+                </param>
+                <param name="ModificationDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="ObjectsSecurityDescriptor">
+                    <type>void**</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+                <param name="Token">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="SetPrivateObjectSecurityEx" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="SecurityInformation">
+                    <type>uint</type>
+                </param>
+                <param name="ModificationDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="ObjectsSecurityDescriptor">
+                    <type>void**</type>
+                </param>
+                <param name="AutoInheritFlags">
+                    <type>uint</type>
+                </param>
+                <param name="GenericMapping">
+                    <type>GENERIC_MAPPING*</type>
+                </param>
+                <param name="Token">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="SetSecurityAccessMask" access="public" lib="advapi32" static="true">
+                <type>void</type>
+                <param name="SecurityInformation">
+                    <type>uint</type>
+                </param>
+                <param name="DesiredAccess">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetSecurityDescriptorControl" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="ControlBitsOfInterest">
+                    <type>ushort</type>
+                </param>
+                <param name="ControlBitsToSet">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="SetSecurityDescriptorDacl" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="bDaclPresent">
+                    <type>int</type>
+                </param>
+                <param name="pDacl">
+                    <type>ACL*</type>
+                </param>
+                <param name="bDaclDefaulted">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="SetSecurityDescriptorGroup" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="pGroup">
+                    <type>void*</type>
+                </param>
+                <param name="bGroupDefaulted">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="SetSecurityDescriptorOwner" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="pOwner">
+                    <type>void*</type>
+                </param>
+                <param name="bOwnerDefaulted">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="SetSecurityDescriptorRMControl" access="public" lib="advapi32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="SecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="RMControl">
+                    <type>byte*</type>
+                </param>
+            </function>
+            <function name="SetSecurityDescriptorSacl" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSecurityDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="bSaclPresent">
+                    <type>int</type>
+                </param>
+                <param name="pSacl">
+                    <type>ACL*</type>
+                </param>
+                <param name="bSaclDefaulted">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="SetTokenInformation" access="public" lib="advapi32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="TokenHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="TokenInformationClass">
+                    <type>TOKEN_INFORMATION_CLASS</type>
+                </param>
+                <param name="TokenInformation">
+                    <type>void*</type>
+                </param>
+                <param name="TokenInformationLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetCachedSigningLevel" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="SourceFiles">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="SourceFileCount">
+                    <type>uint</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="TargetFile">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetCachedSigningLevel" access="public" lib="advapi32" static="true">
+                <type native="BOOL">int</type>
+                <param name="File">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Flags">
+                    <type>uint*</type>
+                </param>
+                <param name="SigningLevel">
+                    <type>uint*</type>
+                </param>
+                <param name="Thumbprint">
+                    <type>byte*</type>
+                </param>
+                <param name="ThumbprintSize">
+                    <type>uint*</type>
+                </param>
+                <param name="ThumbprintAlgorithm">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CveEventWrite" access="public" lib="advapi32" static="true">
+                <type native="LONG">int</type>
+                <param name="CveId">
+                    <type>ushort*</type>
+                </param>
+                <param name="AdditionalDetails">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="DeriveCapabilitySidsFromName" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="CapName">
+                    <type>ushort*</type>
+                </param>
+                <param name="CapabilityGroupSids">
+                    <type>void***</type>
+                </param>
+                <param name="CapabilityGroupSidCount">
+                    <type>uint*</type>
+                </param>
+                <param name="CapabilitySids">
+                    <type>void***</type>
+                </param>
+                <param name="CapabilitySidCount">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <constant name="AccessCheckAndAuditAlarm" access="public">
+                <type primitive="False">delegate*&lt;ushort*, void*, ushort*, ushort*, void*, uint, GENERIC_MAPPING*, int, uint*, int*, int*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>AccessCheckAndAuditAlarmW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="AccessCheckByTypeAndAuditAlarm" access="public">
+                <type primitive="False">delegate*&lt;ushort*, void*, ushort*, ushort*, void*, void*, uint, AUDIT_EVENT_TYPE, uint, OBJECT_TYPE_LIST*, uint, GENERIC_MAPPING*, int, uint*, int*, int*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>AccessCheckByTypeAndAuditAlarmW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="AccessCheckByTypeResultListAndAuditAlarm" access="public">
+                <type primitive="False">delegate*&lt;ushort*, void*, ushort*, ushort*, void*, void*, uint, AUDIT_EVENT_TYPE, uint, OBJECT_TYPE_LIST*, uint, GENERIC_MAPPING*, int, uint*, uint*, int*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>AccessCheckByTypeResultListAndAuditAlarmW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="AccessCheckByTypeResultListAndAuditAlarmByHandle" access="public">
+                <type primitive="False">delegate*&lt;ushort*, void*, IntPtr, ushort*, ushort*, void*, void*, uint, AUDIT_EVENT_TYPE, uint, OBJECT_TYPE_LIST*, uint, GENERIC_MAPPING*, int, uint*, uint*, int*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>AccessCheckByTypeResultListAndAuditAlarmByHandleW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetFileSecurity" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, void*, uint, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetFileSecurityW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ObjectCloseAuditAlarm" access="public">
+                <type primitive="False">delegate*&lt;ushort*, void*, int, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>ObjectCloseAuditAlarmW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ObjectDeleteAuditAlarm" access="public">
+                <type primitive="False">delegate*&lt;ushort*, void*, int, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>ObjectDeleteAuditAlarmW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ObjectOpenAuditAlarm" access="public">
+                <type primitive="False">delegate*&lt;ushort*, void*, ushort*, ushort*, void*, IntPtr, uint, uint, PRIVILEGE_SET*, int, int, int*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>ObjectOpenAuditAlarmW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ObjectPrivilegeAuditAlarm" access="public">
+                <type primitive="False">delegate*&lt;ushort*, void*, IntPtr, uint, PRIVILEGE_SET*, int, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>ObjectPrivilegeAuditAlarmW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="PrivilegedServiceAuditAlarm" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, IntPtr, PRIVILEGE_SET*, int, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>PrivilegedServiceAuditAlarmW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SetFileSecurity" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, void*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetFileSecurityW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

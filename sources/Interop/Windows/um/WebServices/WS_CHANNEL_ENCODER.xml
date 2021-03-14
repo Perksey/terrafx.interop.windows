@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WS_CHANNEL_ENCODER" access="public" unsafe="true">
+            <field name="createContext" access="public">
+                <type native="void *">void*</type>
+            </field>
+            <field name="createEncoderCallback" access="public">
+                <type native="WS_CREATE_ENCODER_CALLBACK">delegate* unmanaged&lt;void*, delegate* unmanaged&lt;void*, WS_BYTES*, uint, WS_ASYNC_CONTEXT*, IntPtr, int&gt;, void*, void**, IntPtr, int&gt;</type>
+            </field>
+            <field name="encoderGetContentTypeCallback" access="public">
+                <type native="WS_ENCODER_GET_CONTENT_TYPE_CALLBACK">delegate* unmanaged&lt;void*, WS_STRING*, WS_STRING*, WS_STRING*, IntPtr, int&gt;</type>
+            </field>
+            <field name="encoderStartCallback" access="public">
+                <type native="WS_ENCODER_START_CALLBACK">delegate* unmanaged&lt;void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="encoderEncodeCallback" access="public">
+                <type native="WS_ENCODER_ENCODE_CALLBACK">delegate* unmanaged&lt;void*, WS_BYTES*, uint, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="encoderEndCallback" access="public">
+                <type native="WS_ENCODER_END_CALLBACK">delegate* unmanaged&lt;void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="freeEncoderCallback" access="public">
+                <type native="WS_FREE_ENCODER_CALLBACK">delegate* unmanaged&lt;void*, void&gt;</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,2531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1_3.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID2D1DeviceContext5" access="public" native="struct ID2D1DeviceContext5 : ID2D1DeviceContext4" uuid="7836d248-68cc-4df6-b9e8-de991bf62eb7" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="CreateBitmap" access="public">
+                <type native="HRESULT">int</type>
+                <param name="size">
+                    <type>D2D_SIZE_U</type>
+                </param>
+                <param name="bitmapProperties">
+                    <type>D2D1_BITMAP_PROPERTIES*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap**</type>
+                </param>
+                <code>return CreateBitmap(size, null, 0, bitmapProperties, bitmap);
+        </code>
+            </function>
+            <function name="CreateBitmapFromWicBitmap" access="public">
+                <type native="HRESULT">int</type>
+                <param name="wicBitmapSource">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap**</type>
+                </param>
+                <code>return CreateBitmapFromWicBitmap(wicBitmapSource, null, bitmap);
+        </code>
+            </function>
+            <function name="CreateBitmapBrush" access="public">
+                <type native="HRESULT">int</type>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="bitmapBrush">
+                    <type>ID2D1BitmapBrush**</type>
+                </param>
+                <code>return CreateBitmapBrush(bitmap, null, null, bitmapBrush);
+        </code>
+            </function>
+            <function name="CreateBitmapBrush" access="public">
+                <type native="HRESULT">int</type>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="bitmapBrushProperties">
+                    <type>D2D1_BITMAP_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="bitmapBrush">
+                    <type>ID2D1BitmapBrush**</type>
+                </param>
+                <code>return CreateBitmapBrush(bitmap, bitmapBrushProperties, null, bitmapBrush);
+        </code>
+            </function>
+            <function name="CreateSolidColorBrush" access="public">
+                <type native="HRESULT">int</type>
+                <param name="color">
+                    <type>DXGI_RGBA*</type>
+                </param>
+                <param name="solidColorBrush">
+                    <type>ID2D1SolidColorBrush**</type>
+                </param>
+                <code>return CreateSolidColorBrush(color, null, solidColorBrush);
+        </code>
+            </function>
+            <function name="CreateGradientStopCollection" access="public">
+                <type native="HRESULT">int</type>
+                <param name="gradientStops">
+                    <type>D2D1_GRADIENT_STOP*</type>
+                </param>
+                <param name="gradientStopsCount">
+                    <type>uint</type>
+                </param>
+                <param name="gradientStopCollection">
+                    <type>ID2D1GradientStopCollection**</type>
+                </param>
+                <code>return CreateGradientStopCollection(gradientStops, gradientStopsCount, D2D1_GAMMA_2_2, D2D1_EXTEND_MODE_CLAMP, gradientStopCollection);
+        </code>
+            </function>
+            <function name="CreateLinearGradientBrush" access="public">
+                <type native="HRESULT">int</type>
+                <param name="linearGradientBrushProperties">
+                    <type>D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="gradientStopCollection">
+                    <type>ID2D1GradientStopCollection*</type>
+                </param>
+                <param name="linearGradientBrush">
+                    <type>ID2D1LinearGradientBrush**</type>
+                </param>
+                <code>return CreateLinearGradientBrush(linearGradientBrushProperties, null, gradientStopCollection, linearGradientBrush);
+        </code>
+            </function>
+            <function name="CreateRadialGradientBrush" access="public">
+                <type native="HRESULT">int</type>
+                <param name="radialGradientBrushProperties">
+                    <type>D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="gradientStopCollection">
+                    <type>ID2D1GradientStopCollection*</type>
+                </param>
+                <param name="radialGradientBrush">
+                    <type>ID2D1RadialGradientBrush**</type>
+                </param>
+                <code>return CreateRadialGradientBrush(radialGradientBrushProperties, null, gradientStopCollection, radialGradientBrush);
+        </code>
+            </function>
+            <function name="CreateCompatibleRenderTarget" access="public">
+                <type native="HRESULT">int</type>
+                <param name="bitmapRenderTarget">
+                    <type>ID2D1BitmapRenderTarget**</type>
+                </param>
+                <code>return CreateCompatibleRenderTarget(null, null, null, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
+        </code>
+            </function>
+            <function name="CreateCompatibleRenderTarget" access="public">
+                <type native="HRESULT">int</type>
+                <param name="desiredSize">
+                    <type>D2D_SIZE_F</type>
+                </param>
+                <param name="bitmapRenderTarget">
+                    <type>ID2D1BitmapRenderTarget**</type>
+                </param>
+                <code>return CreateCompatibleRenderTarget(&amp;desiredSize, null, null, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
+        </code>
+            </function>
+            <function name="CreateCompatibleRenderTarget" access="public">
+                <type native="HRESULT">int</type>
+                <param name="desiredSize">
+                    <type>D2D_SIZE_F</type>
+                </param>
+                <param name="desiredPixelSize">
+                    <type>D2D_SIZE_U</type>
+                </param>
+                <param name="bitmapRenderTarget">
+                    <type>ID2D1BitmapRenderTarget**</type>
+                </param>
+                <code>return CreateCompatibleRenderTarget(&amp;desiredSize, &amp;desiredPixelSize, null, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
+        </code>
+            </function>
+            <function name="CreateCompatibleRenderTarget" access="public">
+                <type native="HRESULT">int</type>
+                <param name="desiredSize">
+                    <type>D2D_SIZE_F</type>
+                </param>
+                <param name="desiredPixelSize">
+                    <type>D2D_SIZE_U</type>
+                </param>
+                <param name="desiredFormat">
+                    <type>D2D1_PIXEL_FORMAT</type>
+                </param>
+                <param name="bitmapRenderTarget">
+                    <type>ID2D1BitmapRenderTarget**</type>
+                </param>
+                <code>return CreateCompatibleRenderTarget(&amp;desiredSize, &amp;desiredPixelSize, &amp;desiredFormat, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
+        </code>
+            </function>
+            <function name="CreateCompatibleRenderTarget" access="public">
+                <type native="HRESULT">int</type>
+                <param name="desiredSize">
+                    <type>D2D_SIZE_F</type>
+                </param>
+                <param name="desiredPixelSize">
+                    <type>D2D_SIZE_U</type>
+                </param>
+                <param name="desiredFormat">
+                    <type>D2D1_PIXEL_FORMAT</type>
+                </param>
+                <param name="options">
+                    <type>D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS</type>
+                </param>
+                <param name="bitmapRenderTarget">
+                    <type>ID2D1BitmapRenderTarget**</type>
+                </param>
+                <code>return CreateCompatibleRenderTarget(&amp;desiredSize, &amp;desiredPixelSize, &amp;desiredFormat, options, bitmapRenderTarget);
+        </code>
+            </function>
+            <function name="CreateLayer" access="public">
+                <type native="HRESULT">int</type>
+                <param name="size">
+                    <type>D2D_SIZE_F</type>
+                </param>
+                <param name="layer">
+                    <type>ID2D1Layer**</type>
+                </param>
+                <code>return CreateLayer(&amp;size, layer);
+        </code>
+            </function>
+            <function name="CreateLayer" access="public">
+                <type native="HRESULT">int</type>
+                <param name="layer">
+                    <type>ID2D1Layer**</type>
+                </param>
+                <code>return CreateLayer(null, layer);
+        </code>
+            </function>
+            <function name="CreateBitmapFromWicBitmap" access="public">
+                <type native="HRESULT">int</type>
+                <param name="wicBitmapSource">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap1**</type>
+                </param>
+                <code>return CreateBitmapFromWicBitmap(wicBitmapSource, null, bitmap);
+        </code>
+            </function>
+            <function name="CreateImageBrush" access="public">
+                <type native="HRESULT">int</type>
+                <param name="image">
+                    <type>ID2D1Image*</type>
+                </param>
+                <param name="imageBrushProperties">
+                    <type>D2D1_IMAGE_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="imageBrush">
+                    <type>ID2D1ImageBrush**</type>
+                </param>
+                <code>return CreateImageBrush(image, imageBrushProperties, null, imageBrush);
+        </code>
+            </function>
+            <function name="CreateBitmapBrush" access="public">
+                <type native="HRESULT">int</type>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="bitmapBrush">
+                    <type>ID2D1BitmapBrush1**</type>
+                </param>
+                <code>return CreateBitmapBrush(bitmap, null, null, bitmapBrush);
+        </code>
+            </function>
+            <function name="CreateBitmapBrush" access="public">
+                <type native="HRESULT">int</type>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="bitmapBrushProperties">
+                    <type>D2D1_BITMAP_BRUSH_PROPERTIES1*</type>
+                </param>
+                <param name="bitmapBrush">
+                    <type>ID2D1BitmapBrush1**</type>
+                </param>
+                <code>return CreateBitmapBrush(bitmap, bitmapBrushProperties, null, bitmapBrush);
+        </code>
+            </function>
+            <function name="DrawImage" access="public">
+                <type>void</type>
+                <param name="effect">
+                    <type>ID2D1Effect*</type>
+                </param>
+                <param name="targetOffset">
+                    <type>D2D_POINT_2F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="imageRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_INTERPOLATION_MODE</type>
+                    <init>
+                        <code>D2D1_INTERPOLATION_MODE_LINEAR
+        </code>
+                    </init>
+                </param>
+                <param name="compositeMode">
+                    <type>D2D1_COMPOSITE_MODE</type>
+                    <init>
+                        <code>D2D1_COMPOSITE_MODE_SOURCE_OVER
+        </code>
+                    </init>
+                </param>
+                <code>ID2D1Image* output = null;
+
+        effect-&gt;GetOutput(&amp;output);
+        DrawImage(output, targetOffset, imageRectangle, interpolationMode, compositeMode);
+        output-&gt;Release();
+        </code>
+            </function>
+            <function name="DrawImage" access="public">
+                <type>void</type>
+                <param name="image">
+                    <type>ID2D1Image*</type>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_INTERPOLATION_MODE</type>
+                </param>
+                <param name="compositeMode">
+                    <type>D2D1_COMPOSITE_MODE</type>
+                    <init>
+                        <code>D2D1_COMPOSITE_MODE_SOURCE_OVER
+        </code>
+                    </init>
+                </param>
+                <code>DrawImage(image, null, null, interpolationMode, compositeMode);
+        </code>
+            </function>
+            <function name="DrawImage" access="public">
+                <type>void</type>
+                <param name="effect">
+                    <type>ID2D1Effect*</type>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_INTERPOLATION_MODE</type>
+                </param>
+                <param name="compositeMode">
+                    <type>D2D1_COMPOSITE_MODE</type>
+                    <init>
+                        <code>D2D1_COMPOSITE_MODE_SOURCE_OVER
+        </code>
+                    </init>
+                </param>
+                <code>DrawImage(effect, null, null, interpolationMode, compositeMode);
+        </code>
+            </function>
+            <function name="DrawImage" access="public">
+                <type>void</type>
+                <param name="image">
+                    <type>ID2D1Image*</type>
+                </param>
+                <param name="targetOffset">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_INTERPOLATION_MODE</type>
+                    <init>
+                        <code>D2D1_INTERPOLATION_MODE_LINEAR
+        </code>
+                    </init>
+                </param>
+                <param name="compositeMode">
+                    <type>D2D1_COMPOSITE_MODE</type>
+                    <init>
+                        <code>D2D1_COMPOSITE_MODE_SOURCE_OVER
+        </code>
+                    </init>
+                </param>
+                <code>DrawImage(image, &amp;targetOffset, null, interpolationMode, compositeMode);
+        </code>
+            </function>
+            <function name="DrawImage" access="public">
+                <type>void</type>
+                <param name="effect">
+                    <type>ID2D1Effect*</type>
+                </param>
+                <param name="targetOffset">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_INTERPOLATION_MODE</type>
+                    <init>
+                        <code>D2D1_INTERPOLATION_MODE_LINEAR
+        </code>
+                    </init>
+                </param>
+                <param name="compositeMode">
+                    <type>D2D1_COMPOSITE_MODE</type>
+                    <init>
+                        <code>D2D1_COMPOSITE_MODE_SOURCE_OVER
+        </code>
+                    </init>
+                </param>
+                <code>DrawImage(effect, &amp;targetOffset, null, interpolationMode, compositeMode);
+        </code>
+            </function>
+            <function name="DrawImage" access="public">
+                <type>void</type>
+                <param name="image">
+                    <type>ID2D1Image*</type>
+                </param>
+                <param name="targetOffset">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="imageRectangle">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_INTERPOLATION_MODE</type>
+                    <init>
+                        <code>D2D1_INTERPOLATION_MODE_LINEAR
+        </code>
+                    </init>
+                </param>
+                <param name="compositeMode">
+                    <type>D2D1_COMPOSITE_MODE</type>
+                    <init>
+                        <code>D2D1_COMPOSITE_MODE_SOURCE_OVER
+        </code>
+                    </init>
+                </param>
+                <code>DrawImage(image, &amp;targetOffset, imageRectangle, interpolationMode, compositeMode);
+        </code>
+            </function>
+            <function name="DrawImage" access="public">
+                <type>void</type>
+                <param name="effect">
+                    <type>ID2D1Effect*</type>
+                </param>
+                <param name="targetOffset">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="imageRectangle">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_INTERPOLATION_MODE</type>
+                    <init>
+                        <code>D2D1_INTERPOLATION_MODE_LINEAR
+        </code>
+                    </init>
+                </param>
+                <param name="compositeMode">
+                    <type>D2D1_COMPOSITE_MODE</type>
+                    <init>
+                        <code>D2D1_COMPOSITE_MODE_SOURCE_OVER
+        </code>
+                    </init>
+                </param>
+                <code>DrawImage(effect, &amp;targetOffset, imageRectangle, interpolationMode, compositeMode);
+        </code>
+            </function>
+            <function name="DrawGdiMetafile" access="public">
+                <type>void</type>
+                <param name="gdiMetafile">
+                    <type>ID2D1GdiMetafile*</type>
+                </param>
+                <param name="targetOffset">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <code>DrawGdiMetafile(gdiMetafile, &amp;targetOffset);
+        </code>
+            </function>
+            <function name="CreateImageSourceFromWic" access="public">
+                <type native="HRESULT">int</type>
+                <param name="wicBitmapSource">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="loadingOptions">
+                    <type>D2D1_IMAGE_SOURCE_LOADING_OPTIONS</type>
+                </param>
+                <param name="imageSource">
+                    <type>ID2D1ImageSourceFromWic**</type>
+                </param>
+                <code>return CreateImageSourceFromWic(wicBitmapSource, loadingOptions, D2D1_ALPHA_MODE_UNKNOWN, imageSource);
+        </code>
+            </function>
+            <function name="CreateImageSourceFromWic" access="public">
+                <type native="HRESULT">int</type>
+                <param name="wicBitmapSource">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="imageSource">
+                    <type>ID2D1ImageSourceFromWic**</type>
+                </param>
+                <code>return CreateImageSourceFromWic(wicBitmapSource, D2D1_IMAGE_SOURCE_LOADING_OPTIONS_NONE, D2D1_ALPHA_MODE_UNKNOWN, imageSource);
+        </code>
+            </function>
+            <function name="DrawSpriteBatch" access="public">
+                <type>void</type>
+                <param name="spriteBatch">
+                    <type>ID2D1SpriteBatch*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_BITMAP_INTERPOLATION_MODE</type>
+                    <init>
+                        <code>D2D1_BITMAP_INTERPOLATION_MODE_LINEAR
+        </code>
+                    </init>
+                </param>
+                <param name="spriteOptions">
+                    <type>D2D1_SPRITE_OPTIONS</type>
+                    <init>
+                        <code>D2D1_SPRITE_OPTIONS_NONE
+        </code>
+                    </init>
+                </param>
+                <code>DrawSpriteBatch(spriteBatch, 0, spriteBatch-&gt;GetSpriteCount(), bitmap, interpolationMode, spriteOptions);
+        </code>
+            </function>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFactory" access="public" unsafe="true">
+                <type>void</type>
+                <param name="factory">
+                    <type>ID2D1Factory**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Factory**, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="factory">factory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="size">
+                    <type>D2D_SIZE_U</type>
+                </param>
+                <param name="srcData">
+                    <type>void*</type>
+                </param>
+                <param name="pitch">
+                    <type>uint</type>
+                </param>
+                <param name="bitmapProperties">
+                    <type>D2D1_BITMAP_PROPERTIES*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_SIZE_U, void*, uint, D2D1_BITMAP_PROPERTIES*, ID2D1Bitmap**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="size">size</param>, <param name="srcData">srcData</param>, <param name="pitch">pitch</param>, <param name="bitmapProperties">bitmapProperties</param>, <param name="bitmap">bitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapFromWicBitmap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wicBitmapSource">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="bitmapProperties">
+                    <type>D2D1_BITMAP_PROPERTIES*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, IWICBitmapSource*, D2D1_BITMAP_PROPERTIES*, ID2D1Bitmap**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="wicBitmapSource">wicBitmapSource</param>, <param name="bitmapProperties">bitmapProperties</param>, <param name="bitmap">bitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSharedBitmap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="data">
+                    <type>void*</type>
+                </param>
+                <param name="bitmapProperties">
+                    <type>D2D1_BITMAP_PROPERTIES*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, Guid*, void*, D2D1_BITMAP_PROPERTIES*, ID2D1Bitmap**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="data">data</param>, <param name="bitmapProperties">bitmapProperties</param>, <param name="bitmap">bitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapBrush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="bitmapBrushProperties">
+                    <type>D2D1_BITMAP_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="brushProperties">
+                    <type>D2D1_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="bitmapBrush">
+                    <type>ID2D1BitmapBrush**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Bitmap*, D2D1_BITMAP_BRUSH_PROPERTIES*, D2D1_BRUSH_PROPERTIES*, ID2D1BitmapBrush**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="bitmap">bitmap</param>, <param name="bitmapBrushProperties">bitmapBrushProperties</param>, <param name="brushProperties">brushProperties</param>, <param name="bitmapBrush">bitmapBrush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSolidColorBrush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="color">
+                    <type>DXGI_RGBA*</type>
+                </param>
+                <param name="brushProperties">
+                    <type>D2D1_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="solidColorBrush">
+                    <type>ID2D1SolidColorBrush**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, DXGI_RGBA*, D2D1_BRUSH_PROPERTIES*, ID2D1SolidColorBrush**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="color">color</param>, <param name="brushProperties">brushProperties</param>, <param name="solidColorBrush">solidColorBrush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateGradientStopCollection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="gradientStops">
+                    <type>D2D1_GRADIENT_STOP*</type>
+                </param>
+                <param name="gradientStopsCount">
+                    <type>uint</type>
+                </param>
+                <param name="colorInterpolationGamma">
+                    <type>D2D1_GAMMA</type>
+                </param>
+                <param name="extendMode">
+                    <type>D2D1_EXTEND_MODE</type>
+                </param>
+                <param name="gradientStopCollection">
+                    <type>ID2D1GradientStopCollection**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_GRADIENT_STOP*, uint, D2D1_GAMMA, D2D1_EXTEND_MODE, ID2D1GradientStopCollection**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="gradientStops">gradientStops</param>, <param name="gradientStopsCount">gradientStopsCount</param>, <param name="colorInterpolationGamma">colorInterpolationGamma</param>, <param name="extendMode">extendMode</param>, <param name="gradientStopCollection">gradientStopCollection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateLinearGradientBrush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="linearGradientBrushProperties">
+                    <type>D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="brushProperties">
+                    <type>D2D1_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="gradientStopCollection">
+                    <type>ID2D1GradientStopCollection*</type>
+                </param>
+                <param name="linearGradientBrush">
+                    <type>ID2D1LinearGradientBrush**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES*, D2D1_BRUSH_PROPERTIES*, ID2D1GradientStopCollection*, ID2D1LinearGradientBrush**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="linearGradientBrushProperties">linearGradientBrushProperties</param>, <param name="brushProperties">brushProperties</param>, <param name="gradientStopCollection">gradientStopCollection</param>, <param name="linearGradientBrush">linearGradientBrush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRadialGradientBrush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="radialGradientBrushProperties">
+                    <type>D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="brushProperties">
+                    <type>D2D1_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="gradientStopCollection">
+                    <type>ID2D1GradientStopCollection*</type>
+                </param>
+                <param name="radialGradientBrush">
+                    <type>ID2D1RadialGradientBrush**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES*, D2D1_BRUSH_PROPERTIES*, ID2D1GradientStopCollection*, ID2D1RadialGradientBrush**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="radialGradientBrushProperties">radialGradientBrushProperties</param>, <param name="brushProperties">brushProperties</param>, <param name="gradientStopCollection">gradientStopCollection</param>, <param name="radialGradientBrush">radialGradientBrush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateCompatibleRenderTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="desiredSize">
+                    <type>D2D_SIZE_F*</type>
+                </param>
+                <param name="desiredPixelSize">
+                    <type>D2D_SIZE_U*</type>
+                </param>
+                <param name="desiredFormat">
+                    <type>D2D1_PIXEL_FORMAT*</type>
+                </param>
+                <param name="options">
+                    <type>D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS</type>
+                </param>
+                <param name="bitmapRenderTarget">
+                    <type>ID2D1BitmapRenderTarget**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_SIZE_F*, D2D_SIZE_U*, D2D1_PIXEL_FORMAT*, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS, ID2D1BitmapRenderTarget**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="desiredSize">desiredSize</param>, <param name="desiredPixelSize">desiredPixelSize</param>, <param name="desiredFormat">desiredFormat</param>, <param name="options">options</param>, <param name="bitmapRenderTarget">bitmapRenderTarget</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateLayer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="size">
+                    <type>D2D_SIZE_F*</type>
+                </param>
+                <param name="layer">
+                    <type>ID2D1Layer**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_SIZE_F*, ID2D1Layer**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="size">size</param>, <param name="layer">layer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateMesh" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="mesh">
+                    <type>ID2D1Mesh**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Mesh**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="mesh">mesh</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawLine" access="public" unsafe="true">
+                <type>void</type>
+                <param name="point0">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="point1">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="strokeWidth">
+                    <type>float</type>
+                    <init>
+                        <code>1.0f
+        </code>
+                    </init>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_POINT_2F, D2D_POINT_2F, ID2D1Brush*, float, ID2D1StrokeStyle*, void&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="point0">point0</param>, <param name="point1">point1</param>, <param name="brush">brush</param>, <param name="strokeWidth">strokeWidth</param>, <param name="strokeStyle">strokeStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawRectangle" access="public" unsafe="true">
+                <type>void</type>
+                <param name="rect">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="strokeWidth">
+                    <type>float</type>
+                    <init>
+                        <code>1.0f
+        </code>
+                    </init>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_RECT_F*, ID2D1Brush*, float, ID2D1StrokeStyle*, void&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="rect">rect</param>, <param name="brush">brush</param>, <param name="strokeWidth">strokeWidth</param>, <param name="strokeStyle">strokeStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FillRectangle" access="public" unsafe="true">
+                <type>void</type>
+                <param name="rect">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_RECT_F*, ID2D1Brush*, void&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="rect">rect</param>, <param name="brush">brush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawRoundedRectangle" access="public" unsafe="true">
+                <type>void</type>
+                <param name="roundedRect">
+                    <type>D2D1_ROUNDED_RECT*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="strokeWidth">
+                    <type>float</type>
+                    <init>
+                        <code>1.0f
+        </code>
+                    </init>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_ROUNDED_RECT*, ID2D1Brush*, float, ID2D1StrokeStyle*, void&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="roundedRect">roundedRect</param>, <param name="brush">brush</param>, <param name="strokeWidth">strokeWidth</param>, <param name="strokeStyle">strokeStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FillRoundedRectangle" access="public" unsafe="true">
+                <type>void</type>
+                <param name="roundedRect">
+                    <type>D2D1_ROUNDED_RECT*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_ROUNDED_RECT*, ID2D1Brush*, void&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="roundedRect">roundedRect</param>, <param name="brush">brush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawEllipse" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ellipse">
+                    <type>D2D1_ELLIPSE*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="strokeWidth">
+                    <type>float</type>
+                    <init>
+                        <code>1.0f
+        </code>
+                    </init>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_ELLIPSE*, ID2D1Brush*, float, ID2D1StrokeStyle*, void&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="ellipse">ellipse</param>, <param name="brush">brush</param>, <param name="strokeWidth">strokeWidth</param>, <param name="strokeStyle">strokeStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FillEllipse" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ellipse">
+                    <type>D2D1_ELLIPSE*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_ELLIPSE*, ID2D1Brush*, void&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="ellipse">ellipse</param>, <param name="brush">brush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawGeometry" access="public" unsafe="true">
+                <type>void</type>
+                <param name="geometry">
+                    <type>ID2D1Geometry*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="strokeWidth">
+                    <type>float</type>
+                    <init>
+                        <code>1.0f
+        </code>
+                    </init>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Geometry*, ID2D1Brush*, float, ID2D1StrokeStyle*, void&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="geometry">geometry</param>, <param name="brush">brush</param>, <param name="strokeWidth">strokeWidth</param>, <param name="strokeStyle">strokeStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FillGeometry" access="public" unsafe="true">
+                <type>void</type>
+                <param name="geometry">
+                    <type>ID2D1Geometry*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="opacityBrush">
+                    <type>ID2D1Brush*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Geometry*, ID2D1Brush*, ID2D1Brush*, void&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="geometry">geometry</param>, <param name="brush">brush</param>, <param name="opacityBrush">opacityBrush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FillMesh" access="public" unsafe="true">
+                <type>void</type>
+                <param name="mesh">
+                    <type>ID2D1Mesh*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Mesh*, ID2D1Brush*, void&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="mesh">mesh</param>, <param name="brush">brush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FillOpacityMask" access="public" unsafe="true">
+                <type>void</type>
+                <param name="opacityMask">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="content">
+                    <type>D2D1_OPACITY_MASK_CONTENT</type>
+                </param>
+                <param name="destinationRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="sourceRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Bitmap*, ID2D1Brush*, D2D1_OPACITY_MASK_CONTENT, D2D_RECT_F*, D2D_RECT_F*, void&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="opacityMask">opacityMask</param>, <param name="brush">brush</param>, <param name="content">content</param>, <param name="destinationRectangle">destinationRectangle</param>, <param name="sourceRectangle">sourceRectangle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawBitmap" access="public" unsafe="true">
+                <type>void</type>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="destinationRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="opacity">
+                    <type>float</type>
+                    <init>
+                        <code>1.0f
+        </code>
+                    </init>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_BITMAP_INTERPOLATION_MODE</type>
+                    <init>
+                        <code>D2D1_BITMAP_INTERPOLATION_MODE_LINEAR
+        </code>
+                    </init>
+                </param>
+                <param name="sourceRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Bitmap*, D2D_RECT_F*, float, D2D1_BITMAP_INTERPOLATION_MODE, D2D_RECT_F*, void&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="bitmap">bitmap</param>, <param name="destinationRectangle">destinationRectangle</param>, <param name="opacity">opacity</param>, <param name="interpolationMode">interpolationMode</param>, <param name="sourceRectangle">sourceRectangle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawText" access="public" unsafe="true">
+                <type>void</type>
+                <param name="@string">
+                    <type>ushort*</type>
+                </param>
+                <param name="stringLength">
+                    <type>uint</type>
+                </param>
+                <param name="textFormat">
+                    <type>IDWriteTextFormat*</type>
+                </param>
+                <param name="layoutRect">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="defaultFillBrush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="options">
+                    <type>D2D1_DRAW_TEXT_OPTIONS</type>
+                    <init>
+                        <code>D2D1_DRAW_TEXT_OPTIONS_NONE
+        </code>
+                    </init>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                    <init>
+                        <code>DWRITE_MEASURING_MODE_NATURAL
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ushort*, uint, IDWriteTextFormat*, D2D_RECT_F*, ID2D1Brush*, D2D1_DRAW_TEXT_OPTIONS, DWRITE_MEASURING_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="@string">@string</param>, <param name="stringLength">stringLength</param>, <param name="textFormat">textFormat</param>, <param name="layoutRect">layoutRect</param>, <param name="defaultFillBrush">defaultFillBrush</param>, <param name="options">options</param>, <param name="measuringMode">measuringMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawTextLayout" access="public" unsafe="true">
+                <type>void</type>
+                <param name="origin">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="textLayout">
+                    <type>IDWriteTextLayout*</type>
+                </param>
+                <param name="defaultFillBrush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="options">
+                    <type>D2D1_DRAW_TEXT_OPTIONS</type>
+                    <init>
+                        <code>D2D1_DRAW_TEXT_OPTIONS_NONE
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_POINT_2F, IDWriteTextLayout*, ID2D1Brush*, D2D1_DRAW_TEXT_OPTIONS, void&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="origin">origin</param>, <param name="textLayout">textLayout</param>, <param name="defaultFillBrush">defaultFillBrush</param>, <param name="options">options</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawGlyphRun" access="public" unsafe="true">
+                <type>void</type>
+                <param name="baselineOrigin">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="glyphRun">
+                    <type>DWRITE_GLYPH_RUN*</type>
+                </param>
+                <param name="foregroundBrush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                    <init>
+                        <code>DWRITE_MEASURING_MODE_NATURAL
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_POINT_2F, DWRITE_GLYPH_RUN*, ID2D1Brush*, DWRITE_MEASURING_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="baselineOrigin">baselineOrigin</param>, <param name="glyphRun">glyphRun</param>, <param name="foregroundBrush">foregroundBrush</param>, <param name="measuringMode">measuringMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTransform" access="public" unsafe="true">
+                <type>void</type>
+                <param name="transform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_MATRIX_3X2_F*, void&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="transform">transform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTransform" access="public" unsafe="true">
+                <type>void</type>
+                <param name="transform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_MATRIX_3X2_F*, void&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="transform">transform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAntialiasMode" access="public" unsafe="true">
+                <type>void</type>
+                <param name="antialiasMode">
+                    <type>D2D1_ANTIALIAS_MODE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_ANTIALIAS_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="antialiasMode">antialiasMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAntialiasMode" access="public" unsafe="true">
+                <type>D2D1_ANTIALIAS_MODE</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_ANTIALIAS_MODE&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTextAntialiasMode" access="public" unsafe="true">
+                <type>void</type>
+                <param name="textAntialiasMode">
+                    <type>D2D1_TEXT_ANTIALIAS_MODE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_TEXT_ANTIALIAS_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="textAntialiasMode">textAntialiasMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTextAntialiasMode" access="public" unsafe="true">
+                <type>D2D1_TEXT_ANTIALIAS_MODE</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_TEXT_ANTIALIAS_MODE&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTextRenderingParams" access="public" unsafe="true">
+                <type>void</type>
+                <param name="textRenderingParams">
+                    <type>IDWriteRenderingParams*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, IDWriteRenderingParams*, void&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="textRenderingParams">textRenderingParams</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTextRenderingParams" access="public" unsafe="true">
+                <type>void</type>
+                <param name="textRenderingParams">
+                    <type>IDWriteRenderingParams**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, IDWriteRenderingParams**, void&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="textRenderingParams">textRenderingParams</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTags" access="public" unsafe="true">
+                <type>void</type>
+                <param name="tag1">
+                    <type>ulong</type>
+                </param>
+                <param name="tag2">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ulong, ulong, void&gt;)(lpVtbl[<vtbl explicit="False">38</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="tag1">tag1</param>, <param name="tag2">tag2</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTags" access="public" unsafe="true">
+                <type>void</type>
+                <param name="tag1">
+                    <type>ulong*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="tag2">
+                    <type>ulong*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ulong*, ulong*, void&gt;)(lpVtbl[<vtbl explicit="False">39</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="tag1">tag1</param>, <param name="tag2">tag2</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushLayer" access="public" unsafe="true">
+                <type>void</type>
+                <param name="layerParameters">
+                    <type>D2D1_LAYER_PARAMETERS*</type>
+                </param>
+                <param name="layer">
+                    <type>ID2D1Layer*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_LAYER_PARAMETERS*, ID2D1Layer*, void&gt;)(lpVtbl[<vtbl explicit="False">40</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="layerParameters">layerParameters</param>, <param name="layer">layer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PopLayer" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, void&gt;)(lpVtbl[<vtbl explicit="False">41</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Flush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tag1">
+                    <type>ulong*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="tag2">
+                    <type>ulong*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ulong*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">42</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="tag1">tag1</param>, <param name="tag2">tag2</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SaveDrawingState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="drawingStateBlock">
+                    <type>ID2D1DrawingStateBlock*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1DrawingStateBlock*, void&gt;)(lpVtbl[<vtbl explicit="False">43</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="drawingStateBlock">drawingStateBlock</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RestoreDrawingState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="drawingStateBlock">
+                    <type>ID2D1DrawingStateBlock*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1DrawingStateBlock*, void&gt;)(lpVtbl[<vtbl explicit="False">44</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="drawingStateBlock">drawingStateBlock</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushAxisAlignedClip" access="public" unsafe="true">
+                <type>void</type>
+                <param name="clipRect">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="antialiasMode">
+                    <type>D2D1_ANTIALIAS_MODE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_RECT_F*, D2D1_ANTIALIAS_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">45</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="clipRect">clipRect</param>, <param name="antialiasMode">antialiasMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PopAxisAlignedClip" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, void&gt;)(lpVtbl[<vtbl explicit="False">46</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Clear" access="public" unsafe="true">
+                <type>void</type>
+                <param name="clearColor">
+                    <type>DXGI_RGBA*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, DXGI_RGBA*, void&gt;)(lpVtbl[<vtbl explicit="False">47</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="clearColor">clearColor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginDraw" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, void&gt;)(lpVtbl[<vtbl explicit="False">48</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndDraw" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tag1">
+                    <type>ulong*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="tag2">
+                    <type>ulong*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ulong*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">49</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="tag1">tag1</param>, <param name="tag2">tag2</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPixelFormat" access="public" unsafe="true">
+                <type>D2D1_PIXEL_FORMAT</type>
+                <body>
+                    <code>
+                        <fixup type="*result">D2D1_PIXEL_FORMAT</fixup> result;
+        return *((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_PIXEL_FORMAT*, D2D1_PIXEL_FORMAT*&gt;)(lpVtbl[<vtbl explicit="False">50</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param><param special="retFixup">, &amp;result</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDpi" access="public" unsafe="true">
+                <type>void</type>
+                <param name="dpiX">
+                    <type>float</type>
+                </param>
+                <param name="dpiY">
+                    <type>float</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, float, float, void&gt;)(lpVtbl[<vtbl explicit="False">51</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="dpiX">dpiX</param>, <param name="dpiY">dpiY</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDpi" access="public" unsafe="true">
+                <type>void</type>
+                <param name="dpiX">
+                    <type>float*</type>
+                </param>
+                <param name="dpiY">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, float*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">52</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="dpiX">dpiX</param>, <param name="dpiY">dpiY</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSize" access="public" unsafe="true">
+                <type native="D2D1_SIZE_F">D2D_SIZE_F</type>
+                <body>
+                    <code>
+                        <fixup type="*result">D2D_SIZE_F</fixup> result;
+        return *((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_SIZE_F*, D2D_SIZE_F*&gt;)(lpVtbl[<vtbl explicit="False">53</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param><param special="retFixup">, &amp;result</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPixelSize" access="public" unsafe="true">
+                <type native="D2D1_SIZE_U">D2D_SIZE_U</type>
+                <body>
+                    <code>
+                        <fixup type="*result">D2D_SIZE_U</fixup> result;
+        return *((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_SIZE_U*, D2D_SIZE_U*&gt;)(lpVtbl[<vtbl explicit="False">54</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param><param special="retFixup">, &amp;result</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMaximumBitmapSize" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, uint&gt;)(lpVtbl[<vtbl explicit="False">55</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsSupported" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="renderTargetProperties">
+                    <type>D2D1_RENDER_TARGET_PROPERTIES*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_RENDER_TARGET_PROPERTIES*, int&gt;)(lpVtbl[<vtbl explicit="False">56</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="renderTargetProperties">renderTargetProperties</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="size">
+                    <type>D2D_SIZE_U</type>
+                </param>
+                <param name="sourceData">
+                    <type>void*</type>
+                </param>
+                <param name="pitch">
+                    <type>uint</type>
+                </param>
+                <param name="bitmapProperties">
+                    <type>D2D1_BITMAP_PROPERTIES1*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_SIZE_U, void*, uint, D2D1_BITMAP_PROPERTIES1*, ID2D1Bitmap1**, int&gt;)(lpVtbl[<vtbl explicit="False">57</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="size">size</param>, <param name="sourceData">sourceData</param>, <param name="pitch">pitch</param>, <param name="bitmapProperties">bitmapProperties</param>, <param name="bitmap">bitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapFromWicBitmap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wicBitmapSource">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="bitmapProperties">
+                    <type>D2D1_BITMAP_PROPERTIES1*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, IWICBitmapSource*, D2D1_BITMAP_PROPERTIES1*, ID2D1Bitmap1**, int&gt;)(lpVtbl[<vtbl explicit="False">58</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="wicBitmapSource">wicBitmapSource</param>, <param name="bitmapProperties">bitmapProperties</param>, <param name="bitmap">bitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="space">
+                    <type>D2D1_COLOR_SPACE</type>
+                </param>
+                <param name="profile">
+                    <type>byte*</type>
+                </param>
+                <param name="profileSize">
+                    <type>uint</type>
+                </param>
+                <param name="colorContext">
+                    <type>ID2D1ColorContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_COLOR_SPACE, byte*, uint, ID2D1ColorContext**, int&gt;)(lpVtbl[<vtbl explicit="False">59</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="space">space</param>, <param name="profile">profile</param>, <param name="profileSize">profileSize</param>, <param name="colorContext">colorContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorContextFromFilename" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="filename">
+                    <type>ushort*</type>
+                </param>
+                <param name="colorContext">
+                    <type>ID2D1ColorContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ushort*, ID2D1ColorContext**, int&gt;)(lpVtbl[<vtbl explicit="False">60</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="filename">filename</param>, <param name="colorContext">colorContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorContextFromWicColorContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wicColorContext">
+                    <type>IWICColorContext*</type>
+                </param>
+                <param name="colorContext">
+                    <type>ID2D1ColorContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, IWICColorContext*, ID2D1ColorContext**, int&gt;)(lpVtbl[<vtbl explicit="False">61</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="wicColorContext">wicColorContext</param>, <param name="colorContext">colorContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapFromDxgiSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="surface">
+                    <type>IDXGISurface*</type>
+                </param>
+                <param name="bitmapProperties">
+                    <type>D2D1_BITMAP_PROPERTIES1*</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, IDXGISurface*, D2D1_BITMAP_PROPERTIES1*, ID2D1Bitmap1**, int&gt;)(lpVtbl[<vtbl explicit="False">62</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="surface">surface</param>, <param name="bitmapProperties">bitmapProperties</param>, <param name="bitmap">bitmap</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateEffect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effectId">
+                    <type>Guid*</type>
+                </param>
+                <param name="effect">
+                    <type>ID2D1Effect**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, Guid*, ID2D1Effect**, int&gt;)(lpVtbl[<vtbl explicit="False">63</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="effectId">effectId</param>, <param name="effect">effect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateGradientStopCollection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="straightAlphaGradientStops">
+                    <type>D2D1_GRADIENT_STOP*</type>
+                </param>
+                <param name="straightAlphaGradientStopsCount">
+                    <type>uint</type>
+                </param>
+                <param name="preInterpolationSpace">
+                    <type>D2D1_COLOR_SPACE</type>
+                </param>
+                <param name="postInterpolationSpace">
+                    <type>D2D1_COLOR_SPACE</type>
+                </param>
+                <param name="bufferPrecision">
+                    <type>D2D1_BUFFER_PRECISION</type>
+                </param>
+                <param name="extendMode">
+                    <type>D2D1_EXTEND_MODE</type>
+                </param>
+                <param name="colorInterpolationMode">
+                    <type>D2D1_COLOR_INTERPOLATION_MODE</type>
+                </param>
+                <param name="gradientStopCollection1">
+                    <type>ID2D1GradientStopCollection1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_GRADIENT_STOP*, uint, D2D1_COLOR_SPACE, D2D1_COLOR_SPACE, D2D1_BUFFER_PRECISION, D2D1_EXTEND_MODE, D2D1_COLOR_INTERPOLATION_MODE, ID2D1GradientStopCollection1**, int&gt;)(lpVtbl[<vtbl explicit="False">64</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="straightAlphaGradientStops">straightAlphaGradientStops</param>, <param name="straightAlphaGradientStopsCount">straightAlphaGradientStopsCount</param>, <param name="preInterpolationSpace">preInterpolationSpace</param>, <param name="postInterpolationSpace">postInterpolationSpace</param>, <param name="bufferPrecision">bufferPrecision</param>, <param name="extendMode">extendMode</param>, <param name="colorInterpolationMode">colorInterpolationMode</param>, <param name="gradientStopCollection1">gradientStopCollection1</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateImageBrush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="image">
+                    <type>ID2D1Image*</type>
+                </param>
+                <param name="imageBrushProperties">
+                    <type>D2D1_IMAGE_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="brushProperties">
+                    <type>D2D1_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="imageBrush">
+                    <type>ID2D1ImageBrush**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Image*, D2D1_IMAGE_BRUSH_PROPERTIES*, D2D1_BRUSH_PROPERTIES*, ID2D1ImageBrush**, int&gt;)(lpVtbl[<vtbl explicit="False">65</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="image">image</param>, <param name="imageBrushProperties">imageBrushProperties</param>, <param name="brushProperties">brushProperties</param>, <param name="imageBrush">imageBrush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapBrush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="bitmapBrushProperties">
+                    <type>D2D1_BITMAP_BRUSH_PROPERTIES1*</type>
+                </param>
+                <param name="brushProperties">
+                    <type>D2D1_BRUSH_PROPERTIES*</type>
+                </param>
+                <param name="bitmapBrush">
+                    <type>ID2D1BitmapBrush1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Bitmap*, D2D1_BITMAP_BRUSH_PROPERTIES1*, D2D1_BRUSH_PROPERTIES*, ID2D1BitmapBrush1**, int&gt;)(lpVtbl[<vtbl explicit="False">66</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="bitmap">bitmap</param>, <param name="bitmapBrushProperties">bitmapBrushProperties</param>, <param name="brushProperties">brushProperties</param>, <param name="bitmapBrush">bitmapBrush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateCommandList" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="commandList">
+                    <type>ID2D1CommandList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1CommandList**, int&gt;)(lpVtbl[<vtbl explicit="False">67</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="commandList">commandList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsDxgiFormatSupported" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, DXGI_FORMAT, int&gt;)(lpVtbl[<vtbl explicit="False">68</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="format">format</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsBufferPrecisionSupported" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="bufferPrecision">
+                    <type>D2D1_BUFFER_PRECISION</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_BUFFER_PRECISION, int&gt;)(lpVtbl[<vtbl explicit="False">69</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="bufferPrecision">bufferPrecision</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetImageLocalBounds" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="image">
+                    <type>ID2D1Image*</type>
+                </param>
+                <param name="localBounds">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Image*, D2D_RECT_F*, int&gt;)(lpVtbl[<vtbl explicit="False">70</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="image">image</param>, <param name="localBounds">localBounds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetImageWorldBounds" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="image">
+                    <type>ID2D1Image*</type>
+                </param>
+                <param name="worldBounds">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Image*, D2D_RECT_F*, int&gt;)(lpVtbl[<vtbl explicit="False">71</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="image">image</param>, <param name="worldBounds">worldBounds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGlyphRunWorldBounds" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="baselineOrigin">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="glyphRun">
+                    <type>DWRITE_GLYPH_RUN*</type>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                </param>
+                <param name="bounds">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_POINT_2F, DWRITE_GLYPH_RUN*, DWRITE_MEASURING_MODE, D2D_RECT_F*, int&gt;)(lpVtbl[<vtbl explicit="False">72</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="baselineOrigin">baselineOrigin</param>, <param name="glyphRun">glyphRun</param>, <param name="measuringMode">measuringMode</param>, <param name="bounds">bounds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevice" access="public" unsafe="true">
+                <type>void</type>
+                <param name="device">
+                    <type>ID2D1Device**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Device**, void&gt;)(lpVtbl[<vtbl explicit="False">73</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="device">device</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTarget" access="public" unsafe="true">
+                <type>void</type>
+                <param name="image">
+                    <type>ID2D1Image*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Image*, void&gt;)(lpVtbl[<vtbl explicit="False">74</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="image">image</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTarget" access="public" unsafe="true">
+                <type>void</type>
+                <param name="image">
+                    <type>ID2D1Image**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Image**, void&gt;)(lpVtbl[<vtbl explicit="False">75</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="image">image</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRenderingControls" access="public" unsafe="true">
+                <type>void</type>
+                <param name="renderingControls">
+                    <type>D2D1_RENDERING_CONTROLS*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_RENDERING_CONTROLS*, void&gt;)(lpVtbl[<vtbl explicit="False">76</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="renderingControls">renderingControls</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRenderingControls" access="public" unsafe="true">
+                <type>void</type>
+                <param name="renderingControls">
+                    <type>D2D1_RENDERING_CONTROLS*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_RENDERING_CONTROLS*, void&gt;)(lpVtbl[<vtbl explicit="False">77</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="renderingControls">renderingControls</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrimitiveBlend" access="public" unsafe="true">
+                <type>void</type>
+                <param name="primitiveBlend">
+                    <type>D2D1_PRIMITIVE_BLEND</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_PRIMITIVE_BLEND, void&gt;)(lpVtbl[<vtbl explicit="False">78</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="primitiveBlend">primitiveBlend</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrimitiveBlend" access="public" unsafe="true">
+                <type>D2D1_PRIMITIVE_BLEND</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_PRIMITIVE_BLEND&gt;)(lpVtbl[<vtbl explicit="False">79</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetUnitMode" access="public" unsafe="true">
+                <type>void</type>
+                <param name="unitMode">
+                    <type>D2D1_UNIT_MODE</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_UNIT_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">80</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="unitMode">unitMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUnitMode" access="public" unsafe="true">
+                <type>D2D1_UNIT_MODE</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_UNIT_MODE&gt;)(lpVtbl[<vtbl explicit="False">81</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawGlyphRun" access="public" unsafe="true">
+                <type>void</type>
+                <param name="baselineOrigin">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="glyphRun">
+                    <type>DWRITE_GLYPH_RUN*</type>
+                </param>
+                <param name="glyphRunDescription">
+                    <type>DWRITE_GLYPH_RUN_DESCRIPTION*</type>
+                </param>
+                <param name="foregroundBrush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                    <init>
+                        <code>DWRITE_MEASURING_MODE_NATURAL
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_POINT_2F, DWRITE_GLYPH_RUN*, DWRITE_GLYPH_RUN_DESCRIPTION*, ID2D1Brush*, DWRITE_MEASURING_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">82</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="baselineOrigin">baselineOrigin</param>, <param name="glyphRun">glyphRun</param>, <param name="glyphRunDescription">glyphRunDescription</param>, <param name="foregroundBrush">foregroundBrush</param>, <param name="measuringMode">measuringMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawImage" access="public" unsafe="true">
+                <type>void</type>
+                <param name="image">
+                    <type>ID2D1Image*</type>
+                </param>
+                <param name="targetOffset">
+                    <type>D2D_POINT_2F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="imageRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_INTERPOLATION_MODE</type>
+                    <init>
+                        <code>D2D1_INTERPOLATION_MODE_LINEAR
+        </code>
+                    </init>
+                </param>
+                <param name="compositeMode">
+                    <type>D2D1_COMPOSITE_MODE</type>
+                    <init>
+                        <code>D2D1_COMPOSITE_MODE_SOURCE_OVER
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Image*, D2D_POINT_2F*, D2D_RECT_F*, D2D1_INTERPOLATION_MODE, D2D1_COMPOSITE_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">83</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="image">image</param>, <param name="targetOffset">targetOffset</param>, <param name="imageRectangle">imageRectangle</param>, <param name="interpolationMode">interpolationMode</param>, <param name="compositeMode">compositeMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawGdiMetafile" access="public" unsafe="true">
+                <type>void</type>
+                <param name="gdiMetafile">
+                    <type>ID2D1GdiMetafile*</type>
+                </param>
+                <param name="targetOffset">
+                    <type>D2D_POINT_2F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1GdiMetafile*, D2D_POINT_2F*, void&gt;)(lpVtbl[<vtbl explicit="False">84</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="gdiMetafile">gdiMetafile</param>, <param name="targetOffset">targetOffset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawBitmap" access="public" unsafe="true">
+                <type>void</type>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="destinationRectangle">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="opacity">
+                    <type>float</type>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_INTERPOLATION_MODE</type>
+                </param>
+                <param name="sourceRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="perspectiveTransform">
+                    <type>D2D_MATRIX_4X4_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Bitmap*, D2D_RECT_F*, float, D2D1_INTERPOLATION_MODE, D2D_RECT_F*, D2D_MATRIX_4X4_F*, void&gt;)(lpVtbl[<vtbl explicit="False">85</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="bitmap">bitmap</param>, <param name="destinationRectangle">destinationRectangle</param>, <param name="opacity">opacity</param>, <param name="interpolationMode">interpolationMode</param>, <param name="sourceRectangle">sourceRectangle</param>, <param name="perspectiveTransform">perspectiveTransform</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PushLayer" access="public" unsafe="true">
+                <type>void</type>
+                <param name="layerParameters">
+                    <type>D2D1_LAYER_PARAMETERS1*</type>
+                </param>
+                <param name="layer">
+                    <type>ID2D1Layer*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_LAYER_PARAMETERS1*, ID2D1Layer*, void&gt;)(lpVtbl[<vtbl explicit="False">86</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="layerParameters">layerParameters</param>, <param name="layer">layer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InvalidateEffectInputRectangle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effect">
+                    <type>ID2D1Effect*</type>
+                </param>
+                <param name="input">
+                    <type>uint</type>
+                </param>
+                <param name="inputRectangle">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Effect*, uint, D2D_RECT_F*, int&gt;)(lpVtbl[<vtbl explicit="False">87</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="effect">effect</param>, <param name="input">input</param>, <param name="inputRectangle">inputRectangle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEffectInvalidRectangleCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effect">
+                    <type>ID2D1Effect*</type>
+                </param>
+                <param name="rectangleCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Effect*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">88</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="effect">effect</param>, <param name="rectangleCount">rectangleCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEffectInvalidRectangles" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="effect">
+                    <type>ID2D1Effect*</type>
+                </param>
+                <param name="rectangles">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="rectanglesCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Effect*, D2D_RECT_F*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">89</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="effect">effect</param>, <param name="rectangles">rectangles</param>, <param name="rectanglesCount">rectanglesCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEffectRequiredInputRectangles" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="renderEffect">
+                    <type>ID2D1Effect*</type>
+                </param>
+                <param name="renderImageRectangle">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="inputDescriptions">
+                    <type>D2D1_EFFECT_INPUT_DESCRIPTION*</type>
+                </param>
+                <param name="requiredInputRects">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="inputCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Effect*, D2D_RECT_F*, D2D1_EFFECT_INPUT_DESCRIPTION*, D2D_RECT_F*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">90</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="renderEffect">renderEffect</param>, <param name="renderImageRectangle">renderImageRectangle</param>, <param name="inputDescriptions">inputDescriptions</param>, <param name="requiredInputRects">requiredInputRects</param>, <param name="inputCount">inputCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FillOpacityMask" access="public" unsafe="true">
+                <type>void</type>
+                <param name="opacityMask">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="destinationRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="sourceRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Bitmap*, ID2D1Brush*, D2D_RECT_F*, D2D_RECT_F*, void&gt;)(lpVtbl[<vtbl explicit="False">91</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="opacityMask">opacityMask</param>, <param name="brush">brush</param>, <param name="destinationRectangle">destinationRectangle</param>, <param name="sourceRectangle">sourceRectangle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateFilledGeometryRealization" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="geometry">
+                    <type>ID2D1Geometry*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="geometryRealization">
+                    <type>ID2D1GeometryRealization**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Geometry*, float, ID2D1GeometryRealization**, int&gt;)(lpVtbl[<vtbl explicit="False">92</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="geometry">geometry</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="geometryRealization">geometryRealization</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateStrokedGeometryRealization" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="geometry">
+                    <type>ID2D1Geometry*</type>
+                </param>
+                <param name="flatteningTolerance">
+                    <type>float</type>
+                </param>
+                <param name="strokeWidth">
+                    <type>float</type>
+                </param>
+                <param name="strokeStyle">
+                    <type>ID2D1StrokeStyle*</type>
+                </param>
+                <param name="geometryRealization">
+                    <type>ID2D1GeometryRealization**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Geometry*, float, float, ID2D1StrokeStyle*, ID2D1GeometryRealization**, int&gt;)(lpVtbl[<vtbl explicit="False">93</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="geometry">geometry</param>, <param name="flatteningTolerance">flatteningTolerance</param>, <param name="strokeWidth">strokeWidth</param>, <param name="strokeStyle">strokeStyle</param>, <param name="geometryRealization">geometryRealization</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawGeometryRealization" access="public" unsafe="true">
+                <type>void</type>
+                <param name="geometryRealization">
+                    <type>ID2D1GeometryRealization*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1GeometryRealization*, ID2D1Brush*, void&gt;)(lpVtbl[<vtbl explicit="False">94</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="geometryRealization">geometryRealization</param>, <param name="brush">brush</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateInk" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="startPoint">
+                    <type>D2D1_INK_POINT*</type>
+                </param>
+                <param name="ink">
+                    <type>ID2D1Ink**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_INK_POINT*, ID2D1Ink**, int&gt;)(lpVtbl[<vtbl explicit="False">95</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="startPoint">startPoint</param>, <param name="ink">ink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateInkStyle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inkStyleProperties">
+                    <type>D2D1_INK_STYLE_PROPERTIES*</type>
+                </param>
+                <param name="inkStyle">
+                    <type>ID2D1InkStyle**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_INK_STYLE_PROPERTIES*, ID2D1InkStyle**, int&gt;)(lpVtbl[<vtbl explicit="False">96</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="inkStyleProperties">inkStyleProperties</param>, <param name="inkStyle">inkStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateGradientMesh" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="patches">
+                    <type>D2D1_GRADIENT_MESH_PATCH*</type>
+                </param>
+                <param name="patchesCount">
+                    <type>uint</type>
+                </param>
+                <param name="gradientMesh">
+                    <type>ID2D1GradientMesh**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_GRADIENT_MESH_PATCH*, uint, ID2D1GradientMesh**, int&gt;)(lpVtbl[<vtbl explicit="False">97</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="patches">patches</param>, <param name="patchesCount">patchesCount</param>, <param name="gradientMesh">gradientMesh</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateImageSourceFromWic" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wicBitmapSource">
+                    <type>IWICBitmapSource*</type>
+                </param>
+                <param name="loadingOptions">
+                    <type>D2D1_IMAGE_SOURCE_LOADING_OPTIONS</type>
+                </param>
+                <param name="alphaMode">
+                    <type>D2D1_ALPHA_MODE</type>
+                </param>
+                <param name="imageSource">
+                    <type>ID2D1ImageSourceFromWic**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, IWICBitmapSource*, D2D1_IMAGE_SOURCE_LOADING_OPTIONS, D2D1_ALPHA_MODE, ID2D1ImageSourceFromWic**, int&gt;)(lpVtbl[<vtbl explicit="False">98</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="wicBitmapSource">wicBitmapSource</param>, <param name="loadingOptions">loadingOptions</param>, <param name="alphaMode">alphaMode</param>, <param name="imageSource">imageSource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateLookupTable3D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="precision">
+                    <type>D2D1_BUFFER_PRECISION</type>
+                </param>
+                <param name="extents">
+                    <type>uint*</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="dataCount">
+                    <type>uint</type>
+                </param>
+                <param name="strides">
+                    <type>uint*</type>
+                </param>
+                <param name="lookupTable">
+                    <type>ID2D1LookupTable3D**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_BUFFER_PRECISION, uint*, byte*, uint, uint*, ID2D1LookupTable3D**, int&gt;)(lpVtbl[<vtbl explicit="False">99</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="precision">precision</param>, <param name="extents">extents</param>, <param name="data">data</param>, <param name="dataCount">dataCount</param>, <param name="strides">strides</param>, <param name="lookupTable">lookupTable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateImageSourceFromDxgi" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="surfaces">
+                    <type>IDXGISurface**</type>
+                </param>
+                <param name="surfaceCount">
+                    <type>uint</type>
+                </param>
+                <param name="colorSpace">
+                    <type>DXGI_COLOR_SPACE_TYPE</type>
+                </param>
+                <param name="options">
+                    <type>D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS</type>
+                </param>
+                <param name="imageSource">
+                    <type>ID2D1ImageSource**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, IDXGISurface**, uint, DXGI_COLOR_SPACE_TYPE, D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS, ID2D1ImageSource**, int&gt;)(lpVtbl[<vtbl explicit="False">100</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="surfaces">surfaces</param>, <param name="surfaceCount">surfaceCount</param>, <param name="colorSpace">colorSpace</param>, <param name="options">options</param>, <param name="imageSource">imageSource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGradientMeshWorldBounds" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="gradientMesh">
+                    <type>ID2D1GradientMesh*</type>
+                </param>
+                <param name="pBounds">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1GradientMesh*, D2D_RECT_F*, int&gt;)(lpVtbl[<vtbl explicit="False">101</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="gradientMesh">gradientMesh</param>, <param name="pBounds">pBounds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawInk" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ink">
+                    <type>ID2D1Ink*</type>
+                </param>
+                <param name="brush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="inkStyle">
+                    <type>ID2D1InkStyle*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1Ink*, ID2D1Brush*, ID2D1InkStyle*, void&gt;)(lpVtbl[<vtbl explicit="False">102</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="ink">ink</param>, <param name="brush">brush</param>, <param name="inkStyle">inkStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawGradientMesh" access="public" unsafe="true">
+                <type>void</type>
+                <param name="gradientMesh">
+                    <type>ID2D1GradientMesh*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1GradientMesh*, void&gt;)(lpVtbl[<vtbl explicit="False">103</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="gradientMesh">gradientMesh</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawGdiMetafile" access="public" unsafe="true">
+                <type>void</type>
+                <param name="gdiMetafile">
+                    <type>ID2D1GdiMetafile*</type>
+                </param>
+                <param name="destinationRectangle">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="sourceRectangle">
+                    <type>D2D_RECT_F*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1GdiMetafile*, D2D_RECT_F*, D2D_RECT_F*, void&gt;)(lpVtbl[<vtbl explicit="False">104</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="gdiMetafile">gdiMetafile</param>, <param name="destinationRectangle">destinationRectangle</param>, <param name="sourceRectangle">sourceRectangle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTransformedImageSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="imageSource">
+                    <type>ID2D1ImageSource*</type>
+                </param>
+                <param name="properties">
+                    <type>D2D1_TRANSFORMED_IMAGE_SOURCE_PROPERTIES*</type>
+                </param>
+                <param name="transformedImageSource">
+                    <type>ID2D1TransformedImageSource**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1ImageSource*, D2D1_TRANSFORMED_IMAGE_SOURCE_PROPERTIES*, ID2D1TransformedImageSource**, int&gt;)(lpVtbl[<vtbl explicit="False">105</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="imageSource">imageSource</param>, <param name="properties">properties</param>, <param name="transformedImageSource">transformedImageSource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSpriteBatch" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="spriteBatch">
+                    <type>ID2D1SpriteBatch**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1SpriteBatch**, int&gt;)(lpVtbl[<vtbl explicit="False">106</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="spriteBatch">spriteBatch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawSpriteBatch" access="public" unsafe="true">
+                <type>void</type>
+                <param name="spriteBatch">
+                    <type>ID2D1SpriteBatch*</type>
+                </param>
+                <param name="startIndex">
+                    <type>uint</type>
+                </param>
+                <param name="spriteCount">
+                    <type>uint</type>
+                </param>
+                <param name="bitmap">
+                    <type>ID2D1Bitmap*</type>
+                </param>
+                <param name="interpolationMode">
+                    <type>D2D1_BITMAP_INTERPOLATION_MODE</type>
+                    <init>
+                        <code>D2D1_BITMAP_INTERPOLATION_MODE_LINEAR
+        </code>
+                    </init>
+                </param>
+                <param name="spriteOptions">
+                    <type>D2D1_SPRITE_OPTIONS</type>
+                    <init>
+                        <code>D2D1_SPRITE_OPTIONS_NONE
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, D2D1_BITMAP_INTERPOLATION_MODE, D2D1_SPRITE_OPTIONS, void&gt;)(lpVtbl[<vtbl explicit="False">107</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="spriteBatch">spriteBatch</param>, <param name="startIndex">startIndex</param>, <param name="spriteCount">spriteCount</param>, <param name="bitmap">bitmap</param>, <param name="interpolationMode">interpolationMode</param>, <param name="spriteOptions">spriteOptions</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSvgGlyphStyle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="svgGlyphStyle">
+                    <type>ID2D1SvgGlyphStyle**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1SvgGlyphStyle**, int&gt;)(lpVtbl[<vtbl explicit="False">108</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="svgGlyphStyle">svgGlyphStyle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawText" access="public" unsafe="true">
+                <type>void</type>
+                <param name="@string">
+                    <type>ushort*</type>
+                </param>
+                <param name="stringLength">
+                    <type>uint</type>
+                </param>
+                <param name="textFormat">
+                    <type>IDWriteTextFormat*</type>
+                </param>
+                <param name="layoutRect">
+                    <type>D2D_RECT_F*</type>
+                </param>
+                <param name="defaultFillBrush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="svgGlyphStyle">
+                    <type>ID2D1SvgGlyphStyle*</type>
+                </param>
+                <param name="colorPaletteIndex">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <param name="options">
+                    <type>D2D1_DRAW_TEXT_OPTIONS</type>
+                    <init>
+                        <code>D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT
+        </code>
+                    </init>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                    <init>
+                        <code>DWRITE_MEASURING_MODE_NATURAL
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ushort*, uint, IDWriteTextFormat*, D2D_RECT_F*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, D2D1_DRAW_TEXT_OPTIONS, DWRITE_MEASURING_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">109</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="@string">@string</param>, <param name="stringLength">stringLength</param>, <param name="textFormat">textFormat</param>, <param name="layoutRect">layoutRect</param>, <param name="defaultFillBrush">defaultFillBrush</param>, <param name="svgGlyphStyle">svgGlyphStyle</param>, <param name="colorPaletteIndex">colorPaletteIndex</param>, <param name="options">options</param>, <param name="measuringMode">measuringMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawTextLayout" access="public" unsafe="true">
+                <type>void</type>
+                <param name="origin">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="textLayout">
+                    <type>IDWriteTextLayout*</type>
+                </param>
+                <param name="defaultFillBrush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="svgGlyphStyle">
+                    <type>ID2D1SvgGlyphStyle*</type>
+                </param>
+                <param name="colorPaletteIndex">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <param name="options">
+                    <type>D2D1_DRAW_TEXT_OPTIONS</type>
+                    <init>
+                        <code>D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_POINT_2F, IDWriteTextLayout*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, D2D1_DRAW_TEXT_OPTIONS, void&gt;)(lpVtbl[<vtbl explicit="False">110</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="origin">origin</param>, <param name="textLayout">textLayout</param>, <param name="defaultFillBrush">defaultFillBrush</param>, <param name="svgGlyphStyle">svgGlyphStyle</param>, <param name="colorPaletteIndex">colorPaletteIndex</param>, <param name="options">options</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawColorBitmapGlyphRun" access="public" unsafe="true">
+                <type>void</type>
+                <param name="glyphImageFormat">
+                    <type>DWRITE_GLYPH_IMAGE_FORMATS</type>
+                </param>
+                <param name="baselineOrigin">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="glyphRun">
+                    <type>DWRITE_GLYPH_RUN*</type>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                    <init>
+                        <code>DWRITE_MEASURING_MODE_NATURAL
+        </code>
+                    </init>
+                </param>
+                <param name="bitmapSnapOption">
+                    <type>D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION</type>
+                    <init>
+                        <code>D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DEFAULT
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, DWRITE_GLYPH_IMAGE_FORMATS, D2D_POINT_2F, DWRITE_GLYPH_RUN*, DWRITE_MEASURING_MODE, D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION, void&gt;)(lpVtbl[<vtbl explicit="False">111</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphImageFormat">glyphImageFormat</param>, <param name="baselineOrigin">baselineOrigin</param>, <param name="glyphRun">glyphRun</param>, <param name="measuringMode">measuringMode</param>, <param name="bitmapSnapOption">bitmapSnapOption</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawSvgGlyphRun" access="public" unsafe="true">
+                <type>void</type>
+                <param name="baselineOrigin">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="glyphRun">
+                    <type>DWRITE_GLYPH_RUN*</type>
+                </param>
+                <param name="defaultFillBrush">
+                    <type>ID2D1Brush*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="svgGlyphStyle">
+                    <type>ID2D1SvgGlyphStyle*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <param name="colorPaletteIndex">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                    <init>
+                        <code>DWRITE_MEASURING_MODE_NATURAL
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_POINT_2F, DWRITE_GLYPH_RUN*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, DWRITE_MEASURING_MODE, void&gt;)(lpVtbl[<vtbl explicit="False">112</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="baselineOrigin">baselineOrigin</param>, <param name="glyphRun">glyphRun</param>, <param name="defaultFillBrush">defaultFillBrush</param>, <param name="svgGlyphStyle">svgGlyphStyle</param>, <param name="colorPaletteIndex">colorPaletteIndex</param>, <param name="measuringMode">measuringMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetColorBitmapGlyphImage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="glyphImageFormat">
+                    <type>DWRITE_GLYPH_IMAGE_FORMATS</type>
+                </param>
+                <param name="glyphOrigin">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="fontFace">
+                    <type>IDWriteFontFace*</type>
+                </param>
+                <param name="fontEmSize">
+                    <type>float</type>
+                </param>
+                <param name="glyphIndex">
+                    <type>ushort</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="dpiX">
+                    <type>float</type>
+                </param>
+                <param name="dpiY">
+                    <type>float</type>
+                </param>
+                <param name="glyphTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="glyphImage">
+                    <type>ID2D1Image**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, DWRITE_GLYPH_IMAGE_FORMATS, D2D_POINT_2F, IDWriteFontFace*, float, ushort, int, D2D_MATRIX_3X2_F*, float, float, D2D_MATRIX_3X2_F*, ID2D1Image**, int&gt;)(lpVtbl[<vtbl explicit="False">113</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphImageFormat">glyphImageFormat</param>, <param name="glyphOrigin">glyphOrigin</param>, <param name="fontFace">fontFace</param>, <param name="fontEmSize">fontEmSize</param>, <param name="glyphIndex">glyphIndex</param>, <param name="isSideways">isSideways</param>, <param name="worldTransform">worldTransform</param>, <param name="dpiX">dpiX</param>, <param name="dpiY">dpiY</param>, <param name="glyphTransform">glyphTransform</param>, <param name="glyphImage">glyphImage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSvgGlyphImage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="glyphOrigin">
+                    <type>D2D_POINT_2F</type>
+                </param>
+                <param name="fontFace">
+                    <type>IDWriteFontFace*</type>
+                </param>
+                <param name="fontEmSize">
+                    <type>float</type>
+                </param>
+                <param name="glyphIndex">
+                    <type>ushort</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                </param>
+                <param name="worldTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="defaultFillBrush">
+                    <type>ID2D1Brush*</type>
+                </param>
+                <param name="svgGlyphStyle">
+                    <type>ID2D1SvgGlyphStyle*</type>
+                </param>
+                <param name="colorPaletteIndex">
+                    <type>uint</type>
+                </param>
+                <param name="glyphTransform">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <param name="glyphImage">
+                    <type>ID2D1CommandList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D_POINT_2F, IDWriteFontFace*, float, ushort, int, D2D_MATRIX_3X2_F*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, D2D_MATRIX_3X2_F*, ID2D1CommandList**, int&gt;)(lpVtbl[<vtbl explicit="False">114</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphOrigin">glyphOrigin</param>, <param name="fontFace">fontFace</param>, <param name="fontEmSize">fontEmSize</param>, <param name="glyphIndex">glyphIndex</param>, <param name="isSideways">isSideways</param>, <param name="worldTransform">worldTransform</param>, <param name="defaultFillBrush">defaultFillBrush</param>, <param name="svgGlyphStyle">svgGlyphStyle</param>, <param name="colorPaletteIndex">colorPaletteIndex</param>, <param name="glyphTransform">glyphTransform</param>, <param name="glyphImage">glyphImage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSvgDocument" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputXmlStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="viewportSize">
+                    <type>D2D_SIZE_F</type>
+                </param>
+                <param name="svgDocument">
+                    <type>ID2D1SvgDocument**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, IStream*, D2D_SIZE_F, ID2D1SvgDocument**, int&gt;)(lpVtbl[<vtbl explicit="False">115</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="inputXmlStream">inputXmlStream</param>, <param name="viewportSize">viewportSize</param>, <param name="svgDocument">svgDocument</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawSvgDocument" access="public" unsafe="true">
+                <type>void</type>
+                <param name="svgDocument">
+                    <type>ID2D1SvgDocument*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1DeviceContext5*, ID2D1SvgDocument*, void&gt;)(lpVtbl[<vtbl explicit="False">116</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="svgDocument">svgDocument</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorContextFromDxgiColorSpace" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="colorSpace">
+                    <type>DXGI_COLOR_SPACE_TYPE</type>
+                </param>
+                <param name="colorContext">
+                    <type>ID2D1ColorContext1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, DXGI_COLOR_SPACE_TYPE, ID2D1ColorContext1**, int&gt;)(lpVtbl[<vtbl explicit="False">117</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="colorSpace">colorSpace</param>, <param name="colorContext">colorContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateColorContextFromSimpleColorProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="simpleProfile">
+                    <type>D2D1_SIMPLE_COLOR_PROFILE*</type>
+                </param>
+                <param name="colorContext">
+                    <type>ID2D1ColorContext1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1DeviceContext5*, D2D1_SIMPLE_COLOR_PROFILE*, ID2D1ColorContext1**, int&gt;)(lpVtbl[<vtbl explicit="False">118</vtbl>]))(<param special="thisPtr">(ID2D1DeviceContext5*)Unsafe.AsPointer(ref this)</param>, <param name="simpleProfile">simpleProfile</param>, <param name="colorContext">colorContext</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

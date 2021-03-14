@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wingdi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="AXESLISTA" access="public">
+            <field name="axlReserved" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="axlNumAxes" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="axlAxisInfo" access="public">
+                <type native="AXISINFOA [16]" count="16" fixed="_axlAxisInfo_e__FixedBuffer">AXISINFOA</type>
+            </field>
+            <struct name="_axlAxisInfo_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e6" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e7" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e8" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e9" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e10" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e11" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e12" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e13" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e14" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <field name="e15" access="public">
+                    <type native="">AXISINFOA</type>
+                </field>
+                <indexer access="public">
+                    <type>ref AXISINFOA</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;AXISINFOA&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 16);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

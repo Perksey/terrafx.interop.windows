@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/devicetopology.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAudioBass" access="public" native="struct IAudioBass : IPerChannelDbLevel" uuid="a2b1a1d9-4db3-425d-a2b2-bd335cb3e2e5" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioBass*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAudioBass*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioBass*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAudioBass*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioBass*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAudioBass*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetChannelCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcChannels">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioBass*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAudioBass*)Unsafe.AsPointer(ref this)</param>, <param name="pcChannels">pcChannels</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLevelRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nChannel">
+                    <type>uint</type>
+                </param>
+                <param name="pfMinLevelDB">
+                    <type>float*</type>
+                </param>
+                <param name="pfMaxLevelDB">
+                    <type>float*</type>
+                </param>
+                <param name="pfStepping">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioBass*, uint, float*, float*, float*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAudioBass*)Unsafe.AsPointer(ref this)</param>, <param name="nChannel">nChannel</param>, <param name="pfMinLevelDB">pfMinLevelDB</param>, <param name="pfMaxLevelDB">pfMaxLevelDB</param>, <param name="pfStepping">pfStepping</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nChannel">
+                    <type>uint</type>
+                </param>
+                <param name="pfLevelDB">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioBass*, uint, float*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAudioBass*)Unsafe.AsPointer(ref this)</param>, <param name="nChannel">nChannel</param>, <param name="pfLevelDB">pfLevelDB</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nChannel">
+                    <type>uint</type>
+                </param>
+                <param name="fLevelDB">
+                    <type>float</type>
+                </param>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioBass*, uint, float, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAudioBass*)Unsafe.AsPointer(ref this)</param>, <param name="nChannel">nChannel</param>, <param name="fLevelDB">fLevelDB</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetLevelUniform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fLevelDB">
+                    <type>float</type>
+                </param>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioBass*, float, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAudioBass*)Unsafe.AsPointer(ref this)</param>, <param name="fLevelDB">fLevelDB</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetLevelAllChannels" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="aLevelsDB">
+                    <type>float*</type>
+                </param>
+                <param name="cChannels">
+                    <type>uint</type>
+                </param>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioBass*, float*, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAudioBass*)Unsafe.AsPointer(ref this)</param>, <param name="aLevelsDB">aLevelsDB</param>, <param name="cChannels">cChannels</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

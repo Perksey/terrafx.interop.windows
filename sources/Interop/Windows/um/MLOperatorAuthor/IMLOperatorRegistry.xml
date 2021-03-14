@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/MLOperatorAuthor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMLOperatorRegistry" access="public" native="struct IMLOperatorRegistry : IUnknown" uuid="2af9dd2d-b516-4672-9ab5-530c208493ad" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorRegistry*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMLOperatorRegistry*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorRegistry*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMLOperatorRegistry*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorRegistry*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMLOperatorRegistry*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterOperatorSetSchema" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="operatorSetId">
+                    <type>MLOperatorSetId*</type>
+                </param>
+                <param name="baselineVersion">
+                    <type>int</type>
+                </param>
+                <param name="schema">
+                    <type>MLOperatorSchemaDescription**</type>
+                </param>
+                <param name="schemaCount">
+                    <type>uint</type>
+                </param>
+                <param name="typeInferrer">
+                    <type>IMLOperatorTypeInferrer*</type>
+                </param>
+                <param name="shapeInferrer">
+                    <type>IMLOperatorShapeInferrer*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorRegistry*, MLOperatorSetId*, int, MLOperatorSchemaDescription**, uint, IMLOperatorTypeInferrer*, IMLOperatorShapeInferrer*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMLOperatorRegistry*)Unsafe.AsPointer(ref this)</param>, <param name="operatorSetId">operatorSetId</param>, <param name="baselineVersion">baselineVersion</param>, <param name="schema">schema</param>, <param name="schemaCount">schemaCount</param>, <param name="typeInferrer">typeInferrer</param>, <param name="shapeInferrer">shapeInferrer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterOperatorKernel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="operatorKernel">
+                    <type>MLOperatorKernelDescription*</type>
+                </param>
+                <param name="operatorKernelFactory">
+                    <type>IMLOperatorKernelFactory*</type>
+                </param>
+                <param name="shapeInferrer">
+                    <type>IMLOperatorShapeInferrer*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorRegistry*, MLOperatorKernelDescription*, IMLOperatorKernelFactory*, IMLOperatorShapeInferrer*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMLOperatorRegistry*)Unsafe.AsPointer(ref this)</param>, <param name="operatorKernel">operatorKernel</param>, <param name="operatorKernelFactory">operatorKernelFactory</param>, <param name="shapeInferrer">shapeInferrer</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

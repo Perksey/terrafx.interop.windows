@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dxcore_interface.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDXCoreAdapter" access="public" native="struct IDXCoreAdapter : IUnknown" uuid="f0db4c7f-fe5a-42a2-bd62-f2a6cf6fc83e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsValid" access="public" unsafe="true">
+                <type>bool</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, byte&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>) != 0;
+        </code>
+                </body>
+            </function>
+            <function name="IsAttributeSupported" access="public" unsafe="true">
+                <type>bool</type>
+                <param name="attributeGUID">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, Guid*, byte&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="attributeGUID">attributeGUID</param>) != 0;
+        </code>
+                </body>
+            </function>
+            <function name="IsPropertySupported" access="public" unsafe="true">
+                <type>bool</type>
+                <param name="property">
+                    <type>DXCoreAdapterProperty</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, DXCoreAdapterProperty, byte&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="property">property</param>) != 0;
+        </code>
+                </body>
+            </function>
+            <function name="GetProperty" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="property">
+                    <type>DXCoreAdapterProperty</type>
+                </param>
+                <param name="bufferSize">
+                    <type>nuint</type>
+                </param>
+                <param name="propertyData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, DXCoreAdapterProperty, nuint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="property">property</param>, <param name="bufferSize">bufferSize</param>, <param name="propertyData">propertyData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertySize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="property">
+                    <type>DXCoreAdapterProperty</type>
+                </param>
+                <param name="bufferSize">
+                    <type>nuint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, DXCoreAdapterProperty, nuint*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="property">property</param>, <param name="bufferSize">bufferSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsQueryStateSupported" access="public" unsafe="true">
+                <type>bool</type>
+                <param name="property">
+                    <type>DXCoreAdapterState</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, DXCoreAdapterState, byte&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="property">property</param>) != 0;
+        </code>
+                </body>
+            </function>
+            <function name="QueryState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="state">
+                    <type>DXCoreAdapterState</type>
+                </param>
+                <param name="inputStateDetailsSize">
+                    <type>nuint</type>
+                </param>
+                <param name="inputStateDetails">
+                    <type>void*</type>
+                </param>
+                <param name="outputBufferSize">
+                    <type>nuint</type>
+                </param>
+                <param name="outputBuffer">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, DXCoreAdapterState, nuint, void*, nuint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="state">state</param>, <param name="inputStateDetailsSize">inputStateDetailsSize</param>, <param name="inputStateDetails">inputStateDetails</param>, <param name="outputBufferSize">outputBufferSize</param>, <param name="outputBuffer">outputBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsSetStateSupported" access="public" unsafe="true">
+                <type>bool</type>
+                <param name="property">
+                    <type>DXCoreAdapterState</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, DXCoreAdapterState, byte&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="property">property</param>) != 0;
+        </code>
+                </body>
+            </function>
+            <function name="SetState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="state">
+                    <type>DXCoreAdapterState</type>
+                </param>
+                <param name="inputStateDetailsSize">
+                    <type>nuint</type>
+                </param>
+                <param name="inputStateDetails">
+                    <type>void*</type>
+                </param>
+                <param name="inputDataSize">
+                    <type>nuint</type>
+                </param>
+                <param name="inputData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, DXCoreAdapterState, nuint, void*, nuint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="state">state</param>, <param name="inputStateDetailsSize">inputStateDetailsSize</param>, <param name="inputStateDetails">inputStateDetails</param>, <param name="inputDataSize">inputDataSize</param>, <param name="inputData">inputData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFactory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvFactory">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXCoreAdapter*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDXCoreAdapter*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvFactory">ppvFactory</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

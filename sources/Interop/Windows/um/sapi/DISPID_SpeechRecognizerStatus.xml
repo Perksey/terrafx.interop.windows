@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="DISPID_SpeechRecognizerStatus" access="public">
+            <type>int</type>
+            <enumerator name="DISPID_SRSAudioStatus" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRSCurrentStreamPosition" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRSAudioStatus + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRSCurrentStreamNumber" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRSCurrentStreamPosition + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRSNumberOfActiveRules" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRSCurrentStreamNumber + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRSClsidEngine" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRSNumberOfActiveRules + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SRSSupportedLanguages" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SRSClsidEngine + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="FILE_OBJECTID_BUFFER" access="public" unsafe="true">
+            <field name="ObjectId" access="public">
+                <type native="BYTE [16]" count="16" fixed="_ObjectId_e__FixedBuffer">byte</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_FILE_OBJECTID_BUFFER::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:11649:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="BirthVolumeId" access="public">
+                <type native="">Span&lt;byte&gt;</type>
+                <get inlining="aggressive">
+                    <code>return MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.BirthVolumeId[0], 16);
+        </code>
+                </get>
+            </field>
+            <field name="BirthObjectId" access="public">
+                <type native="">Span&lt;byte&gt;</type>
+                <get inlining="aggressive">
+                    <code>return MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.BirthObjectId[0], 16);
+        </code>
+                </get>
+            </field>
+            <field name="DomainId" access="public">
+                <type native="">Span&lt;byte&gt;</type>
+                <get inlining="aggressive">
+                    <code>return MemoryMarshal.CreateSpan(ref Anonymous.Anonymous.DomainId[0], 16);
+        </code>
+                </get>
+            </field>
+            <field name="ExtendedInfo" access="public">
+                <type native="">Span&lt;byte&gt;</type>
+                <get inlining="aggressive">
+                    <code>return MemoryMarshal.CreateSpan(ref Anonymous.ExtendedInfo[0], 48);
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="Anonymous" access="public" offset="0">
+                    <type native="_FILE_OBJECTID_BUFFER::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:11650:9)">_Anonymous_e__Struct</type>
+                </field>
+                <field name="ExtendedInfo" access="public" offset="0">
+                    <type native="BYTE [48]" count="48" fixed="_ExtendedInfo_e__FixedBuffer">byte</type>
+                </field>
+                <struct name="_Anonymous_e__Struct" access="public" unsafe="true">
+                    <field name="BirthVolumeId" access="public">
+                        <type native="BYTE [16]" count="16" fixed="_BirthVolumeId_e__FixedBuffer">byte</type>
+                    </field>
+                    <field name="BirthObjectId" access="public">
+                        <type native="BYTE [16]" count="16" fixed="_BirthObjectId_e__FixedBuffer">byte</type>
+                    </field>
+                    <field name="DomainId" access="public">
+                        <type native="BYTE [16]" count="16" fixed="_DomainId_e__FixedBuffer">byte</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

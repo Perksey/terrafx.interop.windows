@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/PropIdlBase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PROPSPEC" access="public" unsafe="true">
+            <field name="ulKind" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="tagPROPSPEC::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/PropIdlBase.h:444:43)">_Anonymous_e__Union</type>
+            </field>
+            <field name="propid" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.propid, 1));
+        </code>
+                </get>
+            </field>
+            <field name="lpwstr" access="public">
+                <type native="">ref ushort*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;lpwstr;
+        }
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="propid" access="public" offset="0">
+                    <type native="PROPID">uint</type>
+                </field>
+                <field name="lpwstr" access="public" offset="0">
+                    <type native="LPOLESTR">ushort*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

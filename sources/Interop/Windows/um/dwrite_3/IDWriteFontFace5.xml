@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dwrite_3.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDWriteFontFace5" access="public" native="struct IDWriteFontFace5 : IDWriteFontFace4" uuid="98eff3a5-b667-479a-b145-e2fa5b9fdc29" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetType" access="public" unsafe="true">
+                <type>DWRITE_FONT_FACE_TYPE</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_FONT_FACE_TYPE&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFiles" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="numberOfFiles">
+                    <type>uint*</type>
+                </param>
+                <param name="fontFiles">
+                    <type>IDWriteFontFile**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint*, IDWriteFontFile**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="numberOfFiles">numberOfFiles</param>, <param name="fontFiles">fontFiles</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetIndex" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSimulations" access="public" unsafe="true">
+                <type>DWRITE_FONT_SIMULATIONS</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_FONT_SIMULATIONS&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsSymbolFont" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMetrics" access="public" unsafe="true">
+                <type>void</type>
+                <param name="fontFaceMetrics">
+                    <type>DWRITE_FONT_METRICS*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_FONT_METRICS*, void&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="fontFaceMetrics">fontFaceMetrics</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGlyphCount" access="public" unsafe="true">
+                <type native="UINT16">ushort</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, ushort&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDesignGlyphMetrics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="glyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <param name="glyphCount">
+                    <type>uint</type>
+                </param>
+                <param name="glyphMetrics">
+                    <type>DWRITE_GLYPH_METRICS*</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, ushort*, uint, DWRITE_GLYPH_METRICS*, int, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphIndices">glyphIndices</param>, <param name="glyphCount">glyphCount</param>, <param name="glyphMetrics">glyphMetrics</param>, <param name="isSideways">isSideways</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGlyphIndices" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="codePoints">
+                    <type>uint*</type>
+                </param>
+                <param name="codePointCount">
+                    <type>uint</type>
+                </param>
+                <param name="glyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint*, uint, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="codePoints">codePoints</param>, <param name="codePointCount">codePointCount</param>, <param name="glyphIndices">glyphIndices</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TryGetFontTable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="openTypeTableTag">
+                    <type>uint</type>
+                </param>
+                <param name="tableData">
+                    <type>void**</type>
+                </param>
+                <param name="tableSize">
+                    <type>uint*</type>
+                </param>
+                <param name="tableContext">
+                    <type>void**</type>
+                </param>
+                <param name="exists">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint, void**, uint*, void**, int*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="openTypeTableTag">openTypeTableTag</param>, <param name="tableData">tableData</param>, <param name="tableSize">tableSize</param>, <param name="tableContext">tableContext</param>, <param name="exists">exists</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseFontTable" access="public" unsafe="true">
+                <type>void</type>
+                <param name="tableContext">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDWriteFontFace5*, void*, void&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="tableContext">tableContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGlyphRunOutline" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="emSize">
+                    <type>float</type>
+                </param>
+                <param name="glyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <param name="glyphAdvances">
+                    <type>float*</type>
+                </param>
+                <param name="glyphOffsets">
+                    <type>DWRITE_GLYPH_OFFSET*</type>
+                </param>
+                <param name="glyphCount">
+                    <type>uint</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                </param>
+                <param name="isRightToLeft">
+                    <type>int</type>
+                </param>
+                <param name="geometrySink">
+                    <type>ID2D1SimplifiedGeometrySink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, float, ushort*, float*, DWRITE_GLYPH_OFFSET*, uint, int, int, ID2D1SimplifiedGeometrySink*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="emSize">emSize</param>, <param name="glyphIndices">glyphIndices</param>, <param name="glyphAdvances">glyphAdvances</param>, <param name="glyphOffsets">glyphOffsets</param>, <param name="glyphCount">glyphCount</param>, <param name="isSideways">isSideways</param>, <param name="isRightToLeft">isRightToLeft</param>, <param name="geometrySink">geometrySink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRecommendedRenderingMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="emSize">
+                    <type>float</type>
+                </param>
+                <param name="pixelsPerDip">
+                    <type>float</type>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                </param>
+                <param name="renderingParams">
+                    <type>IDWriteRenderingParams*</type>
+                </param>
+                <param name="renderingMode">
+                    <type>DWRITE_RENDERING_MODE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, float, float, DWRITE_MEASURING_MODE, IDWriteRenderingParams*, DWRITE_RENDERING_MODE*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="emSize">emSize</param>, <param name="pixelsPerDip">pixelsPerDip</param>, <param name="measuringMode">measuringMode</param>, <param name="renderingParams">renderingParams</param>, <param name="renderingMode">renderingMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGdiCompatibleMetrics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="emSize">
+                    <type>float</type>
+                </param>
+                <param name="pixelsPerDip">
+                    <type>float</type>
+                </param>
+                <param name="transform">
+                    <type>DWRITE_MATRIX*</type>
+                </param>
+                <param name="fontFaceMetrics">
+                    <type>DWRITE_FONT_METRICS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, float, float, DWRITE_MATRIX*, DWRITE_FONT_METRICS*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="emSize">emSize</param>, <param name="pixelsPerDip">pixelsPerDip</param>, <param name="transform">transform</param>, <param name="fontFaceMetrics">fontFaceMetrics</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGdiCompatibleGlyphMetrics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="emSize">
+                    <type>float</type>
+                </param>
+                <param name="pixelsPerDip">
+                    <type>float</type>
+                </param>
+                <param name="transform">
+                    <type>DWRITE_MATRIX*</type>
+                </param>
+                <param name="useGdiNatural">
+                    <type>int</type>
+                </param>
+                <param name="glyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <param name="glyphCount">
+                    <type>uint</type>
+                </param>
+                <param name="glyphMetrics">
+                    <type>DWRITE_GLYPH_METRICS*</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, float, float, DWRITE_MATRIX*, int, ushort*, uint, DWRITE_GLYPH_METRICS*, int, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="emSize">emSize</param>, <param name="pixelsPerDip">pixelsPerDip</param>, <param name="transform">transform</param>, <param name="useGdiNatural">useGdiNatural</param>, <param name="glyphIndices">glyphIndices</param>, <param name="glyphCount">glyphCount</param>, <param name="glyphMetrics">glyphMetrics</param>, <param name="isSideways">isSideways</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMetrics" access="public" unsafe="true">
+                <type>void</type>
+                <param name="fontMetrics">
+                    <type>DWRITE_FONT_METRICS1*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_FONT_METRICS1*, void&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="fontMetrics">fontMetrics</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGdiCompatibleMetrics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="emSize">
+                    <type>float</type>
+                </param>
+                <param name="pixelsPerDip">
+                    <type>float</type>
+                </param>
+                <param name="transform">
+                    <type>DWRITE_MATRIX*</type>
+                </param>
+                <param name="fontMetrics">
+                    <type>DWRITE_FONT_METRICS1*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, float, float, DWRITE_MATRIX*, DWRITE_FONT_METRICS1*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="emSize">emSize</param>, <param name="pixelsPerDip">pixelsPerDip</param>, <param name="transform">transform</param>, <param name="fontMetrics">fontMetrics</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCaretMetrics" access="public" unsafe="true">
+                <type>void</type>
+                <param name="caretMetrics">
+                    <type>DWRITE_CARET_METRICS*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_CARET_METRICS*, void&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="caretMetrics">caretMetrics</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUnicodeRanges" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="maxRangeCount">
+                    <type>uint</type>
+                </param>
+                <param name="unicodeRanges">
+                    <type>DWRITE_UNICODE_RANGE*</type>
+                </param>
+                <param name="actualRangeCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint, DWRITE_UNICODE_RANGE*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="maxRangeCount">maxRangeCount</param>, <param name="unicodeRanges">unicodeRanges</param>, <param name="actualRangeCount">actualRangeCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsMonospacedFont" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDesignGlyphAdvances" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="glyphCount">
+                    <type>uint</type>
+                </param>
+                <param name="glyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <param name="glyphAdvances">
+                    <type>int*</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint, ushort*, int*, int, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphCount">glyphCount</param>, <param name="glyphIndices">glyphIndices</param>, <param name="glyphAdvances">glyphAdvances</param>, <param name="isSideways">isSideways</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGdiCompatibleGlyphAdvances" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="emSize">
+                    <type>float</type>
+                </param>
+                <param name="pixelsPerDip">
+                    <type>float</type>
+                </param>
+                <param name="transform">
+                    <type>DWRITE_MATRIX*</type>
+                </param>
+                <param name="useGdiNatural">
+                    <type>int</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                </param>
+                <param name="glyphCount">
+                    <type>uint</type>
+                </param>
+                <param name="glyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <param name="glyphAdvances">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, float, float, DWRITE_MATRIX*, int, int, uint, ushort*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="emSize">emSize</param>, <param name="pixelsPerDip">pixelsPerDip</param>, <param name="transform">transform</param>, <param name="useGdiNatural">useGdiNatural</param>, <param name="isSideways">isSideways</param>, <param name="glyphCount">glyphCount</param>, <param name="glyphIndices">glyphIndices</param>, <param name="glyphAdvances">glyphAdvances</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetKerningPairAdjustments" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="glyphCount">
+                    <type>uint</type>
+                </param>
+                <param name="glyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <param name="glyphAdvanceAdjustments">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint, ushort*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphCount">glyphCount</param>, <param name="glyphIndices">glyphIndices</param>, <param name="glyphAdvanceAdjustments">glyphAdvanceAdjustments</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HasKerningPairs" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRecommendedRenderingMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fontEmSize">
+                    <type>float</type>
+                </param>
+                <param name="dpiX">
+                    <type>float</type>
+                </param>
+                <param name="dpiY">
+                    <type>float</type>
+                </param>
+                <param name="transform">
+                    <type>DWRITE_MATRIX*</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                </param>
+                <param name="outlineThreshold">
+                    <type>DWRITE_OUTLINE_THRESHOLD</type>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                </param>
+                <param name="renderingMode">
+                    <type>DWRITE_RENDERING_MODE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, float, float, float, DWRITE_MATRIX*, int, DWRITE_OUTLINE_THRESHOLD, DWRITE_MEASURING_MODE, DWRITE_RENDERING_MODE*, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="fontEmSize">fontEmSize</param>, <param name="dpiX">dpiX</param>, <param name="dpiY">dpiY</param>, <param name="transform">transform</param>, <param name="isSideways">isSideways</param>, <param name="outlineThreshold">outlineThreshold</param>, <param name="measuringMode">measuringMode</param>, <param name="renderingMode">renderingMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVerticalGlyphVariants" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="glyphCount">
+                    <type>uint</type>
+                </param>
+                <param name="nominalGlyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <param name="verticalGlyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint, ushort*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphCount">glyphCount</param>, <param name="nominalGlyphIndices">nominalGlyphIndices</param>, <param name="verticalGlyphIndices">verticalGlyphIndices</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HasVerticalGlyphVariants" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsColorFont" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetColorPaletteCount" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPaletteEntryCount" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPaletteEntries" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="colorPaletteIndex">
+                    <type>uint</type>
+                </param>
+                <param name="firstEntryIndex">
+                    <type>uint</type>
+                </param>
+                <param name="entryCount">
+                    <type>uint</type>
+                </param>
+                <param name="paletteEntries">
+                    <type>DXGI_RGBA*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint, uint, uint, DXGI_RGBA*, int&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="colorPaletteIndex">colorPaletteIndex</param>, <param name="firstEntryIndex">firstEntryIndex</param>, <param name="entryCount">entryCount</param>, <param name="paletteEntries">paletteEntries</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRecommendedRenderingMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fontEmSize">
+                    <type>float</type>
+                </param>
+                <param name="dpiX">
+                    <type>float</type>
+                </param>
+                <param name="dpiY">
+                    <type>float</type>
+                </param>
+                <param name="transform">
+                    <type>DWRITE_MATRIX*</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                </param>
+                <param name="outlineThreshold">
+                    <type>DWRITE_OUTLINE_THRESHOLD</type>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                </param>
+                <param name="renderingParams">
+                    <type>IDWriteRenderingParams*</type>
+                </param>
+                <param name="renderingMode">
+                    <type>DWRITE_RENDERING_MODE*</type>
+                </param>
+                <param name="gridFitMode">
+                    <type>DWRITE_GRID_FIT_MODE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, float, float, float, DWRITE_MATRIX*, int, DWRITE_OUTLINE_THRESHOLD, DWRITE_MEASURING_MODE, IDWriteRenderingParams*, DWRITE_RENDERING_MODE*, DWRITE_GRID_FIT_MODE*, int&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="fontEmSize">fontEmSize</param>, <param name="dpiX">dpiX</param>, <param name="dpiY">dpiY</param>, <param name="transform">transform</param>, <param name="isSideways">isSideways</param>, <param name="outlineThreshold">outlineThreshold</param>, <param name="measuringMode">measuringMode</param>, <param name="renderingParams">renderingParams</param>, <param name="renderingMode">renderingMode</param>, <param name="gridFitMode">gridFitMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFontFaceReference" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fontFaceReference">
+                    <type>IDWriteFontFaceReference**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, IDWriteFontFaceReference**, int&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="fontFaceReference">fontFaceReference</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPanose" access="public" unsafe="true">
+                <type>void</type>
+                <param name="panose">
+                    <type>DWRITE_PANOSE*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_PANOSE*, void&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="panose">panose</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWeight" access="public" unsafe="true">
+                <type>DWRITE_FONT_WEIGHT</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_FONT_WEIGHT&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStretch" access="public" unsafe="true">
+                <type>DWRITE_FONT_STRETCH</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_FONT_STRETCH&gt;)(lpVtbl[<vtbl explicit="False">38</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStyle" access="public" unsafe="true">
+                <type>DWRITE_FONT_STYLE</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_FONT_STYLE&gt;)(lpVtbl[<vtbl explicit="False">39</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFamilyNames" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="names">
+                    <type>IDWriteLocalizedStrings**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, IDWriteLocalizedStrings**, int&gt;)(lpVtbl[<vtbl explicit="False">40</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="names">names</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFaceNames" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="names">
+                    <type>IDWriteLocalizedStrings**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, IDWriteLocalizedStrings**, int&gt;)(lpVtbl[<vtbl explicit="False">41</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="names">names</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInformationalStrings" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="informationalStringID">
+                    <type>DWRITE_INFORMATIONAL_STRING_ID</type>
+                </param>
+                <param name="informationalStrings">
+                    <type>IDWriteLocalizedStrings**</type>
+                </param>
+                <param name="exists">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_INFORMATIONAL_STRING_ID, IDWriteLocalizedStrings**, int*, int&gt;)(lpVtbl[<vtbl explicit="False">42</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="informationalStringID">informationalStringID</param>, <param name="informationalStrings">informationalStrings</param>, <param name="exists">exists</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HasCharacter" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="unicodeValue">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">43</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="unicodeValue">unicodeValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRecommendedRenderingMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fontEmSize">
+                    <type>float</type>
+                </param>
+                <param name="dpiX">
+                    <type>float</type>
+                </param>
+                <param name="dpiY">
+                    <type>float</type>
+                </param>
+                <param name="transform">
+                    <type>DWRITE_MATRIX*</type>
+                </param>
+                <param name="isSideways">
+                    <type>int</type>
+                </param>
+                <param name="outlineThreshold">
+                    <type>DWRITE_OUTLINE_THRESHOLD</type>
+                </param>
+                <param name="measuringMode">
+                    <type>DWRITE_MEASURING_MODE</type>
+                </param>
+                <param name="renderingParams">
+                    <type>IDWriteRenderingParams*</type>
+                </param>
+                <param name="renderingMode">
+                    <type>DWRITE_RENDERING_MODE1*</type>
+                </param>
+                <param name="gridFitMode">
+                    <type>DWRITE_GRID_FIT_MODE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, float, float, float, DWRITE_MATRIX*, int, DWRITE_OUTLINE_THRESHOLD, DWRITE_MEASURING_MODE, IDWriteRenderingParams*, DWRITE_RENDERING_MODE1*, DWRITE_GRID_FIT_MODE*, int&gt;)(lpVtbl[<vtbl explicit="False">44</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="fontEmSize">fontEmSize</param>, <param name="dpiX">dpiX</param>, <param name="dpiY">dpiY</param>, <param name="transform">transform</param>, <param name="isSideways">isSideways</param>, <param name="outlineThreshold">outlineThreshold</param>, <param name="measuringMode">measuringMode</param>, <param name="renderingParams">renderingParams</param>, <param name="renderingMode">renderingMode</param>, <param name="gridFitMode">gridFitMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsCharacterLocal" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="unicodeValue">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">45</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="unicodeValue">unicodeValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsGlyphLocal" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="glyphId">
+                    <type>ushort</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, ushort, int&gt;)(lpVtbl[<vtbl explicit="False">46</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphId">glyphId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AreCharactersLocal" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="characters">
+                    <type>ushort*</type>
+                </param>
+                <param name="characterCount">
+                    <type>uint</type>
+                </param>
+                <param name="enqueueIfNotLocal">
+                    <type>int</type>
+                </param>
+                <param name="isLocal">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, ushort*, uint, int, int*, int&gt;)(lpVtbl[<vtbl explicit="False">47</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="characters">characters</param>, <param name="characterCount">characterCount</param>, <param name="enqueueIfNotLocal">enqueueIfNotLocal</param>, <param name="isLocal">isLocal</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AreGlyphsLocal" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="glyphIndices">
+                    <type>ushort*</type>
+                </param>
+                <param name="glyphCount">
+                    <type>uint</type>
+                </param>
+                <param name="enqueueIfNotLocal">
+                    <type>int</type>
+                </param>
+                <param name="isLocal">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, ushort*, uint, int, int*, int&gt;)(lpVtbl[<vtbl explicit="False">48</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphIndices">glyphIndices</param>, <param name="glyphCount">glyphCount</param>, <param name="enqueueIfNotLocal">enqueueIfNotLocal</param>, <param name="isLocal">isLocal</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGlyphImageFormats" access="public" unsafe="true">
+                <type>DWRITE_GLYPH_IMAGE_FORMATS</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_GLYPH_IMAGE_FORMATS&gt;)(lpVtbl[<vtbl explicit="False">49</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGlyphImageFormats" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="glyphId">
+                    <type>ushort</type>
+                </param>
+                <param name="pixelsPerEmFirst">
+                    <type>uint</type>
+                </param>
+                <param name="pixelsPerEmLast">
+                    <type>uint</type>
+                </param>
+                <param name="glyphImageFormats">
+                    <type>DWRITE_GLYPH_IMAGE_FORMATS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, ushort, uint, uint, DWRITE_GLYPH_IMAGE_FORMATS*, int&gt;)(lpVtbl[<vtbl explicit="False">50</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphId">glyphId</param>, <param name="pixelsPerEmFirst">pixelsPerEmFirst</param>, <param name="pixelsPerEmLast">pixelsPerEmLast</param>, <param name="glyphImageFormats">glyphImageFormats</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGlyphImageData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="glyphId">
+                    <type>ushort</type>
+                </param>
+                <param name="pixelsPerEm">
+                    <type>uint</type>
+                </param>
+                <param name="glyphImageFormat">
+                    <type>DWRITE_GLYPH_IMAGE_FORMATS</type>
+                </param>
+                <param name="glyphData">
+                    <type>DWRITE_GLYPH_IMAGE_DATA*</type>
+                </param>
+                <param name="glyphDataContext">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, ushort, uint, DWRITE_GLYPH_IMAGE_FORMATS, DWRITE_GLYPH_IMAGE_DATA*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">51</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphId">glyphId</param>, <param name="pixelsPerEm">pixelsPerEm</param>, <param name="glyphImageFormat">glyphImageFormat</param>, <param name="glyphData">glyphData</param>, <param name="glyphDataContext">glyphDataContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseGlyphImageData" access="public" unsafe="true">
+                <type>void</type>
+                <param name="glyphDataContext">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDWriteFontFace5*, void*, void&gt;)(lpVtbl[<vtbl explicit="False">52</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="glyphDataContext">glyphDataContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFontAxisValueCount" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, uint&gt;)(lpVtbl[<vtbl explicit="False">53</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFontAxisValues" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fontAxisValues">
+                    <type>DWRITE_FONT_AXIS_VALUE*</type>
+                </param>
+                <param name="fontAxisValueCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, DWRITE_FONT_AXIS_VALUE*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">54</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="fontAxisValues">fontAxisValues</param>, <param name="fontAxisValueCount">fontAxisValueCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HasVariations" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, int&gt;)(lpVtbl[<vtbl explicit="False">55</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFontResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fontResource">
+                    <type>IDWriteFontResource**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, IDWriteFontResource**, int&gt;)(lpVtbl[<vtbl explicit="False">56</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="fontResource">fontResource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Equals" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="fontFace">
+                    <type>IDWriteFontFace*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontFace5*, IDWriteFontFace*, int&gt;)(lpVtbl[<vtbl explicit="False">57</vtbl>]))(<param special="thisPtr">(IDWriteFontFace5*)Unsafe.AsPointer(ref this)</param>, <param name="fontFace">fontFace</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

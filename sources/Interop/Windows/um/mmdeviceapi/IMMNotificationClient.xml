@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mmdeviceapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMMNotificationClient" access="public" native="struct IMMNotificationClient : IUnknown" uuid="7991eec9-7e89-4d85-8390-6c703cec60c0" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMNotificationClient*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMMNotificationClient*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMNotificationClient*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMMNotificationClient*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMNotificationClient*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMMNotificationClient*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnDeviceStateChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwstrDeviceId">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwNewState">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMNotificationClient*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMMNotificationClient*)Unsafe.AsPointer(ref this)</param>, <param name="pwstrDeviceId">pwstrDeviceId</param>, <param name="dwNewState">dwNewState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnDeviceAdded" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwstrDeviceId">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMNotificationClient*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMMNotificationClient*)Unsafe.AsPointer(ref this)</param>, <param name="pwstrDeviceId">pwstrDeviceId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnDeviceRemoved" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwstrDeviceId">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMNotificationClient*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMMNotificationClient*)Unsafe.AsPointer(ref this)</param>, <param name="pwstrDeviceId">pwstrDeviceId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnDefaultDeviceChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="flow">
+                    <type>EDataFlow</type>
+                </param>
+                <param name="role">
+                    <type>ERole</type>
+                </param>
+                <param name="pwstrDefaultDeviceId">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMNotificationClient*, EDataFlow, ERole, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMMNotificationClient*)Unsafe.AsPointer(ref this)</param>, <param name="flow">flow</param>, <param name="role">role</param>, <param name="pwstrDefaultDeviceId">pwstrDefaultDeviceId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnPropertyValueChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwstrDeviceId">
+                    <type>ushort*</type>
+                </param>
+                <param name="key">
+                    <type>PROPERTYKEY</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMMNotificationClient*, ushort*, PROPERTYKEY, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMMNotificationClient*)Unsafe.AsPointer(ref this)</param>, <param name="pwstrDeviceId">pwstrDeviceId</param>, <param name="key">key</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

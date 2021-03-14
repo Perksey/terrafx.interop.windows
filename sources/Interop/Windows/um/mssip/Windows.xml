@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mssip.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CryptSIPGetSignedDataMsg" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSubjectInfo">
+                    <type>SIP_SUBJECTINFO*</type>
+                </param>
+                <param name="pdwEncodingType">
+                    <type>uint*</type>
+                </param>
+                <param name="dwIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pcbSignedDataMsg">
+                    <type>uint*</type>
+                </param>
+                <param name="pbSignedDataMsg">
+                    <type>byte*</type>
+                </param>
+            </function>
+            <function name="CryptSIPPutSignedDataMsg" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSubjectInfo">
+                    <type>SIP_SUBJECTINFO*</type>
+                </param>
+                <param name="dwEncodingType">
+                    <type>uint</type>
+                </param>
+                <param name="pdwIndex">
+                    <type>uint*</type>
+                </param>
+                <param name="cbSignedDataMsg">
+                    <type>uint</type>
+                </param>
+                <param name="pbSignedDataMsg">
+                    <type>byte*</type>
+                </param>
+            </function>
+            <function name="CryptSIPCreateIndirectData" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSubjectInfo">
+                    <type>SIP_SUBJECTINFO*</type>
+                </param>
+                <param name="pcbIndirectData">
+                    <type>uint*</type>
+                </param>
+                <param name="pIndirectData">
+                    <type>SIP_INDIRECT_DATA*</type>
+                </param>
+            </function>
+            <function name="CryptSIPVerifyIndirectData" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSubjectInfo">
+                    <type>SIP_SUBJECTINFO*</type>
+                </param>
+                <param name="pIndirectData">
+                    <type>SIP_INDIRECT_DATA*</type>
+                </param>
+            </function>
+            <function name="CryptSIPRemoveSignedDataMsg" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSubjectInfo">
+                    <type>SIP_SUBJECTINFO*</type>
+                </param>
+                <param name="dwIndex">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CryptSIPLoad" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pgSubject">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pSipDispatch">
+                    <type>SIP_DISPATCH_INFO*</type>
+                </param>
+            </function>
+            <function name="CryptSIPRetrieveSubjectGuid" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="FileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="hFileIn">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pgSubject">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CryptSIPRetrieveSubjectGuidForCatalogFile" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="FileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="hFileIn">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pgSubject">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CryptSIPAddProvider" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="psNewProv">
+                    <type>SIP_ADD_NEWPROVIDER*</type>
+                </param>
+            </function>
+            <function name="CryptSIPRemoveProvider" access="public" lib="crypt32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="pgProv">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CryptSIPGetCaps" access="public" lib="crypt32" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSubjInfo">
+                    <type>SIP_SUBJECTINFO*</type>
+                </param>
+                <param name="pCaps">
+                    <type>SIP_CAP_SET_V3*</type>
+                </param>
+            </function>
+            <function name="CryptSIPGetSealedDigest" access="public" lib="crypt32" static="true">
+                <type native="BOOL">int</type>
+                <param name="pSubjectInfo">
+                    <type>SIP_SUBJECTINFO*</type>
+                </param>
+                <param name="pSig">
+                    <type>byte*</type>
+                </param>
+                <param name="dwSig">
+                    <type>uint</type>
+                </param>
+                <param name="pbDigest">
+                    <type>byte*</type>
+                </param>
+                <param name="pcbDigest">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <constant name="MSSIP_FLAGS_PROHIBIT_RESIZE_ON_CREATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="MSSIP_FLAGS_USE_CATALOG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="MSSIP_FLAGS_MULTI_HASH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00040000
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_INC_PE_RESOURCES_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x80
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_INC_PE_DEBUG_INFO_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_INC_PE_IMPORT_ADDR_TABLE_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_EXC_PE_PAGE_HASHES_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_INC_PE_PAGE_HASHES_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_DIGEST_GENERATE_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x200
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_DIGEST_SIGN_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x400
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_DIGEST_SIGN_EX_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4000
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_RELAXED_PE_MARKER_CHECK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x800
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_MARKER_CHECK_SKIP_SIP_INDIRECT_DATA_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SPC_MARKER_CHECK_CURRENTLY_SUPPORTED_FLAGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MSSIP_ADDINFO_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="MSSIP_ADDINFO_FLAT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="MSSIP_ADDINFO_CATMEMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="MSSIP_ADDINFO_BLOB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="MSSIP_ADDINFO_NONMSSIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>500
+            </code>
+                </value>
+            </constant>
+            <constant name="SIP_CAP_SET_VERSION_2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="SIP_CAP_SET_VERSION_3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="SIP_CAP_SET_CUR_VER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="SIP_CAP_FLAG_SEALING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SIP_MAX_MAGIC_NUMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

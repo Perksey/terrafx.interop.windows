@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D12CommandQueue" access="public" native="struct ID3D12CommandQueue : ID3D12Pageable" uuid="0ec870a6-5d7e-4c22-8cfc-5baae07616ed" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pData">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvDevice">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvDevice">ppvDevice</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdateTileMappings" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="NumResourceRegions">
+                    <type>uint</type>
+                </param>
+                <param name="pResourceRegionStartCoordinates">
+                    <type>D3D12_TILED_RESOURCE_COORDINATE*</type>
+                </param>
+                <param name="pResourceRegionSizes">
+                    <type>D3D12_TILE_REGION_SIZE*</type>
+                </param>
+                <param name="pHeap">
+                    <type>ID3D12Heap*</type>
+                </param>
+                <param name="NumRanges">
+                    <type>uint</type>
+                </param>
+                <param name="pRangeFlags">
+                    <type>D3D12_TILE_RANGE_FLAGS*</type>
+                </param>
+                <param name="pHeapRangeStartOffsets">
+                    <type>uint*</type>
+                </param>
+                <param name="pRangeTileCounts">
+                    <type>uint*</type>
+                </param>
+                <param name="Flags">
+                    <type>D3D12_TILE_MAPPING_FLAGS</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12CommandQueue*, ID3D12Resource*, uint, D3D12_TILED_RESOURCE_COORDINATE*, D3D12_TILE_REGION_SIZE*, ID3D12Heap*, uint, D3D12_TILE_RANGE_FLAGS*, uint*, uint*, D3D12_TILE_MAPPING_FLAGS, void&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="NumResourceRegions">NumResourceRegions</param>, <param name="pResourceRegionStartCoordinates">pResourceRegionStartCoordinates</param>, <param name="pResourceRegionSizes">pResourceRegionSizes</param>, <param name="pHeap">pHeap</param>, <param name="NumRanges">NumRanges</param>, <param name="pRangeFlags">pRangeFlags</param>, <param name="pHeapRangeStartOffsets">pHeapRangeStartOffsets</param>, <param name="pRangeTileCounts">pRangeTileCounts</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyTileMappings" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="pDstRegionStartCoordinate">
+                    <type>D3D12_TILED_RESOURCE_COORDINATE*</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D12Resource*</type>
+                </param>
+                <param name="pSrcRegionStartCoordinate">
+                    <type>D3D12_TILED_RESOURCE_COORDINATE*</type>
+                </param>
+                <param name="pRegionSize">
+                    <type>D3D12_TILE_REGION_SIZE*</type>
+                </param>
+                <param name="Flags">
+                    <type>D3D12_TILE_MAPPING_FLAGS</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12CommandQueue*, ID3D12Resource*, D3D12_TILED_RESOURCE_COORDINATE*, ID3D12Resource*, D3D12_TILED_RESOURCE_COORDINATE*, D3D12_TILE_REGION_SIZE*, D3D12_TILE_MAPPING_FLAGS, void&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="pDstRegionStartCoordinate">pDstRegionStartCoordinate</param>, <param name="pSrcResource">pSrcResource</param>, <param name="pSrcRegionStartCoordinate">pSrcRegionStartCoordinate</param>, <param name="pRegionSize">pRegionSize</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ExecuteCommandLists" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumCommandLists">
+                    <type>uint</type>
+                </param>
+                <param name="ppCommandLists">
+                    <type>ID3D12CommandList**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12CommandQueue*, uint, ID3D12CommandList**, void&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="NumCommandLists">NumCommandLists</param>, <param name="ppCommandLists">ppCommandLists</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMarker" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Metadata">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <param name="Size">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12CommandQueue*, uint, void*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="Metadata">Metadata</param>, <param name="pData">pData</param>, <param name="Size">Size</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginEvent" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Metadata">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <param name="Size">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12CommandQueue*, uint, void*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="Metadata">Metadata</param>, <param name="pData">pData</param>, <param name="Size">Size</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndEvent" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D12CommandQueue*, void&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Signal" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFence">
+                    <type>ID3D12Fence*</type>
+                </param>
+                <param name="Value">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, ID3D12Fence*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pFence">pFence</param>, <param name="Value">Value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Wait" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFence">
+                    <type>ID3D12Fence*</type>
+                </param>
+                <param name="Value">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, ID3D12Fence*, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pFence">pFence</param>, <param name="Value">Value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTimestampFrequency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFrequency">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pFrequency">pFrequency</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetClockCalibration" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pGpuTimestamp">
+                    <type>ulong*</type>
+                </param>
+                <param name="pCpuTimestamp">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12CommandQueue*, ulong*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param>, <param name="pGpuTimestamp">pGpuTimestamp</param>, <param name="pCpuTimestamp">pCpuTimestamp</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDesc" access="public" unsafe="true">
+                <type>D3D12_COMMAND_QUEUE_DESC</type>
+                <body>
+                    <code>
+                        <fixup type="*result">D3D12_COMMAND_QUEUE_DESC</fixup> result;
+        return *((delegate* unmanaged&lt;ID3D12CommandQueue*, D3D12_COMMAND_QUEUE_DESC*, D3D12_COMMAND_QUEUE_DESC*&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID3D12CommandQueue*)Unsafe.AsPointer(ref this)</param><param special="retFixup">, &amp;result</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

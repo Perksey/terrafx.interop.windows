@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/OCIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IOleParentUndoUnit" access="public" native="struct IOleParentUndoUnit : IOleUndoUnit" uuid="a1faf330-ef97-11ce-9bc9-00aa00608e01" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Do" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pUndoManager">
+                    <type>IOleUndoManager*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, IOleUndoManager*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>, <param name="pUndoManager">pUndoManager</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDescription" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pBstr">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>, <param name="pBstr">pBstr</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUnitType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="plID">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, Guid*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>, <param name="pClsid">pClsid</param>, <param name="plID">plID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnNextAdd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Open" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPUU">
+                    <type>IOleParentUndoUnit*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, IOleParentUndoUnit*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>, <param name="pPUU">pPUU</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Close" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPUU">
+                    <type>IOleParentUndoUnit*</type>
+                </param>
+                <param name="fCommit">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, IOleParentUndoUnit*, int, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>, <param name="pPUU">pPUU</param>, <param name="fCommit">fCommit</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Add" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pUU">
+                    <type>IOleUndoUnit*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, IOleUndoUnit*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>, <param name="pUU">pUU</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindUnit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pUU">
+                    <type>IOleUndoUnit*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, IOleUndoUnit*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>, <param name="pUU">pUU</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetParentState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwState">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleParentUndoUnit*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IOleParentUndoUnit*)Unsafe.AsPointer(ref this)</param>, <param name="pdwState">pdwState</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

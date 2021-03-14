@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/MLOperatorAuthor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMLOperatorTensor" access="public" native="struct IMLOperatorTensor : IUnknown" uuid="7fe41f41-f430-440e-aece-54416dc8b9db" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorTensor*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorTensor*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorTensor*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDimensionCount" access="public" unsafe="true">
+                <type native="uint32_t">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorTensor*, uint&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetShape" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dimensionCount">
+                    <type>uint</type>
+                </param>
+                <param name="dimensions">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorTensor*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>, <param name="dimensionCount">dimensionCount</param>, <param name="dimensions">dimensions</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTensorDataType" access="public" unsafe="true">
+                <type>MLOperatorTensorDataType</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorTensor*, MLOperatorTensorDataType&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsCpuData" access="public" unsafe="true">
+                <type>bool</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorTensor*, byte&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>) != 0;
+        </code>
+                </body>
+            </function>
+            <function name="IsDataInterface" access="public" unsafe="true">
+                <type>bool</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorTensor*, byte&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>) != 0;
+        </code>
+                </body>
+            </function>
+            <function name="GetData" access="public" unsafe="true">
+                <type native="void *">void*</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMLOperatorTensor*, void*&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDataInterface" access="public" unsafe="true">
+                <type>void</type>
+                <param name="dataInterface">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IMLOperatorTensor*, IUnknown**, void&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMLOperatorTensor*)Unsafe.AsPointer(ref this)</param>, <param name="dataInterface">dataInterface</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

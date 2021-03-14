@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/imapi2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDiscRecorder2Ex" access="public" native="struct IDiscRecorder2Ex : IUnknown" uuid="27354132-7f64-5b0f-8f00-5d77afbe261e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SendCommandNoData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Cdb">
+                    <type>byte*</type>
+                </param>
+                <param name="CdbSize">
+                    <type>uint</type>
+                </param>
+                <param name="SenseBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="Timeout">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, byte*, uint, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="Cdb">Cdb</param>, <param name="CdbSize">CdbSize</param>, <param name="SenseBuffer">SenseBuffer</param>, <param name="Timeout">Timeout</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SendCommandSendDataToDevice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Cdb">
+                    <type>byte*</type>
+                </param>
+                <param name="CdbSize">
+                    <type>uint</type>
+                </param>
+                <param name="SenseBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="Timeout">
+                    <type>uint</type>
+                </param>
+                <param name="Buffer">
+                    <type>byte*</type>
+                </param>
+                <param name="BufferSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, byte*, uint, byte*, uint, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="Cdb">Cdb</param>, <param name="CdbSize">CdbSize</param>, <param name="SenseBuffer">SenseBuffer</param>, <param name="Timeout">Timeout</param>, <param name="Buffer">Buffer</param>, <param name="BufferSize">BufferSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SendCommandGetDataFromDevice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Cdb">
+                    <type>byte*</type>
+                </param>
+                <param name="CdbSize">
+                    <type>uint</type>
+                </param>
+                <param name="SenseBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="Timeout">
+                    <type>uint</type>
+                </param>
+                <param name="Buffer">
+                    <type>byte*</type>
+                </param>
+                <param name="BufferSize">
+                    <type>uint</type>
+                </param>
+                <param name="BufferFetched">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, byte*, uint, byte*, uint, byte*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="Cdb">Cdb</param>, <param name="CdbSize">CdbSize</param>, <param name="SenseBuffer">SenseBuffer</param>, <param name="Timeout">Timeout</param>, <param name="Buffer">Buffer</param>, <param name="BufferSize">BufferSize</param>, <param name="BufferFetched">BufferFetched</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReadDvdStructure" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="format">
+                    <type>uint</type>
+                </param>
+                <param name="address">
+                    <type>uint</type>
+                </param>
+                <param name="layer">
+                    <type>uint</type>
+                </param>
+                <param name="agid">
+                    <type>uint</type>
+                </param>
+                <param name="data">
+                    <type>byte**</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, uint, uint, uint, uint, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="format">format</param>, <param name="address">address</param>, <param name="layer">layer</param>, <param name="agid">agid</param>, <param name="data">data</param>, <param name="count">count</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SendDvdStructure" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="format">
+                    <type>uint</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="count">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, uint, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="format">format</param>, <param name="data">data</param>, <param name="count">count</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAdapterDescriptor" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="data">
+                    <type>byte**</type>
+                </param>
+                <param name="byteSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="data">data</param>, <param name="byteSize">byteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDeviceDescriptor" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="data">
+                    <type>byte**</type>
+                </param>
+                <param name="byteSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="data">data</param>, <param name="byteSize">byteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDiscInformation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="discInformation">
+                    <type>byte**</type>
+                </param>
+                <param name="byteSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="discInformation">discInformation</param>, <param name="byteSize">byteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTrackInformation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="address">
+                    <type>uint</type>
+                </param>
+                <param name="addressType">
+                    <type>IMAPI_READ_TRACK_ADDRESS_TYPE</type>
+                </param>
+                <param name="trackInformation">
+                    <type>byte**</type>
+                </param>
+                <param name="byteSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, uint, IMAPI_READ_TRACK_ADDRESS_TYPE, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="address">address</param>, <param name="addressType">addressType</param>, <param name="trackInformation">trackInformation</param>, <param name="byteSize">byteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFeaturePage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="requestedFeature">
+                    <type>IMAPI_FEATURE_PAGE_TYPE</type>
+                </param>
+                <param name="currentFeatureOnly">
+                    <type>byte</type>
+                </param>
+                <param name="featureData">
+                    <type>byte**</type>
+                </param>
+                <param name="byteSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, IMAPI_FEATURE_PAGE_TYPE, byte, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="requestedFeature">requestedFeature</param>, <param name="currentFeatureOnly">currentFeatureOnly</param>, <param name="featureData">featureData</param>, <param name="byteSize">byteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetModePage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="requestedModePage">
+                    <type>IMAPI_MODE_PAGE_TYPE</type>
+                </param>
+                <param name="requestType">
+                    <type>IMAPI_MODE_PAGE_REQUEST_TYPE</type>
+                </param>
+                <param name="modePageData">
+                    <type>byte**</type>
+                </param>
+                <param name="byteSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, IMAPI_MODE_PAGE_TYPE, IMAPI_MODE_PAGE_REQUEST_TYPE, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="requestedModePage">requestedModePage</param>, <param name="requestType">requestType</param>, <param name="modePageData">modePageData</param>, <param name="byteSize">byteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetModePage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="requestType">
+                    <type>IMAPI_MODE_PAGE_REQUEST_TYPE</type>
+                </param>
+                <param name="data">
+                    <type>byte*</type>
+                </param>
+                <param name="byteSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, IMAPI_MODE_PAGE_REQUEST_TYPE, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="requestType">requestType</param>, <param name="data">data</param>, <param name="byteSize">byteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSupportedFeaturePages" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="currentFeatureOnly">
+                    <type>byte</type>
+                </param>
+                <param name="featureData">
+                    <type>IMAPI_FEATURE_PAGE_TYPE**</type>
+                </param>
+                <param name="byteSize">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, byte, IMAPI_FEATURE_PAGE_TYPE**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="currentFeatureOnly">currentFeatureOnly</param>, <param name="featureData">featureData</param>, <param name="byteSize">byteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSupportedProfiles" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="currentOnly">
+                    <type>byte</type>
+                </param>
+                <param name="profileTypes">
+                    <type>IMAPI_PROFILE_TYPE**</type>
+                </param>
+                <param name="validProfiles">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, byte, IMAPI_PROFILE_TYPE**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="currentOnly">currentOnly</param>, <param name="profileTypes">profileTypes</param>, <param name="validProfiles">validProfiles</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSupportedModePages" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="requestType">
+                    <type>IMAPI_MODE_PAGE_REQUEST_TYPE</type>
+                </param>
+                <param name="modePageTypes">
+                    <type>IMAPI_MODE_PAGE_TYPE**</type>
+                </param>
+                <param name="validPages">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, IMAPI_MODE_PAGE_REQUEST_TYPE, IMAPI_MODE_PAGE_TYPE**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="requestType">requestType</param>, <param name="modePageTypes">modePageTypes</param>, <param name="validPages">validPages</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetByteAlignmentMask" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="value">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMaximumNonPageAlignedTransferSize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="value">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMaximumPageAlignedTransferSize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="value">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscRecorder2Ex*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IDiscRecorder2Ex*)Unsafe.AsPointer(ref this)</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

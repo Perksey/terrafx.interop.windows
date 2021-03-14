@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/endpointvolume.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="AUDIO_VOLUME_NOTIFICATION_DATA" access="public" unsafe="true">
+            <field name="guidEventContext" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="bMuted" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="fMasterVolume" access="public">
+                <type native="">float</type>
+            </field>
+            <field name="nChannels" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="afChannelVolumes" access="public">
+                <type native="float [1]" count="1" fixed="_afChannelVolumes_e__FixedBuffer">float</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

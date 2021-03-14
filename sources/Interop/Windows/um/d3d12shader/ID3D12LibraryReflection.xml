@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12shader.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D12LibraryReflection" access="public" native="struct ID3D12LibraryReflection : IUnknown" uuid="8e349d19-54db-4a56-9dc9-119d87bdb804" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12LibraryReflection*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D12LibraryReflection*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12LibraryReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D12LibraryReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12LibraryReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D12LibraryReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDesc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D12_LIBRARY_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12LibraryReflection*, D3D12_LIBRARY_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D12LibraryReflection*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFunctionByIndex" access="public" unsafe="true">
+                <type native="ID3D12FunctionReflection *">ID3D12FunctionReflection*</type>
+                <param name="FunctionIndex">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12LibraryReflection*, int, ID3D12FunctionReflection*&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D12LibraryReflection*)Unsafe.AsPointer(ref this)</param>, <param name="FunctionIndex">FunctionIndex</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,4395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="CreateURLMoniker" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pMkCtx">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="szURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppmk">
+                    <type>IMoniker**</type>
+                </param>
+            </function>
+            <function name="CreateURLMonikerEx" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pMkCtx">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="szURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppmk">
+                    <type>IMoniker**</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetClassURL" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="szURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="pClsID">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="CreateAsyncBindCtx" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+                <param name="pBSCb">
+                    <type>IBindStatusCallback*</type>
+                </param>
+                <param name="pEFetc">
+                    <type>IEnumFORMATETC*</type>
+                </param>
+                <param name="ppBC">
+                    <type>IBindCtx**</type>
+                </param>
+            </function>
+            <function name="CreateURLMonikerEx2" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pMkCtx">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="pUri">
+                    <type>IUri*</type>
+                </param>
+                <param name="ppmk">
+                    <type>IMoniker**</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateAsyncBindCtxEx" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="dwOptions">
+                    <type>uint</type>
+                </param>
+                <param name="pBSCb">
+                    <type>IBindStatusCallback*</type>
+                </param>
+                <param name="pEnum">
+                    <type>IEnumFORMATETC*</type>
+                </param>
+                <param name="ppBC">
+                    <type>IBindCtx**</type>
+                </param>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="MkParseDisplayNameEx" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="szDisplayName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pchEaten">
+                    <type>uint*</type>
+                </param>
+                <param name="ppmk">
+                    <type>IMoniker**</type>
+                </param>
+            </function>
+            <function name="RegisterBindStatusCallback" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pBSCb">
+                    <type>IBindStatusCallback*</type>
+                </param>
+                <param name="ppBSCBPrev">
+                    <type>IBindStatusCallback**</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="RevokeBindStatusCallback" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pBSCb">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="GetClassFileOrMime" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="szFilename">
+                    <type>ushort*</type>
+                </param>
+                <param name="pBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="cbSize">
+                    <type>uint</type>
+                </param>
+                <param name="szMime">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <param name="pclsid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="IsValidURL" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="szURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoGetClassObjectFromURL" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rCLASSID">
+                    <type>Guid*</type>
+                </param>
+                <param name="szCODE">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFileVersionMS">
+                    <type>uint</type>
+                </param>
+                <param name="dwFileVersionLS">
+                    <type>uint</type>
+                </param>
+                <param name="szTYPE">
+                    <type>ushort*</type>
+                </param>
+                <param name="pBindCtx">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="dwClsContext">
+                    <type>uint</type>
+                </param>
+                <param name="pvReserved">
+                    <type>void*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="IEInstallScope" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwScope">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="FaultInIEFeature" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hWnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pClassSpec">
+                    <type>uCLSSPEC*</type>
+                </param>
+                <param name="pQuery">
+                    <type>QUERYCONTEXT*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetComponentIDFromCLSSPEC" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pClassspec">
+                    <type>uCLSSPEC*</type>
+                </param>
+                <param name="ppszComponentID">
+                    <type>sbyte**</type>
+                </param>
+            </function>
+            <function name="IsAsyncMoniker" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pmk">
+                    <type>IMoniker*</type>
+                </param>
+            </function>
+            <function name="CreateURLBinding" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="lpszUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="ppBdg">
+                    <type>IBinding**</type>
+                </param>
+            </function>
+            <function name="RegisterMediaTypes" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ctypes">
+                    <type>uint</type>
+                </param>
+                <param name="rgszTypes">
+                    <type>sbyte**</type>
+                </param>
+                <param name="rgcfTypes">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="FindMediaType" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="rgszTypes">
+                    <type>sbyte*</type>
+                </param>
+                <param name="rgcfTypes">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="CreateFormatEnumerator" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="cfmtetc">
+                    <type>uint</type>
+                </param>
+                <param name="rgfmtetc">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="ppenumfmtetc">
+                    <type>IEnumFORMATETC**</type>
+                </param>
+            </function>
+            <function name="RegisterFormatEnumerator" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pEFetc">
+                    <type>IEnumFORMATETC*</type>
+                </param>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="RevokeFormatEnumerator" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pEFetc">
+                    <type>IEnumFORMATETC*</type>
+                </param>
+            </function>
+            <function name="RegisterMediaTypeClass" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="ctypes">
+                    <type>uint</type>
+                </param>
+                <param name="rgszTypes">
+                    <type>sbyte**</type>
+                </param>
+                <param name="rgclsID">
+                    <type>Guid*</type>
+                </param>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FindMediaTypeClass" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="szType">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pclsID">
+                    <type>Guid*</type>
+                </param>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="UrlMkSetSessionOption" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOption">
+                    <type>uint</type>
+                </param>
+                <param name="pBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="dwBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="UrlMkGetSessionOption" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOption">
+                    <type>uint</type>
+                </param>
+                <param name="pBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="dwBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="pdwBufferLengthOut">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FindMimeFromData" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBC">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pwzUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="pBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="cbSize">
+                    <type>uint</type>
+                </param>
+                <param name="pwzMimeProposed">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwMimeFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppwzMimeOut">
+                    <type>ushort**</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="ObtainUserAgentString" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOption">
+                    <type>uint</type>
+                </param>
+                <param name="pszUAOut">
+                    <type>sbyte*</type>
+                </param>
+                <param name="cbSize">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="CompareSecurityIds" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pbSecurityId1">
+                    <type>byte*</type>
+                </param>
+                <param name="dwLen1">
+                    <type>uint</type>
+                </param>
+                <param name="pbSecurityId2">
+                    <type>byte*</type>
+                </param>
+                <param name="dwLen2">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CompatFlagsFromClsid" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pdwCompatFlags">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwMiscStatusFlags">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetAccessForIEAppContainer" access="public" lib="urlmon" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hObject">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ieObjectType">
+                    <type>IEObjectType</type>
+                </param>
+                <param name="dwAccessMask">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateUri" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzURI">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+                <param name="ppURI">
+                    <type>IUri**</type>
+                </param>
+            </function>
+            <function name="CreateUriWithFragment" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzURI">
+                    <type>ushort*</type>
+                </param>
+                <param name="pwzFragment">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+                <param name="ppURI">
+                    <type>IUri**</type>
+                </param>
+            </function>
+            <function name="CreateUriFromMultiByteString" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszANSIInputUri">
+                    <type>sbyte*</type>
+                </param>
+                <param name="dwEncodingFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwCodePage">
+                    <type>uint</type>
+                </param>
+                <param name="dwCreateFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+                <param name="ppUri">
+                    <type>IUri**</type>
+                </param>
+            </function>
+            <function name="CreateIUriBuilder" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pIUri">
+                    <type>IUri*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+                <param name="ppIUriBuilder">
+                    <type>IUriBuilder**</type>
+                </param>
+            </function>
+            <function name="HlinkSimpleNavigateToString" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="szTarget">
+                    <type>ushort*</type>
+                </param>
+                <param name="szLocation">
+                    <type>ushort*</type>
+                </param>
+                <param name="szTargetFrameName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="param5">
+                    <type>IBindStatusCallback*</type>
+                </param>
+                <param name="grfHLNF">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HlinkSimpleNavigateToMoniker" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pmkTarget">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="szLocation">
+                    <type>ushort*</type>
+                </param>
+                <param name="szTargetFrameName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="param5">
+                    <type>IBindStatusCallback*</type>
+                </param>
+                <param name="grfHLNF">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="URLOpenStreamA" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>sbyte*</type>
+                </param>
+                <param name="param2">
+                    <type>uint</type>
+                </param>
+                <param name="param3">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="URLOpenStreamW" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>ushort*</type>
+                </param>
+                <param name="param2">
+                    <type>uint</type>
+                </param>
+                <param name="param3">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="URLOpenPullStreamA" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>sbyte*</type>
+                </param>
+                <param name="param2">
+                    <type>uint</type>
+                </param>
+                <param name="param3">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="URLOpenPullStreamW" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>ushort*</type>
+                </param>
+                <param name="param2">
+                    <type>uint</type>
+                </param>
+                <param name="param3">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="URLDownloadToFileA" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>sbyte*</type>
+                </param>
+                <param name="param2">
+                    <type>sbyte*</type>
+                </param>
+                <param name="param3">
+                    <type>uint</type>
+                </param>
+                <param name="param4">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="URLDownloadToFileW" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>ushort*</type>
+                </param>
+                <param name="param2">
+                    <type>ushort*</type>
+                </param>
+                <param name="param3">
+                    <type>uint</type>
+                </param>
+                <param name="param4">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="URLDownloadToCacheFileA" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>sbyte*</type>
+                </param>
+                <param name="param2">
+                    <type>sbyte*</type>
+                </param>
+                <param name="cchFileName">
+                    <type>uint</type>
+                </param>
+                <param name="param4">
+                    <type>uint</type>
+                </param>
+                <param name="param5">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="URLDownloadToCacheFileW" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>ushort*</type>
+                </param>
+                <param name="param2">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchFileName">
+                    <type>uint</type>
+                </param>
+                <param name="param4">
+                    <type>uint</type>
+                </param>
+                <param name="param5">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="URLOpenBlockingStreamA" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>sbyte*</type>
+                </param>
+                <param name="param2">
+                    <type>IStream**</type>
+                </param>
+                <param name="param3">
+                    <type>uint</type>
+                </param>
+                <param name="param4">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="URLOpenBlockingStreamW" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="param0">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="param1">
+                    <type>ushort*</type>
+                </param>
+                <param name="param2">
+                    <type>IStream**</type>
+                </param>
+                <param name="param3">
+                    <type>uint</type>
+                </param>
+                <param name="param4">
+                    <type>IBindStatusCallback*</type>
+                </param>
+            </function>
+            <function name="HlinkGoBack" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <function name="HlinkGoForward" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+            </function>
+            <function name="HlinkNavigateString" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="szTarget">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="HlinkNavigateMoniker" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnk">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pmkTarget">
+                    <type>IMoniker*</type>
+                </param>
+            </function>
+            <function name="CoInternetParseUrl" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="ParseAction">
+                    <type>PARSEACTION</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pszResult">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchResult">
+                    <type>uint</type>
+                </param>
+                <param name="pcchResult">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInternetParseIUri" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pIUri">
+                    <type>IUri*</type>
+                </param>
+                <param name="ParseAction">
+                    <type>PARSEACTION</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pwzResult">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchResult">
+                    <type>uint</type>
+                </param>
+                <param name="pcchResult">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="CoInternetCombineUrl" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzBaseUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="pwzRelativeUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwCombineFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pszResult">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchResult">
+                    <type>uint</type>
+                </param>
+                <param name="pcchResult">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInternetCombineUrlEx" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBaseUri">
+                    <type>IUri*</type>
+                </param>
+                <param name="pwzRelativeUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwCombineFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCombinedUri">
+                    <type>IUri**</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="CoInternetCombineIUri" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pBaseUri">
+                    <type>IUri*</type>
+                </param>
+                <param name="pRelativeUri">
+                    <type>IUri*</type>
+                </param>
+                <param name="dwCombineFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCombinedUri">
+                    <type>IUri**</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="CoInternetCompareUrl" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzUrl1">
+                    <type>ushort*</type>
+                </param>
+                <param name="pwzUrl2">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInternetGetProtocolFlags" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="pdwFlags">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInternetQueryInfo" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pwzUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="QueryOptions">
+                    <type>QUERYOPTION</type>
+                </param>
+                <param name="dwQueryFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pvBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="cbBuffer">
+                    <type>uint</type>
+                </param>
+                <param name="pcbBuffer">
+                    <type>uint*</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInternetGetSession" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dwSessionMode">
+                    <type>uint</type>
+                </param>
+                <param name="ppIInternetSession">
+                    <type>IInternetSession**</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInternetGetSecurityUrl" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pwszUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="ppwszSecUrl">
+                    <type>ushort**</type>
+                </param>
+                <param name="psuAction">
+                    <type>PSUACTION</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="AsyncInstallDistributionUnit" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="szDistUnit">
+                    <type>ushort*</type>
+                </param>
+                <param name="szTYPE">
+                    <type>ushort*</type>
+                </param>
+                <param name="szExt">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFileVersionMS">
+                    <type>uint</type>
+                </param>
+                <param name="dwFileVersionLS">
+                    <type>uint</type>
+                </param>
+                <param name="szURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <param name="pvReserved">
+                    <type>void*</type>
+                </param>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInternetGetSecurityUrlEx" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pUri">
+                    <type>IUri*</type>
+                </param>
+                <param name="ppSecUri">
+                    <type>IUri**</type>
+                </param>
+                <param name="psuAction">
+                    <type>PSUACTION</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="CoInternetSetFeatureEnabled" access="public" lib="urlmon" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="FeatureEntry">
+                    <type>INTERNETFEATURELIST</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="fEnable">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="CoInternetIsFeatureEnabled" access="public" lib="urlmon" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="FeatureEntry">
+                    <type>INTERNETFEATURELIST</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInternetIsFeatureEnabledForUrl" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="FeatureEntry">
+                    <type>INTERNETFEATURELIST</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="szURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="pSecMgr">
+                    <type>IInternetSecurityManager*</type>
+                </param>
+            </function>
+            <function name="CoInternetIsFeatureEnabledForIUri" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="FeatureEntry">
+                    <type>INTERNETFEATURELIST</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pIUri">
+                    <type>IUri*</type>
+                </param>
+                <param name="pSecMgr">
+                    <type>IInternetSecurityManagerEx2*</type>
+                </param>
+            </function>
+            <function name="CoInternetIsFeatureZoneElevationEnabled" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="szFromURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="szToURL">
+                    <type>ushort*</type>
+                </param>
+                <param name="pSecMgr">
+                    <type>IInternetSecurityManager*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CopyStgMedium" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pcstgmedSrc">
+                    <type>STGMEDIUM*</type>
+                </param>
+                <param name="pstgmedDest">
+                    <type>STGMEDIUM*</type>
+                </param>
+            </function>
+            <function name="CopyBindInfo" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pcbiSrc">
+                    <type>BINDINFO*</type>
+                </param>
+                <param name="pbiDest">
+                    <type>BINDINFO*</type>
+                </param>
+            </function>
+            <function name="ReleaseBindInfo" access="public" lib="urlmon" static="true">
+                <type>void</type>
+                <param name="pbindinfo">
+                    <type>BINDINFO*</type>
+                </param>
+            </function>
+            <function name="IEGetUserPrivateNamespaceName" access="public" lib="urlmon" static="true">
+                <type native="PWSTR">ushort*</type>
+            </function>
+            <function name="CoInternetCreateSecurityManager" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSP">
+                    <type>IServiceProvider*</type>
+                </param>
+                <param name="ppSM">
+                    <type>IInternetSecurityManager**</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CoInternetCreateZoneManager" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pSP">
+                    <type>IServiceProvider*</type>
+                </param>
+                <param name="ppZM">
+                    <type>IInternetZoneManager**</type>
+                </param>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetSoftwareUpdateInfo" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="szDistUnit">
+                    <type>ushort*</type>
+                </param>
+                <param name="psdi">
+                    <type>SOFTDISTINFO*</type>
+                </param>
+            </function>
+            <function name="SetSoftwareUpdateAdvertisementState" access="public" lib="urlmon" static="true">
+                <type native="HRESULT">int</type>
+                <param name="szDistUnit">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwAdState">
+                    <type>uint</type>
+                </param>
+                <param name="dwAdvertisedVersionMS">
+                    <type>uint</type>
+                </param>
+                <param name="dwAdvertisedVersionLS">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="IsLoggingEnabledA" access="public" lib="urlmon" static="true">
+                <type native="BOOL">int</type>
+                <param name="pszUrl">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="IsLoggingEnabledW" access="public" lib="urlmon" static="true">
+                <type native="BOOL">int</type>
+                <param name="pwszUrl">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="WriteHitLogging" access="public" lib="urlmon" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpLogginginfo">
+                    <type>HIT_LOGGING_INFO*</type>
+                </param>
+            </function>
+            <constant name="BINDF_DONTUSECACHE" access="public">
+                <type primitive="True">BINDF</type>
+                <value>
+                    <code>BINDF_GETNEWESTVERSION
+            </code>
+                </value>
+            </constant>
+            <constant name="BINDF_DONTPUTINCACHE" access="public">
+                <type primitive="True">BINDF</type>
+                <value>
+                    <code>BINDF_NOWRITECACHE
+            </code>
+                </value>
+            </constant>
+            <constant name="BINDF_NOCOPYDATA" access="public">
+                <type primitive="True">BINDF</type>
+                <value>
+                    <code>BINDF_PULLDATA
+            </code>
+                </value>
+            </constant>
+            <constant name="INVALID_P_ROOT_SECURITY_ID" access="public">
+                <type primitive="False">byte*</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((byte*)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="PI_DOCFILECLSIDLOOKUP" access="public">
+                <type primitive="True">PI_FLAGS</type>
+                <value>
+                    <code>PI_CLSIDLOOKUP
+            </code>
+                </value>
+            </constant>
+            <constant name="SZ_URLCONTEXT" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"URL Context"
+            </code>
+                </value>
+            </constant>
+            <constant name="SZ_ASYNC_CALLEE" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"AsyncCallee"
+            </code>
+                </value>
+            </constant>
+            <constant name="MKSYS_URLMONIKER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>6
+            </code>
+                </value>
+            </constant>
+            <constant name="URL_MK_LEGACY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="URL_MK_UNIFORM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="URL_MK_NO_CANONICALIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="FIEF_FLAG_FORCE_JITUI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="FIEF_FLAG_PEEK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="FIEF_FLAG_SKIP_INSTALLED_VERSION_CHECK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4
+            </code>
+                </value>
+            </constant>
+            <constant name="FIEF_FLAG_RESERVED_0" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x8
+            </code>
+                </value>
+            </constant>
+            <constant name="FMFD_DEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="FMFD_URLASFILENAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="FMFD_ENABLEMIMESNIFFING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="FMFD_IGNOREMIMETEXTPLAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="FMFD_SERVERMIME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="FMFD_RESPECTTEXTPLAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="FMFD_RETURNUPDATEDIMGMIMES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="FMFD_RESERVED_1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="UAS_EXACTLEGACY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLMON_OPTION_USERAGENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000001
+            </code>
+                </value>
+            </constant>
+            <constant name="URLMON_OPTION_USERAGENT_REFRESH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000002
+            </code>
+                </value>
+            </constant>
+            <constant name="URLMON_OPTION_URL_ENCODING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000004
+            </code>
+                </value>
+            </constant>
+            <constant name="URLMON_OPTION_USE_BINDSTRINGCREDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000008
+            </code>
+                </value>
+            </constant>
+            <constant name="URLMON_OPTION_USE_BROWSERAPPSDOCUMENTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10000010
+            </code>
+                </value>
+            </constant>
+            <constant name="CF_NULL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_NULL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_TEXT" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("text/plain")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_RICHTEXT" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("text/richtext")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_MANIFEST" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("text/cache-manifest")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_WEBVTT" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("text/vtt")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_BITMAP" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/x-xbitmap")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_POSTSCRIPT" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/postscript")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_AIFF" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("audio/aiff")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_BASICAUDIO" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("audio/basic")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_WAV" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("audio/wav")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_WAV" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("audio/x-wav")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_GIF" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/gif")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_PJPEG" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/pjpeg")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_JPEG" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/jpeg")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_TIFF" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/tiff")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_JPEG_XR" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/vnd.ms-photo")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_PNG" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/png")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_DDS" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/vnd.ms-dds")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_PNG" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/x-png")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_ICON" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/x-icon")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_SVG_XML" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/svg+xml")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_BMP" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/bmp")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_EMF" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/x-emf")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_WMF" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/x-wmf")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_AVI" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("video/avi")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_MPEG" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("video/mpeg")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_FRACTALS" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/fractals")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_RAWDATA" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/octet-stream")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_RAWDATASTRM" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/octet-stream")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_PDF" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/pdf")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_HTA" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/hta")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_APP_XML" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/xml")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_XHTML" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/xhtml+xml")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_AIFF" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("audio/x-aiff")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_REALAUDIO" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("audio/x-pn-realaudio")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_XBM" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("image/xbm")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_QUICKTIME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("video/quicktime")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_MSVIDEO" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("video/x-msvideo")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_SGI_MOVIE" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("video/x-sgi-movie")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_MIXED_REPLACE" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("multipart/x-mixed-replace")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_HTML" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("text/html")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_XML" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("text/xml")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_TTML" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/ttml+xml")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_TTAF" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/ttaf+xml")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_X_JAVASCRIPT" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/x-javascript")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_TEXT_JSON" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("text/json")
+            </code>
+                </value>
+            </constant>
+            <constant name="CFSTR_MIME_APPLICATION_JAVASCRIPT" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>("application/javascript")
+            </code>
+                </value>
+            </constant>
+            <constant name="MK_S_ASYNCHRONOUS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>((int)0x000401E8)
+            </code>
+                </value>
+            </constant>
+            <constant name="S_ASYNCHRONOUS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>((int)0x000401E8)
+            </code>
+                </value>
+            </constant>
+            <constant name="INET_E_INVALID_URL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0002)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_NO_SESSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0003)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CANNOT_CONNECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0004)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_RESOURCE_NOT_FOUND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0005)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_OBJECT_NOT_FOUND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0006)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_DATA_NOT_AVAILABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0007)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_DOWNLOAD_FAILURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0008)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_AUTHENTICATION_REQUIRED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0009)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_NO_VALID_MEDIA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C000A)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CONNECTION_TIMEOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C000B)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_INVALID_REQUEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C000C)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_UNKNOWN_PROTOCOL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C000D)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_SECURITY_PROBLEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C000E)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CANNOT_LOAD_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C000F)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CANNOT_INSTANTIATE_OBJECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0010)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_INVALID_CERTIFICATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0019)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_REDIRECT_FAILED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0014)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_REDIRECT_TO_DIR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0015)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CANNOT_LOCK_REQUEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0016)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_USE_EXTEND_BINDING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0017)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_TERMINATED_BIND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0018)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_RESERVED_1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C001A)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_BLOCKED_REDIRECT_XSECURITYID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C001B)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_DOMINJECTIONVALIDATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C001C)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_VTAB_SWITCH_FORCE_ENGINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C001D)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_HSTS_CERTIFICATE_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C001E)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_RESERVED_2" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C001F)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_RESERVED_3" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0020)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_RESERVED_4" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0021)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_RESERVED_5" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0022)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_ERROR_FIRST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0002)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CODE_DOWNLOAD_DECLINED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0100)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_RESULT_DISPATCHED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0200)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CANNOT_REPLACE_SFP_FILE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0300)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CODE_INSTALL_SUPPRESSED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0400)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CODE_INSTALL_BLOCKED_BY_HASH_POLICY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0500)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_DOWNLOAD_BLOCKED_BY_INPRIVATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0501)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CODE_INSTALL_BLOCKED_IMMERSIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0502)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_FORBIDFRAMING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0503)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CODE_INSTALL_BLOCKED_ARM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0504)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_BLOCKED_PLUGGABLE_PROTOCOL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0505)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_BLOCKED_ENHANCEDPROTECTEDMODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0506)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_CODE_INSTALL_BLOCKED_BITNESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0507)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_DOWNLOAD_BLOCKED_BY_CSP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0508)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_ERROR_LAST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0508)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_ABSOLUTE_URI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_ABSOLUTE_URI)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_AUTHORITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_AUTHORITY)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_DISPLAY_URI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_DISPLAY_URI)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_DOMAIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_DOMAIN)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_EXTENSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_EXTENSION)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_FRAGMENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_FRAGMENT)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_HOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_HOST)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_PASSWORD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_PASSWORD)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_PATH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_PATH)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_QUERY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_QUERY)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_RAW_URI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_RAW_URI)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_SCHEME_NAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_SCHEME_NAME)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_USER_NAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_USER_NAME)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_PATH_AND_QUERY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_PATH_AND_QUERY)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_USER_INFO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_USER_INFO)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_HOST_TYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_HOST_TYPE)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_PORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_PORT)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_SCHEME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_SCHEME)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_HAS_ZONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>
+                        <value></value>(1 &lt;&lt; (int)Uri_PROPERTY_ZONE)
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_ALLOW_RELATIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_ALLOW_IMPLICIT_WILDCARD_SCHEME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_ALLOW_IMPLICIT_FILE_SCHEME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_NOFRAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_NO_CANONICALIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_CANONICALIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_FILE_USE_DOS_PATH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_DECODE_EXTRA_INFO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_NO_DECODE_EXTRA_INFO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_CRACK_UNKNOWN_SCHEMES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_NO_CRACK_UNKNOWN_SCHEMES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_PRE_PROCESS_HTML_URI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_NO_PRE_PROCESS_HTML_URI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_IE_SETTINGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_NO_IE_SETTINGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_NO_ENCODE_FORBIDDEN_CHARACTERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_NORMALIZE_INTL_CHARACTERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_CREATE_CANONICALIZE_ABSOLUTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_DISPLAY_NO_FRAGMENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_PUNYCODE_IDN_HOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_DISPLAY_IDN_HOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_DISPLAY_NO_PUNYCODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_ENCODING_USER_INFO_AND_PATH_IS_PERCENT_ENCODED_UTF8" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_ENCODING_USER_INFO_AND_PATH_IS_CP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_ENCODING_HOST_IS_IDN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_ENCODING_HOST_IS_PERCENT_ENCODED_UTF8" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_ENCODING_HOST_IS_PERCENT_ENCODED_CP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_ENCODING_QUERY_AND_FRAGMENT_IS_PERCENT_ENCODED_UTF8" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_ENCODING_QUERY_AND_FRAGMENT_IS_CP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="Uri_ENCODING_RFC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001 | 0x00000008 | 0x00000020)
+            </code>
+                </value>
+            </constant>
+            <constant name="UriBuilder_USE_ORIGINAL_FLAGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WININETINFO_OPTION_LOCK_HANDLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>65534
+            </code>
+                </value>
+            </constant>
+            <constant name="SID_IBindHost" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IBindHost
+            </code>
+                </value>
+            </constant>
+            <constant name="SID_SBindHost" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IBindHost
+            </code>
+                </value>
+            </constant>
+            <constant name="URLOSTRM_USECACHEDCOPY_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="URLOSTRM_USECACHEDCOPY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="URLOSTRM_GETNEWESTVERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3
+            </code>
+                </value>
+            </constant>
+            <constant name="URLOpenStream" access="public">
+                <type primitive="False">delegate*&lt;IUnknown*, ushort*, uint, IBindStatusCallback*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>URLOpenStreamW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="URLOpenPullStream" access="public">
+                <type primitive="False">delegate*&lt;IUnknown*, ushort*, uint, IBindStatusCallback*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>URLOpenPullStreamW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="URLDownloadToFile" access="public">
+                <type primitive="False">delegate*&lt;IUnknown*, ushort*, ushort*, uint, IBindStatusCallback*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>URLDownloadToFileW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="URLDownloadToCacheFile" access="public">
+                <type primitive="False">delegate*&lt;IUnknown*, ushort*, ushort*, uint, uint, IBindStatusCallback*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>URLDownloadToCacheFileW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="URLOpenBlockingStream" access="public">
+                <type primitive="False">delegate*&lt;IUnknown*, ushort*, IStream**, uint, IBindStatusCallback*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>URLOpenBlockingStreamW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="PARSE_ENCODE" access="public">
+                <type primitive="True">PARSEACTION</type>
+                <value>
+                    <code>PARSE_ENCODE_IS_UNESCAPE
+            </code>
+                </value>
+            </constant>
+            <constant name="PARSE_DECODE" access="public">
+                <type primitive="True">PARSEACTION</type>
+                <value>
+                    <code>PARSE_DECODE_IS_ESCAPE
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInet" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternet
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetBindInfo" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetBindInfo
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetBindInfoEx" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetBindInfoEx
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetProtocolRoot" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetProtocolRoot
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetProtocol" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetProtocol
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetProtocolEx" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetProtocolEx
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetProtocolSink" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetProtocolSink
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetProtocolInfo" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetProtocolInfo
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetSession" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetSession
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetPriority" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetPriority
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetThreadSwitch" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetThreadSwitch
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_IOInetProtocolSinkStackable" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetProtocolSinkStackable
+            </code>
+                </value>
+            </constant>
+            <constant name="SET_FEATURE_ON_THREAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SET_FEATURE_ON_PROCESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SET_FEATURE_IN_REGISTRY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="SET_FEATURE_ON_THREAD_LOCALMACHINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="SET_FEATURE_ON_THREAD_INTRANET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="SET_FEATURE_ON_THREAD_TRUSTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="SET_FEATURE_ON_THREAD_INTERNET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="SET_FEATURE_ON_THREAD_RESTRICTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_FEATURE_FROM_THREAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_FEATURE_FROM_PROCESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_FEATURE_FROM_REGISTRY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_FEATURE_FROM_THREAD_LOCALMACHINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_FEATURE_FROM_THREAD_INTRANET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_FEATURE_FROM_THREAD_TRUSTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_FEATURE_FROM_THREAD_INTERNET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_FEATURE_FROM_THREAD_RESTRICTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="INET_E_USE_DEFAULT_PROTOCOLHANDLER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0011)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_USE_DEFAULT_SETTING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0012)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_DEFAULT_ACTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0011)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_QUERYOPTION_UNKNOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0013)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="INET_E_REDIRECTING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((int)0x800C0014)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="OInetParseUrl" access="public">
+                <type primitive="False">delegate*&lt;ushort*, PARSEACTION, uint, ushort*, uint, uint*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CoInternetParseUrl
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OInetCombineUrl" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, ushort*, uint, uint*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CoInternetCombineUrl
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OInetCombineUrlEx" access="public">
+                <type primitive="False">delegate*&lt;IUri*, ushort*, uint, IUri**, nuint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CoInternetCombineUrlEx
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OInetCombineIUri" access="public">
+                <type primitive="False">delegate*&lt;IUri*, IUri*, uint, IUri**, nuint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CoInternetCombineIUri
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OInetCompareUrl" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CoInternetCompareUrl
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OInetQueryInfo" access="public">
+                <type primitive="False">delegate*&lt;ushort*, QUERYOPTION, uint, void*, uint, uint*, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CoInternetQueryInfo
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="OInetGetSession" access="public">
+                <type primitive="False">delegate*&lt;uint, IInternetSession**, uint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>CoInternetGetSession
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="PROTOCOLFLAG_NO_PICS_CHECK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SID_SInternetSecurityManager" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetSecurityManager
+            </code>
+                </value>
+            </constant>
+            <constant name="SID_SInternetSecurityManagerEx" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetSecurityManagerEx
+            </code>
+                </value>
+            </constant>
+            <constant name="SID_SInternetSecurityManagerEx2" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetSecurityManagerEx2
+            </code>
+                </value>
+            </constant>
+            <constant name="SID_SInternetHostSecurityManager" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>IID_IInternetHostSecurityManager
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_NOSAVEDFILECHECK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_ISFILE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_ACCEPT_WILDCARD_SCHEME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_ENFORCERESTRICTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_RESERVED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_REQUIRESAVEDFILECHECK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_DONT_UNESCAPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_DONT_USE_CACHE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_FORCE_INTRANET_FLAGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="MUTZ_IGNORE_ZONE_MAPPINGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="MAX_SIZE_SECURITY_ID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>512
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_DOWNLOAD_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_DOWNLOAD_SIGNED_ACTIVEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001001
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_DOWNLOAD_UNSIGNED_ACTIVEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001004
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_DOWNLOAD_CURR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001004
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_DOWNLOAD_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x000011FF
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001200
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_RUN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001200
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_ACTIVEX_CHECK_LIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_OVERRIDE_OBJECT_SAFETY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001201
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_OVERRIDE_DATA_SAFETY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001202
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_OVERRIDE_SCRIPT_SAFETY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001203
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_OVERRIDE_SAFETY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001401
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_CONFIRM_NOOBJECTSAFETY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001204
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_TREATASUNTRUSTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001205
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_NO_WEBOC_SCRIPT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001206
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_OVERRIDE_REPURPOSEDETECTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001207
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_OVERRIDE_OPTIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001208
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_SCRIPTLET_RUN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001209
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_DYNSRC_VIDEO_AND_ANIMATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000120A
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_OVERRIDE_DOMAINLIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000120B
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_ALLOW_TDC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000120C
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_CURR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000120C
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ACTIVEX_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x000013ff
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001400
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_RUN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001400
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_JAVA_USE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001402
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_SAFE_ACTIVEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001405
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_CROSS_DOMAIN_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001406
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_PASTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001407
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_XDOMAIN_SUBFRAME_RESIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001408
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_XSSFILTER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001409
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_NAVIGATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000140A
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_PLUGGABLE_PROTOCOL_XHR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000140B
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_VBSCRIPT_IE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000140C
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_JSCRIPT_IE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000140D
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_CURR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000140D
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SCRIPT_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x000015ff
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001600
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_SUBMIT_FORMS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001601
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_SUBMIT_FORMS_FROM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001602
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_SUBMIT_FORMS_TO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001603
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_FONT_DOWNLOAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001604
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_JAVA_RUN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001605
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_USERDATA_SAVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001606
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_SUBFRAME_NAVIGATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001607
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_META_REFRESH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001608
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_MIXED_CONTENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001609
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_INCLUDE_FILE_PATH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000160A
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_ALLOW_INJECTED_DYNAMIC_HTML" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000160B
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_REQUIRE_UTF8_DOCUMENT_CODEPAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000160C
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_ALLOW_CROSS_DOMAIN_CANVAS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000160D
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_ALLOW_WINDOW_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000160E
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_ALLOW_CROSS_DOMAIN_WEBWORKER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000160F
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_ALLOW_CROSS_DOMAIN_TEXTTRACK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001610
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_ALLOW_INDEXEDDB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001611
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_HTML_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x000017ff
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001800
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_INSTALL_DTITEMS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001800
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_MOVE_OR_COPY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001802
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_FILE_DOWNLOAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001803
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_VERB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001804
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_WEBVIEW_VERB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001805
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_SHELLEXECUTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001806
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_EXECUTE_HIGHRISK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001806
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_EXECUTE_MODRISK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001807
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_EXECUTE_LOWRISK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001808
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_POPUPMGR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001809
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_RTF_OBJECTS_LOAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000180A
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_ENHANCED_DRAGDROP_SECURITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000180B
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_EXTENSIONSECURITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000180C
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_SECURE_DRAGSOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000180D
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_REMOTEQUERY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000180E
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_PREVIEW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000180F
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_SHARE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001810
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_ALLOW_CROSS_SITE_SHARE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001811
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_TOCTOU_RISK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001812
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_CURR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001812
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_SHELL_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x000019ff
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_NETWORK_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A00
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_CREDENTIALS_USE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A00
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_CREDENTIALS_SILENT_LOGON_OK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_CREDENTIALS_MUST_PROMPT_USER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_CREDENTIALS_CONDITIONAL_PROMPT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_CREDENTIALS_ANONYMOUS_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00030000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_AUTHENTICATE_CLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A01
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_AUTHENTICATE_CLEARTEXT_OK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_AUTHENTICATE_CHALLENGE_RESPONSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_AUTHENTICATE_MUTUAL_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00030000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_COOKIES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A02
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_COOKIES_SESSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A03
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_CLIENT_CERT_PROMPT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A04
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_COOKIES_THIRD_PARTY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A05
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_COOKIES_SESSION_THIRD_PARTY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A06
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_COOKIES_ENABLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A10
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_NETWORK_CURR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001A10
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_NETWORK_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001Bff
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_JAVA_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001C00
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_JAVA_PERMISSIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001C00
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_JAVA_PROHIBIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_JAVA_HIGH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_JAVA_MEDIUM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_JAVA_LOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00030000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_JAVA_CUSTOM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00800000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_JAVA_CURR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001C00
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_JAVA_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001Cff
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001D00
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_NO_ADDING_CHANNELS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001D00
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_NO_EDITING_CHANNELS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001D01
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_NO_REMOVING_CHANNELS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001D02
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_NO_ADDING_SUBSCRIPTIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001D03
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_NO_EDITING_SUBSCRIPTIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001D04
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_NO_REMOVING_SUBSCRIPTIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001D05
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_NO_CHANNEL_LOGGING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001D06
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_CURR_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001D06
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INFODELIVERY_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001Dff
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_CHANNEL_SOFTDIST_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001E00
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_CHANNEL_SOFTDIST_PERMISSIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001E05
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_CHANNEL_SOFTDIST_PROHIBIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_CHANNEL_SOFTDIST_PRECACHE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_CHANNEL_SOFTDIST_AUTOINSTALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00030000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_CHANNEL_SOFTDIST_MAX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001Eff
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_DOTNET_USERCONTROLS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002005
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_BEHAVIOR_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_BEHAVIOR_RUN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_BEHAVIOR_CHECK_LIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_FEATURE_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002100
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_FEATURE_MIME_SNIFFING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002100
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_FEATURE_ZONE_ELEVATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002101
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_FEATURE_WINDOW_RESTRICTIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002102
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_FEATURE_SCRIPT_STATUS_BAR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002103
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_FEATURE_FORCE_ADDR_AND_STATUS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002104
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_FEATURE_BLOCK_INPUT_PROMPTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002105
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_FEATURE_DATA_BINDING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002106
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_FEATURE_CROSSDOMAIN_FOCUS_CHANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002107
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_AUTOMATIC_DOWNLOAD_UI_MIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002200
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_AUTOMATIC_DOWNLOAD_UI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002200
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_AUTOMATIC_ACTIVEX_UI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002201
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_RESTRICTEDPROTOCOLS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002300
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_APEVALUATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002301
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_XHR_EVALUATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002302
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_WINDOWS_BROWSER_APPLICATIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002400
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_XPS_DOCUMENTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002401
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_LOOSE_XAML" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002402
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_LOWRIGHTS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002500
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_WINFX_SETUP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002600
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_INPRIVATE_BLOCKING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002700
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_AUDIO_VIDEO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002701
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_ACTIVEX_FILTERING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002702
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_STRUCTURED_STORAGE_SNIFFING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002703
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_AUDIO_VIDEO_PLUGINS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002704
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_ZONE_ELEVATION_VIA_OPT_OUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002705
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_ZONE_ELEVATION_OPT_OUT_ADDITION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002706
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_CROSSDOMAIN_DROP_WITHIN_WINDOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002708
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_CROSSDOMAIN_DROP_ACROSS_WINDOWS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002709
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_CROSSDOMAIN_APPCACHE_MANIFEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000270A
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_RENDER_LEGACY_DXTFILTERS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000270B
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_ANTIMALWARE_SCANNING_OF_ACTIVEX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000270C
+            </code>
+                </value>
+            </constant>
+            <constant name="URLACTION_ALLOW_CSS_EXPRESSIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000270D
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_ALLOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_QUERY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x01
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_DISALLOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x03
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_NOTIFY_ON_ALLOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_NOTIFY_ON_DISALLOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_LOG_ON_ALLOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_LOG_ON_DISALLOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x80
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_MASK_PERMISSIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0f
+            </code>
+                </value>
+            </constant>
+            <constant name="URLPOLICY_DONTCHECKDLGBOX" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="URLZONE_ESC_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="SECURITY_IE_STATE_GREEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="SECURITY_IE_STATE_RED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SOFTDIST_FLAG_USAGE_EMAIL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SOFTDIST_FLAG_USAGE_PRECACHE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SOFTDIST_FLAG_USAGE_AUTOINSTALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="SOFTDIST_FLAG_DELETE_SUBSCRIPTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="SOFTDIST_ADSTATE_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="SOFTDIST_ADSTATE_AVAILABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SOFTDIST_ADSTATE_DOWNLOADED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="SOFTDIST_ADSTATE_INSTALLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000003
+            </code>
+                </value>
+            </constant>
+            <constant name="IsLoggingEnabled" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>IsLoggingEnabledW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CONFIRMSAFETYACTION_LOADOBJECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_IPersistMoniker" value="0x79EAC9C9, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IMonikerProp" value="0xA5CA5F7F, 0x1847, 0x4D87, 0x9C, 0x5B, 0x91, 0x85, 0x09, 0xF7, 0x51, 0x1D" />
+            <iid name="IID_IBindProtocol" value="0x79EAC9CD, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IBinding" value="0x79EAC9C0, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IBindStatusCallback" value="0x79EAC9C1, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IBindStatusCallbackEx" value="0xAAA74EF9, 0x8EE7, 0x4659, 0x88, 0xD9, 0xF8, 0xC5, 0x04, 0xDA, 0x73, 0xCC" />
+            <iid name="IID_IAuthenticate" value="0x79EAC9D0, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IAuthenticateEx" value="0x2AD1EDAF, 0xD83D, 0x48B5, 0x9A, 0xDF, 0x03, 0xDB, 0xE1, 0x9F, 0x53, 0xBD" />
+            <iid name="IID_IHttpNegotiate" value="0x79EAC9D2, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IHttpNegotiate2" value="0x4F9F9FCB, 0xE0F4, 0x48EB, 0xB7, 0xAB, 0xFA, 0x2E, 0xA9, 0x36, 0x5C, 0xB4" />
+            <iid name="IID_IHttpNegotiate3" value="0x57B6C80A, 0x34C2, 0x4602, 0xBC, 0x26, 0x66, 0xA0, 0x2F, 0xC5, 0x71, 0x53" />
+            <iid name="IID_IWinInetFileStream" value="0xF134C4B7, 0xB1F8, 0x4E75, 0xB8, 0x86, 0x74, 0xB9, 0x09, 0x43, 0xBE, 0xCB" />
+            <iid name="IID_IWindowForBindingUI" value="0x79EAC9D5, 0xBAFA, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_ICodeInstall" value="0x79EAC9D1, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IUri" value="0xA39EE748, 0x6A27, 0x4817, 0xA6, 0xF2, 0x13, 0x91, 0x4B, 0xEF, 0x58, 0x90" />
+            <iid name="IID_IUriContainer" value="0xA158A630, 0xED6F, 0x45FB, 0xB9, 0x87, 0xF6, 0x86, 0x76, 0xF5, 0x77, 0x52" />
+            <iid name="IID_IUriBuilder" value="0x4221B2E1, 0x8955, 0x46C0, 0xBD, 0x5B, 0xDE, 0x98, 0x97, 0x56, 0x5D, 0xE7" />
+            <iid name="IID_IUriBuilderFactory" value="0xE982CE48, 0x0B96, 0x440C, 0xBC, 0x37, 0x0C, 0x86, 0x9B, 0x27, 0xA2, 0x9E" />
+            <iid name="IID_IWinInetInfo" value="0x79EAC9D6, 0xBAFA, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IHttpSecurity" value="0x79EAC9D7, 0xBAFA, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IWinInetHttpInfo" value="0x79EAC9D8, 0xBAFA, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IWinInetHttpTimeouts" value="0xF286FA56, 0xC1FD, 0x4270, 0x8E, 0x67, 0xB3, 0xEB, 0x79, 0x0A, 0x81, 0xE8" />
+            <iid name="IID_IWinInetCacheHints" value="0xDD1EC3B3, 0x8391, 0x4FDB, 0xA9, 0xE6, 0x34, 0x7C, 0x3C, 0xAA, 0xA7, 0xDD" />
+            <iid name="IID_IWinInetCacheHints2" value="0x7857AEAC, 0xD31F, 0x49BF, 0x88, 0x4E, 0xDD, 0x46, 0xDF, 0x36, 0x78, 0x0A" />
+            <iid name="IID_IBindHost" value="0xFC4801A1, 0x2BA9, 0x11CF, 0xA2, 0x29, 0x00, 0xAA, 0x00, 0x3D, 0x73, 0x52" />
+            <iid name="IID_IInternet" value="0x79EAC9E0, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetBindInfo" value="0x79EAC9E1, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetBindInfoEx" value="0xA3E015B7, 0xA82C, 0x4DCD, 0xA1, 0x50, 0x56, 0x9A, 0xEE, 0xED, 0x36, 0xAB" />
+            <iid name="IID_IInternetProtocolRoot" value="0x79EAC9E3, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetProtocol" value="0x79EAC9E4, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetProtocolEx" value="0xC7A98E66, 0x1010, 0x492C, 0xA1, 0xC8, 0xC8, 0x09, 0xE1, 0xF7, 0x59, 0x05" />
+            <iid name="IID_IInternetProtocolSink" value="0x79EAC9E5, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetProtocolSinkStackable" value="0x79EAC9F0, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetSession" value="0x79EAC9E7, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetThreadSwitch" value="0x79EAC9E8, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetPriority" value="0x79EAC9EB, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetProtocolInfo" value="0x79EAC9EC, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetSecurityMgrSite" value="0x79EAC9ED, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetSecurityManager" value="0x79EAC9EE, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetSecurityManagerEx" value="0xF164EDF1, 0xCC7C, 0x4F0D, 0x9A, 0x94, 0x34, 0x22, 0x26, 0x25, 0xC3, 0x93" />
+            <iid name="IID_IInternetSecurityManagerEx2" value="0xF1E50292, 0xA795, 0x4117, 0x8E, 0x09, 0x2B, 0x56, 0x0A, 0x72, 0xAC, 0x60" />
+            <iid name="IID_IZoneIdentifier" value="0xCD45F185, 0x1B21, 0x48E2, 0x96, 0x7B, 0xEA, 0xD7, 0x43, 0xA8, 0x91, 0x4E" />
+            <iid name="IID_IZoneIdentifier2" value="0xEB5E760C, 0x09EF, 0x45C0, 0xB5, 0x10, 0x70, 0x83, 0x0C, 0xE3, 0x1E, 0x6A" />
+            <iid name="IID_IInternetHostSecurityManager" value="0x3AF280B6, 0xCB3F, 0x11D0, 0x89, 0x1E, 0x00, 0xC0, 0x4F, 0xB6, 0xBF, 0xC4" />
+            <iid name="IID_IInternetZoneManager" value="0x79EAC9EF, 0xBAF9, 0x11CE, 0x8C, 0x82, 0x00, 0xAA, 0x00, 0x4B, 0xA9, 0x0B" />
+            <iid name="IID_IInternetZoneManagerEx" value="0xA4C23339, 0x8E06, 0x431E, 0x9B, 0xF4, 0x7E, 0x71, 0x1C, 0x08, 0x56, 0x48" />
+            <iid name="IID_IInternetZoneManagerEx2" value="0xEDC17559, 0xDD5D, 0x4846, 0x8E, 0xEF, 0x8B, 0xEC, 0xBA, 0x5A, 0x4A, 0xBF" />
+            <iid name="IID_ISoftDistExt" value="0xB15B8DC1, 0xC7E1, 0x11D0, 0x86, 0x80, 0x00, 0xAA, 0x00, 0xBD, 0xCB, 0x71" />
+            <iid name="IID_ICatalogFileInfo" value="0x711C7600, 0x6B48, 0x11D1, 0xB4, 0x03, 0x00, 0xAA, 0x00, 0xB9, 0x2A, 0xF1" />
+            <iid name="IID_IDataFilter" value="0x69D14C80, 0xC18E, 0x11D0, 0xA9, 0xCE, 0x00, 0x60, 0x97, 0x94, 0x23, 0x11" />
+            <iid name="IID_IEncodingFilterFactory" value="0x70BDDE00, 0xC18E, 0x11D0, 0xA9, 0xCE, 0x00, 0x60, 0x97, 0x94, 0x23, 0x11" />
+            <iid name="IID_IWrappedProtocol" value="0x53C84785, 0x8425, 0x4DC5, 0x97, 0x1B, 0xE5, 0x8D, 0x9C, 0x19, 0xF9, 0xB6" />
+            <iid name="IID_IGetBindHandle" value="0xAF0FF408, 0x129D, 0x4B20, 0x91, 0xF0, 0x02, 0xBD, 0x23, 0xD8, 0x83, 0x52" />
+            <iid name="IID_IBindCallbackRedirect" value="0x11C81BC2, 0x121E, 0x4ED5, 0xB9, 0xC4, 0xB4, 0x30, 0xBD, 0x54, 0xF2, 0xC0" />
+            <iid name="IID_IBindHttpSecurity" value="0xA9EDA967, 0xF50E, 0x4A33, 0xB3, 0x58, 0x20, 0x6F, 0x6E, 0xF3, 0x08, 0x6D" />
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,1477 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d10_1.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D10Device1" access="public" native="struct ID3D10Device1 : ID3D10Device" uuid="9b7e4c8f-342c-4106-a19f-4f2704f689f0" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSSetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D10ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pPixelShader">
+                    <type>ID3D10PixelShader*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10PixelShader*, void&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pPixelShader">pPixelShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D10SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSSetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVertexShader">
+                    <type>ID3D10VertexShader*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10VertexShader*, void&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pVertexShader">pVertexShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawIndexed" access="public" unsafe="true">
+                <type>void</type>
+                <param name="IndexCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartIndexLocation">
+                    <type>uint</type>
+                </param>
+                <param name="BaseVertexLocation">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, int, void&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="IndexCount">IndexCount</param>, <param name="StartIndexLocation">StartIndexLocation</param>, <param name="BaseVertexLocation">BaseVertexLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Draw" access="public" unsafe="true">
+                <type>void</type>
+                <param name="VertexCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartVertexLocation">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="VertexCount">VertexCount</param>, <param name="StartVertexLocation">StartVertexLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSSetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetInputLayout" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pInputLayout">
+                    <type>ID3D10InputLayout*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10InputLayout*, void&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pInputLayout">pInputLayout</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetVertexBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppVertexBuffers">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <param name="pStrides">
+                    <type>uint*</type>
+                </param>
+                <param name="pOffsets">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppVertexBuffers">ppVertexBuffers</param>, <param name="pStrides">pStrides</param>, <param name="pOffsets">pOffsets</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetIndexBuffer" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pIndexBuffer">
+                    <type>ID3D10Buffer*</type>
+                </param>
+                <param name="Format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="Offset">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Buffer*, DXGI_FORMAT, uint, void&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pIndexBuffer">pIndexBuffer</param>, <param name="Format">Format</param>, <param name="Offset">Offset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawIndexedInstanced" access="public" unsafe="true">
+                <type>void</type>
+                <param name="IndexCountPerInstance">
+                    <type>uint</type>
+                </param>
+                <param name="InstanceCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartIndexLocation">
+                    <type>uint</type>
+                </param>
+                <param name="BaseVertexLocation">
+                    <type>int</type>
+                </param>
+                <param name="StartInstanceLocation">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, uint, int, uint, void&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="IndexCountPerInstance">IndexCountPerInstance</param>, <param name="InstanceCount">InstanceCount</param>, <param name="StartIndexLocation">StartIndexLocation</param>, <param name="BaseVertexLocation">BaseVertexLocation</param>, <param name="StartInstanceLocation">StartInstanceLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawInstanced" access="public" unsafe="true">
+                <type>void</type>
+                <param name="VertexCountPerInstance">
+                    <type>uint</type>
+                </param>
+                <param name="InstanceCount">
+                    <type>uint</type>
+                </param>
+                <param name="StartVertexLocation">
+                    <type>uint</type>
+                </param>
+                <param name="StartInstanceLocation">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="VertexCountPerInstance">VertexCountPerInstance</param>, <param name="InstanceCount">InstanceCount</param>, <param name="StartVertexLocation">StartVertexLocation</param>, <param name="StartInstanceLocation">StartInstanceLocation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSSetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSSetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pShader">
+                    <type>ID3D10GeometryShader*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10GeometryShader*, void&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pShader">pShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IASetPrimitiveTopology" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Topology">
+                    <type>D3D_PRIMITIVE_TOPOLOGY</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, D3D_PRIMITIVE_TOPOLOGY, void&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="Topology">Topology</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSSetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D10ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSSetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D10SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPredication" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pPredicate">
+                    <type>ID3D10Predicate*</type>
+                </param>
+                <param name="PredicateValue">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Predicate*, int, void&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pPredicate">pPredicate</param>, <param name="PredicateValue">PredicateValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSSetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D10ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSSetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D10SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetRenderTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppRenderTargetViews">
+                    <type>ID3D10RenderTargetView**</type>
+                </param>
+                <param name="pDepthStencilView">
+                    <type>ID3D10DepthStencilView*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, ID3D10RenderTargetView**, ID3D10DepthStencilView*, void&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="NumViews">NumViews</param>, <param name="ppRenderTargetViews">ppRenderTargetViews</param>, <param name="pDepthStencilView">pDepthStencilView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetBlendState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pBlendState">
+                    <type>ID3D10BlendState*</type>
+                </param>
+                <param name="BlendFactor">
+                    <type>float*</type>
+                </param>
+                <param name="SampleMask">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10BlendState*, float*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pBlendState">pBlendState</param>, <param name="BlendFactor">BlendFactor</param>, <param name="SampleMask">SampleMask</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMSetDepthStencilState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDepthStencilState">
+                    <type>ID3D10DepthStencilState*</type>
+                </param>
+                <param name="StencilRef">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10DepthStencilState*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDepthStencilState">pDepthStencilState</param>, <param name="StencilRef">StencilRef</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SOSetTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSOTargets">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <param name="pOffsets">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, ID3D10Buffer**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppSOTargets">ppSOTargets</param>, <param name="pOffsets">pOffsets</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DrawAuto" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, void&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSSetState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pRasterizerState">
+                    <type>ID3D10RasterizerState*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10RasterizerState*, void&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pRasterizerState">pRasterizerState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSSetViewports" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumViewports">
+                    <type>uint</type>
+                </param>
+                <param name="pViewports">
+                    <type>D3D10_VIEWPORT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, D3D10_VIEWPORT*, void&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="NumViewports">NumViewports</param>, <param name="pViewports">pViewports</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSSetScissorRects" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumRects">
+                    <type>uint</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="NumRects">NumRects</param>, <param name="pRects">pRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopySubresourceRegion" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="DstX">
+                    <type>uint</type>
+                </param>
+                <param name="DstY">
+                    <type>uint</type>
+                </param>
+                <param name="DstZ">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="SrcSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcBox">
+                    <type>D3D10_BOX*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Resource*, uint, uint, uint, uint, ID3D10Resource*, uint, D3D10_BOX*, void&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="DstX">DstX</param>, <param name="DstY">DstY</param>, <param name="DstZ">DstZ</param>, <param name="pSrcResource">pSrcResource</param>, <param name="SrcSubresource">SrcSubresource</param>, <param name="pSrcBox">pSrcBox</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyResource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Resource*, ID3D10Resource*, void&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="pSrcResource">pSrcResource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdateSubresource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pDstBox">
+                    <type>D3D10_BOX*</type>
+                </param>
+                <param name="pSrcData">
+                    <type>void*</type>
+                </param>
+                <param name="SrcRowPitch">
+                    <type>uint</type>
+                </param>
+                <param name="SrcDepthPitch">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Resource*, uint, D3D10_BOX*, void*, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="pDstBox">pDstBox</param>, <param name="pSrcData">pSrcData</param>, <param name="SrcRowPitch">SrcRowPitch</param>, <param name="SrcDepthPitch">SrcDepthPitch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearRenderTargetView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pRenderTargetView">
+                    <type>ID3D10RenderTargetView*</type>
+                </param>
+                <param name="ColorRGBA">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10RenderTargetView*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pRenderTargetView">pRenderTargetView</param>, <param name="ColorRGBA">ColorRGBA</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearDepthStencilView" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDepthStencilView">
+                    <type>ID3D10DepthStencilView*</type>
+                </param>
+                <param name="ClearFlags">
+                    <type>uint</type>
+                </param>
+                <param name="Depth">
+                    <type>float</type>
+                </param>
+                <param name="Stencil">
+                    <type>byte</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10DepthStencilView*, uint, float, byte, void&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDepthStencilView">pDepthStencilView</param>, <param name="ClearFlags">ClearFlags</param>, <param name="Depth">Depth</param>, <param name="Stencil">Stencil</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GenerateMips" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pShaderResourceView">
+                    <type>ID3D10ShaderResourceView*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10ShaderResourceView*, void&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pShaderResourceView">pShaderResourceView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResolveSubresource" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDstResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="DstSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="pSrcResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="SrcSubresource">
+                    <type>uint</type>
+                </param>
+                <param name="Format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Resource*, uint, ID3D10Resource*, uint, DXGI_FORMAT, void&gt;)(lpVtbl[<vtbl explicit="False">38</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDstResource">pDstResource</param>, <param name="DstSubresource">DstSubresource</param>, <param name="pSrcResource">pSrcResource</param>, <param name="SrcSubresource">SrcSubresource</param>, <param name="Format">Format</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSGetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">39</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSGetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D10ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">40</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSGetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppPixelShader">
+                    <type>ID3D10PixelShader**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10PixelShader**, void&gt;)(lpVtbl[<vtbl explicit="False">41</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="ppPixelShader">ppPixelShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSGetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D10SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">42</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSGetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppVertexShader">
+                    <type>ID3D10VertexShader**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10VertexShader**, void&gt;)(lpVtbl[<vtbl explicit="False">43</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="ppVertexShader">ppVertexShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PSGetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">44</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IAGetInputLayout" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppInputLayout">
+                    <type>ID3D10InputLayout**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10InputLayout**, void&gt;)(lpVtbl[<vtbl explicit="False">45</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="ppInputLayout">ppInputLayout</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IAGetVertexBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppVertexBuffers">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <param name="pStrides">
+                    <type>uint*</type>
+                </param>
+                <param name="pOffsets">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10Buffer**, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">46</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppVertexBuffers">ppVertexBuffers</param>, <param name="pStrides">pStrides</param>, <param name="pOffsets">pOffsets</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IAGetIndexBuffer" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pIndexBuffer">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <param name="Format">
+                    <type>DXGI_FORMAT*</type>
+                </param>
+                <param name="Offset">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Buffer**, DXGI_FORMAT*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">47</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pIndexBuffer">pIndexBuffer</param>, <param name="Format">Format</param>, <param name="Offset">Offset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSGetConstantBuffers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppConstantBuffers">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10Buffer**, void&gt;)(lpVtbl[<vtbl explicit="False">48</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppConstantBuffers">ppConstantBuffers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSGetShader" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppGeometryShader">
+                    <type>ID3D10GeometryShader**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10GeometryShader**, void&gt;)(lpVtbl[<vtbl explicit="False">49</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="ppGeometryShader">ppGeometryShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IAGetPrimitiveTopology" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pTopology">
+                    <type>D3D_PRIMITIVE_TOPOLOGY*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, D3D_PRIMITIVE_TOPOLOGY*, void&gt;)(lpVtbl[<vtbl explicit="False">50</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pTopology">pTopology</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSGetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D10ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">51</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VSGetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D10SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">52</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPredication" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppPredicate">
+                    <type>ID3D10Predicate**</type>
+                </param>
+                <param name="pPredicateValue">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Predicate**, int*, void&gt;)(lpVtbl[<vtbl explicit="False">53</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="ppPredicate">ppPredicate</param>, <param name="pPredicateValue">pPredicateValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSGetShaderResources" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppShaderResourceViews">
+                    <type>ID3D10ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10ShaderResourceView**, void&gt;)(lpVtbl[<vtbl explicit="False">54</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumViews">NumViews</param>, <param name="ppShaderResourceViews">ppShaderResourceViews</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GSGetSamplers" access="public" unsafe="true">
+                <type>void</type>
+                <param name="StartSlot">
+                    <type>uint</type>
+                </param>
+                <param name="NumSamplers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSamplers">
+                    <type>ID3D10SamplerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, ID3D10SamplerState**, void&gt;)(lpVtbl[<vtbl explicit="False">55</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="StartSlot">StartSlot</param>, <param name="NumSamplers">NumSamplers</param>, <param name="ppSamplers">ppSamplers</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMGetRenderTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumViews">
+                    <type>uint</type>
+                </param>
+                <param name="ppRenderTargetViews">
+                    <type>ID3D10RenderTargetView**</type>
+                </param>
+                <param name="ppDepthStencilView">
+                    <type>ID3D10DepthStencilView**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, ID3D10RenderTargetView**, ID3D10DepthStencilView**, void&gt;)(lpVtbl[<vtbl explicit="False">56</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="NumViews">NumViews</param>, <param name="ppRenderTargetViews">ppRenderTargetViews</param>, <param name="ppDepthStencilView">ppDepthStencilView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMGetBlendState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppBlendState">
+                    <type>ID3D10BlendState**</type>
+                </param>
+                <param name="BlendFactor">
+                    <type>float*</type>
+                </param>
+                <param name="pSampleMask">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10BlendState**, float*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">57</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="ppBlendState">ppBlendState</param>, <param name="BlendFactor">BlendFactor</param>, <param name="pSampleMask">pSampleMask</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OMGetDepthStencilState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppDepthStencilState">
+                    <type>ID3D10DepthStencilState**</type>
+                </param>
+                <param name="pStencilRef">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10DepthStencilState**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">58</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="ppDepthStencilState">ppDepthStencilState</param>, <param name="pStencilRef">pStencilRef</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SOGetTargets" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumBuffers">
+                    <type>uint</type>
+                </param>
+                <param name="ppSOTargets">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <param name="pOffsets">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, ID3D10Buffer**, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">59</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="NumBuffers">NumBuffers</param>, <param name="ppSOTargets">ppSOTargets</param>, <param name="pOffsets">pOffsets</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSGetState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="ppRasterizerState">
+                    <type>ID3D10RasterizerState**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, ID3D10RasterizerState**, void&gt;)(lpVtbl[<vtbl explicit="False">60</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="ppRasterizerState">ppRasterizerState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSGetViewports" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumViewports">
+                    <type>uint*</type>
+                </param>
+                <param name="pViewports">
+                    <type>D3D10_VIEWPORT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint*, D3D10_VIEWPORT*, void&gt;)(lpVtbl[<vtbl explicit="False">61</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="NumViewports">NumViewports</param>, <param name="pViewports">pViewports</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RSGetScissorRects" access="public" unsafe="true">
+                <type>void</type>
+                <param name="NumRects">
+                    <type>uint*</type>
+                </param>
+                <param name="pRects">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint*, RECT*, void&gt;)(lpVtbl[<vtbl explicit="False">62</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="NumRects">NumRects</param>, <param name="pRects">pRects</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDeviceRemovedReason" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, int&gt;)(lpVtbl[<vtbl explicit="False">63</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetExceptionMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="RaiseFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">64</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="RaiseFlags">RaiseFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetExceptionMode" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, uint&gt;)(lpVtbl[<vtbl explicit="False">65</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">66</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">67</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pData">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">68</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearState" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, void&gt;)(lpVtbl[<vtbl explicit="False">69</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Flush" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, void&gt;)(lpVtbl[<vtbl explicit="False">70</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D10_BUFFER_DESC*</type>
+                </param>
+                <param name="pInitialData">
+                    <type>D3D10_SUBRESOURCE_DATA*</type>
+                </param>
+                <param name="ppBuffer">
+                    <type>ID3D10Buffer**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_BUFFER_DESC*, D3D10_SUBRESOURCE_DATA*, ID3D10Buffer**, int&gt;)(lpVtbl[<vtbl explicit="False">71</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pInitialData">pInitialData</param>, <param name="ppBuffer">ppBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTexture1D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D10_TEXTURE1D_DESC*</type>
+                </param>
+                <param name="pInitialData">
+                    <type>D3D10_SUBRESOURCE_DATA*</type>
+                </param>
+                <param name="ppTexture1D">
+                    <type>ID3D10Texture1D**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_TEXTURE1D_DESC*, D3D10_SUBRESOURCE_DATA*, ID3D10Texture1D**, int&gt;)(lpVtbl[<vtbl explicit="False">72</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pInitialData">pInitialData</param>, <param name="ppTexture1D">ppTexture1D</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTexture2D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D10_TEXTURE2D_DESC*</type>
+                </param>
+                <param name="pInitialData">
+                    <type>D3D10_SUBRESOURCE_DATA*</type>
+                </param>
+                <param name="ppTexture2D">
+                    <type>ID3D10Texture2D**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_TEXTURE2D_DESC*, D3D10_SUBRESOURCE_DATA*, ID3D10Texture2D**, int&gt;)(lpVtbl[<vtbl explicit="False">73</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pInitialData">pInitialData</param>, <param name="ppTexture2D">ppTexture2D</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTexture3D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D10_TEXTURE3D_DESC*</type>
+                </param>
+                <param name="pInitialData">
+                    <type>D3D10_SUBRESOURCE_DATA*</type>
+                </param>
+                <param name="ppTexture3D">
+                    <type>ID3D10Texture3D**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_TEXTURE3D_DESC*, D3D10_SUBRESOURCE_DATA*, ID3D10Texture3D**, int&gt;)(lpVtbl[<vtbl explicit="False">74</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pInitialData">pInitialData</param>, <param name="ppTexture3D">ppTexture3D</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateShaderResourceView" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D10_SHADER_RESOURCE_VIEW_DESC*</type>
+                </param>
+                <param name="ppSRView">
+                    <type>ID3D10ShaderResourceView**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Resource*, D3D10_SHADER_RESOURCE_VIEW_DESC*, ID3D10ShaderResourceView**, int&gt;)(lpVtbl[<vtbl explicit="False">75</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="pDesc">pDesc</param>, <param name="ppSRView">ppSRView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRenderTargetView" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D10_RENDER_TARGET_VIEW_DESC*</type>
+                </param>
+                <param name="ppRTView">
+                    <type>ID3D10RenderTargetView**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Resource*, D3D10_RENDER_TARGET_VIEW_DESC*, ID3D10RenderTargetView**, int&gt;)(lpVtbl[<vtbl explicit="False">76</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="pDesc">pDesc</param>, <param name="ppRTView">ppRTView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDepthStencilView" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D10_DEPTH_STENCIL_VIEW_DESC*</type>
+                </param>
+                <param name="ppDepthStencilView">
+                    <type>ID3D10DepthStencilView**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Resource*, D3D10_DEPTH_STENCIL_VIEW_DESC*, ID3D10DepthStencilView**, int&gt;)(lpVtbl[<vtbl explicit="False">77</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="pDesc">pDesc</param>, <param name="ppDepthStencilView">ppDepthStencilView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateInputLayout" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pInputElementDescs">
+                    <type>D3D10_INPUT_ELEMENT_DESC*</type>
+                </param>
+                <param name="NumElements">
+                    <type>uint</type>
+                </param>
+                <param name="pShaderBytecodeWithInputSignature">
+                    <type>void*</type>
+                </param>
+                <param name="BytecodeLength">
+                    <type>nuint</type>
+                </param>
+                <param name="ppInputLayout">
+                    <type>ID3D10InputLayout**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_INPUT_ELEMENT_DESC*, uint, void*, nuint, ID3D10InputLayout**, int&gt;)(lpVtbl[<vtbl explicit="False">78</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pInputElementDescs">pInputElementDescs</param>, <param name="NumElements">NumElements</param>, <param name="pShaderBytecodeWithInputSignature">pShaderBytecodeWithInputSignature</param>, <param name="BytecodeLength">BytecodeLength</param>, <param name="ppInputLayout">ppInputLayout</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVertexShader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pShaderBytecode">
+                    <type>void*</type>
+                </param>
+                <param name="BytecodeLength">
+                    <type>nuint</type>
+                </param>
+                <param name="ppVertexShader">
+                    <type>ID3D10VertexShader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, void*, nuint, ID3D10VertexShader**, int&gt;)(lpVtbl[<vtbl explicit="False">79</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pShaderBytecode">pShaderBytecode</param>, <param name="BytecodeLength">BytecodeLength</param>, <param name="ppVertexShader">ppVertexShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateGeometryShader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pShaderBytecode">
+                    <type>void*</type>
+                </param>
+                <param name="BytecodeLength">
+                    <type>nuint</type>
+                </param>
+                <param name="ppGeometryShader">
+                    <type>ID3D10GeometryShader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, void*, nuint, ID3D10GeometryShader**, int&gt;)(lpVtbl[<vtbl explicit="False">80</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pShaderBytecode">pShaderBytecode</param>, <param name="BytecodeLength">BytecodeLength</param>, <param name="ppGeometryShader">ppGeometryShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateGeometryShaderWithStreamOutput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pShaderBytecode">
+                    <type>void*</type>
+                </param>
+                <param name="BytecodeLength">
+                    <type>nuint</type>
+                </param>
+                <param name="pSODeclaration">
+                    <type>D3D10_SO_DECLARATION_ENTRY*</type>
+                </param>
+                <param name="NumEntries">
+                    <type>uint</type>
+                </param>
+                <param name="OutputStreamStride">
+                    <type>uint</type>
+                </param>
+                <param name="ppGeometryShader">
+                    <type>ID3D10GeometryShader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, void*, nuint, D3D10_SO_DECLARATION_ENTRY*, uint, uint, ID3D10GeometryShader**, int&gt;)(lpVtbl[<vtbl explicit="False">81</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pShaderBytecode">pShaderBytecode</param>, <param name="BytecodeLength">BytecodeLength</param>, <param name="pSODeclaration">pSODeclaration</param>, <param name="NumEntries">NumEntries</param>, <param name="OutputStreamStride">OutputStreamStride</param>, <param name="ppGeometryShader">ppGeometryShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePixelShader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pShaderBytecode">
+                    <type>void*</type>
+                </param>
+                <param name="BytecodeLength">
+                    <type>nuint</type>
+                </param>
+                <param name="ppPixelShader">
+                    <type>ID3D10PixelShader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, void*, nuint, ID3D10PixelShader**, int&gt;)(lpVtbl[<vtbl explicit="False">82</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pShaderBytecode">pShaderBytecode</param>, <param name="BytecodeLength">BytecodeLength</param>, <param name="ppPixelShader">ppPixelShader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBlendState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pBlendStateDesc">
+                    <type>D3D10_BLEND_DESC*</type>
+                </param>
+                <param name="ppBlendState">
+                    <type>ID3D10BlendState**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_BLEND_DESC*, ID3D10BlendState**, int&gt;)(lpVtbl[<vtbl explicit="False">83</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pBlendStateDesc">pBlendStateDesc</param>, <param name="ppBlendState">ppBlendState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateDepthStencilState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDepthStencilDesc">
+                    <type>D3D10_DEPTH_STENCIL_DESC*</type>
+                </param>
+                <param name="ppDepthStencilState">
+                    <type>ID3D10DepthStencilState**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_DEPTH_STENCIL_DESC*, ID3D10DepthStencilState**, int&gt;)(lpVtbl[<vtbl explicit="False">84</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDepthStencilDesc">pDepthStencilDesc</param>, <param name="ppDepthStencilState">ppDepthStencilState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRasterizerState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRasterizerDesc">
+                    <type>D3D10_RASTERIZER_DESC*</type>
+                </param>
+                <param name="ppRasterizerState">
+                    <type>ID3D10RasterizerState**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_RASTERIZER_DESC*, ID3D10RasterizerState**, int&gt;)(lpVtbl[<vtbl explicit="False">85</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pRasterizerDesc">pRasterizerDesc</param>, <param name="ppRasterizerState">ppRasterizerState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSamplerState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSamplerDesc">
+                    <type>D3D10_SAMPLER_DESC*</type>
+                </param>
+                <param name="ppSamplerState">
+                    <type>ID3D10SamplerState**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_SAMPLER_DESC*, ID3D10SamplerState**, int&gt;)(lpVtbl[<vtbl explicit="False">86</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pSamplerDesc">pSamplerDesc</param>, <param name="ppSamplerState">ppSamplerState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateQuery" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pQueryDesc">
+                    <type>D3D10_QUERY_DESC*</type>
+                </param>
+                <param name="ppQuery">
+                    <type>ID3D10Query**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_QUERY_DESC*, ID3D10Query**, int&gt;)(lpVtbl[<vtbl explicit="False">87</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pQueryDesc">pQueryDesc</param>, <param name="ppQuery">ppQuery</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePredicate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPredicateDesc">
+                    <type>D3D10_QUERY_DESC*</type>
+                </param>
+                <param name="ppPredicate">
+                    <type>ID3D10Predicate**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_QUERY_DESC*, ID3D10Predicate**, int&gt;)(lpVtbl[<vtbl explicit="False">88</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pPredicateDesc">pPredicateDesc</param>, <param name="ppPredicate">ppPredicate</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateCounter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCounterDesc">
+                    <type>D3D10_COUNTER_DESC*</type>
+                </param>
+                <param name="ppCounter">
+                    <type>ID3D10Counter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_COUNTER_DESC*, ID3D10Counter**, int&gt;)(lpVtbl[<vtbl explicit="False">89</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pCounterDesc">pCounterDesc</param>, <param name="ppCounter">ppCounter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckFormatSupport" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="pFormatSupport">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, DXGI_FORMAT, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">90</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="Format">Format</param>, <param name="pFormatSupport">pFormatSupport</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckMultisampleQualityLevels" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="SampleCount">
+                    <type>uint</type>
+                </param>
+                <param name="pNumQualityLevels">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, DXGI_FORMAT, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">91</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="Format">Format</param>, <param name="SampleCount">SampleCount</param>, <param name="pNumQualityLevels">pNumQualityLevels</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckCounterInfo" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pCounterInfo">
+                    <type>D3D10_COUNTER_INFO*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, D3D10_COUNTER_INFO*, void&gt;)(lpVtbl[<vtbl explicit="False">92</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pCounterInfo">pCounterInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckCounter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D10_COUNTER_DESC*</type>
+                </param>
+                <param name="pType">
+                    <type>D3D10_COUNTER_TYPE*</type>
+                </param>
+                <param name="pActiveCounters">
+                    <type>uint*</type>
+                </param>
+                <param name="szName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pNameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="szUnits">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pUnitsLength">
+                    <type>uint*</type>
+                </param>
+                <param name="szDescription">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pDescriptionLength">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_COUNTER_DESC*, D3D10_COUNTER_TYPE*, uint*, sbyte*, uint*, sbyte*, uint*, sbyte*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">93</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pType">pType</param>, <param name="pActiveCounters">pActiveCounters</param>, <param name="szName">szName</param>, <param name="pNameLength">pNameLength</param>, <param name="szUnits">szUnits</param>, <param name="pUnitsLength">pUnitsLength</param>, <param name="szDescription">szDescription</param>, <param name="pDescriptionLength">pDescriptionLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCreationFlags" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, uint&gt;)(lpVtbl[<vtbl explicit="False">94</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OpenSharedResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hResource">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ReturnedInterface">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppResource">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, IntPtr, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">95</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="hResource">hResource</param>, <param name="ReturnedInterface">ReturnedInterface</param>, <param name="ppResource">ppResource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTextFilterSize" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Width">
+                    <type>uint</type>
+                </param>
+                <param name="Height">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint, uint, void&gt;)(lpVtbl[<vtbl explicit="False">96</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="Width">Width</param>, <param name="Height">Height</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTextFilterSize" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pWidth">
+                    <type>uint*</type>
+                </param>
+                <param name="pHeight">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID3D10Device1*, uint*, uint*, void&gt;)(lpVtbl[<vtbl explicit="False">97</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pWidth">pWidth</param>, <param name="pHeight">pHeight</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateShaderResourceView1" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource">
+                    <type>ID3D10Resource*</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D10_SHADER_RESOURCE_VIEW_DESC1*</type>
+                </param>
+                <param name="ppSRView">
+                    <type>ID3D10ShaderResourceView1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, ID3D10Resource*, D3D10_SHADER_RESOURCE_VIEW_DESC1*, ID3D10ShaderResourceView1**, int&gt;)(lpVtbl[<vtbl explicit="False">98</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="pDesc">pDesc</param>, <param name="ppSRView">ppSRView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBlendState1" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pBlendStateDesc">
+                    <type>D3D10_BLEND_DESC1*</type>
+                </param>
+                <param name="ppBlendState">
+                    <type>ID3D10BlendState1**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_BLEND_DESC1*, ID3D10BlendState1**, int&gt;)(lpVtbl[<vtbl explicit="False">99</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>, <param name="pBlendStateDesc">pBlendStateDesc</param>, <param name="ppBlendState">ppBlendState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFeatureLevel" access="public" unsafe="true">
+                <type>D3D10_FEATURE_LEVEL1</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D10Device1*, D3D10_FEATURE_LEVEL1&gt;)(lpVtbl[<vtbl explicit="False">100</vtbl>]))(<param special="thisPtr">(ID3D10Device1*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

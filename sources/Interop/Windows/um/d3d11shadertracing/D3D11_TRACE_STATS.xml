@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11shadertracing.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D11_TRACE_STATS" access="public" unsafe="true">
+            <field name="TraceDesc" access="public">
+                <type native="">D3D11_SHADER_TRACE_DESC</type>
+            </field>
+            <field name="NumInvocationsInStamp" access="public">
+                <type native="UINT8">byte</type>
+            </field>
+            <field name="TargetStampIndex" access="public">
+                <type native="UINT8">byte</type>
+            </field>
+            <field name="NumTraceSteps" access="public">
+                <type native="UINT">uint</type>
+            </field>
+            <field name="InputMask" access="public">
+                <type native="D3D11_TRACE_COMPONENT_MASK [32]" count="32" fixed="_InputMask_e__FixedBuffer">byte</type>
+            </field>
+            <field name="OutputMask" access="public">
+                <type native="D3D11_TRACE_COMPONENT_MASK [32]" count="32" fixed="_OutputMask_e__FixedBuffer">byte</type>
+            </field>
+            <field name="NumTemps" access="public">
+                <type native="UINT16">ushort</type>
+            </field>
+            <field name="MaxIndexableTempIndex" access="public">
+                <type native="UINT16">ushort</type>
+            </field>
+            <field name="IndexableTempSize" access="public">
+                <type native="UINT16 [4096]" count="4096" fixed="_IndexableTempSize_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="ImmediateConstantBufferSize" access="public">
+                <type native="UINT16">ushort</type>
+            </field>
+            <field name="PixelPosition" access="public">
+                <type native="UINT [4][2]" count="4 * 2" fixed="_PixelPosition_e__FixedBuffer">uint</type>
+            </field>
+            <field name="PixelCoverageMask" access="public">
+                <type native="UINT64 [4]" count="4" fixed="_PixelCoverageMask_e__FixedBuffer">ulong</type>
+            </field>
+            <field name="PixelDiscardedMask" access="public">
+                <type native="UINT64 [4]" count="4" fixed="_PixelDiscardedMask_e__FixedBuffer">ulong</type>
+            </field>
+            <field name="PixelCoverageMaskAfterShader" access="public">
+                <type native="UINT64 [4]" count="4" fixed="_PixelCoverageMaskAfterShader_e__FixedBuffer">ulong</type>
+            </field>
+            <field name="PixelCoverageMaskAfterA2CSampleMask" access="public">
+                <type native="UINT64 [4]" count="4" fixed="_PixelCoverageMaskAfterA2CSampleMask_e__FixedBuffer">ulong</type>
+            </field>
+            <field name="PixelCoverageMaskAfterA2CSampleMaskDepth" access="public">
+                <type native="UINT64 [4]" count="4" fixed="_PixelCoverageMaskAfterA2CSampleMaskDepth_e__FixedBuffer">ulong</type>
+            </field>
+            <field name="PixelCoverageMaskAfterA2CSampleMaskDepthStencil" access="public">
+                <type native="UINT64 [4]" count="4" fixed="_PixelCoverageMaskAfterA2CSampleMaskDepthStencil_e__FixedBuffer">ulong</type>
+            </field>
+            <field name="PSOutputsDepth" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="PSOutputsMask" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="GSInputPrimitive" access="public">
+                <type native="">D3D11_TRACE_GS_INPUT_PRIMITIVE</type>
+            </field>
+            <field name="GSInputsPrimitiveID" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="HSOutputPatchConstantMask" access="public">
+                <type native="D3D11_TRACE_COMPONENT_MASK [32]" count="32" fixed="_HSOutputPatchConstantMask_e__FixedBuffer">byte</type>
+            </field>
+            <field name="DSInputPatchConstantMask" access="public">
+                <type native="D3D11_TRACE_COMPONENT_MASK [32]" count="32" fixed="_DSInputPatchConstantMask_e__FixedBuffer">byte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/windows.ui.xaml.media.dxinterop.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IVirtualSurfaceImageSourceNative" access="public" native="struct IVirtualSurfaceImageSourceNative : ISurfaceImageSourceNative" uuid="e9550983-360b-4f53-b391-afd695078691" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDevice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="device">
+                    <type>IDXGIDevice*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, IDXGIDevice*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>, <param name="device">device</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BeginDraw" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="updateRect">
+                    <type>RECT</type>
+                </param>
+                <param name="surface">
+                    <type>IDXGISurface**</type>
+                </param>
+                <param name="offset">
+                    <type>POINT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, RECT, IDXGISurface**, POINT*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>, <param name="updateRect">updateRect</param>, <param name="surface">surface</param>, <param name="offset">offset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EndDraw" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Invalidate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="updateRect">
+                    <type>RECT</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, RECT, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>, <param name="updateRect">updateRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUpdateRectCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>, <param name="count">count</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUpdateRects" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="updates">
+                    <type>RECT*</type>
+                </param>
+                <param name="count">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, RECT*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>, <param name="updates">updates</param>, <param name="count">count</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVisibleBounds" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bounds">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>, <param name="bounds">bounds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterForUpdatesNeeded" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="callback">
+                    <type>IVirtualSurfaceUpdatesCallbackNative*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, IVirtualSurfaceUpdatesCallbackNative*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>, <param name="callback">callback</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Resize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="newWidth">
+                    <type>int</type>
+                </param>
+                <param name="newHeight">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVirtualSurfaceImageSourceNative*, int, int, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IVirtualSurfaceImageSourceNative*)Unsafe.AsPointer(ref this)</param>, <param name="newWidth">newWidth</param>, <param name="newHeight">newHeight</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

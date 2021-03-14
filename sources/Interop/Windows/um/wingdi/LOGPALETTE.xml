@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wingdi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="LOGPALETTE" access="public">
+            <field name="palVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="palNumEntries" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="palPalEntry" access="public">
+                <type native="PALETTEENTRY [1]" count="1" fixed="_palPalEntry_e__FixedBuffer">PALETTEENTRY</type>
+            </field>
+            <struct name="_palPalEntry_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">PALETTEENTRY</type>
+                </field>
+                <indexer access="public">
+                    <type>ref PALETTEENTRY</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;PALETTEENTRY&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

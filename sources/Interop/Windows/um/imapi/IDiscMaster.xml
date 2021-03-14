@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/imapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDiscMaster" access="public" native="struct IDiscMaster : IUnknown" uuid="520cca62-51a5-11d3-9144-00104ba11c5e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Open" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumDiscMasterFormats" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumDiscMasterFormats**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, IEnumDiscMasterFormats**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetActiveDiscMasterFormat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lpiid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="lpiid">lpiid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetActiveDiscMasterFormat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppUnk">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppUnk">ppUnk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumDiscRecorders" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumDiscRecorders**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, IEnumDiscRecorders**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetActiveDiscRecorder" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppRecorder">
+                    <type>IDiscRecorder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, IDiscRecorder**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="ppRecorder">ppRecorder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetActiveDiscRecorder" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRecorder">
+                    <type>IDiscRecorder*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, IDiscRecorder*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="pRecorder">pRecorder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearFormatContent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProgressAdvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pEvents">
+                    <type>IDiscMasterProgressEvents*</type>
+                </param>
+                <param name="pvCookie">
+                    <type>nuint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, IDiscMasterProgressEvents*, nuint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="pEvents">pEvents</param>, <param name="pvCookie">pvCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProgressUnadvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="vCookie">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, nuint, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="vCookie">vCookie</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RecordDisc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bSimulate">
+                    <type>byte</type>
+                </param>
+                <param name="bEjectAfterBurn">
+                    <type>byte</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, byte, byte, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>, <param name="bSimulate">bSimulate</param>, <param name="bEjectAfterBurn">bEjectAfterBurn</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Close" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDiscMaster*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDiscMaster*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

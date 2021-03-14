@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="MF_MEDIAKEY_STATUS" access="public">
+            <type>int</type>
+            <enumerator name="MF_MEDIAKEY_STATUS_USABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MF_MEDIAKEY_STATUS_EXPIRED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MF_MEDIAKEY_STATUS_USABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MF_MEDIAKEY_STATUS_OUTPUT_DOWNSCALED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MF_MEDIAKEY_STATUS_EXPIRED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MF_MEDIAKEY_STATUS_OUTPUT_NOT_ALLOWED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MF_MEDIAKEY_STATUS_OUTPUT_DOWNSCALED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MF_MEDIAKEY_STATUS_STATUS_PENDING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MF_MEDIAKEY_STATUS_OUTPUT_NOT_ALLOWED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MF_MEDIAKEY_STATUS_INTERNAL_ERROR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MF_MEDIAKEY_STATUS_STATUS_PENDING + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MF_MEDIAKEY_STATUS_RELEASED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MF_MEDIAKEY_STATUS_INTERNAL_ERROR + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="MF_MEDIAKEY_STATUS_OUTPUT_RESTRICTED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(MF_MEDIAKEY_STATUS_RELEASED + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

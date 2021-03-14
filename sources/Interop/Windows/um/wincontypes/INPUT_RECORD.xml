@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincontypes.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="INPUT_RECORD" access="public">
+            <field name="EventType" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="Event" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincontypes.h:124:5)">_Event_e__Union</type>
+            </field>
+            <struct name="_Event_e__Union" access="public" layout="Explicit">
+                <field name="KeyEvent" access="public" offset="0">
+                    <type native="">KEY_EVENT_RECORD</type>
+                </field>
+                <field name="MouseEvent" access="public" offset="0">
+                    <type native="">MOUSE_EVENT_RECORD</type>
+                </field>
+                <field name="WindowBufferSizeEvent" access="public" offset="0">
+                    <type native="">WINDOW_BUFFER_SIZE_RECORD</type>
+                </field>
+                <field name="MenuEvent" access="public" offset="0">
+                    <type native="">MENU_EVENT_RECORD</type>
+                </field>
+                <field name="FocusEvent" access="public" offset="0">
+                    <type native="">FOCUS_EVENT_RECORD</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfcontentdecryptionmodule.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFContentDecryptionModuleSessionCallbacks" access="public" native="struct IMFContentDecryptionModuleSessionCallbacks : IUnknown" uuid="3f96ee40-ad81-4096-8470-59a4b770f89a" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModuleSessionCallbacks*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModuleSessionCallbacks*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModuleSessionCallbacks*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModuleSessionCallbacks*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModuleSessionCallbacks*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModuleSessionCallbacks*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="KeyMessage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="messageType">
+                    <type>MF_MEDIAKEYSESSION_MESSAGETYPE</type>
+                </param>
+                <param name="message">
+                    <type>byte*</type>
+                </param>
+                <param name="messageSize">
+                    <type>uint</type>
+                </param>
+                <param name="destinationURL">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModuleSessionCallbacks*, MF_MEDIAKEYSESSION_MESSAGETYPE, byte*, uint, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModuleSessionCallbacks*)Unsafe.AsPointer(ref this)</param>, <param name="messageType">messageType</param>, <param name="message">message</param>, <param name="messageSize">messageSize</param>, <param name="destinationURL">destinationURL</param>);
+        </code>
+                </body>
+            </function>
+            <function name="KeyStatusChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModuleSessionCallbacks*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModuleSessionCallbacks*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

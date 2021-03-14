@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ctffunc.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfFnAdviseText" access="public" native="struct ITfFnAdviseText : ITfFunction" uuid="3527268b-7d53-4dd9-92b7-7296ae461249" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnAdviseText*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfFnAdviseText*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnAdviseText*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfFnAdviseText*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnAdviseText*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfFnAdviseText*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDisplayName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbstrName">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnAdviseText*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfFnAdviseText*)Unsafe.AsPointer(ref this)</param>, <param name="pbstrName">pbstrName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnTextUpdate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="pchText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cch">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnAdviseText*, ITfRange*, ushort*, int, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfFnAdviseText*)Unsafe.AsPointer(ref this)</param>, <param name="pRange">pRange</param>, <param name="pchText">pchText</param>, <param name="cch">cch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnLatticeUpdate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="pLattice">
+                    <type>ITfLMLattice*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnAdviseText*, ITfRange*, ITfLMLattice*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfFnAdviseText*)Unsafe.AsPointer(ref this)</param>, <param name="pRange">pRange</param>, <param name="pLattice">pLattice</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

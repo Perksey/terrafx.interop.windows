@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D11VideoDevice" access="public" native="struct ID3D11VideoDevice : IUnknown" uuid="10ec4d5b-975a-4689-b9e4-d0aac30fe333" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoDecoder" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pVideoDesc">
+                    <type>D3D11_VIDEO_DECODER_DESC*</type>
+                </param>
+                <param name="pConfig">
+                    <type>D3D11_VIDEO_DECODER_CONFIG*</type>
+                </param>
+                <param name="ppDecoder">
+                    <type>ID3D11VideoDecoder**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, D3D11_VIDEO_DECODER_DESC*, D3D11_VIDEO_DECODER_CONFIG*, ID3D11VideoDecoder**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pVideoDesc">pVideoDesc</param>, <param name="pConfig">pConfig</param>, <param name="ppDecoder">ppDecoder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoProcessor" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pEnum">
+                    <type>ID3D11VideoProcessorEnumerator*</type>
+                </param>
+                <param name="RateConversionIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppVideoProcessor">
+                    <type>ID3D11VideoProcessor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, ID3D11VideoProcessorEnumerator*, uint, ID3D11VideoProcessor**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pEnum">pEnum</param>, <param name="RateConversionIndex">RateConversionIndex</param>, <param name="ppVideoProcessor">ppVideoProcessor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateAuthenticatedChannel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ChannelType">
+                    <type>D3D11_AUTHENTICATED_CHANNEL_TYPE</type>
+                </param>
+                <param name="ppAuthenticatedChannel">
+                    <type>ID3D11AuthenticatedChannel**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, D3D11_AUTHENTICATED_CHANNEL_TYPE, ID3D11AuthenticatedChannel**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="ChannelType">ChannelType</param>, <param name="ppAuthenticatedChannel">ppAuthenticatedChannel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateCryptoSession" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCryptoType">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDecoderProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="pKeyExchangeType">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppCryptoSession">
+                    <type>ID3D11CryptoSession**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, Guid*, Guid*, Guid*, ID3D11CryptoSession**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoType">pCryptoType</param>, <param name="pDecoderProfile">pDecoderProfile</param>, <param name="pKeyExchangeType">pKeyExchangeType</param>, <param name="ppCryptoSession">ppCryptoSession</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoDecoderOutputView" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC*</type>
+                </param>
+                <param name="ppVDOVView">
+                    <type>ID3D11VideoDecoderOutputView**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, ID3D11Resource*, D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC*, ID3D11VideoDecoderOutputView**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="pDesc">pDesc</param>, <param name="ppVDOVView">ppVDOVView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoProcessorInputView" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="pEnum">
+                    <type>ID3D11VideoProcessorEnumerator*</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC*</type>
+                </param>
+                <param name="ppVPIView">
+                    <type>ID3D11VideoProcessorInputView**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, ID3D11Resource*, ID3D11VideoProcessorEnumerator*, D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC*, ID3D11VideoProcessorInputView**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="pEnum">pEnum</param>, <param name="pDesc">pDesc</param>, <param name="ppVPIView">ppVPIView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoProcessorOutputView" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pResource">
+                    <type>ID3D11Resource*</type>
+                </param>
+                <param name="pEnum">
+                    <type>ID3D11VideoProcessorEnumerator*</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC*</type>
+                </param>
+                <param name="ppVPOView">
+                    <type>ID3D11VideoProcessorOutputView**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, ID3D11Resource*, ID3D11VideoProcessorEnumerator*, D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC*, ID3D11VideoProcessorOutputView**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pResource">pResource</param>, <param name="pEnum">pEnum</param>, <param name="pDesc">pDesc</param>, <param name="ppVPOView">ppVPOView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateVideoProcessorEnumerator" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D11_VIDEO_PROCESSOR_CONTENT_DESC*</type>
+                </param>
+                <param name="ppEnum">
+                    <type>ID3D11VideoProcessorEnumerator**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, D3D11_VIDEO_PROCESSOR_CONTENT_DESC*, ID3D11VideoProcessorEnumerator**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVideoDecoderProfileCount" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, uint&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVideoDecoderProfile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Index">
+                    <type>uint</type>
+                </param>
+                <param name="pDecoderProfile">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="Index">Index</param>, <param name="pDecoderProfile">pDecoderProfile</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckVideoDecoderFormat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDecoderProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="Format">
+                    <type>DXGI_FORMAT</type>
+                </param>
+                <param name="pSupported">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, Guid*, DXGI_FORMAT, int*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pDecoderProfile">pDecoderProfile</param>, <param name="Format">Format</param>, <param name="pSupported">pSupported</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVideoDecoderConfigCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D11_VIDEO_DECODER_DESC*</type>
+                </param>
+                <param name="pCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, D3D11_VIDEO_DECODER_DESC*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="pCount">pCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVideoDecoderConfig" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D11_VIDEO_DECODER_DESC*</type>
+                </param>
+                <param name="Index">
+                    <type>uint</type>
+                </param>
+                <param name="pConfig">
+                    <type>D3D11_VIDEO_DECODER_CONFIG*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, D3D11_VIDEO_DECODER_DESC*, uint, D3D11_VIDEO_DECODER_CONFIG*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="Index">Index</param>, <param name="pConfig">pConfig</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetContentProtectionCaps" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCryptoType">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDecoderProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="pCaps">
+                    <type>D3D11_VIDEO_CONTENT_PROTECTION_CAPS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, Guid*, Guid*, D3D11_VIDEO_CONTENT_PROTECTION_CAPS*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoType">pCryptoType</param>, <param name="pDecoderProfile">pDecoderProfile</param>, <param name="pCaps">pCaps</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckCryptoKeyExchange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCryptoType">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDecoderProfile">
+                    <type>Guid*</type>
+                </param>
+                <param name="Index">
+                    <type>uint</type>
+                </param>
+                <param name="pKeyExchangeType">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, Guid*, Guid*, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="pCryptoType">pCryptoType</param>, <param name="pDecoderProfile">pDecoderProfile</param>, <param name="Index">Index</param>, <param name="pKeyExchangeType">pKeyExchangeType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pData">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11VideoDevice*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID3D11VideoDevice*)Unsafe.AsPointer(ref this)</param>, <param name="guid">guid</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

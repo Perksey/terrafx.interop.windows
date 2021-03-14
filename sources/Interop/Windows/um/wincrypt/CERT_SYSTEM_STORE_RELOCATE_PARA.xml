@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CERT_SYSTEM_STORE_RELOCATE_PARA" access="public" unsafe="true">
+            <field name="Anonymous1" access="public">
+                <type native="_CERT_SYSTEM_STORE_RELOCATE_PARA::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:9483:5)">_Anonymous1_e__Union</type>
+            </field>
+            <field name="hKeyBase" access="public">
+                <type native="">ref IntPtr</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.hKeyBase, 1));
+        </code>
+                </get>
+            </field>
+            <field name="pvBase" access="public">
+                <type native="">ref void*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous1_e__Union* pField = &amp;Anonymous1)
+        {
+            return ref pField-&gt;pvBase;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="Anonymous2" access="public">
+                <type native="_CERT_SYSTEM_STORE_RELOCATE_PARA::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:9487:5)">_Anonymous2_e__Union</type>
+            </field>
+            <field name="pvSystemStore" access="public">
+                <type native="">ref void*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous2_e__Union* pField = &amp;Anonymous2)
+        {
+            return ref pField-&gt;pvSystemStore;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pszSystemStore" access="public">
+                <type native="">ref sbyte*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous2_e__Union* pField = &amp;Anonymous2)
+        {
+            return ref pField-&gt;pszSystemStore;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pwszSystemStore" access="public">
+                <type native="">ref ushort*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous2_e__Union* pField = &amp;Anonymous2)
+        {
+            return ref pField-&gt;pwszSystemStore;
+        }
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous1_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="hKeyBase" access="public" offset="0">
+                    <type native="HKEY">IntPtr</type>
+                </field>
+                <field name="pvBase" access="public" offset="0">
+                    <type native="void *">void*</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous2_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pvSystemStore" access="public" offset="0">
+                    <type native="void *">void*</type>
+                </field>
+                <field name="pszSystemStore" access="public" offset="0">
+                    <type native="LPCSTR">sbyte*</type>
+                </field>
+                <field name="pwszSystemStore" access="public" offset="0">
+                    <type native="LPCWSTR">ushort*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

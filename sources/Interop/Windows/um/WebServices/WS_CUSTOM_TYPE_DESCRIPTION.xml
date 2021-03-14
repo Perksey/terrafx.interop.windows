@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WS_CUSTOM_TYPE_DESCRIPTION" access="public" unsafe="true">
+            <field name="size" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="alignment" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="readCallback" access="public">
+                <type native="WS_READ_TYPE_CALLBACK">delegate* unmanaged&lt;IntPtr, WS_TYPE_MAPPING, void*, IntPtr, void*, uint, IntPtr, int&gt;</type>
+            </field>
+            <field name="writeCallback" access="public">
+                <type native="WS_WRITE_TYPE_CALLBACK">delegate* unmanaged&lt;IntPtr, WS_TYPE_MAPPING, void*, void*, uint, IntPtr, int&gt;</type>
+            </field>
+            <field name="descriptionData" access="public">
+                <type native="void *">void*</type>
+            </field>
+            <field name="isDefaultValueCallback" access="public">
+                <type native="WS_IS_DEFAULT_VALUE_CALLBACK">delegate* unmanaged&lt;void*, void*, void*, uint, int*, IntPtr, int&gt;</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

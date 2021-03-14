@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfKeystrokeMgr" access="public" native="struct ITfKeystrokeMgr : IUnknown" uuid="aa80e7f0-2021-11d2-93e0-0060b067b86e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AdviseKeyEventSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tid">
+                    <type>uint</type>
+                </param>
+                <param name="pSink">
+                    <type>ITfKeyEventSink*</type>
+                </param>
+                <param name="fForeground">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, uint, ITfKeyEventSink*, int, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="tid">tid</param>, <param name="pSink">pSink</param>, <param name="fForeground">fForeground</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnadviseKeyEventSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tid">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="tid">tid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetForeground" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pclsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="pclsid">pclsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TestKeyDown" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="pfEaten">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, nuint, nint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>, <param name="pfEaten">pfEaten</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TestKeyUp" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="pfEaten">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, nuint, nint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>, <param name="pfEaten">pfEaten</param>);
+        </code>
+                </body>
+            </function>
+            <function name="KeyDown" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="pfEaten">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, nuint, nint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>, <param name="pfEaten">pfEaten</param>);
+        </code>
+                </body>
+            </function>
+            <function name="KeyUp" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="pfEaten">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, nuint, nint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>, <param name="pfEaten">pfEaten</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPreservedKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pic">
+                    <type>ITfContext*</type>
+                </param>
+                <param name="pprekey">
+                    <type>TF_PRESERVEDKEY*</type>
+                </param>
+                <param name="pguid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, ITfContext*, TF_PRESERVEDKEY*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="pic">pic</param>, <param name="pprekey">pprekey</param>, <param name="pguid">pguid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsPreservedKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pprekey">
+                    <type>TF_PRESERVEDKEY*</type>
+                </param>
+                <param name="pfRegistered">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, Guid*, TF_PRESERVEDKEY*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="pprekey">pprekey</param>, <param name="pfRegistered">pfRegistered</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PreserveKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tid">
+                    <type>uint</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="prekey">
+                    <type>TF_PRESERVEDKEY*</type>
+                </param>
+                <param name="pchDesc">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchDesc">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, uint, Guid*, TF_PRESERVEDKEY*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="tid">tid</param>, <param name="rguid">rguid</param>, <param name="prekey">prekey</param>, <param name="pchDesc">pchDesc</param>, <param name="cchDesc">cchDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnpreserveKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pprekey">
+                    <type>TF_PRESERVEDKEY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, Guid*, TF_PRESERVEDKEY*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="pprekey">pprekey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPreservedKeyDescription" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pchDesc">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchDesc">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, Guid*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="pchDesc">pchDesc</param>, <param name="cchDesc">cchDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPreservedKeyDescription" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pbstrDesc">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, Guid*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="pbstrDesc">pbstrDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SimulatePreservedKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pic">
+                    <type>ITfContext*</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pfEaten">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfKeystrokeMgr*, ITfContext*, Guid*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ITfKeystrokeMgr*)Unsafe.AsPointer(ref this)</param>, <param name="pic">pic</param>, <param name="rguid">rguid</param>, <param name="pfEaten">pfEaten</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

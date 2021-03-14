@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/TlHelp32.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PROCESSENTRY32" access="public" unsafe="true">
+            <field name="dwSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cntUsage" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="th32ProcessID" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="th32DefaultHeapID" access="public">
+                <type native="ULONG_PTR">nuint</type>
+            </field>
+            <field name="th32ModuleID" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cntThreads" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="th32ParentProcessID" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pcPriClassBase" access="public">
+                <type native="LONG">int</type>
+            </field>
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="szExeFile" access="public">
+                <type native="CHAR [260]" count="260" fixed="_szExeFile_e__FixedBuffer">sbyte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

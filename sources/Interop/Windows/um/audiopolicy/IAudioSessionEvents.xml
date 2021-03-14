@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/audiopolicy.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAudioSessionEvents" access="public" native="struct IAudioSessionEvents : IUnknown" uuid="24918acc-64b3-37c1-8ca9-74a66e9957a8" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnDisplayNameChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewDisplayName">
+                    <type>ushort*</type>
+                </param>
+                <param name="EventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, ushort*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>, <param name="NewDisplayName">NewDisplayName</param>, <param name="EventContext">EventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnIconPathChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewIconPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="EventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, ushort*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>, <param name="NewIconPath">NewIconPath</param>, <param name="EventContext">EventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnSimpleVolumeChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewVolume">
+                    <type>float</type>
+                </param>
+                <param name="NewMute">
+                    <type>int</type>
+                </param>
+                <param name="EventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, float, int, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>, <param name="NewVolume">NewVolume</param>, <param name="NewMute">NewMute</param>, <param name="EventContext">EventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnChannelVolumeChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ChannelCount">
+                    <type>uint</type>
+                </param>
+                <param name="NewChannelVolumeArray">
+                    <type>float*</type>
+                </param>
+                <param name="ChangedChannel">
+                    <type>uint</type>
+                </param>
+                <param name="EventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, uint, float*, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>, <param name="ChannelCount">ChannelCount</param>, <param name="NewChannelVolumeArray">NewChannelVolumeArray</param>, <param name="ChangedChannel">ChangedChannel</param>, <param name="EventContext">EventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnGroupingParamChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewGroupingParam">
+                    <type>Guid*</type>
+                </param>
+                <param name="EventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>, <param name="NewGroupingParam">NewGroupingParam</param>, <param name="EventContext">EventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnStateChanged" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewState">
+                    <type>AudioSessionState</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, AudioSessionState, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>, <param name="NewState">NewState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnSessionDisconnected" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="DisconnectReason">
+                    <type>AudioSessionDisconnectReason</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioSessionEvents*, AudioSessionDisconnectReason, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IAudioSessionEvents*)Unsafe.AsPointer(ref this)</param>, <param name="DisconnectReason">DisconnectReason</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/devicetopology.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IPart" access="public" native="struct IPart : IUnknown" uuid="ae2de0e4-5bca-4f2d-aa46-5d13f8fdb3a9" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppwstrName">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="ppwstrName">ppwstrName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLocalId" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pnId">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="pnId">pnId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGlobalId" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppwstrGlobalId">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="ppwstrGlobalId">ppwstrGlobalId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPartType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPartType">
+                    <type>PartType*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, PartType*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="pPartType">pPartType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSubType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSubType">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="pSubType">pSubType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetControlInterfaceCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="pCount">pCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetControlInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppInterfaceDesc">
+                    <type>IControlInterface**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, uint, IControlInterface**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="nIndex">nIndex</param>, <param name="ppInterfaceDesc">ppInterfaceDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumPartsIncoming" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppParts">
+                    <type>IPartsList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, IPartsList**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="ppParts">ppParts</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumPartsOutgoing" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppParts">
+                    <type>IPartsList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, IPartsList**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="ppParts">ppParts</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTopologyObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppTopology">
+                    <type>IDeviceTopology**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, IDeviceTopology**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="ppTopology">ppTopology</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Activate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwClsContext">
+                    <type>uint</type>
+                </param>
+                <param name="refiid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, uint, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="dwClsContext">dwClsContext</param>, <param name="refiid">refiid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterControlChangeCallback" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pNotify">
+                    <type>IControlChangeNotify*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, Guid*, IControlChangeNotify*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="pNotify">pNotify</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterControlChangeCallback" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNotify">
+                    <type>IControlChangeNotify*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IPart*, IControlChangeNotify*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IPart*)Unsafe.AsPointer(ref this)</param>, <param name="pNotify">pNotify</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

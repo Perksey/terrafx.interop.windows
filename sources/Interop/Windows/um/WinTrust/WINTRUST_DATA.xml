@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinTrust.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WINTRUST_DATA" access="public" unsafe="true">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pPolicyCallbackData" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+            <field name="pSIPClientData" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+            <field name="dwUIChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="fdwRevocationChecks" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwUnionChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_WINTRUST_DATA::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/WinTrust.h:116:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="pFile" access="public">
+                <type native="">ref WINTRUST_FILE_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pFile;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pCatalog" access="public">
+                <type native="">ref WINTRUST_CATALOG_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pCatalog;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pBlob" access="public">
+                <type native="">ref WINTRUST_BLOB_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pBlob;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pSgnr" access="public">
+                <type native="">ref WINTRUST_SGNR_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pSgnr;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pCert" access="public">
+                <type native="">ref WINTRUST_CERT_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pCert;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="dwStateAction" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hWVTStateData" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <field name="pwszURLReference" access="public">
+                <type native="WCHAR *">ushort*</type>
+            </field>
+            <field name="dwProvFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwUIContext" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pSignatureSettings" access="public">
+                <type native="struct WINTRUST_SIGNATURE_SETTINGS_ *">WINTRUST_SIGNATURE_SETTINGS*</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pFile" access="public" offset="0">
+                    <type native="struct WINTRUST_FILE_INFO_ *">WINTRUST_FILE_INFO*</type>
+                </field>
+                <field name="pCatalog" access="public" offset="0">
+                    <type native="struct WINTRUST_CATALOG_INFO_ *">WINTRUST_CATALOG_INFO*</type>
+                </field>
+                <field name="pBlob" access="public" offset="0">
+                    <type native="struct WINTRUST_BLOB_INFO_ *">WINTRUST_BLOB_INFO*</type>
+                </field>
+                <field name="pSgnr" access="public" offset="0">
+                    <type native="struct WINTRUST_SGNR_INFO_ *">WINTRUST_SGNR_INFO*</type>
+                </field>
+                <field name="pCert" access="public" offset="0">
+                    <type native="struct WINTRUST_CERT_INFO_ *">WINTRUST_CERT_INFO*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

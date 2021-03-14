@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="PhysicalConnectorType" access="public">
+            <type>int</type>
+            <enumerator name="PhysConn_Video_Tuner" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_Composite" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_Tuner + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_SVideo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_Composite + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_RGB" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_SVideo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_YRYBY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_RGB + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_SerialDigital" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_YRYBY + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_ParallelDigital" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_SerialDigital + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_SCSI" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_ParallelDigital + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_AUX" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_SCSI + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_1394" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_AUX + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_USB" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_1394 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_VideoDecoder" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_USB + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_VideoEncoder" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_VideoDecoder + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_SCART" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_VideoEncoder + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Video_Black" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Video_SCART + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_Tuner" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0x1000
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_Line" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Audio_Tuner + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_Mic" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Audio_Line + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_AESDigital" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Audio_Mic + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_SPDIFDigital" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Audio_AESDigital + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_SCSI" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Audio_SPDIFDigital + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_AUX" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Audio_SCSI + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_1394" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Audio_AUX + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_USB" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Audio_1394 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="PhysConn_Audio_AudioDecoder" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(PhysConn_Audio_USB + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

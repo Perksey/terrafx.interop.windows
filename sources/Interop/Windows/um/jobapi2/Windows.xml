@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/namespaceapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreateJobObjectW" access="public" lib="Kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpJobAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="FreeMemoryJobObject" access="public" lib="Kernel32" static="true">
+                <type>void</type>
+                <param name="Buffer">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="OpenJobObjectW" access="public" lib="Kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="bInheritHandle">
+                    <type>int</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="AssignProcessToJobObject" access="public" lib="Kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hJob">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hProcess">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="TerminateJobObject" access="public" lib="Kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hJob">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uExitCode">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetInformationJobObject" access="public" lib="Kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hJob">
+                    <type>IntPtr</type>
+                </param>
+                <param name="JobObjectInformationClass">
+                    <type>JOBOBJECTINFOCLASS</type>
+                </param>
+                <param name="lpJobObjectInformation">
+                    <type>void*</type>
+                </param>
+                <param name="cbJobObjectInformationLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetIoRateControlInformationJobObject" access="public" lib="Kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="hJob">
+                    <type>IntPtr</type>
+                </param>
+                <param name="IoRateControlInfo">
+                    <type>JOBOBJECT_IO_RATE_CONTROL_INFORMATION*</type>
+                </param>
+            </function>
+            <function name="QueryInformationJobObject" access="public" lib="Kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hJob">
+                    <type>IntPtr</type>
+                </param>
+                <param name="JobObjectInformationClass">
+                    <type>JOBOBJECTINFOCLASS</type>
+                </param>
+                <param name="lpJobObjectInformation">
+                    <type>void*</type>
+                </param>
+                <param name="cbJobObjectInformationLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpReturnLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="QueryIoRateControlInformationJobObject" access="public" lib="Kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="hJob">
+                    <type>IntPtr</type>
+                </param>
+                <param name="VolumeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="InfoBlocks">
+                    <type>JOBOBJECT_IO_RATE_CONTROL_INFORMATION**</type>
+                </param>
+                <param name="InfoBlockCount">
+                    <type>uint*</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfContextOwnerServices" access="public" native="struct ITfContextOwnerServices : IUnknown" uuid="b23eb630-3e1c-11d3-a745-0050040ab407" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnLayoutChange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnStatusChange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnAttributeChange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguidAttribute">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>, <param name="rguidAttribute">rguidAttribute</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Serialize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pProp">
+                    <type>ITfProperty*</type>
+                </param>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="pHdr">
+                    <type>TF_PERSISTENT_PROPERTY_HEADER_ACP*</type>
+                </param>
+                <param name="pStream">
+                    <type>IStream*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, ITfProperty*, ITfRange*, TF_PERSISTENT_PROPERTY_HEADER_ACP*, IStream*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>, <param name="pProp">pProp</param>, <param name="pRange">pRange</param>, <param name="pHdr">pHdr</param>, <param name="pStream">pStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Unserialize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pProp">
+                    <type>ITfProperty*</type>
+                </param>
+                <param name="pHdr">
+                    <type>TF_PERSISTENT_PROPERTY_HEADER_ACP*</type>
+                </param>
+                <param name="pStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="pLoader">
+                    <type>ITfPersistentPropertyLoaderACP*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, ITfProperty*, TF_PERSISTENT_PROPERTY_HEADER_ACP*, IStream*, ITfPersistentPropertyLoaderACP*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>, <param name="pProp">pProp</param>, <param name="pHdr">pHdr</param>, <param name="pStream">pStream</param>, <param name="pLoader">pLoader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ForceLoadProperty" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pProp">
+                    <type>ITfProperty*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, ITfProperty*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>, <param name="pProp">pProp</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="acpStart">
+                    <type>int</type>
+                </param>
+                <param name="acpEnd">
+                    <type>int</type>
+                </param>
+                <param name="ppRange">
+                    <type>ITfRangeACP**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContextOwnerServices*, int, int, ITfRangeACP**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfContextOwnerServices*)Unsafe.AsPointer(ref this)</param>, <param name="acpStart">acpStart</param>, <param name="acpEnd">acpEnd</param>, <param name="ppRange">ppRange</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

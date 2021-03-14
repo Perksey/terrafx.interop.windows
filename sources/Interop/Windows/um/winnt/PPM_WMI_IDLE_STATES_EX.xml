@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PPM_WMI_IDLE_STATES_EX" access="public" unsafe="true">
+            <field name="Type" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Count" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="TargetState" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="OldState" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="TargetProcessors" access="public">
+                <type native="PVOID">void*</type>
+            </field>
+            <field name="State" access="public">
+                <type native="PPM_WMI_IDLE_STATE [1]" count="1" fixed="_State_e__FixedBuffer">PPM_WMI_IDLE_STATE</type>
+            </field>
+            <struct name="_State_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">PPM_WMI_IDLE_STATE</type>
+                </field>
+                <indexer access="public">
+                    <type>ref PPM_WMI_IDLE_STATE</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;PPM_WMI_IDLE_STATE&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

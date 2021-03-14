@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IVMRSurfaceAllocator" access="public" native="struct IVMRSurfaceAllocator : IUnknown" uuid="31ce832e-4484-458b-8cca-f4d7e3db0b52" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRSurfaceAllocator*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IVMRSurfaceAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRSurfaceAllocator*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IVMRSurfaceAllocator*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRSurfaceAllocator*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IVMRSurfaceAllocator*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AllocateSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwUserID">
+                    <type>nuint</type>
+                </param>
+                <param name="lpAllocInfo">
+                    <type>VMRALLOCATIONINFO*</type>
+                </param>
+                <param name="lpdwActualBuffers">
+                    <type>uint*</type>
+                </param>
+                <param name="lplpSurface">
+                    <type>IDirectDrawSurface7**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRSurfaceAllocator*, nuint, VMRALLOCATIONINFO*, uint*, IDirectDrawSurface7**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IVMRSurfaceAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="dwUserID">dwUserID</param>, <param name="lpAllocInfo">lpAllocInfo</param>, <param name="lpdwActualBuffers">lpdwActualBuffers</param>, <param name="lplpSurface">lplpSurface</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FreeSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwID">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRSurfaceAllocator*, nuint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IVMRSurfaceAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="dwID">dwID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PrepareSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwUserID">
+                    <type>nuint</type>
+                </param>
+                <param name="lpSurface">
+                    <type>IDirectDrawSurface7*</type>
+                </param>
+                <param name="dwSurfaceFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRSurfaceAllocator*, nuint, IDirectDrawSurface7*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IVMRSurfaceAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="dwUserID">dwUserID</param>, <param name="lpSurface">lpSurface</param>, <param name="dwSurfaceFlags">dwSurfaceFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AdviseNotify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lpIVMRSurfAllocNotify">
+                    <type>IVMRSurfaceAllocatorNotify*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IVMRSurfaceAllocator*, IVMRSurfaceAllocatorNotify*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IVMRSurfaceAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="lpIVMRSurfAllocNotify">lpIVMRSurfAllocNotify</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

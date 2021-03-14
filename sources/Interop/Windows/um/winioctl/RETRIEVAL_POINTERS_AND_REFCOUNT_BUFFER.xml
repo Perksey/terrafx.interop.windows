@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="RETRIEVAL_POINTERS_AND_REFCOUNT_BUFFER" access="public">
+            <field name="ExtentCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="StartingVcn" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="Extents" access="public">
+                <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:10603:5) [1]" count="1" fixed="_Extents_e__FixedBuffer">_Anonymous_e__Struct</type>
+            </field>
+            <struct name="_Anonymous_e__Struct" access="public">
+                <field name="NextVcn" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="Lcn" access="public">
+                    <type native="">LARGE_INTEGER</type>
+                </field>
+                <field name="ReferenceCount" access="public">
+                    <type native="DWORD">uint</type>
+                </field>
+            </struct>
+            <struct name="_Extents_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">_Anonymous_e__Struct</type>
+                </field>
+                <indexer access="public">
+                    <type>ref _Anonymous_e__Struct</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;_Anonymous_e__Struct&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

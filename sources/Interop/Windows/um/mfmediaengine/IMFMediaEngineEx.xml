@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfmediaengine.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFMediaEngineEx" access="public" native="struct IMFMediaEngineEx : IMFMediaEngine" uuid="83015ead-b1e6-40d0-a98a-37145ffe1ad1" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetError" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppError">
+                    <type>IMFMediaError**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IMFMediaError**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="ppError">ppError</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetErrorCode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>MF_MEDIA_ENGINE_ERR</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, MF_MEDIA_ENGINE_ERR, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="error">error</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSourceElements" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcElements">
+                    <type>IMFMediaEngineSrcElements*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IMFMediaEngineSrcElements*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pSrcElements">pSrcElements</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pUrl">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pUrl">pUrl</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppUrl">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="ppUrl">ppUrl</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNetworkState" access="public" unsafe="true">
+                <type native="USHORT">ushort</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, ushort&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPreload" access="public" unsafe="true">
+                <type>MF_MEDIA_ENGINE_PRELOAD</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, MF_MEDIA_ENGINE_PRELOAD&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPreload" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Preload">
+                    <type>MF_MEDIA_ENGINE_PRELOAD</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, MF_MEDIA_ENGINE_PRELOAD, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="Preload">Preload</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBuffered" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppBuffered">
+                    <type>IMFMediaTimeRange**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IMFMediaTimeRange**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="ppBuffered">ppBuffered</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Load" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CanPlayType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="type">
+                    <type>ushort*</type>
+                </param>
+                <param name="pAnswer">
+                    <type>MF_MEDIA_ENGINE_CANPLAY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, ushort*, MF_MEDIA_ENGINE_CANPLAY*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="type">type</param>, <param name="pAnswer">pAnswer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetReadyState" access="public" unsafe="true">
+                <type native="USHORT">ushort</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, ushort&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsSeeking" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentTime" access="public" unsafe="true">
+                <type>double</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetCurrentTime" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="seekTime">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="seekTime">seekTime</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStartTime" access="public" unsafe="true">
+                <type>double</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDuration" access="public" unsafe="true">
+                <type>double</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsPaused" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDefaultPlaybackRate" access="public" unsafe="true">
+                <type>double</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDefaultPlaybackRate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Rate">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="Rate">Rate</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPlaybackRate" access="public" unsafe="true">
+                <type>double</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPlaybackRate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Rate">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="Rate">Rate</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPlayed" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppPlayed">
+                    <type>IMFMediaTimeRange**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IMFMediaTimeRange**, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="ppPlayed">ppPlayed</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSeekable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppSeekable">
+                    <type>IMFMediaTimeRange**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IMFMediaTimeRange**, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="ppSeekable">ppSeekable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsEnded" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAutoPlay" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAutoPlay" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="AutoPlay">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="AutoPlay">AutoPlay</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLoop" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetLoop" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Loop">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int, int&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="Loop">Loop</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Play" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Pause" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMuted" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMuted" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Muted">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int, int&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="Muted">Muted</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVolume" access="public" unsafe="true">
+                <type>double</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetVolume" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Volume">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double, int&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="Volume">Volume</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HasVideo" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">38</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HasAudio" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">39</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNativeVideoSize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cx">
+                    <type>uint*</type>
+                </param>
+                <param name="cy">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">40</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="cx">cx</param>, <param name="cy">cy</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVideoAspectRatio" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cx">
+                    <type>uint*</type>
+                </param>
+                <param name="cy">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">41</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="cx">cx</param>, <param name="cy">cy</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Shutdown" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">42</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TransferVideoFrame" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDstSurf">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pSrc">
+                    <type>MFVideoNormalizedRect*</type>
+                </param>
+                <param name="pDst">
+                    <type>RECT*</type>
+                </param>
+                <param name="pBorderClr">
+                    <type>MFARGB*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IUnknown*, MFVideoNormalizedRect*, RECT*, MFARGB*, int&gt;)(lpVtbl[<vtbl explicit="False">43</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pDstSurf">pDstSurf</param>, <param name="pSrc">pSrc</param>, <param name="pDst">pDst</param>, <param name="pBorderClr">pBorderClr</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnVideoStreamTick" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPts">
+                    <type>long*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, long*, int&gt;)(lpVtbl[<vtbl explicit="False">44</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pPts">pPts</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSourceFromByteStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pByteStream">
+                    <type>IMFByteStream*</type>
+                </param>
+                <param name="pURL">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IMFByteStream*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">45</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pByteStream">pByteStream</param>, <param name="pURL">pURL</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStatistics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="StatisticID">
+                    <type>MF_MEDIA_ENGINE_STATISTIC</type>
+                </param>
+                <param name="pStatistic">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, MF_MEDIA_ENGINE_STATISTIC, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">46</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="StatisticID">StatisticID</param>, <param name="pStatistic">pStatistic</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UpdateVideoStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrc">
+                    <type>MFVideoNormalizedRect*</type>
+                </param>
+                <param name="pDst">
+                    <type>RECT*</type>
+                </param>
+                <param name="pBorderClr">
+                    <type>MFARGB*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, MFVideoNormalizedRect*, RECT*, MFARGB*, int&gt;)(lpVtbl[<vtbl explicit="False">47</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pSrc">pSrc</param>, <param name="pDst">pDst</param>, <param name="pBorderClr">pBorderClr</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBalance" access="public" unsafe="true">
+                <type>double</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double&gt;)(lpVtbl[<vtbl explicit="False">48</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetBalance" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="balance">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double, int&gt;)(lpVtbl[<vtbl explicit="False">49</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="balance">balance</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsPlaybackRateSupported" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="rate">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double, int&gt;)(lpVtbl[<vtbl explicit="False">50</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="rate">rate</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FrameStep" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Forward">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int, int&gt;)(lpVtbl[<vtbl explicit="False">51</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="Forward">Forward</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetResourceCharacteristics" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCharacteristics">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">52</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pCharacteristics">pCharacteristics</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPresentationAttribute" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidMFAttribute">
+                    <type>Guid*</type>
+                </param>
+                <param name="pvValue">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, Guid*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">53</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="guidMFAttribute">guidMFAttribute</param>, <param name="pvValue">pvValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNumberOfStreams" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwStreamCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">54</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pdwStreamCount">pdwStreamCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamAttribute" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="guidMFAttribute">
+                    <type>Guid*</type>
+                </param>
+                <param name="pvValue">
+                    <type>PROPVARIANT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint, Guid*, PROPVARIANT*, int&gt;)(lpVtbl[<vtbl explicit="False">55</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="guidMFAttribute">guidMFAttribute</param>, <param name="pvValue">pvValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">56</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="pEnabled">pEnabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetStreamSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="Enabled">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint, int, int&gt;)(lpVtbl[<vtbl explicit="False">57</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="Enabled">Enabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ApplyStreamSelections" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">58</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsProtected" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pProtected">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">59</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pProtected">pProtected</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InsertVideoEffect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pEffect">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="fOptional">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IUnknown*, int, int&gt;)(lpVtbl[<vtbl explicit="False">60</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pEffect">pEffect</param>, <param name="fOptional">fOptional</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InsertAudioEffect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pEffect">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="fOptional">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IUnknown*, int, int&gt;)(lpVtbl[<vtbl explicit="False">61</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pEffect">pEffect</param>, <param name="fOptional">fOptional</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveAllEffects" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">62</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTimelineMarkerTimer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="timeToFire">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double, int&gt;)(lpVtbl[<vtbl explicit="False">63</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="timeToFire">timeToFire</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTimelineMarkerTimer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTimeToFire">
+                    <type>double*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double*, int&gt;)(lpVtbl[<vtbl explicit="False">64</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pTimeToFire">pTimeToFire</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CancelTimelineMarkerTimer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">65</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsStereo3D" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int&gt;)(lpVtbl[<vtbl explicit="False">66</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStereo3DFramePackingMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="packMode">
+                    <type>MF_MEDIA_ENGINE_S3D_PACKING_MODE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, MF_MEDIA_ENGINE_S3D_PACKING_MODE*, int&gt;)(lpVtbl[<vtbl explicit="False">67</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="packMode">packMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetStereo3DFramePackingMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="packMode">
+                    <type>MF_MEDIA_ENGINE_S3D_PACKING_MODE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, MF_MEDIA_ENGINE_S3D_PACKING_MODE, int&gt;)(lpVtbl[<vtbl explicit="False">68</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="packMode">packMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStereo3DRenderMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="outputType">
+                    <type>MF3DVideoOutputType*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, MF3DVideoOutputType*, int&gt;)(lpVtbl[<vtbl explicit="False">69</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="outputType">outputType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetStereo3DRenderMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="outputType">
+                    <type>MF3DVideoOutputType</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, MF3DVideoOutputType, int&gt;)(lpVtbl[<vtbl explicit="False">70</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="outputType">outputType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnableWindowlessSwapchainMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int, int&gt;)(lpVtbl[<vtbl explicit="False">71</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="fEnable">fEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVideoSwapchainHandle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="phSwapchain">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">72</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="phSwapchain">phSwapchain</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnableHorizontalMirrorMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int, int&gt;)(lpVtbl[<vtbl explicit="False">73</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="fEnable">fEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAudioStreamCategory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pCategory">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">74</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pCategory">pCategory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAudioStreamCategory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="category">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">75</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="category">category</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAudioEndpointRole" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRole">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">76</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pRole">pRole</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAudioEndpointRole" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="role">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">77</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="role">role</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRealTimeMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfEnabled">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">78</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="pfEnabled">pfEnabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRealTimeMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int, int&gt;)(lpVtbl[<vtbl explicit="False">79</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="fEnable">fEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetCurrentTimeEx" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="seekTime">
+                    <type>double</type>
+                </param>
+                <param name="seekMode">
+                    <type>MF_MEDIA_ENGINE_SEEK_MODE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, double, MF_MEDIA_ENGINE_SEEK_MODE, int&gt;)(lpVtbl[<vtbl explicit="False">80</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="seekTime">seekTime</param>, <param name="seekMode">seekMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnableTimeUpdateTimer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fEnableTimer">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaEngineEx*, int, int&gt;)(lpVtbl[<vtbl explicit="False">81</vtbl>]))(<param special="thisPtr">(IMFMediaEngineEx*)Unsafe.AsPointer(ref this)</param>, <param name="fEnableTimer">fEnableTimer</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

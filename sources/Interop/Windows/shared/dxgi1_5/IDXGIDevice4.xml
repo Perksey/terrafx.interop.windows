@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/dxgi1_5.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDXGIDevice4" access="public" native="struct IDXGIDevice4 : IDXGIDevice3" uuid="95b4f95f-d8da-4ca4-9ee6-3b76d5968a10" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="DataSize">
+                    <type>uint</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, Guid*, uint, void*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="DataSize">DataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPrivateDataInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="pUnknown">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, Guid*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="pUnknown">pUnknown</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPrivateData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>Guid*</type>
+                </param>
+                <param name="pDataSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, Guid*, uint*, void*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="pDataSize">pDataSize</param>, <param name="pData">pData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetParent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppParent">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppParent">ppParent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAdapter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pAdapter">
+                    <type>IDXGIAdapter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, IDXGIAdapter**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="pAdapter">pAdapter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSurface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>DXGI_SURFACE_DESC*</type>
+                </param>
+                <param name="NumSurfaces">
+                    <type>uint</type>
+                </param>
+                <param name="Usage">
+                    <type>uint</type>
+                </param>
+                <param name="pSharedResource">
+                    <type>DXGI_SHARED_RESOURCE*</type>
+                </param>
+                <param name="ppSurface">
+                    <type>IDXGISurface**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, DXGI_SURFACE_DESC*, uint, uint, DXGI_SHARED_RESOURCE*, IDXGISurface**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>, <param name="NumSurfaces">NumSurfaces</param>, <param name="Usage">Usage</param>, <param name="pSharedResource">pSharedResource</param>, <param name="ppSurface">ppSurface</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryResourceResidency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppResources">
+                    <type>IUnknown**</type>
+                </param>
+                <param name="pResidencyStatus">
+                    <type>DXGI_RESIDENCY*</type>
+                </param>
+                <param name="NumResources">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, IUnknown**, DXGI_RESIDENCY*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="ppResources">ppResources</param>, <param name="pResidencyStatus">pResidencyStatus</param>, <param name="NumResources">NumResources</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGPUThreadPriority" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Priority">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, int, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="Priority">Priority</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGPUThreadPriority" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pPriority">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="pPriority">pPriority</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMaximumFrameLatency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="MaxLatency">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="MaxLatency">MaxLatency</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMaximumFrameLatency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pMaxLatency">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="pMaxLatency">pMaxLatency</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OfferResources" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NumResources">
+                    <type>uint</type>
+                </param>
+                <param name="ppResources">
+                    <type>IDXGIResource**</type>
+                </param>
+                <param name="Priority">
+                    <type>DXGI_OFFER_RESOURCE_PRIORITY</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, uint, IDXGIResource**, DXGI_OFFER_RESOURCE_PRIORITY, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="NumResources">NumResources</param>, <param name="ppResources">ppResources</param>, <param name="Priority">Priority</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReclaimResources" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NumResources">
+                    <type>uint</type>
+                </param>
+                <param name="ppResources">
+                    <type>IDXGIResource**</type>
+                </param>
+                <param name="pDiscarded">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, uint, IDXGIResource**, int*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="NumResources">NumResources</param>, <param name="ppResources">ppResources</param>, <param name="pDiscarded">pDiscarded</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnqueueSetEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hEvent">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="hEvent">hEvent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Trim" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;IDXGIDevice4*, void&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OfferResources1" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NumResources">
+                    <type>uint</type>
+                </param>
+                <param name="ppResources">
+                    <type>IDXGIResource**</type>
+                </param>
+                <param name="Priority">
+                    <type>DXGI_OFFER_RESOURCE_PRIORITY</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, uint, IDXGIResource**, DXGI_OFFER_RESOURCE_PRIORITY, uint, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="NumResources">NumResources</param>, <param name="ppResources">ppResources</param>, <param name="Priority">Priority</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReclaimResources1" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NumResources">
+                    <type>uint</type>
+                </param>
+                <param name="ppResources">
+                    <type>IDXGIResource**</type>
+                </param>
+                <param name="pResults">
+                    <type>DXGI_RECLAIM_RESOURCE_RESULTS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDXGIDevice4*, uint, IDXGIResource**, DXGI_RECLAIM_RESOURCE_RESULTS*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IDXGIDevice4*)Unsafe.AsPointer(ref this)</param>, <param name="NumResources">NumResources</param>, <param name="ppResources">ppResources</param>, <param name="pResults">pResults</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_LB_PROVISIONING_MAP_RESOURCES" access="public" unsafe="true">
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="_bitfield1" access="public">
+                <type native="">byte</type>
+            </field>
+            <field name="AvailableMappingResourcesValid" access="public">
+                <type native="BYTE : 1">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)(<bitfieldName>_bitfield1</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield1</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield1 &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>));
+        </code>
+                </set>
+            </field>
+            <field name="UsedMappingResourcesValid" access="public">
+                <type native="BYTE : 1">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield1</bitfieldName> &gt;&gt; <bitfieldOffset>1</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield1</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield1 &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>1</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 1));
+        </code>
+                </set>
+            </field>
+            <field name="Reserved0" access="public">
+                <type native="BYTE : 6">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield1</bitfieldName> &gt;&gt; <bitfieldOffset>2</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>3Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield1</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield1 &amp; ~(0x<bitwidthHexStringBacking>3Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>2</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>3Fu</bitwidthHexString>) &lt;&lt; 2));
+        </code>
+                </set>
+            </field>
+            <field name="Reserved1" access="public">
+                <type native="BYTE [3]" count="3" fixed="_Reserved1_e__FixedBuffer">byte</type>
+            </field>
+            <field name="_bitfield2" access="public">
+                <type native="">byte</type>
+            </field>
+            <field name="AvailableMappingResourcesScope" access="public">
+                <type native="BYTE : 2">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)(<bitfieldName>_bitfield2</bitfieldName> &amp; 0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield2</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield2 &amp; ~0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>3u</bitwidthHexString>));
+        </code>
+                </set>
+            </field>
+            <field name="UsedMappingResourcesScope" access="public">
+                <type native="BYTE : 2">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield2</bitfieldName> &gt;&gt; <bitfieldOffset>2</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield2</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield2 &amp; ~(0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>2</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>3u</bitwidthHexString>) &lt;&lt; 2));
+        </code>
+                </set>
+            </field>
+            <field name="Reserved2" access="public">
+                <type native="BYTE : 4">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield2</bitfieldName> &gt;&gt; <bitfieldOffset>4</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield2</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield2 &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>4</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 4));
+        </code>
+                </set>
+            </field>
+            <field name="Reserved3" access="public">
+                <type native="BYTE [3]" count="3" fixed="_Reserved3_e__FixedBuffer">byte</type>
+            </field>
+            <field name="AvailableMappingResources" access="public">
+                <type native="DWORDLONG">ulong</type>
+            </field>
+            <field name="UsedMappingResources" access="public">
+                <type native="DWORDLONG">ulong</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_ZONED_DEVICE_DESCRIPTOR" access="public">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DeviceType" access="public">
+                <type native="">STORAGE_ZONED_DEVICE_TYPES</type>
+            </field>
+            <field name="ZoneCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ZoneAttributes" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:2867:5)">_ZoneAttributes_e__Union</type>
+            </field>
+            <field name="ZoneGroupCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ZoneGroup" access="public">
+                <type native="STORAGE_ZONE_GROUP [1]" count="1" fixed="_ZoneGroup_e__FixedBuffer">STORAGE_ZONE_GROUP</type>
+            </field>
+            <struct name="_ZoneAttributes_e__Union" access="public" layout="Explicit">
+                <field name="SequentialRequiredZone" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:2868:9)">_SequentialRequiredZone_e__Struct</type>
+                </field>
+                <field name="SequentialPreferredZone" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:2878:9)">_SequentialPreferredZone_e__Struct</type>
+                </field>
+                <struct name="_SequentialRequiredZone_e__Struct" access="public" unsafe="true">
+                    <field name="MaxOpenZoneCount" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="UnrestrictedRead" access="public">
+                        <type native="BOOLEAN">byte</type>
+                    </field>
+                    <field name="Reserved" access="public">
+                        <type native="BYTE [3]" count="3" fixed="_Reserved_e__FixedBuffer">byte</type>
+                    </field>
+                </struct>
+                <struct name="_SequentialPreferredZone_e__Struct" access="public">
+                    <field name="OptimalOpenZoneCount" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                    <field name="Reserved" access="public">
+                        <type native="DWORD">uint</type>
+                    </field>
+                </struct>
+            </struct>
+            <struct name="_ZoneGroup_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">STORAGE_ZONE_GROUP</type>
+                </field>
+                <indexer access="public">
+                    <type>ref STORAGE_ZONE_GROUP</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;STORAGE_ZONE_GROUP&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

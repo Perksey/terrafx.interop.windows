@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/Uxtheme.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="BeginPanningFeedback" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="UpdatePanningFeedback" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lTotalOverpanOffsetX">
+                    <type>int</type>
+                </param>
+                <param name="lTotalOverpanOffsetY">
+                    <type>int</type>
+                </param>
+                <param name="fInInertia">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="EndPanningFeedback" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="fAnimateBack">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeAnimationProperty" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iStoryboardId">
+                    <type>int</type>
+                </param>
+                <param name="iTargetId">
+                    <type>int</type>
+                </param>
+                <param name="eProperty">
+                    <type>TA_PROPERTY</type>
+                </param>
+                <param name="pvProperty">
+                    <type>void*</type>
+                </param>
+                <param name="cbSize">
+                    <type>uint</type>
+                </param>
+                <param name="pcbSizeOut">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetThemeAnimationTransform" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iStoryboardId">
+                    <type>int</type>
+                </param>
+                <param name="iTargetId">
+                    <type>int</type>
+                </param>
+                <param name="dwTransformIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pTransform">
+                    <type>TA_TRANSFORM*</type>
+                </param>
+                <param name="cbSize">
+                    <type>uint</type>
+                </param>
+                <param name="pcbSizeOut">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetThemeTimingFunction" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iTimingFunctionId">
+                    <type>int</type>
+                </param>
+                <param name="pTimingFunction">
+                    <type>TA_TIMINGFUNCTION*</type>
+                </param>
+                <param name="cbSize">
+                    <type>uint</type>
+                </param>
+                <param name="pcbSizeOut">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="OpenThemeData" access="public" lib="uxtheme" static="true">
+                <type native="HTHEME">IntPtr</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pszClassList">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="OpenThemeDataForDpi" access="public" lib="uxtheme" static="true">
+                <type native="HTHEME">IntPtr</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pszClassList">
+                    <type>ushort*</type>
+                </param>
+                <param name="dpi">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="OpenThemeDataEx" access="public" lib="uxtheme" static="true">
+                <type native="HTHEME">IntPtr</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pszClassList">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CloseThemeData" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="DrawThemeBackground" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="pClipRect">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="DrawThemeBackgroundEx" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="pOptions">
+                    <type>DTBGOPTS*</type>
+                </param>
+            </function>
+            <function name="DrawThemeText" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pszText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchText">
+                    <type>int</type>
+                </param>
+                <param name="dwTextFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dwTextFlags2">
+                    <type>uint</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="GetThemeBackgroundContentRect" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pBoundingRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="pContentRect">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="GetThemeBackgroundExtent" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pContentRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="pExtentRect">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="GetThemeBackgroundRegion" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="pRegion">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="GetThemePartSize" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+                <param name="eSize">
+                    <type>THEMESIZE</type>
+                </param>
+                <param name="psz">
+                    <type>SIZE*</type>
+                </param>
+            </function>
+            <function name="GetThemeTextExtent" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pszText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchCharCount">
+                    <type>int</type>
+                </param>
+                <param name="dwTextFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pBoundingRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="pExtentRect">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="GetThemeTextMetrics" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="ptm">
+                    <type>TEXTMETRICW*</type>
+                </param>
+            </function>
+            <function name="HitTestThemeBackground" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="dwOptions">
+                    <type>uint</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="hrgn">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ptTest">
+                    <type>POINT</type>
+                </param>
+                <param name="pwHitTestCode">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="DrawThemeEdge" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pDestRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="uEdge">
+                    <type>uint</type>
+                </param>
+                <param name="uFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pContentRect">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="DrawThemeIcon" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="himl">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iImageIndex">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="IsThemePartDefined" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="IsThemeBackgroundPartiallyTransparent" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeColor" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pColor">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetThemeMetric" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="piVal">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetThemeString" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pszBuff">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchMaxBuffChars">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeBool" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pfVal">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetThemeInt" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="piVal">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetThemeEnumValue" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="piVal">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetThemePosition" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pPoint">
+                    <type>POINT*</type>
+                </param>
+            </function>
+            <function name="GetThemeFont" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pFont">
+                    <type>LOGFONTW*</type>
+                </param>
+            </function>
+            <function name="GetThemeRect" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="GetThemeMargins" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+                <param name="pMargins">
+                    <type>MARGINS*</type>
+                </param>
+            </function>
+            <function name="GetThemeIntList" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pIntList">
+                    <type>INTLIST*</type>
+                </param>
+            </function>
+            <function name="GetThemePropertyOrigin" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pOrigin">
+                    <type>PROPERTYORIGIN*</type>
+                </param>
+            </function>
+            <function name="SetWindowTheme" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pszSubAppName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszSubIdList">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetThemeFilename" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pszThemeFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchMaxBuffChars">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeSysColor" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="COLORREF">uint</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iColorId">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeSysColorBrush" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HBRUSH">IntPtr</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iColorId">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeSysBool" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iBoolId">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeSysSize" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type>int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iSizeId">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeSysFont" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iFontId">
+                    <type>int</type>
+                </param>
+                <param name="plf">
+                    <type>LOGFONTW*</type>
+                </param>
+            </function>
+            <function name="GetThemeSysString" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iStringId">
+                    <type>int</type>
+                </param>
+                <param name="pszStringBuff">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchMaxStringChars">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeSysInt" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iIntId">
+                    <type>int</type>
+                </param>
+                <param name="piValue">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="IsThemeActive" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+            </function>
+            <function name="IsAppThemed" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+            </function>
+            <function name="GetWindowTheme" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HTHEME">IntPtr</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="EnableThemeDialogTexture" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="IsThemeDialogTextureEnabled" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetThemeAppProperties" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="SetThemeAppProperties" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type>void</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetCurrentThemeName" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszThemeFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchMaxNameChars">
+                    <type>int</type>
+                </param>
+                <param name="pszColorBuff">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchMaxColorChars">
+                    <type>int</type>
+                </param>
+                <param name="pszSizeBuff">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchMaxSizeChars">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetThemeDocumentationProperty" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pszThemeName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszPropertyName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszValueBuff">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchMaxValChars">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="DrawThemeParentBackground" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="EnableTheming" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fEnable">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="DrawThemeParentBackgroundEx" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="SetWindowThemeAttribute" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="eAttribute">
+                    <type>WINDOWTHEMEATTRIBUTETYPE</type>
+                </param>
+                <param name="pvAttribute">
+                    <type>void*</type>
+                </param>
+                <param name="cbAttribute">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DrawThemeTextEx" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="pszText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchText">
+                    <type>int</type>
+                </param>
+                <param name="dwTextFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="pOptions">
+                    <type>DTTOPTS*</type>
+                </param>
+            </function>
+            <function name="GetThemeBitmap" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="phBitmap">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="GetThemeStream" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateId">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="ppvStream">
+                    <type>void**</type>
+                </param>
+                <param name="pcbStream">
+                    <type>uint*</type>
+                </param>
+                <param name="hInst">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="BufferedPaintInit" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="BufferedPaintUnInit" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="BeginBufferedPaint" access="public" lib="uxtheme" setlasterror="true" static="true">
+                <type native="HPAINTBUFFER">IntPtr</type>
+                <param name="hdcTarget">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prcTarget">
+                    <type>RECT*</type>
+                </param>
+                <param name="dwFormat">
+                    <type>BP_BUFFERFORMAT</type>
+                </param>
+                <param name="pPaintParams">
+                    <type>BP_PAINTPARAMS*</type>
+                </param>
+                <param name="phdc">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="EndBufferedPaint" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hBufferedPaint">
+                    <type>IntPtr</type>
+                </param>
+                <param name="fUpdateTarget">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="GetBufferedPaintTargetRect" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hBufferedPaint">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="GetBufferedPaintTargetDC" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HDC">IntPtr</type>
+                <param name="hBufferedPaint">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetBufferedPaintDC" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HDC">IntPtr</type>
+                <param name="hBufferedPaint">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetBufferedPaintBits" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hBufferedPaint">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ppbBuffer">
+                    <type>RGBQUAD**</type>
+                </param>
+                <param name="pcxRow">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="BufferedPaintClear" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hBufferedPaint">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+            </function>
+            <function name="BufferedPaintSetAlpha" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hBufferedPaint">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prc">
+                    <type>RECT*</type>
+                </param>
+                <param name="alpha">
+                    <type>byte</type>
+                </param>
+            </function>
+            <function name="BufferedPaintStopAllAnimations" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="BeginBufferedAnimation" access="public" lib="uxtheme" static="true">
+                <type native="HANIMATIONBUFFER">IntPtr</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdcTarget">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prcTarget">
+                    <type>RECT*</type>
+                </param>
+                <param name="dwFormat">
+                    <type>BP_BUFFERFORMAT</type>
+                </param>
+                <param name="pPaintParams">
+                    <type>BP_PAINTPARAMS*</type>
+                </param>
+                <param name="pAnimationParams">
+                    <type>BP_ANIMATIONPARAMS*</type>
+                </param>
+                <param name="phdcFrom">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="phdcTo">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="EndBufferedAnimation" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hbpAnimation">
+                    <type>IntPtr</type>
+                </param>
+                <param name="fUpdateTarget">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="BufferedPaintRenderAnimation" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdcTarget">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="IsCompositionActive" access="public" lib="uxtheme" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+            </function>
+            <function name="GetThemeTransitionDuration" access="public" lib="uxtheme" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hTheme">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iPartId">
+                    <type>int</type>
+                </param>
+                <param name="iStateIdFrom">
+                    <type>int</type>
+                </param>
+                <param name="iStateIdTo">
+                    <type>int</type>
+                </param>
+                <param name="iPropId">
+                    <type>int</type>
+                </param>
+                <param name="pdwDuration">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <constant name="MAX_THEMECOLOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>64
+            </code>
+                </value>
+            </constant>
+            <constant name="MAX_THEMESIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>64
+            </code>
+                </value>
+            </constant>
+            <constant name="OTD_FORCE_RECT_SIZING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="OTD_NONCLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="OTD_VALIDBITS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001 | 0x00000002)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTBG_CLIPRECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DTBG_DRAWSOLID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DTBG_OMITBORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DTBG_OMITCONTENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DTBG_COMPUTINGREGION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DTBG_MIRRORDC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="DTBG_NOMIRROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="DTBG_VALIDBITS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001 | 0x00000002 | 0x00000004 | 0x00000008 | 0x00000010 | 0x00000020 | 0x00000040)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_GRAYED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_FLAGS2VALIDBITS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001)
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_BACKGROUNDSEG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_FIXEDBORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_CAPTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_RESIZINGBORDER_LEFT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_RESIZINGBORDER_TOP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_RESIZINGBORDER_RIGHT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_RESIZINGBORDER_BOTTOM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_RESIZINGBORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000010 | 0x00000020 | 0x00000040 | 0x00000080)
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_SIZINGTEMPLATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="HTTB_SYSTEMSIZINGMARGINS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="MAX_INTLIST_COUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>402
+            </code>
+                </value>
+            </constant>
+            <constant name="ETDT_DISABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="ETDT_ENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="ETDT_USETABTEXTURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="ETDT_ENABLETAB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000002 | 0x00000004)
+            </code>
+                </value>
+            </constant>
+            <constant name="ETDT_USEAEROWIZARDTABTEXTURE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="ETDT_ENABLEAEROWIZARDTAB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000002 | 0x00000008)
+            </code>
+                </value>
+            </constant>
+            <constant name="ETDT_VALIDBITS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001 | 0x00000002 | 0x00000004 | 0x00000008)
+            </code>
+                </value>
+            </constant>
+            <constant name="STAP_ALLOW_NONCLIENT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="STAP_ALLOW_CONTROLS" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="STAP_ALLOW_WEBCONTENT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="STAP_VALIDBITS" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>((1U &lt;&lt; 0) | (1U &lt;&lt; 1) | (1U &lt;&lt; 2))
+            </code>
+                </value>
+            </constant>
+            <constant name="SZ_THDOCPROP_DISPLAYNAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"DisplayName"
+            </code>
+                </value>
+            </constant>
+            <constant name="SZ_THDOCPROP_CANONICALNAME" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"ThemeName"
+            </code>
+                </value>
+            </constant>
+            <constant name="SZ_THDOCPROP_TOOLTIP" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"ToolTip"
+            </code>
+                </value>
+            </constant>
+            <constant name="SZ_THDOCPROP_AUTHOR" access="public">
+                <type primitive="True">string</type>
+                <value>
+                    <code>"author"
+            </code>
+                </value>
+            </constant>
+            <constant name="GBF_DIRECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="GBF_COPY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="GBF_VALIDBITS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001 | 0x00000002)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTPB_WINDOWDC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DTPB_USECTLCOLORSTATIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DTPB_USEERASEBKGND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="WTNCA_NODRAWCAPTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="WTNCA_NODRAWICON" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="WTNCA_NOSYSMENU" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="WTNCA_NOMIRRORHELP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="WTNCA_VALIDBITS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001 | 0x00000002 | 0x00000004 | 0x00000008)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_TEXTCOLOR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 0)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_BORDERCOLOR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_SHADOWCOLOR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_SHADOWTYPE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_SHADOWOFFSET" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 4)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_BORDERSIZE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 5)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_FONTPROP" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 6)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_COLORPROP" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 7)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_STATEID" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 8)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_CALCRECT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 9)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_APPLYOVERLAY" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 10)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_GLOWSIZE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 11)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_CALLBACK" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 12)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_COMPOSITED" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(1U &lt;&lt; 13)
+            </code>
+                </value>
+            </constant>
+            <constant name="DTT_VALIDBITS" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>((1U &lt;&lt; 0) | (1U &lt;&lt; 1) | (1U &lt;&lt; 2) | (1U &lt;&lt; 3) | (1U &lt;&lt; 4) | (1U &lt;&lt; 5) | (1U &lt;&lt; 6) | (1U &lt;&lt; 7) | (1U &lt;&lt; 8) | (1U &lt;&lt; 9) | (1U &lt;&lt; 10) | (1U &lt;&lt; 11) | (1U &lt;&lt; 13))
+            </code>
+                </value>
+            </constant>
+            <constant name="BPBF_COMPOSITED" access="public">
+                <type primitive="True">BP_BUFFERFORMAT</type>
+                <value>
+                    <code>BPBF_TOPDOWNDIB
+            </code>
+                </value>
+            </constant>
+            <constant name="BPPF_ERASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="BPPF_NOCLIP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="BPPF_NONCLIENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

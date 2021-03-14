@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="QUERYOPTION" access="public">
+            <type>int</type>
+            <enumerator name="QUERY_EXPIRATION_DATE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_TIME_OF_LAST_CHANGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_EXPIRATION_DATE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_CONTENT_ENCODING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_TIME_OF_LAST_CHANGE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_CONTENT_TYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_CONTENT_ENCODING + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_REFRESH" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_CONTENT_TYPE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_RECOMBINE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_REFRESH + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_CAN_NAVIGATE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_RECOMBINE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_USES_NETWORK" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_CAN_NAVIGATE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_IS_CACHED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_USES_NETWORK + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_IS_INSTALLEDENTRY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_IS_CACHED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_IS_CACHED_OR_MAPPED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_IS_INSTALLEDENTRY + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_USES_CACHE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_IS_CACHED_OR_MAPPED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_IS_SECURE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_USES_CACHE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_IS_SAFE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_IS_SECURE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_USES_HISTORYFOLDER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_IS_SAFE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="QUERY_IS_CACHED_AND_USABLE_OFFLINE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(QUERY_USES_HISTORYFOLDER + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

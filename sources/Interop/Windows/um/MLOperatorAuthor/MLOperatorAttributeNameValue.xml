@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/MLOperatorAuthor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MLOperatorAttributeNameValue" access="public" unsafe="true">
+            <field name="name" access="public">
+                <type native="const char *">sbyte*</type>
+            </field>
+            <field name="type" access="public">
+                <type native="">MLOperatorAttributeType</type>
+            </field>
+            <field name="valueCount" access="public">
+                <type native="uint32_t">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="MLOperatorAttributeNameValue::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/MLOperatorAuthor.h:602:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="reserved" access="public">
+                <type native="">ref void*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;reserved;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="ints" access="public">
+                <type native="">ref long*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;ints;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="strings" access="public">
+                <type native="">ref sbyte**</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;strings;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="floats" access="public">
+                <type native="">ref float*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;floats;
+        }
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="reserved" access="public" offset="0">
+                    <type native="const void *">void*</type>
+                </field>
+                <field name="ints" access="public" offset="0">
+                    <type native="const int64_t *">long*</type>
+                </field>
+                <field name="strings" access="public" offset="0">
+                    <type native="const char *const *">sbyte**</type>
+                </field>
+                <field name="floats" access="public" offset="0">
+                    <type native="const float *">float*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

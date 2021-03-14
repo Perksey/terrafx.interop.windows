@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d10misc.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="GUID_DeviceType" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xd722fb4d, 0x7a68, 0x437a, 0xb2, 0x0c, 0x58, 0x04, 0xee, 0x24, 0x94, 0xa6)
+            </code>
+                </value>
+            </constant>
+            <function name="D3D10CreateDevice" access="public" lib="d3d10" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAdapter">
+                    <type>IDXGIAdapter*</type>
+                </param>
+                <param name="DriverType">
+                    <type>D3D10_DRIVER_TYPE</type>
+                </param>
+                <param name="Software">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="SDKVersion">
+                    <type>uint</type>
+                </param>
+                <param name="ppDevice">
+                    <type>ID3D10Device**</type>
+                </param>
+            </function>
+            <function name="D3D10CreateDeviceAndSwapChain" access="public" lib="d3d10" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pAdapter">
+                    <type>IDXGIAdapter*</type>
+                </param>
+                <param name="DriverType">
+                    <type>D3D10_DRIVER_TYPE</type>
+                </param>
+                <param name="Software">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="SDKVersion">
+                    <type>uint</type>
+                </param>
+                <param name="pSwapChainDesc">
+                    <type>DXGI_SWAP_CHAIN_DESC*</type>
+                </param>
+                <param name="ppSwapChain">
+                    <type>IDXGISwapChain**</type>
+                </param>
+                <param name="ppDevice">
+                    <type>ID3D10Device**</type>
+                </param>
+            </function>
+            <function name="D3D10CreateBlob" access="public" lib="d3d10" static="true">
+                <type native="HRESULT">int</type>
+                <param name="NumBytes">
+                    <type>nuint</type>
+                </param>
+                <param name="ppBuffer">
+                    <type>ID3DBlob**</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

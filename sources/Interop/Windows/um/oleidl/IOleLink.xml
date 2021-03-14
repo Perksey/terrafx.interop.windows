@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/oleidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IOleLink" access="public" native="struct IOleLink : IUnknown" uuid="0000011d-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetUpdateOptions" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwUpdateOpt">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="dwUpdateOpt">dwUpdateOpt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetUpdateOptions" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwUpdateOpt">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="pdwUpdateOpt">pdwUpdateOpt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSourceMoniker" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pmk">
+                    <type>IMoniker*</type>
+                </param>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, IMoniker*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="pmk">pmk</param>, <param name="rclsid">rclsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSourceMoniker" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppmk">
+                    <type>IMoniker**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, IMoniker**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="ppmk">ppmk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSourceDisplayName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszStatusText">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="pszStatusText">pszStatusText</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSourceDisplayName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppszDisplayName">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="ppszDisplayName">ppszDisplayName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BindToSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bindflags">
+                    <type>uint</type>
+                </param>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, uint, IBindCtx*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="bindflags">bindflags</param>, <param name="pbc">pbc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="BindIfRunning" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBoundSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppunk">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="ppunk">ppunk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnbindSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Update" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbc">
+                    <type>IBindCtx*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleLink*, IBindCtx*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IOleLink*)Unsafe.AsPointer(ref this)</param>, <param name="pbc">pbc</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

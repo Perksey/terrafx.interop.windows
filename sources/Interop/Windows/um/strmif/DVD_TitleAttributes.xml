@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DVD_TitleAttributes" access="public">
+            <field name="Anonymous" access="public">
+                <type native="tagDVD_TitleMainAttributes::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/strmif.h:21262:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="AppMode" access="public">
+                <type native="">ref DVD_TITLE_APPMODE</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.AppMode, 1));
+        </code>
+                </get>
+            </field>
+            <field name="TitleLength" access="public">
+                <type native="">ref DVD_HMSF_TIMECODE</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.TitleLength, 1));
+        </code>
+                </get>
+            </field>
+            <field name="VideoAttributes" access="public">
+                <type native="">DVD_VideoAttributes</type>
+            </field>
+            <field name="ulNumberOfAudioStreams" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="AudioAttributes" access="public">
+                <type native="DVD_AudioAttributes [8]" count="8" fixed="_AudioAttributes_e__FixedBuffer">DVD_AudioAttributes</type>
+            </field>
+            <field name="MultichannelAudioAttributes" access="public">
+                <type native="DVD_MultichannelAudioAttributes [8]" count="8" fixed="_MultichannelAudioAttributes_e__FixedBuffer">DVD_MultichannelAudioAttributes</type>
+            </field>
+            <field name="ulNumberOfSubpictureStreams" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="SubpictureAttributes" access="public">
+                <type native="DVD_SubpictureAttributes [32]" count="32" fixed="_SubpictureAttributes_e__FixedBuffer">DVD_SubpictureAttributes</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="AppMode" access="public" offset="0">
+                    <type native="">DVD_TITLE_APPMODE</type>
+                </field>
+                <field name="TitleLength" access="public" offset="0">
+                    <type native="">DVD_HMSF_TIMECODE</type>
+                </field>
+            </struct>
+            <struct name="_AudioAttributes_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">DVD_AudioAttributes</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">DVD_AudioAttributes</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">DVD_AudioAttributes</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">DVD_AudioAttributes</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">DVD_AudioAttributes</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">DVD_AudioAttributes</type>
+                </field>
+                <field name="e6" access="public">
+                    <type native="">DVD_AudioAttributes</type>
+                </field>
+                <field name="e7" access="public">
+                    <type native="">DVD_AudioAttributes</type>
+                </field>
+                <indexer access="public">
+                    <type>ref DVD_AudioAttributes</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;DVD_AudioAttributes&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 8);
+        </code>
+                </function>
+            </struct>
+            <struct name="_MultichannelAudioAttributes_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">DVD_MultichannelAudioAttributes</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">DVD_MultichannelAudioAttributes</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">DVD_MultichannelAudioAttributes</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">DVD_MultichannelAudioAttributes</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">DVD_MultichannelAudioAttributes</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">DVD_MultichannelAudioAttributes</type>
+                </field>
+                <field name="e6" access="public">
+                    <type native="">DVD_MultichannelAudioAttributes</type>
+                </field>
+                <field name="e7" access="public">
+                    <type native="">DVD_MultichannelAudioAttributes</type>
+                </field>
+                <indexer access="public">
+                    <type>ref DVD_MultichannelAudioAttributes</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;DVD_MultichannelAudioAttributes&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 8);
+        </code>
+                </function>
+            </struct>
+            <struct name="_SubpictureAttributes_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e6" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e7" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e8" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e9" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e10" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e11" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e12" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e13" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e14" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e15" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e16" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e17" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e18" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e19" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e20" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e21" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e22" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e23" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e24" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e25" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e26" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e27" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e28" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e29" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e30" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <field name="e31" access="public">
+                    <type native="">DVD_SubpictureAttributes</type>
+                </field>
+                <indexer access="public">
+                    <type>ref DVD_SubpictureAttributes</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;DVD_SubpictureAttributes&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 32);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

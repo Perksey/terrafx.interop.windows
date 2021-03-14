@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/prsht.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="PROPSHEETPAGEW_V2" access="public" unsafe="true">
+            <field name="dwSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hInstance" access="public">
+                <type native="HINSTANCE">IntPtr</type>
+            </field>
+            <field name="Anonymous1" access="public">
+                <type native="_PROPSHEETPAGEW_V2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/prsht.h:250:5)">_Anonymous1_e__Union</type>
+            </field>
+            <field name="pszTemplate" access="public">
+                <type native="">ref ushort*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous1_e__Union* pField = &amp;Anonymous1)
+        {
+            return ref pField-&gt;pszTemplate;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pResource" access="public">
+                <type native="">ref DLGTEMPLATE*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous1_e__Union* pField = &amp;Anonymous1)
+        {
+            return ref pField-&gt;pResource;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="Anonymous2" access="public">
+                <type native="_PROPSHEETPAGEW_V2::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/prsht.h:250:5)">_Anonymous2_e__Union</type>
+            </field>
+            <field name="hIcon" access="public">
+                <type native="">ref IntPtr</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.hIcon, 1));
+        </code>
+                </get>
+            </field>
+            <field name="pszIcon" access="public">
+                <type native="">ref ushort*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous2_e__Union* pField = &amp;Anonymous2)
+        {
+            return ref pField-&gt;pszIcon;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pszTitle" access="public">
+                <type native="LPCWSTR">ushort*</type>
+            </field>
+            <field name="pfnDlgProc" access="public">
+                <type native="DLGPROC">delegate* unmanaged&lt;IntPtr, uint, nuint, nint, nint&gt;</type>
+            </field>
+            <field name="lParam" access="public">
+                <type native="LPARAM">nint</type>
+            </field>
+            <field name="pfnCallback" access="public">
+                <type native="LPFNPSPCALLBACKW">delegate* unmanaged&lt;IntPtr, uint, PROPSHEETPAGEW*, uint&gt;</type>
+            </field>
+            <field name="pcRefParent" access="public">
+                <type native="UINT *">uint*</type>
+            </field>
+            <field name="pszHeaderTitle" access="public">
+                <type native="LPCWSTR">ushort*</type>
+            </field>
+            <field name="pszHeaderSubTitle" access="public">
+                <type native="LPCWSTR">ushort*</type>
+            </field>
+            <struct name="_Anonymous1_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pszTemplate" access="public" offset="0">
+                    <type native="LPCWSTR">ushort*</type>
+                </field>
+                <field name="pResource" access="public" offset="0">
+                    <type native="PROPSHEETPAGE_RESOURCE">DLGTEMPLATE*</type>
+                </field>
+            </struct>
+            <struct name="_Anonymous2_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="hIcon" access="public" offset="0">
+                    <type native="HICON">IntPtr</type>
+                </field>
+                <field name="pszIcon" access="public" offset="0">
+                    <type native="LPCWSTR">ushort*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STGMEDIUM" access="public" unsafe="true">
+            <field name="tymed" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="tagSTGMEDIUM::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/ObjIdl.h:11272:36)">_Anonymous_e__Union</type>
+            </field>
+            <field name="hBitmap" access="public">
+                <type native="">ref IntPtr</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.hBitmap, 1));
+        </code>
+                </get>
+            </field>
+            <field name="hMetaFilePict" access="public">
+                <type native="">ref void*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;hMetaFilePict;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="hEnhMetaFile" access="public">
+                <type native="">ref IntPtr</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.hEnhMetaFile, 1));
+        </code>
+                </get>
+            </field>
+            <field name="hGlobal" access="public">
+                <type native="">ref IntPtr</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.hGlobal, 1));
+        </code>
+                </get>
+            </field>
+            <field name="lpszFileName" access="public">
+                <type native="">ref ushort*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;lpszFileName;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pstm" access="public">
+                <type native="">ref IStream*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pstm;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pstg" access="public">
+                <type native="">ref IStorage*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pstg;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pUnkForRelease" access="public">
+                <type native="IUnknown *">IUnknown*</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="hBitmap" access="public" offset="0">
+                    <type native="HBITMAP">IntPtr</type>
+                </field>
+                <field name="hMetaFilePict" access="public" offset="0">
+                    <type native="HMETAFILEPICT">void*</type>
+                </field>
+                <field name="hEnhMetaFile" access="public" offset="0">
+                    <type native="HENHMETAFILE">IntPtr</type>
+                </field>
+                <field name="hGlobal" access="public" offset="0">
+                    <type native="HGLOBAL">IntPtr</type>
+                </field>
+                <field name="lpszFileName" access="public" offset="0">
+                    <type native="LPOLESTR">ushort*</type>
+                </field>
+                <field name="pstm" access="public" offset="0">
+                    <type native="IStream *">IStream*</type>
+                </field>
+                <field name="pstg" access="public" offset="0">
+                    <type native="IStorage *">IStorage*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sysinfoapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="GlobalMemoryStatusEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpBuffer">
+                    <type>MEMORYSTATUSEX*</type>
+                </param>
+            </function>
+            <function name="GetSystemInfo" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpSystemInfo">
+                    <type>SYSTEM_INFO*</type>
+                </param>
+            </function>
+            <function name="GetSystemTime" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpSystemTime">
+                    <type>SYSTEMTIME*</type>
+                </param>
+            </function>
+            <function name="GetSystemTimeAsFileTime" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpSystemTimeAsFileTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="GetLocalTime" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpSystemTime">
+                    <type>SYSTEMTIME*</type>
+                </param>
+            </function>
+            <function name="IsUserCetAvailableInEnvironment" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="UserCetEnvironment">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetSystemLeapSecondInformation" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Enabled">
+                    <type>int*</type>
+                </param>
+                <param name="Flags">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetVersion" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="SetLocalTime" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpSystemTime">
+                    <type>SYSTEMTIME*</type>
+                </param>
+            </function>
+            <function name="GetTickCount" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+            </function>
+            <function name="GetTickCount64" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="ULONGLONG">ulong</type>
+            </function>
+            <function name="GetSystemTimeAdjustment" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpTimeAdjustment">
+                    <type>uint*</type>
+                </param>
+                <param name="lpTimeIncrement">
+                    <type>uint*</type>
+                </param>
+                <param name="lpTimeAdjustmentDisabled">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetSystemTimeAdjustmentPrecise" access="public" lib="api-ms-win-core-version-l1-2-3" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpTimeAdjustment">
+                    <type>ulong*</type>
+                </param>
+                <param name="lpTimeIncrement">
+                    <type>ulong*</type>
+                </param>
+                <param name="lpTimeAdjustmentDisabled">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetSystemDirectoryA" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="uSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetSystemDirectoryW" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="uSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetWindowsDirectoryA" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="uSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetWindowsDirectoryW" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="uSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetSystemWindowsDirectoryA" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="uSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetSystemWindowsDirectoryW" access="public" lib="kernel32" static="true">
+                <type native="UINT">uint</type>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="uSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetComputerNameExA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="NameType">
+                    <type>COMPUTER_NAME_FORMAT</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetComputerNameExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="NameType">
+                    <type>COMPUTER_NAME_FORMAT</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="SetComputerNameExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="NameType">
+                    <type>COMPUTER_NAME_FORMAT</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="SetSystemTime" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpSystemTime">
+                    <type>SYSTEMTIME*</type>
+                </param>
+            </function>
+            <function name="GetVersionExA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpVersionInformation">
+                    <type>OSVERSIONINFOA*</type>
+                </param>
+            </function>
+            <function name="GetVersionExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpVersionInformation">
+                    <type>OSVERSIONINFOW*</type>
+                </param>
+            </function>
+            <function name="GetLogicalProcessorInformation" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Buffer">
+                    <type>SYSTEM_LOGICAL_PROCESSOR_INFORMATION*</type>
+                </param>
+                <param name="ReturnedLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetLogicalProcessorInformationEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="RelationshipType">
+                    <type>LOGICAL_PROCESSOR_RELATIONSHIP</type>
+                </param>
+                <param name="Buffer">
+                    <type>SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX*</type>
+                </param>
+                <param name="ReturnedLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetNativeSystemInfo" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpSystemInfo">
+                    <type>SYSTEM_INFO*</type>
+                </param>
+            </function>
+            <function name="GetSystemTimePreciseAsFileTime" access="public" lib="kernel32" static="true">
+                <type>void</type>
+                <param name="lpSystemTimeAsFileTime">
+                    <type>FILETIME*</type>
+                </param>
+            </function>
+            <function name="GetProductInfo" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="dwOSMajorVersion">
+                    <type>uint</type>
+                </param>
+                <param name="dwOSMinorVersion">
+                    <type>uint</type>
+                </param>
+                <param name="dwSpMajorVersion">
+                    <type>uint</type>
+                </param>
+                <param name="dwSpMinorVersion">
+                    <type>uint</type>
+                </param>
+                <param name="pdwReturnedProductType">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="VerSetConditionMask" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="ULONGLONG">ulong</type>
+                <param name="ConditionMask">
+                    <type>ulong</type>
+                </param>
+                <param name="TypeMask">
+                    <type>uint</type>
+                </param>
+                <param name="Condition">
+                    <type>byte</type>
+                </param>
+            </function>
+            <function name="GetOsSafeBootMode" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Flags">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="EnumSystemFirmwareTables" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="UINT">uint</type>
+                <param name="FirmwareTableProviderSignature">
+                    <type>uint</type>
+                </param>
+                <param name="pFirmwareTableEnumBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="BufferSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetSystemFirmwareTable" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="UINT">uint</type>
+                <param name="FirmwareTableProviderSignature">
+                    <type>uint</type>
+                </param>
+                <param name="FirmwareTableID">
+                    <type>uint</type>
+                </param>
+                <param name="pFirmwareTableBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="BufferSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DnsHostnameToComputerNameExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="Hostname">
+                    <type>ushort*</type>
+                </param>
+                <param name="ComputerName">
+                    <type>ushort*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetPhysicallyInstalledSystemMemory" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="TotalMemoryInKilobytes">
+                    <type>ulong*</type>
+                </param>
+            </function>
+            <function name="SetComputerNameEx2W" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="NameType">
+                    <type>COMPUTER_NAME_FORMAT</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="SetSystemTimeAdjustment" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="dwTimeAdjustment">
+                    <type>uint</type>
+                </param>
+                <param name="bTimeAdjustmentDisabled">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="SetSystemTimeAdjustmentPrecise" access="public" lib="api-ms-win-core-version-l1-2-3" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="dwTimeAdjustment">
+                    <type>ulong</type>
+                </param>
+                <param name="bTimeAdjustmentDisabled">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="InstallELAMCertificateInfo" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="ELAMFile">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetProcessorSystemCycleTime" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Group">
+                    <type>ushort</type>
+                </param>
+                <param name="Buffer">
+                    <type>SYSTEM_PROCESSOR_CYCLE_TIME_INFORMATION*</type>
+                </param>
+                <param name="ReturnedLength">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GetOsManufacturingMode" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="pbEnabled">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="GetIntegratedDisplaySize" access="public" lib="KernelBase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="sizeInInches">
+                    <type>double*</type>
+                </param>
+            </function>
+            <function name="SetComputerNameA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpComputerName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="SetComputerNameW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpComputerName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="SetComputerNameExA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="NameType">
+                    <type>COMPUTER_NAME_FORMAT</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <constant name="USER_CET_ENVIRONMENT_WIN32_PROCESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="USER_CET_ENVIRONMENT_SGX2_ENCLAVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="USER_CET_ENVIRONMENT_VBS_ENCLAVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="USER_CET_ENVIRONMENT_VBS_BASIC_ENCLAVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000011
+            </code>
+                </value>
+            </constant>
+            <constant name="GetSystemDirectory" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetSystemDirectoryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetWindowsDirectory" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetWindowsDirectoryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetSystemWindowsDirectory" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetSystemWindowsDirectoryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetComputerNameEx" access="public">
+                <type primitive="False">delegate*&lt;COMPUTER_NAME_FORMAT, ushort*, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetComputerNameExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SetComputerNameEx" access="public">
+                <type primitive="False">delegate*&lt;COMPUTER_NAME_FORMAT, ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetComputerNameExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetVersionEx" access="public">
+                <type primitive="False">delegate*&lt;OSVERSIONINFOW*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetVersionExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SCEX2_ALT_NETBIOS_NAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="SetComputerNameEx2" access="public">
+                <type primitive="False">delegate*&lt;COMPUTER_NAME_FORMAT, uint, ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetComputerNameEx2W
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SetComputerName" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetComputerNameW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

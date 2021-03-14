@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/Audioclient.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="AUDIOCLOCK_CHARACTERISTIC_FIXED_FREQ" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="AMBISONICS_PARAM_VERSION_1" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_NOT_INITIALIZED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x001))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_ALREADY_INITIALIZED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x002))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_WRONG_ENDPOINT_TYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x003))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_DEVICE_INVALIDATED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x004))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_NOT_STOPPED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x005))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_BUFFER_TOO_LARGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x006))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_OUT_OF_ORDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x007))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_UNSUPPORTED_FORMAT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x008))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_INVALID_SIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x009))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_DEVICE_IN_USE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x00a))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_BUFFER_OPERATION_PENDING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x00b))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_THREAD_NOT_REGISTERED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x00c))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_EXCLUSIVE_MODE_NOT_ALLOWED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x00e))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_ENDPOINT_CREATE_FAILED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x00f))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_SERVICE_NOT_RUNNING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x010))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_EVENTHANDLE_NOT_EXPECTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x011))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_EXCLUSIVE_MODE_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x012))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_BUFDURATION_PERIOD_NOT_EQUAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x013))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_EVENTHANDLE_NOT_SET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x014))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_INCORRECT_BUFFER_SIZE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x015))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_BUFFER_SIZE_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x016))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_CPUUSAGE_EXCEEDED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x017))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_BUFFER_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x018))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_BUFFER_SIZE_NOT_ALIGNED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x019))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_INVALID_DEVICE_PERIOD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x020))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_INVALID_STREAM_FLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x021))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_ENDPOINT_OFFLOAD_NOT_CAPABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x022))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_OUT_OF_OFFLOAD_RESOURCES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x023))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_OFFLOAD_MODE_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x024))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_NONOFFLOAD_MODE_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x025))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_RESOURCES_INVALIDATED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x026))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_RAW_MODE_UNSUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x027))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_ENGINE_PERIODICITY_LOCKED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x028))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_ENGINE_FORMAT_LOCKED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x029))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_HEADTRACKING_ENABLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x030))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_E_HEADTRACKING_UNSUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x040))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_S_BUFFER_EMPTY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(0) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x001))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_S_THREAD_ALREADY_REGISTERED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(0) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x002))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="AUDCLNT_S_POSITION_STALLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(0) &lt;&lt; 31) | ((uint)(2185) &lt;&lt; 16) | ((uint)(0x003))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <iid name="IID_IAudioClient" value="0x1CB9AD4C, 0xDBFA, 0x4C32, 0xB1, 0x78, 0xC2, 0xF5, 0x68, 0xA7, 0x03, 0xB2" />
+            <iid name="IID_IAudioClient2" value="0x726778CD, 0xF60A, 0x4EDA, 0x82, 0xDE, 0xE4, 0x76, 0x10, 0xCD, 0x78, 0xAA" />
+            <iid name="IID_IAudioClient3" value="0x7ED4EE07, 0x8E67, 0x4CD4, 0x8C, 0x1A, 0x2B, 0x7A, 0x59, 0x87, 0xAD, 0x42" />
+            <iid name="IID_IAudioRenderClient" value="0xF294ACFC, 0x3146, 0x4483, 0xA7, 0xBF, 0xAD, 0xDC, 0xA7, 0xC2, 0x60, 0xE2" />
+            <iid name="IID_IAudioCaptureClient" value="0xC8ADBD64, 0xE71E, 0x48A0, 0xA4, 0xDE, 0x18, 0x5C, 0x39, 0x5C, 0xD3, 0x17" />
+            <iid name="IID_IAudioClock" value="0xCD63314F, 0x3FBA, 0x4A1B, 0x81, 0x2C, 0xEF, 0x96, 0x35, 0x87, 0x28, 0xE7" />
+            <iid name="IID_IAudioClock2" value="0x6F49FF73, 0x6727, 0x49AC, 0xA0, 0x08, 0xD9, 0x8C, 0xF5, 0xE7, 0x00, 0x48" />
+            <iid name="IID_IAudioClockAdjustment" value="0xF6E4C0A0, 0x46D9, 0x4FB8, 0xBE, 0x21, 0x57, 0xA3, 0xEF, 0x2B, 0x62, 0x6C" />
+            <iid name="IID_ISimpleAudioVolume" value="0x87CE5498, 0x68D6, 0x44E5, 0x92, 0x15, 0x6D, 0xA4, 0x7E, 0xF8, 0x83, 0xD8" />
+            <iid name="IID_IAudioStreamVolume" value="0x93014887, 0x242D, 0x4068, 0x8A, 0x15, 0xCF, 0x5E, 0x93, 0xB9, 0x0F, 0xE3" />
+            <iid name="IID_IAudioAmbisonicsControl" value="0x28724C91, 0xDF35, 0x4856, 0x9F, 0x76, 0xD6, 0xA2, 0x64, 0x13, 0xF3, 0xDF" />
+            <iid name="IID_IChannelAudioVolume" value="0x1C158861, 0xB533, 0x4B30, 0xB1, 0xCF, 0xE8, 0x53, 0xE5, 0x1C, 0x59, 0xB8" />
+        </class>
+    </namespace>
+</bindings>

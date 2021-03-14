@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IResourceManager" access="public" native="struct IResourceManager : IUnknown" uuid="56a868ac-0ad4-11ce-b03a-0020af0ba770" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Register" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pName">
+                    <type>ushort*</type>
+                </param>
+                <param name="cResource">
+                    <type>int</type>
+                </param>
+                <param name="plToken">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, ushort*, int, int*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>, <param name="pName">pName</param>, <param name="cResource">cResource</param>, <param name="plToken">plToken</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterGroup" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pName">
+                    <type>ushort*</type>
+                </param>
+                <param name="cResource">
+                    <type>int</type>
+                </param>
+                <param name="palTokens">
+                    <type>int*</type>
+                </param>
+                <param name="plToken">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, ushort*, int, int*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>, <param name="pName">pName</param>, <param name="cResource">cResource</param>, <param name="palTokens">palTokens</param>, <param name="plToken">plToken</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RequestResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="idResource">
+                    <type>int</type>
+                </param>
+                <param name="pFocusObject">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pConsumer">
+                    <type>IResourceConsumer*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, int, IUnknown*, IResourceConsumer*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>, <param name="idResource">idResource</param>, <param name="pFocusObject">pFocusObject</param>, <param name="pConsumer">pConsumer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyAcquire" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="idResource">
+                    <type>int</type>
+                </param>
+                <param name="pConsumer">
+                    <type>IResourceConsumer*</type>
+                </param>
+                <param name="hr">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, int, IResourceConsumer*, int, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>, <param name="idResource">idResource</param>, <param name="pConsumer">pConsumer</param>, <param name="hr">hr</param>);
+        </code>
+                </body>
+            </function>
+            <function name="NotifyRelease" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="idResource">
+                    <type>int</type>
+                </param>
+                <param name="pConsumer">
+                    <type>IResourceConsumer*</type>
+                </param>
+                <param name="bStillWant">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, int, IResourceConsumer*, int, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>, <param name="idResource">idResource</param>, <param name="pConsumer">pConsumer</param>, <param name="bStillWant">bStillWant</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CancelRequest" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="idResource">
+                    <type>int</type>
+                </param>
+                <param name="pConsumer">
+                    <type>IResourceConsumer*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, int, IResourceConsumer*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>, <param name="idResource">idResource</param>, <param name="pConsumer">pConsumer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetFocus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFocusObject">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>, <param name="pFocusObject">pFocusObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReleaseFocus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pFocusObject">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IResourceManager*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IResourceManager*)Unsafe.AsPointer(ref this)</param>, <param name="pFocusObject">pFocusObject</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

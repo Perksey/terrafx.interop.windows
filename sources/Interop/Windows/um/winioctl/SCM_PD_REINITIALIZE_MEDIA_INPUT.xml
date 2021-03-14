@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SCM_PD_REINITIALIZE_MEDIA_INPUT" access="public">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Options" access="public">
+                <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:7786:5)">_Options_e__Struct</type>
+            </field>
+            <struct name="_Options_e__Struct" access="public">
+                <field name="_bitfield" access="public">
+                    <type native="">uint</type>
+                </field>
+                <field name="Overwrite" access="public">
+                    <type native="DWORD : 1">uint</type>
+                    <get inlining="aggressive">
+                        <code>return <bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                    </get>
+                    <set inlining="aggressive">
+                        <code>
+                            <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>);
+        </code>
+                    </set>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

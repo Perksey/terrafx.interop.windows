@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpVoice" access="public" native="struct ISpVoice : ISpEventSource" uuid="6c44df74-72b9-4992-a1ec-ef996e0422d4" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifySink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNotifySink">
+                    <type>ISpNotifySink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ISpNotifySink*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pNotifySink">pNotifySink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyWindowMessage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hWnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Msg">
+                    <type>uint</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, IntPtr, uint, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="hWnd">hWnd</param>, <param name="Msg">Msg</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyCallbackFunction" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfnCallback">
+                    <type>delegate* unmanaged&lt;nuint, nint, void&gt;*</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, delegate* unmanaged&lt;nuint, nint, void&gt;*, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pfnCallback">pfnCallback</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyCallbackInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSpCallback">
+                    <type>ISpNotifyCallback*</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ISpNotifyCallback*, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pSpCallback">pSpCallback</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetNotifyWin32Event" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WaitForNotifyEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwMilliseconds">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="dwMilliseconds">dwMilliseconds</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNotifyEventHandle" access="public" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, IntPtr&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetInterest" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ullEventInterest">
+                    <type>ulong</type>
+                </param>
+                <param name="ullQueuedInterest">
+                    <type>ulong</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ulong, ulong, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="ullEventInterest">ullEventInterest</param>, <param name="ullQueuedInterest">ullQueuedInterest</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEvents" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="pEventArray">
+                    <type>SPEVENT*</type>
+                </param>
+                <param name="pulFetched">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, uint, SPEVENT*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="ulCount">ulCount</param>, <param name="pEventArray">pEventArray</param>, <param name="pulFetched">pulFetched</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pInfo">
+                    <type>SPEVENTSOURCEINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, SPEVENTSOURCEINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pInfo">pInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pUnkOutput">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="fAllowFormatChanges">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, IUnknown*, int, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pUnkOutput">pUnkOutput</param>, <param name="fAllowFormatChanges">fAllowFormatChanges</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputObjectToken" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppObjectToken">
+                    <type>ISpObjectToken**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ISpObjectToken**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="ppObjectToken">ppObjectToken</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppStream">
+                    <type>ISpStreamFormat**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ISpStreamFormat**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="ppStream">ppStream</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Pause" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Resume" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetVoice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pToken">
+                    <type>ISpObjectToken*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ISpObjectToken*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pToken">pToken</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVoice" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppToken">
+                    <type>ISpObjectToken**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ISpObjectToken**, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="ppToken">ppToken</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Speak" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwcs">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pulStreamNumber">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ushort*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pwcs">pwcs</param>, <param name="dwFlags">dwFlags</param>, <param name="pulStreamNumber">pulStreamNumber</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SpeakStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pulStreamNumber">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, IStream*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pStream">pStream</param>, <param name="dwFlags">dwFlags</param>, <param name="pulStreamNumber">pulStreamNumber</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStatus">
+                    <type>SPVOICESTATUS*</type>
+                </param>
+                <param name="ppszLastBookmark">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, SPVOICESTATUS*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pStatus">pStatus</param>, <param name="ppszLastBookmark">ppszLastBookmark</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Skip" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pItemType">
+                    <type>ushort*</type>
+                </param>
+                <param name="lNumItems">
+                    <type>int</type>
+                </param>
+                <param name="pulNumSkipped">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ushort*, int, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pItemType">pItemType</param>, <param name="lNumItems">lNumItems</param>, <param name="pulNumSkipped">pulNumSkipped</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPriority" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ePriority">
+                    <type>SPVPRIORITY</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, SPVPRIORITY, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="ePriority">ePriority</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPriority" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pePriority">
+                    <type>SPVPRIORITY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, SPVPRIORITY*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pePriority">pePriority</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAlertBoundary" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="eBoundary">
+                    <type>SPEVENTENUM</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, SPEVENTENUM, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="eBoundary">eBoundary</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAlertBoundary" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="peBoundary">
+                    <type>SPEVENTENUM*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, SPEVENTENUM*, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="peBoundary">peBoundary</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="RateAdjust">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, int, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="RateAdjust">RateAdjust</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRateAdjust">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pRateAdjust">pRateAdjust</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetVolume" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="usVolume">
+                    <type>ushort</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ushort, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="usVolume">usVolume</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVolume" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pusVolume">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pusVolume">pusVolume</param>);
+        </code>
+                </body>
+            </function>
+            <function name="WaitUntilDone" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="msTimeout">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="msTimeout">msTimeout</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSyncSpeakTimeout" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="msTimeout">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="msTimeout">msTimeout</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSyncSpeakTimeout" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pmsTimeout">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pmsTimeout">pmsTimeout</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SpeakCompleteEvent" access="public" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, IntPtr&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsUISupported" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszTypeOfUI">
+                    <type>ushort*</type>
+                </param>
+                <param name="pvExtraData">
+                    <type>void*</type>
+                </param>
+                <param name="cbExtraData">
+                    <type>uint</type>
+                </param>
+                <param name="pfSupported">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, ushort*, void*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pszTypeOfUI">pszTypeOfUI</param>, <param name="pvExtraData">pvExtraData</param>, <param name="cbExtraData">cbExtraData</param>, <param name="pfSupported">pfSupported</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DisplayUI" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwndParent">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pszTitle">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszTypeOfUI">
+                    <type>ushort*</type>
+                </param>
+                <param name="pvExtraData">
+                    <type>void*</type>
+                </param>
+                <param name="cbExtraData">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpVoice*, IntPtr, ushort*, ushort*, void*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(ISpVoice*)Unsafe.AsPointer(ref this)</param>, <param name="hwndParent">hwndParent</param>, <param name="pszTitle">pszTitle</param>, <param name="pszTypeOfUI">pszTypeOfUI</param>, <param name="pvExtraData">pvExtraData</param>, <param name="cbExtraData">cbExtraData</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

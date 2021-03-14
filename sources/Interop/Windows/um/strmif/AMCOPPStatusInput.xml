@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="AMCOPPStatusInput" access="public" unsafe="true">
+            <field name="rApp" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="guidStatusRequestID" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="dwSequence" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbSizeData" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="StatusData" access="public">
+                <type native="BYTE [4056]" count="4056" fixed="_StatusData_e__FixedBuffer">byte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

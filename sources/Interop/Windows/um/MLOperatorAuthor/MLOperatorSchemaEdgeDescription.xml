@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/MLOperatorAuthor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MLOperatorSchemaEdgeDescription" access="public" unsafe="true">
+            <field name="options" access="public">
+                <type native="">MLOperatorParameterOptions</type>
+            </field>
+            <field name="typeFormat" access="public">
+                <type native="">MLOperatorSchemaEdgeTypeFormat</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="MLOperatorSchemaEdgeDescription::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/MLOperatorAuthor.h:426:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="reserved" access="public">
+                <type native="">ref void*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;reserved;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="typeLabel" access="public">
+                <type native="">ref sbyte*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;typeLabel;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="edgeDescription" access="public">
+                <type native="">ref MLOperatorEdgeDescription</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.edgeDescription, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="reserved" access="public" offset="0">
+                    <type native="const void *">void*</type>
+                </field>
+                <field name="typeLabel" access="public" offset="0">
+                    <type native="const char *">sbyte*</type>
+                </field>
+                <field name="edgeDescription" access="public" offset="0">
+                    <type native="">MLOperatorEdgeDescription</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMAGE_OPTIONAL_HEADER64" access="public" layout="Sequential" pack="4">
+            <field name="Magic" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="MajorLinkerVersion" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="MinorLinkerVersion" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="SizeOfCode" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SizeOfInitializedData" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SizeOfUninitializedData" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="AddressOfEntryPoint" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="BaseOfCode" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ImageBase" access="public">
+                <type native="ULONGLONG">ulong</type>
+            </field>
+            <field name="SectionAlignment" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="FileAlignment" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="MajorOperatingSystemVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="MinorOperatingSystemVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="MajorImageVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="MinorImageVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="MajorSubsystemVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="MinorSubsystemVersion" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="Win32VersionValue" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SizeOfImage" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SizeOfHeaders" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="CheckSum" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Subsystem" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="DllCharacteristics" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="SizeOfStackReserve" access="public">
+                <type native="ULONGLONG">ulong</type>
+            </field>
+            <field name="SizeOfStackCommit" access="public">
+                <type native="ULONGLONG">ulong</type>
+            </field>
+            <field name="SizeOfHeapReserve" access="public">
+                <type native="ULONGLONG">ulong</type>
+            </field>
+            <field name="SizeOfHeapCommit" access="public">
+                <type native="ULONGLONG">ulong</type>
+            </field>
+            <field name="LoaderFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="NumberOfRvaAndSizes" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DataDirectory" access="public">
+                <type native="IMAGE_DATA_DIRECTORY [16]" count="16" fixed="_DataDirectory_e__FixedBuffer">IMAGE_DATA_DIRECTORY</type>
+            </field>
+            <struct name="_DataDirectory_e__FixedBuffer" access="public" layout="Sequential" pack="4">
+                <field name="e0" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e2" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e3" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e4" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e5" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e6" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e7" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e8" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e9" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e10" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e11" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e12" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e13" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e14" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <field name="e15" access="public">
+                    <type native="">IMAGE_DATA_DIRECTORY</type>
+                </field>
+                <indexer access="public">
+                    <type>ref IMAGE_DATA_DIRECTORY</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan()[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;IMAGE_DATA_DIRECTORY&gt;</type>
+                    <code>MemoryMarshal.CreateSpan(ref e0, 16);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

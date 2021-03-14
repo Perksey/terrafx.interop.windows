@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WS_CERT_SIGNED_SAML_AUTHENTICATOR" access="public" unsafe="true">
+            <field name="authenticator" access="public">
+                <type native="">WS_SAML_AUTHENTICATOR</type>
+            </field>
+            <field name="trustedIssuerCerts" access="public">
+                <type native="const struct _CERT_CONTEXT **">CERT_CONTEXT**</type>
+            </field>
+            <field name="trustedIssuerCertCount" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="decryptionCert" access="public">
+                <type native="const struct _CERT_CONTEXT *">CERT_CONTEXT*</type>
+            </field>
+            <field name="samlValidator" access="public">
+                <type native="WS_VALIDATE_SAML_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, IntPtr, int&gt;</type>
+            </field>
+            <field name="samlValidatorCallbackState" access="public">
+                <type native="void *">void*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ctffunc.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfCandidateList" access="public" native="struct ITfCandidateList : IUnknown" uuid="a3ad50fb-9bdb-49e3-a843-6c76520fbf5d" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCandidateList*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfCandidateList*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCandidateList*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfCandidateList*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCandidateList*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfCandidateList*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumCandidates" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumTfCandidates**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCandidateList*, IEnumTfCandidates**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfCandidateList*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCandidate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ppCand">
+                    <type>ITfCandidateString**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCandidateList*, uint, ITfCandidateString**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfCandidateList*)Unsafe.AsPointer(ref this)</param>, <param name="nIndex">nIndex</param>, <param name="ppCand">ppCand</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCandidateNum" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pnCnt">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCandidateList*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfCandidateList*)Unsafe.AsPointer(ref this)</param>, <param name="pnCnt">pnCnt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetResult" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nIndex">
+                    <type>uint</type>
+                </param>
+                <param name="imcr">
+                    <type>TfCandidateResult</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCandidateList*, uint, TfCandidateResult, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfCandidateList*)Unsafe.AsPointer(ref this)</param>, <param name="nIndex">nIndex</param>, <param name="imcr">imcr</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

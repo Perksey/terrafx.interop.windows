@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/consoleapi2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CONSOLE_SCREEN_BUFFER_INFOEX" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="dwSize" access="public">
+                <type native="">COORD</type>
+            </field>
+            <field name="dwCursorPosition" access="public">
+                <type native="">COORD</type>
+            </field>
+            <field name="wAttributes" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="srWindow" access="public">
+                <type native="">SMALL_RECT</type>
+            </field>
+            <field name="dwMaximumWindowSize" access="public">
+                <type native="">COORD</type>
+            </field>
+            <field name="wPopupAttributes" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="bFullscreenSupported" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="ColorTable" access="public">
+                <type native="COLORREF [16]" count="16" fixed="_ColorTable_e__FixedBuffer">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

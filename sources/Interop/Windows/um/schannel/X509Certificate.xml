@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/schannel.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="X509Certificate" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SerialNumber" access="public">
+                <type native="DWORD [4]" count="4" fixed="_SerialNumber_e__FixedBuffer">uint</type>
+            </field>
+            <field name="SignatureAlgorithm" access="public">
+                <type native="ALG_ID">uint</type>
+            </field>
+            <field name="ValidFrom" access="public">
+                <type native="">FILETIME</type>
+            </field>
+            <field name="ValidUntil" access="public">
+                <type native="">FILETIME</type>
+            </field>
+            <field name="pszIssuer" access="public">
+                <type native="PSTR">sbyte*</type>
+            </field>
+            <field name="pszSubject" access="public">
+                <type native="PSTR">sbyte*</type>
+            </field>
+            <field name="pPublicKey" access="public">
+                <type native="PctPublicKey *">PctPublicKey*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/InputScope.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="SetInputScope" access="public" lib="msctf" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="inputscope">
+                    <type>InputScope</type>
+                </param>
+            </function>
+            <function name="SetInputScopes" access="public" lib="msctf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pInputScopes">
+                    <type>InputScope*</type>
+                </param>
+                <param name="cInputScopes">
+                    <type>uint</type>
+                </param>
+                <param name="ppszPhraseList">
+                    <type>ushort**</type>
+                </param>
+                <param name="cPhrases">
+                    <type>uint</type>
+                </param>
+                <param name="pszRegExp">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszSRGS">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="SetInputScopeXML" access="public" lib="msctf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pszXML">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="SetInputScopes2" access="public" lib="msctf" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pInputScopes">
+                    <type>InputScope*</type>
+                </param>
+                <param name="cInputScopes">
+                    <type>uint</type>
+                </param>
+                <param name="pEnumString">
+                    <type>IEnumString*</type>
+                </param>
+                <param name="pszRegExp">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszSRGS">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <constant name="IID_ITfInputScope" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xfde1eaee, 0x6924, 0x4cdf, 0x91, 0xe7, 0xda, 0x38, 0xcf, 0xf5, 0x55, 0x9d)
+            </code>
+                </value>
+            </constant>
+            <constant name="IID_ITfInputScope2" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x5731eaa0, 0x6bc2, 0x4681, 0xa5, 0x32, 0x92, 0xfb, 0xb7, 0x4d, 0x7c, 0x41)
+            </code>
+                </value>
+            </constant>
+            <constant name="GUID_PROP_INPUTSCOPE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x1713dd5a, 0x68e7, 0x4a5b, 0x9a, 0xf6, 0x59, 0x2a, 0x59, 0x5c, 0x77, 0x8d)
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

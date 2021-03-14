@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinTrust.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_PROVIDER_CERT" access="public" unsafe="true">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pCert" access="public">
+                <type native="PCCERT_CONTEXT">CERT_CONTEXT*</type>
+            </field>
+            <field name="fCommercial" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="fTrustedRoot" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="fSelfSigned" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="fTestCert" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="dwRevokedReason" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwConfidence" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwError" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pTrustListContext" access="public">
+                <type native="CTL_CONTEXT *">CTL_CONTEXT*</type>
+            </field>
+            <field name="fTrustListSignerCert" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="pCtlContext" access="public">
+                <type native="PCCTL_CONTEXT">CTL_CONTEXT*</type>
+            </field>
+            <field name="dwCtlError" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="fIsCyclic" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="pChainElement" access="public">
+                <type native="PCERT_CHAIN_ELEMENT">CERT_CHAIN_ELEMENT*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

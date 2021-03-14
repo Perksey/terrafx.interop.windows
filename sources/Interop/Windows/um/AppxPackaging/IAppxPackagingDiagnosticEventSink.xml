@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/AppxPackaging.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAppxPackagingDiagnosticEventSink" access="public" native="struct IAppxPackagingDiagnosticEventSink : IUnknown" uuid="17239d47-6adb-45d2-80f6-f9cbc3bf059d" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackagingDiagnosticEventSink*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAppxPackagingDiagnosticEventSink*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackagingDiagnosticEventSink*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAppxPackagingDiagnosticEventSink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackagingDiagnosticEventSink*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAppxPackagingDiagnosticEventSink*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReportContextChange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="changeType">
+                    <type>APPX_PACKAGING_CONTEXT_CHANGE_TYPE</type>
+                </param>
+                <param name="contextId">
+                    <type>int</type>
+                </param>
+                <param name="contextName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="contextMessage">
+                    <type>ushort*</type>
+                </param>
+                <param name="detailsMessage">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackagingDiagnosticEventSink*, APPX_PACKAGING_CONTEXT_CHANGE_TYPE, int, sbyte*, ushort*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAppxPackagingDiagnosticEventSink*)Unsafe.AsPointer(ref this)</param>, <param name="changeType">changeType</param>, <param name="contextId">contextId</param>, <param name="contextName">contextName</param>, <param name="contextMessage">contextMessage</param>, <param name="detailsMessage">detailsMessage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReportError" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="errorMessage">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxPackagingDiagnosticEventSink*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAppxPackagingDiagnosticEventSink*)Unsafe.AsPointer(ref this)</param>, <param name="errorMessage">errorMessage</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

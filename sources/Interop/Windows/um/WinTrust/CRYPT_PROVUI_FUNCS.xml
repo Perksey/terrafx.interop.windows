@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinTrust.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_PROVUI_FUNCS" access="public" unsafe="true">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="psUIData" access="public">
+                <type native="struct _CRYPT_PROVUI_DATA *">CRYPT_PROVUI_DATA*</type>
+            </field>
+            <field name="pfnOnMoreInfoClick" access="public">
+                <type native="PFN_PROVUI_CALL">delegate* unmanaged&lt;IntPtr, CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+            <field name="pfnOnMoreInfoClickDefault" access="public">
+                <type native="PFN_PROVUI_CALL">delegate* unmanaged&lt;IntPtr, CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+            <field name="pfnOnAdvancedClick" access="public">
+                <type native="PFN_PROVUI_CALL">delegate* unmanaged&lt;IntPtr, CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+            <field name="pfnOnAdvancedClickDefault" access="public">
+                <type native="PFN_PROVUI_CALL">delegate* unmanaged&lt;IntPtr, CRYPT_PROVIDER_DATA*, int&gt;</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

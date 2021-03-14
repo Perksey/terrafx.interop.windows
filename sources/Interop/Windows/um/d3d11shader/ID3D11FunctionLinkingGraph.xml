@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d11shader.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D11FunctionLinkingGraph" access="public" native="struct ID3D11FunctionLinkingGraph : IUnknown" uuid="54133220-1ce8-43d3-8236-9855c5ceecff" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateModuleInstance" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppModuleInstance">
+                    <type>ID3D11ModuleInstance**</type>
+                </param>
+                <param name="ppErrorBuffer">
+                    <type>ID3DBlob**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, ID3D11ModuleInstance**, ID3DBlob**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>, <param name="ppModuleInstance">ppModuleInstance</param>, <param name="ppErrorBuffer">ppErrorBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetInputSignature" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pInputParameters">
+                    <type>D3D11_PARAMETER_DESC*</type>
+                </param>
+                <param name="cInputParameters">
+                    <type>uint</type>
+                </param>
+                <param name="ppInputNode">
+                    <type>ID3D11LinkingNode**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, D3D11_PARAMETER_DESC*, uint, ID3D11LinkingNode**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>, <param name="pInputParameters">pInputParameters</param>, <param name="cInputParameters">cInputParameters</param>, <param name="ppInputNode">ppInputNode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputSignature" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pOutputParameters">
+                    <type>D3D11_PARAMETER_DESC*</type>
+                </param>
+                <param name="cOutputParameters">
+                    <type>uint</type>
+                </param>
+                <param name="ppOutputNode">
+                    <type>ID3D11LinkingNode**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, D3D11_PARAMETER_DESC*, uint, ID3D11LinkingNode**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>, <param name="pOutputParameters">pOutputParameters</param>, <param name="cOutputParameters">cOutputParameters</param>, <param name="ppOutputNode">ppOutputNode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CallFunction" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pModuleInstanceNamespace">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pModuleWithFunctionPrototype">
+                    <type>ID3D11Module*</type>
+                </param>
+                <param name="pFunctionName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ppCallNode">
+                    <type>ID3D11LinkingNode**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, sbyte*, ID3D11Module*, sbyte*, ID3D11LinkingNode**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>, <param name="pModuleInstanceNamespace">pModuleInstanceNamespace</param>, <param name="pModuleWithFunctionPrototype">pModuleWithFunctionPrototype</param>, <param name="pFunctionName">pFunctionName</param>, <param name="ppCallNode">ppCallNode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PassValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcNode">
+                    <type>ID3D11LinkingNode*</type>
+                </param>
+                <param name="SrcParameterIndex">
+                    <type>int</type>
+                </param>
+                <param name="pDstNode">
+                    <type>ID3D11LinkingNode*</type>
+                </param>
+                <param name="DstParameterIndex">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, ID3D11LinkingNode*, int, ID3D11LinkingNode*, int, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>, <param name="pSrcNode">pSrcNode</param>, <param name="SrcParameterIndex">SrcParameterIndex</param>, <param name="pDstNode">pDstNode</param>, <param name="DstParameterIndex">DstParameterIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PassValueWithSwizzle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSrcNode">
+                    <type>ID3D11LinkingNode*</type>
+                </param>
+                <param name="SrcParameterIndex">
+                    <type>int</type>
+                </param>
+                <param name="pSrcSwizzle">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pDstNode">
+                    <type>ID3D11LinkingNode*</type>
+                </param>
+                <param name="DstParameterIndex">
+                    <type>int</type>
+                </param>
+                <param name="pDstSwizzle">
+                    <type>sbyte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, ID3D11LinkingNode*, int, sbyte*, ID3D11LinkingNode*, int, sbyte*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>, <param name="pSrcNode">pSrcNode</param>, <param name="SrcParameterIndex">SrcParameterIndex</param>, <param name="pSrcSwizzle">pSrcSwizzle</param>, <param name="pDstNode">pDstNode</param>, <param name="DstParameterIndex">DstParameterIndex</param>, <param name="pDstSwizzle">pDstSwizzle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLastError" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppErrorBuffer">
+                    <type>ID3DBlob**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, ID3DBlob**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>, <param name="ppErrorBuffer">ppErrorBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GenerateHlsl" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="uFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppBuffer">
+                    <type>ID3DBlob**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D11FunctionLinkingGraph*, uint, ID3DBlob**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this)</param>, <param name="uFlags">uFlags</param>, <param name="ppBuffer">ppBuffer</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

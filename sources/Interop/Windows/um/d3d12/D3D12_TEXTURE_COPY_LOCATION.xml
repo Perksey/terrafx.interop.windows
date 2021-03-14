@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D12_TEXTURE_COPY_LOCATION" access="public" unsafe="true">
+            <field name="pResource" access="public">
+                <type native="ID3D12Resource *">ID3D12Resource*</type>
+            </field>
+            <field name="Type" access="public">
+                <type native="">D3D12_TEXTURE_COPY_TYPE</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="D3D12_TEXTURE_COPY_LOCATION::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:2788:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="PlacedFootprint" access="public">
+                <type native="">ref D3D12_PLACED_SUBRESOURCE_FOOTPRINT</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.PlacedFootprint, 1));
+        </code>
+                </get>
+            </field>
+            <field name="SubresourceIndex" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.SubresourceIndex, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="PlacedFootprint" access="public" offset="0">
+                    <type native="">D3D12_PLACED_SUBRESOURCE_FOOTPRINT</type>
+                </field>
+                <field name="SubresourceIndex" access="public" offset="0">
+                    <type native="UINT">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

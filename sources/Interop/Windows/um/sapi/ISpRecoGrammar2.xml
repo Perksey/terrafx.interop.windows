@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpRecoGrammar2" access="public" native="struct ISpRecoGrammar2 : IUnknown" uuid="4b37bc9e-9ed6-44a3-93d3-18f022b79ec3" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRules" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppCoMemRules">
+                    <type>SPRULE**</type>
+                </param>
+                <param name="puNumRules">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, SPRULE**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>, <param name="ppCoMemRules">ppCoMemRules</param>, <param name="puNumRules">puNumRules</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadCmdFromFile2" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="Options">
+                    <type>SPLOADOPTIONS</type>
+                </param>
+                <param name="pszSharingUri">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszBaseUri">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, ushort*, SPLOADOPTIONS, ushort*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>, <param name="pszFileName">pszFileName</param>, <param name="Options">Options</param>, <param name="pszSharingUri">pszSharingUri</param>, <param name="pszBaseUri">pszBaseUri</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadCmdFromMemory2" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pGrammar">
+                    <type>SPBINARYGRAMMAR*</type>
+                </param>
+                <param name="Options">
+                    <type>SPLOADOPTIONS</type>
+                </param>
+                <param name="pszSharingUri">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszBaseUri">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, SPBINARYGRAMMAR*, SPLOADOPTIONS, ushort*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>, <param name="pGrammar">pGrammar</param>, <param name="Options">Options</param>, <param name="pszSharingUri">pszSharingUri</param>, <param name="pszBaseUri">pszBaseUri</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRulePriority" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszRuleName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ulRuleId">
+                    <type>uint</type>
+                </param>
+                <param name="nRulePriority">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, ushort*, uint, int, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>, <param name="pszRuleName">pszRuleName</param>, <param name="ulRuleId">ulRuleId</param>, <param name="nRulePriority">nRulePriority</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRuleWeight" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszRuleName">
+                    <type>ushort*</type>
+                </param>
+                <param name="ulRuleId">
+                    <type>uint</type>
+                </param>
+                <param name="flWeight">
+                    <type>float</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, ushort*, uint, float, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>, <param name="pszRuleName">pszRuleName</param>, <param name="ulRuleId">ulRuleId</param>, <param name="flWeight">flWeight</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDictationWeight" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="flWeight">
+                    <type>float</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, float, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>, <param name="flWeight">flWeight</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGrammarLoader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLoader">
+                    <type>ISpeechResourceLoader*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, ISpeechResourceLoader*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>, <param name="pLoader">pLoader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSMLSecurityManager" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSMLSecurityManager">
+                    <type>IInternetSecurityManager*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar2*, IInternetSecurityManager*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar2*)Unsafe.AsPointer(ref this)</param>, <param name="pSMLSecurityManager">pSMLSecurityManager</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

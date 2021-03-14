@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IFilterMapper" access="public" native="struct IFilterMapper : IUnknown" uuid="56a868a3-0ad4-11ce-b03a-0020af0ba770" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="clsid">
+                    <type>Guid</type>
+                </param>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwMerit">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, Guid, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>, <param name="clsid">clsid</param>, <param name="Name">Name</param>, <param name="dwMerit">dwMerit</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterFilterInstance" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="clsid">
+                    <type>Guid</type>
+                </param>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <param name="MRId">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, Guid, ushort*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>, <param name="clsid">clsid</param>, <param name="Name">Name</param>, <param name="MRId">MRId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterPin" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Filter">
+                    <type>Guid</type>
+                </param>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <param name="bRendered">
+                    <type>int</type>
+                </param>
+                <param name="bOutput">
+                    <type>int</type>
+                </param>
+                <param name="bZero">
+                    <type>int</type>
+                </param>
+                <param name="bMany">
+                    <type>int</type>
+                </param>
+                <param name="ConnectsToFilter">
+                    <type>Guid</type>
+                </param>
+                <param name="ConnectsToPin">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, Guid, ushort*, int, int, int, int, Guid, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>, <param name="Filter">Filter</param>, <param name="Name">Name</param>, <param name="bRendered">bRendered</param>, <param name="bOutput">bOutput</param>, <param name="bZero">bZero</param>, <param name="bMany">bMany</param>, <param name="ConnectsToFilter">ConnectsToFilter</param>, <param name="ConnectsToPin">ConnectsToPin</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterPinType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="clsFilter">
+                    <type>Guid</type>
+                </param>
+                <param name="strName">
+                    <type>ushort*</type>
+                </param>
+                <param name="clsMajorType">
+                    <type>Guid</type>
+                </param>
+                <param name="clsSubType">
+                    <type>Guid</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, Guid, ushort*, Guid, Guid, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>, <param name="clsFilter">clsFilter</param>, <param name="strName">strName</param>, <param name="clsMajorType">clsMajorType</param>, <param name="clsSubType">clsSubType</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterFilter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Filter">
+                    <type>Guid</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, Guid, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>, <param name="Filter">Filter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterFilterInstance" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="MRId">
+                    <type>Guid</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, Guid, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>, <param name="MRId">MRId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterPin" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Filter">
+                    <type>Guid</type>
+                </param>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, Guid, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>, <param name="Filter">Filter</param>, <param name="Name">Name</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumMatchingFilters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumRegFilters**</type>
+                </param>
+                <param name="dwMerit">
+                    <type>uint</type>
+                </param>
+                <param name="bInputNeeded">
+                    <type>int</type>
+                </param>
+                <param name="clsInMaj">
+                    <type>Guid</type>
+                </param>
+                <param name="clsInSub">
+                    <type>Guid</type>
+                </param>
+                <param name="bRender">
+                    <type>int</type>
+                </param>
+                <param name="bOututNeeded">
+                    <type>int</type>
+                </param>
+                <param name="clsOutMaj">
+                    <type>Guid</type>
+                </param>
+                <param name="clsOutSub">
+                    <type>Guid</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IFilterMapper*, IEnumRegFilters**, uint, int, Guid, Guid, int, int, Guid, Guid, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IFilterMapper*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>, <param name="dwMerit">dwMerit</param>, <param name="bInputNeeded">bInputNeeded</param>, <param name="clsInMaj">clsInMaj</param>, <param name="clsInSub">clsInSub</param>, <param name="bRender">bRender</param>, <param name="bOututNeeded">bOututNeeded</param>, <param name="clsOutMaj">clsOutMaj</param>, <param name="clsOutSub">clsOutSub</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

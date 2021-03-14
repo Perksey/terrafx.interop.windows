@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="TXFS_GET_METADATA_INFO_OUT" access="public">
+            <field name="TxfFileId" access="public">
+                <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:12717:5)">_TxfFileId_e__Struct</type>
+            </field>
+            <field name="LockingTransaction" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="LastLsn" access="public">
+                <type native="DWORDLONG">ulong</type>
+            </field>
+            <field name="TransactionState" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <struct name="_TxfFileId_e__Struct" access="public">
+                <field name="LowPart" access="public">
+                    <type native="LONGLONG">long</type>
+                </field>
+                <field name="HighPart" access="public">
+                    <type native="LONGLONG">long</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

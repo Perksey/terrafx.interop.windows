@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CLAIM_SECURITY_ATTRIBUTE_RELATIVE_V1" access="public">
+            <field name="Name" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ValueType" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ValueCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Values" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h:11241:5)">_Values_e__Union</type>
+            </field>
+            <struct name="_Values_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pInt64" access="public" offset="0">
+                    <type native="DWORD [1]" count="1" fixed="_pInt64_e__FixedBuffer">uint</type>
+                </field>
+                <field name="pUint64" access="public" offset="0">
+                    <type native="DWORD [1]" count="1" fixed="_pUint64_e__FixedBuffer">uint</type>
+                </field>
+                <field name="ppString" access="public" offset="0">
+                    <type native="DWORD [1]" count="1" fixed="_ppString_e__FixedBuffer">uint</type>
+                </field>
+                <field name="pFqbn" access="public" offset="0">
+                    <type native="DWORD [1]" count="1" fixed="_pFqbn_e__FixedBuffer">uint</type>
+                </field>
+                <field name="pOctetString" access="public" offset="0">
+                    <type native="DWORD [1]" count="1" fixed="_pOctetString_e__FixedBuffer">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

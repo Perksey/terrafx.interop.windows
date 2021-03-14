@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SSL_HPKP_HEADER_EXTRA_CERT_CHAIN_POLICY_PARA" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwReserved" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pwszServerName" access="public">
+                <type native="LPWSTR">ushort*</type>
+            </field>
+            <field name="rgpszHpkpValue" access="public">
+                <type native="LPSTR [2]" count="2" fixed="_rgpszHpkpValue_e__FixedBuffer">sbyte*</type>
+            </field>
+            <struct name="_rgpszHpkpValue_e__FixedBuffer" access="public" unsafe="true">
+                <field name="e0" access="public">
+                    <type native="">sbyte*</type>
+                </field>
+                <field name="e1" access="public">
+                    <type native="">sbyte*</type>
+                </field>
+                <indexer access="public">
+                    <type>ref sbyte*</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>fixed (sbyte** pThis = &amp;e0)
+        {
+            return ref pThis[index];
+        }
+        </code>
+                    </get>
+                </indexer>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

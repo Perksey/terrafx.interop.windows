@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMPEG2StreamIdMap" access="public" native="struct IMPEG2StreamIdMap : IUnknown" uuid="d0e04c47-25b8-4369-925a-362a01d95444" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMPEG2StreamIdMap*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMPEG2StreamIdMap*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMPEG2StreamIdMap*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMPEG2StreamIdMap*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMPEG2StreamIdMap*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMPEG2StreamIdMap*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="MapStreamId" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulStreamId">
+                    <type>uint</type>
+                </param>
+                <param name="MediaSampleContent">
+                    <type>uint</type>
+                </param>
+                <param name="ulSubstreamFilterValue">
+                    <type>uint</type>
+                </param>
+                <param name="iDataOffset">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMPEG2StreamIdMap*, uint, uint, uint, int, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMPEG2StreamIdMap*)Unsafe.AsPointer(ref this)</param>, <param name="ulStreamId">ulStreamId</param>, <param name="MediaSampleContent">MediaSampleContent</param>, <param name="ulSubstreamFilterValue">ulSubstreamFilterValue</param>, <param name="iDataOffset">iDataOffset</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnmapStreamId" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="culStreamId">
+                    <type>uint</type>
+                </param>
+                <param name="pulStreamId">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMPEG2StreamIdMap*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMPEG2StreamIdMap*)Unsafe.AsPointer(ref this)</param>, <param name="culStreamId">culStreamId</param>, <param name="pulStreamId">pulStreamId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumStreamIdMap" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppIEnumStreamIdMap">
+                    <type>IEnumStreamIdMap**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMPEG2StreamIdMap*, IEnumStreamIdMap**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMPEG2StreamIdMap*)Unsafe.AsPointer(ref this)</param>, <param name="ppIEnumStreamIdMap">ppIEnumStreamIdMap</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

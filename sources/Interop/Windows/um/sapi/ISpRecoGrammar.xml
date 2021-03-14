@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpRecoGrammar" access="public" native="struct ISpRecoGrammar : ISpGrammarBuilder" uuid="2177db29-7f45-47d0-8554-067e91c80502" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResetGrammar" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewLanguage">
+                    <type>ushort</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, ushort, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="NewLanguage">NewLanguage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRule" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszRuleName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwRuleId">
+                    <type>uint</type>
+                </param>
+                <param name="dwAttributes">
+                    <type>uint</type>
+                </param>
+                <param name="fCreateIfNotExist">
+                    <type>int</type>
+                </param>
+                <param name="phInitialState">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, ushort*, uint, uint, int, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pszRuleName">pszRuleName</param>, <param name="dwRuleId">dwRuleId</param>, <param name="dwAttributes">dwAttributes</param>, <param name="fCreateIfNotExist">fCreateIfNotExist</param>, <param name="phInitialState">phInitialState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearRule" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hState">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="hState">hState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateNewState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="phState">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, IntPtr, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="hState">hState</param>, <param name="phState">phState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddWordTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hFromState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hToState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="psz">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszSeparators">
+                    <type>ushort*</type>
+                </param>
+                <param name="eWordType">
+                    <type>SPGRAMMARWORDTYPE</type>
+                </param>
+                <param name="Weight">
+                    <type>float</type>
+                </param>
+                <param name="pPropInfo">
+                    <type>SPPROPERTYINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, IntPtr, IntPtr, ushort*, ushort*, SPGRAMMARWORDTYPE, float, SPPROPERTYINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="hFromState">hFromState</param>, <param name="hToState">hToState</param>, <param name="psz">psz</param>, <param name="pszSeparators">pszSeparators</param>, <param name="eWordType">eWordType</param>, <param name="Weight">Weight</param>, <param name="pPropInfo">pPropInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRuleTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hFromState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hToState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hRule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Weight">
+                    <type>float</type>
+                </param>
+                <param name="pPropInfo">
+                    <type>SPPROPERTYINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, IntPtr, IntPtr, IntPtr, float, SPPROPERTYINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="hFromState">hFromState</param>, <param name="hToState">hToState</param>, <param name="hRule">hRule</param>, <param name="Weight">Weight</param>, <param name="pPropInfo">pPropInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hRuleState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pszResourceName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszResourceValue">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, IntPtr, ushort*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="hRuleState">hRuleState</param>, <param name="pszResourceName">pszResourceName</param>, <param name="pszResourceValue">pszResourceValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Commit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGrammarId" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pullGrammarId">
+                    <type>ulong*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, ulong*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pullGrammarId">pullGrammarId</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRecoContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppRecoCtxt">
+                    <type>ISpRecoContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, ISpRecoContext**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="ppRecoCtxt">ppRecoCtxt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadCmdFromFile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="Options">
+                    <type>SPLOADOPTIONS</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, ushort*, SPLOADOPTIONS, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pszFileName">pszFileName</param>, <param name="Options">Options</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadCmdFromObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rcid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pszGrammarName">
+                    <type>ushort*</type>
+                </param>
+                <param name="Options">
+                    <type>SPLOADOPTIONS</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, Guid*, ushort*, SPLOADOPTIONS, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="rcid">rcid</param>, <param name="pszGrammarName">pszGrammarName</param>, <param name="Options">Options</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadCmdFromResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pszResourceName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszResourceType">
+                    <type>ushort*</type>
+                </param>
+                <param name="wLanguage">
+                    <type>ushort</type>
+                </param>
+                <param name="Options">
+                    <type>SPLOADOPTIONS</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, IntPtr, ushort*, ushort*, ushort, SPLOADOPTIONS, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="hModule">hModule</param>, <param name="pszResourceName">pszResourceName</param>, <param name="pszResourceType">pszResourceType</param>, <param name="wLanguage">wLanguage</param>, <param name="Options">Options</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadCmdFromMemory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pGrammar">
+                    <type>SPBINARYGRAMMAR*</type>
+                </param>
+                <param name="Options">
+                    <type>SPLOADOPTIONS</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, SPBINARYGRAMMAR*, SPLOADOPTIONS, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pGrammar">pGrammar</param>, <param name="Options">Options</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadCmdFromProprietaryGrammar" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguidParam">
+                    <type>Guid*</type>
+                </param>
+                <param name="pszStringParam">
+                    <type>ushort*</type>
+                </param>
+                <param name="pvDataPrarm">
+                    <type>void*</type>
+                </param>
+                <param name="cbDataSize">
+                    <type>uint</type>
+                </param>
+                <param name="Options">
+                    <type>SPLOADOPTIONS</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, Guid*, ushort*, void*, uint, SPLOADOPTIONS, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="rguidParam">rguidParam</param>, <param name="pszStringParam">pszStringParam</param>, <param name="pvDataPrarm">pvDataPrarm</param>, <param name="cbDataSize">cbDataSize</param>, <param name="Options">Options</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRuleState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pReserved">
+                    <type>void*</type>
+                </param>
+                <param name="NewState">
+                    <type>SPRULESTATE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, ushort*, void*, SPRULESTATE, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pszName">pszName</param>, <param name="pReserved">pReserved</param>, <param name="NewState">NewState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetRuleIdState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulRuleId">
+                    <type>uint</type>
+                </param>
+                <param name="NewState">
+                    <type>SPRULESTATE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, uint, SPRULESTATE, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="ulRuleId">ulRuleId</param>, <param name="NewState">NewState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadDictation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszTopicName">
+                    <type>ushort*</type>
+                </param>
+                <param name="Options">
+                    <type>SPLOADOPTIONS</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, ushort*, SPLOADOPTIONS, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pszTopicName">pszTopicName</param>, <param name="Options">Options</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnloadDictation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDictationState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewState">
+                    <type>SPRULESTATE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, SPRULESTATE, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="NewState">NewState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetWordSequenceData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchText">
+                    <type>uint</type>
+                </param>
+                <param name="pInfo">
+                    <type>SPTEXTSELECTIONINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, ushort*, uint, SPTEXTSELECTIONINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pText">pText</param>, <param name="cchText">cchText</param>, <param name="pInfo">pInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTextSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pInfo">
+                    <type>SPTEXTSELECTIONINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, SPTEXTSELECTIONINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pInfo">pInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsPronounceable" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszWord">
+                    <type>ushort*</type>
+                </param>
+                <param name="pWordPronounceable">
+                    <type>SPWORDPRONOUNCEABLE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, ushort*, SPWORDPRONOUNCEABLE*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pszWord">pszWord</param>, <param name="pWordPronounceable">pWordPronounceable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGrammarState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="eGrammarState">
+                    <type>SPGRAMMARSTATE</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, SPGRAMMARSTATE, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="eGrammarState">eGrammarState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SaveCmd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="ppszCoMemErrorText">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, IStream*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="pStream">pStream</param>, <param name="ppszCoMemErrorText">ppszCoMemErrorText</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGrammarState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="peGrammarState">
+                    <type>SPGRAMMARSTATE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpRecoGrammar*, SPGRAMMARSTATE*, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ISpRecoGrammar*)Unsafe.AsPointer(ref this)</param>, <param name="peGrammarState">peGrammarState</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

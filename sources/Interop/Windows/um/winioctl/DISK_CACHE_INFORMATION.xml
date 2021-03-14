@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DISK_CACHE_INFORMATION" access="public">
+            <field name="ParametersSavable" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="ReadCacheEnabled" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="WriteCacheEnabled" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="ReadRetentionPriority" access="public">
+                <type native="">DISK_CACHE_RETENTION_PRIORITY</type>
+            </field>
+            <field name="WriteRetentionPriority" access="public">
+                <type native="">DISK_CACHE_RETENTION_PRIORITY</type>
+            </field>
+            <field name="DisablePrefetchTransferLength" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="PrefetchScalar" access="public">
+                <type native="BOOLEAN">byte</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_DISK_CACHE_INFORMATION::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:8796:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="ScalarPrefetch" access="public">
+                <type native="">ref _Anonymous_e__Union._ScalarPrefetch_e__Struct</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ScalarPrefetch, 1));
+        </code>
+                </get>
+            </field>
+            <field name="BlockPrefetch" access="public">
+                <type native="">ref _Anonymous_e__Union._BlockPrefetch_e__Struct</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.BlockPrefetch, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="ScalarPrefetch" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:8797:9)">_ScalarPrefetch_e__Struct</type>
+                </field>
+                <field name="BlockPrefetch" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:8809:9)">_BlockPrefetch_e__Struct</type>
+                </field>
+                <struct name="_ScalarPrefetch_e__Struct" access="public">
+                    <field name="Minimum" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="Maximum" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="MaximumBlocks" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                </struct>
+                <struct name="_BlockPrefetch_e__Struct" access="public">
+                    <field name="Minimum" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                    <field name="Maximum" access="public">
+                        <type native="WORD">ushort</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

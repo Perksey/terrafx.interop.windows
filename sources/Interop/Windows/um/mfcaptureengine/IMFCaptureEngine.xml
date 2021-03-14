@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfcaptureengine.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFCaptureEngine" access="public" native="struct IMFCaptureEngine : IUnknown" uuid="a6bba433-176b-48b2-b375-53aa03473207" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Initialize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pEventCallback">
+                    <type>IMFCaptureEngineOnEventCallback*</type>
+                </param>
+                <param name="pAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="pAudioSource">
+                    <type>IUnknown*</type>
+                </param>
+                <param name="pVideoSource">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, IMFCaptureEngineOnEventCallback*, IMFAttributes*, IUnknown*, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>, <param name="pEventCallback">pEventCallback</param>, <param name="pAttributes">pAttributes</param>, <param name="pAudioSource">pAudioSource</param>, <param name="pVideoSource">pVideoSource</param>);
+        </code>
+                </body>
+            </function>
+            <function name="StartPreview" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="StopPreview" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="StartRecord" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="StopRecord" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bFinalize">
+                    <type>int</type>
+                </param>
+                <param name="bFlushUnprocessedSamples">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, int, int, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>, <param name="bFinalize">bFinalize</param>, <param name="bFlushUnprocessedSamples">bFlushUnprocessedSamples</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TakePhoto" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSink" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="mfCaptureEngineSinkType">
+                    <type>MF_CAPTURE_ENGINE_SINK_TYPE</type>
+                </param>
+                <param name="ppSink">
+                    <type>IMFCaptureSink**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, MF_CAPTURE_ENGINE_SINK_TYPE, IMFCaptureSink**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>, <param name="mfCaptureEngineSinkType">mfCaptureEngineSinkType</param>, <param name="ppSink">ppSink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppSource">
+                    <type>IMFCaptureSource**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFCaptureEngine*, IMFCaptureSource**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFCaptureEngine*)Unsafe.AsPointer(ref this)</param>, <param name="ppSource">ppSource</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfreadwrite.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFSourceReaderCallback" access="public" native="struct IMFSourceReaderCallback : IUnknown" uuid="deec8d99-fa1d-4d82-84c2-2c8969944867" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderCallback*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFSourceReaderCallback*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderCallback*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFSourceReaderCallback*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderCallback*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFSourceReaderCallback*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnReadSample" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hrStatus">
+                    <type>int</type>
+                </param>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwStreamFlags">
+                    <type>uint</type>
+                </param>
+                <param name="llTimestamp">
+                    <type>long</type>
+                </param>
+                <param name="pSample">
+                    <type>IMFSample*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderCallback*, int, uint, uint, long, IMFSample*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFSourceReaderCallback*)Unsafe.AsPointer(ref this)</param>, <param name="hrStatus">hrStatus</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="dwStreamFlags">dwStreamFlags</param>, <param name="llTimestamp">llTimestamp</param>, <param name="pSample">pSample</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnFlush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderCallback*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFSourceReaderCallback*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnEvent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEvent">
+                    <type>IMFMediaEvent*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSourceReaderCallback*, uint, IMFMediaEvent*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFSourceReaderCallback*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>, <param name="pEvent">pEvent</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfCategoryMgr" access="public" native="struct ITfCategoryMgr : IUnknown" uuid="c3acefb5-f69d-4905-938f-fcadcf4be830" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterCategory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rcatid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="rcatid">rcatid</param>, <param name="rguid">rguid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterCategory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rcatid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="rcatid">rcatid</param>, <param name="rguid">rguid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumCategoriesInItem" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppEnum">
+                    <type>IEnumGUID**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, IEnumGUID**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumItemsInCategory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rcatid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppEnum">
+                    <type>IEnumGUID**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, IEnumGUID**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rcatid">rcatid</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindClosestCategory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pcatid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppcatidList">
+                    <type>Guid**</type>
+                </param>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, Guid*, Guid**, uint, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="pcatid">pcatid</param>, <param name="ppcatidList">ppcatidList</param>, <param name="ulCount">ulCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterGUIDDescription" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pchDesc">
+                    <type>ushort*</type>
+                </param>
+                <param name="cch">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, Guid*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="rguid">rguid</param>, <param name="pchDesc">pchDesc</param>, <param name="cch">cch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterGUIDDescription" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="rguid">rguid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGUIDDescription" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pbstrDesc">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="pbstrDesc">pbstrDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterGUIDDWORD" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="dw">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, Guid*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="rguid">rguid</param>, <param name="dw">dw</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterGUIDDWORD" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="rguid">rguid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGUIDDWORD" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pdw">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="pdw">pdw</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterGUID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pguidatom">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, Guid*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="rguid">rguid</param>, <param name="pguidatom">pguidatom</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGUID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidatom">
+                    <type>uint</type>
+                </param>
+                <param name="pguid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="guidatom">guidatom</param>, <param name="pguid">pguid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsEqualTfGuidAtom" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidatom">
+                    <type>uint</type>
+                </param>
+                <param name="rguid">
+                    <type>Guid*</type>
+                </param>
+                <param name="pfEqual">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfCategoryMgr*, uint, Guid*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ITfCategoryMgr*)Unsafe.AsPointer(ref this)</param>, <param name="guidatom">guidatom</param>, <param name="rguid">rguid</param>, <param name="pfEqual">pfEqual</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

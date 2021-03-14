@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/hidpi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="HIDP_LINK_COLLECTION_NODE" access="public" unsafe="true">
+            <field name="LinkUsage" access="public">
+                <type native="USAGE">ushort</type>
+            </field>
+            <field name="LinkUsagePage" access="public">
+                <type native="USAGE">ushort</type>
+            </field>
+            <field name="Parent" access="public">
+                <type native="USHORT">ushort</type>
+            </field>
+            <field name="NumberOfChildren" access="public">
+                <type native="USHORT">ushort</type>
+            </field>
+            <field name="NextSibling" access="public">
+                <type native="USHORT">ushort</type>
+            </field>
+            <field name="FirstChild" access="public">
+                <type native="USHORT">ushort</type>
+            </field>
+            <field name="_bitfield" access="public">
+                <type native="">uint</type>
+            </field>
+            <field name="CollectionType" access="public">
+                <type native="ULONG : 8">uint</type>
+                <get inlining="aggressive">
+                    <code>return <bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>FFu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>FFu</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>FFu</bitwidthHexString>);
+        </code>
+                </set>
+            </field>
+            <field name="IsAlias" access="public">
+                <type native="ULONG : 1">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>8</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>8</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 8);
+        </code>
+                </set>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="ULONG : 23">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>9</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>7FFFFFu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>7FFFFFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>9</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>7FFFFFu</bitwidthHexString>) &lt;&lt; 9);
+        </code>
+                </set>
+            </field>
+            <field name="UserContext" access="public">
+                <type native="PVOID">void*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

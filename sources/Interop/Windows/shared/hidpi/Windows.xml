@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/hidpi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="HidP_GetCaps" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Capabilities">
+                    <type>HIDP_CAPS*</type>
+                </param>
+            </function>
+            <function name="HidP_GetLinkCollectionNodes" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="LinkCollectionNodes">
+                    <type>HIDP_LINK_COLLECTION_NODE*</type>
+                </param>
+                <param name="LinkCollectionNodesLength">
+                    <type>uint*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HidP_GetSpecificButtonCaps" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="Usage">
+                    <type>ushort</type>
+                </param>
+                <param name="ButtonCaps">
+                    <type>HIDP_BUTTON_CAPS*</type>
+                </param>
+                <param name="ButtonCapsLength">
+                    <type>ushort*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HidP_GetButtonCaps" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="ButtonCaps">
+                    <type>HIDP_BUTTON_CAPS*</type>
+                </param>
+                <param name="ButtonCapsLength">
+                    <type>ushort*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HidP_GetSpecificValueCaps" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="Usage">
+                    <type>ushort</type>
+                </param>
+                <param name="ValueCaps">
+                    <type>HIDP_VALUE_CAPS*</type>
+                </param>
+                <param name="ValueCapsLength">
+                    <type>ushort*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HidP_GetValueCaps" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="ValueCaps">
+                    <type>HIDP_VALUE_CAPS*</type>
+                </param>
+                <param name="ValueCapsLength">
+                    <type>ushort*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HidP_GetExtendedAttributes" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="DataIndex">
+                    <type>ushort</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Attributes">
+                    <type>HIDP_EXTENDED_ATTRIBUTES*</type>
+                </param>
+                <param name="LengthAttributes">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="HidP_InitializeReportForID" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="ReportID">
+                    <type>byte</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_SetData" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="DataList">
+                    <type>HIDP_DATA*</type>
+                </param>
+                <param name="DataLength">
+                    <type>uint*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_GetData" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="DataList">
+                    <type>HIDP_DATA*</type>
+                </param>
+                <param name="DataLength">
+                    <type>uint*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_MaxDataListLength" access="public" lib="hid" static="true" unsafe="true">
+                <type native="ULONG">uint</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HidP_SetUsages" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="UsageList">
+                    <type>ushort*</type>
+                </param>
+                <param name="UsageLength">
+                    <type>uint*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_UnsetUsages" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="UsageList">
+                    <type>ushort*</type>
+                </param>
+                <param name="UsageLength">
+                    <type>uint*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_GetUsages" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="UsageList">
+                    <type>ushort*</type>
+                </param>
+                <param name="UsageLength">
+                    <type>uint*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_GetUsagesEx" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="ButtonList">
+                    <type>USAGE_AND_PAGE*</type>
+                </param>
+                <param name="UsageLength">
+                    <type>uint*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_MaxUsageListLength" access="public" lib="hid" static="true" unsafe="true">
+                <type native="ULONG">uint</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="HidP_SetUsageValue" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="Usage">
+                    <type>ushort</type>
+                </param>
+                <param name="UsageValue">
+                    <type>uint</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_SetScaledUsageValue" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="Usage">
+                    <type>ushort</type>
+                </param>
+                <param name="UsageValue">
+                    <type>int</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_SetUsageValueArray" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="Usage">
+                    <type>ushort</type>
+                </param>
+                <param name="UsageValue">
+                    <type>sbyte*</type>
+                </param>
+                <param name="UsageValueByteLength">
+                    <type>ushort</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_GetUsageValue" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="Usage">
+                    <type>ushort</type>
+                </param>
+                <param name="UsageValue">
+                    <type>uint*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_GetScaledUsageValue" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="Usage">
+                    <type>ushort</type>
+                </param>
+                <param name="UsageValue">
+                    <type>int*</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_GetUsageValueArray" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ReportType">
+                    <type>HIDP_REPORT_TYPE</type>
+                </param>
+                <param name="UsagePage">
+                    <type>ushort</type>
+                </param>
+                <param name="LinkCollection">
+                    <type>ushort</type>
+                </param>
+                <param name="Usage">
+                    <type>ushort</type>
+                </param>
+                <param name="UsageValue">
+                    <type>sbyte*</type>
+                </param>
+                <param name="UsageValueByteLength">
+                    <type>ushort</type>
+                </param>
+                <param name="PreparsedData">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Report">
+                    <type>sbyte*</type>
+                </param>
+                <param name="ReportLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_UsageListDifference" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="PreviousUsageList">
+                    <type>ushort*</type>
+                </param>
+                <param name="CurrentUsageList">
+                    <type>ushort*</type>
+                </param>
+                <param name="BreakUsageList">
+                    <type>ushort*</type>
+                </param>
+                <param name="MakeUsageList">
+                    <type>ushort*</type>
+                </param>
+                <param name="UsageListLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_UsageAndPageListDifference" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="PreviousUsageList">
+                    <type>USAGE_AND_PAGE*</type>
+                </param>
+                <param name="CurrentUsageList">
+                    <type>USAGE_AND_PAGE*</type>
+                </param>
+                <param name="BreakUsageList">
+                    <type>USAGE_AND_PAGE*</type>
+                </param>
+                <param name="MakeUsageList">
+                    <type>USAGE_AND_PAGE*</type>
+                </param>
+                <param name="UsageListLength">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="HidP_TranslateUsageAndPagesToI8042ScanCodes" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ChangedUsageList">
+                    <type>USAGE_AND_PAGE*</type>
+                </param>
+                <param name="UsageListLength">
+                    <type>uint</type>
+                </param>
+                <param name="KeyAction">
+                    <type>HIDP_KEYBOARD_DIRECTION</type>
+                </param>
+                <param name="ModifierState">
+                    <type>HIDP_KEYBOARD_MODIFIER_STATE*</type>
+                </param>
+                <param name="InsertCodesProcedure">
+                    <type>delegate* unmanaged&lt;void*, sbyte*, uint, byte&gt;</type>
+                </param>
+                <param name="InsertCodesContext">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="HidP_TranslateUsagesToI8042ScanCodes" access="public" lib="hid" static="true">
+                <type native="NTSTATUS">int</type>
+                <param name="ChangedUsageList">
+                    <type>ushort*</type>
+                </param>
+                <param name="UsageListLength">
+                    <type>uint</type>
+                </param>
+                <param name="KeyAction">
+                    <type>HIDP_KEYBOARD_DIRECTION</type>
+                </param>
+                <param name="ModifierState">
+                    <type>HIDP_KEYBOARD_MODIFIER_STATE*</type>
+                </param>
+                <param name="InsertCodesProcedure">
+                    <type>delegate* unmanaged&lt;void*, sbyte*, uint, byte&gt;</type>
+                </param>
+                <param name="InsertCodesContext">
+                    <type>void*</type>
+                </param>
+            </function>
+            <constant name="HIDP_LINK_COLLECTION_ROOT" access="public">
+                <type primitive="True">ushort</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((ushort)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="HIDP_LINK_COLLECTION_UNSPECIFIED" access="public">
+                <type primitive="True">ushort</type>
+                <value>
+                    <code>
+                        <value></value>((ushort)0)
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_SUCCESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0x0) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (0))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_NULL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0x8) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (1))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_INVALID_PREPARSED_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (1))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_INVALID_REPORT_TYPE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (2))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_INVALID_REPORT_LENGTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (3))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_USAGE_NOT_FOUND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (4))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_VALUE_OUT_OF_RANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (5))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_BAD_LOG_PHY_VALUES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (6))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_BUFFER_TOO_SMALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (7))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_INTERNAL_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (8))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_I8042_TRANS_UNKNOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (9))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_INCOMPATIBLE_REPORT_ID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (0xA))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_NOT_VALUE_ARRAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (0xB))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_IS_VALUE_ARRAY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (0xC))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_DATA_INDEX_NOT_FOUND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (0xD))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_DATA_INDEX_OUT_OF_RANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (0xE))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_BUTTON_NOT_PRESSED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (0xF))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_REPORT_DOES_NOT_EXIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (0x10))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_NOT_IMPLEMENTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (0x20))))
+            </code>
+                </value>
+            </constant>
+            <constant name="HIDP_STATUS_I8242_TRANS_UNKNOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((int)(((0xC) &lt;&lt; 28) | (0x11 &lt;&lt; 16) | (9))))
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

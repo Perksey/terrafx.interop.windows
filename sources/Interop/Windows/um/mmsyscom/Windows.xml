@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mmsyscom.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="MAXPNAMELEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>32
+            </code>
+                </value>
+            </constant>
+            <constant name="MAXERRORLENGTH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>256
+            </code>
+                </value>
+            </constant>
+            <constant name="MAX_JOYSTICKOEMVXDNAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>260
+            </code>
+                </value>
+            </constant>
+            <constant name="TIME_MS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="TIME_SAMPLES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="TIME_BYTES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="TIME_SMPTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="TIME_MIDI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="TIME_TICKS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0020
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_JOY1MOVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3A0
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_JOY2MOVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3A1
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_JOY1ZMOVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3A2
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_JOY2ZMOVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3A3
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_JOY1BUTTONDOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3B5
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_JOY2BUTTONDOWN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3B6
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_JOY1BUTTONUP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3B7
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_JOY2BUTTONUP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3B8
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MCINOTIFY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3B9
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_WOM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BB
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_WOM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BC
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_WOM_DONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BD
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_WIM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BE
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_WIM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3BF
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_WIM_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C0
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MIM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C1
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MIM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C2
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MIM_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C3
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MIM_LONGDATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C4
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MIM_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C5
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MIM_LONGERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C6
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MOM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C7
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MOM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C8
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MOM_DONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3C9
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_DRVM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D0
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_DRVM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D1
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_DRVM_DATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D2
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_DRVM_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D3
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_STREAM_OPEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D4
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_STREAM_CLOSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D5
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_STREAM_DONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D6
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_STREAM_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D7
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MOM_POSITIONCB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3CA
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MCISIGNAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3CB
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MIM_MOREDATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3CC
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MIXM_LINE_CHANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D0
+            </code>
+                </value>
+            </constant>
+            <constant name="MM_MIXM_CONTROL_CHANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x3D1
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_BASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="WAVERR_BASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>32
+            </code>
+                </value>
+            </constant>
+            <constant name="MIDIERR_BASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>64
+            </code>
+                </value>
+            </constant>
+            <constant name="TIMERR_BASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>96
+            </code>
+                </value>
+            </constant>
+            <constant name="JOYERR_BASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>160
+            </code>
+                </value>
+            </constant>
+            <constant name="MCIERR_BASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>256
+            </code>
+                </value>
+            </constant>
+            <constant name="MIXERR_BASE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1024
+            </code>
+                </value>
+            </constant>
+            <constant name="MCI_STRING_OFFSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>512
+            </code>
+                </value>
+            </constant>
+            <constant name="MCI_VD_OFFSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1024
+            </code>
+                </value>
+            </constant>
+            <constant name="MCI_CD_OFFSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1088
+            </code>
+                </value>
+            </constant>
+            <constant name="MCI_WAVE_OFFSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1152
+            </code>
+                </value>
+            </constant>
+            <constant name="MCI_SEQ_OFFSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1216
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_NOERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_ERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 1)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_BADDEVICEID" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 2)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_NOTENABLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 3)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_ALLOCATED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 4)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_INVALHANDLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 5)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_NODRIVER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 6)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_NOMEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 7)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_NOTSUPPORTED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 8)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_BADERRNUM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 9)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_INVALFLAG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 10)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_INVALPARAM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 11)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_HANDLEBUSY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 12)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_INVALIDALIAS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 13)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_BADDB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 14)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_KEYNOTFOUND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 15)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_READERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 16)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_WRITEERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 17)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_DELETEERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 18)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_VALNOTFOUND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 19)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_NODRIVERCB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 20)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_MOREDATA" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 21)
+            </code>
+                </value>
+            </constant>
+            <constant name="MMSYSERR_LASTERROR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0 + 21)
+            </code>
+                </value>
+            </constant>
+            <constant name="CALLBACK_TYPEMASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00070000
+            </code>
+                </value>
+            </constant>
+            <constant name="CALLBACK_NULL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000000
+            </code>
+                </value>
+            </constant>
+            <constant name="CALLBACK_WINDOW" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00010000
+            </code>
+                </value>
+            </constant>
+            <constant name="CALLBACK_TASK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00020000
+            </code>
+                </value>
+            </constant>
+            <constant name="CALLBACK_FUNCTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00030000
+            </code>
+                </value>
+            </constant>
+            <constant name="CALLBACK_THREAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00020000)
+            </code>
+                </value>
+            </constant>
+            <constant name="CALLBACK_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00050000
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

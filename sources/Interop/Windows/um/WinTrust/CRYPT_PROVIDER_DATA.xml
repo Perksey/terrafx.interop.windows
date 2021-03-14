@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinTrust.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_PROVIDER_DATA" access="public" unsafe="true">
+            <field name="cbStruct" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pWintrustData" access="public">
+                <type native="WINTRUST_DATA *">WINTRUST_DATA*</type>
+            </field>
+            <field name="fOpenedFile" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="hWndParent" access="public">
+                <type native="HWND">IntPtr</type>
+            </field>
+            <field name="pgActionID" access="public">
+                <type native="GUID *">Guid*</type>
+            </field>
+            <field name="hProv" access="public">
+                <type native="HCRYPTPROV">nuint</type>
+            </field>
+            <field name="dwError" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwRegSecuritySettings" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwRegPolicySettings" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="psPfns" access="public">
+                <type native="struct _CRYPT_PROVIDER_FUNCTIONS *">CRYPT_PROVIDER_FUNCTIONS*</type>
+            </field>
+            <field name="cdwTrustStepErrors" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="padwTrustStepErrors" access="public">
+                <type native="DWORD *">uint*</type>
+            </field>
+            <field name="chStores" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pahStores" access="public">
+                <type native="HCERTSTORE *">void**</type>
+            </field>
+            <field name="dwEncoding" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hMsg" access="public">
+                <type native="HCRYPTMSG">void*</type>
+            </field>
+            <field name="csSigners" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pasSigners" access="public">
+                <type native="struct _CRYPT_PROVIDER_SGNR *">CRYPT_PROVIDER_SGNR*</type>
+            </field>
+            <field name="csProvPrivData" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pasProvPrivData" access="public">
+                <type native="struct _CRYPT_PROVIDER_PRIVDATA *">CRYPT_PROVIDER_PRIVDATA*</type>
+            </field>
+            <field name="dwSubjectChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_CRYPT_PROVIDER_DATA::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/WinTrust.h:688:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="pPDSip" access="public">
+                <type native="">ref PROVDATA_SIP*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pPDSip;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pszUsageOID" access="public">
+                <type native="char *">sbyte*</type>
+            </field>
+            <field name="fRecallWithState" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="sftSystemTime" access="public">
+                <type native="">FILETIME</type>
+            </field>
+            <field name="pszCTLSignerUsageOID" access="public">
+                <type native="char *">sbyte*</type>
+            </field>
+            <field name="dwProvFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwFinalError" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pRequestUsage" access="public">
+                <type native="PCERT_USAGE_MATCH">CERT_USAGE_MATCH*</type>
+            </field>
+            <field name="dwTrustPubSettings" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwUIStateFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pSigState" access="public">
+                <type native="struct _CRYPT_PROVIDER_SIGSTATE *">CRYPT_PROVIDER_SIGSTATE*</type>
+            </field>
+            <field name="pSigSettings" access="public">
+                <type native="struct WINTRUST_SIGNATURE_SETTINGS_ *">WINTRUST_SIGNATURE_SETTINGS*</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pPDSip" access="public" offset="0">
+                    <type native="struct _PROVDATA_SIP *">PROVDATA_SIP*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/libloaderapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="DisableThreadLibraryCalls" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hLibModule">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="FindResourceExW" access="public" lib="kernel32" static="true">
+                <type native="HRSRC">IntPtr</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpType">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+                <param name="wLanguage">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="FindStringOrdinal" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type>int</type>
+                <param name="dwFindStringOrdinalFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpStringSource">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchSource">
+                    <type>int</type>
+                </param>
+                <param name="lpStringValue">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchValue">
+                    <type>int</type>
+                </param>
+                <param name="bIgnoreCase">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="FreeLibrary" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hLibModule">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="FreeLibraryAndExitThread" access="public" lib="kernel32" static="true" unsafe="true">
+                <type>void</type>
+                <param name="hLibModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwExitCode">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="FreeResource" access="public" lib="kernel32" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hResData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="GetModuleFileNameA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpFilename">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetModuleFileNameW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpFilename">
+                    <type>ushort*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetModuleHandleA" access="public" lib="kernel32" static="true">
+                <type native="HMODULE">IntPtr</type>
+                <param name="lpModuleName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="GetModuleHandleW" access="public" lib="kernel32" static="true">
+                <type native="HMODULE">IntPtr</type>
+                <param name="lpModuleName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetModuleHandleExA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpModuleName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="phModule">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="GetModuleHandleExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpModuleName">
+                    <type>ushort*</type>
+                </param>
+                <param name="phModule">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="GetProcAddress" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="FARPROC">delegate* unmanaged&lt;int&gt;</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpProcName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="LoadLibraryExA" access="public" lib="kernel32" static="true">
+                <type native="HMODULE">IntPtr</type>
+                <param name="lpLibFileName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="LoadLibraryExW" access="public" lib="kernel32" static="true">
+                <type native="HMODULE">IntPtr</type>
+                <param name="lpLibFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="hFile">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="LoadResource" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="HGLOBAL">IntPtr</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hResInfo">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="LoadStringA" access="public" lib="kernel32" static="true">
+                <type>int</type>
+                <param name="hInstance">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uID">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="cchBufferMax">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="LoadStringW" access="public" lib="kernel32" static="true">
+                <type>int</type>
+                <param name="hInstance">
+                    <type>IntPtr</type>
+                </param>
+                <param name="uID">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchBufferMax">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="LockResource" access="public" lib="kernel32" static="true">
+                <type native="LPVOID">void*</type>
+                <param name="hResData">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="SizeofResource" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="DWORD">uint</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hResInfo">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="AddDllDirectory" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DLL_DIRECTORY_COOKIE">void*</type>
+                <param name="NewDirectory">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="RemoveDllDirectory" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="Cookie">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="SetDefaultDllDirectories" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="DirectoryFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="EnumResourceLanguagesExA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpType">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpEnumFunc">
+                    <type>delegate* unmanaged&lt;IntPtr, sbyte*, sbyte*, ushort, nint, int&gt;</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="LangId">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="EnumResourceLanguagesExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpType">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpEnumFunc">
+                    <type>delegate* unmanaged&lt;IntPtr, ushort*, ushort*, ushort, nint, int&gt;</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="LangId">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="EnumResourceNamesExA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpType">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpEnumFunc">
+                    <type>delegate* unmanaged&lt;IntPtr, sbyte*, sbyte*, nint, int&gt;</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="LangId">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="EnumResourceNamesExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpType">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpEnumFunc">
+                    <type>delegate* unmanaged&lt;IntPtr, ushort*, ushort*, nint, int&gt;</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="LangId">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="EnumResourceTypesExA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpEnumFunc">
+                    <type>delegate* unmanaged&lt;IntPtr, sbyte*, nint, int&gt;</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="LangId">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="EnumResourceTypesExW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpEnumFunc">
+                    <type>delegate* unmanaged&lt;IntPtr, ushort*, nint, int&gt;</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="LangId">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="FindResourceW" access="public" lib="kernel32" static="true">
+                <type native="HRSRC">IntPtr</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpType">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="LoadLibraryA" access="public" lib="kernel32" static="true">
+                <type native="HMODULE">IntPtr</type>
+                <param name="lpLibFileName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="LoadLibraryW" access="public" lib="kernel32" static="true">
+                <type native="HMODULE">IntPtr</type>
+                <param name="lpLibFileName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="EnumResourceNamesW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="hModule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpType">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpEnumFunc">
+                    <type>delegate* unmanaged&lt;IntPtr, ushort*, ushort*, nint, int&gt;</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+            </function>
+            <constant name="FIND_RESOURCE_DIRECTORY_TYPES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0100)
+            </code>
+                </value>
+            </constant>
+            <constant name="FIND_RESOURCE_DIRECTORY_NAMES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0200)
+            </code>
+                </value>
+            </constant>
+            <constant name="FIND_RESOURCE_DIRECTORY_LANGUAGES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0400)
+            </code>
+                </value>
+            </constant>
+            <constant name="RESOURCE_ENUM_LN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0001)
+            </code>
+                </value>
+            </constant>
+            <constant name="RESOURCE_ENUM_MUI" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0002)
+            </code>
+                </value>
+            </constant>
+            <constant name="RESOURCE_ENUM_MUI_SYSTEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0004)
+            </code>
+                </value>
+            </constant>
+            <constant name="RESOURCE_ENUM_VALIDATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0008)
+            </code>
+                </value>
+            </constant>
+            <constant name="RESOURCE_ENUM_MODULE_EXACT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0010)
+            </code>
+                </value>
+            </constant>
+            <constant name="SUPPORT_LANG_NUMBER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>32
+            </code>
+                </value>
+            </constant>
+            <constant name="FindResourceEx" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, ushort*, ushort, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>FindResourceExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetModuleFileName" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetModuleFileNameW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetModuleHandle" access="public">
+                <type primitive="False">delegate*&lt;ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetModuleHandleW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GET_MODULE_HANDLE_EX_FLAG_PIN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001)
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000002)
+            </code>
+                </value>
+            </constant>
+            <constant name="GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000004)
+            </code>
+                </value>
+            </constant>
+            <constant name="GetModuleHandleEx" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, IntPtr*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetModuleHandleExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="CURRENT_IMPORT_REDIRECTION_VERSION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="LoadLibraryEx" access="public">
+                <type primitive="False">delegate*&lt;ushort*, IntPtr, uint, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>LoadLibraryExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="DONT_RESOLVE_DLL_REFERENCES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_AS_DATAFILE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_WITH_ALTERED_SEARCH_PATH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_IGNORE_CODE_AUTHZ_LEVEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_AS_IMAGE_RESOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000020
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_AS_DATAFILE_EXCLUSIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000040
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_REQUIRE_SIGNED_TARGET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000080
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_SEARCH_DLL_LOAD_DIR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000100
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_SEARCH_APPLICATION_DIR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000200
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_SEARCH_USER_DIRS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000400
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_SEARCH_SYSTEM32" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000800
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_SEARCH_DEFAULT_DIRS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001000
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_SAFE_CURRENT_DIRS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002000
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_SEARCH_SYSTEM32_NO_FORWARDER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00004000
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_LIBRARY_OS_INTEGRITY_CONTINUITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00008000
+            </code>
+                </value>
+            </constant>
+            <constant name="LoadString" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, uint, ushort*, int, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>LoadStringW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="EnumResourceLanguagesEx" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, ushort*, delegate* unmanaged&lt;IntPtr, ushort*, ushort*, ushort, nint, int&gt;, nint, uint, ushort, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>EnumResourceLanguagesExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="EnumResourceNamesEx" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, delegate* unmanaged&lt;IntPtr, ushort*, ushort*, nint, int&gt;, nint, uint, ushort, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>EnumResourceNamesExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="EnumResourceTypesEx" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, delegate* unmanaged&lt;IntPtr, ushort*, nint, int&gt;, nint, uint, ushort, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>EnumResourceTypesExW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="FindResource" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>FindResourceW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="LoadLibrary" access="public">
+                <type primitive="False">delegate*&lt;ushort*, IntPtr&gt;</type>
+                <value>
+                    <deref>
+                        <code>LoadLibraryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="EnumResourceNames" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, delegate* unmanaged&lt;IntPtr, ushort*, ushort*, nint, int&gt;, nint, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>EnumResourceNamesW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

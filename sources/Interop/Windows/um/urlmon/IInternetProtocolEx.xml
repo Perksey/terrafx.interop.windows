@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IInternetProtocolEx" access="public" native="struct IInternetProtocolEx : IInternetProtocol" uuid="c7a98e66-1010-492c-a1c8-c809e1f75905" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Start" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="szUrl">
+                    <type>ushort*</type>
+                </param>
+                <param name="pOIProtSink">
+                    <type>IInternetProtocolSink*</type>
+                </param>
+                <param name="pOIBindInfo">
+                    <type>IInternetBindInfo*</type>
+                </param>
+                <param name="grfPI">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, ushort*, IInternetProtocolSink*, IInternetBindInfo*, uint, nuint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>, <param name="szUrl">szUrl</param>, <param name="pOIProtSink">pOIProtSink</param>, <param name="pOIBindInfo">pOIBindInfo</param>, <param name="grfPI">grfPI</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Continue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pProtocolData">
+                    <type>PROTOCOLDATA*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, PROTOCOLDATA*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>, <param name="pProtocolData">pProtocolData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Abort" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hrReason">
+                    <type>int</type>
+                </param>
+                <param name="dwOptions">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, int, uint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>, <param name="hrReason">hrReason</param>, <param name="dwOptions">dwOptions</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Terminate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOptions">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwOptions">dwOptions</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Suspend" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Resume" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Read" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pv">
+                    <type>void*</type>
+                </param>
+                <param name="cb">
+                    <type>uint</type>
+                </param>
+                <param name="pcbRead">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, void*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>, <param name="pv">pv</param>, <param name="cb">cb</param>, <param name="pcbRead">pcbRead</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Seek" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dlibMove">
+                    <type>LARGE_INTEGER</type>
+                </param>
+                <param name="dwOrigin">
+                    <type>uint</type>
+                </param>
+                <param name="plibNewPosition">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, LARGE_INTEGER, uint, ULARGE_INTEGER*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>, <param name="dlibMove">dlibMove</param>, <param name="dwOrigin">dwOrigin</param>, <param name="plibNewPosition">plibNewPosition</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LockRequest" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOptions">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>, <param name="dwOptions">dwOptions</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnlockRequest" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="StartEx" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pUri">
+                    <type>IUri*</type>
+                </param>
+                <param name="pOIProtSink">
+                    <type>IInternetProtocolSink*</type>
+                </param>
+                <param name="pOIBindInfo">
+                    <type>IInternetBindInfo*</type>
+                </param>
+                <param name="grfPI">
+                    <type>uint</type>
+                </param>
+                <param name="dwReserved">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IInternetProtocolEx*, IUri*, IInternetProtocolSink*, IInternetBindInfo*, uint, nuint, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IInternetProtocolEx*)Unsafe.AsPointer(ref this)</param>, <param name="pUri">pUri</param>, <param name="pOIProtSink">pOIProtSink</param>, <param name="pOIBindInfo">pOIBindInfo</param>, <param name="grfPI">grfPI</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/processenv.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="SetEnvironmentStringsW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="NewEnvironment">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetStdHandle" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="nStdHandle">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetStdHandle" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="nStdHandle">
+                    <type>uint</type>
+                </param>
+                <param name="hHandle">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="SetStdHandleEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="nStdHandle">
+                    <type>uint</type>
+                </param>
+                <param name="hHandle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="phPrevValue">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="GetCommandLineA" access="public" lib="kernel32" static="true">
+                <type native="LPSTR">sbyte*</type>
+            </function>
+            <function name="GetCommandLineW" access="public" lib="kernel32" static="true">
+                <type native="LPWSTR">ushort*</type>
+            </function>
+            <function name="GetEnvironmentStringsA" access="public" lib="kernel32" entrypoint="GetEnvironmentStrings" static="true">
+                <type native="LPCH">sbyte*</type>
+            </function>
+            <function name="GetEnvironmentStringsW" access="public" lib="kernel32" static="true">
+                <type native="LPWCH">ushort*</type>
+            </function>
+            <function name="FreeEnvironmentStringsA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="penv">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="FreeEnvironmentStringsW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="penv">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetEnvironmentVariableA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetEnvironmentVariableW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetEnvironmentVariableA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpValue">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="SetEnvironmentVariableW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpValue">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="ExpandEnvironmentStringsA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpSrc">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpDst">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="ExpandEnvironmentStringsW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpSrc">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpDst">
+                    <type>ushort*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetCurrentDirectoryA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpPathName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="SetCurrentDirectoryW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpPathName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="GetCurrentDirectoryA" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="nBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="GetCurrentDirectoryW" access="public" lib="kernel32" static="true">
+                <type native="DWORD">uint</type>
+                <param name="nBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="SearchPathW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpPath">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpExtension">
+                    <type>ushort*</type>
+                </param>
+                <param name="nBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>ushort*</type>
+                </param>
+                <param name="lpFilePart">
+                    <type>ushort**</type>
+                </param>
+            </function>
+            <function name="SearchPathA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpPath">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpFileName">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpExtension">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nBufferLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>sbyte*</type>
+                </param>
+                <param name="lpFilePart">
+                    <type>sbyte**</type>
+                </param>
+            </function>
+            <function name="NeedCurrentDirectoryForExePathA" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="ExeName">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="NeedCurrentDirectoryForExePathW" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="ExeName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <constant name="SetEnvironmentStrings" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetEnvironmentStringsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetCommandLine" access="public">
+                <type primitive="False">delegate*&lt;ushort*&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetCommandLineW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetEnvironmentStrings" access="public">
+                <type primitive="False">delegate*&lt;ushort*&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetEnvironmentStringsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="FreeEnvironmentStrings" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>FreeEnvironmentStringsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetEnvironmentVariable" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetEnvironmentVariableW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SetEnvironmentVariable" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetEnvironmentVariableW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ExpandEnvironmentStrings" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>ExpandEnvironmentStringsW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SetCurrentDirectory" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetCurrentDirectoryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetCurrentDirectory" access="public">
+                <type primitive="False">delegate*&lt;uint, ushort*, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetCurrentDirectoryW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SearchPath" access="public">
+                <type primitive="False">delegate*&lt;ushort*, ushort*, ushort*, uint, ushort*, ushort**, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>SearchPathW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="NeedCurrentDirectoryForExePath" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>NeedCurrentDirectoryForExePathW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

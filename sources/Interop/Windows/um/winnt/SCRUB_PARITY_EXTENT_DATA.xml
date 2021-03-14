@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SCRUB_PARITY_EXTENT_DATA" access="public">
+            <field name="Size" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="NumberOfParityExtents" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="MaximumNumberOfParityExtents" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="ParityExtents" access="public">
+                <type native="SCRUB_PARITY_EXTENT [1]" count="1" fixed="_ParityExtents_e__FixedBuffer">SCRUB_PARITY_EXTENT</type>
+            </field>
+            <struct name="_ParityExtents_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">SCRUB_PARITY_EXTENT</type>
+                </field>
+                <indexer access="public">
+                    <type>ref SCRUB_PARITY_EXTENT</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;SCRUB_PARITY_EXTENT&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

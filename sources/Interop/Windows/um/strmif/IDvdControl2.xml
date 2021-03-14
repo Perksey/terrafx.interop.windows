@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDvdControl2" access="public" native="struct IDvdControl2 : IUnknown" uuid="33bc7430-eec0-11d2-8201-00a0c9d74842" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayTitle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulTitle">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulTitle">ulTitle</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayChapterInTitle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulTitle">
+                    <type>uint</type>
+                </param>
+                <param name="ulChapter">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, uint, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulTitle">ulTitle</param>, <param name="ulChapter">ulChapter</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayAtTimeInTitle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulTitle">
+                    <type>uint</type>
+                </param>
+                <param name="pStartTime">
+                    <type>DVD_HMSF_TIMECODE*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, DVD_HMSF_TIMECODE*, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulTitle">ulTitle</param>, <param name="pStartTime">pStartTime</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Stop" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReturnFromSubmenu" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayAtTime" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pTime">
+                    <type>DVD_HMSF_TIMECODE*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, DVD_HMSF_TIMECODE*, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="pTime">pTime</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayChapter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulChapter">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulChapter">ulChapter</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayPrevChapter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReplayChapter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayNextChapter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayForwards" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dSpeed">
+                    <type>double</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, double, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="dSpeed">dSpeed</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayBackwards" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dSpeed">
+                    <type>double</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, double, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="dSpeed">dSpeed</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShowMenu" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="MenuID">
+                    <type>DVD_MENU_ID</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, DVD_MENU_ID, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="MenuID">MenuID</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Resume" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectRelativeButton" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="buttonDir">
+                    <type>DVD_RELATIVE_BUTTON</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, DVD_RELATIVE_BUTTON, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="buttonDir">buttonDir</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ActivateButton" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectButton" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulButton">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulButton">ulButton</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectAndActivateButton" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulButton">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulButton">ulButton</param>);
+        </code>
+                </body>
+            </function>
+            <function name="StillOff" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Pause" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bState">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, int, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="bState">bState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectAudioStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulAudio">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulAudio">ulAudio</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectSubpictureStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulSubPicture">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulSubPicture">ulSubPicture</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSubpictureState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bState">
+                    <type>int</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, int, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="bState">bState</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectAngle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulAngle">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulAngle">ulAngle</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectParentalLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulParentalLevel">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulParentalLevel">ulParentalLevel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectParentalCountry" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bCountry">
+                    <type>byte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, byte*, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="bCountry">bCountry</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectKaraokeAudioPresentationMode" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulMode">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulMode">ulMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectVideoModePreference" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulPreferredDisplayMode">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulPreferredDisplayMode">ulPreferredDisplayMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDVDDirectory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszwPath">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="pszwPath">pszwPath</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ActivateAtPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="point">
+                    <type>POINT</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, POINT, int&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="point">point</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectAtPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="point">
+                    <type>POINT</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, POINT, int&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="point">point</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayChaptersAutoStop" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulTitle">
+                    <type>uint</type>
+                </param>
+                <param name="ulChapter">
+                    <type>uint</type>
+                </param>
+                <param name="ulChaptersToPlay">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, uint, uint, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">34</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulTitle">ulTitle</param>, <param name="ulChapter">ulChapter</param>, <param name="ulChaptersToPlay">ulChaptersToPlay</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AcceptParentalLevelChange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bAccept">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, int, int&gt;)(lpVtbl[<vtbl explicit="False">35</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="bAccept">bAccept</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOption" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="flag">
+                    <type>DVD_OPTION_FLAG</type>
+                </param>
+                <param name="fState">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, DVD_OPTION_FLAG, int, int&gt;)(lpVtbl[<vtbl explicit="False">36</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="flag">flag</param>, <param name="fState">fState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pState">
+                    <type>IDvdState*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, IDvdState*, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">37</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="pState">pState</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="PlayPeriodInTitleAutoStop" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulTitle">
+                    <type>uint</type>
+                </param>
+                <param name="pStartTime">
+                    <type>DVD_HMSF_TIMECODE*</type>
+                </param>
+                <param name="pEndTime">
+                    <type>DVD_HMSF_TIMECODE*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, DVD_HMSF_TIMECODE*, DVD_HMSF_TIMECODE*, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">38</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulTitle">ulTitle</param>, <param name="pStartTime">pStartTime</param>, <param name="pEndTime">pEndTime</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGPRM" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ulIndex">
+                    <type>uint</type>
+                </param>
+                <param name="wValue">
+                    <type>ushort</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="ppCmd">
+                    <type>IDvdCmd**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, ushort, uint, IDvdCmd**, int&gt;)(lpVtbl[<vtbl explicit="False">39</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="ulIndex">ulIndex</param>, <param name="wValue">wValue</param>, <param name="dwFlags">dwFlags</param>, <param name="ppCmd">ppCmd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectDefaultMenuLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Language">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">40</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="Language">Language</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectDefaultAudioLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Language">
+                    <type>uint</type>
+                </param>
+                <param name="audioExtension">
+                    <type>DVD_AUDIO_LANG_EXT</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, DVD_AUDIO_LANG_EXT, int&gt;)(lpVtbl[<vtbl explicit="False">41</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="Language">Language</param>, <param name="audioExtension">audioExtension</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SelectDefaultSubpictureLanguage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Language">
+                    <type>uint</type>
+                </param>
+                <param name="subpictureExtension">
+                    <type>DVD_SUBPICTURE_LANG_EXT</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDvdControl2*, uint, DVD_SUBPICTURE_LANG_EXT, int&gt;)(lpVtbl[<vtbl explicit="False">42</vtbl>]))(<param special="thisPtr">(IDvdControl2*)Unsafe.AsPointer(ref this)</param>, <param name="Language">Language</param>, <param name="subpictureExtension">subpictureExtension</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

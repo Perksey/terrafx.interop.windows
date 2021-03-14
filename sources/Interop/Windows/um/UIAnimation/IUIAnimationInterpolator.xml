@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/UIAnimation.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IUIAnimationInterpolator" access="public" native="struct IUIAnimationInterpolator : IUnknown" uuid="7815cbba-ddf7-478c-a46c-7b6c738b7978" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetInitialValueAndVelocity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="initialValue">
+                    <type>double</type>
+                </param>
+                <param name="initialVelocity">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, double, double, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>, <param name="initialValue">initialValue</param>, <param name="initialVelocity">initialVelocity</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDuration" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, double, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDuration" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, double*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFinalValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="value">
+                    <type>double*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, double*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InterpolateValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="offset">
+                    <type>double</type>
+                </param>
+                <param name="value">
+                    <type>double*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, double, double*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>, <param name="offset">offset</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InterpolateVelocity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="offset">
+                    <type>double</type>
+                </param>
+                <param name="velocity">
+                    <type>double*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, double, double*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>, <param name="offset">offset</param>, <param name="velocity">velocity</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDependencies" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="initialValueDependencies">
+                    <type>UI_ANIMATION_DEPENDENCIES*</type>
+                </param>
+                <param name="initialVelocityDependencies">
+                    <type>UI_ANIMATION_DEPENDENCIES*</type>
+                </param>
+                <param name="durationDependencies">
+                    <type>UI_ANIMATION_DEPENDENCIES*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IUIAnimationInterpolator*, UI_ANIMATION_DEPENDENCIES*, UI_ANIMATION_DEPENDENCIES*, UI_ANIMATION_DEPENDENCIES*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IUIAnimationInterpolator*)Unsafe.AsPointer(ref this)</param>, <param name="initialValueDependencies">initialValueDependencies</param>, <param name="initialVelocityDependencies">initialVelocityDependencies</param>, <param name="durationDependencies">durationDependencies</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

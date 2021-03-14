@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WS_OPERATION_DESCRIPTION" access="public" unsafe="true">
+            <field name="versionInfo" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="inputMessageDescription" access="public">
+                <type native="WS_MESSAGE_DESCRIPTION *">WS_MESSAGE_DESCRIPTION*</type>
+            </field>
+            <field name="outputMessageDescription" access="public">
+                <type native="WS_MESSAGE_DESCRIPTION *">WS_MESSAGE_DESCRIPTION*</type>
+            </field>
+            <field name="inputMessageOptions" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="outputMessageOptions" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="parameterCount" access="public">
+                <type native="USHORT">ushort</type>
+            </field>
+            <field name="parameterDescription" access="public">
+                <type native="WS_PARAMETER_DESCRIPTION *">WS_PARAMETER_DESCRIPTION*</type>
+            </field>
+            <field name="stubCallback" access="public">
+                <type native="WS_SERVICE_STUB_CALLBACK">delegate* unmanaged&lt;IntPtr, void*, void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="style" access="public">
+                <type native="">WS_OPERATION_STYLE</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

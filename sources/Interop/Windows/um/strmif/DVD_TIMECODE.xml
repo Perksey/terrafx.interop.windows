@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DVD_TIMECODE" access="public">
+            <field name="_bitfield" access="public">
+                <type native="">uint</type>
+            </field>
+            <field name="Hours1" access="public">
+                <type native="ULONG : 4">uint</type>
+                <get inlining="aggressive">
+                    <code>return <bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>);
+        </code>
+                </set>
+            </field>
+            <field name="Hours10" access="public">
+                <type native="ULONG : 4">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>4</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>4</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 4);
+        </code>
+                </set>
+            </field>
+            <field name="Minutes1" access="public">
+                <type native="ULONG : 4">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>8</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>8</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 8);
+        </code>
+                </set>
+            </field>
+            <field name="Minutes10" access="public">
+                <type native="ULONG : 4">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>12</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>12</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 12);
+        </code>
+                </set>
+            </field>
+            <field name="Seconds1" access="public">
+                <type native="ULONG : 4">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>16</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>16</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 16);
+        </code>
+                </set>
+            </field>
+            <field name="Seconds10" access="public">
+                <type native="ULONG : 4">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>20</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>20</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 20);
+        </code>
+                </set>
+            </field>
+            <field name="Frames1" access="public">
+                <type native="ULONG : 4">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>24</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>Fu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>24</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>Fu</bitwidthHexString>) &lt;&lt; 24);
+        </code>
+                </set>
+            </field>
+            <field name="Frames10" access="public">
+                <type native="ULONG : 2">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>28</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>28</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>3u</bitwidthHexString>) &lt;&lt; 28);
+        </code>
+                </set>
+            </field>
+            <field name="FrameRateCode" access="public">
+                <type native="ULONG : 2">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>30</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (_bitfield &amp; ~(0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>30</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>3u</bitwidthHexString>) &lt;&lt; 30);
+        </code>
+                </set>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

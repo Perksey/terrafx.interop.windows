@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dxcapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved. Licensed under the University of Illinois Open Source License.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDxcCompiler2" access="public" native="struct IDxcCompiler2 : IDxcCompiler" uuid="a005a9d9-b8bb-4594-b5c9-0e633bec4d37" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcCompiler2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDxcCompiler2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcCompiler2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDxcCompiler2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcCompiler2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDxcCompiler2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Compile" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSource">
+                    <type>IDxcBlob*</type>
+                </param>
+                <param name="pSourceName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pEntryPoint">
+                    <type>ushort*</type>
+                </param>
+                <param name="pTargetProfile">
+                    <type>ushort*</type>
+                </param>
+                <param name="pArguments">
+                    <type>ushort**</type>
+                </param>
+                <param name="argCount">
+                    <type>uint</type>
+                </param>
+                <param name="pDefines">
+                    <type>DxcDefine*</type>
+                </param>
+                <param name="defineCount">
+                    <type>uint</type>
+                </param>
+                <param name="pIncludeHandler">
+                    <type>IDxcIncludeHandler*</type>
+                </param>
+                <param name="ppResult">
+                    <type>IDxcOperationResult**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcCompiler2*, IDxcBlob*, ushort*, ushort*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDxcCompiler2*)Unsafe.AsPointer(ref this)</param>, <param name="pSource">pSource</param>, <param name="pSourceName">pSourceName</param>, <param name="pEntryPoint">pEntryPoint</param>, <param name="pTargetProfile">pTargetProfile</param>, <param name="pArguments">pArguments</param>, <param name="argCount">argCount</param>, <param name="pDefines">pDefines</param>, <param name="defineCount">defineCount</param>, <param name="pIncludeHandler">pIncludeHandler</param>, <param name="ppResult">ppResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Preprocess" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSource">
+                    <type>IDxcBlob*</type>
+                </param>
+                <param name="pSourceName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pArguments">
+                    <type>ushort**</type>
+                </param>
+                <param name="argCount">
+                    <type>uint</type>
+                </param>
+                <param name="pDefines">
+                    <type>DxcDefine*</type>
+                </param>
+                <param name="defineCount">
+                    <type>uint</type>
+                </param>
+                <param name="pIncludeHandler">
+                    <type>IDxcIncludeHandler*</type>
+                </param>
+                <param name="ppResult">
+                    <type>IDxcOperationResult**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcCompiler2*, IDxcBlob*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDxcCompiler2*)Unsafe.AsPointer(ref this)</param>, <param name="pSource">pSource</param>, <param name="pSourceName">pSourceName</param>, <param name="pArguments">pArguments</param>, <param name="argCount">argCount</param>, <param name="pDefines">pDefines</param>, <param name="defineCount">defineCount</param>, <param name="pIncludeHandler">pIncludeHandler</param>, <param name="ppResult">ppResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Disassemble" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSource">
+                    <type>IDxcBlob*</type>
+                </param>
+                <param name="ppDisassembly">
+                    <type>IDxcBlobEncoding**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcCompiler2*, IDxcBlob*, IDxcBlobEncoding**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDxcCompiler2*)Unsafe.AsPointer(ref this)</param>, <param name="pSource">pSource</param>, <param name="ppDisassembly">ppDisassembly</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CompileWithDebug" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSource">
+                    <type>IDxcBlob*</type>
+                </param>
+                <param name="pSourceName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pEntryPoint">
+                    <type>ushort*</type>
+                </param>
+                <param name="pTargetProfile">
+                    <type>ushort*</type>
+                </param>
+                <param name="pArguments">
+                    <type>ushort**</type>
+                </param>
+                <param name="argCount">
+                    <type>uint</type>
+                </param>
+                <param name="pDefines">
+                    <type>DxcDefine*</type>
+                </param>
+                <param name="defineCount">
+                    <type>uint</type>
+                </param>
+                <param name="pIncludeHandler">
+                    <type>IDxcIncludeHandler*</type>
+                </param>
+                <param name="ppResult">
+                    <type>IDxcOperationResult**</type>
+                </param>
+                <param name="ppDebugBlobName">
+                    <type>ushort**</type>
+                </param>
+                <param name="ppDebugBlob">
+                    <type>IDxcBlob**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDxcCompiler2*, IDxcBlob*, ushort*, ushort*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, ushort**, IDxcBlob**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDxcCompiler2*)Unsafe.AsPointer(ref this)</param>, <param name="pSource">pSource</param>, <param name="pSourceName">pSourceName</param>, <param name="pEntryPoint">pEntryPoint</param>, <param name="pTargetProfile">pTargetProfile</param>, <param name="pArguments">pArguments</param>, <param name="argCount">argCount</param>, <param name="pDefines">pDefines</param>, <param name="defineCount">defineCount</param>, <param name="pIncludeHandler">pIncludeHandler</param>, <param name="ppResult">ppResult</param>, <param name="ppDebugBlobName">ppDebugBlobName</param>, <param name="ppDebugBlob">ppDebugBlob</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wingdi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DISPLAYCONFIG_MODE_INFO" access="public">
+            <field name="infoType" access="public">
+                <type native="">DISPLAYCONFIG_MODE_INFO_TYPE</type>
+            </field>
+            <field name="id" access="public">
+                <type native="UINT32">uint</type>
+            </field>
+            <field name="adapterId" access="public">
+                <type native="">LUID</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="DISPLAYCONFIG_MODE_INFO::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wingdi.h:2932:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="targetMode" access="public">
+                <type native="">ref DISPLAYCONFIG_TARGET_MODE</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.targetMode, 1));
+        </code>
+                </get>
+            </field>
+            <field name="sourceMode" access="public">
+                <type native="">ref DISPLAYCONFIG_SOURCE_MODE</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.sourceMode, 1));
+        </code>
+                </get>
+            </field>
+            <field name="desktopImageInfo" access="public">
+                <type native="">ref DISPLAYCONFIG_DESKTOP_IMAGE_INFO</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.desktopImageInfo, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="targetMode" access="public" offset="0">
+                    <type native="">DISPLAYCONFIG_TARGET_MODE</type>
+                </field>
+                <field name="sourceMode" access="public" offset="0">
+                    <type native="">DISPLAYCONFIG_SOURCE_MODE</type>
+                </field>
+                <field name="desktopImageInfo" access="public" offset="0">
+                    <type native="">DISPLAYCONFIG_DESKTOP_IMAGE_INFO</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

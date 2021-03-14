@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from https://docs.microsoft.com/en-us/windows/win32/appxpkg/how-to-programmatically-sign-a-package
+        // Original source is Copyright © Microsoft. All rights reserved. Licensed under the MIT License (MIT).
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SIGNER_SIGN_EX2_PARAMS" access="public" unsafe="true">
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pSubjectInfo" access="public">
+                <type native="PSIGNER_SUBJECT_INFO">SIGNER_SUBJECT_INFO*</type>
+            </field>
+            <field name="pSigningCert" access="public">
+                <type native="PSIGNER_CERT">SIGNER_CERT*</type>
+            </field>
+            <field name="pSignatureInfo" access="public">
+                <type native="PSIGNER_SIGNATURE_INFO">SIGNER_SIGNATURE_INFO*</type>
+            </field>
+            <field name="pProviderInfo" access="public">
+                <type native="PSIGNER_PROVIDER_INFO">SIGNER_PROVIDER_INFO*</type>
+            </field>
+            <field name="dwTimestampFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pszAlgorithmOid" access="public">
+                <type native="PCSTR">sbyte*</type>
+            </field>
+            <field name="pwszTimestampURL" access="public">
+                <type native="PCWSTR">ushort*</type>
+            </field>
+            <field name="pCryptAttrs" access="public">
+                <type native="PCRYPT_ATTRIBUTES">CRYPT_ATTRIBUTES*</type>
+            </field>
+            <field name="pSipData" access="public">
+                <type native="PVOID">void*</type>
+            </field>
+            <field name="pSignerContext" access="public">
+                <type native="PSIGNER_CONTEXT *">SIGNER_CONTEXT**</type>
+            </field>
+            <field name="pCryptoPolicy" access="public">
+                <type native="PVOID">void*</type>
+            </field>
+            <field name="pReserved" access="public">
+                <type native="PVOID">void*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

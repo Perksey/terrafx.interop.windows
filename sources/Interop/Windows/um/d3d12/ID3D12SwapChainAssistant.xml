@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D12SwapChainAssistant" access="public" native="struct ID3D12SwapChainAssistant : IUnknown" uuid="f1df64b6-57fd-49cd-8807-c0eb88b45c8f" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12SwapChainAssistant*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12SwapChainAssistant*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12SwapChainAssistant*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLUID" access="public" unsafe="true">
+                <type>LUID</type>
+                <body>
+                    <code>
+                        <fixup type="*result">LUID</fixup> result;
+        return *((delegate* unmanaged&lt;ID3D12SwapChainAssistant*, LUID*, LUID*&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this)</param><param special="retFixup">, &amp;result</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSwapChainObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12SwapChainAssistant*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentResourceAndCommandQueue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riidResource">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvResource">
+                    <type>void**</type>
+                </param>
+                <param name="riidQueue">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvQueue">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12SwapChainAssistant*, Guid*, void**, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this)</param>, <param name="riidResource">riidResource</param>, <param name="ppvResource">ppvResource</param>, <param name="riidQueue">riidQueue</param>, <param name="ppvQueue">ppvQueue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InsertImplicitSync" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12SwapChainAssistant*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

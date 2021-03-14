@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/Audioclient.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAudioClient" access="public" native="struct IAudioClient : IUnknown" uuid="1cb9ad4c-dbfa-4c32-b178-c2f568a703b2" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Initialize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ShareMode">
+                    <type>AUDCLNT_SHAREMODE</type>
+                </param>
+                <param name="StreamFlags">
+                    <type>uint</type>
+                </param>
+                <param name="hnsBufferDuration">
+                    <type>long</type>
+                </param>
+                <param name="hnsPeriodicity">
+                    <type>long</type>
+                </param>
+                <param name="pFormat">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <param name="AudioSessionGuid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, AUDCLNT_SHAREMODE, uint, long, long, WAVEFORMATEX*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="ShareMode">ShareMode</param>, <param name="StreamFlags">StreamFlags</param>, <param name="hnsBufferDuration">hnsBufferDuration</param>, <param name="hnsPeriodicity">hnsPeriodicity</param>, <param name="pFormat">pFormat</param>, <param name="AudioSessionGuid">AudioSessionGuid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBufferSize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNumBufferFrames">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="pNumBufferFrames">pNumBufferFrames</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamLatency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="phnsLatency">
+                    <type>long*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, long*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="phnsLatency">phnsLatency</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCurrentPadding" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNumPaddingFrames">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="pNumPaddingFrames">pNumPaddingFrames</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsFormatSupported" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ShareMode">
+                    <type>AUDCLNT_SHAREMODE</type>
+                </param>
+                <param name="pFormat">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <param name="ppClosestMatch">
+                    <type>WAVEFORMATEX**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, AUDCLNT_SHAREMODE, WAVEFORMATEX*, WAVEFORMATEX**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="ShareMode">ShareMode</param>, <param name="pFormat">pFormat</param>, <param name="ppClosestMatch">ppClosestMatch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMixFormat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppDeviceFormat">
+                    <type>WAVEFORMATEX**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, WAVEFORMATEX**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="ppDeviceFormat">ppDeviceFormat</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevicePeriod" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="phnsDefaultDevicePeriod">
+                    <type>long*</type>
+                </param>
+                <param name="phnsMinimumDevicePeriod">
+                    <type>long*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, long*, long*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="phnsDefaultDevicePeriod">phnsDefaultDevicePeriod</param>, <param name="phnsMinimumDevicePeriod">phnsMinimumDevicePeriod</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Start" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Stop" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Reset" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetEventHandle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="eventHandle">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="eventHandle">eventHandle</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetService" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppv">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioClient*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IAudioClient*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppv">ppv</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

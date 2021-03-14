@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/SetupAPI.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SP_DRVINFO_DATA_V1_W" access="public" unsafe="true" layout="Sequential" pack="1">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="DriverType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="ULONG_PTR">nuint</type>
+            </field>
+            <field name="Description" access="public">
+                <type native="WCHAR [256]" count="256" fixed="_Description_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="MfgName" access="public">
+                <type native="WCHAR [256]" count="256" fixed="_MfgName_e__FixedBuffer">ushort</type>
+            </field>
+            <field name="ProviderName" access="public">
+                <type native="WCHAR [256]" count="256" fixed="_ProviderName_e__FixedBuffer">ushort</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

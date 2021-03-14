@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/TextStor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAnchor" access="public" native="struct IAnchor : IUnknown" uuid="0feb7e34-5a60-4356-8ef7-abdec2ff7cf8" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGravity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="gravity">
+                    <type>TsGravity</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, TsGravity, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="gravity">gravity</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGravity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pgravity">
+                    <type>TsGravity*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, TsGravity*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="pgravity">pgravity</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsEqual" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="paWith">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="pfEqual">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, IAnchor*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="paWith">paWith</param>, <param name="pfEqual">pfEqual</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Compare" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="paWith">
+                    <type>IAnchor*</type>
+                </param>
+                <param name="plResult">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, IAnchor*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="paWith">paWith</param>, <param name="plResult">plResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Shift" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="cchReq">
+                    <type>int</type>
+                </param>
+                <param name="pcch">
+                    <type>int*</type>
+                </param>
+                <param name="paHaltAnchor">
+                    <type>IAnchor*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, uint, int, int*, IAnchor*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="cchReq">cchReq</param>, <param name="pcch">pcch</param>, <param name="paHaltAnchor">paHaltAnchor</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftTo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="paSite">
+                    <type>IAnchor*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, IAnchor*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="paSite">paSite</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftRegion" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="dir">
+                    <type>TsShiftDir</type>
+                </param>
+                <param name="pfNoRegion">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, uint, TsShiftDir, int*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="dir">dir</param>, <param name="pfNoRegion">pfNoRegion</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetChangeHistoryMask" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwMask">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="dwMask">dwMask</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetChangeHistory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwHistory">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="pdwHistory">pdwHistory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearChangeHistory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Clone" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppaClone">
+                    <type>IAnchor**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAnchor*, IAnchor**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IAnchor*)Unsafe.AsPointer(ref this)</param>, <param name="ppaClone">ppaClone</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

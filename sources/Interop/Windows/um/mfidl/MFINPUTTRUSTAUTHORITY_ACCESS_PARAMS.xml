@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MFINPUTTRUSTAUTHORITY_ACCESS_PARAMS" access="public">
+            <field name="dwSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwVer" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbSignatureOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbSignatureSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbExtensionOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cbExtensionSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cActions" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="rgOutputActions" access="public">
+                <type native="MFINPUTTRUSTAUTHORITY_ACCESS_ACTION [1]" count="1" fixed="_rgOutputActions_e__FixedBuffer">MFINPUTTRUSTAUTHORITY_ACCESS_ACTION</type>
+            </field>
+            <struct name="_rgOutputActions_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">MFINPUTTRUSTAUTHORITY_ACCESS_ACTION</type>
+                </field>
+                <indexer access="public">
+                    <type>ref MFINPUTTRUSTAUTHORITY_ACCESS_ACTION</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;MFINPUTTRUSTAUTHORITY_ACCESS_ACTION&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincodecsdk.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IWICPersistStream" access="public" native="struct IWICPersistStream : IPersistStream" uuid="00675040-6908-45f8-86a3-49c7dfd6d9ad" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetClassID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pClassID">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>, <param name="pClassID">pClassID</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsDirty" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Load" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, IStream*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>, <param name="pStm">pStm</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Save" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pStm">
+                    <type>IStream*</type>
+                </param>
+                <param name="fClearDirty">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, IStream*, int, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>, <param name="pStm">pStm</param>, <param name="fClearDirty">fClearDirty</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSizeMax" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcbSize">
+                    <type>ULARGE_INTEGER*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, ULARGE_INTEGER*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>, <param name="pcbSize">pcbSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LoadEx" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="pguidPreferredVendor">
+                    <type>Guid*</type>
+                </param>
+                <param name="dwPersistOptions">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, IStream*, Guid*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>, <param name="pIStream">pIStream</param>, <param name="pguidPreferredVendor">pguidPreferredVendor</param>, <param name="dwPersistOptions">dwPersistOptions</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SaveEx" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pIStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="dwPersistOptions">
+                    <type>uint</type>
+                </param>
+                <param name="fClearDirty">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IWICPersistStream*, IStream*, uint, int, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IWICPersistStream*)Unsafe.AsPointer(ref this)</param>, <param name="pIStream">pIStream</param>, <param name="dwPersistOptions">dwPersistOptions</param>, <param name="fClearDirty">fClearDirty</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

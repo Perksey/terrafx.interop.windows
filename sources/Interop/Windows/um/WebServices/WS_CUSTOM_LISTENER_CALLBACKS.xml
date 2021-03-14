@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="WS_CUSTOM_LISTENER_CALLBACKS" access="public" unsafe="true">
+            <field name="createListenerCallback" access="public">
+                <type native="WS_CREATE_LISTENER_CALLBACK">delegate* unmanaged&lt;WS_CHANNEL_TYPE, void*, uint, void**, IntPtr, int&gt;</type>
+            </field>
+            <field name="freeListenerCallback" access="public">
+                <type native="WS_FREE_LISTENER_CALLBACK">delegate* unmanaged&lt;void*, void&gt;</type>
+            </field>
+            <field name="resetListenerCallback" access="public">
+                <type native="WS_RESET_LISTENER_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, int&gt;</type>
+            </field>
+            <field name="openListenerCallback" access="public">
+                <type native="WS_OPEN_LISTENER_CALLBACK">delegate* unmanaged&lt;void*, WS_STRING*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="closeListenerCallback" access="public">
+                <type native="WS_CLOSE_LISTENER_CALLBACK">delegate* unmanaged&lt;void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+            <field name="abortListenerCallback" access="public">
+                <type native="WS_ABORT_LISTENER_CALLBACK">delegate* unmanaged&lt;void*, IntPtr, int&gt;</type>
+            </field>
+            <field name="getListenerPropertyCallback" access="public">
+                <type native="WS_GET_LISTENER_PROPERTY_CALLBACK">delegate* unmanaged&lt;void*, WS_LISTENER_PROPERTY_ID, void*, uint, IntPtr, int&gt;</type>
+            </field>
+            <field name="setListenerPropertyCallback" access="public">
+                <type native="WS_SET_LISTENER_PROPERTY_CALLBACK">delegate* unmanaged&lt;void*, WS_LISTENER_PROPERTY_ID, void*, uint, IntPtr, int&gt;</type>
+            </field>
+            <field name="createChannelForListenerCallback" access="public">
+                <type native="WS_CREATE_CHANNEL_FOR_LISTENER_CALLBACK">delegate* unmanaged&lt;void*, void*, uint, void**, IntPtr, int&gt;</type>
+            </field>
+            <field name="acceptChannelCallback" access="public">
+                <type native="WS_ACCEPT_CHANNEL_CALLBACK">delegate* unmanaged&lt;void*, void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

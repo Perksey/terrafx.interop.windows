@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dwrite.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDWriteGdiInterop" access="public" native="struct IDWriteGdiInterop : IUnknown" uuid="1edd9491-9853-4299-898f-6432983b6f3a" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteGdiInterop*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDWriteGdiInterop*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteGdiInterop*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDWriteGdiInterop*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteGdiInterop*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDWriteGdiInterop*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateFontFromLOGFONT" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="logFont">
+                    <type>LOGFONTW*</type>
+                </param>
+                <param name="font">
+                    <type>IDWriteFont**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteGdiInterop*, LOGFONTW*, IDWriteFont**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDWriteGdiInterop*)Unsafe.AsPointer(ref this)</param>, <param name="logFont">logFont</param>, <param name="font">font</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ConvertFontToLOGFONT" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="font">
+                    <type>IDWriteFont*</type>
+                </param>
+                <param name="logFont">
+                    <type>LOGFONTW*</type>
+                </param>
+                <param name="isSystemFont">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteGdiInterop*, IDWriteFont*, LOGFONTW*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDWriteGdiInterop*)Unsafe.AsPointer(ref this)</param>, <param name="font">font</param>, <param name="logFont">logFont</param>, <param name="isSystemFont">isSystemFont</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ConvertFontFaceToLOGFONT" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="font">
+                    <type>IDWriteFontFace*</type>
+                </param>
+                <param name="logFont">
+                    <type>LOGFONTW*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteGdiInterop*, IDWriteFontFace*, LOGFONTW*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDWriteGdiInterop*)Unsafe.AsPointer(ref this)</param>, <param name="font">font</param>, <param name="logFont">logFont</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateFontFaceFromHdc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="fontFace">
+                    <type>IDWriteFontFace**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteGdiInterop*, IntPtr, IDWriteFontFace**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDWriteGdiInterop*)Unsafe.AsPointer(ref this)</param>, <param name="hdc">hdc</param>, <param name="fontFace">fontFace</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBitmapRenderTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hdc">
+                    <type>IntPtr</type>
+                </param>
+                <param name="width">
+                    <type>uint</type>
+                </param>
+                <param name="height">
+                    <type>uint</type>
+                </param>
+                <param name="renderTarget">
+                    <type>IDWriteBitmapRenderTarget**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteGdiInterop*, IntPtr, uint, uint, IDWriteBitmapRenderTarget**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDWriteGdiInterop*)Unsafe.AsPointer(ref this)</param>, <param name="hdc">hdc</param>, <param name="width">width</param>, <param name="height">height</param>, <param name="renderTarget">renderTarget</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

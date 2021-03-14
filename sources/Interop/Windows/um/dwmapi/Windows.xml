@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dwmapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="c_DwmMaxQueuedBuffers" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="c_DwmMaxMonitors" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>16
+            </code>
+                </value>
+            </constant>
+            <constant name="c_DwmMaxAdapters" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>16
+            </code>
+                </value>
+            </constant>
+            <function name="DwmDefWindowProc" access="public" lib="dwmapi" static="true">
+                <type native="BOOL">int</type>
+                <param name="hWnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="msg">
+                    <type>uint</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="plResult">
+                    <type>nint*</type>
+                </param>
+            </function>
+            <function name="DwmEnableBlurBehindWindow" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hWnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pBlurBehind">
+                    <type>DWM_BLURBEHIND*</type>
+                </param>
+            </function>
+            <function name="DwmEnableComposition" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="uCompositionAction">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DwmEnableMMCSS" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fEnableMMCSS">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="DwmExtendFrameIntoClientArea" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hWnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pMarInset">
+                    <type>MARGINS*</type>
+                </param>
+            </function>
+            <function name="DwmGetColorizationColor" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pcrColorization">
+                    <type>uint*</type>
+                </param>
+                <param name="pfOpaqueBlend">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="DwmGetCompositionTimingInfo" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pTimingInfo">
+                    <type>DWM_TIMING_INFO*</type>
+                </param>
+            </function>
+            <function name="DwmGetWindowAttribute" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwAttribute">
+                    <type>uint</type>
+                </param>
+                <param name="pvAttribute">
+                    <type>void*</type>
+                </param>
+                <param name="cbAttribute">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DwmIsCompositionEnabled" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pfEnabled">
+                    <type>int*</type>
+                </param>
+            </function>
+            <function name="DwmModifyPreviousDxFrameDuration" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="cRefreshes">
+                    <type>int</type>
+                </param>
+                <param name="fRelative">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="DwmQueryThumbnailSourceSize" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hThumbnail">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pSize">
+                    <type>SIZE*</type>
+                </param>
+            </function>
+            <function name="DwmRegisterThumbnail" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwndDestination">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hwndSource">
+                    <type>IntPtr</type>
+                </param>
+                <param name="phThumbnailId">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="DwmSetDxFrameDuration" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="cRefreshes">
+                    <type>int</type>
+                </param>
+            </function>
+            <function name="DwmSetPresentParameters" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pPresentParams">
+                    <type>DWM_PRESENT_PARAMETERS*</type>
+                </param>
+            </function>
+            <function name="DwmSetWindowAttribute" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwAttribute">
+                    <type>uint</type>
+                </param>
+                <param name="pvAttribute">
+                    <type>void*</type>
+                </param>
+                <param name="cbAttribute">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DwmUnregisterThumbnail" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hThumbnailId">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="DwmUpdateThumbnailProperties" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hThumbnailId">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ptnProperties">
+                    <type>DWM_THUMBNAIL_PROPERTIES*</type>
+                </param>
+            </function>
+            <function name="DwmSetIconicThumbnail" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hbmp">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwSITFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DwmSetIconicLivePreviewBitmap" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hbmp">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pptClient">
+                    <type>POINT*</type>
+                </param>
+                <param name="dwSITFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="DwmInvalidateIconicBitmaps" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="DwmAttachMilContent" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="DwmDetachMilContent" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="DwmFlush" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <function name="DwmGetGraphicsStreamTransformHint" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="uIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pTransform">
+                    <type>MilMatrix3x2D*</type>
+                </param>
+            </function>
+            <function name="DwmGetGraphicsStreamClient" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="uIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pClientUuid">
+                    <type>Guid*</type>
+                </param>
+            </function>
+            <function name="DwmGetTransportAttributes" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="pfIsRemoting">
+                    <type>int*</type>
+                </param>
+                <param name="pfIsConnected">
+                    <type>int*</type>
+                </param>
+                <param name="pDwGeneration">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="DwmTransitionOwnedWindow" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hwnd">
+                    <type>IntPtr</type>
+                </param>
+                <param name="target">
+                    <type>DWMTRANSITION_OWNEDWINDOW_TARGET</type>
+                </param>
+            </function>
+            <function name="DwmRenderGesture" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="gt">
+                    <type>GESTURE_TYPE</type>
+                </param>
+                <param name="cContacts">
+                    <type>uint</type>
+                </param>
+                <param name="pdwPointerID">
+                    <type>uint*</type>
+                </param>
+                <param name="pPoints">
+                    <type>POINT*</type>
+                </param>
+            </function>
+            <function name="DwmTetherContact" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwPointerID">
+                    <type>uint</type>
+                </param>
+                <param name="fEnable">
+                    <type>int</type>
+                </param>
+                <param name="ptTether">
+                    <type>POINT</type>
+                </param>
+            </function>
+            <function name="DwmShowContact" access="public" lib="dwmapi" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwPointerID">
+                    <type>uint</type>
+                </param>
+                <param name="eShowContact">
+                    <type>DWM_SHOWCONTACT</type>
+                </param>
+            </function>
+            <function name="DwmGetUnmetTabRequirements" access="public" lib="dwmapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="appWindow">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>DWM_TAB_WINDOW_REQUIREMENTS*</type>
+                </param>
+            </function>
+            <constant name="DWM_BB_ENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_BB_BLURREGION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_BB_TRANSITIONONMAXIMIZED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_CLOAKED_APP" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_CLOAKED_SHELL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_CLOAKED_INHERITED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_TNP_RECTDESTINATION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_TNP_RECTSOURCE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_TNP_OPACITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_TNP_VISIBLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_TNP_SOURCECLIENTAREAONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_FRAME_DURATION_DEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>-1
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_EC_DISABLECOMPOSITION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_EC_ENABLECOMPOSITION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="DWM_SIT_DISPLAYFRAME" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

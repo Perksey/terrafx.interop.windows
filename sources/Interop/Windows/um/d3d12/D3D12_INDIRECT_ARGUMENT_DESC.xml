@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D12_INDIRECT_ARGUMENT_DESC" access="public">
+            <field name="Type" access="public">
+                <type native="">D3D12_INDIRECT_ARGUMENT_TYPE</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="D3D12_INDIRECT_ARGUMENT_DESC::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:3951:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="VertexBuffer" access="public">
+                <type native="">ref _Anonymous_e__Union._VertexBuffer_e__Struct</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.VertexBuffer, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Constant" access="public">
+                <type native="">ref _Anonymous_e__Union._Constant_e__Struct</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Constant, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ConstantBufferView" access="public">
+                <type native="">ref _Anonymous_e__Union._ConstantBufferView_e__Struct</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ConstantBufferView, 1));
+        </code>
+                </get>
+            </field>
+            <field name="ShaderResourceView" access="public">
+                <type native="">ref _Anonymous_e__Union._ShaderResourceView_e__Struct</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ShaderResourceView, 1));
+        </code>
+                </get>
+            </field>
+            <field name="UnorderedAccessView" access="public">
+                <type native="">ref _Anonymous_e__Union._UnorderedAccessView_e__Struct</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.UnorderedAccessView, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="VertexBuffer" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:3953:9)">_VertexBuffer_e__Struct</type>
+                </field>
+                <field name="Constant" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:3957:9)">_Constant_e__Struct</type>
+                </field>
+                <field name="ConstantBufferView" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:3963:9)">_ConstantBufferView_e__Struct</type>
+                </field>
+                <field name="ShaderResourceView" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:3967:9)">_ShaderResourceView_e__Struct</type>
+                </field>
+                <field name="UnorderedAccessView" access="public" offset="0">
+                    <type native="struct (anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/d3d12.h:3971:9)">_UnorderedAccessView_e__Struct</type>
+                </field>
+                <struct name="_VertexBuffer_e__Struct" access="public">
+                    <field name="Slot" access="public">
+                        <type native="UINT">uint</type>
+                    </field>
+                </struct>
+                <struct name="_Constant_e__Struct" access="public">
+                    <field name="RootParameterIndex" access="public">
+                        <type native="UINT">uint</type>
+                    </field>
+                    <field name="DestOffsetIn32BitValues" access="public">
+                        <type native="UINT">uint</type>
+                    </field>
+                    <field name="Num32BitValuesToSet" access="public">
+                        <type native="UINT">uint</type>
+                    </field>
+                </struct>
+                <struct name="_ConstantBufferView_e__Struct" access="public">
+                    <field name="RootParameterIndex" access="public">
+                        <type native="UINT">uint</type>
+                    </field>
+                </struct>
+                <struct name="_ShaderResourceView_e__Struct" access="public">
+                    <field name="RootParameterIndex" access="public">
+                        <type native="UINT">uint</type>
+                    </field>
+                </struct>
+                <struct name="_UnorderedAccessView_e__Struct" access="public">
+                    <field name="RootParameterIndex" access="public">
+                        <type native="UINT">uint</type>
+                    </field>
+                </struct>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

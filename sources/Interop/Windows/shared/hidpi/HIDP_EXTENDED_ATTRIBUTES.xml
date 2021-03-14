@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from shared/hidpi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="HIDP_EXTENDED_ATTRIBUTES" access="public" unsafe="true">
+            <field name="NumGlobalUnknowns" access="public">
+                <type native="UCHAR">byte</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="UCHAR [3]" count="3" fixed="_Reserved_e__FixedBuffer">byte</type>
+            </field>
+            <field name="GlobalUnknowns" access="public">
+                <type native="PHIDP_UNKNOWN_TOKEN">HIDP_UNKNOWN_TOKEN*</type>
+            </field>
+            <field name="Data" access="public">
+                <type native="ULONG [1]" count="1" fixed="_Data_e__FixedBuffer">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

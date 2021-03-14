@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinUser.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="POINTER_TYPE_INFO" access="public">
+            <field name="type" access="public">
+                <type native="POINTER_INPUT_TYPE">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="tagPOINTER_TYPE_INFO::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/WinUser.h:6474:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="touchInfo" access="public">
+                <type native="">ref POINTER_TOUCH_INFO</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.touchInfo, 1));
+        </code>
+                </get>
+            </field>
+            <field name="penInfo" access="public">
+                <type native="">ref POINTER_PEN_INFO</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.penInfo, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="touchInfo" access="public" offset="0">
+                    <type native="">POINTER_TOUCH_INFO</type>
+                </field>
+                <field name="penInfo" access="public" offset="0">
+                    <type native="">POINTER_PEN_INFO</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

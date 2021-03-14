@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="OCSP_BASIC_RESPONSE_ENTRY" access="public" unsafe="true">
+            <field name="CertId" access="public">
+                <type native="">OCSP_CERT_ID</type>
+            </field>
+            <field name="dwCertStatus" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_OCSP_BASIC_RESPONSE_ENTRY::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:5682:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="pRevokedInfo" access="public">
+                <type native="">ref OCSP_BASIC_REVOKED_INFO*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pRevokedInfo;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="ThisUpdate" access="public">
+                <type native="">FILETIME</type>
+            </field>
+            <field name="NextUpdate" access="public">
+                <type native="">FILETIME</type>
+            </field>
+            <field name="cExtension" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="rgExtension" access="public">
+                <type native="PCERT_EXTENSION">CERT_EXTENSION*</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pRevokedInfo" access="public" offset="0">
+                    <type native="POCSP_BASIC_REVOKED_INFO">OCSP_BASIC_REVOKED_INFO*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

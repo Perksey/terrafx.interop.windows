@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/dwrite_3.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDWriteFontSet" access="public" native="struct IDWriteFontSet : IUnknown" uuid="53585141-d9f8-4095-8321-d73cf6bd116b" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFontCount" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, uint&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFontFaceReference" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="listIndex">
+                    <type>uint</type>
+                </param>
+                <param name="fontFaceReference">
+                    <type>IDWriteFontFaceReference**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, uint, IDWriteFontFaceReference**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="listIndex">listIndex</param>, <param name="fontFaceReference">fontFaceReference</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindFontFaceReference" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fontFaceReference">
+                    <type>IDWriteFontFaceReference*</type>
+                </param>
+                <param name="listIndex">
+                    <type>uint*</type>
+                </param>
+                <param name="exists">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, IDWriteFontFaceReference*, uint*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="fontFaceReference">fontFaceReference</param>, <param name="listIndex">listIndex</param>, <param name="exists">exists</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FindFontFace" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fontFace">
+                    <type>IDWriteFontFace*</type>
+                </param>
+                <param name="listIndex">
+                    <type>uint*</type>
+                </param>
+                <param name="exists">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, IDWriteFontFace*, uint*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="fontFace">fontFace</param>, <param name="listIndex">listIndex</param>, <param name="exists">exists</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyValues" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="listIndex">
+                    <type>uint</type>
+                </param>
+                <param name="propertyId">
+                    <type>DWRITE_FONT_PROPERTY_ID</type>
+                </param>
+                <param name="exists">
+                    <type>int*</type>
+                </param>
+                <param name="values">
+                    <type>IDWriteLocalizedStrings**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, uint, DWRITE_FONT_PROPERTY_ID, int*, IDWriteLocalizedStrings**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="listIndex">listIndex</param>, <param name="propertyId">propertyId</param>, <param name="exists">exists</param>, <param name="values">values</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyValues" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="propertyID">
+                    <type>DWRITE_FONT_PROPERTY_ID</type>
+                </param>
+                <param name="preferredLocaleNames">
+                    <type>ushort*</type>
+                </param>
+                <param name="values">
+                    <type>IDWriteStringList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, DWRITE_FONT_PROPERTY_ID, ushort*, IDWriteStringList**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="propertyID">propertyID</param>, <param name="preferredLocaleNames">preferredLocaleNames</param>, <param name="values">values</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyValues" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="propertyID">
+                    <type>DWRITE_FONT_PROPERTY_ID</type>
+                </param>
+                <param name="values">
+                    <type>IDWriteStringList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, DWRITE_FONT_PROPERTY_ID, IDWriteStringList**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="propertyID">propertyID</param>, <param name="values">values</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPropertyOccurrenceCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="property">
+                    <type>DWRITE_FONT_PROPERTY*</type>
+                </param>
+                <param name="propertyOccurrenceCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, DWRITE_FONT_PROPERTY*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="property">property</param>, <param name="propertyOccurrenceCount">propertyOccurrenceCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMatchingFonts" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="properties">
+                    <type>DWRITE_FONT_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="filteredSet">
+                    <type>IDWriteFontSet**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, DWRITE_FONT_PROPERTY*, uint, IDWriteFontSet**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="properties">properties</param>, <param name="propertyCount">propertyCount</param>, <param name="filteredSet">filteredSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMatchingFonts" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="familyName">
+                    <type>ushort*</type>
+                </param>
+                <param name="fontWeight">
+                    <type>DWRITE_FONT_WEIGHT</type>
+                </param>
+                <param name="fontStretch">
+                    <type>DWRITE_FONT_STRETCH</type>
+                </param>
+                <param name="fontStyle">
+                    <type>DWRITE_FONT_STYLE</type>
+                </param>
+                <param name="filteredSet">
+                    <type>IDWriteFontSet**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDWriteFontSet*, ushort*, DWRITE_FONT_WEIGHT, DWRITE_FONT_STRETCH, DWRITE_FONT_STYLE, IDWriteFontSet**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IDWriteFontSet*)Unsafe.AsPointer(ref this)</param>, <param name="familyName">familyName</param>, <param name="fontWeight">fontWeight</param>, <param name="fontStretch">fontStretch</param>, <param name="fontStyle">fontStyle</param>, <param name="filteredSet">filteredSet</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CERT_ID" access="public">
+            <field name="dwIdChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_CERT_ID::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:6665:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="IssuerSerialNumber" access="public">
+                <type native="">ref CERT_ISSUER_SERIAL_NUMBER</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.IssuerSerialNumber, 1));
+        </code>
+                </get>
+            </field>
+            <field name="KeyId" access="public">
+                <type native="">ref CRYPTOAPI_BLOB</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.KeyId, 1));
+        </code>
+                </get>
+            </field>
+            <field name="HashId" access="public">
+                <type native="">ref CRYPTOAPI_BLOB</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.HashId, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="IssuerSerialNumber" access="public" offset="0">
+                    <type native="">CERT_ISSUER_SERIAL_NUMBER</type>
+                </field>
+                <field name="KeyId" access="public" offset="0">
+                    <type native="CRYPT_HASH_BLOB">CRYPTOAPI_BLOB</type>
+                </field>
+                <field name="HashId" access="public" offset="0">
+                    <type native="CRYPT_HASH_BLOB">CRYPTOAPI_BLOB</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

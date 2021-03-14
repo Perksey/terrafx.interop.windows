@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfmediaengine.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFMediaSourceExtension" access="public" native="struct IMFMediaSourceExtension : IUnknown" uuid="e467b94e-a713-4562-a802-816a42e9008a" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSourceBuffers" access="public" unsafe="true">
+                <type native="IMFSourceBufferList *">IMFSourceBufferList*</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, IMFSourceBufferList*&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetActiveSourceBuffers" access="public" unsafe="true">
+                <type native="IMFSourceBufferList *">IMFSourceBufferList*</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, IMFSourceBufferList*&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetReadyState" access="public" unsafe="true">
+                <type>MF_MSE_READY</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, MF_MSE_READY&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDuration" access="public" unsafe="true">
+                <type>double</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, double&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetDuration" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="duration">
+                    <type>double</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, double, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>, <param name="duration">duration</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddSourceBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="type">
+                    <type>ushort*</type>
+                </param>
+                <param name="pNotify">
+                    <type>IMFSourceBufferNotify*</type>
+                </param>
+                <param name="ppSourceBuffer">
+                    <type>IMFSourceBuffer**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, ushort*, IMFSourceBufferNotify*, IMFSourceBuffer**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>, <param name="type">type</param>, <param name="pNotify">pNotify</param>, <param name="ppSourceBuffer">ppSourceBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveSourceBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSourceBuffer">
+                    <type>IMFSourceBuffer*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, IMFSourceBuffer*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>, <param name="pSourceBuffer">pSourceBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetEndOfStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>MF_MSE_ERROR</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, MF_MSE_ERROR, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>, <param name="error">error</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsTypeSupported" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="type">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>, <param name="type">type</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSourceBuffer" access="public" unsafe="true">
+                <type native="IMFSourceBuffer *">IMFSourceBuffer*</type>
+                <param name="dwStreamIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFMediaSourceExtension*, uint, IMFSourceBuffer*&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMFMediaSourceExtension*)Unsafe.AsPointer(ref this)</param>, <param name="dwStreamIndex">dwStreamIndex</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="STORAGE_QUERY_DEPENDENT_VOLUME_RESPONSE" access="public">
+            <field name="ResponseLevel" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="NumberEntries" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_STORAGE_QUERY_DEPENDENT_VOLUME_RESPONSE::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winioctl.h:13403:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="Lev1Depends" access="public">
+                <type native="">ref STORAGE_QUERY_DEPENDENT_VOLUME_LEV1_ENTRY</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Lev1Depends, 1));
+        </code>
+                </get>
+            </field>
+            <field name="Lev2Depends" access="public">
+                <type native="">ref STORAGE_QUERY_DEPENDENT_VOLUME_LEV2_ENTRY</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Lev2Depends, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="Lev1Depends" access="public" offset="0">
+                    <type native="STORAGE_QUERY_DEPENDENT_VOLUME_LEV1_ENTRY []">STORAGE_QUERY_DEPENDENT_VOLUME_LEV1_ENTRY</type>
+                </field>
+                <field name="Lev2Depends" access="public" offset="0">
+                    <type native="STORAGE_QUERY_DEPENDENT_VOLUME_LEV2_ENTRY []">STORAGE_QUERY_DEPENDENT_VOLUME_LEV2_ENTRY</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="DISPID_SpeechVoiceStatus" access="public">
+            <type>int</type>
+            <enumerator name="DISPID_SVSCurrentStreamNumber" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSLastStreamNumberQueued" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSCurrentStreamNumber + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSLastResult" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSLastStreamNumberQueued + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSRunningState" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSLastResult + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSInputWordPosition" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSRunningState + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSInputWordLength" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSInputWordPosition + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSInputSentencePosition" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSInputWordLength + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSInputSentenceLength" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSInputSentencePosition + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSLastBookmark" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSInputSentenceLength + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSLastBookmarkId" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSLastBookmark + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSPhonemeId" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSLastBookmarkId + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="DISPID_SVSVisemeId" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(DISPID_SVSPhonemeId + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

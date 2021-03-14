@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/schannel.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SCHANNEL_CRED" access="public" unsafe="true">
+            <field name="dwVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="cCreds" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="paCred" access="public">
+                <type native="PCCERT_CONTEXT *">CERT_CONTEXT**</type>
+            </field>
+            <field name="hRootStore" access="public">
+                <type native="HCERTSTORE">void*</type>
+            </field>
+            <field name="cMappers" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="aphMappers" access="public">
+                <type native="struct _HMAPPER **">void**</type>
+            </field>
+            <field name="cSupportedAlgs" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="palgSupportedAlgs" access="public">
+                <type native="ALG_ID *">uint*</type>
+            </field>
+            <field name="grbitEnabledProtocols" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwMinimumCipherStrength" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwMaximumCipherStrength" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwSessionLifespan" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwCredFormat" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

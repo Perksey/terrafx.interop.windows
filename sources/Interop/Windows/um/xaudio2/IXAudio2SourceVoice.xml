@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/xaudio2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IXAudio2SourceVoice" access="public" native="struct IXAudio2SourceVoice : IXAudio2Voice" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="GetVoiceDetails" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVoiceDetails">
+                    <type>XAUDIO2_VOICE_DETAILS*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, XAUDIO2_VOICE_DETAILS*, void&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pVoiceDetails">pVoiceDetails</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputVoices" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSendList">
+                    <type>XAUDIO2_VOICE_SENDS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, XAUDIO2_VOICE_SENDS*, int&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pSendList">pSendList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetEffectChain" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pEffectChain">
+                    <type>XAUDIO2_EFFECT_CHAIN*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, XAUDIO2_EFFECT_CHAIN*, int&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pEffectChain">pEffectChain</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnableEffect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="EffectIndex">
+                    <type>uint</type>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="EffectIndex">EffectIndex</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DisableEffect" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="EffectIndex">
+                    <type>uint</type>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="EffectIndex">EffectIndex</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEffectState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="EffectIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pEnabled">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, int*, void&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="EffectIndex">EffectIndex</param>, <param name="pEnabled">pEnabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetEffectParameters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="EffectIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pParameters">
+                    <type>void*</type>
+                </param>
+                <param name="ParametersByteSize">
+                    <type>uint</type>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, void*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="EffectIndex">EffectIndex</param>, <param name="pParameters">pParameters</param>, <param name="ParametersByteSize">ParametersByteSize</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEffectParameters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="EffectIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pParameters">
+                    <type>void*</type>
+                </param>
+                <param name="ParametersByteSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, void*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="EffectIndex">EffectIndex</param>, <param name="pParameters">pParameters</param>, <param name="ParametersByteSize">ParametersByteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetFilterParameters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pParameters">
+                    <type>XAUDIO2_FILTER_PARAMETERS*</type>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, XAUDIO2_FILTER_PARAMETERS*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pParameters">pParameters</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFilterParameters" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pParameters">
+                    <type>XAUDIO2_FILTER_PARAMETERS*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, XAUDIO2_FILTER_PARAMETERS*, void&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pParameters">pParameters</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputFilterParameters" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDestinationVoice">
+                    <type>IXAudio2Voice*</type>
+                </param>
+                <param name="pParameters">
+                    <type>XAUDIO2_FILTER_PARAMETERS*</type>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, IXAudio2Voice*, XAUDIO2_FILTER_PARAMETERS*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pDestinationVoice">pDestinationVoice</param>, <param name="pParameters">pParameters</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputFilterParameters" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDestinationVoice">
+                    <type>IXAudio2Voice*</type>
+                </param>
+                <param name="pParameters">
+                    <type>XAUDIO2_FILTER_PARAMETERS*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, IXAudio2Voice*, XAUDIO2_FILTER_PARAMETERS*, void&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pDestinationVoice">pDestinationVoice</param>, <param name="pParameters">pParameters</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetVolume" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Volume">
+                    <type>float</type>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, float, uint, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="Volume">Volume</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVolume" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVolume">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pVolume">pVolume</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetChannelVolumes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Channels">
+                    <type>uint</type>
+                </param>
+                <param name="pVolumes">
+                    <type>float*</type>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, float*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="Channels">Channels</param>, <param name="pVolumes">pVolumes</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetChannelVolumes" access="public" unsafe="true">
+                <type>void</type>
+                <param name="Channels">
+                    <type>uint</type>
+                </param>
+                <param name="pVolumes">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, float*, void&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="Channels">Channels</param>, <param name="pVolumes">pVolumes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputMatrix" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDestinationVoice">
+                    <type>IXAudio2Voice*</type>
+                </param>
+                <param name="SourceChannels">
+                    <type>uint</type>
+                </param>
+                <param name="DestinationChannels">
+                    <type>uint</type>
+                </param>
+                <param name="pLevelMatrix">
+                    <type>float*</type>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, IXAudio2Voice*, uint, uint, float*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pDestinationVoice">pDestinationVoice</param>, <param name="SourceChannels">SourceChannels</param>, <param name="DestinationChannels">DestinationChannels</param>, <param name="pLevelMatrix">pLevelMatrix</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputMatrix" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pDestinationVoice">
+                    <type>IXAudio2Voice*</type>
+                </param>
+                <param name="SourceChannels">
+                    <type>uint</type>
+                </param>
+                <param name="DestinationChannels">
+                    <type>uint</type>
+                </param>
+                <param name="pLevelMatrix">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, IXAudio2Voice*, uint, uint, float*, void&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pDestinationVoice">pDestinationVoice</param>, <param name="SourceChannels">SourceChannels</param>, <param name="DestinationChannels">DestinationChannels</param>, <param name="pLevelMatrix">pLevelMatrix</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DestroyVoice" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, void&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Start" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Flags">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="Flags">Flags</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Stop" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Flags">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="Flags">Flags</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SubmitSourceBuffer" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pBuffer">
+                    <type>XAUDIO2_BUFFER*</type>
+                </param>
+                <param name="pBufferWMA">
+                    <type>XAUDIO2_BUFFER_WMA*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, XAUDIO2_BUFFER*, XAUDIO2_BUFFER_WMA*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pBuffer">pBuffer</param>, <param name="pBufferWMA">pBufferWMA</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FlushSourceBuffers" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Discontinuity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ExitLoop" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetState" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pVoiceState">
+                    <type>XAUDIO2_VOICE_STATE*</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, XAUDIO2_VOICE_STATE*, uint, void&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pVoiceState">pVoiceState</param>, <param name="Flags">Flags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetFrequencyRatio" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Ratio">
+                    <type>float</type>
+                </param>
+                <param name="OperationSet">
+                    <type>uint</type>
+                    <init>
+                        <code>0
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, float, uint, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="Ratio">Ratio</param>, <param name="OperationSet">OperationSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFrequencyRatio" access="public" unsafe="true">
+                <type>void</type>
+                <param name="pRatio">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAudio2SourceVoice*, float*, void&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="pRatio">pRatio</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSourceSampleRate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewSourceSampleRate">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAudio2SourceVoice*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(IXAudio2SourceVoice*)Unsafe.AsPointer(ref this)</param>, <param name="NewSourceSampleRate">NewSourceSampleRate</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

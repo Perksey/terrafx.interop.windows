@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mssip.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SIP_SUBJECTINFO" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pgSubjectType" access="public">
+                <type native="GUID *">Guid*</type>
+            </field>
+            <field name="hFile" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <field name="pwsFileName" access="public">
+                <type native="LPCWSTR">ushort*</type>
+            </field>
+            <field name="pwsDisplayName" access="public">
+                <type native="LPCWSTR">ushort*</type>
+            </field>
+            <field name="dwReserved1" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwIntVersion" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hProv" access="public">
+                <type native="HCRYPTPROV">nuint</type>
+            </field>
+            <field name="DigestAlgorithm" access="public">
+                <type native="">CRYPT_ALGORITHM_IDENTIFIER</type>
+            </field>
+            <field name="dwFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwEncodingType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwReserved2" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="fdwCAPISettings" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="fdwSecuritySettings" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwIndex" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwUnionChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="SIP_SUBJECTINFO_::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/mssip.h:114:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="psFlat" access="public">
+                <type native="">ref MS_ADDINFO_FLAT*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;psFlat;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="psCatMember" access="public">
+                <type native="">ref MS_ADDINFO_CATALOGMEMBER*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;psCatMember;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="psBlob" access="public">
+                <type native="">ref MS_ADDINFO_BLOB*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;psBlob;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pClientData" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="psFlat" access="public" offset="0">
+                    <type native="struct MS_ADDINFO_FLAT_ *">MS_ADDINFO_FLAT*</type>
+                </field>
+                <field name="psCatMember" access="public" offset="0">
+                    <type native="struct MS_ADDINFO_CATALOGMEMBER_ *">MS_ADDINFO_CATALOGMEMBER*</type>
+                </field>
+                <field name="psBlob" access="public" offset="0">
+                    <type native="struct MS_ADDINFO_BLOB_ *">MS_ADDINFO_BLOB*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

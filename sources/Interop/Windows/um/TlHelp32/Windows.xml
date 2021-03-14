@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/TlHelp32.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="CreateToolhelp32Snapshot" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="th32ProcessID">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="Heap32ListFirst" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lphl">
+                    <type>HEAPLIST32*</type>
+                </param>
+            </function>
+            <function name="Heap32ListNext" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lphl">
+                    <type>HEAPLIST32*</type>
+                </param>
+            </function>
+            <function name="Heap32First" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lphe">
+                    <type>HEAPENTRY32*</type>
+                </param>
+                <param name="th32ProcessID">
+                    <type>uint</type>
+                </param>
+                <param name="th32HeapID">
+                    <type>nuint</type>
+                </param>
+            </function>
+            <function name="Heap32Next" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lphe">
+                    <type>HEAPENTRY32*</type>
+                </param>
+            </function>
+            <function name="Toolhelp32ReadProcessMemory" access="public" lib="kernel32" static="true">
+                <type native="BOOL">int</type>
+                <param name="th32ProcessID">
+                    <type>uint</type>
+                </param>
+                <param name="lpBaseAddress">
+                    <type>void*</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>void*</type>
+                </param>
+                <param name="cbRead">
+                    <type>nuint</type>
+                </param>
+                <param name="lpNumberOfBytesRead">
+                    <type>nuint*</type>
+                </param>
+            </function>
+            <function name="Process32FirstW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lppe">
+                    <type>PROCESSENTRY32W*</type>
+                </param>
+            </function>
+            <function name="Process32NextW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lppe">
+                    <type>PROCESSENTRY32W*</type>
+                </param>
+            </function>
+            <function name="Process32FirstA" access="public" lib="kernel32" entrypoint="Process32First" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lppe">
+                    <type>PROCESSENTRY32*</type>
+                </param>
+            </function>
+            <function name="Process32NextA" access="public" lib="kernel32" entrypoint="Process32Next" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lppe">
+                    <type>PROCESSENTRY32*</type>
+                </param>
+            </function>
+            <function name="Thread32First" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpte">
+                    <type>THREADENTRY32*</type>
+                </param>
+            </function>
+            <function name="Thread32Next" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpte">
+                    <type>THREADENTRY32*</type>
+                </param>
+            </function>
+            <function name="Module32FirstW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpme">
+                    <type>MODULEENTRY32W*</type>
+                </param>
+            </function>
+            <function name="Module32NextW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpme">
+                    <type>MODULEENTRY32W*</type>
+                </param>
+            </function>
+            <function name="Module32FirstA" access="public" lib="kernel32" entrypoint="Module32First" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpme">
+                    <type>MODULEENTRY32*</type>
+                </param>
+            </function>
+            <function name="Module32NextA" access="public" lib="kernel32" entrypoint="Module32Next" static="true">
+                <type native="BOOL">int</type>
+                <param name="hSnapshot">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpme">
+                    <type>MODULEENTRY32*</type>
+                </param>
+            </function>
+            <constant name="MAX_MODULE_NAME32" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>255
+            </code>
+                </value>
+            </constant>
+            <constant name="TH32CS_SNAPHEAPLIST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="TH32CS_SNAPPROCESS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="TH32CS_SNAPTHREAD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="TH32CS_SNAPMODULE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000008
+            </code>
+                </value>
+            </constant>
+            <constant name="TH32CS_SNAPMODULE32" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000010
+            </code>
+                </value>
+            </constant>
+            <constant name="TH32CS_SNAPALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x00000001 | 0x00000002 | 0x00000004 | 0x00000008)
+            </code>
+                </value>
+            </constant>
+            <constant name="TH32CS_INHERIT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>0x80000000
+            </code>
+                </value>
+            </constant>
+            <constant name="HF32_DEFAULT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="HF32_SHARED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="LF32_FIXED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="LF32_FREE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="LF32_MOVEABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="Process32First" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, PROCESSENTRY32W*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>Process32FirstW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="Process32Next" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, PROCESSENTRY32W*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>Process32NextW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="Module32First" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, MODULEENTRY32W*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>Module32FirstW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="Module32Next" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, MODULEENTRY32W*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>Module32NextW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

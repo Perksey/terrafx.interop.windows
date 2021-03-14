@@ -1,0 +1,3445 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WebServices.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="WS_HTTP_HEADER_MAPPING_COMMA_SEPARATOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_HEADER_MAPPING_SEMICOLON_SEPARATOR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_HEADER_MAPPING_QUOTED_VALUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_RESPONSE_MAPPING_STATUS_CODE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_RESPONSE_MAPPING_STATUS_TEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_REQUEST_MAPPING_VERB" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_DNS_HOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_DNS_FULLY_QUALIFIED_HOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_NETBIOS_HOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_LOCAL_HOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x8
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_HOST_ADDRESSES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_THIS_HOST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(WS_MATCH_URL_DNS_HOST | WS_MATCH_URL_DNS_FULLY_QUALIFIED_HOST | WS_MATCH_URL_NETBIOS_HOST | WS_MATCH_URL_LOCAL_HOST | WS_MATCH_URL_HOST_ADDRESSES)
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_PORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_EXACT_PATH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x40
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_PREFIX_PATH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x80
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MATCH_URL_NO_QUERY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x100
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_MUST_UNDERSTAND_HEADER_ATTRIBUTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_RELAY_HEADER_ATTRIBUTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_HEADER_AUTH_SCHEME_NONE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_HEADER_AUTH_SCHEME_BASIC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_HEADER_AUTH_SCHEME_DIGEST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_HEADER_AUTH_SCHEME_NTLM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x8
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_HEADER_AUTH_SCHEME_NEGOTIATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_HTTP_HEADER_AUTH_SCHEME_PASSPORT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x20
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_CERT_FAILURE_CN_MISMATCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_CERT_FAILURE_INVALID_DATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_CERT_FAILURE_UNTRUSTED_ROOT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_CERT_FAILURE_WRONG_USAGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x8
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_CERT_FAILURE_REVOCATION_OFFLINE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_STRUCT_ABSTRACT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_STRUCT_IGNORE_TRAILING_ELEMENT_CONTENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_STRUCT_IGNORE_UNHANDLED_ATTRIBUTES" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_FIELD_POINTER" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_FIELD_OPTIONAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_FIELD_NILLABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_FIELD_NILLABLE_ITEM" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x8
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_FIELD_OTHER_NAMESPACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x10
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_SERVICE_OPERATION_MESSAGE_NILLABLE_ELEMENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_URL_FLAGS_ALLOW_HOST_WILDCARDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_URL_FLAGS_NO_PATH_COLLAPSE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x2
+            </code>
+                </value>
+            </constant>
+            <constant name="WS_URL_FLAGS_ZERO_TERMINATE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4
+            </code>
+                </value>
+            </constant>
+            <function name="WsStartReaderCanonicalization" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="writeCallback">
+                    <type>delegate* unmanaged&lt;void*, WS_BYTES*, uint, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+                </param>
+                <param name="writeCallbackState">
+                    <type>void*</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_CANONICALIZATION_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsEndReaderCanonicalization" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsStartWriterCanonicalization" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="writeCallback">
+                    <type>delegate* unmanaged&lt;void*, WS_BYTES*, uint, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+                </param>
+                <param name="writeCallbackState">
+                    <type>void*</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_CANONICALIZATION_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsEndWriterCanonicalization" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateXmlBuffer" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_BUFFER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="buffer">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsRemoveNode" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="nodePosition">
+                    <type>WS_XML_NODE_POSITION*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateReader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="properties">
+                    <type>WS_XML_READER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="reader">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetInput" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="encoding">
+                    <type>WS_XML_READER_ENCODING*</type>
+                </param>
+                <param name="input">
+                    <type>WS_XML_READER_INPUT*</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_READER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetInputToBuffer" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="buffer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_READER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeReader" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetReaderProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_XML_READER_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetReaderNode" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="xmlReader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="node">
+                    <type>WS_XML_NODE**</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFillReader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="minSize">
+                    <type>uint</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadStartElement" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadToStartElement" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="localName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="found">
+                    <type>int*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadStartAttribute" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="attributeIndex">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadEndAttribute" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadNode" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSkipNode" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadEndElement" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFindAttribute" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="localName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="required">
+                    <type>int</type>
+                </param>
+                <param name="attributeIndex">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadValue" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="valueType">
+                    <type>WS_VALUE_TYPE</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadChars" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="chars">
+                    <type>ushort*</type>
+                </param>
+                <param name="maxCharCount">
+                    <type>uint</type>
+                </param>
+                <param name="actualCharCount">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadCharsUtf8" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bytes">
+                    <type>byte*</type>
+                </param>
+                <param name="maxByteCount">
+                    <type>uint</type>
+                </param>
+                <param name="actualByteCount">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadBytes" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bytes">
+                    <type>void*</type>
+                </param>
+                <param name="maxByteCount">
+                    <type>uint</type>
+                </param>
+                <param name="actualByteCount">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadArray" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="localName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="valueType">
+                    <type>WS_VALUE_TYPE</type>
+                </param>
+                <param name="array">
+                    <type>void*</type>
+                </param>
+                <param name="arraySize">
+                    <type>uint</type>
+                </param>
+                <param name="itemOffset">
+                    <type>uint</type>
+                </param>
+                <param name="itemCount">
+                    <type>uint</type>
+                </param>
+                <param name="actualItemCount">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetReaderPosition" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="nodePosition">
+                    <type>WS_XML_NODE_POSITION*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetReaderPosition" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="nodePosition">
+                    <type>WS_XML_NODE_POSITION*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsMoveReader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="moveTo">
+                    <type>WS_MOVE_TO</type>
+                </param>
+                <param name="found">
+                    <type>int*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateWriter" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="properties">
+                    <type>WS_XML_WRITER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="writer">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeWriter" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetOutput" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="encoding">
+                    <type>WS_XML_WRITER_ENCODING*</type>
+                </param>
+                <param name="output">
+                    <type>WS_XML_WRITER_OUTPUT*</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_WRITER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetOutputToBuffer" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="buffer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_WRITER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetWriterProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_XML_WRITER_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFlushWriter" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="minSize">
+                    <type>uint</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteStartElement" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prefix">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="localName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteEndStartElement" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteXmlnsAttribute" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prefix">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="singleQuote">
+                    <type>int</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteStartAttribute" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prefix">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="localName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="singleQuote">
+                    <type>int</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteEndAttribute" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteValue" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="valueType">
+                    <type>WS_VALUE_TYPE</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteXmlBuffer" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="xmlBuffer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadXmlBuffer" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="xmlBuffer">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteXmlBufferToBytes" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="xmlBuffer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="encoding">
+                    <type>WS_XML_WRITER_ENCODING*</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_WRITER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bytes">
+                    <type>void**</type>
+                </param>
+                <param name="byteCount">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadXmlBufferFromBytes" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="encoding">
+                    <type>WS_XML_READER_ENCODING*</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_READER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="bytes">
+                    <type>void*</type>
+                </param>
+                <param name="byteCount">
+                    <type>uint</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="xmlBuffer">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteArray" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="localName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="valueType">
+                    <type>WS_VALUE_TYPE</type>
+                </param>
+                <param name="array">
+                    <type>void*</type>
+                </param>
+                <param name="arraySize">
+                    <type>uint</type>
+                </param>
+                <param name="itemOffset">
+                    <type>uint</type>
+                </param>
+                <param name="itemCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteQualifiedName" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prefix">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="localName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteChars" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="chars">
+                    <type>ushort*</type>
+                </param>
+                <param name="charCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteCharsUtf8" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bytes">
+                    <type>byte*</type>
+                </param>
+                <param name="byteCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteBytes" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bytes">
+                    <type>void*</type>
+                </param>
+                <param name="byteCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsPushBytes" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="callback">
+                    <type>delegate* unmanaged&lt;void*, delegate* unmanaged&lt;void*, WS_BYTES*, uint, WS_ASYNC_CONTEXT*, IntPtr, int&gt;, void*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+                </param>
+                <param name="callbackState">
+                    <type>void*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsPullBytes" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="callback">
+                    <type>delegate* unmanaged&lt;void*, void*, uint, uint*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+                </param>
+                <param name="callbackState">
+                    <type>void*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteEndElement" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteText" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="text">
+                    <type>WS_XML_TEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteStartCData" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteEndCData" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteNode" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="node">
+                    <type>WS_XML_NODE*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetPrefixFromNamespace" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="required">
+                    <type>int</type>
+                </param>
+                <param name="prefix">
+                    <type>WS_XML_STRING**</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetWriterPosition" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="nodePosition">
+                    <type>WS_XML_NODE_POSITION*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetWriterPosition" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="nodePosition">
+                    <type>WS_XML_NODE_POSITION*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsMoveWriter" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="moveTo">
+                    <type>WS_MOVE_TO</type>
+                </param>
+                <param name="found">
+                    <type>int*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsTrimXmlWhitespace" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="chars">
+                    <type>ushort*</type>
+                </param>
+                <param name="charCount">
+                    <type>uint</type>
+                </param>
+                <param name="trimmedChars">
+                    <type>ushort**</type>
+                </param>
+                <param name="trimmedCount">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsVerifyXmlNCName" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="ncNameChars">
+                    <type>ushort*</type>
+                </param>
+                <param name="ncNameCharCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsXmlStringEquals" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="string1">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="string2">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetNamespaceFromPrefix" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prefix">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="required">
+                    <type>int</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING**</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadQualifiedName" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="prefix">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="localName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="ns">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetXmlAttribute" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="localName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="valueChars">
+                    <type>ushort**</type>
+                </param>
+                <param name="valueCharCount">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCopyNode" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAsyncExecute" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="asyncState">
+                    <type>WS_ASYNC_STATE*</type>
+                </param>
+                <param name="operation">
+                    <type>delegate* unmanaged&lt;int, WS_CALLBACK_MODEL, void*, WS_ASYNC_OPERATION*, WS_ASYNC_CONTEXT*, IntPtr, int&gt;</type>
+                </param>
+                <param name="callbackModel">
+                    <type>WS_CALLBACK_MODEL</type>
+                </param>
+                <param name="callbackState">
+                    <type>void*</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateChannel" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channelType">
+                    <type>WS_CHANNEL_TYPE</type>
+                </param>
+                <param name="channelBinding">
+                    <type>WS_CHANNEL_BINDING</type>
+                </param>
+                <param name="properties">
+                    <type>WS_CHANNEL_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="securityDescription">
+                    <type>WS_SECURITY_DESCRIPTION*</type>
+                </param>
+                <param name="channel">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsOpenChannel" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="endpointAddress">
+                    <type>WS_ENDPOINT_ADDRESS*</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSendMessage" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="messageDescription">
+                    <type>WS_MESSAGE_DESCRIPTION*</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="bodyValue">
+                    <type>void*</type>
+                </param>
+                <param name="bodyValueSize">
+                    <type>uint</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReceiveMessage" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="messageDescriptions">
+                    <type>WS_MESSAGE_DESCRIPTION**</type>
+                </param>
+                <param name="messageDescriptionCount">
+                    <type>uint</type>
+                </param>
+                <param name="receiveOption">
+                    <type>WS_RECEIVE_OPTION</type>
+                </param>
+                <param name="readBodyOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="index">
+                    <type>uint*</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsRequestReply" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="requestMessage">
+                    <type>IntPtr</type>
+                </param>
+                <param name="requestMessageDescription">
+                    <type>WS_MESSAGE_DESCRIPTION*</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="requestBodyValue">
+                    <type>void*</type>
+                </param>
+                <param name="requestBodyValueSize">
+                    <type>uint</type>
+                </param>
+                <param name="replyMessage">
+                    <type>IntPtr</type>
+                </param>
+                <param name="replyMessageDescription">
+                    <type>WS_MESSAGE_DESCRIPTION*</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSendReplyMessage" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="replyMessage">
+                    <type>IntPtr</type>
+                </param>
+                <param name="replyMessageDescription">
+                    <type>WS_MESSAGE_DESCRIPTION*</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="replyBodyValue">
+                    <type>void*</type>
+                </param>
+                <param name="replyBodyValueSize">
+                    <type>uint</type>
+                </param>
+                <param name="requestMessage">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSendFaultMessageForError" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="replyMessage">
+                    <type>IntPtr</type>
+                </param>
+                <param name="faultError">
+                    <type>IntPtr</type>
+                </param>
+                <param name="faultErrorCode">
+                    <type>int</type>
+                </param>
+                <param name="faultDisclosure">
+                    <type>WS_FAULT_DISCLOSURE</type>
+                </param>
+                <param name="requestMessage">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetChannelProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_CHANNEL_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetChannelProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_CHANNEL_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteMessageStart" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteMessageEnd" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadMessageStart" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadMessageEnd" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCloseChannel" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAbortChannel" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeChannel" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsResetChannel" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAbandonMessage" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsShutdownSessionChannel" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetOperationContextProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="context">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_OPERATION_CONTEXT_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetDictionary" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="encoding">
+                    <type>WS_ENCODING</type>
+                </param>
+                <param name="dictionary">
+                    <type>WS_XML_DICTIONARY**</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadEndpointAddressExtension" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="endpointAddress">
+                    <type>WS_ENDPOINT_ADDRESS*</type>
+                </param>
+                <param name="extensionType">
+                    <type>WS_ENDPOINT_ADDRESS_EXTENSION_TYPE</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateError" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="properties">
+                    <type>WS_ERROR_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="WsAddErrorString" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+                <param name="@string">
+                    <type>WS_STRING*</type>
+                </param>
+            </function>
+            <function name="WsGetErrorString" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="@string">
+                    <type>WS_STRING*</type>
+                </param>
+            </function>
+            <function name="WsCopyError" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="source">
+                    <type>IntPtr</type>
+                </param>
+                <param name="destination">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetErrorProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_ERROR_PROPERTY_ID</type>
+                </param>
+                <param name="buffer">
+                    <type>void*</type>
+                </param>
+                <param name="bufferSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WsSetErrorProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_ERROR_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WsResetError" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeError" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetFaultErrorProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_FAULT_ERROR_PROPERTY_ID</type>
+                </param>
+                <param name="buffer">
+                    <type>void*</type>
+                </param>
+                <param name="bufferSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WsSetFaultErrorProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_FAULT_ERROR_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WsCreateFaultFromError" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+                <param name="faultErrorCode">
+                    <type>int</type>
+                </param>
+                <param name="faultDisclosure">
+                    <type>WS_FAULT_DISCLOSURE</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="fault">
+                    <type>WS_FAULT*</type>
+                </param>
+            </function>
+            <function name="WsSetFaultErrorDetail" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+                <param name="faultDetailDescription">
+                    <type>WS_FAULT_DETAIL_DESCRIPTION*</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WsGetFaultErrorDetail" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+                <param name="faultDetailDescription">
+                    <type>WS_FAULT_DETAIL_DESCRIPTION*</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="WsCreateHeap" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="maxSize">
+                    <type>nuint</type>
+                </param>
+                <param name="trimSize">
+                    <type>nuint</type>
+                </param>
+                <param name="properties">
+                    <type>WS_HEAP_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAlloc" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="size">
+                    <type>nuint</type>
+                </param>
+                <param name="ptr">
+                    <type>void**</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetHeapProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_HEAP_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsResetHeap" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeHeap" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateListener" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channelType">
+                    <type>WS_CHANNEL_TYPE</type>
+                </param>
+                <param name="channelBinding">
+                    <type>WS_CHANNEL_BINDING</type>
+                </param>
+                <param name="properties">
+                    <type>WS_LISTENER_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="securityDescription">
+                    <type>WS_SECURITY_DESCRIPTION*</type>
+                </param>
+                <param name="listener">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsOpenListener" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="listener">
+                    <type>IntPtr</type>
+                </param>
+                <param name="url">
+                    <type>WS_STRING*</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAcceptChannel" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="listener">
+                    <type>IntPtr</type>
+                </param>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCloseListener" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="listener">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAbortListener" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="listener">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsResetListener" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="listener">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeListener" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="listener">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetListenerProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="listener">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_LISTENER_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetListenerProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="listener">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_LISTENER_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateChannelForListener" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="listener">
+                    <type>IntPtr</type>
+                </param>
+                <param name="properties">
+                    <type>WS_CHANNEL_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="channel">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateMessage" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="envelopeVersion">
+                    <type>WS_ENVELOPE_VERSION</type>
+                </param>
+                <param name="addressingVersion">
+                    <type>WS_ADDRESSING_VERSION</type>
+                </param>
+                <param name="properties">
+                    <type>WS_MESSAGE_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateMessageForChannel" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="properties">
+                    <type>WS_MESSAGE_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="message">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsInitializeMessage" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="initialization">
+                    <type>WS_MESSAGE_INITIALIZATION</type>
+                </param>
+                <param name="sourceMessage">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsResetMessage" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeMessage" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetHeaderAttributes" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerAttributes">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetHeader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerType">
+                    <type>WS_HEADER_TYPE</type>
+                </param>
+                <param name="valueType">
+                    <type>WS_TYPE</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetCustomHeader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="customHeaderDescription">
+                    <type>WS_ELEMENT_DESCRIPTION*</type>
+                </param>
+                <param name="repeatingOption">
+                    <type>WS_REPEATING_HEADER_OPTION</type>
+                </param>
+                <param name="headerIndex">
+                    <type>uint</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="headerAttributes">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsRemoveHeader" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerType">
+                    <type>WS_HEADER_TYPE</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetHeader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerType">
+                    <type>WS_HEADER_TYPE</type>
+                </param>
+                <param name="valueType">
+                    <type>WS_TYPE</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsRemoveCustomHeader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="headerNs">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAddCustomHeader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerDescription">
+                    <type>WS_ELEMENT_DESCRIPTION*</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="headerAttributes">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAddMappedHeader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="valueType">
+                    <type>WS_TYPE</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsRemoveMappedHeader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetMappedHeader" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerName">
+                    <type>WS_XML_STRING*</type>
+                </param>
+                <param name="repeatingOption">
+                    <type>WS_REPEATING_HEADER_OPTION</type>
+                </param>
+                <param name="headerIndex">
+                    <type>uint</type>
+                </param>
+                <param name="valueType">
+                    <type>WS_TYPE</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteBody" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bodyDescription">
+                    <type>WS_ELEMENT_DESCRIPTION*</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadBody" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bodyDescription">
+                    <type>WS_ELEMENT_DESCRIPTION*</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteEnvelopeStart" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="doneCallback">
+                    <type>delegate* unmanaged&lt;void*, void&gt;</type>
+                </param>
+                <param name="doneCallbackState">
+                    <type>void*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteEnvelopeEnd" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadEnvelopeStart" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="doneCallback">
+                    <type>delegate* unmanaged&lt;void*, void&gt;</type>
+                </param>
+                <param name="doneCallbackState">
+                    <type>void*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadEnvelopeEnd" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetMessageProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_MESSAGE_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsSetMessageProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_MESSAGE_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAddressMessage" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="address">
+                    <type>WS_ENDPOINT_ADDRESS*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCheckMustUnderstandHeaders" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsMarkHeaderAsUnderstood" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="headerPosition">
+                    <type>WS_XML_NODE_POSITION*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFillBody" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="minSize">
+                    <type>uint</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFlushBody" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="message">
+                    <type>IntPtr</type>
+                </param>
+                <param name="minSize">
+                    <type>uint</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsRequestSecurityToken" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channel">
+                    <type>IntPtr</type>
+                </param>
+                <param name="properties">
+                    <type>WS_REQUEST_SECURITY_TOKEN_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="token">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetSecurityTokenProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="securityToken">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_SECURITY_TOKEN_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateXmlSecurityToken" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="tokenXml">
+                    <type>IntPtr</type>
+                </param>
+                <param name="tokenKey">
+                    <type>WS_SECURITY_KEY_HANDLE*</type>
+                </param>
+                <param name="properties">
+                    <type>WS_XML_SECURITY_TOKEN_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="token">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeSecurityToken" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="token">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsRevokeSecurityContext" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="securityContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetSecurityContextProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="securityContext">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_SECURITY_CONTEXT_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadElement" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="elementDescription">
+                    <type>WS_ELEMENT_DESCRIPTION*</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadAttribute" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="attributeDescription">
+                    <type>WS_ATTRIBUTE_DESCRIPTION*</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadType" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="typeMapping">
+                    <type>WS_TYPE_MAPPING</type>
+                </param>
+                <param name="type">
+                    <type>WS_TYPE</type>
+                </param>
+                <param name="typeDescription">
+                    <type>void*</type>
+                </param>
+                <param name="readOption">
+                    <type>WS_READ_OPTION</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteElement" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="elementDescription">
+                    <type>WS_ELEMENT_DESCRIPTION*</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteAttribute" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="attributeDescription">
+                    <type>WS_ATTRIBUTE_DESCRIPTION*</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsWriteType" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="writer">
+                    <type>IntPtr</type>
+                </param>
+                <param name="typeMapping">
+                    <type>WS_TYPE_MAPPING</type>
+                </param>
+                <param name="type">
+                    <type>WS_TYPE</type>
+                </param>
+                <param name="typeDescription">
+                    <type>void*</type>
+                </param>
+                <param name="writeOption">
+                    <type>WS_WRITE_OPTION</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsRegisterOperationForCancel" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="context">
+                    <type>IntPtr</type>
+                </param>
+                <param name="cancelCallback">
+                    <type>delegate* unmanaged&lt;WS_SERVICE_CANCEL_REASON, void*, void&gt;</type>
+                </param>
+                <param name="freestateCallback">
+                    <type>delegate* unmanaged&lt;void*, void&gt;</type>
+                </param>
+                <param name="userState">
+                    <type>void*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetServiceHostProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceHost">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_SERVICE_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateServiceHost" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="endpoints">
+                    <type>WS_SERVICE_ENDPOINT**</type>
+                </param>
+                <param name="endpointCount">
+                    <type>ushort</type>
+                </param>
+                <param name="serviceProperties">
+                    <type>WS_SERVICE_PROPERTY*</type>
+                </param>
+                <param name="servicePropertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="serviceHost">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsOpenServiceHost" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceHost">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCloseServiceHost" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceHost">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAbortServiceHost" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceHost">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeServiceHost" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="serviceHost">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsResetServiceHost" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceHost">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetServiceProxyProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceProxy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_PROXY_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateServiceProxy" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channelType">
+                    <type>WS_CHANNEL_TYPE</type>
+                </param>
+                <param name="channelBinding">
+                    <type>WS_CHANNEL_BINDING</type>
+                </param>
+                <param name="securityDescription">
+                    <type>WS_SECURITY_DESCRIPTION*</type>
+                </param>
+                <param name="properties">
+                    <type>WS_PROXY_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="channelProperties">
+                    <type>WS_CHANNEL_PROPERTY*</type>
+                </param>
+                <param name="channelPropertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="serviceProxy">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsOpenServiceProxy" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceProxy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="address">
+                    <type>WS_ENDPOINT_ADDRESS*</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCloseServiceProxy" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceProxy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAbortServiceProxy" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceProxy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeServiceProxy" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="serviceProxy">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsResetServiceProxy" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceProxy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsAbandonCall" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceProxy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="callId">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCall" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="serviceProxy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="operation">
+                    <type>WS_OPERATION_DESCRIPTION*</type>
+                </param>
+                <param name="arguments">
+                    <type>void**</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="callProperties">
+                    <type>WS_CALL_PROPERTY*</type>
+                </param>
+                <param name="callPropertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="asyncContext">
+                    <type>WS_ASYNC_CONTEXT*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsDecodeUrl" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="url">
+                    <type>WS_STRING*</type>
+                </param>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="outUrl">
+                    <type>WS_URL**</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsEncodeUrl" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="url">
+                    <type>WS_URL*</type>
+                </param>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="outUrl">
+                    <type>WS_STRING*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCombineUrl" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="baseUrl">
+                    <type>WS_STRING*</type>
+                </param>
+                <param name="referenceUrl">
+                    <type>WS_STRING*</type>
+                </param>
+                <param name="flags">
+                    <type>uint</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="resultUrl">
+                    <type>WS_STRING*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsDateTimeToFileTime" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="dateTime">
+                    <type>WS_DATETIME*</type>
+                </param>
+                <param name="fileTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFileTimeToDateTime" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="fileTime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="dateTime">
+                    <type>WS_DATETIME*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateMetadata" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="properties">
+                    <type>WS_METADATA_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="metadata">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsReadMetadata" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="metadata">
+                    <type>IntPtr</type>
+                </param>
+                <param name="reader">
+                    <type>IntPtr</type>
+                </param>
+                <param name="url">
+                    <type>WS_STRING*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsFreeMetadata" access="public" lib="WebServices" static="true" unsafe="true">
+                <type>void</type>
+                <param name="metadata">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsResetMetadata" access="public" lib="WebServices" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="metadata">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetMetadataProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="metadata">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_METADATA_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetMissingMetadataDocumentAddress" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="metadata">
+                    <type>IntPtr</type>
+                </param>
+                <param name="address">
+                    <type>WS_ENDPOINT_ADDRESS**</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetMetadataEndpoints" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="metadata">
+                    <type>IntPtr</type>
+                </param>
+                <param name="endpoints">
+                    <type>WS_METADATA_ENDPOINTS*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsMatchPolicyAlternative" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="policy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="alternativeIndex">
+                    <type>uint</type>
+                </param>
+                <param name="policyConstraints">
+                    <type>WS_POLICY_CONSTRAINTS*</type>
+                </param>
+                <param name="matchRequired">
+                    <type>int</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetPolicyProperty" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="policy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="id">
+                    <type>WS_POLICY_PROPERTY_ID</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSize">
+                    <type>uint</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsGetPolicyAlternativeCount" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="policy">
+                    <type>IntPtr</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateServiceProxyFromTemplate" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channelType">
+                    <type>WS_CHANNEL_TYPE</type>
+                </param>
+                <param name="properties">
+                    <type>WS_PROXY_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="templateType">
+                    <type>WS_BINDING_TEMPLATE_TYPE</type>
+                </param>
+                <param name="templateValue">
+                    <type>void*</type>
+                </param>
+                <param name="templateSize">
+                    <type>uint</type>
+                </param>
+                <param name="templateDescription">
+                    <type>void*</type>
+                </param>
+                <param name="templateDescriptionSize">
+                    <type>uint</type>
+                </param>
+                <param name="serviceProxy">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="WsCreateServiceEndpointFromTemplate" access="public" lib="WebServices" static="true">
+                <type native="HRESULT">int</type>
+                <param name="channelType">
+                    <type>WS_CHANNEL_TYPE</type>
+                </param>
+                <param name="properties">
+                    <type>WS_SERVICE_ENDPOINT_PROPERTY*</type>
+                </param>
+                <param name="propertyCount">
+                    <type>uint</type>
+                </param>
+                <param name="addressUrl">
+                    <type>WS_STRING*</type>
+                </param>
+                <param name="contract">
+                    <type>WS_SERVICE_CONTRACT*</type>
+                </param>
+                <param name="authorizationCallback">
+                    <type>delegate* unmanaged&lt;IntPtr, int*, IntPtr, int&gt;</type>
+                </param>
+                <param name="heap">
+                    <type>IntPtr</type>
+                </param>
+                <param name="templateType">
+                    <type>WS_BINDING_TEMPLATE_TYPE</type>
+                </param>
+                <param name="templateValue">
+                    <type>void*</type>
+                </param>
+                <param name="templateSize">
+                    <type>uint</type>
+                </param>
+                <param name="templateDescription">
+                    <type>void*</type>
+                </param>
+                <param name="templateDescriptionSize">
+                    <type>uint</type>
+                </param>
+                <param name="serviceEndpoint">
+                    <type>WS_SERVICE_ENDPOINT**</type>
+                </param>
+                <param name="error">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+        </class>
+    </namespace>
+</bindings>

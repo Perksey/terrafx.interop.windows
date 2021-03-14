@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/minwinbase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CREATE_PROCESS_DEBUG_INFO" access="public" unsafe="true">
+            <field name="hFile" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <field name="hProcess" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <field name="hThread" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <field name="lpBaseOfImage" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+            <field name="dwDebugInfoFileOffset" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="nDebugInfoSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="lpThreadLocalBase" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+            <field name="lpStartAddress" access="public">
+                <type native="LPTHREAD_START_ROUTINE">delegate* unmanaged&lt;void*, uint&gt;</type>
+            </field>
+            <field name="lpImageName" access="public">
+                <type native="LPVOID">void*</type>
+            </field>
+            <field name="fUnicode" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

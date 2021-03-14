@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpGrammarBuilder" access="public" native="struct ISpGrammarBuilder : IUnknown" uuid="8137828f-591a-4a42-be58-49ea7ebaac68" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ResetGrammar" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="NewLanguage">
+                    <type>ushort</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, ushort, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="NewLanguage">NewLanguage</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRule" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszRuleName">
+                    <type>ushort*</type>
+                </param>
+                <param name="dwRuleId">
+                    <type>uint</type>
+                </param>
+                <param name="dwAttributes">
+                    <type>uint</type>
+                </param>
+                <param name="fCreateIfNotExist">
+                    <type>int</type>
+                </param>
+                <param name="phInitialState">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, ushort*, uint, uint, int, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="pszRuleName">pszRuleName</param>, <param name="dwRuleId">dwRuleId</param>, <param name="dwAttributes">dwAttributes</param>, <param name="fCreateIfNotExist">fCreateIfNotExist</param>, <param name="phInitialState">phInitialState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ClearRule" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hState">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="hState">hState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateNewState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="phState">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, IntPtr, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="hState">hState</param>, <param name="phState">phState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddWordTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hFromState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hToState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="psz">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszSeparators">
+                    <type>ushort*</type>
+                </param>
+                <param name="eWordType">
+                    <type>SPGRAMMARWORDTYPE</type>
+                </param>
+                <param name="Weight">
+                    <type>float</type>
+                </param>
+                <param name="pPropInfo">
+                    <type>SPPROPERTYINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, IntPtr, IntPtr, ushort*, ushort*, SPGRAMMARWORDTYPE, float, SPPROPERTYINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="hFromState">hFromState</param>, <param name="hToState">hToState</param>, <param name="psz">psz</param>, <param name="pszSeparators">pszSeparators</param>, <param name="eWordType">eWordType</param>, <param name="Weight">Weight</param>, <param name="pPropInfo">pPropInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRuleTransition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hFromState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hToState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hRule">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Weight">
+                    <type>float</type>
+                </param>
+                <param name="pPropInfo">
+                    <type>SPPROPERTYINFO*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, IntPtr, IntPtr, IntPtr, float, SPPROPERTYINFO*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="hFromState">hFromState</param>, <param name="hToState">hToState</param>, <param name="hRule">hRule</param>, <param name="Weight">Weight</param>, <param name="pPropInfo">pPropInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddResource" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hRuleState">
+                    <type>IntPtr</type>
+                </param>
+                <param name="pszResourceName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pszResourceValue">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, IntPtr, ushort*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="hRuleState">hRuleState</param>, <param name="pszResourceName">pszResourceName</param>, <param name="pszResourceValue">pszResourceValue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Commit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwReserved">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpGrammarBuilder*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ISpGrammarBuilder*)Unsafe.AsPointer(ref this)</param>, <param name="dwReserved">dwReserved</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

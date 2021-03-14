@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfRangeACP" access="public" native="struct ITfRangeACP : ITfRange" uuid="057a6296-029b-4154-b79a-0d461d4ea94c" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetText" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pchText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cchMax">
+                    <type>uint</type>
+                </param>
+                <param name="pcch">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, uint, ushort*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="dwFlags">dwFlags</param>, <param name="pchText">pchText</param>, <param name="cchMax">cchMax</param>, <param name="pcch">pcch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetText" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pchText">
+                    <type>ushort*</type>
+                </param>
+                <param name="cch">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, uint, ushort*, int, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="dwFlags">dwFlags</param>, <param name="pchText">pchText</param>, <param name="cch">cch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFormattedText" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="ppDataObject">
+                    <type>IDataObject**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, IDataObject**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="ppDataObject">ppDataObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEmbedded" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="rguidService">
+                    <type>Guid*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppunk">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, Guid*, Guid*, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="rguidService">rguidService</param>, <param name="riid">riid</param>, <param name="ppunk">ppunk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InsertEmbedded" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pDataObject">
+                    <type>IDataObject*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, uint, IDataObject*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="dwFlags">dwFlags</param>, <param name="pDataObject">pDataObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftStart" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="cchReq">
+                    <type>int</type>
+                </param>
+                <param name="pcch">
+                    <type>int*</type>
+                </param>
+                <param name="pHalt">
+                    <type>TF_HALTCOND*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, int, int*, TF_HALTCOND*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="cchReq">cchReq</param>, <param name="pcch">pcch</param>, <param name="pHalt">pHalt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftEnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="cchReq">
+                    <type>int</type>
+                </param>
+                <param name="pcch">
+                    <type>int*</type>
+                </param>
+                <param name="pHalt">
+                    <type>TF_HALTCOND*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, int, int*, TF_HALTCOND*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="cchReq">cchReq</param>, <param name="pcch">pcch</param>, <param name="pHalt">pHalt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftStartToRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="aPos">
+                    <type>TfAnchor</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, ITfRange*, TfAnchor, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pRange">pRange</param>, <param name="aPos">aPos</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftEndToRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="aPos">
+                    <type>TfAnchor</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, ITfRange*, TfAnchor, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pRange">pRange</param>, <param name="aPos">aPos</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftStartRegion" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="dir">
+                    <type>TfShiftDir</type>
+                </param>
+                <param name="pfNoRegion">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, TfShiftDir, int*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="dir">dir</param>, <param name="pfNoRegion">pfNoRegion</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ShiftEndRegion" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="dir">
+                    <type>TfShiftDir</type>
+                </param>
+                <param name="pfNoRegion">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, TfShiftDir, int*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="dir">dir</param>, <param name="pfNoRegion">pfNoRegion</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsEmpty" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pfEmpty">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pfEmpty">pfEmpty</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Collapse" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="aPos">
+                    <type>TfAnchor</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, TfAnchor, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="aPos">aPos</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsEqualStart" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pWith">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="aPos">
+                    <type>TfAnchor</type>
+                </param>
+                <param name="pfEqual">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, ITfRange*, TfAnchor, int*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pWith">pWith</param>, <param name="aPos">aPos</param>, <param name="pfEqual">pfEqual</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsEqualEnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pWith">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="aPos">
+                    <type>TfAnchor</type>
+                </param>
+                <param name="pfEqual">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, ITfRange*, TfAnchor, int*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pWith">pWith</param>, <param name="aPos">aPos</param>, <param name="pfEqual">pfEqual</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CompareStart" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pWith">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="aPos">
+                    <type>TfAnchor</type>
+                </param>
+                <param name="plResult">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, ITfRange*, TfAnchor, int*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pWith">pWith</param>, <param name="aPos">aPos</param>, <param name="plResult">plResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CompareEnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pWith">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="aPos">
+                    <type>TfAnchor</type>
+                </param>
+                <param name="plResult">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, ITfRange*, TfAnchor, int*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pWith">pWith</param>, <param name="aPos">aPos</param>, <param name="plResult">plResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AdjustForInsert" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="cchInsert">
+                    <type>uint</type>
+                </param>
+                <param name="pfInsertOk">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="cchInsert">cchInsert</param>, <param name="pfInsertOk">pfInsertOk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGravity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pgStart">
+                    <type>TfGravity*</type>
+                </param>
+                <param name="pgEnd">
+                    <type>TfGravity*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, TfGravity*, TfGravity*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="pgStart">pgStart</param>, <param name="pgEnd">pgEnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetGravity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="gStart">
+                    <type>TfGravity</type>
+                </param>
+                <param name="gEnd">
+                    <type>TfGravity</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, uint, TfGravity, TfGravity, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="gStart">gStart</param>, <param name="gEnd">gEnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Clone" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppClone">
+                    <type>ITfRange**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, ITfRange**, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ppClone">ppClone</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetContext" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppContext">
+                    <type>ITfContext**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, ITfContext**, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="ppContext">ppContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetExtent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pacpAnchor">
+                    <type>int*</type>
+                </param>
+                <param name="pcch">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, int*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="pacpAnchor">pacpAnchor</param>, <param name="pcch">pcch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetExtent" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="acpAnchor">
+                    <type>int</type>
+                </param>
+                <param name="cch">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfRangeACP*, int, int, int&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ITfRangeACP*)Unsafe.AsPointer(ref this)</param>, <param name="acpAnchor">acpAnchor</param>, <param name="cch">cch</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

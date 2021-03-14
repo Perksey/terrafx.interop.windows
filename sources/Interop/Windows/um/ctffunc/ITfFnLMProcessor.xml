@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ctffunc.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfFnLMProcessor" access="public" native="struct ITfFnLMProcessor : ITfFunction" uuid="7afbf8e7-ac4b-4082-b058-890899d3a010" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDisplayName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbstrName">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>, <param name="pbstrName">pbstrName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="ppNewRange">
+                    <type>ITfRange**</type>
+                </param>
+                <param name="pfAccepted">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, ITfRange*, ITfRange**, int*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>, <param name="pRange">pRange</param>, <param name="ppNewRange">ppNewRange</param>, <param name="pfAccepted">pfAccepted</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryLangID" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="langid">
+                    <type>ushort</type>
+                </param>
+                <param name="pfAccepted">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, ushort, int*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>, <param name="langid">langid</param>, <param name="pfAccepted">pfAccepted</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetReconversion" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="ppCandList">
+                    <type>ITfCandidateList**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, ITfRange*, ITfCandidateList**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>, <param name="pRange">pRange</param>, <param name="ppCandList">ppCandList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Reconvert" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, ITfRange*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>, <param name="pRange">pRange</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fUp">
+                    <type>int</type>
+                </param>
+                <param name="vKey">
+                    <type>nuint</type>
+                </param>
+                <param name="lparamKeydata">
+                    <type>nint</type>
+                </param>
+                <param name="pfInterested">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, int, nuint, nint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>, <param name="fUp">fUp</param>, <param name="vKey">vKey</param>, <param name="lparamKeydata">lparamKeydata</param>, <param name="pfInterested">pfInterested</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InvokeKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fUp">
+                    <type>int</type>
+                </param>
+                <param name="vKey">
+                    <type>nuint</type>
+                </param>
+                <param name="lparamKeyData">
+                    <type>nint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, int, nuint, nint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>, <param name="fUp">fUp</param>, <param name="vKey">vKey</param>, <param name="lparamKeyData">lparamKeyData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InvokeFunc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pic">
+                    <type>ITfContext*</type>
+                </param>
+                <param name="refguidFunc">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfFnLMProcessor*, ITfContext*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITfFnLMProcessor*)Unsafe.AsPointer(ref this)</param>, <param name="pic">pic</param>, <param name="refguidFunc">refguidFunc</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

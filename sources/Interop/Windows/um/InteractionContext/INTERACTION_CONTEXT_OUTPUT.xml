@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/InteractionContext.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="INTERACTION_CONTEXT_OUTPUT" access="public">
+            <field name="interactionId" access="public">
+                <type native="">INTERACTION_ID</type>
+            </field>
+            <field name="interactionFlags" access="public">
+                <type native="">INTERACTION_FLAGS</type>
+            </field>
+            <field name="inputType" access="public">
+                <type native="POINTER_INPUT_TYPE">uint</type>
+            </field>
+            <field name="x" access="public">
+                <type native="">float</type>
+            </field>
+            <field name="y" access="public">
+                <type native="">float</type>
+            </field>
+            <field name="arguments" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/InteractionContext.h:234:5)">_arguments_e__Union</type>
+            </field>
+            <struct name="_arguments_e__Union" access="public" layout="Explicit">
+                <field name="manipulation" access="public" offset="0">
+                    <type native="">INTERACTION_ARGUMENTS_MANIPULATION</type>
+                </field>
+                <field name="tap" access="public" offset="0">
+                    <type native="">INTERACTION_ARGUMENTS_TAP</type>
+                </field>
+                <field name="crossSlide" access="public" offset="0">
+                    <type native="">INTERACTION_ARGUMENTS_CROSS_SLIDE</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

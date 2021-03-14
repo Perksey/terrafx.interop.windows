@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DISK_PERFORMANCE" access="public" unsafe="true">
+            <field name="BytesRead" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="BytesWritten" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="ReadTime" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="WriteTime" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="IdleTime" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="ReadCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="WriteCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="QueueDepth" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SplitCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="QueryTime" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="StorageDeviceNumber" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="StorageManagerName" access="public">
+                <type native="WCHAR [8]" count="8" fixed="_StorageManagerName_e__FixedBuffer">ushort</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

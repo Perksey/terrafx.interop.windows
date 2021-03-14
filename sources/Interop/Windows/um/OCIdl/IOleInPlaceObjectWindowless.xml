@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/OCIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IOleInPlaceObjectWindowless" access="public" native="struct IOleInPlaceObjectWindowless : IOleInPlaceObject" uuid="1c2056cc-5ef4-101b-8bc8-00aa003e3b29" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWindow" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="phwnd">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>, <param name="phwnd">phwnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ContextSensitiveHelp" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fEnterMode">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, int, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>, <param name="fEnterMode">fEnterMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InPlaceDeactivate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UIDeactivate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetObjectRects" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lprcPosRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="lprcClipRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, RECT*, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>, <param name="lprcPosRect">lprcPosRect</param>, <param name="lprcClipRect">lprcClipRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReactivateAndUndo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OnWindowMessage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="msg">
+                    <type>uint</type>
+                </param>
+                <param name="wParam">
+                    <type>nuint</type>
+                </param>
+                <param name="lParam">
+                    <type>nint</type>
+                </param>
+                <param name="plResult">
+                    <type>nint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, uint, nuint, nint, nint*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>, <param name="msg">msg</param>, <param name="wParam">wParam</param>, <param name="lParam">lParam</param>, <param name="plResult">plResult</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDropTarget" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppDropTarget">
+                    <type>IDropTarget**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceObjectWindowless*, IDropTarget**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IOleInPlaceObjectWindowless*)Unsafe.AsPointer(ref this)</param>, <param name="ppDropTarget">ppDropTarget</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

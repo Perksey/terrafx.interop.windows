@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpLexicon" access="public" native="struct ISpLexicon : IUnknown" uuid="da41a7c2-5383-4db2-916b-6c1719e3db58" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpLexicon*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpLexicon*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpLexicon*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpLexicon*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpLexicon*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpLexicon*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPronunciations" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszWord">
+                    <type>ushort*</type>
+                </param>
+                <param name="LangID">
+                    <type>ushort</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pWordPronunciationList">
+                    <type>SPWORDPRONUNCIATIONLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpLexicon*, ushort*, ushort, uint, SPWORDPRONUNCIATIONLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpLexicon*)Unsafe.AsPointer(ref this)</param>, <param name="pszWord">pszWord</param>, <param name="LangID">LangID</param>, <param name="dwFlags">dwFlags</param>, <param name="pWordPronunciationList">pWordPronunciationList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddPronunciation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszWord">
+                    <type>ushort*</type>
+                </param>
+                <param name="LangID">
+                    <type>ushort</type>
+                </param>
+                <param name="ePartOfSpeech">
+                    <type>SPPARTOFSPEECH</type>
+                </param>
+                <param name="pszPronunciation">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpLexicon*, ushort*, ushort, SPPARTOFSPEECH, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpLexicon*)Unsafe.AsPointer(ref this)</param>, <param name="pszWord">pszWord</param>, <param name="LangID">LangID</param>, <param name="ePartOfSpeech">ePartOfSpeech</param>, <param name="pszPronunciation">pszPronunciation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemovePronunciation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszWord">
+                    <type>ushort*</type>
+                </param>
+                <param name="LangID">
+                    <type>ushort</type>
+                </param>
+                <param name="ePartOfSpeech">
+                    <type>SPPARTOFSPEECH</type>
+                </param>
+                <param name="pszPronunciation">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpLexicon*, ushort*, ushort, SPPARTOFSPEECH, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpLexicon*)Unsafe.AsPointer(ref this)</param>, <param name="pszWord">pszWord</param>, <param name="LangID">LangID</param>, <param name="ePartOfSpeech">ePartOfSpeech</param>, <param name="pszPronunciation">pszPronunciation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGeneration" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwGeneration">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpLexicon*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ISpLexicon*)Unsafe.AsPointer(ref this)</param>, <param name="pdwGeneration">pdwGeneration</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGenerationChange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pdwGeneration">
+                    <type>uint*</type>
+                </param>
+                <param name="pWordList">
+                    <type>SPWORDLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpLexicon*, uint, uint*, SPWORDLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ISpLexicon*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="pdwGeneration">pdwGeneration</param>, <param name="pWordList">pWordList</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWords" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="pdwGeneration">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwCookie">
+                    <type>uint*</type>
+                </param>
+                <param name="pWordList">
+                    <type>SPWORDLIST*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpLexicon*, uint, uint*, uint*, SPWORDLIST*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ISpLexicon*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="pdwGeneration">pdwGeneration</param>, <param name="pdwCookie">pdwCookie</param>, <param name="pWordList">pWordList</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

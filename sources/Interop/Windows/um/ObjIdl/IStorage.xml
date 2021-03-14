@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IStorage" access="public" native="struct IStorage : IUnknown" uuid="0000000b-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwcsName">
+                    <type>ushort*</type>
+                </param>
+                <param name="grfMode">
+                    <type>uint</type>
+                </param>
+                <param name="reserved1">
+                    <type>uint</type>
+                </param>
+                <param name="reserved2">
+                    <type>uint</type>
+                </param>
+                <param name="ppstm">
+                    <type>IStream**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, ushort*, uint, uint, uint, IStream**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pwcsName">pwcsName</param>, <param name="grfMode">grfMode</param>, <param name="reserved1">reserved1</param>, <param name="reserved2">reserved2</param>, <param name="ppstm">ppstm</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OpenStream" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwcsName">
+                    <type>ushort*</type>
+                </param>
+                <param name="reserved1">
+                    <type>void*</type>
+                </param>
+                <param name="grfMode">
+                    <type>uint</type>
+                </param>
+                <param name="reserved2">
+                    <type>uint</type>
+                </param>
+                <param name="ppstm">
+                    <type>IStream**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, ushort*, void*, uint, uint, IStream**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pwcsName">pwcsName</param>, <param name="reserved1">reserved1</param>, <param name="grfMode">grfMode</param>, <param name="reserved2">reserved2</param>, <param name="ppstm">ppstm</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateStorage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwcsName">
+                    <type>ushort*</type>
+                </param>
+                <param name="grfMode">
+                    <type>uint</type>
+                </param>
+                <param name="reserved1">
+                    <type>uint</type>
+                </param>
+                <param name="reserved2">
+                    <type>uint</type>
+                </param>
+                <param name="ppstg">
+                    <type>IStorage**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, ushort*, uint, uint, uint, IStorage**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pwcsName">pwcsName</param>, <param name="grfMode">grfMode</param>, <param name="reserved1">reserved1</param>, <param name="reserved2">reserved2</param>, <param name="ppstg">ppstg</param>);
+        </code>
+                </body>
+            </function>
+            <function name="OpenStorage" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwcsName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pstgPriority">
+                    <type>IStorage*</type>
+                </param>
+                <param name="grfMode">
+                    <type>uint</type>
+                </param>
+                <param name="snbExclude">
+                    <type>ushort**</type>
+                </param>
+                <param name="reserved">
+                    <type>uint</type>
+                </param>
+                <param name="ppstg">
+                    <type>IStorage**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, ushort*, IStorage*, uint, ushort**, uint, IStorage**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pwcsName">pwcsName</param>, <param name="pstgPriority">pstgPriority</param>, <param name="grfMode">grfMode</param>, <param name="snbExclude">snbExclude</param>, <param name="reserved">reserved</param>, <param name="ppstg">ppstg</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyTo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ciidExclude">
+                    <type>uint</type>
+                </param>
+                <param name="rgiidExclude">
+                    <type>Guid*</type>
+                </param>
+                <param name="snbExclude">
+                    <type>ushort**</type>
+                </param>
+                <param name="pstgDest">
+                    <type>IStorage*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, uint, Guid*, ushort**, IStorage*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="ciidExclude">ciidExclude</param>, <param name="rgiidExclude">rgiidExclude</param>, <param name="snbExclude">snbExclude</param>, <param name="pstgDest">pstgDest</param>);
+        </code>
+                </body>
+            </function>
+            <function name="MoveElementTo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwcsName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pstgDest">
+                    <type>IStorage*</type>
+                </param>
+                <param name="pwcsNewName">
+                    <type>ushort*</type>
+                </param>
+                <param name="grfFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, ushort*, IStorage*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pwcsName">pwcsName</param>, <param name="pstgDest">pstgDest</param>, <param name="pwcsNewName">pwcsNewName</param>, <param name="grfFlags">grfFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Commit" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="grfCommitFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="grfCommitFlags">grfCommitFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Revert" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumElements" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="reserved1">
+                    <type>uint</type>
+                </param>
+                <param name="reserved2">
+                    <type>void*</type>
+                </param>
+                <param name="reserved3">
+                    <type>uint</type>
+                </param>
+                <param name="ppenum">
+                    <type>IEnumSTATSTG**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, uint, void*, uint, IEnumSTATSTG**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="reserved1">reserved1</param>, <param name="reserved2">reserved2</param>, <param name="reserved3">reserved3</param>, <param name="ppenum">ppenum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DestroyElement" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwcsName">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pwcsName">pwcsName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RenameElement" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwcsOldName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pwcsNewName">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, ushort*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pwcsOldName">pwcsOldName</param>, <param name="pwcsNewName">pwcsNewName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetElementTimes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pwcsName">
+                    <type>ushort*</type>
+                </param>
+                <param name="pctime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="patime">
+                    <type>FILETIME*</type>
+                </param>
+                <param name="pmtime">
+                    <type>FILETIME*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, ushort*, FILETIME*, FILETIME*, FILETIME*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pwcsName">pwcsName</param>, <param name="pctime">pctime</param>, <param name="patime">patime</param>, <param name="pmtime">pmtime</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetClass" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="clsid">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="clsid">clsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetStateBits" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="grfStateBits">
+                    <type>uint</type>
+                </param>
+                <param name="grfMask">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, uint, uint, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="grfStateBits">grfStateBits</param>, <param name="grfMask">grfMask</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Stat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pstatstg">
+                    <type>STATSTG*</type>
+                </param>
+                <param name="grfStatFlag">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IStorage*, STATSTG*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IStorage*)Unsafe.AsPointer(ref this)</param>, <param name="pstatstg">pstatstg</param>, <param name="grfStatFlag">grfStatFlag</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

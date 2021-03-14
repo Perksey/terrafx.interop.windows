@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="REFS_SMR_VOLUME_INFO_OUTPUT" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SizeOfRandomlyWritableTier" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="FreeSpaceInRandomlyWritableTier" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="SizeofSMRTier" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="FreeSpaceInSMRTier" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="UsableFreeSpaceInSMRTier" access="public">
+                <type native="">LARGE_INTEGER</type>
+            </field>
+            <field name="VolumeGcState" access="public">
+                <type native="">REFS_SMR_VOLUME_GC_STATE</type>
+            </field>
+            <field name="VolumeGcLastStatus" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Unused" access="public">
+                <type native="DWORDLONG [7]" count="7" fixed="_Unused_e__FixedBuffer">ulong</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

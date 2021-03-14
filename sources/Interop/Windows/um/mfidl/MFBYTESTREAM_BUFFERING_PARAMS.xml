@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MFBYTESTREAM_BUFFERING_PARAMS" access="public" unsafe="true">
+            <field name="cbTotalFileSize" access="public">
+                <type native="QWORD">ulong</type>
+            </field>
+            <field name="cbPlayableDataSize" access="public">
+                <type native="QWORD">ulong</type>
+            </field>
+            <field name="prgBuckets" access="public">
+                <type native="MF_LEAKY_BUCKET_PAIR *">MF_LEAKY_BUCKET_PAIR*</type>
+            </field>
+            <field name="cBuckets" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="qwNetBufferingTime" access="public">
+                <type native="QWORD">ulong</type>
+            </field>
+            <field name="qwExtraBufferingTimeDuringSeek" access="public">
+                <type native="QWORD">ulong</type>
+            </field>
+            <field name="qwPlayDuration" access="public">
+                <type native="QWORD">ulong</type>
+            </field>
+            <field name="dRate" access="public">
+                <type native="">float</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

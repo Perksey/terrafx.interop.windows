@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12shader.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID3D12ShaderReflection" access="public" native="struct ID3D12ShaderReflection : IUnknown" uuid="5a58797d-a72c-478d-8ba2-efc6b0efe88e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDesc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDesc">
+                    <type>D3D12_SHADER_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, D3D12_SHADER_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetConstantBufferByIndex" access="public" unsafe="true">
+                <type native="ID3D12ShaderReflectionConstantBuffer *">ID3D12ShaderReflectionConstantBuffer*</type>
+                <param name="Index">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint, ID3D12ShaderReflectionConstantBuffer*&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="Index">Index</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetConstantBufferByName" access="public" unsafe="true">
+                <type native="ID3D12ShaderReflectionConstantBuffer *">ID3D12ShaderReflectionConstantBuffer*</type>
+                <param name="Name">
+                    <type>sbyte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, sbyte*, ID3D12ShaderReflectionConstantBuffer*&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetResourceBindingDesc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ResourceIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D12_SHADER_INPUT_BIND_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint, D3D12_SHADER_INPUT_BIND_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="ResourceIndex">ResourceIndex</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputParameterDesc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D12_SIGNATURE_PARAMETER_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint, D3D12_SIGNATURE_PARAMETER_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="ParameterIndex">ParameterIndex</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputParameterDesc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D12_SIGNATURE_PARAMETER_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint, D3D12_SIGNATURE_PARAMETER_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="ParameterIndex">ParameterIndex</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPatchConstantParameterDesc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ParameterIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D12_SIGNATURE_PARAMETER_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint, D3D12_SIGNATURE_PARAMETER_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="ParameterIndex">ParameterIndex</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVariableByName" access="public" unsafe="true">
+                <type native="ID3D12ShaderReflectionVariable *">ID3D12ShaderReflectionVariable*</type>
+                <param name="Name">
+                    <type>sbyte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, sbyte*, ID3D12ShaderReflectionVariable*&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetResourceBindingDescByName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="Name">
+                    <type>sbyte*</type>
+                </param>
+                <param name="pDesc">
+                    <type>D3D12_SHADER_INPUT_BIND_DESC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, sbyte*, D3D12_SHADER_INPUT_BIND_DESC*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="Name">Name</param>, <param name="pDesc">pDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMovInstructionCount" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMovcInstructionCount" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetConversionInstructionCount" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBitwiseInstructionCount" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetGSInputPrimitive" access="public" unsafe="true">
+                <type>D3D_PRIMITIVE</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, D3D_PRIMITIVE&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsSampleFrequencyShader" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNumInterfaceSlots" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMinFeatureLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pLevel">
+                    <type>D3D_FEATURE_LEVEL*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, D3D_FEATURE_LEVEL*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="pLevel">pLevel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetThreadGroupSize" access="public" unsafe="true">
+                <type native="UINT">uint</type>
+                <param name="pSizeX">
+                    <type>uint*</type>
+                </param>
+                <param name="pSizeY">
+                    <type>uint*</type>
+                </param>
+                <param name="pSizeZ">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, uint*, uint*, uint*, uint&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>, <param name="pSizeX">pSizeX</param>, <param name="pSizeY">pSizeY</param>, <param name="pSizeZ">pSizeZ</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRequiresFlags" access="public" unsafe="true">
+                <type native="UINT64">ulong</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID3D12ShaderReflection*, ulong&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID3D12ShaderReflection*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

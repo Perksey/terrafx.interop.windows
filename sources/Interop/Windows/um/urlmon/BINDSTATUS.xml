@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="BINDSTATUS" access="public">
+            <type>int</type>
+            <enumerator name="BINDSTATUS_FINDINGRESOURCE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_CONNECTING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_FINDINGRESOURCE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_REDIRECTING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_CONNECTING + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_BEGINDOWNLOADDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_REDIRECTING + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_DOWNLOADINGDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_BEGINDOWNLOADDATA + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_ENDDOWNLOADDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_DOWNLOADINGDATA + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_BEGINDOWNLOADCOMPONENTS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_ENDDOWNLOADDATA + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_INSTALLINGCOMPONENTS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_BEGINDOWNLOADCOMPONENTS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_ENDDOWNLOADCOMPONENTS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_INSTALLINGCOMPONENTS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_USINGCACHEDCOPY" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_ENDDOWNLOADCOMPONENTS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_SENDINGREQUEST" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_USINGCACHEDCOPY + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_CLASSIDAVAILABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_SENDINGREQUEST + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_MIMETYPEAVAILABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_CLASSIDAVAILABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_CACHEFILENAMEAVAILABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_MIMETYPEAVAILABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_BEGINSYNCOPERATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_CACHEFILENAMEAVAILABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_ENDSYNCOPERATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_BEGINSYNCOPERATION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_BEGINUPLOADDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_ENDSYNCOPERATION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_UPLOADINGDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_BEGINUPLOADDATA + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_ENDUPLOADDATA" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_UPLOADINGDATA + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_PROTOCOLCLASSID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_ENDUPLOADDATA + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_ENCODING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_PROTOCOLCLASSID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_VERIFIEDMIMETYPEAVAILABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_ENCODING + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_CLASSINSTALLLOCATION" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_VERIFIEDMIMETYPEAVAILABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_DECODING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_CLASSINSTALLLOCATION + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_LOADINGMIMEHANDLER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_DECODING + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_CONTENTDISPOSITIONATTACH" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_LOADINGMIMEHANDLER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_FILTERREPORTMIMETYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_CONTENTDISPOSITIONATTACH + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_CLSIDCANINSTANTIATE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_FILTERREPORTMIMETYPE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_IUNKNOWNAVAILABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_CLSIDCANINSTANTIATE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_DIRECTBIND" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_IUNKNOWNAVAILABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RAWMIMETYPE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_DIRECTBIND + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_PROXYDETECTING" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RAWMIMETYPE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_ACCEPTRANGES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_PROXYDETECTING + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_COOKIE_SENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_ACCEPTRANGES + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_COMPACT_POLICY_RECEIVED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_COOKIE_SENT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_COOKIE_SUPPRESSED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_COMPACT_POLICY_RECEIVED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_COOKIE_STATE_UNKNOWN" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_COOKIE_SUPPRESSED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_COOKIE_STATE_ACCEPT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_COOKIE_STATE_UNKNOWN + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_COOKIE_STATE_REJECT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_COOKIE_STATE_ACCEPT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_COOKIE_STATE_PROMPT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_COOKIE_STATE_REJECT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_COOKIE_STATE_LEASH" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_COOKIE_STATE_PROMPT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_COOKIE_STATE_DOWNGRADE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_COOKIE_STATE_LEASH + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_POLICY_HREF" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_COOKIE_STATE_DOWNGRADE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_P3P_HEADER" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_POLICY_HREF + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_SESSION_COOKIE_RECEIVED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_P3P_HEADER + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_PERSISTENT_COOKIE_RECEIVED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_SESSION_COOKIE_RECEIVED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_SESSION_COOKIES_ALLOWED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_PERSISTENT_COOKIE_RECEIVED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_CACHECONTROL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_SESSION_COOKIES_ALLOWED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_CONTENTDISPOSITIONFILENAME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_CACHECONTROL + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_MIMETEXTPLAINMISMATCH" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_CONTENTDISPOSITIONFILENAME + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_PUBLISHERAVAILABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_MIMETEXTPLAINMISMATCH + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_DISPLAYNAMEAVAILABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_PUBLISHERAVAILABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_SSLUX_NAVBLOCKED" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_DISPLAYNAMEAVAILABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_SERVER_MIMETYPEAVAILABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_SSLUX_NAVBLOCKED + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_SNIFFED_CLASSIDAVAILABLE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_SERVER_MIMETYPEAVAILABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_64BIT_PROGRESS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_SNIFFED_CLASSIDAVAILABLE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_LAST" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>BINDSTATUS_64BIT_PROGRESS
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_0" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_LAST + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_1" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_0 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_2" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_1 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_3" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_2 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_4" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_3 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_5" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_4 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_6" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_5 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_7" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_6 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_8" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_7 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_9" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_8 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_A" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_9 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_B" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_A + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_C" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_B + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_D" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_C + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_E" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_D + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_F" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_E + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_10" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_F + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_11" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_10 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_12" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_11 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_RESERVED_13" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTATUS_RESERVED_12 + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTATUS_LAST_PRIVATE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>BINDSTATUS_RESERVED_13
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/OAIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="VARDESC" access="public" unsafe="true">
+            <field name="memid" access="public">
+                <type native="MEMBERID">int</type>
+            </field>
+            <field name="lpstrSchema" access="public">
+                <type native="LPOLESTR">ushort*</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="tagVARDESC::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/OAIdl.h:872:36)">_Anonymous_e__Union</type>
+            </field>
+            <field name="oInst" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.oInst, 1));
+        </code>
+                </get>
+            </field>
+            <field name="lpvarValue" access="public">
+                <type native="">ref VARIANT*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;lpvarValue;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="elemdescVar" access="public">
+                <type native="">ELEMDESC</type>
+            </field>
+            <field name="wVarFlags" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="varkind" access="public">
+                <type native="">VARKIND</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="oInst" access="public" offset="0">
+                    <type native="ULONG">uint</type>
+                </field>
+                <field name="lpvarValue" access="public" offset="0">
+                    <type native="VARIANT *">VARIANT*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

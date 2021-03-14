@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wslapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="WslIsDistributionRegistered" access="public" lib="wslapi" static="true">
+                <type native="BOOL">int</type>
+                <param name="distributionName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="WslRegisterDistribution" access="public" lib="wslapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="distributionName">
+                    <type>ushort*</type>
+                </param>
+                <param name="tarGzFilename">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="WslUnregisterDistribution" access="public" lib="wslapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="distributionName">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="WslConfigureDistribution" access="public" lib="wslapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="distributionName">
+                    <type>ushort*</type>
+                </param>
+                <param name="defaultUID">
+                    <type>uint</type>
+                </param>
+                <param name="wslDistributionFlags">
+                    <type>WSL_DISTRIBUTION_FLAGS</type>
+                </param>
+            </function>
+            <function name="WslGetDistributionConfiguration" access="public" lib="wslapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="distributionName">
+                    <type>ushort*</type>
+                </param>
+                <param name="distributionVersion">
+                    <type>uint*</type>
+                </param>
+                <param name="defaultUID">
+                    <type>uint*</type>
+                </param>
+                <param name="wslDistributionFlags">
+                    <type>WSL_DISTRIBUTION_FLAGS*</type>
+                </param>
+                <param name="defaultEnvironmentVariables">
+                    <type>sbyte***</type>
+                </param>
+                <param name="defaultEnvironmentVariableCount">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="WslLaunchInteractive" access="public" lib="wslapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="distributionName">
+                    <type>ushort*</type>
+                </param>
+                <param name="command">
+                    <type>ushort*</type>
+                </param>
+                <param name="useCurrentWorkingDirectory">
+                    <type>int</type>
+                </param>
+                <param name="exitCode">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="WslLaunch" access="public" lib="wslapi" static="true">
+                <type native="HRESULT">int</type>
+                <param name="distributionName">
+                    <type>ushort*</type>
+                </param>
+                <param name="command">
+                    <type>ushort*</type>
+                </param>
+                <param name="useCurrentWorkingDirectory">
+                    <type>int</type>
+                </param>
+                <param name="stdIn">
+                    <type>IntPtr</type>
+                </param>
+                <param name="stdOut">
+                    <type>IntPtr</type>
+                </param>
+                <param name="stdErr">
+                    <type>IntPtr</type>
+                </param>
+                <param name="process">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <constant name="WSL_DISTRIBUTION_FLAGS_VALID" access="public">
+                <type primitive="True">WSL_DISTRIBUTION_FLAGS</type>
+                <value>
+                    <code>(WSL_DISTRIBUTION_FLAGS_ENABLE_INTEROP | WSL_DISTRIBUTION_FLAGS_APPEND_NT_PATH | WSL_DISTRIBUTION_FLAGS_ENABLE_DRIVE_MOUNTING)
+            </code>
+                </value>
+            </constant>
+            <constant name="WSL_DISTRIBUTION_FLAGS_DEFAULT" access="public">
+                <type primitive="True">WSL_DISTRIBUTION_FLAGS</type>
+                <value>
+                    <code>(WSL_DISTRIBUTION_FLAGS_ENABLE_INTEROP | WSL_DISTRIBUTION_FLAGS_APPEND_NT_PATH | WSL_DISTRIBUTION_FLAGS_ENABLE_DRIVE_MOUNTING)
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

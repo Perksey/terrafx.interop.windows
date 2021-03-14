@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winnt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SE_ACCESS_REQUEST" access="public" unsafe="true">
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="SeSecurityDescriptor" access="public">
+                <type native="PSE_SECURITY_DESCRIPTOR">SE_SECURITY_DESCRIPTOR*</type>
+            </field>
+            <field name="DesiredAccess" access="public">
+                <type native="ACCESS_MASK">uint</type>
+            </field>
+            <field name="PreviouslyGrantedAccess" access="public">
+                <type native="ACCESS_MASK">uint</type>
+            </field>
+            <field name="PrincipalSelfSid" access="public">
+                <type native="PSID">void*</type>
+            </field>
+            <field name="GenericMapping" access="public">
+                <type native="PGENERIC_MAPPING">GENERIC_MAPPING*</type>
+            </field>
+            <field name="ObjectTypeListCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ObjectTypeList" access="public">
+                <type native="POBJECT_TYPE_LIST">OBJECT_TYPE_LIST*</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

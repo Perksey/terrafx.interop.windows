@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MFTOPONODE_ATTRIBUTE_UPDATE" access="public">
+            <field name="NodeId" access="public">
+                <type native="TOPOID">ulong</type>
+            </field>
+            <field name="guidAttributeKey" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+            <field name="attrType" access="public">
+                <type native="">MF_ATTRIBUTE_TYPE</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_MFTOPONODE_ATTRIBUTE_UPDATE::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/mfidl.h:10826:36)">_Anonymous_e__Union</type>
+            </field>
+            <field name="u32" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.u32, 1));
+        </code>
+                </get>
+            </field>
+            <field name="u64" access="public">
+                <type native="">ref ulong</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.u64, 1));
+        </code>
+                </get>
+            </field>
+            <field name="d" access="public">
+                <type native="">ref double</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.d, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="u32" access="public" offset="0">
+                    <type native="UINT32">uint</type>
+                </field>
+                <field name="u64" access="public" offset="0">
+                    <type native="UINT64">ulong</type>
+                </field>
+                <field name="d" access="public" offset="0">
+                    <type native="">double</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d2d1svg.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ID2D1SvgElement" access="public" native="struct ID2D1SvgElement : ID2D1Resource" uuid="ac7b67a6-183e-49c1-a823-0ebe40b0db29" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>float</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_FLOAT, &amp;value, sizeof(float));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>float*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_FLOAT, value, sizeof(float));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>DXGI_RGBA*</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_COLOR, value, (uint)(sizeof(DXGI_RGBA)));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>DXGI_RGBA*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_COLOR, value, (uint)(sizeof(DXGI_RGBA)));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_FILL_MODE</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_FILL_MODE, &amp;value, sizeof(D2D1_FILL_MODE));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_FILL_MODE*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_FILL_MODE, value, sizeof(D2D1_FILL_MODE));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_DISPLAY</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_DISPLAY, &amp;value, sizeof(D2D1_SVG_DISPLAY));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_DISPLAY*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_DISPLAY, value, sizeof(D2D1_SVG_DISPLAY));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_OVERFLOW</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_OVERFLOW, &amp;value, sizeof(D2D1_SVG_OVERFLOW));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_OVERFLOW*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_OVERFLOW, value, sizeof(D2D1_SVG_OVERFLOW));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_LINE_JOIN</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_JOIN, &amp;value, sizeof(D2D1_SVG_LINE_JOIN));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_LINE_JOIN*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_JOIN, value, sizeof(D2D1_SVG_LINE_JOIN));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_LINE_CAP</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_CAP, &amp;value, sizeof(D2D1_SVG_LINE_CAP));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_LINE_CAP*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_CAP, value, sizeof(D2D1_SVG_LINE_CAP));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_VISIBILITY</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_VISIBILITY, &amp;value, sizeof(D2D1_SVG_VISIBILITY));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_VISIBILITY*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_VISIBILITY, value, sizeof(D2D1_SVG_VISIBILITY));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_MATRIX, value, (uint)(sizeof(D2D_MATRIX_3X2_F)));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D_MATRIX_3X2_F*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_MATRIX, value, (uint)(sizeof(D2D_MATRIX_3X2_F)));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_UNIT_TYPE</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_UNIT_TYPE, &amp;value, sizeof(D2D1_SVG_UNIT_TYPE));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_UNIT_TYPE*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_UNIT_TYPE, value, sizeof(D2D1_SVG_UNIT_TYPE));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_EXTEND_MODE</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_EXTEND_MODE, &amp;value, sizeof(D2D1_EXTEND_MODE));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_EXTEND_MODE*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_EXTEND_MODE, value, sizeof(D2D1_EXTEND_MODE));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_PRESERVE_ASPECT_RATIO*</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_PRESERVE_ASPECT_RATIO, value, (uint)(sizeof(D2D1_SVG_PRESERVE_ASPECT_RATIO)));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_PRESERVE_ASPECT_RATIO*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_PRESERVE_ASPECT_RATIO, value, (uint)(sizeof(D2D1_SVG_PRESERVE_ASPECT_RATIO)));
+        </code>
+            </function>
+            <function name="SetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_LENGTH*</type>
+                </param>
+                <code>return SetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_LENGTH, value, (uint)(sizeof(D2D1_SVG_LENGTH)));
+        </code>
+            </function>
+            <function name="GetAttributeValue" access="public">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>D2D1_SVG_LENGTH*</type>
+                </param>
+                <code>return GetAttributeValue(name, D2D1_SVG_ATTRIBUTE_POD_TYPE_LENGTH, value, (uint)(sizeof(D2D1_SVG_LENGTH)));
+        </code>
+            </function>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFactory" access="public" unsafe="true">
+                <type>void</type>
+                <param name="factory">
+                    <type>ID2D1Factory**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1Factory**, void&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="factory">factory</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDocument" access="public" unsafe="true">
+                <type>void</type>
+                <param name="document">
+                    <type>ID2D1SvgDocument**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgDocument**, void&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="document">document</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTagName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="nameCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="nameCount">nameCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTagNameLength" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, uint&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsTextContent" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetParent" access="public" unsafe="true">
+                <type>void</type>
+                <param name="parent">
+                    <type>ID2D1SvgElement**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgElement**, void&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="parent">parent</param>);
+        </code>
+                </body>
+            </function>
+            <function name="HasChildren" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFirstChild" access="public" unsafe="true">
+                <type>void</type>
+                <param name="child">
+                    <type>ID2D1SvgElement**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgElement**, void&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="child">child</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetLastChild" access="public" unsafe="true">
+                <type>void</type>
+                <param name="child">
+                    <type>ID2D1SvgElement**</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgElement**, void&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="child">child</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPreviousChild" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="referenceChild">
+                    <type>ID2D1SvgElement*</type>
+                </param>
+                <param name="previousChild">
+                    <type>ID2D1SvgElement**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="referenceChild">referenceChild</param>, <param name="previousChild">previousChild</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetNextChild" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="referenceChild">
+                    <type>ID2D1SvgElement*</type>
+                </param>
+                <param name="nextChild">
+                    <type>ID2D1SvgElement**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="referenceChild">referenceChild</param>, <param name="nextChild">nextChild</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InsertChildBefore" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="newChild">
+                    <type>ID2D1SvgElement*</type>
+                </param>
+                <param name="referenceChild">
+                    <type>ID2D1SvgElement*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="newChild">newChild</param>, <param name="referenceChild">referenceChild</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AppendChild" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="newChild">
+                    <type>ID2D1SvgElement*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgElement*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="newChild">newChild</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ReplaceChild" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="newChild">
+                    <type>ID2D1SvgElement*</type>
+                </param>
+                <param name="oldChild">
+                    <type>ID2D1SvgElement*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="newChild">newChild</param>, <param name="oldChild">oldChild</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveChild" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="oldChild">
+                    <type>ID2D1SvgElement*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ID2D1SvgElement*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="oldChild">oldChild</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateChild" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tagName">
+                    <type>ushort*</type>
+                </param>
+                <param name="newChild">
+                    <type>ID2D1SvgElement**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, ID2D1SvgElement**, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="tagName">tagName</param>, <param name="newChild">newChild</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsAttributeSpecified" access="public" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="inherited">
+                    <type>int*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="inherited">inherited</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSpecifiedAttributeCount" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, uint&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSpecifiedAttributeName" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="nameCount">
+                    <type>uint</type>
+                </param>
+                <param name="inherited">
+                    <type>int*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, uint, ushort*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="index">index</param>, <param name="name">name</param>, <param name="nameCount">nameCount</param>, <param name="inherited">inherited</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSpecifiedAttributeNameLength" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="index">
+                    <type>uint</type>
+                </param>
+                <param name="nameLength">
+                    <type>uint*</type>
+                </param>
+                <param name="inherited">
+                    <type>int*</type>
+                    <init>
+                        <code>null
+        </code>
+                    </init>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, uint, uint*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="index">index</param>, <param name="nameLength">nameLength</param>, <param name="inherited">inherited</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveAttribute" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetTextValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="nameCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">24</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="nameCount">nameCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTextValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="nameCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">25</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="nameCount">nameCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTextValueLength" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, uint&gt;)(lpVtbl[<vtbl explicit="False">26</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAttributeValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="type">
+                    <type>D2D1_SVG_ATTRIBUTE_STRING_TYPE</type>
+                </param>
+                <param name="value">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, D2D1_SVG_ATTRIBUTE_STRING_TYPE, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">27</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="type">type</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAttributeValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="type">
+                    <type>D2D1_SVG_ATTRIBUTE_STRING_TYPE</type>
+                </param>
+                <param name="value">
+                    <type>ushort*</type>
+                </param>
+                <param name="valueCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, D2D1_SVG_ATTRIBUTE_STRING_TYPE, ushort*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">28</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="type">type</param>, <param name="value">value</param>, <param name="valueCount">valueCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAttributeValueLength" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="type">
+                    <type>D2D1_SVG_ATTRIBUTE_STRING_TYPE</type>
+                </param>
+                <param name="valueLength">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, D2D1_SVG_ATTRIBUTE_STRING_TYPE, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">29</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="type">type</param>, <param name="valueLength">valueLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAttributeValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="type">
+                    <type>D2D1_SVG_ATTRIBUTE_POD_TYPE</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSizeInBytes">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, D2D1_SVG_ATTRIBUTE_POD_TYPE, void*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">30</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="type">type</param>, <param name="value">value</param>, <param name="valueSizeInBytes">valueSizeInBytes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAttributeValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="type">
+                    <type>D2D1_SVG_ATTRIBUTE_POD_TYPE</type>
+                </param>
+                <param name="value">
+                    <type>void*</type>
+                </param>
+                <param name="valueSizeInBytes">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, D2D1_SVG_ATTRIBUTE_POD_TYPE, void*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">31</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="type">type</param>, <param name="value">value</param>, <param name="valueSizeInBytes">valueSizeInBytes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAttributeValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="value">
+                    <type>ID2D1SvgAttribute*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, ID2D1SvgAttribute*, int&gt;)(lpVtbl[<vtbl explicit="False">32</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAttributeValue" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="name">
+                    <type>ushort*</type>
+                </param>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="value">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ID2D1SvgElement*, ushort*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">33</vtbl>]))(<param special="thisPtr">(ID2D1SvgElement*)Unsafe.AsPointer(ref this)</param>, <param name="name">name</param>, <param name="riid">riid</param>, <param name="value">value</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

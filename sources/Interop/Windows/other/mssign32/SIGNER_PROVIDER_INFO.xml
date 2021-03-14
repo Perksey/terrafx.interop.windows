@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from https://docs.microsoft.com/en-us/windows/win32/appxpkg/how-to-programmatically-sign-a-package
+        // Original source is Copyright © Microsoft. All rights reserved. Licensed under the MIT License (MIT).
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SIGNER_PROVIDER_INFO" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="pwszProviderName" access="public">
+                <type native="LPCWSTR">ushort*</type>
+            </field>
+            <field name="dwProviderType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwKeySpec" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwPvkChoice" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_SIGNER_PROVIDER_INFO::(anonymous union at ./mssign32.h:72:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="pwszPvkFileName" access="public">
+                <type native="">ref ushort*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pwszPvkFileName;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="pwszKeyContainer" access="public">
+                <type native="">ref ushort*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;pwszKeyContainer;
+        }
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="pwszPvkFileName" access="public" offset="0">
+                    <type native="LPWSTR">ushort*</type>
+                </field>
+                <field name="pwszKeyContainer" access="public" offset="0">
+                    <type native="LPWSTR">ushort*</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

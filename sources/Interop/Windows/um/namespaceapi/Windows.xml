@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/namespaceapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="CreatePrivateNamespaceW" access="public" lib="Kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpPrivateNamespaceAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="lpBoundaryDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="lpAliasPrefix">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="OpenPrivateNamespaceW" access="public" lib="Kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="lpBoundaryDescriptor">
+                    <type>void*</type>
+                </param>
+                <param name="lpAliasPrefix">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <function name="ClosePrivateNamespace" access="public" lib="Kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOLEAN">byte</type>
+                <param name="Handle">
+                    <type>IntPtr</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateBoundaryDescriptorW" access="public" lib="Kernel32" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="Name">
+                    <type>ushort*</type>
+                </param>
+                <param name="Flags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="AddSIDToBoundaryDescriptor" access="public" lib="Kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="BoundaryDescriptor">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="RequiredSid">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="DeleteBoundaryDescriptor" access="public" lib="Kernel32" static="true" unsafe="true">
+                <type>void</type>
+                <param name="BoundaryDescriptor">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <constant name="PRIVATE_NAMESPACE_FLAG_DESTROY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

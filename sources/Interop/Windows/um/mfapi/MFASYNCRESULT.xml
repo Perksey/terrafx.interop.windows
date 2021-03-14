@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="MFASYNCRESULT" access="public" native="struct tagMFASYNCRESULT : IMFAsyncResult" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <field name="overlapped" access="public">
+                <type native="">OVERLAPPED</type>
+            </field>
+            <field name="pCallback" access="public">
+                <type native="IMFAsyncCallback *">IMFAsyncCallback*</type>
+            </field>
+            <field name="hrStatusResult" access="public">
+                <type native="HRESULT">int</type>
+            </field>
+            <field name="dwBytesTransferred" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="hEvent" access="public">
+                <type native="HANDLE">IntPtr</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;MFASYNCRESULT*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(MFASYNCRESULT*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;MFASYNCRESULT*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(MFASYNCRESULT*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;MFASYNCRESULT*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(MFASYNCRESULT*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetState" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppunkState">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;MFASYNCRESULT*, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(MFASYNCRESULT*)Unsafe.AsPointer(ref this)</param>, <param name="ppunkState">ppunkState</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;MFASYNCRESULT*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(MFASYNCRESULT*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hrStatus">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;MFASYNCRESULT*, int, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(MFASYNCRESULT*)Unsafe.AsPointer(ref this)</param>, <param name="hrStatus">hrStatus</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppObject">
+                    <type>IUnknown**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;MFASYNCRESULT*, IUnknown**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(MFASYNCRESULT*)Unsafe.AsPointer(ref this)</param>, <param name="ppObject">ppObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStateNoAddRef" access="public" unsafe="true">
+                <type native="IUnknown *">IUnknown*</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;MFASYNCRESULT*, IUnknown*&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(MFASYNCRESULT*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

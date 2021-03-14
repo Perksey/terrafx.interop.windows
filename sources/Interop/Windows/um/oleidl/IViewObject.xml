@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/oleidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IViewObject" access="public" native="struct IViewObject : IUnknown" uuid="0000010d-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IViewObject*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IViewObject*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IViewObject*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IViewObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IViewObject*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IViewObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Draw" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwDrawAspect">
+                    <type>uint</type>
+                </param>
+                <param name="lindex">
+                    <type>int</type>
+                </param>
+                <param name="pvAspect">
+                    <type>void*</type>
+                </param>
+                <param name="ptd">
+                    <type>DVTARGETDEVICE*</type>
+                </param>
+                <param name="hdcTargetDev">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hdcDraw">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lprcBounds">
+                    <type>RECTL*</type>
+                </param>
+                <param name="lprcWBounds">
+                    <type>RECTL*</type>
+                </param>
+                <param name="pfnContinue">
+                    <type>delegate* unmanaged&lt;nuint, int&gt;</type>
+                </param>
+                <param name="dwContinue">
+                    <type>nuint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IViewObject*, uint, int, void*, DVTARGETDEVICE*, IntPtr, IntPtr, RECTL*, RECTL*, delegate* unmanaged&lt;nuint, int&gt;, nuint, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IViewObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwDrawAspect">dwDrawAspect</param>, <param name="lindex">lindex</param>, <param name="pvAspect">pvAspect</param>, <param name="ptd">ptd</param>, <param name="hdcTargetDev">hdcTargetDev</param>, <param name="hdcDraw">hdcDraw</param>, <param name="lprcBounds">lprcBounds</param>, <param name="lprcWBounds">lprcWBounds</param>, <param name="pfnContinue">pfnContinue</param>, <param name="dwContinue">dwContinue</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetColorSet" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwDrawAspect">
+                    <type>uint</type>
+                </param>
+                <param name="lindex">
+                    <type>int</type>
+                </param>
+                <param name="pvAspect">
+                    <type>void*</type>
+                </param>
+                <param name="ptd">
+                    <type>DVTARGETDEVICE*</type>
+                </param>
+                <param name="hicTargetDev">
+                    <type>IntPtr</type>
+                </param>
+                <param name="ppColorSet">
+                    <type>LOGPALETTE**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IViewObject*, uint, int, void*, DVTARGETDEVICE*, IntPtr, LOGPALETTE**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IViewObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwDrawAspect">dwDrawAspect</param>, <param name="lindex">lindex</param>, <param name="pvAspect">pvAspect</param>, <param name="ptd">ptd</param>, <param name="hicTargetDev">hicTargetDev</param>, <param name="ppColorSet">ppColorSet</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Freeze" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwDrawAspect">
+                    <type>uint</type>
+                </param>
+                <param name="lindex">
+                    <type>int</type>
+                </param>
+                <param name="pvAspect">
+                    <type>void*</type>
+                </param>
+                <param name="pdwFreeze">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IViewObject*, uint, int, void*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IViewObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwDrawAspect">dwDrawAspect</param>, <param name="lindex">lindex</param>, <param name="pvAspect">pvAspect</param>, <param name="pdwFreeze">pdwFreeze</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Unfreeze" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFreeze">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IViewObject*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IViewObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwFreeze">dwFreeze</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetAdvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="aspects">
+                    <type>uint</type>
+                </param>
+                <param name="advf">
+                    <type>uint</type>
+                </param>
+                <param name="pAdvSink">
+                    <type>IAdviseSink*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IViewObject*, uint, uint, IAdviseSink*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IViewObject*)Unsafe.AsPointer(ref this)</param>, <param name="aspects">aspects</param>, <param name="advf">advf</param>, <param name="pAdvSink">pAdvSink</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAdvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pAspects">
+                    <type>uint*</type>
+                </param>
+                <param name="pAdvf">
+                    <type>uint*</type>
+                </param>
+                <param name="ppAdvSink">
+                    <type>IAdviseSink**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IViewObject*, uint*, uint*, IAdviseSink**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IViewObject*)Unsafe.AsPointer(ref this)</param>, <param name="pAspects">pAspects</param>, <param name="pAdvf">pAdvf</param>, <param name="ppAdvSink">ppAdvSink</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/minwinbase.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="FIND_FIRST_EX_CASE_SENSITIVE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="FIND_FIRST_EX_LARGE_FETCH" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="FIND_FIRST_EX_ON_DISK_ENTRIES_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="LOCKFILE_FAIL_IMMEDIATELY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="LOCKFILE_EXCLUSIVE_LOCK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_HEAP_REGION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_HEAP_UNCOMMITTED_RANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_HEAP_ENTRY_BUSY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_HEAP_SEG_ALLOC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_HEAP_ENTRY_MOVEABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="PROCESS_HEAP_ENTRY_DDESHARE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0020
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_DEBUG_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>1
+            </code>
+                </value>
+            </constant>
+            <constant name="CREATE_THREAD_DEBUG_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>2
+            </code>
+                </value>
+            </constant>
+            <constant name="CREATE_PROCESS_DEBUG_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>3
+            </code>
+                </value>
+            </constant>
+            <constant name="EXIT_THREAD_DEBUG_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>4
+            </code>
+                </value>
+            </constant>
+            <constant name="EXIT_PROCESS_DEBUG_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>5
+            </code>
+                </value>
+            </constant>
+            <constant name="LOAD_DLL_DEBUG_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>6
+            </code>
+                </value>
+            </constant>
+            <constant name="UNLOAD_DLL_DEBUG_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>7
+            </code>
+                </value>
+            </constant>
+            <constant name="OUTPUT_DEBUG_STRING_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>8
+            </code>
+                </value>
+            </constant>
+            <constant name="RIP_EVENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>9
+            </code>
+                </value>
+            </constant>
+            <constant name="STILL_ACTIVE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x00000103)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_ACCESS_VIOLATION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000005)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_DATATYPE_MISALIGNMENT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x80000002)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_BREAKPOINT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x80000003)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_SINGLE_STEP" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x80000004)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_ARRAY_BOUNDS_EXCEEDED" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC000008C)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_FLT_DENORMAL_OPERAND" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC000008D)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_FLT_DIVIDE_BY_ZERO" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC000008E)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_FLT_INEXACT_RESULT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC000008F)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_FLT_INVALID_OPERATION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000090)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_FLT_OVERFLOW" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000091)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_FLT_STACK_CHECK" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000092)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_FLT_UNDERFLOW" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000093)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_INT_DIVIDE_BY_ZERO" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000094)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_INT_OVERFLOW" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000095)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_PRIV_INSTRUCTION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000096)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_IN_PAGE_ERROR" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000006)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_ILLEGAL_INSTRUCTION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC000001D)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_NONCONTINUABLE_EXCEPTION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000025)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_STACK_OVERFLOW" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC00000FD)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_INVALID_DISPOSITION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000026)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_GUARD_PAGE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0x80000001)
+            </code>
+                </value>
+            </constant>
+            <constant name="EXCEPTION_INVALID_HANDLE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC0000008)
+            </code>
+                </value>
+            </constant>
+            <constant name="CONTROL_C_EXIT" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>
+                        <value></value>((uint)0xC000013A)
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_FIXED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0000
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_MOVEABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_NOCOMPACT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_NODISCARD" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0020
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_ZEROINIT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0040
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_MODIFY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0080
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_DISCARDABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0F00
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_VALID_FLAGS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0F72
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_INVALID_HANDLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x8000
+            </code>
+                </value>
+            </constant>
+            <constant name="LHND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0002 | 0x0040)
+            </code>
+                </value>
+            </constant>
+            <constant name="LPTR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0000 | 0x0040)
+            </code>
+                </value>
+            </constant>
+            <constant name="NONZEROLHND" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0002)
+            </code>
+                </value>
+            </constant>
+            <constant name="NONZEROLPTR" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x0000)
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_DISCARDED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4000
+            </code>
+                </value>
+            </constant>
+            <constant name="LMEM_LOCKCOUNT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00FF
+            </code>
+                </value>
+            </constant>
+            <constant name="NUMA_NO_PREFERRED_NODE" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((uint)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

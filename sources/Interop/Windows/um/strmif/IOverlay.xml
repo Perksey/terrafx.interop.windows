@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IOverlay" access="public" native="struct IOverlay : IUnknown" uuid="56a868a1-0ad4-11ce-b03a-0020af0ba770" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetPalette" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwColors">
+                    <type>uint*</type>
+                </param>
+                <param name="ppPalette">
+                    <type>PALETTEENTRY**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, uint*, PALETTEENTRY**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="pdwColors">pdwColors</param>, <param name="ppPalette">ppPalette</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPalette" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwColors">
+                    <type>uint</type>
+                </param>
+                <param name="pPalette">
+                    <type>PALETTEENTRY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, uint, PALETTEENTRY*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="dwColors">dwColors</param>, <param name="pPalette">pPalette</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDefaultColorKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pColorKey">
+                    <type>COLORKEY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, COLORKEY*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="pColorKey">pColorKey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetColorKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pColorKey">
+                    <type>COLORKEY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, COLORKEY*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="pColorKey">pColorKey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetColorKey" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pColorKey">
+                    <type>COLORKEY*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, COLORKEY*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="pColorKey">pColorKey</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWindowHandle" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pHwnd">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="pHwnd">pHwnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetClipList" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSourceRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="pDestinationRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="ppRgnData">
+                    <type>RGNDATA**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, RECT*, RECT*, RGNDATA**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="pSourceRect">pSourceRect</param>, <param name="pDestinationRect">pDestinationRect</param>, <param name="ppRgnData">ppRgnData</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVideoPosition" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pSourceRect">
+                    <type>RECT*</type>
+                </param>
+                <param name="pDestinationRect">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, RECT*, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="pSourceRect">pSourceRect</param>, <param name="pDestinationRect">pDestinationRect</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Advise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pOverlayNotify">
+                    <type>IOverlayNotify*</type>
+                </param>
+                <param name="dwInterests">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, IOverlayNotify*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>, <param name="pOverlayNotify">pOverlayNotify</param>, <param name="dwInterests">dwInterests</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Unadvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOverlay*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IOverlay*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

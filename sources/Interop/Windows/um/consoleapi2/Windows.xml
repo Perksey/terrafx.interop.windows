@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/consoleapi2.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true" unsafe="true">
+            <function name="FillConsoleOutputCharacterA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="cCharacter">
+                    <type>sbyte</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwWriteCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpNumberOfCharsWritten">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="FillConsoleOutputCharacterW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="cCharacter">
+                    <type>ushort</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwWriteCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpNumberOfCharsWritten">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="FillConsoleOutputAttribute" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="wAttribute">
+                    <type>ushort</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwWriteCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpNumberOfAttrsWritten">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="GenerateConsoleCtrlEvent" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="dwCtrlEvent">
+                    <type>uint</type>
+                </param>
+                <param name="dwProcessGroupId">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="CreateConsoleScreenBuffer" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="HANDLE">IntPtr</type>
+                <param name="dwDesiredAccess">
+                    <type>uint</type>
+                </param>
+                <param name="dwShareMode">
+                    <type>uint</type>
+                </param>
+                <param name="lpSecurityAttributes">
+                    <type>SECURITY_ATTRIBUTES*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="lpScreenBufferData">
+                    <type>void*</type>
+                </param>
+            </function>
+            <function name="SetConsoleActiveScreenBuffer" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="FlushConsoleInputBuffer" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="SetConsoleCP" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="wCodePageID">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetConsoleOutputCP" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="wCodePageID">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetConsoleCursorInfo" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpConsoleCursorInfo">
+                    <type>CONSOLE_CURSOR_INFO*</type>
+                </param>
+            </function>
+            <function name="SetConsoleCursorInfo" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpConsoleCursorInfo">
+                    <type>CONSOLE_CURSOR_INFO*</type>
+                </param>
+            </function>
+            <function name="GetConsoleScreenBufferInfo" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpConsoleScreenBufferInfo">
+                    <type>CONSOLE_SCREEN_BUFFER_INFO*</type>
+                </param>
+            </function>
+            <function name="GetConsoleScreenBufferInfoEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpConsoleScreenBufferInfoEx">
+                    <type>CONSOLE_SCREEN_BUFFER_INFOEX*</type>
+                </param>
+            </function>
+            <function name="SetConsoleScreenBufferInfoEx" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpConsoleScreenBufferInfoEx">
+                    <type>CONSOLE_SCREEN_BUFFER_INFOEX*</type>
+                </param>
+            </function>
+            <function name="SetConsoleScreenBufferSize" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwSize">
+                    <type>COORD</type>
+                </param>
+            </function>
+            <function name="SetConsoleCursorPosition" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="dwCursorPosition">
+                    <type>COORD</type>
+                </param>
+            </function>
+            <function name="GetLargestConsoleWindowSize" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type>COORD</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="SetConsoleTextAttribute" access="public" lib="kernel32" setlasterror="true" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="wAttributes">
+                    <type>ushort</type>
+                </param>
+            </function>
+            <function name="SetConsoleWindowInfo" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="bAbsolute">
+                    <type>int</type>
+                </param>
+                <param name="lpConsoleWindow">
+                    <type>SMALL_RECT*</type>
+                </param>
+            </function>
+            <function name="WriteConsoleOutputCharacterA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpCharacter">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwWriteCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpNumberOfCharsWritten">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="WriteConsoleOutputCharacterW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpCharacter">
+                    <type>ushort*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwWriteCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpNumberOfCharsWritten">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="WriteConsoleOutputAttribute" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpAttribute">
+                    <type>ushort*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwWriteCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpNumberOfAttrsWritten">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="ReadConsoleOutputCharacterA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpCharacter">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwReadCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpNumberOfCharsRead">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="ReadConsoleOutputCharacterW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpCharacter">
+                    <type>ushort*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwReadCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpNumberOfCharsRead">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="ReadConsoleOutputAttribute" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpAttribute">
+                    <type>ushort*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="dwReadCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpNumberOfAttrsRead">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="WriteConsoleInputA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>INPUT_RECORD*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfEventsWritten">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="WriteConsoleInputW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleInput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>INPUT_RECORD*</type>
+                </param>
+                <param name="nLength">
+                    <type>uint</type>
+                </param>
+                <param name="lpNumberOfEventsWritten">
+                    <type>uint*</type>
+                </param>
+            </function>
+            <function name="ScrollConsoleScreenBufferA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpScrollRectangle">
+                    <type>SMALL_RECT*</type>
+                </param>
+                <param name="lpClipRectangle">
+                    <type>SMALL_RECT*</type>
+                </param>
+                <param name="dwDestinationOrigin">
+                    <type>COORD</type>
+                </param>
+                <param name="lpFill">
+                    <type>CHAR_INFO*</type>
+                </param>
+            </function>
+            <function name="ScrollConsoleScreenBufferW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpScrollRectangle">
+                    <type>SMALL_RECT*</type>
+                </param>
+                <param name="lpClipRectangle">
+                    <type>SMALL_RECT*</type>
+                </param>
+                <param name="dwDestinationOrigin">
+                    <type>COORD</type>
+                </param>
+                <param name="lpFill">
+                    <type>CHAR_INFO*</type>
+                </param>
+            </function>
+            <function name="WriteConsoleOutputA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>CHAR_INFO*</type>
+                </param>
+                <param name="dwBufferSize">
+                    <type>COORD</type>
+                </param>
+                <param name="dwBufferCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpWriteRegion">
+                    <type>SMALL_RECT*</type>
+                </param>
+            </function>
+            <function name="WriteConsoleOutputW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>CHAR_INFO*</type>
+                </param>
+                <param name="dwBufferSize">
+                    <type>COORD</type>
+                </param>
+                <param name="dwBufferCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpWriteRegion">
+                    <type>SMALL_RECT*</type>
+                </param>
+            </function>
+            <function name="ReadConsoleOutputA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>CHAR_INFO*</type>
+                </param>
+                <param name="dwBufferSize">
+                    <type>COORD</type>
+                </param>
+                <param name="dwBufferCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpReadRegion">
+                    <type>SMALL_RECT*</type>
+                </param>
+            </function>
+            <function name="ReadConsoleOutputW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="hConsoleOutput">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpBuffer">
+                    <type>CHAR_INFO*</type>
+                </param>
+                <param name="dwBufferSize">
+                    <type>COORD</type>
+                </param>
+                <param name="dwBufferCoord">
+                    <type>COORD</type>
+                </param>
+                <param name="lpReadRegion">
+                    <type>SMALL_RECT*</type>
+                </param>
+            </function>
+            <function name="GetConsoleTitleA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpConsoleTitle">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetConsoleTitleW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpConsoleTitle">
+                    <type>ushort*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetConsoleOriginalTitleA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpConsoleTitle">
+                    <type>sbyte*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="GetConsoleOriginalTitleW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="DWORD">uint</type>
+                <param name="lpConsoleTitle">
+                    <type>ushort*</type>
+                </param>
+                <param name="nSize">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="SetConsoleTitleA" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpConsoleTitle">
+                    <type>sbyte*</type>
+                </param>
+            </function>
+            <function name="SetConsoleTitleW" access="public" lib="kernel32" setlasterror="true" static="true">
+                <type native="BOOL">int</type>
+                <param name="lpConsoleTitle">
+                    <type>ushort*</type>
+                </param>
+            </function>
+            <constant name="FOREGROUND_BLUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0001
+            </code>
+                </value>
+            </constant>
+            <constant name="FOREGROUND_GREEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0002
+            </code>
+                </value>
+            </constant>
+            <constant name="FOREGROUND_RED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0004
+            </code>
+                </value>
+            </constant>
+            <constant name="FOREGROUND_INTENSITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0008
+            </code>
+                </value>
+            </constant>
+            <constant name="BACKGROUND_BLUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0010
+            </code>
+                </value>
+            </constant>
+            <constant name="BACKGROUND_GREEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0020
+            </code>
+                </value>
+            </constant>
+            <constant name="BACKGROUND_RED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0040
+            </code>
+                </value>
+            </constant>
+            <constant name="BACKGROUND_INTENSITY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0080
+            </code>
+                </value>
+            </constant>
+            <constant name="COMMON_LVB_LEADING_BYTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0100
+            </code>
+                </value>
+            </constant>
+            <constant name="COMMON_LVB_TRAILING_BYTE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0200
+            </code>
+                </value>
+            </constant>
+            <constant name="COMMON_LVB_GRID_HORIZONTAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0400
+            </code>
+                </value>
+            </constant>
+            <constant name="COMMON_LVB_GRID_LVERTICAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0800
+            </code>
+                </value>
+            </constant>
+            <constant name="COMMON_LVB_GRID_RVERTICAL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x1000
+            </code>
+                </value>
+            </constant>
+            <constant name="COMMON_LVB_REVERSE_VIDEO" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x4000
+            </code>
+                </value>
+            </constant>
+            <constant name="COMMON_LVB_UNDERSCORE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x8000
+            </code>
+                </value>
+            </constant>
+            <constant name="COMMON_LVB_SBCSDBCS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x0300
+            </code>
+                </value>
+            </constant>
+            <constant name="FillConsoleOutputCharacter" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort, uint, COORD, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>FillConsoleOutputCharacterW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="WriteConsoleOutputCharacter" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, uint, COORD, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>WriteConsoleOutputCharacterW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ReadConsoleOutputCharacter" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, ushort*, uint, COORD, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>ReadConsoleOutputCharacterW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="WriteConsoleInput" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, INPUT_RECORD*, uint, uint*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>WriteConsoleInputW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ScrollConsoleScreenBuffer" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, SMALL_RECT*, SMALL_RECT*, COORD, CHAR_INFO*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>ScrollConsoleScreenBufferW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="WriteConsoleOutput" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, CHAR_INFO*, COORD, COORD, SMALL_RECT*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>WriteConsoleOutputW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="ReadConsoleOutput" access="public">
+                <type primitive="False">delegate*&lt;IntPtr, CHAR_INFO*, COORD, COORD, SMALL_RECT*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>ReadConsoleOutputW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetConsoleTitle" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetConsoleTitleW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="GetConsoleOriginalTitle" access="public">
+                <type primitive="False">delegate*&lt;ushort*, uint, uint&gt;</type>
+                <value>
+                    <deref>
+                        <code>GetConsoleOriginalTitleW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+            <constant name="SetConsoleTitle" access="public">
+                <type primitive="False">delegate*&lt;ushort*, int&gt;</type>
+                <value>
+                    <deref>
+                        <code>SetConsoleTitleW
+            </code>
+                    </deref>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

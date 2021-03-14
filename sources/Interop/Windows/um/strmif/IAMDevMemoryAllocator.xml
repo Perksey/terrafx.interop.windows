@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/strmif.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAMDevMemoryAllocator" access="public" native="struct IAMDevMemoryAllocator : IUnknown" uuid="c6545bf0-e76b-11d0-bd52-00a0c911ce86" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMDevMemoryAllocator*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAMDevMemoryAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMDevMemoryAllocator*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAMDevMemoryAllocator*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMDevMemoryAllocator*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAMDevMemoryAllocator*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwcbTotalFree">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwcbLargestFree">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwcbTotalMemory">
+                    <type>uint*</type>
+                </param>
+                <param name="pdwcbMinimumChunk">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMDevMemoryAllocator*, uint*, uint*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAMDevMemoryAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="pdwcbTotalFree">pdwcbTotalFree</param>, <param name="pdwcbLargestFree">pdwcbLargestFree</param>, <param name="pdwcbTotalMemory">pdwcbTotalMemory</param>, <param name="pdwcbMinimumChunk">pdwcbMinimumChunk</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CheckMemory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pBuffer">
+                    <type>byte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMDevMemoryAllocator*, byte*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAMDevMemoryAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="pBuffer">pBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Alloc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppBuffer">
+                    <type>byte**</type>
+                </param>
+                <param name="pdwcbBuffer">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMDevMemoryAllocator*, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAMDevMemoryAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="ppBuffer">ppBuffer</param>, <param name="pdwcbBuffer">pdwcbBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Free" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pBuffer">
+                    <type>byte*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMDevMemoryAllocator*, byte*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAMDevMemoryAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="pBuffer">pBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDevMemoryObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppUnkInnner">
+                    <type>IUnknown**</type>
+                </param>
+                <param name="pUnkOuter">
+                    <type>IUnknown*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAMDevMemoryAllocator*, IUnknown**, IUnknown*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAMDevMemoryAllocator*)Unsafe.AsPointer(ref this)</param>, <param name="ppUnkInnner">ppUnkInnner</param>, <param name="pUnkOuter">pUnkOuter</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

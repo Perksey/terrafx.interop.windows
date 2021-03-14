@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/TextStor.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <constant name="GUID_TS_SERVICE_DATAOBJECT" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0x6086fbb5, 0xe225, 0x46ce, 0xa7, 0x70, 0xc1, 0xbb, 0xd3, 0xe0, 0x5d, 0x7b)
+            </code>
+                </value>
+            </constant>
+            <constant name="GUID_TS_SERVICE_ACCESSIBLE" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xf9786200, 0xa5bf, 0x4a0f, 0x8c, 0x24, 0xfb, 0x16, 0xf5, 0xd1, 0xaa, 0xbb)
+            </code>
+                </value>
+            </constant>
+            <constant name="GUID_TS_SERVICE_ACTIVEX" access="public">
+                <type primitive="False">Guid</type>
+                <value>
+                    <code>new Guid(0xea937a50, 0xc9a6, 0x4b7d, 0x89, 0x4a, 0x49, 0xd9, 0x9b, 0x78, 0x48, 0x34)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_E_INVALIDPOS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0200))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_NOLOCK" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0201))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_NOOBJECT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0202))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_NOSERVICE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0203))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_NOINTERFACE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0204))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_NOSELECTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0205))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_NOLAYOUT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0206))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_INVALIDPOINT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0207))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_SYNCHRONOUS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0208))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_READONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0209))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_E_FORMAT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(1) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x020a))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_S_ASYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <unchecked>
+                        <code>((int)(((uint)(0) &lt;&lt; 31) | ((uint)(4) &lt;&lt; 16) | ((uint)(0x0300))))
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="TS_AS_TEXT_CHANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_AS_SEL_CHANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_AS_LAYOUT_CHANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x4)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_AS_ATTR_CHANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x8)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_AS_STATUS_CHANGE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x10)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_AS_ALL_SINKS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>((((((0x1) | (0x2)) | (0x4)) | (0x8)) | (0x10)))
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_LF_SYNC" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_LF_READ" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_LF_READWRITE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x6)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_READONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_LOADING" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_RESERVED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x4)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_TKBAUTOCORRECTENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x8)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_TKBPREDICTIONENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x10)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_UIINTEGRATIONENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x20)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_INPUTPANEMANUALDISPLAYENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x40)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_EMBEDDEDHANDWRITINGVIEW_ENABLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x80)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_EMBEDDEDHANDWRITINGVIEW_VISIBLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x100)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SS_DISJOINTSEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SS_REGIONS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SS_TRANSITORY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x4)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SS_NOHIDDENTEXT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x8)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SS_TKBAUTOCORRECTENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x10)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SS_TKBPREDICTIONENABLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x20)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SS_UWPCONTROL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x40)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SD_MASKALL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(((0x1) | (0x2)))
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_ST_CORRECTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_IE_CORRECTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_IE_COMPOSITION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_TC_CORRECTION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_IAS_NOQUERY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_IAS_QUERYONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_DEFAULT_SELECTION" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <unchecked>
+                        <code>
+                            <value></value>((uint)-1)
+            </code>
+                    </unchecked>
+                </value>
+            </constant>
+            <constant name="GXFPF_ROUND_NEAREST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="GXFPF_NEAREST" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_CHAR_EMBEDDED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0xfffc)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_CHAR_REGION" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_CHAR_REPLACEMENT" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0xfffd)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_ATTR_FIND_BACKWARDS" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_ATTR_FIND_WANT_OFFSET" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_ATTR_FIND_UPDATESTART" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x4)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_ATTR_FIND_WANT_VALUE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x8)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_ATTR_FIND_WANT_END" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x10)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_ATTR_FIND_HIDDEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x20)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_VCOOKIE_NUL" access="public">
+                <type primitive="True">uint</type>
+                <value>
+                    <code>(0xffffffff)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_CH_PRECEDING_DEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_CH_FOLLOWING_DEL" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SHIFT_COUNT_HIDDEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SHIFT_HALT_HIDDEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x2)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SHIFT_HALT_VISIBLE" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x4)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_SHIFT_COUNT_ONLY" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x8)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_GTA_HIDDEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <constant name="TS_GEA_HIDDEN" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>(0x1)
+            </code>
+                </value>
+            </constant>
+            <iid name="IID_ITextStoreACP" value="0x28888FE3, 0xC2A0, 0x483A, 0xA3, 0xEA, 0x8C, 0xB1, 0xCE, 0x51, 0xFF, 0x3D" />
+            <iid name="IID_ITextStoreACP2" value="0xF86AD89F, 0x5FE4, 0x4B8D, 0xBB, 0x9F, 0xEF, 0x37, 0x97, 0xA8, 0x4F, 0x1F" />
+            <iid name="IID_ITextStoreACPSink" value="0x22D44C94, 0xA419, 0x4542, 0xA2, 0x72, 0xAE, 0x26, 0x09, 0x3E, 0xCE, 0xCF" />
+            <iid name="IID_IAnchor" value="0x0FEB7E34, 0x5A60, 0x4356, 0x8E, 0xF7, 0xAB, 0xDE, 0xC2, 0xFF, 0x7C, 0xF8" />
+            <iid name="IID_ITextStoreAnchor" value="0x9B2077B0, 0x5F18, 0x4DEC, 0xBE, 0xE9, 0x3C, 0xC7, 0x22, 0xF5, 0xDF, 0xE0" />
+            <iid name="IID_ITextStoreAnchorSink" value="0xAA80E905, 0x2021, 0x11D2, 0x93, 0xE0, 0x00, 0x60, 0xB0, 0x67, 0xB8, 0x6E" />
+        </class>
+    </namespace>
+</bindings>

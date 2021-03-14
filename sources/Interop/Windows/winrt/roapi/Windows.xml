@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from winrt/roapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="RoInitialize" access="public" lib="combase" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="initType">
+                    <type>RO_INIT_TYPE</type>
+                </param>
+            </function>
+            <function name="RoUninitialize" access="public" lib="combase" static="true" unsafe="true">
+                <type>void</type>
+            </function>
+            <function name="RoActivateInstance" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="activatableClassId">
+                    <type>IntPtr</type>
+                </param>
+                <param name="instance">
+                    <type>IInspectable**</type>
+                </param>
+            </function>
+            <function name="RoRegisterActivationFactories" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="activatableClassIds">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="activationFactoryCallbacks">
+                    <type>delegate* unmanaged&lt;IntPtr, IActivationFactory**, int&gt;*</type>
+                </param>
+                <param name="count">
+                    <type>uint</type>
+                </param>
+                <param name="cookie">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="RoRevokeActivationFactories" access="public" lib="combase" static="true" unsafe="true">
+                <type>void</type>
+                <param name="cookie">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="RoGetActivationFactory" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="activatableClassId">
+                    <type>IntPtr</type>
+                </param>
+                <param name="iid">
+                    <type>Guid*</type>
+                </param>
+                <param name="factory">
+                    <type>void**</type>
+                </param>
+            </function>
+            <function name="RoRegisterForApartmentShutdown" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="callbackObject">
+                    <type>IApartmentShutdown*</type>
+                </param>
+                <param name="apartmentIdentifier">
+                    <type>ulong*</type>
+                </param>
+                <param name="regCookie">
+                    <type>IntPtr*</type>
+                </param>
+            </function>
+            <function name="RoUnregisterForApartmentShutdown" access="public" lib="combase" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="regCookie">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="RoGetApartmentIdentifier" access="public" lib="combase" static="true">
+                <type native="HRESULT">int</type>
+                <param name="apartmentIdentifier">
+                    <type>ulong*</type>
+                </param>
+            </function>
+            <function name="Initialize" access="public" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="initType">
+                    <type>RO_INIT_TYPE</type>
+                    <init>
+                        <code>RO_INIT_SINGLETHREADED
+            </code>
+                    </init>
+                </param>
+                <code>return RoInitialize(initType);
+            </code>
+            </function>
+            <function name="Uninitialize" access="public" static="true" unsafe="true">
+                <type>void</type>
+                <code>RoUninitialize();
+            </code>
+            </function>
+            <function name="RegisterActivationFactories" access="public" static="true">
+                <type native="HRESULT">int</type>
+                <param name="activatableClassIds">
+                    <type>IntPtr*</type>
+                </param>
+                <param name="activationFactoryCallbacks">
+                    <type>delegate* unmanaged&lt;IntPtr, IActivationFactory**, int&gt;*</type>
+                </param>
+                <param name="count">
+                    <type>uint</type>
+                </param>
+                <param name="cookie">
+                    <type>IntPtr*</type>
+                </param>
+                <code>return RoRegisterActivationFactories(activatableClassIds, activationFactoryCallbacks, count, cookie);
+            </code>
+            </function>
+            <function name="RevokeActivationFactories" access="public" static="true" unsafe="true">
+                <type>void</type>
+                <param name="cookie">
+                    <type>IntPtr</type>
+                </param>
+                <code>RoRevokeActivationFactories(cookie);
+            </code>
+            </function>
+        </class>
+    </namespace>
+</bindings>

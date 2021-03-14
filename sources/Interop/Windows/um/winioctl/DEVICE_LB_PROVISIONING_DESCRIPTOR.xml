@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DEVICE_LB_PROVISIONING_DESCRIPTOR" access="public" unsafe="true">
+            <field name="Version" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Size" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="_bitfield" access="public">
+                <type native="">byte</type>
+            </field>
+            <field name="ThinProvisioningEnabled" access="public">
+                <type native="BYTE : 1">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)(<bitfieldName>_bitfield</bitfieldName> &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>));
+        </code>
+                </set>
+            </field>
+            <field name="ThinProvisioningReadZeros" access="public">
+                <type native="BYTE : 1">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>1</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>1</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 1));
+        </code>
+                </set>
+            </field>
+            <field name="AnchorSupported" access="public">
+                <type native="BYTE : 3">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>2</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>7u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>7u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>2</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>7u</bitwidthHexString>) &lt;&lt; 2));
+        </code>
+                </set>
+            </field>
+            <field name="UnmapGranularityAlignmentValid" access="public">
+                <type native="BYTE : 1">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>5</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>1u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>5</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>1u</bitwidthHexString>) &lt;&lt; 5));
+        </code>
+                </set>
+            </field>
+            <field name="Reserved0" access="public">
+                <type native="BYTE : 2">byte</type>
+                <get inlining="aggressive">
+                    <code>return (<typeName>byte</typeName>)((<bitfieldName>_bitfield</bitfieldName> &gt;&gt; <bitfieldOffset>6</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking>);
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield</bitfieldName> = (<typeNameBacking>byte</typeNameBacking>)((_bitfield &amp; ~(0x<bitwidthHexStringBacking>3u</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>6</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>3u</bitwidthHexString>) &lt;&lt; 6));
+        </code>
+                </set>
+            </field>
+            <field name="Reserved1" access="public">
+                <type native="BYTE [7]" count="7" fixed="_Reserved1_e__FixedBuffer">byte</type>
+            </field>
+            <field name="OptimalUnmapGranularity" access="public">
+                <type native="DWORDLONG">ulong</type>
+            </field>
+            <field name="UnmapGranularityAlignment" access="public">
+                <type native="DWORDLONG">ulong</type>
+            </field>
+            <field name="MaxUnmapLbaCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="MaxUnmapBlockDescriptorCount" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

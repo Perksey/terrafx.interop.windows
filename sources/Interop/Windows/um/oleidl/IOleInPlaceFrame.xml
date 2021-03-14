@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/oleidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IOleInPlaceFrame" access="public" native="struct IOleInPlaceFrame : IOleInPlaceUIWindow" uuid="00000116-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetWindow" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="phwnd">
+                    <type>IntPtr*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, IntPtr*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="phwnd">phwnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ContextSensitiveHelp" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fEnterMode">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, int, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="fEnterMode">fEnterMode</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetBorder" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lprectBorder">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="lprectBorder">lprectBorder</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RequestBorderSpace" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pborderwidths">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="pborderwidths">pborderwidths</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetBorderSpace" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pborderwidths">
+                    <type>RECT*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, RECT*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="pborderwidths">pborderwidths</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetActiveObject" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pActiveObject">
+                    <type>IOleInPlaceActiveObject*</type>
+                </param>
+                <param name="pszObjName">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, IOleInPlaceActiveObject*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="pActiveObject">pActiveObject</param>, <param name="pszObjName">pszObjName</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InsertMenus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hmenuShared">
+                    <type>IntPtr</type>
+                </param>
+                <param name="lpMenuWidths">
+                    <type>OLEMENUGROUPWIDTHS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, IntPtr, OLEMENUGROUPWIDTHS*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="hmenuShared">hmenuShared</param>, <param name="lpMenuWidths">lpMenuWidths</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMenu" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hmenuShared">
+                    <type>IntPtr</type>
+                </param>
+                <param name="holemenu">
+                    <type>IntPtr</type>
+                </param>
+                <param name="hwndActiveObject">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, IntPtr, IntPtr, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="hmenuShared">hmenuShared</param>, <param name="holemenu">holemenu</param>, <param name="hwndActiveObject">hwndActiveObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RemoveMenus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="hmenuShared">
+                    <type>IntPtr</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, IntPtr, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="hmenuShared">hmenuShared</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetStatusText" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pszStatusText">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="pszStatusText">pszStatusText</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnableModeless" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fEnable">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, int, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="fEnable">fEnable</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TranslateAccelerator" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lpmsg">
+                    <type>MSG*</type>
+                </param>
+                <param name="wID">
+                    <type>ushort</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IOleInPlaceFrame*, MSG*, ushort, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IOleInPlaceFrame*)Unsafe.AsPointer(ref this)</param>, <param name="lpmsg">lpmsg</param>, <param name="wID">wID</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfcontentdecryptionmodule.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFContentDecryptionModule" access="public" native="struct IMFContentDecryptionModule : IUnknown" uuid="87be986c-10be-4943-bf48-4b54ce1983a2" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetContentEnabler" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="contentEnabler">
+                    <type>IMFContentEnabler*</type>
+                </param>
+                <param name="result">
+                    <type>IMFAsyncResult*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, IMFContentEnabler*, IMFAsyncResult*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>, <param name="contentEnabler">contentEnabler</param>, <param name="result">result</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSuspendNotify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="notify">
+                    <type>IMFCdmSuspendNotify**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, IMFCdmSuspendNotify**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>, <param name="notify">notify</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetPMPHostApp" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pmpHostApp">
+                    <type>IMFPMPHostApp*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, IMFPMPHostApp*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>, <param name="pmpHostApp">pmpHostApp</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateSession" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="sessionType">
+                    <type>MF_MEDIAKEYSESSION_TYPE</type>
+                </param>
+                <param name="callbacks">
+                    <type>IMFContentDecryptionModuleSessionCallbacks*</type>
+                </param>
+                <param name="session">
+                    <type>IMFContentDecryptionModuleSession**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, MF_MEDIAKEYSESSION_TYPE, IMFContentDecryptionModuleSessionCallbacks*, IMFContentDecryptionModuleSession**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>, <param name="sessionType">sessionType</param>, <param name="callbacks">callbacks</param>, <param name="session">session</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetServerCertificate" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="certificate">
+                    <type>byte*</type>
+                </param>
+                <param name="certificateSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>, <param name="certificate">certificate</param>, <param name="certificateSize">certificateSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTrustedInput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="contentInitData">
+                    <type>byte*</type>
+                </param>
+                <param name="contentInitDataSize">
+                    <type>uint</type>
+                </param>
+                <param name="trustedInput">
+                    <type>IMFTrustedInput**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, byte*, uint, IMFTrustedInput**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>, <param name="contentInitData">contentInitData</param>, <param name="contentInitDataSize">contentInitDataSize</param>, <param name="trustedInput">trustedInput</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetProtectionSystemIds" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="systemIds">
+                    <type>Guid**</type>
+                </param>
+                <param name="count">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFContentDecryptionModule*, Guid**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMFContentDecryptionModule*)Unsafe.AsPointer(ref this)</param>, <param name="systemIds">systemIds</param>, <param name="count">count</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

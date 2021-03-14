@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/OAIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="TYPEDESC" access="public" unsafe="true">
+            <field name="Anonymous" access="public">
+                <type native="tagTYPEDESC::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/OAIdl.h:645:36)">_Anonymous_e__Union</type>
+            </field>
+            <field name="lptdesc" access="public">
+                <type native="">ref TYPEDESC*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;lptdesc;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="lpadesc" access="public">
+                <type native="">ref ARRAYDESC*</type>
+                <get inlining="aggressive">
+                    <code>fixed (_Anonymous_e__Union* pField = &amp;Anonymous)
+        {
+            return ref pField-&gt;lpadesc;
+        }
+        </code>
+                </get>
+            </field>
+            <field name="hreftype" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.hreftype, 1));
+        </code>
+                </get>
+            </field>
+            <field name="vt" access="public">
+                <type native="VARTYPE">ushort</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" unsafe="true" layout="Explicit">
+                <field name="lptdesc" access="public" offset="0">
+                    <type native="struct tagTYPEDESC *">TYPEDESC*</type>
+                </field>
+                <field name="lpadesc" access="public" offset="0">
+                    <type native="struct tagARRAYDESC *">ARRAYDESC*</type>
+                </field>
+                <field name="hreftype" access="public" offset="0">
+                    <type native="HREFTYPE">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

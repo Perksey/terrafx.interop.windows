@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ITfContext" access="public" native="struct ITfContext : IUnknown" uuid="aa80e7fd-2021-11d2-93e0-0060b067b86e" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RequestEditSession" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tid">
+                    <type>uint</type>
+                </param>
+                <param name="pes">
+                    <type>ITfEditSession*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="phrSession">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, uint, ITfEditSession*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="tid">tid</param>, <param name="pes">pes</param>, <param name="dwFlags">dwFlags</param>, <param name="phrSession">phrSession</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InWriteSession" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="tid">
+                    <type>uint</type>
+                </param>
+                <param name="pfWriteSession">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, uint, int*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="tid">tid</param>, <param name="pfWriteSession">pfWriteSession</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="ulIndex">
+                    <type>uint</type>
+                </param>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="pSelection">
+                    <type>TF_SELECTION*</type>
+                </param>
+                <param name="pcFetched">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, uint, uint, uint, TF_SELECTION*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="ulIndex">ulIndex</param>, <param name="ulCount">ulCount</param>, <param name="pSelection">pSelection</param>, <param name="pcFetched">pcFetched</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetSelection" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="ulCount">
+                    <type>uint</type>
+                </param>
+                <param name="pSelection">
+                    <type>TF_SELECTION*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, uint, uint, TF_SELECTION*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="ulCount">ulCount</param>, <param name="pSelection">pSelection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStart" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="ppStart">
+                    <type>ITfRange**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, uint, ITfRange**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="ppStart">ppStart</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetEnd" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="ppEnd">
+                    <type>ITfRange**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, uint, ITfRange**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="ppEnd">ppEnd</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetActiveView" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppView">
+                    <type>ITfContextView**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, ITfContextView**, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="ppView">ppView</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumViews" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumTfContextViews**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, IEnumTfContextViews**, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdcs">
+                    <type>TS_STATUS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, TS_STATUS*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="pdcs">pdcs</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetProperty" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidProp">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppProp">
+                    <type>ITfProperty**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, Guid*, ITfProperty**, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="guidProp">guidProp</param>, <param name="ppProp">ppProp</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetAppProperty" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidProp">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppProp">
+                    <type>ITfReadOnlyProperty**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, Guid*, ITfReadOnlyProperty**, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="guidProp">guidProp</param>, <param name="ppProp">ppProp</param>);
+        </code>
+                </body>
+            </function>
+            <function name="TrackProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="prgProp">
+                    <type>Guid**</type>
+                </param>
+                <param name="cProp">
+                    <type>uint</type>
+                </param>
+                <param name="prgAppProp">
+                    <type>Guid**</type>
+                </param>
+                <param name="cAppProp">
+                    <type>uint</type>
+                </param>
+                <param name="ppProperty">
+                    <type>ITfReadOnlyProperty**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, Guid**, uint, Guid**, uint, ITfReadOnlyProperty**, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="prgProp">prgProp</param>, <param name="cProp">cProp</param>, <param name="prgAppProp">prgAppProp</param>, <param name="cAppProp">cAppProp</param>, <param name="ppProperty">ppProperty</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumTfProperties**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, IEnumTfProperties**, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDocumentMgr" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppDm">
+                    <type>ITfDocumentMgr**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, ITfDocumentMgr**, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="ppDm">ppDm</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateRangeBackup" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ec">
+                    <type>uint</type>
+                </param>
+                <param name="pRange">
+                    <type>ITfRange*</type>
+                </param>
+                <param name="ppBackup">
+                    <type>ITfRangeBackup**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ITfContext*, uint, ITfRange*, ITfRangeBackup**, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(ITfContext*)Unsafe.AsPointer(ref this)</param>, <param name="ec">ec</param>, <param name="pRange">pRange</param>, <param name="ppBackup">ppBackup</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

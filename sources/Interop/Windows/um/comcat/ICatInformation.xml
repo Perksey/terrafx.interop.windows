@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/comcat.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ICatInformation" access="public" native="struct ICatInformation : IUnknown" uuid="0002e013-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICatInformation*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ICatInformation*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICatInformation*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ICatInformation*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICatInformation*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ICatInformation*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumCategories" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lcid">
+                    <type>uint</type>
+                </param>
+                <param name="ppenumCategoryInfo">
+                    <type>IEnumCATEGORYINFO**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICatInformation*, uint, IEnumCATEGORYINFO**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ICatInformation*)Unsafe.AsPointer(ref this)</param>, <param name="lcid">lcid</param>, <param name="ppenumCategoryInfo">ppenumCategoryInfo</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCategoryDesc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rcatid">
+                    <type>Guid*</type>
+                </param>
+                <param name="lcid">
+                    <type>uint</type>
+                </param>
+                <param name="pszDesc">
+                    <type>ushort**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICatInformation*, Guid*, uint, ushort**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ICatInformation*)Unsafe.AsPointer(ref this)</param>, <param name="rcatid">rcatid</param>, <param name="lcid">lcid</param>, <param name="pszDesc">pszDesc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumClassesOfCategories" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cImplemented">
+                    <type>uint</type>
+                </param>
+                <param name="rgcatidImpl">
+                    <type>Guid*</type>
+                </param>
+                <param name="cRequired">
+                    <type>uint</type>
+                </param>
+                <param name="rgcatidReq">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppenumClsid">
+                    <type>IEnumGUID**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICatInformation*, uint, Guid*, uint, Guid*, IEnumGUID**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ICatInformation*)Unsafe.AsPointer(ref this)</param>, <param name="cImplemented">cImplemented</param>, <param name="rgcatidImpl">rgcatidImpl</param>, <param name="cRequired">cRequired</param>, <param name="rgcatidReq">rgcatidReq</param>, <param name="ppenumClsid">ppenumClsid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsClassOfCategories" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="cImplemented">
+                    <type>uint</type>
+                </param>
+                <param name="rgcatidImpl">
+                    <type>Guid*</type>
+                </param>
+                <param name="cRequired">
+                    <type>uint</type>
+                </param>
+                <param name="rgcatidReq">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICatInformation*, Guid*, uint, Guid*, uint, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(ICatInformation*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="cImplemented">cImplemented</param>, <param name="rgcatidImpl">rgcatidImpl</param>, <param name="cRequired">cRequired</param>, <param name="rgcatidReq">rgcatidReq</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumImplCategoriesOfClass" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppenumCatid">
+                    <type>IEnumGUID**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICatInformation*, Guid*, IEnumGUID**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(ICatInformation*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="ppenumCatid">ppenumCatid</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumReqCategoriesOfClass" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="rclsid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppenumCatid">
+                    <type>IEnumGUID**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ICatInformation*, Guid*, IEnumGUID**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(ICatInformation*)Unsafe.AsPointer(ref this)</param>, <param name="rclsid">rclsid</param>, <param name="ppenumCatid">ppenumCatid</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

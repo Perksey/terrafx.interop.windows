@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CHANGER_ELEMENT_STATUS" access="public" unsafe="true">
+            <field name="Element" access="public">
+                <type native="">CHANGER_ELEMENT</type>
+            </field>
+            <field name="SrcElementAddress" access="public">
+                <type native="">CHANGER_ELEMENT</type>
+            </field>
+            <field name="Flags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ExceptionCode" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="TargetId" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="Lun" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="Reserved" access="public">
+                <type native="WORD">ushort</type>
+            </field>
+            <field name="PrimaryVolumeID" access="public">
+                <type native="BYTE [36]" count="36" fixed="_PrimaryVolumeID_e__FixedBuffer">byte</type>
+            </field>
+            <field name="AlternateVolumeID" access="public">
+                <type native="BYTE [36]" count="36" fixed="_AlternateVolumeID_e__FixedBuffer">byte</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_X942_OTHER_INFO" access="public" unsafe="true">
+            <field name="pszContentEncryptionObjId" access="public">
+                <type native="LPSTR">sbyte*</type>
+            </field>
+            <field name="rgbCounter" access="public">
+                <type native="BYTE [4]" count="4" fixed="_rgbCounter_e__FixedBuffer">byte</type>
+            </field>
+            <field name="rgbKeyLength" access="public">
+                <type native="BYTE [4]" count="4" fixed="_rgbKeyLength_e__FixedBuffer">byte</type>
+            </field>
+            <field name="PubInfo" access="public">
+                <type native="CRYPT_DATA_BLOB">CRYPTOAPI_BLOB</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

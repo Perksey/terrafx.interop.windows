@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mediaobj.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IEnumDMO" access="public" native="struct IEnumDMO : IUnknown" uuid="2c3cd98a-2bfa-4a53-9c27-5249ba64ba0f" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IEnumDMO*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IEnumDMO*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IEnumDMO*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IEnumDMO*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IEnumDMO*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IEnumDMO*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Next" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cItemsToFetch">
+                    <type>uint</type>
+                </param>
+                <param name="pCLSID">
+                    <type>Guid*</type>
+                </param>
+                <param name="Names">
+                    <type>ushort**</type>
+                </param>
+                <param name="pcItemsFetched">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IEnumDMO*, uint, Guid*, ushort**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IEnumDMO*)Unsafe.AsPointer(ref this)</param>, <param name="cItemsToFetch">cItemsToFetch</param>, <param name="pCLSID">pCLSID</param>, <param name="Names">Names</param>, <param name="pcItemsFetched">pcItemsFetched</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Skip" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="cItemsToSkip">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IEnumDMO*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IEnumDMO*)Unsafe.AsPointer(ref this)</param>, <param name="cItemsToSkip">cItemsToSkip</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Reset" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IEnumDMO*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IEnumDMO*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Clone" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppEnum">
+                    <type>IEnumDMO**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IEnumDMO*, IEnumDMO**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IEnumDMO*)Unsafe.AsPointer(ref this)</param>, <param name="ppEnum">ppEnum</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mediaobj.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMediaObject" access="public" native="struct IMediaObject : IUnknown" uuid="d8ad0f58-5494-4102-97c5-ec798e59bcf4" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetStreamCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcInputStreams">
+                    <type>uint*</type>
+                </param>
+                <param name="pcOutputStreams">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="pcInputStreams">pcInputStreams</param>, <param name="pcOutputStreams">pcOutputStreams</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputStreamInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pdwFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>, <param name="pdwFlags">pdwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputStreamInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pdwFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamIndex">dwOutputStreamIndex</param>, <param name="pdwFlags">pdwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwTypeIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pmt">
+                    <type>DMO_MEDIA_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, uint, DMO_MEDIA_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>, <param name="dwTypeIndex">dwTypeIndex</param>, <param name="pmt">pmt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwTypeIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pmt">
+                    <type>DMO_MEDIA_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, uint, DMO_MEDIA_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamIndex">dwOutputStreamIndex</param>, <param name="dwTypeIndex">dwTypeIndex</param>, <param name="pmt">pmt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetInputType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pmt">
+                    <type>DMO_MEDIA_TYPE*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, DMO_MEDIA_TYPE*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>, <param name="pmt">pmt</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetOutputType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pmt">
+                    <type>DMO_MEDIA_TYPE*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, DMO_MEDIA_TYPE*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamIndex">dwOutputStreamIndex</param>, <param name="pmt">pmt</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputCurrentType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pmt">
+                    <type>DMO_MEDIA_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, DMO_MEDIA_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>, <param name="pmt">pmt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputCurrentType" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pmt">
+                    <type>DMO_MEDIA_TYPE*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, DMO_MEDIA_TYPE*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamIndex">dwOutputStreamIndex</param>, <param name="pmt">pmt</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputSizeInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pcbSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pcbMaxLookahead">
+                    <type>uint*</type>
+                </param>
+                <param name="pcbAlignment">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, uint*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>, <param name="pcbSize">pcbSize</param>, <param name="pcbMaxLookahead">pcbMaxLookahead</param>, <param name="pcbAlignment">pcbAlignment</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetOutputSizeInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwOutputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pcbSize">
+                    <type>uint*</type>
+                </param>
+                <param name="pcbAlignment">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwOutputStreamIndex">dwOutputStreamIndex</param>, <param name="pcbSize">pcbSize</param>, <param name="pcbAlignment">pcbAlignment</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputMaxLatency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="prtMaxLatency">
+                    <type>long*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, long*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>, <param name="prtMaxLatency">prtMaxLatency</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetInputMaxLatency" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="rtMaxLatency">
+                    <type>long</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, long, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>, <param name="rtMaxLatency">rtMaxLatency</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Flush" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Discontinuity" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AllocateStreamingResources" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="FreeStreamingResources" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetInputStatus" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>, <param name="dwFlags">dwFlags</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProcessInput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwInputStreamIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pBuffer">
+                    <type>IMediaBuffer*</type>
+                </param>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="rtTimestamp">
+                    <type>long</type>
+                </param>
+                <param name="rtTimelength">
+                    <type>long</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, IMediaBuffer*, uint, long, long, int&gt;)(lpVtbl[<vtbl explicit="False">21</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwInputStreamIndex">dwInputStreamIndex</param>, <param name="pBuffer">pBuffer</param>, <param name="dwFlags">dwFlags</param>, <param name="rtTimestamp">rtTimestamp</param>, <param name="rtTimelength">rtTimelength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ProcessOutput" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="cOutputBufferCount">
+                    <type>uint</type>
+                </param>
+                <param name="pOutputBuffers">
+                    <type>DMO_OUTPUT_DATA_BUFFER*</type>
+                </param>
+                <param name="pdwStatus">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, uint, uint, DMO_OUTPUT_DATA_BUFFER*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">22</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwFlags">dwFlags</param>, <param name="cOutputBufferCount">cOutputBufferCount</param>, <param name="pOutputBuffers">pOutputBuffers</param>, <param name="pdwStatus">pdwStatus</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Lock" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bLock">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMediaObject*, int, int&gt;)(lpVtbl[<vtbl explicit="False">23</vtbl>]))(<param special="thisPtr">(IMediaObject*)Unsafe.AsPointer(ref this)</param>, <param name="bLock">bLock</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

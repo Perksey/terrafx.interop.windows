@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/MsCtfMonitorApi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <class name="Windows" access="public" static="true">
+            <function name="DoMsCtfMonitor" access="public" lib="msctf" static="true" unsafe="true">
+                <type native="BOOL">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+                <param name="hEventForServiceStop">
+                    <type>IntPtr</type>
+                </param>
+            </function>
+            <function name="InitLocalMsCtfMonitor" access="public" lib="msctf" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwFlags">
+                    <type>uint</type>
+                </param>
+            </function>
+            <function name="UninitLocalMsCtfMonitor" access="public" lib="msctf" static="true" unsafe="true">
+                <type native="HRESULT">int</type>
+            </function>
+            <constant name="DCM_FLAGS_TASKENG" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000001
+            </code>
+                </value>
+            </constant>
+            <constant name="DCM_FLAGS_CTFMON" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000002
+            </code>
+                </value>
+            </constant>
+            <constant name="DCM_FLAGS_LOCALTHREADTSF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00000004
+            </code>
+                </value>
+            </constant>
+            <constant name="ILMCM_CHECKLAYOUTANDTIPENABLED" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00001
+            </code>
+                </value>
+            </constant>
+            <constant name="ILMCM_LANGUAGEBAROFF" access="public">
+                <type primitive="True">int</type>
+                <value>
+                    <code>0x00002
+            </code>
+                </value>
+            </constant>
+        </class>
+    </namespace>
+</bindings>

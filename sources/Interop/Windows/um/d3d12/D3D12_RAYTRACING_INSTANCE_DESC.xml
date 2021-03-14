@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/d3d12.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="D3D12_RAYTRACING_INSTANCE_DESC" access="public" unsafe="true">
+            <field name="Transform" access="public">
+                <type native="FLOAT [3][4]" count="3 * 4" fixed="_Transform_e__FixedBuffer">float</type>
+            </field>
+            <field name="_bitfield1" access="public">
+                <type native="">uint</type>
+            </field>
+            <field name="InstanceID" access="public">
+                <type native="UINT : 24">uint</type>
+                <get inlining="aggressive">
+                    <code>return <bitfieldName>_bitfield1</bitfieldName> &amp; 0x<bitwidthHexStringBacking>FFFFFFu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield1</bitfieldName> = (_bitfield1 &amp; ~0x<bitwidthHexStringBacking>FFFFFFu</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>FFFFFFu</bitwidthHexString>);
+        </code>
+                </set>
+            </field>
+            <field name="InstanceMask" access="public">
+                <type native="UINT : 8">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield1</bitfieldName> &gt;&gt; <bitfieldOffset>24</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>FFu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield1</bitfieldName> = (_bitfield1 &amp; ~(0x<bitwidthHexStringBacking>FFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>24</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>FFu</bitwidthHexString>) &lt;&lt; 24);
+        </code>
+                </set>
+            </field>
+            <field name="_bitfield2" access="public">
+                <type native="">uint</type>
+            </field>
+            <field name="InstanceContributionToHitGroupIndex" access="public">
+                <type native="UINT : 24">uint</type>
+                <get inlining="aggressive">
+                    <code>return <bitfieldName>_bitfield2</bitfieldName> &amp; 0x<bitwidthHexStringBacking>FFFFFFu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield2</bitfieldName> = (_bitfield2 &amp; ~0x<bitwidthHexStringBacking>FFFFFFu</bitwidthHexStringBacking>) | (value &amp; 0x<bitwidthHexString>FFFFFFu</bitwidthHexString>);
+        </code>
+                </set>
+            </field>
+            <field name="Flags" access="public">
+                <type native="UINT : 8">uint</type>
+                <get inlining="aggressive">
+                    <code>return (<bitfieldName>_bitfield2</bitfieldName> &gt;&gt; <bitfieldOffset>24</bitfieldOffset>) &amp; 0x<bitwidthHexStringBacking>FFu</bitwidthHexStringBacking>;
+        </code>
+                </get>
+                <set inlining="aggressive">
+                    <code>
+                        <bitfieldName>_bitfield2</bitfieldName> = (_bitfield2 &amp; ~(0x<bitwidthHexStringBacking>FFu</bitwidthHexStringBacking> &lt;&lt; <bitfieldOffset>24</bitfieldOffset>)) | ((value &amp; 0x<bitwidthHexString>FFu</bitwidthHexString>) &lt;&lt; 24);
+        </code>
+                </set>
+            </field>
+            <field name="AccelerationStructure" access="public">
+                <type native="D3D12_GPU_VIRTUAL_ADDRESS">ulong</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

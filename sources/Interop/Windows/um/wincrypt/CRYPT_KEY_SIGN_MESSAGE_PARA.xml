@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CRYPT_KEY_SIGN_MESSAGE_PARA" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwMsgAndCertEncodingType" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="_CRYPT_KEY_SIGN_MESSAGE_PARA::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/wincrypt.h:16157:5)">_Anonymous_e__Union</type>
+            </field>
+            <field name="hCryptProv" access="public">
+                <type native="">ref nuint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.hCryptProv, 1));
+        </code>
+                </get>
+            </field>
+            <field name="hNCryptKey" access="public">
+                <type native="">ref nuint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.hNCryptKey, 1));
+        </code>
+                </get>
+            </field>
+            <field name="dwKeySpec" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="HashAlgorithm" access="public">
+                <type native="">CRYPT_ALGORITHM_IDENTIFIER</type>
+            </field>
+            <field name="pvHashAuxInfo" access="public">
+                <type native="void *">void*</type>
+            </field>
+            <field name="PubKeyAlgorithm" access="public">
+                <type native="">CRYPT_ALGORITHM_IDENTIFIER</type>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="hCryptProv" access="public" offset="0">
+                    <type native="HCRYPTPROV">nuint</type>
+                </field>
+                <field name="hNCryptKey" access="public" offset="0">
+                    <type native="NCRYPT_KEY_HANDLE">nuint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

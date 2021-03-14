@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/SpatialAudioMetadata.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="ISpatialAudioMetadataCopier" access="public" native="struct ISpatialAudioMetadataCopier : IUnknown" uuid="d224b233-e251-4fd0-9ca2-d5ecf9a68404" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataCopier*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataCopier*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataCopier*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataCopier*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataCopier*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataCopier*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Open" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="metadataItems">
+                    <type>ISpatialAudioMetadataItems*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataCopier*, ISpatialAudioMetadataItems*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataCopier*)Unsafe.AsPointer(ref this)</param>, <param name="metadataItems">metadataItems</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CopyMetadataForFrames" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="copyFrameCount">
+                    <type>ushort</type>
+                </param>
+                <param name="copyMode">
+                    <type>SpatialAudioMetadataCopyMode</type>
+                </param>
+                <param name="dstMetadataItems">
+                    <type>ISpatialAudioMetadataItems*</type>
+                </param>
+                <param name="itemsCopied">
+                    <type>ushort*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataCopier*, ushort, SpatialAudioMetadataCopyMode, ISpatialAudioMetadataItems*, ushort*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataCopier*)Unsafe.AsPointer(ref this)</param>, <param name="copyFrameCount">copyFrameCount</param>, <param name="copyMode">copyMode</param>, <param name="dstMetadataItems">dstMetadataItems</param>, <param name="itemsCopied">itemsCopied</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Close" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;ISpatialAudioMetadataCopier*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(ISpatialAudioMetadataCopier*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

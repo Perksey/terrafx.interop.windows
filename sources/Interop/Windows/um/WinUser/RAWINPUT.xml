@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/WinUser.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="RAWINPUT" access="public">
+            <field name="header" access="public">
+                <type native="">RAWINPUTHEADER</type>
+            </field>
+            <field name="data" access="public">
+                <type native="union (anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/WinUser.h:15072:5)">_data_e__Union</type>
+            </field>
+            <struct name="_data_e__Union" access="public" layout="Explicit">
+                <field name="mouse" access="public" offset="0">
+                    <type native="">RAWMOUSE</type>
+                </field>
+                <field name="keyboard" access="public" offset="0">
+                    <type native="">RAWKEYBOARD</type>
+                </field>
+                <field name="hid" access="public" offset="0">
+                    <type native="">RAWHID</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

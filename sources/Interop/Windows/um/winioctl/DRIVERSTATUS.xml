@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/winioctl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="DRIVERSTATUS" access="public" unsafe="true" layout="Sequential" pack="1">
+            <field name="bDriverError" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="bIDEError" access="public">
+                <type native="BYTE">byte</type>
+            </field>
+            <field name="bReserved" access="public">
+                <type native="BYTE [2]" count="2" fixed="_bReserved_e__FixedBuffer">byte</type>
+            </field>
+            <field name="dwReserved" access="public">
+                <type native="DWORD [2]" count="2" fixed="_dwReserved_e__FixedBuffer">uint</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

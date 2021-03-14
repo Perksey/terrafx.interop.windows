@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/urlmon.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="BINDSTRING" access="public">
+            <type>int</type>
+            <enumerator name="BINDSTRING_HEADERS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_ACCEPT_MIMES" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_HEADERS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_EXTRA_URL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_ACCEPT_MIMES + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_LANGUAGE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_EXTRA_URL + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_USERNAME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_LANGUAGE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_PASSWORD" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_USERNAME + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_UA_PIXELS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_PASSWORD + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_UA_COLOR" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_UA_PIXELS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_OS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_UA_COLOR + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_USER_AGENT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_OS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_ACCEPT_ENCODINGS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_USER_AGENT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_POST_COOKIE" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_ACCEPT_ENCODINGS + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_POST_DATA_MIME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_POST_COOKIE + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_URL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_POST_DATA_MIME + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_IID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_URL + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_FLAG_BIND_TO_OBJECT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_IID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_PTR_BIND_CONTEXT" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_FLAG_BIND_TO_OBJECT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_XDR_ORIGIN" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_PTR_BIND_CONTEXT + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_DOWNLOADPATH" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_XDR_ORIGIN + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_ROOTDOC_URL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_DOWNLOADPATH + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_INITIAL_FILENAME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_ROOTDOC_URL + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_PROXY_USERNAME" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_INITIAL_FILENAME + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_PROXY_PASSWORD" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_PROXY_USERNAME + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_ENTERPRISE_ID" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_PROXY_PASSWORD + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_DOC_URL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_ENTERPRISE_ID + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="BINDSTRING_SAMESITE_COOKIE_LEVEL" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(BINDSTRING_DOC_URL + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

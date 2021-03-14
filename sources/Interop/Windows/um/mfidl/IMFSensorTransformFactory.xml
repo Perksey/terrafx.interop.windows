@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfidl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMFSensorTransformFactory" access="public" native="struct IMFSensorTransformFactory : IUnknown" uuid="eed9c2ee-66b4-4f18-a697-ac7d3960215c" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorTransformFactory*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMFSensorTransformFactory*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorTransformFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMFSensorTransformFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorTransformFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMFSensorTransformFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetFactoryAttributes" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppAttributes">
+                    <type>IMFAttributes**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorTransformFactory*, IMFAttributes**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMFSensorTransformFactory*)Unsafe.AsPointer(ref this)</param>, <param name="ppAttributes">ppAttributes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="InitializeFactory" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwMaxTransformCount">
+                    <type>uint</type>
+                </param>
+                <param name="pSensorDevices">
+                    <type>IMFCollection*</type>
+                </param>
+                <param name="pAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorTransformFactory*, uint, IMFCollection*, IMFAttributes*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMFSensorTransformFactory*)Unsafe.AsPointer(ref this)</param>, <param name="dwMaxTransformCount">dwMaxTransformCount</param>, <param name="pSensorDevices">pSensorDevices</param>, <param name="pAttributes">pAttributes</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTransformCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorTransformFactory*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMFSensorTransformFactory*)Unsafe.AsPointer(ref this)</param>, <param name="pdwCount">pdwCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetTransformInformation" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="TransformIndex">
+                    <type>uint</type>
+                </param>
+                <param name="pguidTransformId">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppAttributes">
+                    <type>IMFAttributes**</type>
+                </param>
+                <param name="ppStreamInformation">
+                    <type>IMFCollection**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorTransformFactory*, uint, Guid*, IMFAttributes**, IMFCollection**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMFSensorTransformFactory*)Unsafe.AsPointer(ref this)</param>, <param name="TransformIndex">TransformIndex</param>, <param name="pguidTransformId">pguidTransformId</param>, <param name="ppAttributes">ppAttributes</param>, <param name="ppStreamInformation">ppStreamInformation</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateTransform" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="guidSensorTransformID">
+                    <type>Guid*</type>
+                </param>
+                <param name="pAttributes">
+                    <type>IMFAttributes*</type>
+                </param>
+                <param name="ppDeviceMFT">
+                    <type>IMFDeviceTransform**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMFSensorTransformFactory*, Guid*, IMFAttributes*, IMFDeviceTransform**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMFSensorTransformFactory*)Unsafe.AsPointer(ref this)</param>, <param name="guidSensorTransformID">guidSensorTransformID</param>, <param name="pAttributes">pAttributes</param>, <param name="ppDeviceMFT">ppDeviceMFT</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

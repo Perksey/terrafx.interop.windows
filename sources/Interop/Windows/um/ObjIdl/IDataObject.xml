@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/ObjIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IDataObject" access="public" native="struct IDataObject : IUnknown" uuid="0000010e-0000-0000-c000-000000000046" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pformatetcIn">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="pmedium">
+                    <type>STGMEDIUM*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, FORMATETC*, STGMEDIUM*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="pformatetcIn">pformatetcIn</param>, <param name="pmedium">pmedium</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetDataHere" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pformatetc">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="pmedium">
+                    <type>STGMEDIUM*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, FORMATETC*, STGMEDIUM*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="pformatetc">pformatetc</param>, <param name="pmedium">pmedium</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryGetData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pformatetc">
+                    <type>FORMATETC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, FORMATETC*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="pformatetc">pformatetc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetCanonicalFormatEtc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pformatectIn">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="pformatetcOut">
+                    <type>FORMATETC*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, FORMATETC*, FORMATETC*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="pformatectIn">pformatectIn</param>, <param name="pformatetcOut">pformatetcOut</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetData" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pformatetc">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="pmedium">
+                    <type>STGMEDIUM*</type>
+                </param>
+                <param name="fRelease">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, FORMATETC*, STGMEDIUM*, int, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="pformatetc">pformatetc</param>, <param name="pmedium">pmedium</param>, <param name="fRelease">fRelease</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumFormatEtc" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwDirection">
+                    <type>uint</type>
+                </param>
+                <param name="ppenumFormatEtc">
+                    <type>IEnumFORMATETC**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, uint, IEnumFORMATETC**, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwDirection">dwDirection</param>, <param name="ppenumFormatEtc">ppenumFormatEtc</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DAdvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pformatetc">
+                    <type>FORMATETC*</type>
+                </param>
+                <param name="advf">
+                    <type>uint</type>
+                </param>
+                <param name="pAdvSink">
+                    <type>IAdviseSink*</type>
+                </param>
+                <param name="pdwConnection">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, FORMATETC*, uint, IAdviseSink*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="pformatetc">pformatetc</param>, <param name="advf">advf</param>, <param name="pAdvSink">pAdvSink</param>, <param name="pdwConnection">pdwConnection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="DUnadvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="dwConnection">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="dwConnection">dwConnection</param>);
+        </code>
+                </body>
+            </function>
+            <function name="EnumDAdvise" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppenumAdvise">
+                    <type>IEnumSTATDATA**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IDataObject*, IEnumSTATDATA**, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IDataObject*)Unsafe.AsPointer(ref this)</param>, <param name="ppenumAdvise">ppenumAdvise</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/OAIdl.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="SAFEARRAY" access="public" unsafe="true">
+            <field name="cDims" access="public">
+                <type native="USHORT">ushort</type>
+            </field>
+            <field name="fFeatures" access="public">
+                <type native="USHORT">ushort</type>
+            </field>
+            <field name="cbElements" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="cLocks" access="public">
+                <type native="ULONG">uint</type>
+            </field>
+            <field name="pvData" access="public">
+                <type native="PVOID">void*</type>
+            </field>
+            <field name="rgsabound" access="public">
+                <type native="SAFEARRAYBOUND [1]" count="1" fixed="_rgsabound_e__FixedBuffer">SAFEARRAYBOUND</type>
+            </field>
+            <struct name="_rgsabound_e__FixedBuffer" access="public">
+                <field name="e0" access="public">
+                    <type native="">SAFEARRAYBOUND</type>
+                </field>
+                <indexer access="public">
+                    <type>ref SAFEARRAYBOUND</type>
+                    <param name="index">
+                        <type>int</type>
+                    </param>
+                    <get inlining="aggressive">
+                        <code>return ref AsSpan(int.MaxValue)[index];
+        </code>
+                    </get>
+                </indexer>
+                <function name="AsSpan" access="public" unsafe="true">
+                    <type>Span&lt;SAFEARRAYBOUND&gt;</type>
+                    <param name="length">
+                        <type>int</type>
+                    </param>
+                    <code>MemoryMarshal.CreateSpan(ref e0, length);
+        </code>
+                </function>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

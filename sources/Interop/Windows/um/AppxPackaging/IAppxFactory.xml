@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/AppxPackaging.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAppxFactory" access="public" native="struct IAppxFactory : IUnknown" uuid="beb94909-e451-438b-b5a7-d79e767b75d8" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxFactory*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAppxFactory*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAppxFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxFactory*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAppxFactory*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePackageWriter" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="outputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="settings">
+                    <type>APPX_PACKAGE_SETTINGS*</type>
+                </param>
+                <param name="packageWriter">
+                    <type>IAppxPackageWriter**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxFactory*, IStream*, APPX_PACKAGE_SETTINGS*, IAppxPackageWriter**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAppxFactory*)Unsafe.AsPointer(ref this)</param>, <param name="outputStream">outputStream</param>, <param name="settings">settings</param>, <param name="packageWriter">packageWriter</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreatePackageReader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="packageReader">
+                    <type>IAppxPackageReader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxFactory*, IStream*, IAppxPackageReader**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAppxFactory*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="packageReader">packageReader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateManifestReader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="manifestReader">
+                    <type>IAppxManifestReader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxFactory*, IStream*, IAppxManifestReader**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAppxFactory*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="manifestReader">manifestReader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateBlockMapReader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="inputStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="blockMapReader">
+                    <type>IAppxBlockMapReader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxFactory*, IStream*, IAppxBlockMapReader**, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAppxFactory*)Unsafe.AsPointer(ref this)</param>, <param name="inputStream">inputStream</param>, <param name="blockMapReader">blockMapReader</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CreateValidatedBlockMapReader" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="blockMapStream">
+                    <type>IStream*</type>
+                </param>
+                <param name="signatureFileName">
+                    <type>ushort*</type>
+                </param>
+                <param name="blockMapReader">
+                    <type>IAppxBlockMapReader**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAppxFactory*, IStream*, ushort*, IAppxBlockMapReader**, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAppxFactory*)Unsafe.AsPointer(ref this)</param>, <param name="blockMapStream">blockMapStream</param>, <param name="signatureFileName">signatureFileName</param>, <param name="blockMapReader">blockMapReader</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

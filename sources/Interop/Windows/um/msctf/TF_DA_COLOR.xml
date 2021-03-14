@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/msctf.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="TF_DA_COLOR" access="public">
+            <field name="type" access="public">
+                <type native="">TF_DA_COLORTYPE</type>
+            </field>
+            <field name="Anonymous" access="public">
+                <type native="TF_DA_COLOR::(anonymous union at C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/msctf.h:10248:36)">_Anonymous_e__Union</type>
+            </field>
+            <field name="nIndex" access="public">
+                <type native="">ref int</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.nIndex, 1));
+        </code>
+                </get>
+            </field>
+            <field name="cr" access="public">
+                <type native="">ref uint</type>
+                <get inlining="aggressive">
+                    <code>return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.cr, 1));
+        </code>
+                </get>
+            </field>
+            <struct name="_Anonymous_e__Union" access="public" layout="Explicit">
+                <field name="nIndex" access="public" offset="0">
+                    <type native="">int</type>
+                </field>
+                <field name="cr" access="public" offset="0">
+                    <type native="COLORREF">uint</type>
+                </field>
+            </struct>
+        </struct>
+    </namespace>
+</bindings>

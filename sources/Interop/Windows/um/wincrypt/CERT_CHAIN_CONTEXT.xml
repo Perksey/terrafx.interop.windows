@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/wincrypt.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="CERT_CHAIN_CONTEXT" access="public" unsafe="true">
+            <field name="cbSize" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="TrustStatus" access="public">
+                <type native="">CERT_TRUST_STATUS</type>
+            </field>
+            <field name="cChain" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="rgpChain" access="public">
+                <type native="PCERT_SIMPLE_CHAIN *">CERT_SIMPLE_CHAIN**</type>
+            </field>
+            <field name="cLowerQualityChainContext" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="rgpLowerQualityChainContext" access="public">
+                <type native="PCCERT_CHAIN_CONTEXT *">CERT_CHAIN_CONTEXT**</type>
+            </field>
+            <field name="fHasRevocationFreshnessTime" access="public">
+                <type native="BOOL">int</type>
+            </field>
+            <field name="dwRevocationFreshnessTime" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="dwCreateFlags" access="public">
+                <type native="DWORD">uint</type>
+            </field>
+            <field name="ChainId" access="public">
+                <type native="GUID">Guid</type>
+            </field>
+        </struct>
+    </namespace>
+</bindings>

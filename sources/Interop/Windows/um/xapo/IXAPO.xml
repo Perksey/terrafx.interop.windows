@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/xapo.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IXAPO" access="public" native="struct IXAPO : IUnknown" uuid="a410b984-9839-4819-a0be-2856ae6b3adb" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetRegistrationProperties" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppRegistrationProperties">
+                    <type>XAPO_REGISTRATION_PROPERTIES**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, XAPO_REGISTRATION_PROPERTIES**, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>, <param name="ppRegistrationProperties">ppRegistrationProperties</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsInputFormatSupported" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pOutputFormat">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <param name="pRequestedInputFormat">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <param name="ppSupportedInputFormat">
+                    <type>WAVEFORMATEX**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, WAVEFORMATEX*, WAVEFORMATEX*, WAVEFORMATEX**, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>, <param name="pOutputFormat">pOutputFormat</param>, <param name="pRequestedInputFormat">pRequestedInputFormat</param>, <param name="ppSupportedInputFormat">ppSupportedInputFormat</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsOutputFormatSupported" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pInputFormat">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <param name="pRequestedOutputFormat">
+                    <type>WAVEFORMATEX*</type>
+                </param>
+                <param name="ppSupportedOutputFormat">
+                    <type>WAVEFORMATEX**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, WAVEFORMATEX*, WAVEFORMATEX*, WAVEFORMATEX**, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>, <param name="pInputFormat">pInputFormat</param>, <param name="pRequestedOutputFormat">pRequestedOutputFormat</param>, <param name="ppSupportedOutputFormat">ppSupportedOutputFormat</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Initialize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pData">
+                    <type>void*</type>
+                </param>
+                <param name="DataByteSize">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, void*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>, <param name="pData">pData</param>, <param name="DataByteSize">DataByteSize</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Reset" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAPO*, void&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="LockForProcess" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="InputLockedParameterCount">
+                    <type>uint</type>
+                </param>
+                <param name="pInputLockedParameters">
+                    <type>XAPO_LOCKFORPROCESS_BUFFER_PARAMETERS*</type>
+                </param>
+                <param name="OutputLockedParameterCount">
+                    <type>uint</type>
+                </param>
+                <param name="pOutputLockedParameters">
+                    <type>XAPO_LOCKFORPROCESS_BUFFER_PARAMETERS*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, uint, XAPO_LOCKFORPROCESS_BUFFER_PARAMETERS*, uint, XAPO_LOCKFORPROCESS_BUFFER_PARAMETERS*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>, <param name="InputLockedParameterCount">InputLockedParameterCount</param>, <param name="pInputLockedParameters">pInputLockedParameters</param>, <param name="OutputLockedParameterCount">OutputLockedParameterCount</param>, <param name="pOutputLockedParameters">pOutputLockedParameters</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnlockForProcess" access="public" unsafe="true">
+                <type>void</type>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAPO*, void&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Process" access="public" unsafe="true">
+                <type>void</type>
+                <param name="InputProcessParameterCount">
+                    <type>uint</type>
+                </param>
+                <param name="pInputProcessParameters">
+                    <type>XAPO_PROCESS_BUFFER_PARAMETERS*</type>
+                </param>
+                <param name="OutputProcessParameterCount">
+                    <type>uint</type>
+                </param>
+                <param name="pOutputProcessParameters">
+                    <type>XAPO_PROCESS_BUFFER_PARAMETERS*</type>
+                </param>
+                <param name="IsEnabled">
+                    <type>int</type>
+                </param>
+                <body>
+                    <code>((delegate* unmanaged&lt;IXAPO*, uint, XAPO_PROCESS_BUFFER_PARAMETERS*, uint, XAPO_PROCESS_BUFFER_PARAMETERS*, int, void&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>, <param name="InputProcessParameterCount">InputProcessParameterCount</param>, <param name="pInputProcessParameters">pInputProcessParameters</param>, <param name="OutputProcessParameterCount">OutputProcessParameterCount</param>, <param name="pOutputProcessParameters">pOutputProcessParameters</param>, <param name="IsEnabled">IsEnabled</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CalcInputFrames" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <param name="OutputFrameCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, uint, uint&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>, <param name="OutputFrameCount">OutputFrameCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="CalcOutputFrames" access="public" unsafe="true">
+                <type native="UINT32">uint</type>
+                <param name="InputFrameCount">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IXAPO*, uint, uint&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IXAPO*)Unsafe.AsPointer(ref this)</param>, <param name="InputFrameCount">InputFrameCount</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

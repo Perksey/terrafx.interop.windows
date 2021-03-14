@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/endpointvolume.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IAudioEndpointVolume" access="public" native="struct IAudioEndpointVolume : IUnknown" uuid="5cdf2c82-841e-4546-9722-0cf74078229a" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="RegisterControlChangeNotify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNotify">
+                    <type>IAudioEndpointVolumeCallback*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, IAudioEndpointVolumeCallback*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pNotify">pNotify</param>);
+        </code>
+                </body>
+            </function>
+            <function name="UnregisterControlChangeNotify" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pNotify">
+                    <type>IAudioEndpointVolumeCallback*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, IAudioEndpointVolumeCallback*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pNotify">pNotify</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetChannelCount" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pnChannelCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pnChannelCount">pnChannelCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMasterVolumeLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fLevelDB">
+                    <type>float</type>
+                </param>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, float, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="fLevelDB">fLevelDB</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMasterVolumeLevelScalar" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="fLevel">
+                    <type>float</type>
+                </param>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, float, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="fLevel">fLevel</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMasterVolumeLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfLevelDB">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, float*, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pfLevelDB">pfLevelDB</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMasterVolumeLevelScalar" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfLevel">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, float*, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pfLevel">pfLevel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetChannelVolumeLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nChannel">
+                    <type>uint</type>
+                </param>
+                <param name="fLevelDB">
+                    <type>float</type>
+                </param>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, uint, float, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="nChannel">nChannel</param>, <param name="fLevelDB">fLevelDB</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetChannelVolumeLevelScalar" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nChannel">
+                    <type>uint</type>
+                </param>
+                <param name="fLevel">
+                    <type>float</type>
+                </param>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, uint, float, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="nChannel">nChannel</param>, <param name="fLevel">fLevel</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetChannelVolumeLevel" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nChannel">
+                    <type>uint</type>
+                </param>
+                <param name="pfLevelDB">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, uint, float*, int&gt;)(lpVtbl[<vtbl explicit="False">12</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="nChannel">nChannel</param>, <param name="pfLevelDB">pfLevelDB</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetChannelVolumeLevelScalar" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="nChannel">
+                    <type>uint</type>
+                </param>
+                <param name="pfLevel">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, uint, float*, int&gt;)(lpVtbl[<vtbl explicit="False">13</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="nChannel">nChannel</param>, <param name="pfLevel">pfLevel</param>);
+        </code>
+                </body>
+            </function>
+            <function name="SetMute" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="bMute">
+                    <type>int</type>
+                </param>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, int, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">14</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="bMute">bMute</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetMute" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbMute">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">15</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pbMute">pbMute</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVolumeStepInfo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pnStep">
+                    <type>uint*</type>
+                </param>
+                <param name="pnStepCount">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, uint*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">16</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pnStep">pnStep</param>, <param name="pnStepCount">pnStepCount</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VolumeStepUp" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">17</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="VolumeStepDown" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pguidEventContext">
+                    <type>Guid*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, Guid*, int&gt;)(lpVtbl[<vtbl explicit="False">18</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pguidEventContext">pguidEventContext</param>);
+        </code>
+                </body>
+            </function>
+            <function name="QueryHardwareSupport" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pdwHardwareSupportMask">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">19</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pdwHardwareSupportMask">pdwHardwareSupportMask</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetVolumeRange" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pflVolumeMindB">
+                    <type>float*</type>
+                </param>
+                <param name="pflVolumeMaxdB">
+                    <type>float*</type>
+                </param>
+                <param name="pflVolumeIncrementdB">
+                    <type>float*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IAudioEndpointVolume*, float*, float*, float*, int&gt;)(lpVtbl[<vtbl explicit="False">20</vtbl>]))(<param special="thisPtr">(IAudioEndpointVolume*)Unsafe.AsPointer(ref this)</param>, <param name="pflVolumeMindB">pflVolumeMindB</param>, <param name="pflVolumeMaxdB">pflVolumeMaxdB</param>, <param name="pflVolumeIncrementdB">pflVolumeIncrementdB</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/sapi.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <enumeration name="SPSTREAMFORMAT" access="public">
+            <type>int</type>
+            <enumerator name="SPSF_Default" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>-1
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_NoAssignedFormat" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>0
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_Text" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_NoAssignedFormat + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_NonStandardFormat" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_Text + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_ExtendedAudioFormat" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_NonStandardFormat + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_8kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_ExtendedAudioFormat + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_8kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_8kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_8kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_8kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_8kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_8kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_11kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_8kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_11kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_11kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_11kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_11kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_11kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_11kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_12kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_11kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_12kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_12kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_12kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_12kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_12kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_12kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_16kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_12kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_16kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_16kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_16kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_16kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_16kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_16kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_22kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_16kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_22kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_22kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_22kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_22kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_22kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_22kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_24kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_22kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_24kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_24kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_24kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_24kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_24kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_24kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_32kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_24kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_32kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_32kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_32kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_32kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_32kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_32kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_44kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_32kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_44kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_44kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_44kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_44kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_44kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_44kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_48kHz8BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_44kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_48kHz8BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_48kHz8BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_48kHz16BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_48kHz8BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_48kHz16BitStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_48kHz16BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_TrueSpeech_8kHz1BitMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_48kHz16BitStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_ALaw_8kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_TrueSpeech_8kHz1BitMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_ALaw_8kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_ALaw_8kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_ALaw_11kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_ALaw_8kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_ALaw_11kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_ALaw_11kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_ALaw_22kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_ALaw_11kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_ALaw_22kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_ALaw_22kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_ALaw_44kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_ALaw_22kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_ALaw_44kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_ALaw_44kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_uLaw_8kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_ALaw_44kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_uLaw_8kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_uLaw_8kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_uLaw_11kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_uLaw_8kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_uLaw_11kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_uLaw_11kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_uLaw_22kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_uLaw_11kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_uLaw_22kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_uLaw_22kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_uLaw_44kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_uLaw_22kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_CCITT_uLaw_44kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_uLaw_44kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_ADPCM_8kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_CCITT_uLaw_44kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_ADPCM_8kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_ADPCM_8kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_ADPCM_11kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_ADPCM_8kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_ADPCM_11kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_ADPCM_11kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_ADPCM_22kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_ADPCM_11kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_ADPCM_22kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_ADPCM_22kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_ADPCM_44kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_ADPCM_22kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_ADPCM_44kHzStereo" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_ADPCM_44kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_GSM610_8kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_ADPCM_44kHzStereo + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_GSM610_11kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_GSM610_8kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_GSM610_22kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_GSM610_11kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_GSM610_44kHzMono" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_GSM610_22kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+            <enumerator name="SPSF_NUM_FORMATS" access="">
+                <type primitive="False">int</type>
+                <value>
+                    <code>(SPSF_GSM610_44kHzMono + 1)
+        </code>
+                </value>
+            </enumerator>
+        </enumeration>
+    </namespace>
+</bindings>

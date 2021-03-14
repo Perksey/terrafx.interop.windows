@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<bindings>
+    <comment>
+        // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+        
+        // Ported from um/mfobjects.h in the Windows SDK for Windows 10.0.19041.0
+        // Original source is Copyright © Microsoft. All rights reserved.
+        
+    </comment>
+    <namespace name="TerraFX.Interop">
+        <struct name="IMF2DBuffer2" access="public" native="struct IMF2DBuffer2 : IMF2DBuffer" uuid="33ae5ea6-4316-436f-8ddd-d73d22f829ec" vtbl="true" unsafe="true">
+            <field name="lpVtbl" access="public">
+                <type native="">void**</type>
+            </field>
+            <function name="QueryInterface" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="riid">
+                    <type>Guid*</type>
+                </param>
+                <param name="ppvObject">
+                    <type>void**</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, Guid*, void**, int&gt;)(lpVtbl[<vtbl explicit="False">0</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>, <param name="riid">riid</param>, <param name="ppvObject">ppvObject</param>);
+        </code>
+                </body>
+            </function>
+            <function name="AddRef" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, uint&gt;)(lpVtbl[<vtbl explicit="False">1</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Release" access="public" unsafe="true">
+                <type native="ULONG">uint</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, uint&gt;)(lpVtbl[<vtbl explicit="False">2</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Lock2D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="ppbScanline0">
+                    <type>byte**</type>
+                </param>
+                <param name="plPitch">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, byte**, int*, int&gt;)(lpVtbl[<vtbl explicit="False">3</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>, <param name="ppbScanline0">ppbScanline0</param>, <param name="plPitch">plPitch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Unlock2D" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, int&gt;)(lpVtbl[<vtbl explicit="False">4</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetScanline0AndPitch" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbScanline0">
+                    <type>byte**</type>
+                </param>
+                <param name="plPitch">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, byte**, int*, int&gt;)(lpVtbl[<vtbl explicit="False">5</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>, <param name="pbScanline0">pbScanline0</param>, <param name="plPitch">plPitch</param>);
+        </code>
+                </body>
+            </function>
+            <function name="IsContiguousFormat" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pfIsContiguous">
+                    <type>int*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, int*, int&gt;)(lpVtbl[<vtbl explicit="False">6</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>, <param name="pfIsContiguous">pfIsContiguous</param>);
+        </code>
+                </body>
+            </function>
+            <function name="GetContiguousLength" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pcbLength">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">7</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>, <param name="pcbLength">pcbLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ContiguousCopyTo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbDestBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="cbDestBuffer">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">8</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>, <param name="pbDestBuffer">pbDestBuffer</param>, <param name="cbDestBuffer">cbDestBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="ContiguousCopyFrom" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pbSrcBuffer">
+                    <type>byte*</type>
+                </param>
+                <param name="cbSrcBuffer">
+                    <type>uint</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, byte*, uint, int&gt;)(lpVtbl[<vtbl explicit="False">9</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>, <param name="pbSrcBuffer">pbSrcBuffer</param>, <param name="cbSrcBuffer">cbSrcBuffer</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Lock2DSize" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="lockFlags">
+                    <type>MF2DBuffer_LockFlags</type>
+                </param>
+                <param name="ppbScanline0">
+                    <type>byte**</type>
+                </param>
+                <param name="plPitch">
+                    <type>int*</type>
+                </param>
+                <param name="ppbBufferStart">
+                    <type>byte**</type>
+                </param>
+                <param name="pcbBufferLength">
+                    <type>uint*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, MF2DBuffer_LockFlags, byte**, int*, byte**, uint*, int&gt;)(lpVtbl[<vtbl explicit="False">10</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>, <param name="lockFlags">lockFlags</param>, <param name="ppbScanline0">ppbScanline0</param>, <param name="plPitch">plPitch</param>, <param name="ppbBufferStart">ppbBufferStart</param>, <param name="pcbBufferLength">pcbBufferLength</param>);
+        </code>
+                </body>
+            </function>
+            <function name="Copy2DTo" access="public" unsafe="true">
+                <type native="HRESULT">int</type>
+                <param name="pDestBuffer">
+                    <type>IMF2DBuffer2*</type>
+                </param>
+                <body>
+                    <code>return ((delegate* unmanaged&lt;IMF2DBuffer2*, IMF2DBuffer2*, int&gt;)(lpVtbl[<vtbl explicit="False">11</vtbl>]))(<param special="thisPtr">(IMF2DBuffer2*)Unsafe.AsPointer(ref this)</param>, <param name="pDestBuffer">pDestBuffer</param>);
+        </code>
+                </body>
+            </function>
+        </struct>
+    </namespace>
+</bindings>
